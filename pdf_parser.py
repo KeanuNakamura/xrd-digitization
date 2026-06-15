@@ -13,6 +13,8 @@ from typing import Any, Iterable
 import requests
 from lxml import etree
 
+from parse_figures import extract_document_figures
+
 
 LOGGER = logging.getLogger(__name__)
 
@@ -204,9 +206,12 @@ class Figure:
     normalized_label: str | None
     caption: str
     graphic_targets: list[str]
+    coords: str | None
+    graphic_coords: str | None
     figure_type: str | None
     xrd_score: float
     is_likely_xrd: bool
+    image_paths: list[str] = field(default_factory=list)
     referenced_by_paragraph_ids: list[str] = field(default_factory=list)
     context_paragraph_ids: list[str] = field(default_factory=list)
 
@@ -991,6 +996,21 @@ class TEIXRDParser:
                 if str(value).strip()
             ]
 
+            coords = figure_element.get("coords")
+            graphic_coord_values = [
+                str(value).strip()
+                for value in figure_element.xpath(
+                    ".//tei:graphic/@coords",
+                    namespaces=NS,
+                )
+                if str(value).strip()
+            ]
+            graphic_coords = (
+                ";".join(graphic_coord_values)
+                if graphic_coord_values
+                else None
+            )
+
             figure_type = figure_element.get("type")
             xrd_score = score_xrd_text(caption)
 
@@ -1001,6 +1021,8 @@ class TEIXRDParser:
                     normalized_label=normalize_figure_label(label),
                     caption=caption,
                     graphic_targets=graphic_targets,
+                    coords=coords,
+                    graphic_coords=graphic_coords,
                     figure_type=figure_type,
                     xrd_score=xrd_score,
                     is_likely_xrd=xrd_score >= 2.5,
@@ -1321,6 +1343,9 @@ def parse_pdf(
     pdf_path: str | Path,
     output_directory: str | Path,
     grobid_url: str = "http://localhost:8070",
+    extract_figures: bool = True,
+    figure_dpi: int = 300,
+    xrd_figures_only: bool = False,
 ) -> ParsedDocument:
     pdf_path = Path(pdf_path)
     output_directory = Path(output_directory)
@@ -1346,6 +1371,22 @@ def parse_pdf(
         tei_xml=tei_xml,
         source_pdf=pdf_path,
     )
+
+    if extract_figures:
+        figures_directory = output_directory / "figures"
+        extracted_count = extract_document_figures(
+            pdf_path=pdf_path,
+            figures=document.figures,
+            output_dir=figures_directory,
+            dpi=figure_dpi,
+            xrd_only=xrd_figures_only,
+        )
+        LOGGER.info(
+            "Extracted %d/%d figures to %s",
+            extracted_count,
+            len(document.figures),
+            figures_directory,
+        )
 
     parsed_output_path = (
         output_directory / f"{pdf_path.stem}.parsed.json"
@@ -1408,6 +1449,25 @@ def main() -> None:
     )
 
     argument_parser.add_argument(
+        "--skip-figures",
+        action="store_true",
+        help="Skip PyMuPDF figure extraction from GROBID coordinates.",
+    )
+
+    argument_parser.add_argument(
+        "--figure-dpi",
+        type=int,
+        default=300,
+        help="DPI used when rendering cropped figure images.",
+    )
+
+    argument_parser.add_argument(
+        "--xrd-figures-only",
+        action="store_true",
+        help="Only extract images for figures classified as likely XRD.",
+    )
+
+    argument_parser.add_argument(
         "--log-level",
         default="INFO",
         choices={
@@ -1431,6 +1491,9 @@ def main() -> None:
             pdf_path=args.pdf,
             output_directory=args.output,
             grobid_url=args.grobid_url,
+            extract_figures=not args.skip_figures,
+            figure_dpi=args.figure_dpi,
+            xrd_figures_only=args.xrd_figures_only,
         )
     except Exception as exc:
         LOGGER.exception("PDF parsing failed: %s", exc)
