@@ -12,12 +12,6 @@ docker run --rm \
   grobid/grobid:0.9.0-crf
 ```
 
-GROBID will be available at:
-
-```text
-http://localhost:8070
-```
-
 ### 2. Create a Virtual Environment
 
 Create the Python virtual environment:
