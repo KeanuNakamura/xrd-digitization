@@ -1,0 +1,975 @@
+{
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+  "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+  "metadata": {
+    "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+    "doi": "10.37934/araset.29.9.8796",
+    "abstract": "The perovskite structure of La0.7Pb0.3MnO3 has been investigated. The sample has been prepared using the solid-state method. The structural analysis of the sample was carried out by using X-ray diffraction (XRD). The Rietveld refinement technique was applied to refine and determine the structural parameters of the sample. The XRD analysis shows that the compound exhibits a single phase and is crystalized in a rhombohedral structure with a space group of R-3c. The tolerance factor of the sample was calculated to determine the stability of the structure. The visualisation of the sample structure using VESTA software indicates the formation of the MnO6 octahedral structure. The FTIR revealed the absorption band of the sample is around 496 cm -1 , corresponding with the stretching vibration of the Mn-O bond. The AC susceptibility and Vibrating-sample Magnetometer (VSM) were done to study the magnetic properties of the sample and confirm the transition from ferromagnetic (FM) to paramagnetic (PM) at 298K with a maximum value of magnetization of 37.77 emu/g.",
+    "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+    "publication_date": "2023-02-07",
+    "authors": [
+      {
+        "given_name": null,
+        "middle_name": null,
+        "surname": "Muhammad Afiq Ikhwan Zainuddin",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": null,
+        "middle_name": null,
+        "surname": "Adlin Abdul Rahim",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": null,
+        "middle_name": null,
+        "surname": "Zakiah Mohamed",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      }
+    ],
+    "keywords": [
+      "X-Ray diffraction",
+      "Rietveld refinement",
+      "Crystal structure",
+      "Magnetic properties"
+    ]
+  },
+  "sections": [
+    {
+      "section_id": "section_a5717ab81d52",
+      "title": "Introduction",
+      "path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_5bb0253dba48",
+          "text": "Perovskite-type manganites present a composition of R1-xAxMnO3, where R denotes trivalent lanthanoid metal ions (La 3+ , Pr 3+ and Nd 3+ ) and A denotes divalent alkaline metal ions (Ca, Sr, Ba and Pb); this compound has attracted considerable research attention worldwide because it displays important properties, such as transformation of structure, metal-insulator (MI) transition, charge ordering, ferroelectricity and colossal magnetoresistance (CMR) phenomena [1, 2] . The compound can be regarded as high value from a technological perspective because of its magnetic and electrical properties. An important feature of perovskite manganite is its substitution ability with other elements when compared with other types of oxides [2] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_24abdd309ebf",
+          "text": "A previous study showed that the inorganic perovskite of LaMnO3 displays antiferromagnetic (AFM) insulating transition behaviour with a slightly low Nѐel temperature (TN = 140 K) [3] . The presence of Mn 4+ ions exhibit a significant correlation with the LaMnO3 structure and magnetic properties. The Mn 3+ /Mn 4+ ratio alters due to the substitution at the A-site, which also endorses orbital and charge ordering and is influenced by eg and t2g electron interaction. The introduction of divalent cations, such as Ca 2+ and Sr 2+ , into the compound will introduce a mixture valency of Mn 3+ and Mn 4+ ions and contribute to the double exchange mechanism [4] . The Mn 3+ /Mn 4+ ratio can also alter if substitution exists at the Mn-site, which also endorses orbital and charge ordering and is influenced by eg and t2g electron interaction. The substitution of Ca 2+ in La1-xCaxMnO3 induces a ferromagnetic (FM) to paramagnetic (PM) transition between 0.2 < x < 0.45, where the optimum ratio of Mn 3+/ Mn 4+ was obtained at x ∼ 0.33 [5] . Manjunatha et al., [6] reported that the compound La0.65Ca0.35MnO3 undergoes the same transition with a TC value of ~264 K. Another substitution of a divalent atom, such as Sr 2+ , increased the TC value from 208 K to 275 K (x = 0-0.7) as the concentration of Sr increased due to the enhancement of the double exchange mechanism [7] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_7854c4528ab6",
+          "text": "Previous studies on magnetic properties of La1-xPbxMnO3 (x = 0-0.2) showed that properties are remarkably influenced by the compound structure. Magnetic hysteresis studies at room temperature (T = 300 K) demonstrated that the compound is paramagnetic for x = 0-0.1 compositions and ferromagnetic for x = 0.15-0.2 compositions, with maximum magnetisation values of 16.97 and 30.45 emu/g, respectively [8] . The transition can be attributed to the MnO6 octahedral distortion, which can be improved with the increase of Pb doping and subsequently increase the tolerance value τ from 0.851 for x =0 to 0.862 for x = 0.2. The Mn ̶ O ̶ Mn bond angle can directly affect the electron transfer mechanism and Curie temperature (TC). Electron hopping from Mn 3+ to Mn 4+ improves significantly with the increase of the bond angle. The Mn ̶ O ̶ Mn bond angle and the Mn ̶ Mn bond are highly correlated with the tilting of the neighbouring MnO6 octahedron [8] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_30b761f95fbf",
+          "text": "The Pb element exists in the 2+ state with an ionic radius of 1.19 Å, whilst the La element exists in the 3+ state with an ionic radius of 1.032 Å. The influence of differences of ionic state and radii on the La0.7Pb0.3MnO3 crystal structure and magnetic behaviour requires further exploration. However, studies on the magnetic interaction of La0.7Pb0.3MnO3 perovskite are lacking. Therefore, the effect of the Pb 2+ ion with a concentration of x = 0.3 substitution at the A-site on alterations of structural and magnetic behaviours of LaMnO3 should be investigated. The results of synthesised crystalline samples of La0.7Pb0.3MnO3 by the means of solid-state reaction method and effects of the introduction of Pb into the A-site on the crystal structure and magnetic properties of the sample whilst considering the enhancement of magnetic interaction of La0.7Pb0.3MnO3 in the FM region are presented.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_89df710015e1",
+      "title": "Methodology",
+      "path": [
+        "Methodology"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_d0353d622867",
+          "text": "The sample of polycrystalline for La0.7Pb0.3MnO3 was prepared using conventional synthetisation method (solid-state reaction). The stoichiometric ratio of high purity (99.999%) lanthanum oxide (La2O3), lead (III) oxide (Pb3O4) and manganese (IV) oxide (MnO2) powder as the raw material was weighed to a predetermined amount using a digital weight machine. Weighing samples were mixed in appropriate amounts separately for each series and ground continuously using an agate mortar to achieve satisfactory homogeneity for about 2 hours. Mixture powders were placed in an alumina crucible to undergo calcination in a box furnace (carbolite furnace model CWF 11/5) at 700 °C for about 24 hours at a heating rate of 15 °C/minute and a cooling rate of 1 °C/minute. All samples were then calcined again at 900 °C for about 24 hours to eliminate volatile foreign particles. The mixture powder was poured in the mould and reground before pressing into pellet form with a hydraulic press. The pellets were sintered at 1100 °C for another 24 hours in the box furnace. Physical characterisations of the sample were completed by means of X-ray diffraction with CuKα radiation with a wavelength of 1.5406 Å using an XRD Philips X'Pert Pro Model PW3040 diffractometer and scanning electron microscope with equipment model LEO 14551 VPSEM system. XRD data are subjected to a refinement process to determine the structure and lattice parameter of the sample through Rietveld program. The results of Fourier transform infrared spectroscopy (FTIR) were obtained using FTIR-Raman Drift Nicolet 6700 within a range of 400-1200 cm -1 . The temperaturedependent AC susceptibility measurements were carried out within the temperature range of 30-300 K in a Cryogenics Model HC-4A Zephyr, CTI-Cryogenics cryostat Janis Model CCS-900T, vacuum turbo pump Model EXT 75DX Edwards and temperature controller, which were connected to a computer using the interfaced device IEEE-488 GPIB socket for data logging.",
+          "section_path": [
+            "Methodology"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 15.1,
+          "peak_positions": [
+            15.0,
+            1.0,
+            100.0
+          ],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_dd5c5eb30bef",
+      "title": "Results",
+      "path": [
+        "Results"
+      ],
+      "section_type": "results",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_438b73e9c1dd",
+      "title": "Crystal Structure",
+      "path": [
+        "Crystal Structure"
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_5d706c0e0ccd",
+          "text": "Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature. Further observation demonstrated that extra peaks are absent, thereby indicating the absence of the formation of secondary phase in the sample. This finding is consistent with the conclusions of previous studies on manganites. The crystalline composition of the perovskite sample can be confirmed at their respective positions (2θ) according to peaks (012), (110), (104), (113), (202), ( 006 ), (024), (122), (116), (214), (018), ( 220 ), (208), ( 224 ), ( 134 ) and (128). The intensity of peaks reaches the maximum at an approximate angle of 32.79° with two different peaks of (110) and (104) and further confirmed by the JCPDF card number of #32-0484 [9] . The structural parameter information of the sample can be obtained from the Rietveld refinement analysis as shown in Table 1 . XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 . The samples are clearly monophasic in nature and undergo crystallisation with a rhombohedral crystal structure (α = β = 90 and γ = 120). The space group of the sample is R-3c. The pseudo-Voigt profile function was chosen to stimulate the data obtained from XRD due to the function containing Wyckoff atomic positions and understand the nature of the sample further. La/Pb, Mn and O atoms were conditioned at positions 6a(0, 0, 0.25), 6b(0, 0, 0) and 18e(x, 0, 0.25), respectively. Other relevant information, such as lattice parameters and unit volume, were also determined through the Rietveld refinement software, where a = b = 5.5333, c = 13.3943 and V = 355.167 A 3 . These findings are consistent with the conclusions of a previous study [8] . The structure of La0.7Pb0.3MnO3 was constructed using visualisation for electronic and structural analysis (VESTA) software. Figure 3(a) indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms. Additionally, the stability of the structure formed by the compound can be calculated using the tolerance factor τ, which can be expressed as follows: where < rA > is the average ionic radius of the A-site cation (1.0794 Å), < rB> is the average ionic radius of the B-site cation (0.6105 Å) and rO is the ionic radius of the O 2-anion (1.4000 Å). Note that the value of τ can explain the octahedron degree of distortion of MnO6 based on the matching of La/Pb ̶ O and Mn ̶ O layers. The perovskite structure with a value of τ=1 is ideal. The obtained value of τ for La0.7Pb0.3MnO3 was 0.8720, which indicates that mismatches exist between La/Pb ̶ O and Mn ̶ O layers due to MnO6 octahedron distortion. Furthermore, the tolerance value obtained is within the range of 0.75 < τ < 0.9, thereby indicating that A-cations are small in size to fit into their corresponding spaces and may demonstrate a possible rhombohedral crystal structure [10] . The calculation of the crystalline size of the sample was carried out by utilising Scherrer equation [11] , as expressed in Eq. ( 2 ):",
+          "section_path": [
+            "Crystal Structure"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "1",
+            "2",
+            "3"
+          ],
+          "xrd_score": 20.9,
+          "peak_positions": [
+            32.79
+          ],
+          "miller_indices": [
+            "(012)",
+            "(110)",
+            "(104)",
+            "(113)",
+            "(202)",
+            "( 006 )",
+            "(024)",
+            "(122)",
+            "(116)",
+            "(214)",
+            "(018)",
+            "( 220 )",
+            "(208)",
+            "( 224 )",
+            "( 134 )",
+            "(128)",
+            "(0, 0, 0)"
+          ]
+        },
+        {
+          "paragraph_id": "paragraph_bd7eade864f1",
+          "text": "where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.",
+          "section_path": [
+            "Crystal Structure"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 6.1,
+          "peak_positions": [
+            32.79
+          ],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_ef6c96a927bf",
+      "title": "Scanning Electron Microscope",
+      "path": [
+        "Scanning Electron Microscope"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_063239261c6e",
+          "text": "Figure 4 depicts the morphology obtained from scanning electron microscopy (SEM) for La0.7Pb0.3MnO3 with a magnification magnitude of 7000×. Grains for the sample are irregular in shape and size. The agglomeration of grains was conducted in the samples due to the grain quick rate of nucleation as the samples undergo calcination and the sintering process at a relatively high temperature. The accumulation of grains happened because of the limited duration of proper grain dispersal from each other [12, 13] . The average grain size obtained from the morphology was 2.13 μm.",
+          "section_path": [
+            "Scanning Electron Microscope"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "4"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_972440190ff6",
+      "title": "Fourier Transform Infrared Spectroscopy",
+      "path": [
+        "Fourier Transform Infrared Spectroscopy"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_532042095470",
+          "text": "Figure 5 illustrates the broad band of absorption using the FTIR spectra of La0.7Pb0.3MnO3 samples within the range of 400 cm -1 to 1200 cm -1 (wavelength). The typical functional groups of the samples can be identified based on the absorption bands. It reveals a significant absorption at 496 cm -1 for La0.7Pb0.3MnO3. The obvious absorption band at the state wavelengths can be attributed to the high intensity stretching mode (νs) and can be further explained by internal manganese ion movement in respect of the MnO6 octahedron and being highly delicate towards Mn ̶ O bond length. The structural refinement process may also contribute to the changes. The metal oxide band obtained affirms the possibility of perovskite with the structure of ABO3 and corresponds with past studies on manganites [14, 15, 21] . Thus, the spectra formed describe the formation of the LaPbMnO3.",
+          "section_path": [
+            "Fourier Transform Infrared Spectroscopy"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "5"
+          ],
+          "xrd_score": 0.9,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_53cb6f331fd8",
+      "title": "Magnetic Properties",
+      "path": [
+        "Magnetic Properties"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_bb7970677fc2",
+          "text": "Magnetic properties of La0.7Pb0.3MnO3 were examined via the AC susceptibility measurement and magnetic hysteresis method. Figure 6 visualises the plots of the real part of AC susceptibility and χ' against temperature after normalisation for the sample La0.7Pb0.3MnO3. The sample exhibits a transition from ferromagnetic (FM) to paramagnetic (PM) with a Curie temperature TC of around 298 K. The determination of TC was performed by identifying the lowest point (minimum point) from the dχ'/dT versus the temperature curve, as shown in the inset of Figure 6 . Differences in A-site ions will modify the magnetic behaviour as well as transport properties of manganites. Manganese ions were mainly in the 3+ state for LaMnO3 undoped manganite but the manganese ion displays the difference in valency of manganites after a specified concentration of doping [16, 17] . The doping of cations, such as Pb 2+ , in the A-site of LaMnO3 will change the overall ratio of Mn 3+ /Mn 4+ ions. The Mn 4+ ion concentration increased [18] . The double-exchange mechanism will likely occur within the sample and directly contribute towards the high TC value of the sample [19, 20] . The magnetic hysteresis of La0. 7Pb0.3MnO3 is depicted in Figure 7 . The sample exhibits ferromagnetic behaviour with a maximum magnetisation (moment mass) value of 37.27 emu/g. The possible explanation for this behaviour can be attributed to the substitution of Pb 2+ into the A-site. The substitution improves the Mn 3+ ̶ O ̶ Mn 4+ bond angle of LaMnO3, induces the overlap integral between Mn-3d and O-2p orbitals, and further encourages the electron exchange interaction to take place between the layers of the Mn 3+ ̶ O ̶ Mn 4+ bond [21] .",
+          "section_path": [
+            "Magnetic Properties"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "6",
+            "7"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_adfd03b4f4bc",
+      "title": "Conclusions",
+      "path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_f69dfcfdaf44",
+          "text": "La0.7Pb0.3MnO3 was successfully synthesised through the conventional solid-state reaction. The XRD results of the sample were thoroughly analysed through Rietveld refinement software. The sample formed a rhombohedral structure with a space group of R-3c. The tolerance factor value τ of the sample of 0.8720 indicated the presence of MnO6 octahedron distortion. The crystalline size value obtained for the sample is 39 nm. The morphology study on the sample indicates the formation of grains with various sizes and shapes and the occurrence of grain agglomerations. Significant absorption bands from the FTIR spectrum at 496 cm -1 indicate the formation of LaPbMnO3. The La0.7Pb0.3MnO3 sample transitions from PM to FM with a TC value of 298 K and maximum magnetisation value of 37.27 emu/g. This magnetic behaviour verified that the doping of Pb alters the Mn-O bond length and Mn 3+ -O-Mn 4+ bond angle and leads to minimal MnO6 distortion consequently improve the DE mechanism.",
+          "section_path": [
+            "Conclusions"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 9.2,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "paragraph_5bb0253dba48",
+      "text": "Perovskite-type manganites present a composition of R1-xAxMnO3, where R denotes trivalent lanthanoid metal ions (La 3+ , Pr 3+ and Nd 3+ ) and A denotes divalent alkaline metal ions (Ca, Sr, Ba and Pb); this compound has attracted considerable research attention worldwide because it displays important properties, such as transformation of structure, metal-insulator (MI) transition, charge ordering, ferroelectricity and colossal magnetoresistance (CMR) phenomena [1, 2] . The compound can be regarded as high value from a technological perspective because of its magnetic and electrical properties. An important feature of perovskite manganite is its substitution ability with other elements when compared with other types of oxides [2] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_24abdd309ebf",
+      "text": "A previous study showed that the inorganic perovskite of LaMnO3 displays antiferromagnetic (AFM) insulating transition behaviour with a slightly low Nѐel temperature (TN = 140 K) [3] . The presence of Mn 4+ ions exhibit a significant correlation with the LaMnO3 structure and magnetic properties. The Mn 3+ /Mn 4+ ratio alters due to the substitution at the A-site, which also endorses orbital and charge ordering and is influenced by eg and t2g electron interaction. The introduction of divalent cations, such as Ca 2+ and Sr 2+ , into the compound will introduce a mixture valency of Mn 3+ and Mn 4+ ions and contribute to the double exchange mechanism [4] . The Mn 3+ /Mn 4+ ratio can also alter if substitution exists at the Mn-site, which also endorses orbital and charge ordering and is influenced by eg and t2g electron interaction. The substitution of Ca 2+ in La1-xCaxMnO3 induces a ferromagnetic (FM) to paramagnetic (PM) transition between 0.2 < x < 0.45, where the optimum ratio of Mn 3+/ Mn 4+ was obtained at x ∼ 0.33 [5] . Manjunatha et al., [6] reported that the compound La0.65Ca0.35MnO3 undergoes the same transition with a TC value of ~264 K. Another substitution of a divalent atom, such as Sr 2+ , increased the TC value from 208 K to 275 K (x = 0-0.7) as the concentration of Sr increased due to the enhancement of the double exchange mechanism [7] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7854c4528ab6",
+      "text": "Previous studies on magnetic properties of La1-xPbxMnO3 (x = 0-0.2) showed that properties are remarkably influenced by the compound structure. Magnetic hysteresis studies at room temperature (T = 300 K) demonstrated that the compound is paramagnetic for x = 0-0.1 compositions and ferromagnetic for x = 0.15-0.2 compositions, with maximum magnetisation values of 16.97 and 30.45 emu/g, respectively [8] . The transition can be attributed to the MnO6 octahedral distortion, which can be improved with the increase of Pb doping and subsequently increase the tolerance value τ from 0.851 for x =0 to 0.862 for x = 0.2. The Mn ̶ O ̶ Mn bond angle can directly affect the electron transfer mechanism and Curie temperature (TC). Electron hopping from Mn 3+ to Mn 4+ improves significantly with the increase of the bond angle. The Mn ̶ O ̶ Mn bond angle and the Mn ̶ Mn bond are highly correlated with the tilting of the neighbouring MnO6 octahedron [8] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_30b761f95fbf",
+      "text": "The Pb element exists in the 2+ state with an ionic radius of 1.19 Å, whilst the La element exists in the 3+ state with an ionic radius of 1.032 Å. The influence of differences of ionic state and radii on the La0.7Pb0.3MnO3 crystal structure and magnetic behaviour requires further exploration. However, studies on the magnetic interaction of La0.7Pb0.3MnO3 perovskite are lacking. Therefore, the effect of the Pb 2+ ion with a concentration of x = 0.3 substitution at the A-site on alterations of structural and magnetic behaviours of LaMnO3 should be investigated. The results of synthesised crystalline samples of La0.7Pb0.3MnO3 by the means of solid-state reaction method and effects of the introduction of Pb into the A-site on the crystal structure and magnetic properties of the sample whilst considering the enhancement of magnetic interaction of La0.7Pb0.3MnO3 in the FM region are presented.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d0353d622867",
+      "text": "The sample of polycrystalline for La0.7Pb0.3MnO3 was prepared using conventional synthetisation method (solid-state reaction). The stoichiometric ratio of high purity (99.999%) lanthanum oxide (La2O3), lead (III) oxide (Pb3O4) and manganese (IV) oxide (MnO2) powder as the raw material was weighed to a predetermined amount using a digital weight machine. Weighing samples were mixed in appropriate amounts separately for each series and ground continuously using an agate mortar to achieve satisfactory homogeneity for about 2 hours. Mixture powders were placed in an alumina crucible to undergo calcination in a box furnace (carbolite furnace model CWF 11/5) at 700 °C for about 24 hours at a heating rate of 15 °C/minute and a cooling rate of 1 °C/minute. All samples were then calcined again at 900 °C for about 24 hours to eliminate volatile foreign particles. The mixture powder was poured in the mould and reground before pressing into pellet form with a hydraulic press. The pellets were sintered at 1100 °C for another 24 hours in the box furnace. Physical characterisations of the sample were completed by means of X-ray diffraction with CuKα radiation with a wavelength of 1.5406 Å using an XRD Philips X'Pert Pro Model PW3040 diffractometer and scanning electron microscope with equipment model LEO 14551 VPSEM system. XRD data are subjected to a refinement process to determine the structure and lattice parameter of the sample through Rietveld program. The results of Fourier transform infrared spectroscopy (FTIR) were obtained using FTIR-Raman Drift Nicolet 6700 within a range of 400-1200 cm -1 . The temperaturedependent AC susceptibility measurements were carried out within the temperature range of 30-300 K in a Cryogenics Model HC-4A Zephyr, CTI-Cryogenics cryostat Janis Model CCS-900T, vacuum turbo pump Model EXT 75DX Edwards and temperature controller, which were connected to a computer using the interfaced device IEEE-488 GPIB socket for data logging.",
+      "section_path": [
+        "Methodology"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 15.1,
+      "peak_positions": [
+        15.0,
+        1.0,
+        100.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_5d706c0e0ccd",
+      "text": "Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature. Further observation demonstrated that extra peaks are absent, thereby indicating the absence of the formation of secondary phase in the sample. This finding is consistent with the conclusions of previous studies on manganites. The crystalline composition of the perovskite sample can be confirmed at their respective positions (2θ) according to peaks (012), (110), (104), (113), (202), ( 006 ), (024), (122), (116), (214), (018), ( 220 ), (208), ( 224 ), ( 134 ) and (128). The intensity of peaks reaches the maximum at an approximate angle of 32.79° with two different peaks of (110) and (104) and further confirmed by the JCPDF card number of #32-0484 [9] . The structural parameter information of the sample can be obtained from the Rietveld refinement analysis as shown in Table 1 . XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 . The samples are clearly monophasic in nature and undergo crystallisation with a rhombohedral crystal structure (α = β = 90 and γ = 120). The space group of the sample is R-3c. The pseudo-Voigt profile function was chosen to stimulate the data obtained from XRD due to the function containing Wyckoff atomic positions and understand the nature of the sample further. La/Pb, Mn and O atoms were conditioned at positions 6a(0, 0, 0.25), 6b(0, 0, 0) and 18e(x, 0, 0.25), respectively. Other relevant information, such as lattice parameters and unit volume, were also determined through the Rietveld refinement software, where a = b = 5.5333, c = 13.3943 and V = 355.167 A 3 . These findings are consistent with the conclusions of a previous study [8] . The structure of La0.7Pb0.3MnO3 was constructed using visualisation for electronic and structural analysis (VESTA) software. Figure 3(a) indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms. Additionally, the stability of the structure formed by the compound can be calculated using the tolerance factor τ, which can be expressed as follows: where < rA > is the average ionic radius of the A-site cation (1.0794 Å), < rB> is the average ionic radius of the B-site cation (0.6105 Å) and rO is the ionic radius of the O 2-anion (1.4000 Å). Note that the value of τ can explain the octahedron degree of distortion of MnO6 based on the matching of La/Pb ̶ O and Mn ̶ O layers. The perovskite structure with a value of τ=1 is ideal. The obtained value of τ for La0.7Pb0.3MnO3 was 0.8720, which indicates that mismatches exist between La/Pb ̶ O and Mn ̶ O layers due to MnO6 octahedron distortion. Furthermore, the tolerance value obtained is within the range of 0.75 < τ < 0.9, thereby indicating that A-cations are small in size to fit into their corresponding spaces and may demonstrate a possible rhombohedral crystal structure [10] . The calculation of the crystalline size of the sample was carried out by utilising Scherrer equation [11] , as expressed in Eq. ( 2 ):",
+      "section_path": [
+        "Crystal Structure"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "1",
+        "2",
+        "3"
+      ],
+      "xrd_score": 20.9,
+      "peak_positions": [
+        32.79
+      ],
+      "miller_indices": [
+        "(012)",
+        "(110)",
+        "(104)",
+        "(113)",
+        "(202)",
+        "( 006 )",
+        "(024)",
+        "(122)",
+        "(116)",
+        "(214)",
+        "(018)",
+        "( 220 )",
+        "(208)",
+        "( 224 )",
+        "( 134 )",
+        "(128)",
+        "(0, 0, 0)"
+      ]
+    },
+    {
+      "paragraph_id": "paragraph_bd7eade864f1",
+      "text": "where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.",
+      "section_path": [
+        "Crystal Structure"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 6.1,
+      "peak_positions": [
+        32.79
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_063239261c6e",
+      "text": "Figure 4 depicts the morphology obtained from scanning electron microscopy (SEM) for La0.7Pb0.3MnO3 with a magnification magnitude of 7000×. Grains for the sample are irregular in shape and size. The agglomeration of grains was conducted in the samples due to the grain quick rate of nucleation as the samples undergo calcination and the sintering process at a relatively high temperature. The accumulation of grains happened because of the limited duration of proper grain dispersal from each other [12, 13] . The average grain size obtained from the morphology was 2.13 μm.",
+      "section_path": [
+        "Scanning Electron Microscope"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "4"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_532042095470",
+      "text": "Figure 5 illustrates the broad band of absorption using the FTIR spectra of La0.7Pb0.3MnO3 samples within the range of 400 cm -1 to 1200 cm -1 (wavelength). The typical functional groups of the samples can be identified based on the absorption bands. It reveals a significant absorption at 496 cm -1 for La0.7Pb0.3MnO3. The obvious absorption band at the state wavelengths can be attributed to the high intensity stretching mode (νs) and can be further explained by internal manganese ion movement in respect of the MnO6 octahedron and being highly delicate towards Mn ̶ O bond length. The structural refinement process may also contribute to the changes. The metal oxide band obtained affirms the possibility of perovskite with the structure of ABO3 and corresponds with past studies on manganites [14, 15, 21] . Thus, the spectra formed describe the formation of the LaPbMnO3.",
+      "section_path": [
+        "Fourier Transform Infrared Spectroscopy"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "5"
+      ],
+      "xrd_score": 0.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_bb7970677fc2",
+      "text": "Magnetic properties of La0.7Pb0.3MnO3 were examined via the AC susceptibility measurement and magnetic hysteresis method. Figure 6 visualises the plots of the real part of AC susceptibility and χ' against temperature after normalisation for the sample La0.7Pb0.3MnO3. The sample exhibits a transition from ferromagnetic (FM) to paramagnetic (PM) with a Curie temperature TC of around 298 K. The determination of TC was performed by identifying the lowest point (minimum point) from the dχ'/dT versus the temperature curve, as shown in the inset of Figure 6 . Differences in A-site ions will modify the magnetic behaviour as well as transport properties of manganites. Manganese ions were mainly in the 3+ state for LaMnO3 undoped manganite but the manganese ion displays the difference in valency of manganites after a specified concentration of doping [16, 17] . The doping of cations, such as Pb 2+ , in the A-site of LaMnO3 will change the overall ratio of Mn 3+ /Mn 4+ ions. The Mn 4+ ion concentration increased [18] . The double-exchange mechanism will likely occur within the sample and directly contribute towards the high TC value of the sample [19, 20] . The magnetic hysteresis of La0. 7Pb0.3MnO3 is depicted in Figure 7 . The sample exhibits ferromagnetic behaviour with a maximum magnetisation (moment mass) value of 37.27 emu/g. The possible explanation for this behaviour can be attributed to the substitution of Pb 2+ into the A-site. The substitution improves the Mn 3+ ̶ O ̶ Mn 4+ bond angle of LaMnO3, induces the overlap integral between Mn-3d and O-2p orbitals, and further encourages the electron exchange interaction to take place between the layers of the Mn 3+ ̶ O ̶ Mn 4+ bond [21] .",
+      "section_path": [
+        "Magnetic Properties"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "6",
+        "7"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_f69dfcfdaf44",
+      "text": "La0.7Pb0.3MnO3 was successfully synthesised through the conventional solid-state reaction. The XRD results of the sample were thoroughly analysed through Rietveld refinement software. The sample formed a rhombohedral structure with a space group of R-3c. The tolerance factor value τ of the sample of 0.8720 indicated the presence of MnO6 octahedron distortion. The crystalline size value obtained for the sample is 39 nm. The morphology study on the sample indicates the formation of grains with various sizes and shapes and the occurrence of grain agglomerations. Significant absorption bands from the FTIR spectrum at 496 cm -1 indicate the formation of LaPbMnO3. The La0.7Pb0.3MnO3 sample transitions from PM to FM with a TC value of 298 K and maximum magnetisation value of 37.27 emu/g. This magnetic behaviour verified that the doping of Pb alters the Mn-O bond length and Mn 3+ -O-Mn 4+ bond angle and leads to minimal MnO6 distortion consequently improve the DE mechanism.",
+      "section_path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 9.2,
+      "peak_positions": [],
+      "miller_indices": []
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Fig. 1 . Fig. 1. Peaks obtained from XRD for La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "3,161.42,574.06,260.68,11.04;3,156.75,361.82,269.30,208.99",
+      "graphic_coords": "3,156.75,361.82,269.30,208.99",
+      "figure_type": null,
+      "xrd_score": 6.8,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_5d706c0e0ccd"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_24abdd309ebf",
+        "paragraph_7854c4528ab6",
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Fig. 2 . Fig. 2. The Rietveld refinement for La0.7Pb0.3MnO3 sample. The black line indicates the observed data, the solid red line indicates calculated patterns, the blue line indicates the differences between observed and calculated data",
+      "graphic_targets": [],
+      "coords": "4,167.30,588.10,262.35,11.04;4,167.30,601.54,262.33,11.04;4,167.30,614.98,262.24,11.04;4,167.30,628.42,225.90,11.04;4,168.40,390.88,257.39,194.45",
+      "graphic_coords": "4,168.40,390.88,257.39,194.45",
+      "figure_type": null,
+      "xrd_score": 6.4,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0/figures/fig_2.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_5d706c0e0ccd"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_24abdd309ebf",
+        "paragraph_7854c4528ab6",
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Fig. 3 . Fig. 3. (a) MnO6 octahedral structure of La0.7Pb0.3MnO3 obtained from the VESTA software. Green indicates the La atom, gray indicates the Pb atom, purple indicates the Mn atom and red indicates the O atom. (b) La0.7Pb0.3MnO3 structure visualises in polyhedral style",
+      "graphic_targets": [],
+      "coords": "5,153.14,373.99,283.74,11.04;5,153.14,387.43,283.45,11.04;5,153.14,400.87,283.44,11.04;5,153.14,414.31,283.76,11.04;5,153.14,427.75,71.24,11.04;5,154.63,205.08,285.55,154.00",
+      "graphic_coords": "5,154.63,205.08,285.55,154.00",
+      "figure_type": null,
+      "xrd_score": 2.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_5d706c0e0ccd"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_24abdd309ebf",
+        "paragraph_7854c4528ab6",
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Fig. 4 . Fig. 4. The micrograph obtained from SEM of La0.7Pb0.3MnO3 (b) The EDX result for La0.7Pb0.3MnO3",
+      "graphic_targets": [],
+      "coords": "6,146.06,460.75,282.42,11.04;6,146.06,474.19,148.16,11.04;6,147.15,218.48,300.47,240.10",
+      "graphic_coords": "6,147.15,218.48,300.47,240.10",
+      "figure_type": null,
+      "xrd_score": 2.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_063239261c6e"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    },
+    {
+      "figure_id": "fig_5",
+      "label": "5",
+      "normalized_label": "5",
+      "caption": "Fig. 5 . Fig. 5. The FTIR absorption band obtained for La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "7,145.82,310.25,303.40,11.04;7,127.15,72.00,340.25,236.10",
+      "graphic_coords": "7,127.15,72.00,340.25,236.10",
+      "figure_type": null,
+      "xrd_score": 2.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_532042095470"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    },
+    {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Fig. 6 . Fig. 6. The plot of Temperature-dependent real AC susceptibility (χ') for the La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "8,139.22,310.25,319.00,11.04;8,139.22,323.57,116.42,11.04;8,135.52,72.00,329.80,235.97",
+      "graphic_coords": "8,135.52,72.00,329.80,235.97",
+      "figure_type": null,
+      "xrd_score": 2.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_bb7970677fc2"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    },
+    {
+      "figure_id": "fig_7",
+      "label": "7",
+      "normalized_label": "7",
+      "caption": "Fig. 7 . Fig. 7. The plot of magnetization as a function of applied magnetic field for the La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "8,124.94,565.30,350.27,11.04;8,124.94,578.62,99.86,11.04;8,116.15,349.75,362.46,212.35",
+      "graphic_coords": "8,116.15,349.75,362.46,212.35",
+      "figure_type": null,
+      "xrd_score": 2.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_bb7970677fc2"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tab_0",
+      "label": "1",
+      "caption": "Table 1",
+      "text": "General Information Space group R-3c Symmetry 2 Lattice Parameters a(Å) 5.5333 b(Å) 5.5333 c(Å) 13.3943 α 90.00 β 90.00 γ 120.00 Unit cell volume, V (A 3 ) 355.167 Mn-O bond distance (Å) 1.9612(8) Mn 3+ -O-Mn 4+ bond angle (°) 167.1(4) Fit of goodness χ 2 5.019 Rp (%) 5.81 Rwp (%) 8.57 τ 0.8720 Crystalline size, D (nm) 39"
+    }
+  ],
+  "references": [
+    {
+      "reference_id": "b0",
+      "title": "Colossal magnetoresistant materials: the key role of phase separation",
+      "doi": "10.1016/S0370-1573(00)00121-6",
+      "year": "2001",
+      "authors": [
+        "Elbio Dagotto",
+        "Takashi Hotta",
+        "Adriana Moreo"
+      ],
+      "raw_text": "Colossal magnetoresistant materials: the key role of phase separation Elbio Dagotto Takashi Hotta Adriana Moreo 10.1016/S0370-1573(00)00121-6 Physics reports 344 1-3 2001 Dagotto, Elbio, Takashi Hotta, and Adriana Moreo. \"Colossal magnetoresistant materials: the key role of phase separation.\" Physics reports 344, no. 1-3 (2001): 1-153. https://doi.org/10.1016/S0370-1573(00)00121-6"
+    },
+    {
+      "reference_id": "b1",
+      "title": "Synthesis and magnetic characterization of LaMnO3 nanoparticles",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "E Hernández",
+        "V Sagredo",
+        "G Delgado"
+      ],
+      "raw_text": "Synthesis and magnetic characterization of LaMnO3 nanoparticles E Hernández V Sagredo G E Delgado Revista mexicana de física 61 3 2015 Hernández, E., V. Sagredo, and G. E. Delgado. \"Synthesis and magnetic characterization of LaMnO3 nanoparticles.\" Revista mexicana de física 61, no. 3 (2015): 166-169."
+    },
+    {
+      "reference_id": "b2",
+      "title": "MnO3: an ideal ferromagnetic system?",
+      "doi": "10.1088/0953-8984/12/30/318",
+      "year": "2000",
+      "authors": [
+        "J Zhao",
+        "T Song",
+        "H Kunkel",
+        "X Zhou",
+        "R Roshko",
+        "Gwyn Williams"
+      ],
+      "raw_text": "MnO3: an ideal ferromagnetic system? J H Zhao T Song H P Kunkel X Z Zhou R M Roshko Gwyn Williams 10.1088/0953-8984/12/30/318 La0. 95Mg0. 05 Journal of Physics: Condensed Matter 12 30 6903 2000 Zhao, J. H., T. Song, H. P. Kunkel, X. Z. Zhou, R. M. Roshko, and Gwyn Williams. \"La0. 95Mg0. 05MnO3: an ideal ferromagnetic system?\" Journal of Physics: Condensed Matter 12, no. 30 (2000): 6903. https://doi.org/10.1088/0953-8984/12/30/318"
+    },
+    {
+      "reference_id": "b3",
+      "title": "Effect of divalent Ions (A= Ca, Ba and Sr) substitution in La-A-Mn-O manganite on structural, magnetic and electrical transport properties",
+      "doi": "10.3844/ajassp.2009.1153.1157",
+      "year": "2009",
+      "authors": [
+        "K Lim",
+        "S Ng",
+        "S Halim",
+        "S Chen",
+        "J Wong"
+      ],
+      "raw_text": "Effect of divalent Ions (A= Ca, Ba and Sr) substitution in La-A-Mn-O manganite on structural, magnetic and electrical transport properties K P Lim S W Ng S A Halim S K Chen J K Wong 10.3844/ajassp.2009.1153.1157 American Journal of Applied Sciences 6 6 1153 2009 Lim, K. P., S. W. Ng, S. A. Halim, S. K. Chen, and J. K. Wong. \"Effect of divalent Ions (A= Ca, Ba and Sr) substitution in La-A-Mn-O manganite on structural, magnetic and electrical transport properties.\" American Journal of Applied Sciences 6, no. 6 (2009): 1153. https://doi.org/10.3844/ajassp.2009.1153.1157"
+    },
+    {
+      "reference_id": "b4",
+      "title": "Effects of Bi substitution on magnetic and transport properties of La 0.7-x Bi x Ag 0.3 MnO 3 ceramics",
+      "doi": "10.1007/s10948-012-1617-y",
+      "year": "2012",
+      "authors": [
+        "M Ghani",
+        "Z Mohamed",
+        "A Yahya"
+      ],
+      "raw_text": "Effects of Bi substitution on magnetic and transport properties of La 0.7-x Bi x Ag 0.3 MnO 3 ceramics M A Ghani Z Mohamed A K Yahya 10.1007/s10948-012-1617-y Journal of superconductivity and novel magnetism 25 2012 Ghani, M. A., Z. Mohamed, and A. K. Yahya. \"Effects of Bi substitution on magnetic and transport properties of La 0.7-x Bi x Ag 0.3 MnO 3 ceramics.\" Journal of superconductivity and novel magnetism 25 (2012): 2395-2402. https://doi.org/10.1007/s10948-012-1617-y"
+    },
+    {
+      "reference_id": "b5",
+      "title": "Magnetic inhomogeneity and Griffiths phase in Bi substituted La0. 65-xBixCa0. 35MnO3 manganites",
+      "doi": "10.1016/j.physb.2016.06.031",
+      "year": "2016",
+      "authors": [
+        "S Manjunatha",
+        "P Ashok Rao",
+        "W Poornesh",
+        "Y-K Lin",
+        "Kuo"
+      ],
+      "raw_text": "Magnetic inhomogeneity and Griffiths phase in Bi substituted La0. 65-xBixCa0. 35MnO3 manganites S O Manjunatha P Ashok Rao W J Poornesh Y-K Lin Kuo 10.1016/j.physb.2016.06.031 Physica B: Condensed Matter 498 2016 Manjunatha, S. O., Ashok Rao, P. Poornesh, W. J. Lin, and Y-K. Kuo. \"Magnetic inhomogeneity and Griffiths phase in Bi substituted La0. 65-xBixCa0. 35MnO3 manganites.\" Physica B: Condensed Matter 498 (2016): 82-91. https://doi.org/10.1016/j.physb.2016.06.031"
+    },
+    {
+      "reference_id": "b6",
+      "title": "Nanoparticles Nearly Freestanding in Water: Preparation and Magnetic Properties",
+      "doi": "10.1021/cm0622349",
+      "year": "2006-07-00",
+      "authors": [
+        "Yang Tian",
+        "Dairong Chen",
+        "Xiuling Jiao"
+      ],
+      "raw_text": "Nanoparticles Nearly Freestanding in Water: Preparation and Magnetic Properties Yang Tian Dairong Chen Xiuling Jiao 10.1021/cm0622349 Chemistry of materials 3 26 x= 0, 0.3, 0.5, 0.7. 2006 La1-x Sr x MnO Tian, Yang, Dairong Chen, and Xiuling Jiao. \"La1-x Sr x MnO3 (x= 0, 0.3, 0.5, 0.7) Nanoparticles Nearly Freestanding in Water: Preparation and Magnetic Properties.\" Chemistry of materials 18, no. 26 (2006): 6088-6090. https://doi.org/10.1021/cm0622349"
+    },
+    {
+      "reference_id": "b7",
+      "title": "Polaron hopping conduction mechanism and magnetic properties of Pb-doped LaMnO3",
+      "doi": "10.1111/jace.18061",
+      "year": "2022",
+      "authors": [
+        "Faraz Khan",
+        "M Arshad",
+        "M Abushad",
+        "Swaleha Naseem",
+        "Hilal Ahmed",
+        "Azizurrahaman Ansari",
+        "Vishal Kumar Chakradhary",
+        "Shahid Husain",
+        "Wasi Khan"
+      ],
+      "raw_text": "Polaron hopping conduction mechanism and magnetic properties of Pb-doped LaMnO3 Faraz A Khan M Arshad M Abushad Swaleha Naseem Hilal Ahmed Azizurrahaman Ansari Vishal Kumar Chakradhary Shahid Husain Wasi Khan 10.1111/jace.18061 Journal of the American Ceramic Society 105 1 2022 Khan, Faraz A., M. Arshad, M. Abushad, Swaleha Naseem, Hilal Ahmed, Azizurrahaman Ansari, Vishal Kumar Chakradhary, Shahid Husain, and Wasi Khan. \"Polaron hopping conduction mechanism and magnetic properties of Pb-doped LaMnO3.\" Journal of the American Ceramic Society 105, no. 1 (2022): 348-361. https://doi.org/10.1111/jace.18061"
+    },
+    {
+      "reference_id": "b8",
+      "title": "X-ray peak broadening analysis in LaMnO3+ δ nano-particles with rhombohedral crystal structure",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "Ahmad Gholizadeh"
+      ],
+      "raw_text": "X-ray peak broadening analysis in LaMnO3+ δ nano-particles with rhombohedral crystal structure Ahmad Gholizadeh Journal of Advanced Materials and Processing 3 3 2015 Gholizadeh, Ahmad. \"X-ray peak broadening analysis in LaMnO3+ δ nano-particles with rhombohedral crystal structure.\" Journal of Advanced Materials and Processing 3, no. 3 (2015): 71-83."
+    },
+    {
+      "reference_id": "b9",
+      "title": "Influence of distortions and tolerance factor on the structure of ABO3 type perovskites and complex perovskites",
+      "doi": "10.1080/00150193.2019.1684759",
+      "year": "2020",
+      "authors": [
+        "Ch Devi",
+        "J Sameera",
+        "A Omprakash",
+        "Rajani",
+        "G Malathi",
+        "G Kumar",
+        "Prasad"
+      ],
+      "raw_text": "Influence of distortions and tolerance factor on the structure of ABO3 type perovskites and complex perovskites Ch Devi J Sameera A Omprakash Rajani G S Malathi G Kumar Prasad 10.1080/00150193.2019.1684759 Ferroelectrics 554 1 2020 Devi, Ch Sameera, J. Omprakash, A. Rajani Malathi, G. S. Kumar, and G. Prasad. \"Influence of distortions and tolerance factor on the structure of ABO3 type perovskites and complex perovskites.\" Ferroelectrics 554, no. 1 (2020): 172-186. https://doi.org/10.1080/00150193.2019.1684759"
+    },
+    {
+      "reference_id": "b10",
+      "title": "Synthesis and Characterization of Sn/Ag Nanoparticle Composite as Electro-Catalyst for Fuel Cell",
+      "doi": "10.37934/jrnn.1.1.1221",
+      "year": "2021",
+      "authors": [
+        "Tan Kang",
+        "Siti Wei",
+        "Mohd Husnaa",
+        "Pooria Taib",
+        "Mikio Moozarm Nia",
+        "Kamyar Miyake",
+        "Shameli"
+      ],
+      "raw_text": "Synthesis and Characterization of Sn/Ag Nanoparticle Composite as Electro-Catalyst for Fuel Cell Tan Kang Siti Wei Mohd Husnaa Pooria Taib Mikio Moozarm Nia Kamyar Miyake Shameli 10.37934/jrnn.1.1.1221 Journal of Research in Nanoscience and Nanotechnology 1 1 2021 Kang, Tan Wei, Siti Husnaa Mohd Taib, Pooria Moozarm Nia, Mikio Miyake, and Kamyar Shameli. \"Synthesis and Characterization of Sn/Ag Nanoparticle Composite as Electro-Catalyst for Fuel Cell.\" Journal of Research in Nanoscience and Nanotechnology 1, no. 1 (2021): 12-21. https://doi.org/10.37934/jrnn.1.1.1221"
+    },
+    {
+      "reference_id": "b11",
+      "title": "Dielectric, AC Conductivity, and DC Conductivity Behaviours of Sr2CaTeO6 Double Perovskite",
+      "doi": "10.3390/ma15124363",
+      "year": "2022",
+      "authors": [
+        "M Halizan",
+        "Z Mohamed"
+      ],
+      "raw_text": "Dielectric, AC Conductivity, and DC Conductivity Behaviours of Sr2CaTeO6 Double Perovskite M Z Halizan Z Mohamed 10.3390/ma15124363 Materials 2022 2022 Halizan, M. Z., and Z. Mohamed. \"Dielectric, AC Conductivity, and DC Conductivity Behaviours of Sr2CaTeO6 Double Perovskite. Materials 2022, 15, 4363.\" (2022). https://doi.org/10.3390/ma15124363"
+    },
+    {
+      "reference_id": "b12",
+      "title": "The agglomeration, coalescence and sliding of nanoparticles, leading to the rapid sintering of zirconia nanoceramics",
+      "doi": "10.1038/s41598-017-02760-7",
+      "year": "2017",
+      "authors": [
+        "Andraž Kocjan",
+        "Manca Logar",
+        "Zhijian Shen"
+      ],
+      "raw_text": "The agglomeration, coalescence and sliding of nanoparticles, leading to the rapid sintering of zirconia nanoceramics Andraž Kocjan Manca Logar Zhijian Shen 10.1038/s41598-017-02760-7 Scientific Reports 7 1 2541 2017 Kocjan, Andraž, Manca Logar, and Zhijian Shen. \"The agglomeration, coalescence and sliding of nanoparticles, leading to the rapid sintering of zirconia nanoceramics.\" Scientific Reports 7, no. 1 (2017): 2541. https://doi.org/10.1038/s41598-017-02760-7"
+    },
+    {
+      "reference_id": "b13",
+      "title": "Synthesis and evaluation of Fe-doped zinc oxide photocatalyst for methylene blue and congo red removal",
+      "doi": "10.37934/progee.22.1.1328",
+      "year": "2022",
+      "authors": [
+        "Kingsly Cheah",
+        "Jing Chee",
+        "Sum"
+      ],
+      "raw_text": "Synthesis and evaluation of Fe-doped zinc oxide photocatalyst for methylene blue and congo red removal Kingsly Tian Cheah Jing Yao Chee Sum 10.37934/progee.22.1.1328 Progress in Energy and Environment 22 2022 Cheah, Kingsly Tian Chee, and Jing Yao Sum. \"Synthesis and evaluation of Fe-doped zinc oxide photocatalyst for methylene blue and congo red removal.\" Progress in Energy and Environment 22 (2022): 13-28. https://doi.org/10.37934/progee.22.1.1328"
+    },
+    {
+      "reference_id": "b14",
+      "title": "Study of structural, dielectric and optical properties of NdMnO3",
+      "doi": "10.1063/1.5032577",
+      "year": "2018",
+      "authors": [
+        "Anand Somvanshi",
+        "Shahid Husain"
+      ],
+      "raw_text": "Study of structural, dielectric and optical properties of NdMnO3 Anand Somvanshi Shahid Husain 10.1063/1.5032577 AIP Conference Proceedings AIP Publishing LLC 2018 1953 30242 Somvanshi, Anand, and Shahid Husain. \"Study of structural, dielectric and optical properties of NdMnO3.\" In AIP Conference Proceedings, vol. 1953, no. 1, p. 030242. AIP Publishing LLC, 2018. https://doi.org/10.1063/1.5032577"
+    },
+    {
+      "reference_id": "b15",
+      "title": "A study on structural and physical properties of NdMnO3 and Nd0. 7Ag0. 3MnO3",
+      "doi": "10.1063/5.0058036",
+      "year": "2021",
+      "authors": [
+        "Nurul Azhar",
+        "Umirah Atiqah",
+        "Nur Rashidah Rosli",
+        "Azhan Baizura Mohamed",
+        "Zakiah Hashim",
+        "Mohamed"
+      ],
+      "raw_text": "A study on structural and physical properties of NdMnO3 and Nd0. 7Ag0. 3MnO3 Nurul Azhar Umirah Atiqah Nur Rashidah Rosli Azhan Baizura Mohamed Zakiah Hashim Mohamed 10.1063/5.0058036 AIP Conference Proceedings AIP Publishing LLC 2021 2368 30007 Azhar, Nurul Atiqah, Umirah Rashidah Rosli, Nur Baizura Mohamed, Azhan Hashim, and Zakiah Mohamed. \"A study on structural and physical properties of NdMnO3 and Nd0. 7Ag0. 3MnO3.\" In AIP Conference Proceedings, vol. 2368, no. 1, p. 030007. AIP Publishing LLC, 2021. https://doi.org/10.1063/5.0058036"
+    },
+    {
+      "reference_id": "b16",
+      "title": "Electrical and magnetic properties of La1-xSrxMnO3 (0.1≤ x≤ 0.25) ceramics prepared by sol-gel technique",
+      "doi": "10.1016/j.ceramint.2019.05.159",
+      "year": "2019",
+      "authors": [
+        "Yule Li",
+        "Hui Zhang",
+        "Xiang Liu",
+        "Qingming Chen",
+        "Qinghua Chen"
+      ],
+      "raw_text": "Electrical and magnetic properties of La1-xSrxMnO3 (0.1≤ x≤ 0.25) ceramics prepared by sol-gel technique Yule Li Hui Zhang Xiang Liu Qingming Chen Qinghua Chen 10.1016/j.ceramint.2019.05.159 Ceramics International 45 13 2019 Li, Yule, Hui Zhang, Xiang Liu, Qingming Chen, and Qinghua Chen. \"Electrical and magnetic properties of La1- xSrxMnO3 (0.1≤ x≤ 0.25) ceramics prepared by sol-gel technique.\" Ceramics International 45, no. 13 (2019): 16323- 16330. https://doi.org/10.1016/j.ceramint.2019.05.159"
+    },
+    {
+      "reference_id": "b17",
+      "title": "Effect of Pb2+ substitution at A-site on structural and magnetic properties of LaMnO3",
+      "doi": "10.1063/1.5033095",
+      "year": "2018",
+      "authors": [
+        "Sunil Kumar",
+        "Jaswinder Pal",
+        "P Shubhpreet Kaur",
+        "Mandeep Agrawal",
+        "Anupinder Singh",
+        "Singh"
+      ],
+      "raw_text": "Effect of Pb2+ substitution at A-site on structural and magnetic properties of LaMnO3 Sunil Kumar Jaswinder Pal P Shubhpreet Kaur Mandeep Agrawal Anupinder Singh Singh 10.1063/1.5033095 AIP Conference proceedings AIP Publishing LLC 2018 1953 120030 Kumar, Sunil, Jaswinder Pal, Shubhpreet Kaur, P. Agrawal, Mandeep Singh, and Anupinder Singh. \"Effect of Pb2+ substitution at A-site on structural and magnetic properties of LaMnO3.\" In AIP Conference proceedings, vol. 1953, no. 1, p. 120030. AIP Publishing LLC, 2018. https://doi.org/10.1063/1.5033095"
+    },
+    {
+      "reference_id": "b18",
+      "title": "Effect of Asite substitution by Ca or Sr on the structure and electrochemical performance of LaMnO3 perovskite",
+      "doi": "10.1016/j.electacta.2019.135489",
+      "year": "2020",
+      "authors": [
+        "Pian Ma",
+        "Pian",
+        "Ling Qiu",
+        "Na Lu",
+        "Yong Lei",
+        "Bo Liu",
+        "Jian Yu",
+        "Ming Dai",
+        "Shu Hong Li",
+        "Guo Hua Jiang"
+      ],
+      "raw_text": "Effect of Asite substitution by Ca or Sr on the structure and electrochemical performance of LaMnO3 perovskite Pian Ma Pian Ling Qiu Na Lu Yong Kun Lei Bo Liu Jian Yu Ming Dai Shu Hong Li Guo Hua Jiang 10.1016/j.electacta.2019.135489 Electrochimica Acta 332 135489 2020 Ma, Pian Pian, Qiu Ling Lu, Na Lei, Yong Kun Liu, Bo Yu, Jian Ming Dai, Shu Hong Li, and Guo Hua Jiang. \"Effect of A- site substitution by Ca or Sr on the structure and electrochemical performance of LaMnO3 perovskite.\" Electrochimica Acta 332 (2020): 135489. https://doi.org/10.1016/j.electacta.2019.135489"
+    },
+    {
+      "reference_id": "b19",
+      "title": "Influence of ruthenium doping on the crystal structure and magnetic properties of Pr0. 67Ba0. 33Mn1-xRuxO3 manganites",
+      "doi": "10.3390/cryst10040295",
+      "year": "2020",
+      "authors": [
+        "Zakiah Mohamed",
+        "Intan Syazwani Shahron",
+        "Norazila Ibrahim",
+        "Mohd Fauzi",
+        "Maulud"
+      ],
+      "raw_text": "Influence of ruthenium doping on the crystal structure and magnetic properties of Pr0. 67Ba0. 33Mn1-xRuxO3 manganites Zakiah Mohamed Intan Syazwani Shahron Norazila Ibrahim Mohd Fauzi Maulud 10.3390/cryst10040295 Crystals 10 4 295 2020 Mohamed, Zakiah, Intan Syazwani Shahron, Norazila Ibrahim, and Mohd Fauzi Maulud. \"Influence of ruthenium doping on the crystal structure and magnetic properties of Pr0. 67Ba0. 33Mn1-xRuxO3 manganites.\" Crystals 10, no. 4 (2020): 295. https://doi.org/10.3390/cryst10040295"
+    },
+    {
+      "reference_id": "b20",
+      "title": "Effect of Ag substitution on the electromagnetic property and microwave absorption of LaMnO3",
+      "doi": "10.1016/j.jmmm.2012.05.024",
+      "year": "2012",
+      "authors": [
+        "Shengxiang Huang",
+        "Lianwen Deng",
+        "Kesheng Zhou",
+        "Zhaowen Hu",
+        "Shuyuan Sun",
+        "Yuanwei Ma",
+        "Peng Xiao"
+      ],
+      "raw_text": "Effect of Ag substitution on the electromagnetic property and microwave absorption of LaMnO3 Shengxiang Huang Lianwen Deng Kesheng Zhou Zhaowen Hu Shuyuan Sun Yuanwei Ma Peng Xiao 10.1016/j.jmmm.2012.05.024 Journal of magnetism and magnetic materials 324 19 2012 Huang, Shengxiang, Lianwen Deng, Kesheng Zhou, Zhaowen Hu, Shuyuan Sun, Yuanwei Ma, and Peng Xiao. \"Effect of Ag substitution on the electromagnetic property and microwave absorption of LaMnO3.\" Journal of magnetism and magnetic materials 324, no. 19 (2012): 3149-3153. https://doi.org/10.1016/j.jmmm.2012.05.024"
+    }
+  ],
+  "counts": {
+    "sections": 8,
+    "paragraphs": 11,
+    "results_paragraphs": 2,
+    "xrd_paragraphs": 4,
+    "figures": 7,
+    "xrd_figures": 7,
+    "tables": 1,
+    "references": 21
+  }
+}

@@ -1,0 +1,552 @@
+[
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+      "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+      "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+      "doi": "10.37934/araset.29.9.8796",
+      "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+      "publication_date": "2023-02-07"
+    },
+    "figure": {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Fig. 1 . Fig. 1. Peaks obtained from XRD for La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "3,161.42,574.06,260.68,11.04;3,156.75,361.82,269.30,208.99",
+      "graphic_coords": "3,156.75,361.82,269.30,208.99",
+      "figure_type": null,
+      "xrd_score": 6.8,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_5d706c0e0ccd"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_24abdd309ebf",
+        "paragraph_7854c4528ab6",
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_5d706c0e0ccd",
+        "text": "Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature. Further observation demonstrated that extra peaks are absent, thereby indicating the absence of the formation of secondary phase in the sample. This finding is consistent with the conclusions of previous studies on manganites. The crystalline composition of the perovskite sample can be confirmed at their respective positions (2θ) according to peaks (012), (110), (104), (113), (202), ( 006 ), (024), (122), (116), (214), (018), ( 220 ), (208), ( 224 ), ( 134 ) and (128). The intensity of peaks reaches the maximum at an approximate angle of 32.79° with two different peaks of (110) and (104) and further confirmed by the JCPDF card number of #32-0484 [9] . The structural parameter information of the sample can be obtained from the Rietveld refinement analysis as shown in Table 1 . XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 . The samples are clearly monophasic in nature and undergo crystallisation with a rhombohedral crystal structure (α = β = 90 and γ = 120). The space group of the sample is R-3c. The pseudo-Voigt profile function was chosen to stimulate the data obtained from XRD due to the function containing Wyckoff atomic positions and understand the nature of the sample further. La/Pb, Mn and O atoms were conditioned at positions 6a(0, 0, 0.25), 6b(0, 0, 0) and 18e(x, 0, 0.25), respectively. Other relevant information, such as lattice parameters and unit volume, were also determined through the Rietveld refinement software, where a = b = 5.5333, c = 13.3943 and V = 355.167 A 3 . These findings are consistent with the conclusions of a previous study [8] . The structure of La0.7Pb0.3MnO3 was constructed using visualisation for electronic and structural analysis (VESTA) software. Figure 3(a) indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms. Additionally, the stability of the structure formed by the compound can be calculated using the tolerance factor τ, which can be expressed as follows: where < rA > is the average ionic radius of the A-site cation (1.0794 Å), < rB> is the average ionic radius of the B-site cation (0.6105 Å) and rO is the ionic radius of the O 2-anion (1.4000 Å). Note that the value of τ can explain the octahedron degree of distortion of MnO6 based on the matching of La/Pb ̶ O and Mn ̶ O layers. The perovskite structure with a value of τ=1 is ideal. The obtained value of τ for La0.7Pb0.3MnO3 was 0.8720, which indicates that mismatches exist between La/Pb ̶ O and Mn ̶ O layers due to MnO6 octahedron distortion. Furthermore, the tolerance value obtained is within the range of 0.75 < τ < 0.9, thereby indicating that A-cations are small in size to fit into their corresponding spaces and may demonstrate a possible rhombohedral crystal structure [10] . The calculation of the crystalline size of the sample was carried out by utilising Scherrer equation [11] , as expressed in Eq. ( 2 ):",
+        "section_path": [
+          "Crystal Structure"
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "1",
+          "2",
+          "3"
+        ],
+        "xrd_score": 20.9,
+        "peak_positions": [
+          32.79
+        ],
+        "miller_indices": [
+          "(012)",
+          "(110)",
+          "(104)",
+          "(113)",
+          "(202)",
+          "( 006 )",
+          "(024)",
+          "(122)",
+          "(116)",
+          "(214)",
+          "(018)",
+          "( 220 )",
+          "(208)",
+          "( 224 )",
+          "( 134 )",
+          "(128)",
+          "(0, 0, 0)"
+        ],
+        "relevant_text": "Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature.\n\nwhere k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.",
+    "extracted_features": {
+      "peak_positions_degrees": [
+        32.79
+      ],
+      "miller_indices": [
+        "( 006 )",
+        "( 134 )",
+        "( 220 )",
+        "( 224 )",
+        "(0, 0, 0)",
+        "(012)",
+        "(018)",
+        "(024)",
+        "(104)",
+        "(110)",
+        "(113)",
+        "(116)",
+        "(122)",
+        "(128)",
+        "(202)",
+        "(208)",
+        "(214)"
+      ]
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+      "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+      "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+      "doi": "10.37934/araset.29.9.8796",
+      "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+      "publication_date": "2023-02-07"
+    },
+    "figure": {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Fig. 2 . Fig. 2. The Rietveld refinement for La0.7Pb0.3MnO3 sample. The black line indicates the observed data, the solid red line indicates calculated patterns, the blue line indicates the differences between observed and calculated data",
+      "graphic_targets": [],
+      "coords": "4,167.30,588.10,262.35,11.04;4,167.30,601.54,262.33,11.04;4,167.30,614.98,262.24,11.04;4,167.30,628.42,225.90,11.04;4,168.40,390.88,257.39,194.45",
+      "graphic_coords": "4,168.40,390.88,257.39,194.45",
+      "figure_type": null,
+      "xrd_score": 6.4,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0/figures/fig_2.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_5d706c0e0ccd"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_24abdd309ebf",
+        "paragraph_7854c4528ab6",
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_5d706c0e0ccd",
+        "text": "Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature. Further observation demonstrated that extra peaks are absent, thereby indicating the absence of the formation of secondary phase in the sample. This finding is consistent with the conclusions of previous studies on manganites. The crystalline composition of the perovskite sample can be confirmed at their respective positions (2θ) according to peaks (012), (110), (104), (113), (202), ( 006 ), (024), (122), (116), (214), (018), ( 220 ), (208), ( 224 ), ( 134 ) and (128). The intensity of peaks reaches the maximum at an approximate angle of 32.79° with two different peaks of (110) and (104) and further confirmed by the JCPDF card number of #32-0484 [9] . The structural parameter information of the sample can be obtained from the Rietveld refinement analysis as shown in Table 1 . XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 . The samples are clearly monophasic in nature and undergo crystallisation with a rhombohedral crystal structure (α = β = 90 and γ = 120). The space group of the sample is R-3c. The pseudo-Voigt profile function was chosen to stimulate the data obtained from XRD due to the function containing Wyckoff atomic positions and understand the nature of the sample further. La/Pb, Mn and O atoms were conditioned at positions 6a(0, 0, 0.25), 6b(0, 0, 0) and 18e(x, 0, 0.25), respectively. Other relevant information, such as lattice parameters and unit volume, were also determined through the Rietveld refinement software, where a = b = 5.5333, c = 13.3943 and V = 355.167 A 3 . These findings are consistent with the conclusions of a previous study [8] . The structure of La0.7Pb0.3MnO3 was constructed using visualisation for electronic and structural analysis (VESTA) software. Figure 3(a) indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms. Additionally, the stability of the structure formed by the compound can be calculated using the tolerance factor τ, which can be expressed as follows: where < rA > is the average ionic radius of the A-site cation (1.0794 Å), < rB> is the average ionic radius of the B-site cation (0.6105 Å) and rO is the ionic radius of the O 2-anion (1.4000 Å). Note that the value of τ can explain the octahedron degree of distortion of MnO6 based on the matching of La/Pb ̶ O and Mn ̶ O layers. The perovskite structure with a value of τ=1 is ideal. The obtained value of τ for La0.7Pb0.3MnO3 was 0.8720, which indicates that mismatches exist between La/Pb ̶ O and Mn ̶ O layers due to MnO6 octahedron distortion. Furthermore, the tolerance value obtained is within the range of 0.75 < τ < 0.9, thereby indicating that A-cations are small in size to fit into their corresponding spaces and may demonstrate a possible rhombohedral crystal structure [10] . The calculation of the crystalline size of the sample was carried out by utilising Scherrer equation [11] , as expressed in Eq. ( 2 ):",
+        "section_path": [
+          "Crystal Structure"
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "1",
+          "2",
+          "3"
+        ],
+        "xrd_score": 20.9,
+        "peak_positions": [
+          32.79
+        ],
+        "miller_indices": [
+          "(012)",
+          "(110)",
+          "(104)",
+          "(113)",
+          "(202)",
+          "( 006 )",
+          "(024)",
+          "(122)",
+          "(116)",
+          "(214)",
+          "(018)",
+          "( 220 )",
+          "(208)",
+          "( 224 )",
+          "( 134 )",
+          "(128)",
+          "(0, 0, 0)"
+        ],
+        "relevant_text": "XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 .\n\nwhere k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.",
+    "extracted_features": {
+      "peak_positions_degrees": [
+        32.79
+      ],
+      "miller_indices": [
+        "( 006 )",
+        "( 134 )",
+        "( 220 )",
+        "( 224 )",
+        "(0, 0, 0)",
+        "(012)",
+        "(018)",
+        "(024)",
+        "(104)",
+        "(110)",
+        "(113)",
+        "(116)",
+        "(122)",
+        "(128)",
+        "(202)",
+        "(208)",
+        "(214)"
+      ]
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+      "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+      "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+      "doi": "10.37934/araset.29.9.8796",
+      "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+      "publication_date": "2023-02-07"
+    },
+    "figure": {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Fig. 3 . Fig. 3. (a) MnO6 octahedral structure of La0.7Pb0.3MnO3 obtained from the VESTA software. Green indicates the La atom, gray indicates the Pb atom, purple indicates the Mn atom and red indicates the O atom. (b) La0.7Pb0.3MnO3 structure visualises in polyhedral style",
+      "graphic_targets": [],
+      "coords": "5,153.14,373.99,283.74,11.04;5,153.14,387.43,283.45,11.04;5,153.14,400.87,283.44,11.04;5,153.14,414.31,283.76,11.04;5,153.14,427.75,71.24,11.04;5,154.63,205.08,285.55,154.00",
+      "graphic_coords": "5,154.63,205.08,285.55,154.00",
+      "figure_type": null,
+      "xrd_score": 2.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_5d706c0e0ccd"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_24abdd309ebf",
+        "paragraph_7854c4528ab6",
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_5d706c0e0ccd",
+        "text": "Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature. Further observation demonstrated that extra peaks are absent, thereby indicating the absence of the formation of secondary phase in the sample. This finding is consistent with the conclusions of previous studies on manganites. The crystalline composition of the perovskite sample can be confirmed at their respective positions (2θ) according to peaks (012), (110), (104), (113), (202), ( 006 ), (024), (122), (116), (214), (018), ( 220 ), (208), ( 224 ), ( 134 ) and (128). The intensity of peaks reaches the maximum at an approximate angle of 32.79° with two different peaks of (110) and (104) and further confirmed by the JCPDF card number of #32-0484 [9] . The structural parameter information of the sample can be obtained from the Rietveld refinement analysis as shown in Table 1 . XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 . The samples are clearly monophasic in nature and undergo crystallisation with a rhombohedral crystal structure (α = β = 90 and γ = 120). The space group of the sample is R-3c. The pseudo-Voigt profile function was chosen to stimulate the data obtained from XRD due to the function containing Wyckoff atomic positions and understand the nature of the sample further. La/Pb, Mn and O atoms were conditioned at positions 6a(0, 0, 0.25), 6b(0, 0, 0) and 18e(x, 0, 0.25), respectively. Other relevant information, such as lattice parameters and unit volume, were also determined through the Rietveld refinement software, where a = b = 5.5333, c = 13.3943 and V = 355.167 A 3 . These findings are consistent with the conclusions of a previous study [8] . The structure of La0.7Pb0.3MnO3 was constructed using visualisation for electronic and structural analysis (VESTA) software. Figure 3(a) indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms. Additionally, the stability of the structure formed by the compound can be calculated using the tolerance factor τ, which can be expressed as follows: where < rA > is the average ionic radius of the A-site cation (1.0794 Å), < rB> is the average ionic radius of the B-site cation (0.6105 Å) and rO is the ionic radius of the O 2-anion (1.4000 Å). Note that the value of τ can explain the octahedron degree of distortion of MnO6 based on the matching of La/Pb ̶ O and Mn ̶ O layers. The perovskite structure with a value of τ=1 is ideal. The obtained value of τ for La0.7Pb0.3MnO3 was 0.8720, which indicates that mismatches exist between La/Pb ̶ O and Mn ̶ O layers due to MnO6 octahedron distortion. Furthermore, the tolerance value obtained is within the range of 0.75 < τ < 0.9, thereby indicating that A-cations are small in size to fit into their corresponding spaces and may demonstrate a possible rhombohedral crystal structure [10] . The calculation of the crystalline size of the sample was carried out by utilising Scherrer equation [11] , as expressed in Eq. ( 2 ):",
+        "section_path": [
+          "Crystal Structure"
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "1",
+          "2",
+          "3"
+        ],
+        "xrd_score": 20.9,
+        "peak_positions": [
+          32.79
+        ],
+        "miller_indices": [
+          "(012)",
+          "(110)",
+          "(104)",
+          "(113)",
+          "(202)",
+          "( 006 )",
+          "(024)",
+          "(122)",
+          "(116)",
+          "(214)",
+          "(018)",
+          "( 220 )",
+          "(208)",
+          "( 224 )",
+          "( 134 )",
+          "(128)",
+          "(0, 0, 0)"
+        ],
+        "relevant_text": "Figure 3(a) indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Figure 3(a) indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms.\n\nwhere k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.",
+    "extracted_features": {
+      "peak_positions_degrees": [
+        32.79
+      ],
+      "miller_indices": [
+        "( 006 )",
+        "( 134 )",
+        "( 220 )",
+        "( 224 )",
+        "(0, 0, 0)",
+        "(012)",
+        "(018)",
+        "(024)",
+        "(104)",
+        "(110)",
+        "(113)",
+        "(116)",
+        "(122)",
+        "(128)",
+        "(202)",
+        "(208)",
+        "(214)"
+      ]
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+      "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+      "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+      "doi": "10.37934/araset.29.9.8796",
+      "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+      "publication_date": "2023-02-07"
+    },
+    "figure": {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Fig. 4 . Fig. 4. The micrograph obtained from SEM of La0.7Pb0.3MnO3 (b) The EDX result for La0.7Pb0.3MnO3",
+      "graphic_targets": [],
+      "coords": "6,146.06,460.75,282.42,11.04;6,146.06,474.19,148.16,11.04;6,147.15,218.48,300.47,240.10",
+      "graphic_coords": "6,147.15,218.48,300.47,240.10",
+      "figure_type": null,
+      "xrd_score": 2.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_063239261c6e"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_30b761f95fbf",
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_063239261c6e",
+        "text": "Figure 4 depicts the morphology obtained from scanning electron microscopy (SEM) for La0.7Pb0.3MnO3 with a magnification magnitude of 7000×. Grains for the sample are irregular in shape and size. The agglomeration of grains was conducted in the samples due to the grain quick rate of nucleation as the samples undergo calcination and the sintering process at a relatively high temperature. The accumulation of grains happened because of the limited duration of proper grain dispersal from each other [12, 13] . The average grain size obtained from the morphology was 2.13 μm.",
+        "section_path": [
+          "Scanning Electron Microscope"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "4"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Figure 4 depicts the morphology obtained from scanning electron microscopy (SEM) for La0.7Pb0.3MnO3 with a magnification magnitude of 7000×.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.\n\nFigure 4 depicts the morphology obtained from scanning electron microscopy (SEM) for La0.7Pb0.3MnO3 with a magnification magnitude of 7000×.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+      "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+      "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+      "doi": "10.37934/araset.29.9.8796",
+      "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+      "publication_date": "2023-02-07"
+    },
+    "figure": {
+      "figure_id": "fig_5",
+      "label": "5",
+      "normalized_label": "5",
+      "caption": "Fig. 5 . Fig. 5. The FTIR absorption band obtained for La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "7,145.82,310.25,303.40,11.04;7,127.15,72.00,340.25,236.10",
+      "graphic_coords": "7,127.15,72.00,340.25,236.10",
+      "figure_type": null,
+      "xrd_score": 2.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_532042095470"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_d0353d622867",
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_532042095470",
+        "text": "Figure 5 illustrates the broad band of absorption using the FTIR spectra of La0.7Pb0.3MnO3 samples within the range of 400 cm -1 to 1200 cm -1 (wavelength). The typical functional groups of the samples can be identified based on the absorption bands. It reveals a significant absorption at 496 cm -1 for La0.7Pb0.3MnO3. The obvious absorption band at the state wavelengths can be attributed to the high intensity stretching mode (νs) and can be further explained by internal manganese ion movement in respect of the MnO6 octahedron and being highly delicate towards Mn ̶ O bond length. The structural refinement process may also contribute to the changes. The metal oxide band obtained affirms the possibility of perovskite with the structure of ABO3 and corresponds with past studies on manganites [14, 15, 21] . Thus, the spectra formed describe the formation of the LaPbMnO3.",
+        "section_path": [
+          "Fourier Transform Infrared Spectroscopy"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "5"
+        ],
+        "xrd_score": 0.9,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Figure 5 illustrates the broad band of absorption using the FTIR spectra of La0.7Pb0.3MnO3 samples within the range of 400 cm -1 to 1200 cm -1 (wavelength).",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.\n\nFigure 5 illustrates the broad band of absorption using the FTIR spectra of La0.7Pb0.3MnO3 samples within the range of 400 cm -1 to 1200 cm -1 (wavelength).",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+      "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+      "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+      "doi": "10.37934/araset.29.9.8796",
+      "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+      "publication_date": "2023-02-07"
+    },
+    "figure": {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Fig. 6 . Fig. 6. The plot of Temperature-dependent real AC susceptibility (χ') for the La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "8,139.22,310.25,319.00,11.04;8,139.22,323.57,116.42,11.04;8,135.52,72.00,329.80,235.97",
+      "graphic_coords": "8,135.52,72.00,329.80,235.97",
+      "figure_type": null,
+      "xrd_score": 2.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_bb7970677fc2"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_bb7970677fc2",
+        "text": "Magnetic properties of La0.7Pb0.3MnO3 were examined via the AC susceptibility measurement and magnetic hysteresis method. Figure 6 visualises the plots of the real part of AC susceptibility and χ' against temperature after normalisation for the sample La0.7Pb0.3MnO3. The sample exhibits a transition from ferromagnetic (FM) to paramagnetic (PM) with a Curie temperature TC of around 298 K. The determination of TC was performed by identifying the lowest point (minimum point) from the dχ'/dT versus the temperature curve, as shown in the inset of Figure 6 . Differences in A-site ions will modify the magnetic behaviour as well as transport properties of manganites. Manganese ions were mainly in the 3+ state for LaMnO3 undoped manganite but the manganese ion displays the difference in valency of manganites after a specified concentration of doping [16, 17] . The doping of cations, such as Pb 2+ , in the A-site of LaMnO3 will change the overall ratio of Mn 3+ /Mn 4+ ions. The Mn 4+ ion concentration increased [18] . The double-exchange mechanism will likely occur within the sample and directly contribute towards the high TC value of the sample [19, 20] . The magnetic hysteresis of La0. 7Pb0.3MnO3 is depicted in Figure 7 . The sample exhibits ferromagnetic behaviour with a maximum magnetisation (moment mass) value of 37.27 emu/g. The possible explanation for this behaviour can be attributed to the substitution of Pb 2+ into the A-site. The substitution improves the Mn 3+ ̶ O ̶ Mn 4+ bond angle of LaMnO3, induces the overlap integral between Mn-3d and O-2p orbitals, and further encourages the electron exchange interaction to take place between the layers of the Mn 3+ ̶ O ̶ Mn 4+ bond [21] .",
+        "section_path": [
+          "Magnetic Properties"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "6",
+          "7"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Figure 6 visualises the plots of the real part of AC susceptibility and χ' against temperature after normalisation for the sample La0.7Pb0.3MnO3. The determination of TC was performed by identifying the lowest point (minimum point) from the dχ'/dT versus the temperature curve, as shown in the inset of Figure 6 .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.\n\nFigure 6 visualises the plots of the real part of AC susceptibility and χ' against temperature after normalisation for the sample La0.7Pb0.3MnO3. The determination of TC was performed by identifying the lowest point (minimum point) from the dχ'/dT versus the temperature curve, as shown in the inset of Figure 6 .",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+      "source_sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+      "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+      "doi": "10.37934/araset.29.9.8796",
+      "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+      "publication_date": "2023-02-07"
+    },
+    "figure": {
+      "figure_id": "fig_7",
+      "label": "7",
+      "normalized_label": "7",
+      "caption": "Fig. 7 . Fig. 7. The plot of magnetization as a function of applied magnetic field for the La0.7Pb0.3MnO3 sample",
+      "graphic_targets": [],
+      "coords": "8,124.94,565.30,350.27,11.04;8,124.94,578.62,99.86,11.04;8,116.15,349.75,362.46,212.35",
+      "graphic_coords": "8,116.15,349.75,362.46,212.35",
+      "figure_type": null,
+      "xrd_score": 2.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_bb7970677fc2"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_5d706c0e0ccd",
+        "paragraph_bd7eade864f1",
+        "paragraph_063239261c6e",
+        "paragraph_532042095470",
+        "paragraph_bb7970677fc2",
+        "paragraph_f69dfcfdaf44"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_bb7970677fc2",
+        "text": "Magnetic properties of La0.7Pb0.3MnO3 were examined via the AC susceptibility measurement and magnetic hysteresis method. Figure 6 visualises the plots of the real part of AC susceptibility and χ' against temperature after normalisation for the sample La0.7Pb0.3MnO3. The sample exhibits a transition from ferromagnetic (FM) to paramagnetic (PM) with a Curie temperature TC of around 298 K. The determination of TC was performed by identifying the lowest point (minimum point) from the dχ'/dT versus the temperature curve, as shown in the inset of Figure 6 . Differences in A-site ions will modify the magnetic behaviour as well as transport properties of manganites. Manganese ions were mainly in the 3+ state for LaMnO3 undoped manganite but the manganese ion displays the difference in valency of manganites after a specified concentration of doping [16, 17] . The doping of cations, such as Pb 2+ , in the A-site of LaMnO3 will change the overall ratio of Mn 3+ /Mn 4+ ions. The Mn 4+ ion concentration increased [18] . The double-exchange mechanism will likely occur within the sample and directly contribute towards the high TC value of the sample [19, 20] . The magnetic hysteresis of La0. 7Pb0.3MnO3 is depicted in Figure 7 . The sample exhibits ferromagnetic behaviour with a maximum magnetisation (moment mass) value of 37.27 emu/g. The possible explanation for this behaviour can be attributed to the substitution of Pb 2+ into the A-site. The substitution improves the Mn 3+ ̶ O ̶ Mn 4+ bond angle of LaMnO3, induces the overlap integral between Mn-3d and O-2p orbitals, and further encourages the electron exchange interaction to take place between the layers of the Mn 3+ ̶ O ̶ Mn 4+ bond [21] .",
+        "section_path": [
+          "Magnetic Properties"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "6",
+          "7"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "7Pb0.3MnO3 is depicted in Figure 7 .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm.\n\n7Pb0.3MnO3 is depicted in Figure 7 .",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  }
+]

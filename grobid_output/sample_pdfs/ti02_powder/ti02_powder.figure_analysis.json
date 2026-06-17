@@ -1,0 +1,14 @@
+[
+  {
+    "figure": 1,
+    "figure_path": "grobid_output/ti02_powder/figures/fig_1.png",
+    "caption": "Figure 1 Figure 1 X-ray diffraction of rutile TiO 2 (a) micropowders and (b) nanopowders.",
+    "text": "Figure 1 Figure 1 X-ray diffraction of rutile TiO 2 (a) micropowders and (b) nanopowders. XRD measurements were performed on the Bruker D8 Advance diffractometer operating in the reflection mode with Cu-Kα radiation (35 kV, 30 mA) and diffracted beam monochromator, using a step scan mode with the step of 0.075°( 2θ) and 4 s per step. Diffraction patterns of both anatase and rutile TiO 2 powders were compared with reference to JCPDS database. Additionally, the morphology of the powder was observed by TEM with a JEOL JEM-2100 ultra high resolution TEM operating at 160 kV. XRD patterns of nano-TiO 2 and micro-TiO 2 in rutile and anatase phases are shown in Figure 1 and Figure 2 , respectively. In Figure 1 , XRD patterns exhibited strong diffraction peaks at 27°, 36° and 55° indicating TiO 2 in the rutile phase. From Figure 1 and Figure 2 , they were shown that the diffraction pattern peak intensity of the TiO 2 increases with increasing particles size."
+  },
+  {
+    "figure": 2,
+    "figure_path": "grobid_output/ti02_powder/figures/fig_2.png",
+    "caption": "Figure 2 X Figure 2 X-ray diffraction of anatase TiO 2 (a) micropowders and (b) nanopowders.",
+    "text": "Figure 2 X Figure 2 X-ray diffraction of anatase TiO 2 (a) micropowders and (b) nanopowders. XRD measurements were performed on the Bruker D8 Advance diffractometer operating in the reflection mode with Cu-Kα radiation (35 kV, 30 mA) and diffracted beam monochromator, using a step scan mode with the step of 0.075°( 2θ) and 4 s per step. Diffraction patterns of both anatase and rutile TiO 2 powders were compared with reference to JCPDS database. Additionally, the morphology of the powder was observed by TEM with a JEOL JEM-2100 ultra high resolution TEM operating at 160 kV. XRD patterns of nano-TiO 2 and micro-TiO 2 in rutile and anatase phases are shown in Figure 1 and Figure 2 , respectively. On the other hand, in Figure 2 , XRD patterns exhibited strong diffraction peaks at 25°a nd 48° indicating TiO 2 in the anatase phase. From Figure 1 and Figure 2 , they were shown that the diffraction pattern peak intensity of the TiO 2 increases with increasing particles size."
+  }
+]

@@ -1,0 +1,830 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Determination of size distributions in nanosized powders by TEM, XRD, and SAXS</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Informa UK Limited</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2006-09">2006-09</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct status="consolidated" source="crossref">
+					<analytic>
+						<author>
+							<persName><forename type="first">H</forename><surname>Jensen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Pedersen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>J⊘rgensen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">J</forename><forename type="middle">Skov</forename><surname>Pedersen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Joensen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Iversen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>S⊘gaard</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<note type="raw_affiliation">yDepartment of Chemical Engineering , Aalborg University , Niels Bohrs Vej 8 , 6700 Esbjerg , Denmark</note>
+								<orgName type="department">yDepartment of Chemical Engineering</orgName>
+								<orgName type="institution">Aalborg University</orgName>
+								<address>
+									<addrLine>Niels Bohrs Vej 8</addrLine>
+									<postCode>6700</postCode>
+									<settlement>Esbjerg</settlement>
+									<country key="DK">Denmark</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<note type="raw_affiliation">zDepartment of Chemistry , University of Aarhus , 8000 Aarhus , Denmark</note>
+								<orgName type="department">zDepartment of Chemistry</orgName>
+								<orgName type="institution">University of Aarhus</orgName>
+								<address>
+									<postCode>8000</postCode>
+									<settlement>Aarhus</settlement>
+									<country key="DK">Denmark</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<note type="raw_affiliation">xJJ X-Ray Systems ApS , Gl. Skovlundevej 54 , 2740 Skovlunde , Denmark</note>
+								<orgName type="institution">xJJ X-Ray Systems ApS</orgName>
+								<address>
+									<addrLine>Gl. Skovlundevej 54</addrLine>
+									<postCode>2740</postCode>
+									<settlement>Skovlunde</settlement>
+									<country key="DK">Denmark</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<note type="raw_affiliation">{SCF-Technologies A/S , Gl. Køge Landevej 22 , Building H , 2500 Valby , Denmark</note>
+								<orgName type="institution">{SCF-Technologies A/S</orgName>
+								<address>
+									<addrLine>Gl. Køge Landevej 22 Building H</addrLine>
+									<postCode>2500</postCode>
+									<settlement>Valby</settlement>
+									<country key="DK">Denmark</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Determination of size distributions in nanosized powders by TEM, XRD, and SAXS</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Journal of Experimental Nanoscience</title>
+						<title level="j" type="abbrev">Journal of Experimental Nanoscience</title>
+						<idno type="ISSN">1745-8080</idno>
+						<idno type="eISSN">1745-8099</idno>
+						<imprint>
+							<publisher>Informa UK Limited</publisher>
+							<biblScope unit="volume">1</biblScope>
+							<biblScope unit="issue">3</biblScope>
+							<biblScope unit="page" from="355" to="373"/>
+							<date type="published" when="2006-09"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4A7C4580F1AB64B8FA9F72740BCCA841</idno>
+					<idno type="DOI">10.1080/17458080600752482</idno>
+					<note type="submission">Received July 2005; in final form April 2006</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.9.0" ident="GROBID" when="2026-06-16T06:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.9.0</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Size distribution</term>
+					<term>XRD</term>
+					<term>SAXS</term>
+					<term>TEM</term>
+					<term>Nanopowders</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p coords="2,85.21,318.11,322.74,7.09;2,85.21,327.18,322.74,7.09;2,85.21,336.31,322.80,7.90;2,85.21,345.44,322.79,7.09;2,85.21,354.56,322.79,7.09;2,85.21,363.69,322.77,7.09;2,85.21,372.82,322.78,7.09;2,85.21,381.95,322.75,7.09;2,85.21,391.07,322.76,7.09;2,85.21,400.14,322.79,7.09;2,85.21,409.27,322.76,7.09;2,85.21,418.40,322.76,7.09;2,85.21,427.53,322.75,7.09;2,85.21,436.65,322.79,7.09;2,85.21,445.78,238.16,7.09"><s coords="2,85.21,318.11,322.74,7.09;2,85.21,327.18,322.74,7.09;2,85.21,336.31,322.80,7.90;2,85.21,345.44,153.18,7.09">Crystallite size distributions and particle size distributions were determined by transmissions electron microscopy (TEM), X-ray powder diffraction (XRD), and small-angle X-ray scattering (SAXS) for three commercially available TiO 2 powders (P25, UV100, and TiO2_5 nm) and one SSEC produced powder (SSEC78).</s><s coords="2,241.51,345.44,166.49,7.09;2,85.21,354.56,262.11,7.09">The theoretical Guinier model was fitted to the experimental obtained XRD data and compared to analytical expressions.</s><s coords="2,350.75,354.56,57.25,7.09;2,85.21,363.69,322.77,7.09;2,85.21,372.82,105.11,7.09">Modeling of the XRD spectra showed a difference between the analytical size dependent expressions and the theoretical Guinier model.</s><s coords="2,193.43,372.82,214.56,7.09;2,85.21,381.95,290.15,7.09">Primary particle size distributions were extracted from SAXS measurements by the hard sphere model including an interparticle interference factor.</s><s coords="2,377.45,381.95,30.51,7.09;2,85.21,391.07,322.76,7.09;2,85.21,400.14,248.23,7.09">The sizes obtained from SAXS were smaller than the sizes obtained from the XRD experiments; however, a good agreement was obtained between the two techniques.</s><s coords="2,336.75,400.14,71.25,7.09;2,85.21,409.27,277.49,7.09">Electron microscopy confirmed the primary particle sizes and the shapes obtained by XRD and SAXS.</s><s coords="2,364.87,409.27,43.11,7.09;2,85.21,418.40,322.76,7.09;2,85.21,427.53,322.75,7.09;2,85.21,436.65,265.18,7.09">The SSEC78 powder and the commercially available powders showed different morphologies, but SSEC78, UV100, and TiO2_5 nm all consisted of both primary particles as well as a secondary structure comprised of nanosized primary particles agglomeration into larger clusters.</s><s coords="2,353.30,436.65,54.70,7.09;2,85.21,445.78,238.16,7.09">P25 showed the largest primary particle size, but did not show a secondary structure.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="634.32" lry="833.04"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="14" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="15" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="16" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="17" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="18" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="19" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+		<surface n="20" ulx="0.0" uly="0.0" lrx="493.0" lry="703.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1." coords="2,61.29,520.81,62.24,8.86">Introduction</head><p coords="2,61.29,544.71,370.57,8.87;2,61.29,556.84,370.61,8.87;2,61.29,568.92,370.60,8.87;2,61.29,581.05,370.61,8.87;2,61.29,593.19,268.44,8.87;2,353.70,593.19,3.45,8.87"><s coords="2,61.29,544.71,370.57,8.87;2,61.29,556.84,195.09,8.87">Production of nanopowders for various applications has gained considerable commercial interest during the last few years.</s><s coords="2,259.59,556.84,172.30,8.87;2,61.29,568.92,310.31,8.87">Quality and reproducibility are essential if the nanopowders are to be used in large-scale commercial applications.</s><s coords="2,374.34,568.92,57.54,8.87;2,61.29,581.05,370.61,8.87;2,61.29,593.19,295.86,8.87">Furthermore, the ability to characterize various physical and chemical properties of these powders is critical to the increased acceptance and use of nanoparticles <ref type="bibr" coords="2,333.13,593.19,10.36,8.87" target="#b0">[1,</ref><ref type="bibr" coords="2,346.79,593.19,6.91,8.87" target="#b1">2]</ref>.</s></p><p coords="3,71.26,80.40,360.64,8.87;3,61.29,92.47,370.58,8.87;3,61.29,104.55,370.57,8.87;3,61.29,116.62,370.62,8.87;3,61.29,128.70,370.63,8.87;3,61.29,140.78,298.35,8.87;3,372.17,140.78,59.71,8.87;3,61.29,152.85,370.58,8.87;3,61.29,164.93,370.60,8.87;3,61.29,177.00,370.57,8.87;3,61.29,189.08,56.41,8.87"><s coords="3,71.26,80.40,360.64,8.87;3,61.29,92.47,370.58,8.87;3,61.29,104.55,106.01,8.87">In many industrial applications the activity of nanoparticles is size dependent and the price of nanoparticles depends on powder characteristics such as particle size, size distribution, and purity.</s><s coords="3,171.78,104.55,260.08,8.87;3,61.29,116.62,370.62,8.87;3,61.29,128.70,153.39,8.87">As an example the morphology of the catalysts drastically affects the photocatalytic properties of nanocrystalline semiconductors as it does in many cases found in solid catalysis.</s><s coords="3,217.98,128.70,213.93,8.87;3,61.29,140.78,314.14,8.87">Therefore, controlling the morphology of catalyst particles is a key technology for obtaining well-tailored photocatalysts <ref type="bibr" coords="3,362.38,140.78,9.79,8.87" target="#b2">[3]</ref>.</s><s coords="3,378.14,140.78,53.74,8.87;3,61.29,152.85,370.58,8.87;3,61.29,164.93,52.56,8.87">In that sense nanopowders prepared by different methods are often stated to have a narrow size distribution.</s><s coords="3,117.52,164.93,314.36,8.87;3,61.29,177.00,370.57,8.87;3,61.29,189.08,56.41,8.87">However, the lack of suitable characterization techniques for determination of size distributions in nanopowders makes the stated particle properties questionable.</s></p><p coords="3,71.26,201.04,360.63,8.87;3,61.29,213.12,370.61,8.87;3,61.29,225.19,370.63,8.87;3,61.29,237.27,370.61,8.87;3,61.29,249.34,208.68,8.87;3,293.94,249.34,3.45,8.87"><s coords="3,71.26,201.04,360.63,8.87;3,61.29,213.12,204.05,8.87">Up to now the most common way to determine size distribution of nanopowders is from transmission electron microscopy (TEM).</s><s coords="3,268.95,213.12,162.95,8.87;3,61.29,225.19,272.26,8.87">However, this method is relative time consuming and not applicable in large scale industrial processes.</s><s coords="3,336.19,225.19,95.73,8.87;3,61.29,237.27,370.61,8.87;3,61.29,249.34,236.11,8.87">The particle size, D, of commercially available nanopowders is often determined from powder X-ray diffraction (XRD) spectra by Scherrer's formula <ref type="bibr" coords="3,273.31,249.34,10.36,8.87" target="#b3">[4,</ref><ref type="bibr" coords="3,287.03,249.34,6.91,8.87" target="#b4">5]</ref>.</s></p><formula xml:id="formula_0" coords="3,208.40,275.04,223.51,22.34">D ¼ K FWHM cos<label>ð1Þ</label></formula><p coords="3,71.26,314.03,360.65,8.87;3,61.28,326.10,259.02,8.87;3,333.16,326.10,98.74,8.87;3,61.28,338.18,370.65,8.87;3,61.29,350.25,120.65,8.87;3,194.32,350.25,237.58,8.87;3,61.29,362.33,363.73,8.87;3,61.29,374.41,99.92,8.87"><s coords="3,71.26,314.03,360.65,8.87;3,61.28,326.10,275.14,8.87">The K factor in Scherrer's formula is dimensionless and is accounting for the shape of the specimen and often has the value of 0.9 or close to unity <ref type="bibr" coords="3,323.37,326.10,9.79,8.87" target="#b2">[3]</ref>.</s><s coords="3,339.47,326.10,92.43,8.87;3,61.28,338.18,370.65,8.87;3,61.29,350.25,370.62,8.87;3,61.29,362.33,363.73,8.87;3,61.29,374.41,99.92,8.87">Langford and Wilson showed in 1978 that K depends on the crystallite shape, crystallite size distribution, and the definition of the FWHM <ref type="bibr" coords="3,184.54,350.25,9.79,8.87" target="#b5">[6]</ref>. is the wavelength and FWHM is the full width of the peak at half the maximum intensity after subtraction of instrumental background, and is the diffraction angle.</s></p><p coords="3,71.26,386.37,360.62,8.87;3,61.29,398.44,370.62,8.87;3,61.29,410.52,354.11,8.87;3,428.63,410.52,3.26,8.87;3,61.29,422.60,370.61,8.87;3,61.29,434.67,360.41,8.87"><s coords="3,71.26,386.37,360.62,8.87;3,61.29,398.44,249.34,8.87">The size obtained from Scherrer's formula is the average or ''apparent'' crystallite size and is not necessarily the same as the particle size.</s><s coords="3,315.21,398.44,116.69,8.87;3,61.29,410.52,370.61,8.87">This is the case for partly crystalline powders and aggregated powders made up of smaller primary particles <ref type="bibr" coords="3,418.84,410.52,9.79,8.87" target="#b6">[7]</ref>.</s><s coords="3,61.29,422.60,370.61,8.87">Furthermore, powders are normally not monodisperse but consist of a size distribution.</s><s coords="3,61.29,434.67,360.41,8.87">The polydispersity of nanopowders is not taken into account in Scherrer's formula.</s></p><p coords="3,71.26,446.63,360.60,8.87;3,61.29,458.71,370.62,8.87;3,61.29,470.78,370.62,8.87;3,61.29,482.86,139.35,8.87;3,213.54,482.86,218.36,8.87;3,61.29,494.94,370.63,8.87;3,61.29,507.01,344.94,8.87;3,428.47,507.01,3.45,8.87"><s coords="3,71.26,446.63,329.99,8.87">Two fundamentally different approaches exist to model the XRD peak shape.</s><s coords="3,403.88,446.63,27.98,8.87;3,61.29,458.71,370.62,8.87;3,61.29,470.78,370.62,8.87;3,61.29,482.86,155.52,8.87">Firstly the Rietveld structure refinement where simple analytical functions such as Gaussian, Lorentzian, Pseudo-Voigt, Pearson VII, and empirical profile shape functions are used together with Scherrer's formula <ref type="bibr" coords="3,203.75,482.86,9.79,8.87" target="#b7">[8]</ref>.</s><s coords="3,219.97,482.86,211.94,8.87;3,61.29,494.94,370.63,8.87;3,61.29,507.01,370.64,8.87">Secondly the physical model approach as Bertaut and Guinier developed in the middle of the last century, where they were the first to establish models extracting size distributions from powder diffraction line profiles <ref type="bibr" coords="3,408.69,507.01,10.36,8.87" target="#b4">[5,</ref><ref type="bibr" coords="3,421.56,507.01,6.91,8.87" target="#b8">9]</ref>.</s></p><p coords="3,71.26,518.97,360.62,8.87;3,61.29,531.05,370.62,8.87;3,61.29,543.12,370.61,8.87;3,61.29,555.20,248.53,8.87"><s coords="3,71.26,518.97,360.62,8.87;3,61.29,531.05,370.62,8.87;3,61.29,543.12,32.24,8.87">The principal advantage of modeling powder patterns by physical models is that it can provide physically meaningful quantities to describe the microstructure of the sample.</s><s coords="3,96.72,543.12,335.18,8.87;3,61.29,555.20,248.53,8.87">Furthermore, by using a physical model with a size distribution instead of the Rietveld refinement fewer fitting parameters are required.</s></p><p coords="3,71.26,567.16,360.65,8.87;3,61.29,579.24,370.63,8.87;3,61.29,591.31,105.09,8.87;3,183.54,591.31,248.31,8.87;3,61.29,603.39,370.62,8.87;3,61.29,615.47,206.98,8.87;3,287.46,615.47,144.41,8.87;3,61.29,627.54,370.61,8.87;4,61.29,80.40,348.41,8.87;4,428.28,80.40,3.61,8.87;4,61.29,92.53,370.63,8.87;4,61.29,104.66,72.53,8.87;4,146.98,104.66,3.26,8.87"><s coords="3,71.26,567.16,360.65,8.87;3,61.29,579.24,370.63,8.87;3,61.29,591.31,125.86,8.87">Langford et al. found using the physical model approach that the effect of a broad size distribution on the shape of a diffraction line was a lengthening of its tail compared to a single crystallite size <ref type="bibr" coords="3,169.11,591.31,14.43,8.87" target="#b9">[10]</ref>.</s><s coords="3,189.92,591.31,241.93,8.87;3,61.29,603.39,370.62,8.87;3,61.29,615.47,229.78,8.87">Ungar et al. showed for nanocrystalline tungsten-carbide that ball-milled specimen had an extremely long tail in XRD indicating a wide crystallite size distribution confirmed by TEM <ref type="bibr" coords="3,273.03,615.47,14.43,8.87" target="#b10">[11]</ref>.</s><s coords="3,295.82,615.47,136.05,8.87;3,61.29,627.54,370.61,8.87;4,61.29,80.40,370.60,8.87">Gubicza et al. used the model derived by Guinier for size depended XRD line profile analysis and found the variance and the median of the size distribution for nanodisperse silicon nitride powder <ref type="bibr" coords="4,413.85,80.40,14.43,8.87" target="#b11">[12]</ref>.</s><s coords="4,61.29,92.53,370.63,8.87;4,61.29,104.66,88.96,8.87">Riba´rik et al. continued this work and developed a program for whole profile fitting of diffraction peaks <ref type="bibr" coords="4,137.20,104.66,9.79,8.87" target="#b7">[8]</ref>.</s></p><p coords="4,71.26,116.62,360.64,8.87;4,61.29,128.76,370.63,8.87;4,61.29,140.89,370.63,8.87;4,61.29,153.02,370.63,8.87;4,61.29,165.15,370.65,8.87;4,61.29,177.29,140.92,8.87;4,245.19,177.29,4.33,8.87"><s coords="4,71.26,116.62,360.64,8.87;4,61.29,128.76,190.92,8.87">Small-angle X-ray scattering (SAXS) is another suitable technique to determine the size and size distribution of nanopowders.</s><s coords="4,257.38,128.76,174.53,8.87;4,61.29,140.89,227.72,8.87">Several models have been proposed to extract the size and morphology from SAXS spectra.</s><s coords="4,292.14,140.89,139.78,8.87;4,61.29,153.02,179.21,8.87">The most common and accepted model is the physical hard sphere model.</s><s coords="4,244.29,153.02,187.62,8.87;4,61.29,165.15,370.65,8.87;4,61.29,177.29,188.23,8.87">The hard sphere model can be extended to describe SAXS spectra from nanopowders containing size distributions with and without interparticle interference <ref type="bibr" coords="4,205.57,177.29,10.36,8.87" target="#b4">[5,</ref><ref type="bibr" coords="4,219.23,177.29,8.65,8.87" target="#b12">[13]</ref><ref type="bibr" coords="4,227.88,177.29,4.33,8.87" target="#b13">[14]</ref><ref type="bibr" coords="4,232.21,177.29,12.98,8.87" target="#b14">[15]</ref>.</s></p><p coords="4,71.26,189.25,360.59,8.87;4,61.29,201.38,370.56,8.87;4,61.29,213.57,370.57,8.87;4,61.29,225.70,370.62,8.87;4,61.29,237.84,370.58,8.87;4,61.29,249.97,370.62,8.87;4,61.29,262.10,370.60,8.87;4,61.29,274.23,370.61,8.87;4,61.29,286.37,143.64,8.87"><s coords="4,71.26,189.25,360.59,8.87;4,61.29,201.38,370.56,8.87;4,61.29,213.57,47.59,8.87">The main objective of this paper was to develop methods to determine particle size and crystallite size distributions of nanopowders by several consistent techniques.</s><s coords="4,116.11,213.57,315.75,8.87">TEM, XRD, and SAXS were used as characterization techniques.</s><s coords="4,61.29,225.70,370.62,8.87;4,61.29,237.84,370.58,8.87;4,61.29,249.97,52.56,8.87">Physical models explaining the XRD and SAXS spectra from nanopowders were used and developed to determine the crystallite size distribution and particle size distribution.</s><s coords="4,121.26,249.97,310.64,8.87;4,61.29,262.10,370.60,8.87;4,61.29,274.23,370.61,8.87;4,61.29,286.37,143.64,8.87">The morphology upon which the XRD and SAXS models were developed was determined by TEM and the importance of using XRD and electron microscopy, TEM or SEM, together to extract convincing physical models of the nanopowders was demonstrated.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2." coords="4,61.29,331.12,42.47,8.86">Theory</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1" coords="4,61.29,355.01,228.79,8.89">Particle size, crystallite size, and size distributions</head><p coords="4,61.29,372.99,370.57,8.87;4,61.29,385.12,370.57,8.87;4,61.29,397.26,370.65,8.87;4,61.29,409.39,370.64,8.87;4,61.29,421.52,370.59,8.87;4,61.29,433.65,370.60,8.87;4,61.29,445.79,182.19,8.87"><s coords="4,61.29,372.99,370.57,8.87;4,61.29,385.12,40.54,8.87">Nanopowders often consist of primary particles arranged in a larger macroscopic structure.</s><s coords="4,106.64,385.12,325.22,8.87;4,61.29,397.26,38.25,8.87">The primary particle size is defined to be the smallest size of individual particles.</s><s coords="4,104.26,397.26,327.67,8.87;4,61.29,409.39,184.41,8.87">The primary particles can be made up of several crystals or consist of a crystalline core with an amorphous shell.</s><s coords="4,250.52,409.39,181.40,8.87;4,61.29,421.52,348.96,8.87">The size of the primary particles can be determined by for example SAXS and electron microscopy, TEM and SEM.</s><s coords="4,415.39,421.52,16.49,8.87;4,61.29,433.65,370.60,8.87;4,61.29,445.79,182.19,8.87">The primary particle size is not necessarily equal to the crystallite size determined by XRD where only the crystalline part is detected.</s></p><p coords="4,71.26,457.75,360.62,8.87;4,61.29,469.88,370.63,8.87;4,61.29,482.07,370.62,8.87;4,61.29,494.20,370.61,8.87;4,61.29,506.33,265.30,8.87;4,343.41,506.33,88.52,8.87;4,61.29,518.47,370.63,8.87;4,61.29,530.60,370.63,8.87;4,61.29,542.73,370.60,8.87;4,61.29,554.86,370.57,8.87;4,61.29,567.00,40.54,8.87"><s coords="4,71.26,457.75,360.62,8.87;4,61.29,469.88,261.25,8.87">If a larger structure is made up through cementation of the primary particles mainly by chemical bonding the structure is defined as agglomerates.</s><s coords="4,325.36,469.88,106.55,8.87;4,61.29,482.07,370.62,8.87;4,61.29,494.20,370.61,8.87;4,61.29,506.33,285.73,8.87">Aggregates are similar to agglomerates except that the particles formed are held together by physical Van der Waals bondings, and may be broken down to its individual units of primary particles when subjected to stronger forces or changes in surface charges <ref type="bibr" coords="4,328.98,506.33,14.43,8.87" target="#b15">[16]</ref>.</s><s coords="4,349.34,506.33,82.59,8.87;4,61.29,518.47,279.30,8.87">Agglomeration and aggregation are normally defined as secondary particle growth.</s><s coords="4,344.92,518.47,87.00,8.87;4,61.29,530.60,370.63,8.87;4,61.29,542.73,253.65,8.87">The consequence of secondary growth is that the powder is not monodisperse but polydisperse and needs to be described by a size distribution instead of an average size.</s><s coords="4,317.31,542.73,114.57,8.87;4,61.29,554.86,370.57,8.87;4,61.29,567.00,40.54,8.87">The polydispersity can also be caused by the different physical and chemical processes used during particle synthesis.</s></p><p coords="4,71.26,578.96,360.60,8.87;4,61.29,591.09,370.62,8.87;4,61.29,603.28,108.54,8.87;4,189.15,603.28,242.73,8.87;4,61.29,615.41,370.59,8.87;4,61.29,627.55,370.60,8.87;5,61.29,80.40,370.63,8.87;5,61.29,92.53,23.13,8.87;5,103.38,92.53,3.61,8.87"><s coords="4,71.26,578.96,360.60,8.87;4,61.29,591.09,370.62,8.87;4,61.29,603.28,370.60,8.87;4,61.29,615.41,370.59,8.87;4,61.29,627.55,370.60,8.87;5,61.29,80.40,21.88,8.87">The most common used particle size distribution is the log-normal distribution and if each particle in a powder is a single crystal, the distribution of crystallite sizes frequently has this form <ref type="bibr" coords="4,174.73,603.28,14.43,8.87" target="#b9">[10]</ref>. Furthermore, particle size distributions characterized with a long large tail can often be described by a power-law relationship between particle size and number and in such cases the log-normal distribution is used.</s><s coords="5,86.97,80.40,344.95,8.87;5,61.29,92.53,45.70,8.87">The following definition of the log-normal size distribution will be used in this study <ref type="bibr" coords="5,88.95,92.53,14.43,8.87" target="#b11">[12]</ref>:</s></p><formula xml:id="formula_1" coords="5,163.96,112.67,267.96,31.70">fðxÞ ¼ 1 lnðÞ ffiffiffiffiffi ffi 2 p x exp À ðln x À ln Þ 2 2 ln 2 !<label>ð2Þ</label></formula><p coords="5,61.29,162.94,25.20,8.87;5,102.50,162.94,15.98,8.87;5,135.44,162.94,296.43,8.87;5,61.29,175.13,370.58,8.87;5,61.28,187.32,272.03,8.87;5,337.18,187.32,20.39,8.87;5,375.33,187.32,3.61,8.87"><s coords="5,61.29,162.94,25.20,8.87;5,102.50,162.94,15.98,8.87;5,135.44,162.94,296.43,8.87;5,61.29,175.13,239.38,8.87">where and is respectively the variance and the mean size of the normal size distribution, and x is a continuous random size variable.</s><s coords="5,303.30,175.13,128.57,8.87;5,61.28,187.32,317.65,8.87">The mean, E(x), and variance, Var(x), of the log-normal size distribution shown in equation ( <ref type="formula" coords="5,333.31,187.32,3.87,8.87" target="#formula_1">2</ref>) are <ref type="bibr" coords="5,360.90,187.32,14.43,8.87" target="#b16">[17]</ref>:</s></p><formula xml:id="formula_2" coords="5,156.02,213.06,111.66,24.80">EðxÞ ¼ exp lnðÞ þ ln 2 ðÞ<label>2</label></formula><formula xml:id="formula_3" coords="5,146.67,229.82,285.25,23.74">VarðxÞ ¼ exp 2 lnðÞ þ ln 2 ðÞ À Á expðln 2 ðÞÞ À 1 À Á<label>ð3Þ</label></formula><p coords="5,71.26,273.61,360.65,8.87;5,61.29,285.74,54.86,8.87"><s coords="5,71.26,273.61,360.65,8.87;5,61.29,285.74,54.86,8.87">The standard deviation of the log-normal size distribution is the square root of the variance.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2" coords="5,61.29,325.87,39.67,8.89">XRD</head><p coords="5,61.29,343.79,370.61,8.87;5,61.29,355.98,370.63,8.87;5,61.29,368.11,354.30,8.87;5,428.64,368.11,3.26,8.87;5,61.29,380.30,370.63,8.87;5,61.29,392.49,370.59,8.87;5,61.29,404.62,370.56,8.87;5,61.29,416.81,370.60,8.87;5,61.29,428.95,370.56,8.87;5,61.29,441.14,239.39,8.87"><s coords="5,61.29,343.79,370.61,8.87;5,61.29,355.98,284.09,8.87">The crystallite size distribution can be extracted from XRD spectra by analyzing the line profile of the diffraction peak and not only the broadening.</s><s coords="5,349.45,355.98,82.46,8.87;5,61.29,368.11,370.61,8.87">A. Guinier derived in 1963 an equation for the line profile including a size distribution function g(M) <ref type="bibr" coords="5,418.85,368.11,9.79,8.87" target="#b4">[5]</ref>.</s><s coords="5,61.29,380.30,370.63,8.87;5,61.29,392.49,142.34,8.87">This formulation will in this study be used to extract information of the crystallite size distribution from XRD spectra.</s><s coords="5,208.69,392.49,223.19,8.87;5,61.29,404.62,370.56,8.87;5,61.29,416.81,370.60,8.87;5,61.29,428.95,38.37,8.87">The theoretical Guinier model for XRD of small crystals will be compared to the average crystallite size obtained from Scherrer's formula, where the FWHM is extracted form the XRD peak by a Pseudo-Voigt function.</s><s coords="5,103.92,428.95,327.93,8.87;5,61.29,441.14,239.39,8.87">Furthermore, size dependent analytical expression together with Scherrer's formula will be used to fit the experimental XRD data.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.1" coords="5,61.29,481.24,209.35,8.86">Size dependence in XRD-Guinier's model.</head><p coords="5,280.63,481.22,151.27,8.87;5,61.29,493.18,198.45,8.87;5,272.84,493.18,3.26,8.87"><s coords="5,280.63,481.22,151.27,8.87;5,61.29,493.18,214.82,8.87">Guinier showed that the intensity profile of a diffraction peak can be derived as <ref type="bibr" coords="5,263.06,493.18,9.79,8.87" target="#b4">[5]</ref>:</s></p><formula xml:id="formula_4" coords="5,180.23,513.72,251.69,32.16">iðs 0 Þ % Z 1 0 sin 2 ðMs 0 Þ Mðs 0 Þ 2 gðMÞdM<label>ð4Þ</label></formula><p coords="5,71.26,563.59,155.58,8.87;5,230.72,563.59,201.15,8.87;5,61.29,575.78,370.61,9.78;5,61.29,587.91,43.40,8.87;5,117.79,587.91,3.26,8.87"><s coords="5,71.26,563.59,360.60,8.87;5,61.29,575.78,370.61,9.78;5,61.29,587.91,59.77,8.87">The intensity profile in equation ( <ref type="formula" coords="5,226.85,563.59,3.87,8.87" target="#formula_4">4</ref>) is written as an integration of the column length M, the distribution function g(M) of the column lengths, and s 0 which is defined as <ref type="bibr" coords="5,108.00,587.91,9.79,8.87" target="#b4">[5]</ref>:</s></p><formula xml:id="formula_5" coords="5,181.99,613.93,249.93,17.73">s 0 ¼ s À r Ã hkl ¼ 2 sin À 2 sin 0<label>ð5Þ</label></formula><p coords="6,61.29,80.53,3.84,8.68;6,65.14,78.91,3.63,5.91;6,65.14,85.42,9.07,6.07;6,78.35,80.40,353.50,8.87;6,61.28,92.59,370.62,9.82;6,61.29,104.78,91.95,8.87"><s coords="6,61.29,80.53,3.84,8.68;6,65.14,78.91,3.63,5.91;6,65.14,85.42,9.07,6.07;6,78.35,80.40,353.50,8.87;6,61.28,92.59,190.66,8.87">r Ã hkl is the magnitude of the vector defining the node of indices (hkl) of the reciprocal lattice and s is the scattering vector modulus.</s><s coords="6,259.20,92.59,172.70,9.82;6,61.29,104.78,91.95,8.87">0 is the Bragg angle corresponding to the reflection plane (hkl).</s></p><p coords="6,71.26,116.74,360.64,8.87;6,61.29,128.93,370.61,8.87;6,61.28,141.17,44.88,8.87;6,133.79,141.17,298.14,8.87;6,61.28,153.36,244.37,8.87"><s coords="6,71.26,116.74,360.64,8.87;6,61.29,128.93,370.61,8.87;6,61.28,141.17,76.34,8.87">The relationship between the distribution function of the column length g(M) and the density function f(x) of the size of the crystals, equation (2), depends on the shape of the crystallites <ref type="bibr" coords="6,109.08,141.17,10.36,8.87" target="#b7">[8,</ref><ref type="bibr" coords="6,122.29,141.17,11.51,8.87" target="#b11">12]</ref>.</s><s coords="6,140.48,141.17,291.45,8.87;6,61.28,153.36,244.37,8.87">Assuming spherical grains, which in section 4.1 will be confirmed by TEM, the distribution function of the column lengths is:</s></p><formula xml:id="formula_6" coords="6,157.44,165.62,274.48,31.43">gðMÞ ¼ NM 2 Pðx ! MÞ ¼ NM 2 Z 1 M fðxÞdx<label>ð6Þ</label></formula><formula xml:id="formula_7" coords="6,61.29,206.44,32.87,8.68">P(x ! M</formula><p coords="6,94.15,206.31,337.74,8.87;6,61.29,218.50,370.59,8.87;6,61.29,230.75,227.98,8.87;6,293.14,230.75,71.87,8.87;6,368.88,230.75,63.03,8.87;6,61.29,242.94,237.50,8.87;6,302.66,242.94,45.94,8.87"><s coords="6,94.15,206.31,337.74,8.87;6,61.29,218.50,370.59,8.87;6,61.29,230.75,139.17,8.87">) represents the probability that the diameter of the spherical crystal, x, is greater than the column height M. f(x) is the density function for spherical grains, and N is a normalization factor.</s><s coords="6,203.70,230.75,228.21,8.87;6,61.29,242.94,287.32,8.87">Inserting equation ( <ref type="formula" coords="6,289.26,230.75,3.87,8.87" target="#formula_6">6</ref>) into equation ( <ref type="formula" coords="6,365.00,230.75,3.87,8.87" target="#formula_4">4</ref>) and inserting the log-normal size density function for f(x) equation ( <ref type="formula" coords="6,298.79,242.94,3.87,8.87" target="#formula_4">4</ref>) becomes:</s></p><formula xml:id="formula_8" coords="6,147.29,264.55,284.63,32.16">iðs 0 Þ ¼ Z 1 0 M sin 2 ðMs 0 Þ 2ðs 0 Þ 2 erfc ln M À ln ffiffi ffi 2 p ln dM<label>ð7Þ</label></formula><p coords="6,61.29,314.43,48.43,8.87;6,113.59,314.43,318.28,8.87;6,61.29,326.62,370.57,8.87;6,61.29,338.86,114.82,8.87;6,179.98,338.86,195.63,8.87;6,71.26,350.82,91.69,8.87;6,174.95,350.82,256.98,8.87;6,61.29,363.01,370.63,8.87;6,61.29,375.20,370.60,8.87;6,61.29,387.39,315.40,8.87;6,395.60,387.39,36.30,8.87;6,61.29,399.64,370.64,8.87;6,61.29,411.83,82.83,8.87"><s coords="6,61.29,314.43,370.59,8.87;6,61.29,326.62,173.75,8.87">Equation ( <ref type="formula" coords="6,109.72,314.43,3.87,8.87" target="#formula_8">7</ref>) describes the distribution of the diffraction intensity including a lognormal crystallite size density function.</s><s coords="6,239.58,326.62,192.27,8.87;6,61.29,338.86,314.32,8.87">In figure 1 the diffraction intensity profiles calculated from equation ( <ref type="formula" coords="6,176.10,338.86,3.87,8.87" target="#formula_8">7</ref>) with different values of and are shown.</s><s coords="6,71.26,350.82,360.67,8.87;6,61.29,363.01,251.50,8.87">The profiles in figure <ref type="figure" coords="6,166.45,350.82,4.98,8.87" target="#fig_1">1</ref> show that by increasing the width of the size distribution a larger tail of the line profile of the XRD peak is observed.</s><s coords="6,315.95,363.01,115.97,8.87;6,61.29,375.20,370.60,8.87;6,61.29,387.39,273.27,8.87">If is changed from 1.4 to 2.2 and the crystallite size is kept constant it is clearly that the line profile of the XRD peak is changed significantly and a long tail is observed.</s><s coords="6,341.12,387.39,35.57,8.87;6,395.60,387.39,36.30,8.87;6,61.29,399.64,370.64,8.87;6,61.29,411.83,82.83,8.87">Keeping constant and changing the crystallite size from 6 nm to 12 nm results in a broadening of the line profile as expected.</s></p><p coords="6,290.74,509.37,139.45,6.47;6,286.73,504.55,3.89,6.48;6,273.11,491.30,17.51,6.48;6,277.00,478.43,13.62,6.48;6,273.11,465.18,17.51,6.48;6,277.00,452.31,13.62,6.48;6,329.58,519.75,61.46,6.48;6,103.27,509.37,140.49,6.48;6,142.11,519.75,61.46,6.48;6,256.69,470.30,6.48,23.34;6,265.19,497.33,6.48,9.73;6,265.19,473.21,6.48,22.18;6,265.19,454.93,6.47,16.34"><s coords="6,290.74,509.37,139.45,6.47;6,286.73,504.55,3.89,6.48;6,273.11,491.30,17.51,6.48;6,277.00,478.43,13.62,6.48;6,273.11,465.18,17.51,6.48;6,277.00,452.31,13.62,6.48;6,329.58,519.75,61.46,6.48;6,103.27,509.37,140.49,6.48;6,142.11,519.75,61.46,6.48;6,256.69,470.30,6.48,23.34;6,265.19,497.33,6.48,9.73">0 5 10 15 20 25 30 35 40 0 0.005 0.01 0.015 0.02 Column length (nm) 0 5 10 15 20 25 30 35 40 Column length (nm) Particle no.</s><s coords="6,265.19,473.21,6.48,22.18;6,265.19,454.93,6.47,16.34">density (a.u.)</s></p><p coords="6,387.36,459.30,33.99,7.00;6,310.50,456.54,5.84,6.48"><s coords="6,387.36,459.30,33.99,7.00;6,310.50,456.54,5.84,6.48">1.: µ = 6 nm 1.</s></p><p coords="6,387.36,467.08,33.99,7.00;6,317.42,466.26,5.84,6.48"><s coords="6,387.36,467.08,33.99,7.00;6,317.42,466.26,5.84,6.48">2.: µ = 8 nm 2.</s></p><p coords="6,387.36,474.80,37.88,7.00;6,330.94,478.78,5.84,6.48"><s coords="6,387.36,474.80,37.88,7.00;6,330.94,478.78,5.84,6.48">3.: µ = 12 nm 3.</s></p><p coords="6,409.31,571.77,5.84,6.48;6,409.31,580.40,5.84,6.48;6,409.31,590.16,5.84,6.48;6,98.79,504.35,3.89,6.48;6,85.17,491.10,17.51,6.48;6,89.06,478.23,13.62,6.48;6,85.17,464.98,17.51,6.48;6,89.06,452.11,13.62,6.48;6,129.59,446.25,85.20,6.48;6,317.71,446.25,85.20,6.48;6,62.89,470.30,6.48,23.34;6,71.39,497.33,6.47,9.73;6,71.39,473.21,6.48,22.18;6,71.39,454.93,6.47,16.34;6,203.10,459.27,29.45,7.00;6,129.48,468.25,5.84,6.48;6,203.10,467.05,29.45,7.00;6,124.60,476.29,5.84,6.48;6,203.10,474.77,29.45,7.00;6,118.81,482.62,5.84,6.48;6,62.00,446.25,7.00,6.48;6,255.75,446.25,7.00,6.48;6,100.41,603.27,143.61,6.48;6,98.96,596.73,3.89,6.48;6,93.12,588.18,9.73,6.48;6,93.12,577.88,9.73,6.48;6,93.12,567.26,9.73,6.48;6,93.12,556.91,9.73,6.48;6,98.96,546.61,3.89,6.48;6,222.05,580.22,5.84,6.48;6,163.72,614.55,16.95,6.48;6,289.24,603.27,142.61,6.48;6,352.55,614.55,16.95,6.48;6,78.71,571.01,6.48,35.39;6,78.71,543.39,6.48,25.68;6,287.97,596.73,3.89,6.48;6,282.13,588.18,9.73,6.48;6,282.13,577.89,9.73,6.48;6,282.13,567.26,9.73,6.48;6,282.13,556.91,9.73,6.48;6,287.97,546.61,3.89,6.48;6,267.72,571.01,6.48,35.39;6,267.72,543.39,6.48,25.68;6,115.59,540.15,113.20,6.48;6,304.68,540.15,113.20,6.48;6,222.05,588.86,5.84,6.48;6,222.05,595.13,5.84,6.48"><s coords="6,409.31,571.77,5.84,6.48;6,409.31,580.40,5.84,6.48;6,409.31,590.16,5.84,6.48;6,98.79,504.35,3.89,6.48;6,85.17,491.10,17.51,6.48;6,89.06,478.23,13.62,6.48;6,85.17,464.98,17.51,6.48;6,89.06,452.11,13.62,6.48;6,129.59,446.25,85.20,6.48;6,317.71,446.25,85.20,6.48;6,62.89,470.30,6.48,23.34;6,71.39,497.33,6.47,9.73">1. 2. 3. 0 0.005 0.01 0.015 0.02 Log normal size distribution Log normal size distribution Particle no.</s><s coords="6,71.39,473.21,6.48,22.18;6,71.39,454.93,6.47,16.34;6,203.10,459.27,29.45,7.00;6,129.48,468.25,5.84,6.48;6,203.10,467.05,29.45,7.00;6,124.60,476.29,5.84,6.48;6,203.10,474.77,29.45,7.00;6,118.81,482.62,5.84,6.48;6,62.00,446.25,7.00,6.48;6,255.75,446.25,7.00,6.48;6,100.41,603.27,143.61,6.48;6,98.96,596.73,3.89,6.48;6,93.12,588.18,9.73,6.48;6,93.12,577.88,9.73,6.48;6,93.12,567.26,9.73,6.48;6,93.12,556.91,9.73,6.48;6,98.96,546.61,3.89,6.48;6,222.05,580.22,5.84,6.48;6,163.72,614.55,16.95,6.48;6,289.24,603.27,142.61,6.48;6,352.55,614.55,16.95,6.48;6,78.71,571.01,6.48,35.39;6,78.71,543.39,6.48,25.68;6,287.97,596.73,3.89,6.48;6,282.13,588.18,9.73,6.48;6,282.13,577.89,9.73,6.48;6,282.13,567.26,9.73,6.48;6,282.13,556.91,9.73,6.48;6,287.97,546.61,3.89,6.48;6,267.72,571.01,6.48,35.39;6,267.72,543.39,6.48,25.68;6,115.59,540.15,113.20,6.48;6,304.68,540.15,113.20,6.48;6,222.05,588.86,5.84,6.48;6,222.05,595.13,5.84,6.48">density (a.u.) 1.: σ = 1.4 1. 2.: σ = 1.6 2. 3.: σ = 2.2 3. A) B) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 1. 2θ (°) 22 23 24 25 26 27 28 29 2θ (°) Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD line profile with size distribution XRD line profile with size distribution 2. 3.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.2" coords="7,61.29,80.42,318.59,8.86">Extracting the crystallite size from XRD by analytical expressions.</head><p coords="7,389.88,80.40,42.04,8.87;7,61.29,92.36,370.62,8.87;7,61.29,104.49,370.64,8.87;7,61.29,116.62,370.62,8.87;7,61.28,128.76,128.41,8.87;7,193.27,128.76,238.63,8.87;7,61.28,140.89,370.59,8.87;7,61.29,153.02,370.64,8.87;7,61.29,165.15,370.64,8.87;7,61.29,177.29,164.75,8.87;7,229.61,177.29,202.26,8.87;7,61.29,189.42,38.77,8.87"><s coords="7,389.88,80.40,42.04,8.87;7,61.29,92.36,370.62,8.87;7,61.29,104.49,370.64,8.87;7,61.29,116.62,158.61,8.87">The most common way to obtain the average crystallite size from an unknown sample is fitting the XRD peak by an analytical expression assuming that the line profile follows a Gaussian or Pseudo-Voigt function.</s><s coords="7,224.50,116.62,207.41,8.87;7,61.28,128.76,370.62,8.87;7,61.28,140.89,177.02,8.87">Inserting w from the Pseudo-Voigt function in Scherrer's formula, equation ( <ref type="formula" coords="7,189.70,128.76,3.58,8.87" target="#formula_0">1</ref>), as the FWHM w can be rewritten as a function of the average crystallite size w ¼ K/(Dcos()).</s><s coords="7,242.59,140.89,189.29,8.87;7,61.29,153.02,297.95,8.87">However, as in the case for the theoretical Guinier model a size dependent analytical expression will be proposed.</s><s coords="7,361.70,153.02,70.23,8.87;7,61.29,165.15,370.64,8.87;7,61.29,177.29,370.59,8.87;7,61.29,189.42,38.77,8.87">Inserting w from Scherrer's formula into a Pseudo-Voigt function and expressing D by a log-normal size distribution function f(D), equation ( <ref type="formula" coords="7,226.04,177.29,3.58,8.87" target="#formula_1">2</ref>), the size depend analytical XRD expression becomes:</s></p><formula xml:id="formula_9" coords="7,61.85,208.03,370.06,50.76">I ¼ Z 1 D¼0 fðDÞ A ' 2 wðDÞ 4ðx À x c Þ 2 þ wðDÞ 2 þ ð1 À 'Þ ffiffiffiffiffiffiffiffiffiffi ffi 4 ln 2 p ffiffiffi p wðDÞ exp À 4 ln 2 wðDÞ 2 ðx À x c Þ 2 ! " # dD<label>ð8Þ</label></formula><p coords="7,61.28,277.69,370.62,9.78;7,61.29,289.82,99.42,8.87"><s coords="7,61.28,277.69,370.62,9.78;7,61.29,289.82,99.42,8.87">where A is the amplitude, x c the peak center, and ' is the profile shape factor from the Pseudo-Voigt function.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3" coords="7,61.29,328.53,140.28,8.89">SAXS in low density systems</head><p coords="7,61.29,346.46,330.36,8.87;7,408.95,346.46,22.98,8.87;7,61.29,358.59,370.57,8.87;7,61.29,370.72,243.38,8.87;7,308.25,370.72,123.67,8.87;7,61.29,382.85,370.62,8.87;7,61.29,394.99,175.84,8.87;7,250.22,394.99,3.26,8.87"><s coords="7,61.29,346.46,351.27,8.87">In SAXS only the form factor, AE(q), gives rise to scattering in the nano range <ref type="bibr" coords="7,394.52,346.46,14.43,8.87" target="#b17">[18]</ref>.</s><s coords="7,415.44,346.46,16.49,8.87;7,61.29,358.59,370.57,8.87;7,61.29,370.72,254.11,8.87">The scattering intensity for SAXS in the immediate proximity of the center of the reciprocal space can be deduced which is shown in equation ( <ref type="formula" coords="7,304.67,370.72,3.58,8.87" target="#formula_10">9</ref>).</s><s coords="7,321.22,370.72,110.70,8.87;7,61.29,382.85,370.62,8.87;7,61.29,394.99,192.20,8.87">However, for the SAXS investigation the scattering vector modulus s, equation (5), will be substituted with the scattering vector modulus q equal to 2s <ref type="bibr" coords="7,240.43,394.99,9.79,8.87" target="#b4">[5]</ref>.</s></p><formula xml:id="formula_10" coords="7,212.77,414.32,219.15,12.49">IðqÞ ¼ 2 AEðqÞ 2<label>ð9Þ</label></formula><p coords="7,71.26,439.72,134.20,8.87;7,238.96,439.72,3.84,8.87"><s coords="7,71.26,439.72,171.53,8.87">The form factor for a sphere is <ref type="bibr" coords="7,208.80,439.72,15.34,8.87" target="#b12">[13,</ref><ref type="bibr" coords="7,227.45,439.72,11.51,8.87" target="#b13">14]</ref>:</s></p><formula xml:id="formula_11" coords="7,164.58,465.74,267.34,23.39">AEðqÞ ¼ 4 3 R 3 3ðsinðqRÞ À qR Á cosðqRÞÞ ðqRÞ 3<label>ð10Þ</label></formula><p coords="7,61.29,508.03,84.43,8.87;7,154.01,508.03,70.00,8.87;7,227.88,508.03,204.04,8.87;7,61.29,520.16,363.00,8.87"><s coords="7,61.29,508.03,370.63,8.87;7,61.29,520.16,363.00,8.87">Inserting equation ( <ref type="formula" coords="7,145.71,508.03,8.30,8.87" target="#formula_11">10</ref>) into equation ( <ref type="formula" coords="7,224.01,508.03,3.87,8.87" target="#formula_10">9</ref>) and instead of a monodisperse scattering a size distribution can be inserted which gives the following scattering intensity for SAXS:</s></p><formula xml:id="formula_12" coords="7,127.05,541.27,304.87,31.43">IðqÞ ¼ 2 Z 1 R¼0 fðRÞ 4 3 R 3 3ðsinðqRÞ À qR Á cosðqRÞÞ ðqRÞ 3 2 dR<label>ð11Þ</label></formula><p coords="7,61.29,591.09,370.61,8.87;7,61.29,603.28,370.60,8.87;7,61.29,615.41,370.58,8.87;7,61.29,627.54,40.04,8.87"><s coords="7,61.29,591.09,370.61,8.87;7,61.29,603.28,224.78,8.87">f(R) is the particle size density function for the radius of the particles and in the following a log-normal size distribution will be used.</s><s coords="7,289.02,603.28,142.87,8.87;7,61.29,615.41,370.58,8.87;7,61.29,627.54,40.04,8.87">In figure 2 the difference between the SAXS curve resulting from a narrow size distribution and a broad size distribution is shown.</s></p><p coords="8,71.26,295.55,156.71,8.87;8,238.62,295.55,193.30,8.87;8,61.29,307.57,370.62,8.87;8,61.29,319.58,370.59,8.87;8,61.29,331.55,370.61,8.87;8,61.29,343.57,370.60,8.87;8,75.71,355.58,146.31,8.87;8,233.97,355.58,197.92,8.87;8,61.28,367.60,306.25,8.87;8,385.31,367.60,3.61,8.87"><s coords="8,71.26,295.55,278.04,8.87">The SAXS model presented in figure <ref type="figure" coords="8,230.80,295.55,4.98,8.87" target="#fig_2">2</ref> is shown in a log-log plot.</s><s coords="8,352.17,295.55,79.74,8.87;8,61.29,307.57,370.62,8.87;8,61.29,319.58,278.88,8.87">This plot gives rise to two main features: 1) Typically scattering patterns display power-lay decays in intensity reflecting power lay scaling features of many materials.</s><s coords="8,343.67,319.58,88.21,8.87;8,61.29,331.55,342.95,8.87">2) Power-law decays begin and end at exponential regimes that are shown as a knee in a log-log plot.</s><s coords="8,407.22,331.55,24.68,8.87;8,61.29,343.57,370.60,8.87;8,61.28,355.58,18.03,8.87">These exponential knees reflect a preferred size as described by R ¼ 1/q for the knee regime <ref type="bibr" coords="8,61.28,355.58,14.43,8.87" target="#b17">[18]</ref>.</s><s coords="8,82.83,355.58,316.86,8.87">The scattering patterns in figure <ref type="figure" coords="8,225.52,355.58,4.98,8.87" target="#fig_2">2</ref> show decay in intensity as q increases.</s><s coords="8,403.20,355.58,28.69,8.87;8,61.28,367.60,327.63,8.87">This is due to the decreasing number of electrons as the particle size decreases <ref type="bibr" coords="8,370.88,367.60,14.43,8.87" target="#b17">[18]</ref>.</s></p><p coords="8,71.26,379.51,118.73,8.87;8,201.43,379.51,230.46,8.87;8,61.28,391.53,370.59,8.87;8,61.28,403.55,162.21,8.87;8,235.61,403.55,196.32,8.87;8,61.28,415.57,370.58,8.87;8,61.28,427.53,370.59,8.87;8,61.28,439.55,370.63,8.87;8,61.28,451.57,152.62,8.87"><s coords="8,71.26,379.51,360.62,8.87;8,61.28,391.53,348.99,8.87">The SAXS models in figure <ref type="figure" coords="8,193.26,379.51,4.98,8.87" target="#fig_2">2</ref> show that the position of the knee in a log-log plot is changed as the mean radius is changed going to larger q's for smaller radii.</s><s coords="8,415.39,391.53,16.49,8.87;8,61.28,403.55,370.65,8.87;8,61.28,415.57,224.29,8.87">The theoretical models displayed in figure <ref type="figure" coords="8,227.05,403.55,4.98,8.87" target="#fig_2">2</ref> show that a narrow size distribution gives an oscillating curve which is often shown in practice.</s><s coords="8,290.26,415.57,141.60,8.87;8,61.28,427.53,229.86,8.87">Increasing the width of the size distribution contributes to a more ''smooth'' curve.</s><s coords="8,295.88,427.53,136.00,8.87;8,61.28,439.55,370.63,8.87;8,61.28,451.57,152.62,8.87">This kind of behavior is often modeled by an average or apparent particle size, but it is shown that it is more likely to consist of a broad size distribution.</s></p><p coords="8,71.26,463.47,101.94,8.87;8,181.50,463.47,250.39,8.87;8,61.28,475.49,370.63,8.87;8,61.28,487.51,25.31,8.87;8,113.72,487.51,318.17,8.87;8,61.28,499.53,370.60,8.87;8,61.28,511.49,370.64,8.87;8,61.28,523.51,119.68,8.87"><s coords="8,71.26,463.47,335.54,8.87">The model in equation ( <ref type="formula" coords="8,173.20,463.47,8.30,8.87" target="#formula_12">11</ref>) is as the name says only valid for spherical particles.</s><s coords="8,409.20,463.47,22.69,8.87;8,61.28,475.49,370.63,8.87;8,61.28,487.51,56.27,8.87">If the sample is cylindrical or ellipsoid different models should be used to describe the form factor <ref type="bibr" coords="8,89.23,487.51,10.36,8.87" target="#b4">[5,</ref><ref type="bibr" coords="8,102.22,487.51,11.51,8.87" target="#b18">19]</ref>.</s><s coords="8,120.13,487.51,311.76,8.87;8,61.28,499.53,44.91,8.87">Furthermore in this study a log-normal size density function is chosen for the model.</s><s coords="8,109.08,499.53,322.81,8.87;8,61.28,511.49,370.64,8.87;8,61.28,523.51,119.68,8.87">These assumptions vary from sample to sample and therefore it is necessary to investigate the sample by electron microscopy to observe what shape or size distribution the sample has.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4" coords="8,61.28,555.64,116.02,8.89">SAXS in dense systems</head><p coords="8,61.28,573.57,370.63,8.87;8,61.28,585.59,130.77,8.87;8,215.32,585.59,36.08,8.87;8,269.20,585.59,3.61,8.87;9,61.29,80.40,370.61,8.87;9,61.29,92.42,370.61,8.87;9,61.29,104.49,197.01,8.87;9,277.25,104.49,154.65,8.87;9,61.29,116.57,216.99,8.87;9,296.07,116.57,3.61,8.87"><s coords="8,61.28,573.57,370.63,8.87;8,61.28,585.59,211.52,8.87;9,61.29,80.40,370.61,8.87;9,61.29,92.42,370.61,8.87;9,61.29,104.49,219.57,8.87">To investigate SAXS spectra from dense systems the interparticle interference effect has to be considered and equation <ref type="bibr" coords="8,195.36,585.59,16.60,8.87" target="#b10">(11)</ref> becomes <ref type="bibr" coords="8,254.78,585.59,14.43,8.87" target="#b12">[13]</ref>:  S(q) is the structure factor describing the interference of scattering from different particles and contains information of the interaction between particles and for very dilute systems S(q) ¼ 1 and can be neglected <ref type="bibr" coords="9,262.83,104.49,14.43,8.87" target="#b18">[19]</ref>.</s><s coords="9,285.33,104.49,146.57,8.87;9,61.29,116.57,238.40,8.87">In this study the structure factor reported by Hoekstra and co-workers will be used <ref type="bibr" coords="9,281.65,116.57,14.43,8.87" target="#b19">[20]</ref>:</s></p><formula xml:id="formula_13" coords="8,178.47,604.20,253.45,31.49">IðsÞ ¼ 2 Z 1 R¼0 fðRÞ AEðqÞ 2 SðqÞdR<label>ð12Þ</label></formula><formula xml:id="formula_14" coords="9,201.37,137.49,230.54,10.59">SðqÞ ¼ ½SðqÞ f þ SðqÞ p ð<label>13Þ</label></formula><p coords="9,61.29,160.79,370.60,9.78;9,61.29,172.81,42.46,9.84;9,108.79,172.81,323.07,8.87;9,61.29,184.88,370.60,9.78;9,61.29,196.96,181.87,9.78;9,260.93,196.96,3.61,8.87"><s coords="9,61.29,160.79,370.60,9.78;9,61.29,172.81,42.46,9.84;9,108.79,172.81,323.07,8.87;9,61.29,184.88,370.60,9.78;9,61.29,196.96,203.25,9.78">S(q) p is the part of the structure factor that accounts for the direct particle interaction and S(q) p is modeled by the Percus-Yevick approximation, in which the structure factor, S(q, R HS , HS ) p , depends on the scattering vector modulus, q, the hard-sphere radius, R HS , and the volume fraction, HS <ref type="bibr" coords="9,246.50,196.96,14.43,8.87" target="#b18">[19]</ref>.</s></p><formula xml:id="formula_15" coords="9,172.97,222.70,258.95,23.34">SðqÞ p ¼ 1 1 þ 24Gð2R HS qÞ=ð2R HS qÞ<label>ð14Þ</label></formula><p coords="9,61.29,263.80,30.59,8.87"><s coords="9,61.29,263.80,30.59,8.87">Where:</s></p><formula xml:id="formula_16" coords="9,99.27,289.59,332.65,49.97">GðAÞ ¼ ðsinðAÞ À A cosðAÞÞ A 2 þ ð2A sinðAÞ þ ð2 À A 2 Þ cosðAÞ À 2Þ A 3 þ ðÀA 4 cosðAÞ þ 4ðð3A 2 À 6Þ cosðAÞ þ ðA 3 À 6AÞ sinðAÞ þ 6ÞÞ A 5<label>ð15Þ</label></formula><p coords="9,61.29,356.15,18.67,8.87"><s coords="9,61.29,356.15,18.67,8.87">and:</s></p><formula xml:id="formula_17" coords="9,165.60,381.95,266.31,25.93">¼ ð1 þ 2Þ 2 ð1 À Þ 4 ; ¼ À6ð1 þ =2Þ 2 ð1 À Þ 4 ; ¼ 2<label>ð16Þ</label></formula><p coords="9,66.39,426.56,365.51,9.78;9,61.29,438.64,100.66,8.87;9,179.74,438.64,3.61,8.87"><s coords="9,66.39,426.56,365.51,9.78;9,61.29,438.64,122.06,8.87">HS is the volume fraction of the hard spheres and is related to the volume fraction, , of the precipitates as <ref type="bibr" coords="9,165.32,438.64,14.43,8.87" target="#b12">[13]</ref>:</s></p><formula xml:id="formula_18" coords="9,225.30,465.55,206.62,20.93">¼ HS ðR HS =RÞ 3<label>ð17Þ</label></formula><p coords="9,61.29,504.23,370.62,9.78;9,61.28,516.31,125.90,8.87"><s coords="9,61.29,504.23,370.62,9.78;9,61.28,516.31,125.90,8.87">R HS covers the depleted zone around the precipitate particle and is related to the actual particle radius by a constant:</s></p><formula xml:id="formula_19" coords="9,218.83,537.36,213.08,9.55">R HS ¼ C HS R<label>ð18Þ</label></formula><p coords="9,61.29,559.24,20.18,9.71;9,84.64,559.11,56.19,8.87;9,149.13,559.11,282.71,8.87;9,61.29,571.19,370.62,9.78;9,61.29,583.26,291.38,8.87;9,386.25,583.26,3.84,8.87"><s coords="9,61.29,559.24,20.18,9.71;9,84.64,559.11,347.20,8.87;9,61.29,571.19,370.62,9.78;9,61.29,583.26,328.79,8.87">S(q) f in equation ( <ref type="formula" coords="9,140.84,559.11,8.30,8.87" target="#formula_14">13</ref>) is the structure factor of the fractal clusters defined by Teixeira, where S(q, Df, ) f depends on q, the fractal dimension of the clusters, D f , and on the cut off length, , which can be used as a measure for the aggregate size <ref type="bibr" coords="9,356.03,583.26,15.34,8.87" target="#b19">[20,</ref><ref type="bibr" coords="9,374.74,583.26,11.51,8.87" target="#b20">21]</ref>:</s></p><formula xml:id="formula_20" coords="9,148.54,609.11,283.38,25.14">SðqÞ f ¼ Sð0Þ ½1 þ q 2 2 ðD f À1Þ=2 sin½ðD f À 1Þ tan À1 ðqÞ ðD f À 1Þq<label>ð19Þ</label></formula><p coords="10,61.29,80.42,105.12,8.86"><s coords="10,61.29,80.42,105.12,8.86">3. Materials and method</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1" coords="10,61.29,104.25,73.91,8.89">Nanopowders</head><p coords="10,61.29,122.24,77.46,8.87;10,159.02,122.24,272.87,8.87;10,61.29,134.26,370.61,8.87;10,61.29,146.33,370.62,8.87;10,61.29,158.41,352.88,8.87;10,428.63,158.41,3.26,8.87"><s coords="10,61.29,122.24,370.61,8.87;10,61.29,134.26,370.61,8.87;10,61.29,146.33,311.91,8.87">A SSEC produced <ref type="bibr" coords="10,141.22,122.24,15.34,8.87" target="#b21">[22]</ref> powder (SSEC78) and three commercially available nanocrystalline titanium dioxide powders prepared by different methods are investigated and the crystallite size distributions and particle size distributions are determined.</s><s coords="10,375.98,146.33,55.92,8.87;10,61.29,158.41,370.61,8.87">In a previous work the absolute crystallinities and the specific surface areas were determined <ref type="bibr" coords="10,418.84,158.41,9.79,8.87" target="#b6">[7]</ref>.</s></p><p coords="10,61.29,170.43,308.33,8.87;10,376.75,170.43,3.84,8.87"><s coords="10,61.29,170.43,319.31,8.87">These results together with the preparation methods are shown in table <ref type="table" coords="10,372.92,170.43,3.84,8.87" target="#tab_0">1</ref>.</s></p><p coords="10,71.26,182.39,360.63,8.87;10,61.29,194.46,370.65,9.82;10,61.29,206.48,370.65,9.88;10,61.29,218.56,370.61,8.87;10,61.29,230.63,370.61,8.87;10,61.29,242.65,370.59,8.87;10,61.29,254.73,370.63,8.87;10,61.29,266.75,370.57,8.87;10,61.29,278.82,370.60,8.87;10,61.29,290.90,370.62,9.82;10,61.29,302.92,370.59,8.87;10,61.29,314.99,181.72,8.87;10,261.95,314.99,169.95,8.87;10,61.29,327.07,370.59,8.87;10,61.29,339.09,35.05,8.87"><s coords="10,71.26,182.39,336.74,8.87">Degussa P25 is a commercially available powder from Degussa Company.</s><s coords="10,413.12,182.39,18.77,8.87;10,61.29,194.46,370.65,9.82;10,61.29,206.48,224.82,9.88">It is produced by the chloride method where the precursor, TiCl 4 , is oxidized in the gaseous phase at high temperature (985 C) in a H 2 /O 2 flame.</s><s coords="10,289.02,206.48,142.91,8.87;10,61.29,218.56,120.91,8.87">Hombikat UV100 is produced by Sachtleben Chemie GmbH.</s><s coords="10,187.09,218.56,244.81,8.87;10,61.29,230.63,370.61,8.87;10,61.29,242.65,25.71,8.87">It is produced by the sulphate process where titanium sulphate in the final step is reacting with water resulting in the formation of titanium oxide.</s><s coords="10,94.62,242.65,337.26,8.87;10,61.29,254.73,176.14,8.87">The company Nanostructured and Amorphous Material, Inc. produces TiO2_5 nm by a normal sol-gel process.</s><s coords="10,241.74,254.73,190.18,8.87;10,61.29,266.75,195.42,8.87">The SEEC produced powder, SSEC78, has been produced by a modified sol-gel process.</s><s coords="10,260.22,266.75,171.64,8.87;10,61.29,278.82,370.60,8.87;10,61.29,290.90,119.66,9.82">This process involves a sol-gel reaction, but in the contrary to a normal sol-gel process the reaction is occurring with supercritical CO 2 as solvent.</s><s coords="10,183.40,290.90,248.50,8.87;10,61.29,302.92,250.08,8.87">As shown in table 1. Hombikat UV100 and TiO2_5 nm are after the synthesis calcinated at elevated temperatures.</s><s coords="10,317.36,302.92,114.51,8.87;10,61.29,314.99,370.62,8.87;10,61.29,327.07,370.59,8.87;10,61.29,339.09,35.05,8.87">The different preparation methods are described in more details in <ref type="bibr" coords="10,247.52,314.99,14.43,8.87" target="#b22">[23]</ref>, where it was shown that the surface properties and photocatalytic properties of these powders depend on the preparation method.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2" coords="10,61.29,373.72,53.99,8.89">Methods</head><p coords="10,61.29,389.20,370.62,12.32;10,61.28,403.72,370.62,8.87;10,61.28,415.79,370.60,8.87;10,61.28,427.87,370.62,8.87;10,61.28,439.89,370.60,8.87;10,61.28,449.47,370.62,11.36;10,61.28,461.54,370.63,11.30;10,61.29,476.06,370.59,8.87;10,61.29,488.13,370.63,8.87;10,61.29,500.15,370.62,8.87;11,61.29,80.40,370.54,8.87;11,61.29,92.36,336.20,8.87"><s coords="10,61.29,389.20,370.62,12.32;10,61.28,403.72,370.62,8.87;10,61.28,415.79,72.27,8.87">The XRD spectra are obtained using a CuK 1 radiation ( ¼ 1.54 A ˚) from a STOE Stadi P transmission diffractometer and to get good statistics a counting time of 30 min/ point is required.</s><s coords="10,136.01,415.79,295.88,8.87;10,61.28,427.87,370.62,8.87;10,61.28,439.89,302.68,8.87">The SAXS data were obtained using an adaptation of a Brukers AXS, Nanostar SAXS system, with a rotating anode X-ray generator, cross-coupled Goebel mirrors, three pinholes, and a Bruker AXS Hi-star Area Detector.</s><s coords="10,369.12,439.89,62.77,8.87;10,61.28,449.47,370.62,11.36">The scattering intensity, I, was measured in terms of the scattering vector modulus q, where ¼ 1.54 A ˚.</s><s coords="10,61.28,461.54,370.63,11.30">The scattering intensity was measured in the range q ¼ 0.0071 A ˚À1 to q ¼ 0.334 A ˚À1 .</s><s coords="10,61.29,476.06,370.59,8.87;10,61.29,488.13,122.31,8.87">The data were corrected for background and azimuthally averaged to obtain a spectrum of average intensity vs. q.</s><s coords="10,190.04,488.13,241.88,8.87;10,61.29,500.15,303.72,8.87">Transmission electron microscope (TEM) is used to investigate the shape and morphology as well as the size of the samples.</s><s coords="10,367.71,500.15,64.20,8.87;11,61.29,80.40,91.38,8.87">The TEM used is a JEOL 100 CX.</s><s coords="11,158.23,80.40,273.59,8.87">The acceleration voltage was 100 kV for all samples/images.</s><s coords="11,61.29,92.36,336.20,8.87">The samples were prepared by dispersion of the powder onto a formwar film.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4." coords="11,61.29,128.27,42.87,8.86">Results</head><p coords="11,61.29,152.17,370.59,8.87;11,61.29,164.13,370.62,8.87;11,61.29,176.04,370.63,8.87;11,61.29,188.00,337.25,8.87"><s coords="11,61.29,152.17,350.65,8.87">The experimental results obtained in this study will in the following be analyzed.</s><s coords="11,415.38,152.17,16.49,8.87;11,61.29,164.13,370.62,8.87;11,61.29,176.04,95.84,8.87">The XRD and SAXS models shown in section 2 will be fitted to the experimental data by the Least Square Method.</s><s coords="11,160.33,176.04,271.59,8.87;11,61.29,188.00,337.25,8.87">First TEM images of the investigated powders will be analyzed and these images are used to support the theoretical XRD and SAXS models.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1" coords="11,61.29,217.92,40.81,8.89">TEM</head><p coords="11,61.29,235.90,370.61,8.87;11,61.29,247.81,197.82,8.87;11,266.26,247.81,3.84,8.87;11,71.26,259.77,360.60,8.87;11,61.29,271.73,247.59,8.87;12,71.26,80.40,360.64,8.87;12,61.29,92.47,370.58,8.87;12,61.29,104.55,370.63,8.87;12,61.29,116.62,370.59,8.87;12,61.29,128.70,370.64,8.87;12,61.29,140.78,370.61,8.87;12,61.29,152.85,297.11,8.87"><s coords="11,61.29,235.90,345.53,8.87">In the XRD and SAXS theory grains of spherical shapes were assumed.</s><s coords="11,413.23,235.90,18.66,8.87;11,61.29,247.81,208.82,8.87;11,71.26,259.77,360.60,8.87;11,61.29,271.73,247.59,8.87">This assumption can be confirmed by TEM, figure <ref type="figure" coords="11,262.43,247.81,3.84,8.87" target="#fig_3">3</ref>. The particles are not exactly spherical but it seems to be a good approximation; however, particles of irregular shapes were found as well.</s><s coords="12,71.26,80.40,332.06,8.87">For the SSEC78 samples primary particles of 5 nm or less can be observed.</s><s coords="12,407.22,80.40,24.68,8.87;12,61.29,92.47,234.59,8.87">These primary particles are agglomerated into larger clusters.</s><s coords="12,298.94,92.47,132.93,8.87;12,61.29,104.55,141.34,8.87">The primary particles observed show a narrow size distribution.</s><s coords="12,206.59,104.55,225.33,8.87;12,61.29,116.62,42.97,8.87">The TEM images of P25 show typical diameters of 20-30 nm.</s><s coords="12,107.49,116.62,324.39,8.87;12,61.29,128.70,264.49,8.87">Although smaller particles well below 20 nm can be observed and the TEM image of P25 shows a wider size distribution than SSEC78.</s><s coords="12,330.06,128.70,101.86,8.87;12,61.29,140.78,145.25,8.87">A similar result can be observed for the UV100 powder.</s><s coords="12,210.73,140.78,221.17,8.87;12,61.29,152.85,297.11,8.87">The TiO2_5 nm particles are of approximately the same size and have a similar size distribution as the SSEC78 sample.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.1" coords="12,61.29,188.53,195.95,8.86">XRD -analytical and theoretical models.</head><p coords="12,267.25,188.51,164.68,8.87;12,61.29,200.47,370.63,8.87;12,61.29,212.55,370.64,8.87;12,61.28,224.62,370.60,8.87;12,61.28,236.70,370.61,8.87;12,61.28,248.78,219.98,8.87"><s coords="12,267.25,188.51,164.68,8.87;12,61.29,200.47,370.63,8.87;12,61.29,212.55,282.46,8.87">The Pseudo-Voigt function including a linear term to correct for the background of the 100% anatase peak, $25.4 (2), is used to determine the FWHM and the peak center of the four samples.</s><s coords="12,346.79,212.55,85.14,8.87;12,61.28,224.62,304.57,8.87">These values will be used to calculate the average crystallite size from Scherrer's formula.</s><s coords="12,370.03,224.62,61.86,8.87;12,61.28,236.70,370.61,8.87;12,61.28,248.78,219.98,8.87">The analytical expressions and the Guinier model will in the following be fitted to the background corrected 100% anatase peak for the four samples.</s></p><p coords="12,71.26,260.74,360.59,8.87;12,61.28,272.81,37.34,8.87;12,113.46,272.81,318.43,8.87;12,61.28,284.89,370.61,8.87;12,61.28,296.96,152.32,8.87;12,230.57,296.96,15.98,8.87;12,262.43,296.96,169.41,8.87;12,61.28,309.04,45.02,8.87;12,109.88,309.04,322.01,8.87;12,61.28,321.12,169.81,8.87;12,246.21,321.12,185.69,8.87;12,61.28,333.19,121.96,8.87"><s coords="12,71.26,260.74,360.59,8.87;12,61.28,272.81,370.60,8.87;12,61.28,284.89,370.61,8.87;12,61.28,296.96,152.32,8.87;12,230.57,296.96,15.98,8.87;12,262.43,296.96,169.41,8.87;12,61.28,309.04,370.60,8.87;12,61.28,321.12,125.63,8.87">A Gaussian function and a Pseudo-Voigt function with a size distribution terms, equation <ref type="bibr" coords="12,102.73,272.81,10.73,8.87" target="#b7">(8)</ref>, are fitted to the XRD spectra as shown in table 2. The peak center is taken from the Pseudo-Voigt fit, resulting in only two unknown parameters for the size dependent Gaussian function; and from the log-normal size distribution, equation ( <ref type="formula" coords="12,106.30,309.04,3.58,8.87" target="#formula_1">2</ref>), and an extra unknown parameter for the size dependent Pseudo-Voigt function -the ' parameter.</s><s coords="12,192.02,321.12,239.88,8.87;12,61.28,333.19,121.96,8.87">In figure <ref type="figure" coords="12,236.18,321.12,4.98,8.87" target="#fig_4">4</ref> the fit of the XRD line profile from the Gaussian function is shown.</s></p><p coords="12,71.26,345.15,360.63,8.87;12,61.28,357.23,370.61,8.87;12,61.28,369.31,370.61,8.87;12,61.28,381.38,370.65,8.87;12,61.28,393.46,370.59,8.87;12,61.28,405.53,116.41,8.87"><s coords="12,71.26,345.15,314.60,8.87">The size dependent Gaussian function fits the experimental data well.</s><s coords="12,390.84,345.15,41.06,8.87;12,61.28,357.23,370.61,8.87;12,61.28,369.31,215.02,8.87">However, some problems are observed for the four samples where the tails of the XRD peaks are overestimated compared to the experimental data.</s><s coords="12,279.32,369.31,152.58,8.87;12,61.28,381.38,370.65,8.87;12,61.28,393.46,79.75,8.87">From the fits it is observed that the SSEC78 sample shows a very narrow size distribution compared to TiO2_5 nm and Hombikat UV100.</s><s coords="12,143.88,393.46,287.99,8.87;12,61.28,405.53,116.41,8.87">Furthermore, Degussa P25 has the largest mean diameter 3-4 times larger then the three other.</s></p><p coords="12,71.26,417.49,169.47,8.87;12,244.60,417.49,187.29,8.87;12,61.28,429.57,192.15,8.87;12,261.61,429.57,170.27,8.87;12,61.28,441.65,318.27,8.87"><s coords="12,71.26,417.49,360.63,8.87;12,61.28,429.57,204.17,8.87">The Guinier model shown in equation ( <ref type="formula" coords="12,240.73,417.49,3.87,8.87" target="#formula_8">7</ref>) is fitted to the experimental XRD data for the four powders, which is shown in figure <ref type="figure" coords="12,257.78,429.57,3.84,8.87" target="#fig_5">5</ref>.</s><s coords="12,269.80,429.57,162.09,8.87;12,61.28,441.65,318.27,8.87">The grain shape of the crystallites is assumed spherical and a log-normal size distribution function is included.</s></p><p coords="12,71.26,453.55,360.63,8.87;12,61.28,465.63,370.61,8.87;12,61.28,477.70,370.65,8.87;12,61.28,489.78,370.60,8.87;12,61.28,501.85,370.63,8.87;13,61.29,498.79,370.61,8.87;13,61.29,510.81,370.58,8.87;13,61.29,522.83,370.65,8.87;13,61.29,534.85,370.60,8.87;13,61.29,546.87,175.52,8.87"><s coords="12,71.26,453.55,360.63,8.87;12,61.28,465.63,88.57,8.87">The experimental XRD spectra show different line profiles depending on the different preparation method.</s><s coords="12,153.35,465.63,278.55,8.87;12,61.28,477.70,86.45,8.87">Fitting the Guinier model to the experimental data confirms the visual observations.</s><s coords="12,152.96,477.70,278.97,8.87;12,61.28,489.78,105.85,8.87">SSEC78 shows a broad symmetrical peak corresponding to a narrow size distribution.</s><s coords="12,170.81,489.78,261.07,8.87;12,61.28,501.85,190.69,8.87">SSEC78 is shown to consist of nanocrystallites with a mean diameter of 6.9 nm and is equal to 1.40.</s><s coords="12,256.53,501.85,175.38,8.87;13,61.29,498.79,312.93,8.87">Hombikat UV100 and TiO2_5 nm have similar line profiles with a relative narrow top of the peak with a wide tail.</s><s coords="13,376.72,498.79,55.18,8.87;13,61.29,510.81,323.89,8.87">The different line profiles compared to SSEC78 correspond to a broader size distribution.</s><s coords="13,388.00,510.81,43.87,8.87;13,61.29,522.83,290.52,8.87">Hombikat UV100 shows a mean diameter of 2.7 nm and a value of 1.90.</s><s coords="13,356.31,522.83,75.62,8.87;13,61.29,534.85,257.13,8.87">TiO2_5 nm has a slightly larger mean diameter of 4.3 nm and a value of 1.79.</s><s coords="13,320.82,534.85,111.06,8.87;13,61.29,546.87,175.52,8.87">Degussa P25 has a value of 1.39 and a mean diameter of 25.6 nm.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.2" coords="13,61.29,579.60,54.37,8.86">SAXS.</head><p coords="13,125.63,579.58,306.28,8.87;13,61.29,591.54,316.41,8.87;13,389.13,591.54,42.78,8.87;13,61.29,603.56,97.47,8.87;13,71.26,615.52,360.67,8.87;13,61.29,627.54,16.52,8.87;13,85.89,627.54,346.03,9.78"><s coords="13,125.63,579.58,306.28,8.87;13,61.29,591.54,275.96,8.87">The hard sphere model with size distribution and a structure factor is in the following used to fit the experimental measured SAXS data.</s><s coords="13,340.49,591.54,91.42,8.87;13,61.29,603.56,97.47,8.87">In figure <ref type="figure" coords="13,380.97,591.54,4.98,8.87" target="#fig_6">6</ref> the SAXS data for P25 is shown.</s><s coords="13,71.26,615.52,360.67,8.87;13,61.29,627.54,16.52,8.87;13,85.89,627.54,105.92,9.78">The particles in the Degussa P25 powder do not show an interference effect and S(q, HS , C HS ) is equal to one.</s><s coords="13,194.80,627.54,237.12,8.87">Hombikat UV100 shows a significantly different SAXS</s></p><p coords="13,286.35,141.76,3.89,6.48;13,286.35,127.96,3.89,6.48;13,286.35,114.42,3.89,6.48;13,286.35,100.94,3.89,6.48;13,286.35,87.40,3.89,6.48;13,291.92,79.95,137.60,8.75;13,264.60,118.99,6.48,23.34;13,264.60,93.31,6.48,23.73;13,273.10,114.90,6.48,22.18;13,273.10,96.61,6.47,16.34;13,386.83,99.75,37.30,7.00;13,386.83,108.39,21.93,7.00;13,265.91,79.38,7.00,6.47;13,311.50,175.66,98.03,6.47;13,101.04,146.22,3.89,6.48;13,125.99,146.22,7.78,6.48;13,152.88,146.22,7.78,6.48;13,179.77,146.22,7.78,6.48;13,206.67,146.22,7.78,6.48;13,233.56,146.22,7.78,6.48;13,97.09,139.57,3.89,6.48;13,83.47,127.80,17.51,6.48;13,83.47,114.26,17.51,6.47;13,83.47,100.78,17.51,6.47;13,83.47,87.24,17.51,6.47;13,114.61,81.06,111.66,6.47;13,139.80,155.50,61.46,6.47;13,290.84,146.22,3.89,6.48;13,315.99,146.22,7.78,6.47;13,343.09,146.22,7.78,6.47;13,370.19,146.22,7.78,6.47;13,397.28,146.22,7.78,6.47;13,424.38,146.22,7.78,6.47;13,329.60,155.50,61.46,6.47;13,62.78,118.99,6.48,23.34;13,62.78,93.31,6.48,23.73;13,71.28,114.90,6.48,22.18;13,71.28,96.61,6.47,16.34;13,198.68,99.75,33.41,7.00;13,198.68,108.39,21.93,7.00;13,62.71,84.09,7.00,6.47;13,98.58,238.83,142.68,6.47;13,97.45,232.29,3.89,6.48;13,91.61,223.69,9.73,6.47;13,91.61,213.37,9.73,6.47;13,91.61,202.73,9.73,6.47;13,91.61,192.36,9.73,6.47;13,97.45,182.05,3.89,6.48;13,166.67,248.65,7.54,6.48;13,289.65,238.83,142.68,6.47;13,357.73,248.65,7.54,6.48;13,80.29,206.56,6.48,35.39;13,80.29,178.94,6.48,25.68;13,280.92,223.69,9.73,6.47;13,280.92,213.37,9.73,6.47;13,280.92,202.73,9.73,6.47;13,280.92,192.36,9.73,6.47;13,286.76,182.05,3.89,6.48;13,269.59,206.56,6.48,35.39;13,269.59,178.94,6.48,25.68;13,114.23,175.66,112.42,6.47;13,195.03,186.91,40.02,5.55;13,195.03,195.93,25.34,5.55;13,195.03,202.93,21.01,5.55;13,382.43,187.18,40.02,5.55;13,382.43,196.20,25.34,5.55;13,382.43,203.20,21.01,5.55;13,290.88,332.70,3.89,6.48;13,314.50,332.70,7.78,6.48;13,341.58,332.70,7.78,6.48;13,368.60,332.70,7.78,6.48;13,395.62,332.70,7.78,6.48;13,422.64,332.70,7.78,6.48;13,287.01,327.23,3.89,6.48;13,273.39,314.49,17.51,6.48;13,273.39,300.95,17.51,6.48;13,273.39,287.47,17.51,6.48;13,273.39,273.93,17.51,6.48;13,304.69,267.54,111.66,6.48;13,329.88,342.33,61.46,6.48;13,253.73,305.50,6.48,23.34;13,253.73,279.82,6.48,23.73;13,262.23,301.41,6.48,22.18;13,262.23,283.12,6.47,16.34;13,386.03,286.07,33.41,7.00;13,386.03,294.71,21.93,7.00;13,254.38,267.54,7.39,6.48;13,301.94,363.21,117.14,6.48;13,100.96,332.70,3.89,6.48;13,125.90,332.70,7.78,6.48;13,152.80,332.70,7.78,6.48;13,179.69,332.70,7.78,6.48;13,206.58,332.70,7.78,6.48;13,233.47,332.70,7.78,6.48;13,96.94,328.25,3.89,6.48;13,83.32,314.44,17.51,6.48;13,83.32,300.90,17.51,6.48;13,83.32,287.42,17.51,6.48;13,83.32,273.88,17.51,6.48;13,114.61,267.54,111.66,6.48;13,139.40,342.55,61.46,6.48;13,64.20,305.50,6.48,23.34;13,64.20,279.82,6.48,23.73;13,72.70,301.41,6.48,22.18;13,72.70,283.12,6.47,16.34;13,199.70,286.28,33.41,7.00;13,199.70,293.91,21.93,7.00;13,63.39,267.54,7.38,6.48;13,99.60,426.39,142.68,6.48;13,97.20,419.33,3.89,6.48;13,91.36,410.73,9.73,6.48;13,91.36,400.42,9.73,6.48;13,91.36,389.78,9.73,6.48;13,91.36,379.41,9.73,6.48;13,97.20,369.04,3.89,6.48;13,166.67,437.70,7.54,6.48;13,289.08,426.39,142.68,6.48;13,356.75,437.70,7.54,6.48;13,78.14,394.12,6.48,35.39;13,78.14,366.50,6.48,25.68;13,286.03,419.33,3.89,6.48;13,280.19,410.73,9.73,6.48;13,280.19,400.42,9.73,6.48;13,280.19,389.78,9.73,6.48;13,280.19,379.41,9.73,6.48;13,286.03,369.04,3.89,6.48;13,266.98,394.12,6.48,35.39;13,266.98,366.50,6.48,25.68;13,116.95,363.21,106.97,6.48;13,195.19,375.29,40.02,5.55;13,195.19,384.31,25.34,5.55;13,195.19,391.31,21.01,5.55;13,384.30,375.29,40.02,5.55;13,384.30,383.31,25.34,5.55;13,384.30,390.31,21.01,5.55;14,61.29,492.84,370.65,8.87;14,61.29,505.03,277.70,8.87;14,346.14,505.03,3.84,8.87"><s coords="13,286.35,141.76,3.89,6.48;13,286.35,127.96,3.89,6.48;13,286.35,114.42,3.89,6.48;13,286.35,100.94,3.89,6.48;13,286.35,87.40,3.89,6.48;13,291.92,79.95,137.60,8.75;13,264.60,118.99,6.48,23.34;13,264.60,93.31,6.48,23.73;13,273.10,114.90,6.48,22.18;13,273.10,96.61,6.47,16.34;13,386.83,99.75,37.30,7.00;13,386.83,108.39,21.93,7.00;13,265.91,79.38,7.00,6.47;13,311.50,175.66,98.03,6.47;13,101.04,146.22,3.89,6.48;13,125.99,146.22,7.78,6.48;13,152.88,146.22,7.78,6.48;13,179.77,146.22,7.78,6.48;13,206.67,146.22,7.78,6.48;13,233.56,146.22,7.78,6.48;13,97.09,139.57,3.89,6.48;13,83.47,127.80,17.51,6.48;13,83.47,114.26,17.51,6.47;13,83.47,100.78,17.51,6.47;13,83.47,87.24,17.51,6.47;13,114.61,81.06,111.66,6.47;13,139.80,155.50,61.46,6.47;13,290.84,146.22,3.89,6.48;13,315.99,146.22,7.78,6.47;13,343.09,146.22,7.78,6.47;13,370.19,146.22,7.78,6.47;13,397.28,146.22,7.78,6.47;13,424.38,146.22,7.78,6.47;13,329.60,155.50,61.46,6.47;13,62.78,118.99,6.48,23.34;13,62.78,93.31,6.48,23.73;13,71.28,114.90,6.48,22.18;13,71.28,96.61,6.47,16.34;13,198.68,99.75,33.41,7.00;13,198.68,108.39,21.93,7.00;13,62.71,84.09,7.00,6.47;13,98.58,238.83,142.68,6.47;13,97.45,232.29,3.89,6.48;13,91.61,223.69,9.73,6.47;13,91.61,213.37,9.73,6.47;13,91.61,202.73,9.73,6.47;13,91.61,192.36,9.73,6.47;13,97.45,182.05,3.89,6.48;13,166.67,248.65,7.54,6.48;13,289.65,238.83,142.68,6.47;13,357.73,248.65,7.54,6.48;13,80.29,206.56,6.48,35.39;13,80.29,178.94,6.48,25.68;13,280.92,223.69,9.73,6.47;13,280.92,213.37,9.73,6.47;13,280.92,202.73,9.73,6.47;13,280.92,192.36,9.73,6.47;13,286.76,182.05,3.89,6.48;13,269.59,206.56,6.48,35.39;13,269.59,178.94,6.48,25.68;13,114.23,175.66,112.42,6.47;13,195.03,186.91,40.02,5.55;13,195.03,195.93,25.34,5.55;13,195.03,202.93,21.01,5.55;13,382.43,187.18,40.02,5.55;13,382.43,196.20,25.34,5.55;13,382.43,203.20,21.01,5.55;13,290.88,332.70,3.89,6.48;13,314.50,332.70,7.78,6.48;13,341.58,332.70,7.78,6.48;13,368.60,332.70,7.78,6.48;13,395.62,332.70,7.78,6.48;13,422.64,332.70,7.78,6.48;13,287.01,327.23,3.89,6.48;13,273.39,314.49,17.51,6.48;13,273.39,300.95,17.51,6.48;13,273.39,287.47,17.51,6.48;13,273.39,273.93,17.51,6.48;13,304.69,267.54,111.66,6.48;13,329.88,342.33,61.46,6.48;13,253.73,305.50,6.48,23.34;13,253.73,279.82,6.48,23.73;13,262.23,301.41,6.48,22.18;13,262.23,283.12,6.47,16.34;13,386.03,286.07,33.41,7.00;13,386.03,294.71,21.93,7.00;13,254.38,267.54,7.39,6.48;13,301.94,363.21,117.14,6.48;13,100.96,332.70,3.89,6.48;13,125.90,332.70,7.78,6.48;13,152.80,332.70,7.78,6.48;13,179.69,332.70,7.78,6.48;13,206.58,332.70,7.78,6.48;13,233.47,332.70,7.78,6.48;13,96.94,328.25,3.89,6.48;13,83.32,314.44,17.51,6.48;13,83.32,300.90,17.51,6.48;13,83.32,287.42,17.51,6.48;13,83.32,273.88,17.51,6.48;13,114.61,267.54,111.66,6.48;13,139.40,342.55,61.46,6.48;13,64.20,305.50,6.48,23.34;13,64.20,279.82,6.48,23.73;13,72.70,301.41,6.48,22.18;13,72.70,283.12,6.47,16.34;13,199.70,286.28,33.41,7.00;13,199.70,293.91,21.93,7.00;13,63.39,267.54,7.38,6.48;13,99.60,426.39,142.68,6.48;13,97.20,419.33,3.89,6.48;13,91.36,410.73,9.73,6.48;13,91.36,400.42,9.73,6.48;13,91.36,389.78,9.73,6.48;13,91.36,379.41,9.73,6.48;13,97.20,369.04,3.89,6.48;13,166.67,437.70,7.54,6.48;13,289.08,426.39,142.68,6.48;13,356.75,437.70,7.54,6.48;13,78.14,394.12,6.48,35.39;13,78.14,366.50,6.48,25.68;13,286.03,419.33,3.89,6.48;13,280.19,410.73,9.73,6.48;13,280.19,400.42,9.73,6.48;13,280.19,389.78,9.73,6.48;13,280.19,379.41,9.73,6.48;13,286.03,369.04,3.89,6.48;13,266.98,394.12,6.48,35.39;13,266.98,366.50,6.48,25.68;13,116.95,363.21,106.97,6.48;13,195.19,375.29,40.02,5.55;13,195.19,384.31,25.34,5.55;13,195.19,391.31,21.01,5.55;13,384.30,375.29,40.02,5.55;13,384.30,383.31,25.34,5.55;13,384.30,390.31,21.01,5.55;14,61.29,492.84,370.65,8.87;14,61.29,505.03,29.03,8.87">0 2 4 6 8 × 10 -3 Log normal size distribution function Particle number density (a.u.) µ = 16.6 nm σ = 1.5 B) XRD -P25 with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) 0 1 0 2 0 3 0 4 0 5 0 Column length (nm) Particle number density (a.u.) µ = 4.6 nm σ = 1.5 A) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -SSEC78 with size distribution Measured data Gaussian function Measured data Gaussian function 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 5.4 nm σ = 1.9 D) XRD -TiO2 5 nm with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 4.9 nm σ = 2.0 C) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -UV100 with size distribution Measured data Gaussian function Measured data Gaussian function curve than Degussa P25 and the ''knee'' for Hombikat UV100 is observed at larger q values.</s><s coords="14,93.71,505.03,256.27,8.87">The SAXS data for Hombikat UV100 is shown in figure <ref type="figure" coords="14,342.31,505.03,3.84,8.87" target="#fig_7">7</ref>.</s></p><p coords="14,71.26,516.99,360.63,8.87;14,61.29,529.18,370.60,8.87;14,61.29,541.37,267.24,8.87;14,335.54,541.37,7.33,8.87"><s coords="14,71.26,516.99,360.63,8.87;14,61.29,529.18,297.65,8.87">The structure factor is included for the fit of the SAXS data for Hombikat UV100 indicating that the powder is denser packed compared to Degussa P25.</s><s coords="14,361.30,529.18,70.59,8.87;14,61.29,541.37,281.58,8.87">The SAXS curve for TiO2_5 nm has similar trends as Hombikat UV100 (figure <ref type="figure" coords="14,331.88,541.37,3.66,8.87" target="#fig_8">8</ref>).</s></p><p coords="14,71.26,553.33,360.67,8.87;14,61.29,565.58,370.63,8.87;14,61.29,577.77,24.68,8.87;14,97.62,577.77,204.62,8.87"><s coords="14,71.26,553.33,360.67,8.87;14,61.29,565.58,357.74,8.87">The structure factor was also required to model the SAXS curve for TiO2_5 nm but a mean size of approximately twice as large as for Hombokat UV100 was observed.</s><s coords="14,422.58,565.58,9.34,8.87;14,61.29,577.77,240.96,8.87">In figure <ref type="figure" coords="14,89.35,577.77,4.98,8.87">9</ref> the SAXS fit for the SSEC78 powder is shown.</s></p><p coords="14,71.26,589.73,360.65,8.87;14,61.28,601.92,370.65,8.87;14,61.28,614.11,370.62,8.87;14,61.28,626.35,345.80,8.87;14,428.28,626.35,3.61,8.87;15,61.29,372.03,370.65,8.87;15,61.29,384.16,370.63,8.87;15,61.29,396.29,370.63,8.87;15,61.29,408.42,68.48,9.78"><s coords="14,71.26,589.73,318.62,8.87">The SAXS curve for SSEC 78 shows a different tendency at large q values.</s><s coords="14,392.77,589.73,39.15,8.87;14,61.28,601.92,370.65,8.87;14,61.28,614.11,370.62,8.87;14,61.28,626.35,370.60,8.87">The hard sphere model could not explain this type of scattering because for the SSEC78 powder a positive deviation from the Porod slope (-4) was observed, which is normally attributed to the scattering from a rough surface or indeed from a surface fractal <ref type="bibr" coords="14,413.85,626.35,14.43,8.87" target="#b23">[24]</ref>.</s><s coords="15,61.29,372.03,370.65,8.87;15,61.29,384.16,370.63,8.87;15,61.29,396.29,45.53,8.87">This additional features on the primary particle surfaces was taken into account by multiplying the form factor by (qR) where 0 &lt; &lt; 1 and expresses the degree of roughness.</s><s coords="15,114.75,396.29,317.17,8.87;15,61.29,408.42,68.48,9.78">The surface fractal of the primary particles can be extracted as D s ¼ 6 À (4 À ).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5." coords="15,61.28,452.66,56.55,8.86">Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1" coords="15,61.28,476.50,221.46,8.89">XRD: Analytic expressions vs. theoretical model</head><p coords="15,61.28,494.48,32.75,8.87;15,104.09,494.48,304.40,8.87;15,412.36,494.48,19.54,8.87;15,61.28,506.61,288.29,8.87;15,71.26,518.52,360.63,8.87;15,61.28,530.65,370.61,8.87;15,61.28,542.78,370.65,8.87;15,61.28,554.92,370.57,8.87;15,61.28,567.05,370.61,8.87;15,61.28,579.18,370.58,8.87;15,61.28,591.31,370.63,8.87;15,61.28,603.45,351.71,8.87"><s coords="15,61.28,494.48,370.61,8.87;15,61.28,506.61,288.29,8.87">In table <ref type="table" coords="15,96.55,494.48,4.98,8.87" target="#tab_1">2</ref> the mean diameters with standard deviations calculated from equation ( <ref type="formula" coords="15,408.48,494.48,3.87,8.87" target="#formula_3">3</ref>) are shown for the two analytical XRD models and the Guinier model.</s><s coords="15,71.26,518.52,360.63,8.87;15,61.28,530.65,149.75,8.87">The four methods used to extract the crystallite size show a variation in the mean diameter and standard deviation.</s><s coords="15,216.68,530.65,215.21,8.87;15,61.28,542.78,370.65,8.87;15,61.28,554.92,217.30,8.87">The Guinier model gives a larger diameter for SSEC78 and Degussa but a significant smaller diameter for Hombikat UV100 and TiO2_5 nm compared to the analytical expressions.</s><s coords="15,281.36,554.92,150.50,8.87;15,61.28,567.05,370.61,8.87;15,61.28,579.18,370.58,8.87;15,61.28,591.31,89.51,8.87">Comparing the standard deviations it is observed that the standard deviations obtained from the Pseudo-Voigt function with size distribution are different from the Gaussian function and the Guinier model which are consistent.</s><s coords="15,153.97,591.31,277.94,8.87;15,61.28,603.45,351.71,8.87">This indicates that the standard deviation is not obtainable from the Pseudo-Voigt function but should be extracted from one of the other models.</s></p><p coords="15,71.26,615.41,360.65,8.87;15,61.28,627.54,370.61,8.87"><s coords="15,71.26,615.41,360.65,8.87;15,61.28,627.54,325.83,8.87">Based on this XRD investigation no concise conclusion can be made on whether to use Scherrer's analytical formulation or Guinier's theoretical expression.</s><s coords="15,392.48,627.54,39.42,8.87">Both the</s></p><p coords="15,111.53,178.15,4.45,7.40;15,131.27,178.15,4.45,7.40;15,151.00,178.15,4.45,7.40;15,170.74,178.15,4.45,7.40;15,190.47,178.15,4.45,7.40;15,106.23,172.39,4.45,7.40;15,90.66,144.11,20.02,7.40;15,95.11,115.34,15.57,7.40;15,90.66,87.52,20.02,7.40;15,202.42,79.15,118.71,7.40;15,240.00,190.22,43.56,7.40;15,77.16,150.67,7.40,26.67;15,77.16,137.32,7.40,11.12;15,77.16,109.76,7.40,25.34;15,77.16,88.86,7.40,18.67;15,311.17,100.51,72.14,8.00;15,311.17,111.80,35.35,7.40;15,105.85,306.01,15.51,8.00;15,142.12,306.01,8.84,8.00;15,171.72,306.01,15.51,8.00;15,204.66,306.01,15.51,8.00;15,237.60,306.01,15.51,8.00;15,270.54,306.01,15.51,8.00;15,306.81,306.01,8.84,8.00;15,336.41,306.01,15.51,8.00;15,369.35,306.01,15.51,8.00;15,402.28,306.01,15.51,8.00;15,101.43,298.71,8.84,8.00;15,101.43,280.27,8.84,8.00;15,101.43,259.88,8.84,8.00;15,105.83,239.69,4.45,7.40;15,105.83,219.76,4.45,7.40;15,250.44,319.03,22.67,7.40;15,84.21,253.68,7.40,18.22;15,191.53,210.68,140.50,7.40;15,342.75,227.10,61.34,7.40;15,342.75,236.86,53.36,7.40;16,61.29,379.23,370.62,8.87;16,61.29,391.30,258.27,8.87"><s coords="15,111.53,178.15,4.45,7.40;15,131.27,178.15,4.45,7.40;15,151.00,178.15,4.45,7.40;15,170.74,178.15,4.45,7.40;15,190.47,178.15,223.77,7.40;15,106.23,172.39,4.45,7.40;15,90.66,144.11,20.02,7.40;15,95.11,115.34,15.57,7.40;15,90.66,87.52,20.02,7.40;15,202.42,79.15,118.71,7.40;15,240.00,190.22,43.56,7.40;15,77.16,150.67,7.40,26.67;15,77.16,137.32,7.40,11.12">0 2 4 6 8 <ref type="formula" coords="15,207.99,178.15,206.26,7.40" target="#formula_11">10 12 14 16 18 20 22 24 26 28 30</ref>0 0.005 0.01 0.015 Log normal size distribution -P25 Radius (nm) Particle no.</s><s coords="15,77.16,109.76,7.40,25.34;15,77.16,88.86,7.40,18.67;15,311.17,100.51,72.14,8.00;15,311.17,111.80,35.35,7.40;15,105.85,306.01,15.51,8.00;15,142.12,306.01,8.84,8.00;15,171.72,306.01,15.51,8.00;15,204.66,306.01,15.51,8.00;15,237.60,306.01,15.51,8.00;15,270.54,306.01,15.51,8.00;15,306.81,306.01,8.84,8.00;15,336.41,306.01,15.51,8.00;15,369.35,306.01,15.51,8.00;15,402.28,306.01,15.51,8.00;15,101.43,298.71,8.84,8.00;15,101.43,280.27,8.84,8.00;15,101.43,259.88,8.84,8.00;15,105.83,239.69,4.45,7.40;15,105.83,219.76,4.45,7.40;15,250.44,319.03,22.67,7.40;15,84.21,253.68,7.40,18.22;15,191.53,210.68,140.50,7.40;15,342.75,227.10,61.34,7.40">density (a.u.) µ = 9.8 nm, σ = 0.69 S(q) = 1.0 -2.2 -2 -1.8 -1.6 -1.4 -1.2 -1 -0.8 -0.6 -0.4 -6 -4 -2 0 2 log (q) log(I) SAXS model with size distribution -P25 Fit with size distr.</s><s coords="15,342.75,236.86,53.36,7.40;16,61.29,379.23,370.62,8.87;16,61.29,391.30,258.27,8.87">Measured data Scherrer formula from 1918 and Guinier's model from 1963 can be used for extracting crystallite size distribution from experimental XRD spectra.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2" coords="16,61.29,425.25,146.45,8.89">SAXS: The hard sphere model</head><p coords="16,61.29,443.17,370.61,8.87;16,61.29,455.25,370.58,8.87;16,61.29,467.27,370.64,8.87;16,61.29,479.29,370.65,8.87;16,61.29,491.36,370.59,8.87;16,61.29,503.38,370.63,8.87;16,61.29,515.46,370.63,8.87;16,61.29,527.48,370.59,8.87;16,61.29,539.50,370.63,8.87;16,61.29,551.57,370.59,8.87;16,61.29,563.59,34.53,8.87;16,133.85,563.59,169.00,8.87;16,336.41,563.59,3.84,8.87"><s coords="16,61.29,443.17,370.61,8.87;16,61.29,455.25,370.58,8.87;16,61.29,467.27,348.74,8.87">The analysis of the SAXS curves for the three commercial powders showed that for Hombikat UV100 and TiO2_5 nm the structure factor had to be included in the model to take into account the interference factor for agglomerated nanoparticles.</s><s coords="16,415.95,467.27,15.97,8.87;16,61.29,479.29,370.65,8.87;16,61.29,491.36,160.14,8.87">For Degussa P25 the interference factor was found to be unity indicating that no interparticle interference is occurring.</s><s coords="16,224.50,491.36,207.37,8.87;16,61.29,503.38,370.63,8.87;16,61.29,515.46,130.35,8.87">For the SSEC produced powder the hard sphere model was not sufficient to model the scattering curve due to a positive deviation from the Porod slope was observed.</s><s coords="16,194.74,515.46,237.18,8.87;16,61.29,527.48,181.62,8.87">The positive deviation is caused by a surface roughness or surface fractal of the primary particles.</s><s coords="16,246.33,527.48,185.55,8.87;16,61.29,539.50,370.63,8.87">The slope in the Porod regime for SSEC78 was À3.48 with an factor of 0.52 indicating a surface fractal dimension of 2.48.</s><s coords="16,61.29,551.57,370.59,8.87;16,61.29,563.59,278.96,8.87">Previously in the literature a positive deviation is reported for aerogels and xerogels <ref type="bibr" coords="16,99.21,563.59,15.34,8.87" target="#b24">[25,</ref><ref type="bibr" coords="16,117.86,563.59,12.65,8.87" target="#b25">26]</ref> but also for supercritical dried aerogels <ref type="bibr" coords="16,306.19,563.59,15.34,8.87" target="#b23">[24,</ref><ref type="bibr" coords="16,324.90,563.59,11.51,8.87" target="#b26">27]</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3" coords="16,61.29,597.54,177.37,8.89">Morphology: TEM, XRD, and SAXS</head><p coords="16,61.29,615.46,347.61,8.87;16,418.73,615.46,13.17,8.87;16,61.29,627.54,111.13,8.87"><s coords="16,61.29,615.46,312.59,8.87">The TEM, XRD, and SAXS data have been analyzed by different models.</s><s coords="16,376.32,615.46,55.58,8.87;16,61.29,627.54,111.13,8.87">In table <ref type="table" coords="16,411.36,615.46,4.98,8.87" target="#tab_2">3</ref> the extracted data are shown.</s></p><p coords="16,98.02,186.59,4.36,7.25;16,119.64,186.59,4.36,7.25;16,141.25,186.59,4.36,7.25;16,162.87,186.59,4.36,7.25;16,184.48,186.59,4.36,7.25;17,71.26,373.27,360.59,8.87;17,61.29,385.41,370.62,8.87;17,61.29,397.54,370.62,8.87;17,61.29,409.67,370.60,8.87;17,61.29,421.75,370.60,8.87;17,61.29,433.88,370.61,8.87;17,61.29,446.01,370.64,8.87;17,61.29,458.14,370.60,8.87;17,61.29,470.28,370.57,8.87;17,61.29,482.41,370.61,8.87;17,61.29,494.54,226.74,8.87"><s coords="16,98.02,186.59,4.36,7.25;16,119.64,186.59,4.36,7.25;16,141.25,186.59,4.36,7.25;16,162.87,186.59,4.36,7.25;16,184.48,186.59,4.36,7.25;17,71.26,373.27,360.59,8.87;17,61.29,385.41,211.92,8.87">0 2 4 6 8 A qualitative judgment of the TEM images shows good agreement with the particle sizes found from XRD and SAXS measurements.</s><s coords="17,276.21,385.41,155.70,8.87;17,61.29,397.54,209.98,8.87">The three different analysis methods all show comparable values of the extracted sizes.</s><s coords="17,273.94,397.54,157.96,8.87;17,61.29,409.67,370.60,8.87;17,61.29,421.75,207.05,8.87">However, the sizes obtained from the SAXS measurements are for all four samples smaller than the sizes from the XRD measurements expressed by the Guinier model.</s><s coords="17,272.52,421.75,159.36,8.87;17,61.29,433.88,370.61,8.87;17,61.29,446.01,258.35,8.87">An explanation to this phenomenon could be that the size extracted from XRD is only for the crystalline areas and the smallest particles in the individual powders are amorphous.</s><s coords="17,323.20,446.01,108.73,8.87;17,61.29,458.14,370.60,8.87;17,61.29,470.28,370.57,8.87">SAXS on the other hand can determine the size from both amorphous and crystalline particles and the mean sizes extracted from SAXS thereby become smaller than the size extracted from XRD.</s><s coords="17,61.29,482.41,370.61,8.87;17,61.29,494.54,226.74,8.87">However, taken the uncertainties and variances into account the size distributions for each sample are similar from both SAXS and XRD.</s></p><p coords="17,71.26,506.45,360.62,8.87;17,61.29,518.58,119.37,8.87;17,269.46,518.58,162.42,8.87;17,61.29,530.71,370.64,8.87;17,61.29,542.84,370.61,8.87;17,61.29,554.98,370.64,8.87;17,61.29,567.11,370.64,8.87;17,61.29,579.18,370.60,8.87;17,61.29,591.32,370.58,8.87;17,61.29,603.45,27.99,8.87"><s coords="17,71.26,506.45,360.62,8.87;17,61.29,518.58,310.88,8.87">Some comparisons can be made between the TEM images, figure 3 from this study and the SEM images from <ref type="bibr" coords="17,185.27,518.58,79.62,8.87" target="#b6">Jensen et al. 2004</ref> of the SSEC78 sample.</s><s coords="17,376.78,518.58,55.10,8.87;17,61.29,530.71,370.64,8.87;17,61.29,542.84,75.83,8.87">The primary particles seem to be agglomerated into larger clusters as can be seen on both the SEM and TEM images.</s><s coords="17,139.58,542.84,292.32,8.87;17,61.29,554.98,175.37,8.87">Occasionally thinner and narrow structures can be observed from the clusters surfaces as observed from TEM.</s><s coords="17,239.92,554.98,192.01,8.87;17,61.29,567.11,370.64,8.87;17,61.29,579.18,217.32,8.87">The secondary structure found in both SEM and TEM was confirmed by SAXS, although a smaller secondary structure was extracted from SAXS than seen in SEM and TEM.</s><s coords="17,281.37,579.18,150.52,8.87;17,61.29,591.32,370.58,8.87;17,61.29,603.45,27.99,8.87">The SAXS analysis of SSEC78 also confirms this secondary structure by the implementation of the interparticle interference factor.</s></p><p coords="17,71.26,615.41,360.64,8.87;17,61.29,627.54,370.65,8.87"><s coords="17,71.26,615.41,360.64,8.87;17,61.29,627.54,37.44,8.87">The P25 particles show a significantly larger size of the primary particles than SSEC78.</s><s coords="17,103.80,627.54,328.13,8.87">However, as observed by SEM, TEM, and SAXS P25 does not show a</s></p><p coords="17,111.66,178.34,4.45,7.40;17,131.42,178.34,4.45,7.40;17,151.18,178.34,4.45,7.40;17,170.93,178.34,4.45,7.40;17,190.69,178.34,4.45,7.40;18,61.29,486.83,370.61,8.87;18,61.29,498.85,370.64,8.87;18,61.29,510.81,370.60,8.87;18,61.29,522.77,370.59,8.87;18,61.29,534.73,370.63,8.87;18,61.29,546.75,370.61,8.87;18,61.29,558.71,322.02,8.87"><s coords="17,111.66,178.34,4.45,7.40;17,131.42,178.34,4.45,7.40;17,151.18,178.34,4.45,7.40;17,170.93,178.34,4.45,7.40;17,190.69,178.34,224.00,7.40;18,61.29,486.83,86.85,8.87">0 2 4 6 8 <ref type="formula" coords="17,208.22,178.34,206.46,7.40" target="#formula_11">10 12 14 16 18 20 22 24 26 28 30</ref> secondary structure.</s><s coords="18,151.60,486.83,280.30,8.87;18,61.29,498.85,37.44,8.87">On the other hand the size distribution for P25 is wider than for SSEC78.</s><s coords="18,102.05,498.85,329.87,8.87;18,61.29,510.81,370.60,8.87;18,61.29,522.77,370.59,8.87;18,61.29,534.73,198.65,8.87">The UV100 and the TiO2_5 nm particles show the same tendencies in SAXS and XRD and both samples have primary particles of approximately 5 nm or less; although, the TEM analysis revealed that UV100 consists of remarkable larger primary particles than extracted from XRD and SAXS.</s><s coords="18,262.48,534.73,169.43,8.87;18,61.29,546.75,256.67,8.87">The TEM images of TiO2_5 nm showed primary particles with sizes in the same range as SSEC78.</s><s coords="18,322.07,546.75,109.83,8.87;18,61.29,558.71,322.02,8.87">Both the UV100 and the TiO2_5 nm samples consist of a secondary structure observed from SAXS.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6." coords="18,61.29,591.67,58.33,8.86">Conclusion</head><p coords="18,61.29,615.58,370.64,8.87;18,61.29,627.54,370.58,8.87;19,61.29,80.40,370.60,8.87;19,61.29,92.36,370.61,8.87;19,61.29,104.38,370.61,8.87;19,61.29,116.40,370.61,8.87;19,61.29,128.36,370.61,8.87;19,61.29,140.38,370.63,8.87;19,61.29,152.40,26.22,8.87;19,71.26,164.36,360.64,8.87;19,61.29,176.32,370.63,8.87;19,61.29,188.34,271.76,8.87"><s coords="18,61.29,615.58,370.64,8.87;18,61.29,627.54,370.58,8.87;18,205.22,179.62,188.74,7.40;19,61.29,80.40,194.12,8.87">The present study showed that crystallite and primary particle size distributions can be extracted from experimental measurements by theoretical models assuming spherical  <ref type="formula" coords="18,205.22,179.62,188.74,7.40" target="#formula_11">10 12 14 16 18 20 22 24 26 28</ref>  particles with a log-normal size distribution.</s><s coords="19,259.42,80.40,172.46,8.87;19,61.29,92.36,370.61,8.87;19,61.29,104.38,370.61,8.87;19,61.29,116.40,207.34,8.87">The morphology upon which the XRD and SAXS models were developed was determined by TEM and SEM and the importance of using XRD and electron microscopy together to extract convincing physical models of the nanopowders was shown.</s><s coords="19,271.55,116.40,160.34,8.87;19,61.29,128.36,325.87,8.87">The crystallite size extracted from the theoretical Guinier model was in agreement with the SAXS measurements.</s><s coords="19,390.84,128.36,41.06,8.87;19,61.29,140.38,370.63,8.87;19,61.29,152.40,26.22,8.87">However, the SAXS analysis showed for all samples a smaller primary particle size compared to XRD.</s><s coords="19,71.26,164.36,360.64,8.87;19,61.29,176.32,139.57,8.87">The Guinier model deviated slightly from Scherrer's formula and analytical models including a size dependent term.</s><s coords="19,204.26,176.32,227.65,8.87;19,61.29,188.34,271.76,8.87">No exact conclusion can be made from this study to whether Guinier's model or Scherrer's formula is more precise.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="6,114.29,628.90,264.67,7.09"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s coords="6,114.29,628.90,31.19,7.09">Figure 1.</s><s coords="6,153.47,628.90,225.50,7.09">XRD spectra as a function of and ; A) ¼ 10 nm, B) ¼ 1.5.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="8,284.99,143.62,3.89,6.48;8,312.71,143.62,3.89,6.48;8,336.94,143.62,7.78,6.48;8,364.66,143.62,7.78,6.48;8,392.38,143.62,7.78,6.48;8,420.05,143.62,7.78,6.48;8,281.01,137.61,3.89,6.48;8,275.17,127.76,9.73,6.47;8,275.17,117.15,9.73,6.47;8,275.17,106.26,9.73,6.47;8,275.17,95.65,9.73,6.47;8,275.17,85.09,9.73,6.47;8,301.24,78.94,110.10,6.47;8,337.23,154.35,38.12,6.47;8,385.38,93.08,35.36,7.00;8,351.29,121.79,5.84,6.47;8,385.38,101.49,31.47,7.00;8,344.19,127.12,5.84,6.47;8,385.38,110.18,31.47,7.00;8,336.27,132.40,5.84,6.47;8,277.26,230.47,7.74,7.00;8,277.26,222.60,7.74,7.00;8,277.26,212.87,7.74,7.00;8,281.10,203.36,3.89,6.48;8,281.10,193.68,3.89,6.48;8,281.10,183.94,3.89,6.48;8,419.68,224.09,5.84,6.47;8,262.99,207.82,6.48,9.34;8,262.99,199.27,6.48,6.61;8,304.16,172.72,104.26,6.47;8,419.68,216.17,5.84,6.47;8,419.68,210.01,5.84,6.47;8,96.62,143.62,3.89,6.48;8,124.38,143.62,3.89,6.48;8,150.20,143.62,7.78,6.48;8,177.97,143.62,7.78,6.48;8,205.73,143.62,7.78,6.48;8,233.49,143.62,7.78,6.48;8,92.69,139.12,3.89,6.48;8,82.96,129.39,13.62,6.47;8,86.85,119.98,9.73,6.47;8,82.96,110.25,13.62,6.47;8,86.85,100.84,9.73,6.47;8,82.96,91.11,13.62,6.47;8,112.74,78.94,110.10,6.47;8,148.73,154.35,38.11,6.47;8,62.95,103.60,6.48,23.34;8,71.45,130.64,6.47,9.73;8,71.45,106.52,6.48,22.18;8,71.45,88.23,6.47,16.34;8,188.99,97.42,37.30,7.00;8,104.01,88.57,5.84,6.47;8,188.99,105.12,37.30,7.00;8,126.12,125.03,5.84,6.47;8,188.99,112.76,41.19,7.00;8,153.79,129.43,5.84,6.47;8,62.22,78.94,7.00,6.47;8,255.04,103.60,6.48,23.34;8,263.54,130.64,6.48,9.73;8,263.54,106.52,6.48,22.18;8,263.54,88.23,6.47,16.34;8,254.39,78.94,7.00,6.47;8,92.15,237.55,150.82,6.50;8,89.24,230.47,7.74,7.00;8,89.24,221.56,7.74,7.00;8,89.24,211.82,7.74,7.00;8,93.08,202.31,3.89,6.48;8,93.08,192.63,3.89,6.48;8,93.08,182.90,3.89,6.48;8,231.94,229.26,5.00,5.55;8,74.62,207.82,6.48,9.34;8,74.62,199.27,6.47,6.61;8,157.86,248.85,19.84,6.47;8,281.06,237.55,150.81,6.50;8,345.73,248.75,19.84,6.47;8,115.65,172.72,104.26,6.47;8,231.94,223.21,5.00,5.55;8,231.94,218.04,5.00,5.55"><head>4 log</head><label>4</label><figDesc><div><p><s coords="8,101.61,237.55,135.06,6.50;8,290.52,237.55,138.21,6.50">2 -2 -1.8 -1.6 -1.4 -1.2 -1 -0.8 -0.6 -02 -2 -1.8 -1.6 -1.4 -1.2 -1 -0.8 -0.6 -0.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="8,103.86,262.67,285.51,7.09"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s coords="8,103.86,262.67,285.51,7.09">Figure 2. SAXS model with different size distributions; A) ¼ 1.4, B) ¼ 10 nm.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="11,84.59,628.90,324.00,7.09;11,251.22,454.50,112.92,170.51"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s coords="11,84.59,628.90,324.00,7.09">Figure 3. TEM images of the four powders; A) SSEC78, B) P25, C) UV100, D) TiO2_5 nm.</s></p></div></figDesc><graphic coords="11,251.22,454.50,112.92,170.51" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4_2" coords="13,61.29,451.96,370.61,7.09;13,61.29,461.15,51.88,7.09"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s coords="13,61.29,451.96,370.61,7.09;13,61.29,461.15,51.88,7.09">Figure 4. Gaussian function with log-normal size distribution function fit; A) SSEC78, B) P25, C) UV100, D) TiO2_5 nm.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="14,95.02,450.66,303.19,7.09"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s coords="14,95.02,450.66,303.19,7.09">Figure 5. XRD line profile fit for A) SSEC78, B) P25, C) UV100, and D) TiO2_5 nm.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6" coords="15,196.21,333.81,100.77,7.09"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s coords="15,196.21,333.81,31.19,7.09">Figure 6.</s><s coords="15,235.39,333.81,61.59,7.09">SAXS fit for P25.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7" coords="16,190.49,349.75,112.21,7.09"><head>Figure 7 .</head><label>7</label><figDesc><div><p><s coords="16,190.49,349.75,112.21,7.09">Figure 7. SAXS fit for UV100.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8" coords="17,183.69,331.94,125.86,7.09"><head>Figure 8 .</head><label>8</label><figDesc><div><p><s coords="17,183.69,331.94,125.86,7.09">Figure 8. SAXS fit for TiO2_5 nm.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9" coords="18,193.55,337.39,106.07,7.09"><head>8 DFigure 9 .</head><label>89</label><figDesc><div><p><s coords="18,193.55,337.39,106.07,7.09">Figure 9. SAXS fit for SC78.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" coords="10,60.94,532.41,370.61,103.53"><head>Table 1 .</head><label>1</label><figDesc><div><p><s coords="10,157.15,532.41,214.32,7.09">[7,23]ed particle properties and preparation methods[7,23].</s></p></div></figDesc><table coords="10,60.94,551.35,370.61,68.44"><row><cell/><cell/><cell>Temperature</cell><cell>Pressure</cell><cell/><cell>Surface Area</cell></row><row><cell/><cell>Method</cell><cell>[ C]</cell><cell>[Bar]</cell><cell>Crystallinity</cell><cell>[m 2 /g]</cell></row><row><cell>Degussa P25</cell><cell>Chloride</cell><cell>$985</cell><cell cols="2">Ambient 71% anatase 27%</cell><cell>50</cell></row><row><cell cols="6">rutile 2% amorphous Hombikat UV100 Sulphate 800 to 1000 a Ambient 67% anatase 33% amorphous 360</cell></row><row><cell>TiO2_5 nm</cell><cell>Sol-Gel</cell><cell>&gt;250 a</cell><cell cols="3">Ambient 60% anatase 40% amorphous 230</cell></row><row><cell>SSEC78</cell><cell>SSEC</cell><cell>100</cell><cell>100</cell><cell cols="2">63% anatase 37% amorphous 236</cell></row></table><note><p><s coords="10,60.94,627.14,2.99,4.73;10,63.95,628.84,100.02,7.09">a After treatment-calcinations.</s></p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" coords="12,61.28,534.11,370.61,95.93"><head>Table 2 .</head><label>2</label><figDesc><div><p><s coords="12,129.54,534.11,270.20,7.09">Crystallite size and standard deviation from analytical and theoretical models.</s></p></div></figDesc><table coords="12,61.28,553.05,370.61,77.00"><row><cell/><cell cols="2">Pseudo-Voigt and</cell><cell/><cell/><cell/><cell/></row><row><cell/><cell cols="2">Scherrers formula</cell><cell/><cell>Gaussian with</cell><cell>Pseudo-Voigt with</cell><cell>Guinier</cell></row><row><cell/><cell/><cell/><cell/><cell>size distribution</cell><cell>size distribution</cell><cell>Model</cell></row><row><cell/><cell cols="3">X c [ 2] FWHM [ 2] D FWHM [nm]</cell><cell>D Gaus [nm]</cell><cell>D PV [nm]</cell><cell>D GM [nm]</cell></row><row><cell>SSEC78</cell><cell>25.35</cell><cell>1.528</cell><cell>5.33</cell><cell>5.0 AE 2.1</cell><cell>5.6 AE 0.6</cell><cell>7.3 AE 2.5</cell></row><row><cell>Degussa P25</cell><cell>25.32</cell><cell>0.419</cell><cell>19.43</cell><cell>18.0 AE 7.6</cell><cell>20.27 AE 1.9</cell><cell>27.0 AE 9.1</cell></row><row><cell cols="2">Hombikat UV100 25.30</cell><cell>0.986</cell><cell>8.26</cell><cell>6.2 AE 4.9</cell><cell>8.2 AE 2.8</cell><cell>3.3 AE 2.4</cell></row><row><cell>TiO2_5 nm</cell><cell>25.30</cell><cell>0.992</cell><cell>8.21</cell><cell>6.6 AE 4.7</cell><cell>7.7 AE 3.6</cell><cell>5.0 AE 3.2</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" coords="18,61.28,363.69,370.60,86.92"><head>Table 3 .</head><label>3</label><figDesc><div><p><s coords="18,136.40,363.69,256.51,7.09">Extracted particle properties by TEM, XRD (Guinier Model), and SAXS.</s></p></div></figDesc><table coords="18,61.28,382.63,370.60,67.98"><row><cell/><cell>TEM</cell><cell/><cell>XRD</cell><cell>SAXS</cell><cell/><cell/><cell/><cell/></row><row><cell/><cell>D [nm]</cell><cell>Shape</cell><cell>D GM [nm]</cell><cell>D HS [nm]</cell><cell>HS</cell><cell>C HS</cell><cell>D f</cell><cell>[nm]</cell></row><row><cell>SSEC78</cell><cell>$5</cell><cell>Spherical</cell><cell>7.3 AE 2.5</cell><cell>3.9 AE 2.1</cell><cell>0.31</cell><cell>2.8</cell><cell>3.48</cell><cell>5.6</cell></row><row><cell>Degussa P25</cell><cell>20-30</cell><cell>Spherical</cell><cell>27.0 AE 9.1</cell><cell>21.0 AE 8.2</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>-</cell></row><row><cell>Hombikat UV100</cell><cell>5-20</cell><cell>Spherical</cell><cell>3.3 AE 2.4</cell><cell>2.5 AE 0.9</cell><cell>0.11</cell><cell>1.3</cell><cell>2.83</cell><cell>15.7</cell></row><row><cell>TiO2_5 nm</cell><cell>$5</cell><cell>Spherical</cell><cell>5.0 AE 3.2</cell><cell>4.8 AE 1.5</cell><cell>0.22</cell><cell>1.0</cell><cell>2.55</cell><cell>25.7</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0" coords="7,210.73,60.61,59.79,7.98"><p><s coords="7,210.73,60.61,59.79,7.98">H. Jensen et al.</s></p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Needs and opportunities for nanoparticle characterization</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Saltiel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Giesche</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanopart. Res</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">325</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">C. Saltiel, H. Giesche. Needs and opportunities for nanoparticle characterization. J. Nanopart. Res., 2, 325 (2000).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Nanopowder characterization: challenges and future directions</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jillavenskatesa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Kelly</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanopart. Res</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">463</biblScope>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">A. Jillavenskatesa, J.F. Kelly. Nanopowder characterization: challenges and future directions. J. Nanopart. Res., 4, 463 (2002).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Waseda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Muramatsu</surname></persName>
+		</author>
+		<title level="m">Morphology Control of Materials and Nanoparticles -Advanced Materials Processing and Characterization</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Y. Waseda, A. Muramatsu. Morphology Control of Materials and Nanoparticles -Advanced Materials Processing and Characterization, Springer, New York (2004).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Bestimmung der Gro¨sse und der inneren Struktur von Kolloidteilchen mittels Ro¨ntgenstrahlen</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Scherrer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nachrichten von der Ko¨niglichen Gesellschaft der Wissenschaften zu Go¨ttingen Weidmannsche Buchhandlung</title>
+		<imprint>
+			<date type="published" when="1918">1918</date>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">P. Scherrer. Bestimmung der Gro¨sse und der inneren Struktur von Kolloidteilchen mittels Ro¨ntgenstrahlen, Nachrichten von der Ko¨niglichen Gesellschaft der Wissenschaften zu Go¨ttingen Weidmannsche Buchhandlung, Berlin (1918).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">X-Ray Diffraction</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Guinier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Crystals, Imperfect Crystals, and Amorphous Bodies</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Dover Publication</publisher>
+			<date type="published" when="1963">1963</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">A. Guinier. X-Ray Diffraction -In Crystals, Imperfect Crystals, and Amorphous Bodies, Dover Publication, New York (1963).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Scherrer after sixty years: a survey and some new results in the determination of crystallite size</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Langford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J C</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Cryst</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">102</biblScope>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J.I. Langford, A.J.C. Wilson. Scherrer after sixty years: a survey and some new results in the determination of crystallite size. J. Appl. Cryst., 11, 102 (1978).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Characterization of nanosized partly crystalline photocatalysts</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Joensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Jørgensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Søgaard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Nanopart. Res</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">519</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">H. Jensen, K.D. Joensen, J.E. Jørgensen, J.S. Pedersen, E.G. Søgaard. Characterization of nanosized partly crystalline photocatalysts. J. Nanopart. Res., 6, 519 (2004).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">MWP-fit: A program for multiple whole-profile fitting of diffraction peak profile by ab initio theoretical functions</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Riba´rik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Unga´r</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gubicza</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Cryst</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">669</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">G. Riba´rik, T. Unga´r, J. Gubicza. MWP-fit: A program for multiple whole-profile fitting of diffraction peak profile by ab initio theoretical functions. J. Appl. Cryst., 34, 669 (2001).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Rais de Debye-Scherrer et Re´partition des Dimensions de Bragg dans les Poudres Polycrystallines</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Bertaut</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Cryst</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">14</biblScope>
+			<date type="published" when="1950">1950</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">E.F. Bertaut. Rais de Debye-Scherrer et Re´partition des Dimensions de Bragg dans les Poudres Polycrystallines. Acta Cryst., 3, 14 (1950).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Effect of a crystallite size distribution on X-ray diffraction line profiles and whole-powder-pattern fitting</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Langford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lou¨r</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Scardi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Cryst</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page">964</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J.I. Langford, D. Lou¨r, P. Scardi. Effect of a crystallite size distribution on X-ray diffraction line profiles and whole-powder-pattern fitting. J. Appl. Cryst., 33, 964 (2000).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Particle-size, size distribution and dislocation in nanocrystalline tungsten-carbide</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Unga´r</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Borbe´ly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Goren-Muginstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Berger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Rosen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nanostr. Mat</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">103</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">T. Unga´r, A. Borbe´ly, G.R. Goren-Muginstein, S. Berger, A.R. Rosen. Particle-size, size distribution and dislocation in nanocrystalline tungsten-carbide. Nanostr. Mat., 11, 103 (1999).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The effect of heat-treatment on the grain-size of nanodipserse plasmathermal silicon nitride powder</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gubicza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sze´pvo¨lgyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Mohai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Riba´rik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Unga´r</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">3711</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J. Gubicza, J. Sze´pvo¨lgyi, I. Mohai, G. Riba´rik, T. Unga´r. The effect of heat-treatment on the grain-size of nanodipserse plasmathermal silicon nitride powder. J. Mater. Sci., 35, 3711 (2000).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Small-angle scattering from prercipitates: Analysis by use of a polydisperse hard-sphere model</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Pedersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">657</biblScope>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J.S. Pedersen. Small-angle scattering from prercipitates: Analysis by use of a polydisperse hard-sphere model. Phys. Rev. B, 47, 657 (1993).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Analysis of small-angle scattering data from colloids and polymer solutions: modeling and least-squares fitting</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Pedersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Colloid and Interface Science</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page">171</biblScope>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J.S. Pedersen. Analysis of small-angle scattering data from colloids and polymer solutions: modeling and least-squares fitting. Advances in Colloid and Interface Science, 70, 171 (1997).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Analysis of small-angle x-ray scattering data for model polyurethane ionomers: evaluation of hard-sphere models</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Visser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Cooper</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page">2584</biblScope>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">S.A. Visser, S.L. Cooper. Analysis of small-angle x-ray scattering data for model polyurethane ionomers: evaluation of hard-sphere models. Macromolecules, 24, 2584 (1991).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Particle formation during anatase precipitation of seeded titanyl sulfate solution</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sathyamoorthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Moggridge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hounslow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Crystal Growth &amp; Design</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">123</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">S. Sathyamoorthy, G.D. Moggridge, J. Hounslow. Particle formation during anatase precipitation of seeded titanyl sulfate solution. Crystal Growth &amp; Design, 1, 123 (2001).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Walpole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Myers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Probability and Statistics for Engineers and Scientists</title>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>Prentice Hall</publisher>
+			<pubPlace>New Jersey</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">R.E. Walpole, R.H. Myers, S.L. Myers. Probability and Statistics for Engineers and Scientists, Prentice Hall, New Jersey (1998).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b17">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Beaucage</surname></persName>
+		</author>
+		<ptr target="http://www.eng.uc.edu/$gbeaucagResearchGroup.html"/>
+		<title level="m">Small Angle X-ray Scattering (SAXS)</title>
+		<imprint>
+			<date type="published" when="2005-03">March. 2005</date>
+			<biblScope unit="volume">8</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">G. Beaucage. Small Angle X-ray Scattering (SAXS), http://www.eng.uc.edu/$gbeaucag ResearchGroup.html, March 8 (2005).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Modelling of small-angle scattering data from colloids and polymer systems</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Pedersen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">X-Rays and Light</title>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Lidner</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><surname>Zemb</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Oxford</addrLine></address></meeting>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page" from="391" to="420"/>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J.S. Pedersen, Modelling of small-angle scattering data from colloids and polymer systems, In X-Rays and Light, edited by P. Lidner and T. Zemb, Elsevier, Oxford (2002), pp. 391-420.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Multi length scale analysis of the microstructure on sticky sphere dispersions during shear flow</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hoekstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vermant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">11017</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">H. Hoekstra, J. Mewis, T. Narayanan, J. Vermant. Multi length scale analysis of the microstructure on sticky sphere dispersions during shear flow. Langmuir, 21, 11017 (2005).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Small-angle scattering by fractal systems</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Teixeira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Cryst</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">781</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J. Teixeira. Small-angle scattering by fractal systems. J. Appl. Cryst, 21, 781 (1988).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Low Temperature Synthesis of Metal Oxides by a Supercritical Seed Enhanced Crystallization (SSEC) Process</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Joensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Iversen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Søgaard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ind. Eng. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="3348" to="3353"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">H. Jensen, K.D. Joensen, S.B. Iversen, E.G. Søgaard. Low Temperature Synthesis of Metal Oxides by a Supercritical Seed Enhanced Crystallization (SSEC) Process, Ind. Eng. Chem. Res., 45, 3348-3353 (2006).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">XPS and FTIR investigation of the surface properties of different prepared titania nano-powders</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Soloviev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Søgaard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Surface Science</title>
+		<imprint>
+			<biblScope unit="volume">246</biblScope>
+			<biblScope unit="page">239</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">H. Jensen, A. Soloviev, Z. Lie, E.G. Søgaard. XPS and FTIR investigation of the surface properties of different prepared titania nano-powders. Applied Surface Science, 246, 239 (2005).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b23">
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pajak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bierska-Piech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mrowiec-Bialon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Jarzebski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Diduszko</surname></persName>
+		</author>
+		<title level="m">SAXS from particle and disordered systems. Fibres and Textiles in Eastern Europe</title>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">69</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">L. Pajak, B. Bierska-Piech, J. Mrowiec-Bialon, A.B. Jarzebski, R. Diduszko. SAXS from particle and disordered systems. Fibres and Textiles in Eastern Europe, 13, 69 (2005).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Blanco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Esquivias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Litran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pinero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ramirez-Del-Solar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rosa-Fox</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sonogels and derived materials. Appl. Organometal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">399</biblScope>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">E. Blanco, L. Esquivias, R. Litran, M. Pinero, M. Ramirez-del-Solar, N. Rosa-Fox. Sonogels and derived materials. Appl. Organometal. Chem., 13, 399 (1999).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Comparative study using small-angle x-ray scattering and nitrogen adsorption in the characterization of silica xerogels and aerogels</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Vollet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Donatti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Ruiz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page">64202</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">D.R. Vollet, D.A. Donatti, A.I. Ruiz. Comparative study using small-angle x-ray scattering and nitrogen adsorption in the characterization of silica xerogels and aerogels. Phys. Rev. B, 69, 064202 (2004).</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Structure development in aerogelprocessed nanocrystalline alkaline earth oxides as revealed by SANS</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Hackley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">K</forename><surname>Stoimenov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Sung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Klabunde</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Cryst</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page">619</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">V.A. Hackley, P.K. Stoimenov, D.L. Ho, L.P. Sung, K.J. Klabunde. Structure development in aerogel- processed nanocrystalline alkaline earth oxides as revealed by SANS. J. Appl. Cryst., 38, 619 (2005).</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

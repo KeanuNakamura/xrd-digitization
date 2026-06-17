@@ -1,0 +1,14 @@
+[
+  {
+    "figure": 1,
+    "figure_path": "grobid_output/scraped_pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0/figures/fig_1.png",
+    "caption": "Fig. 1 . Fig. 1. Peaks obtained from XRD for La0.7Pb0.3MnO3 sample",
+    "text": "Fig. 1 . Fig. 1. Peaks obtained from XRD for La0.7Pb0.3MnO3 sample Figure 1 illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature. where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm."
+  },
+  {
+    "figure": 2,
+    "figure_path": "grobid_output/scraped_pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0/figures/fig_2.png",
+    "caption": "Fig. 2 . Fig. 2. The Rietveld refinement for La0.7Pb0.3MnO3 sample. The black line indicates the observed data, the solid red line indicates calculated patterns, the blue line indicates the differences between observed and calculated data",
+    "text": "Fig. 2 . Fig. 2. The Rietveld refinement for La0.7Pb0.3MnO3 sample. The black line indicates the observed data, the solid red line indicates calculated patterns, the blue line indicates the differences between observed and calculated data XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure 2 . where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°). The obtained value of crystalline size D for La0.7Pb0.3MnO3 was 39 nm."
+  }
+]

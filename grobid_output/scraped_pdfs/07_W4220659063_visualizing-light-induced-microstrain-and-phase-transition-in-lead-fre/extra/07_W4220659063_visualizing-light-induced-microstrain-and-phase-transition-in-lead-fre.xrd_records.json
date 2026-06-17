@@ -1,0 +1,322 @@
+[
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/07_W4220659063_visualizing-light-induced-microstrain-and-phase-transition-in-lead-fre.pdf",
+      "source_sha256": "87263f688f042ff05fbae5fb55e864dcd52518405149f43c512d726d17765128",
+      "title": "Visualizing Light-Induced Microstrain and Phase Transition in Lead-Free Perovskites using Time-Resolved X-Ray Diffraction",
+      "doi": null,
+      "journal": null,
+      "publication_date": null
+    },
+    "figure": {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Figure 1 . Figure 1. (a) The XRD patterns of the Cs3Bi2Br9 NC suspension before (laser off) and 150 ps after (laser on) the photoexcitation, which are compared to the standard pattern of the Cs3Bi2Br9 (ICSD PDF# 70-0493). (b) Crystal structure of Cs3Bi2Br9 with trigonal P-3m1 space group, viewed from the directions parallel and perpendicular to the [Bi2Br9] 3-layer. (c) Difference of XRD patterns at time delay of 150 ps with pulse energy density of 0.6 mJ/cm 2 (∆I = I(laser on)-I0(laser off)). (d) The comparison of (0 2 2) diffraction peak before and 150 ps after laser photoexcitation.",
+      "graphic_targets": [],
+      "coords": "2,79.58,695.71,452.95,8.10;2,79.58,706.03,452.85,8.10;2,79.58,715.40,453.05,9.05;2,79.58,725.72,452.92,9.05;2,79.58,736.99,331.58,8.10;2,117.10,490.90,374.40,192.15",
+      "graphic_coords": "2,117.10,490.90,374.40,192.15",
+      "figure_type": null,
+      "xrd_score": 13.8,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/07_W4220659063_visualizing-light-induced-microstrain-and-phase-transition-in-lead-fre/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_3331aea712c8",
+        "paragraph_d8f9bbbec0cb"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_a9bab86839af",
+        "paragraph_e83d1079cfa0",
+        "paragraph_8e8c4183e267",
+        "paragraph_9b830ef2a916",
+        "paragraph_3331aea712c8",
+        "paragraph_d8f9bbbec0cb",
+        "paragraph_9dc3cddd547b",
+        "paragraph_8d24f99ab819",
+        "paragraph_c01d30b63c76",
+        "paragraph_fa3f4540f0c6"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_3331aea712c8",
+        "text": "Cs3Bi2Br9 nanocrystals (NCs) were synthesized by a modified ligand-assisted precipitation method, 25 and then dispersed in toluene. Figure S1a shows the transmission electron microscopy (TEM) images of the as-synthesized NCs, The Cs3Bi2Br9 nanoparticles are hexagonal plates NCs with average lateral diameter of 80 nm (Figure S1b ). The thickness of the nano plates is estimated to be ~20 nm from vertically oriented flakes in the TEM images. TR-XRD experiments were performed at the Advanced Photon Source 11-ID-D of the Argonne National Laboratory. A 400 nm, a 110 fs (FWHM) laser \"pump\" pulse was used to create band-gap excitation of the NCs, followed by 79 ps (FWHM) X-ray \"probe\" pulses at certain time delays to monitor the structural changes via collecting the X-ray scattering signals (Figure S3 ). The 400 nm laser is selected, which is just over the exciton peak (~ 432 nm, Figure S4 ), to minimize the undesired thermal and hot carrier effect. The details of the experimental setup can be found in the method section and Supporting Information (SI). Figure 1a shows the static XRD pattern of the Cs3Bi2Br9 NC liquid suspension with the scattering contribution from the pure solvent been subtracted. Cs3Bi2Br9 (space group 3 ̅ 1) is a vacancy-ordered 2D perovskite, formed by corrugated layers of corner-sharing BiBr6 octahedra (Figure 1b ). The position and intensity of Cs3Bi2Br9 NCs diffraction peaks match well with those from the calculated XRD pattern of the bulk single crystal analog (ICSD PDF # 70-0493, Figure 1a ). This indicates that NCs retain good crystallinity and purity. The strongest diffraction at Q (scattering vector) of 2.22 Å -1 comes from the (022) crystal plane (Figure 1b ).",
+        "section_path": [
+          "RESULT AND DISCUSSIONR TR-XRD patterns under moderate laser excitation power."
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "1",
+          "3",
+          "4"
+        ],
+        "xrd_score": 11.8,
+        "peak_positions": [],
+        "miller_indices": [
+          "(022)"
+        ],
+        "relevant_text": "Figure S1a shows the transmission electron microscopy (TEM) images of the as-synthesized NCs, The Cs3Bi2Br9 nanoparticles are hexagonal plates NCs with average lateral diameter of 80 nm (Figure S1b ). Figure 1a shows the static XRD pattern of the Cs3Bi2Br9 NC liquid suspension with the scattering contribution from the pure solvent been subtracted. Cs3Bi2Br9 (space group 3 ̅ 1) is a vacancy-ordered 2D perovskite, formed by corrugated layers of corner-sharing BiBr6 octahedra (Figure 1b ). The position and intensity of Cs3Bi2Br9 NCs diffraction peaks match well with those from the calculated XRD pattern of the bulk single crystal analog (ICSD PDF # 70-0493, Figure 1a ). The strongest diffraction at Q (scattering vector) of 2.22 Å -1 comes from the (022) crystal plane (Figure 1b ).",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_d8f9bbbec0cb",
+        "text": "Figure 1c shows a typical difference spectrum between the XRD data before and 150 ps after laser excitation with a flux of 0.6 mJ/cm 2 . All diffraction peaks show similar behavior upon photoexcitation, with asymmetric intensity reduction at higher Q range and increased intensity in the lower Q range. When zooming into the strongest (022) diffraction peak (Figure 1d ), we can clearly observe its shift towards smaller Q and broadening after laser excitation. The data analysis based on PVII peak function (details in SI) reveals a 16% reduction in the peak height, and 14% increase in the peak width.",
+        "section_path": [
+          "RESULT AND DISCUSSIONR TR-XRD patterns under moderate laser excitation power."
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "1"
+        ],
+        "xrd_score": 7.0,
+        "peak_positions": [],
+        "miller_indices": [
+          "(022)"
+        ],
+        "relevant_text": "Figure 1c shows a typical difference spectrum between the XRD data before and 150 ps after laser excitation with a flux of 0.6 mJ/cm 2 . When zooming into the strongest (022) diffraction peak (Figure 1d ), we can clearly observe its shift towards smaller Q and broadening after laser excitation.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Figure S1a shows the transmission electron microscopy (TEM) images of the as-synthesized NCs, The Cs3Bi2Br9 nanoparticles are hexagonal plates NCs with average lateral diameter of 80 nm (Figure S1b ). Figure 1a shows the static XRD pattern of the Cs3Bi2Br9 NC liquid suspension with the scattering contribution from the pure solvent been subtracted. Cs3Bi2Br9 (space group 3 ̅ 1) is a vacancy-ordered 2D perovskite, formed by corrugated layers of corner-sharing BiBr6 octahedra (Figure 1b ). The position and intensity of Cs3Bi2Br9 NCs diffraction peaks match well with those from the calculated XRD pattern of the bulk single crystal analog (ICSD PDF # 70-0493, Figure 1a ). The strongest diffraction at Q (scattering vector) of 2.22 Å -1 comes from the (022) crystal plane (Figure 1b ).\n\nFigure 1c shows a typical difference spectrum between the XRD data before and 150 ps after laser excitation with a flux of 0.6 mJ/cm 2 . When zooming into the strongest (022) diffraction peak (Figure 1d ), we can clearly observe its shift towards smaller Q and broadening after laser excitation.\n\nPrevious studies have shown that when semiconducting thin film or metal nanoparticle is excited by photon with energy much larger than its band gap (generating the so-called 'hot carriers'), the diffraction peak intensity changes due to the laser heating effect can be well described using the Debye-Waller (DW) model. 22, [26] [27] ] Here, we apply this model to check whether the observed peak broadening and intensity attenuation after photoexcitation are caused by the similar effect: (, ) ∝ exp (-",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": [
+        "(022)"
+      ]
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/07_W4220659063_visualizing-light-induced-microstrain-and-phase-transition-in-lead-fre.pdf",
+      "source_sha256": "87263f688f042ff05fbae5fb55e864dcd52518405149f43c512d726d17765128",
+      "title": "Visualizing Light-Induced Microstrain and Phase Transition in Lead-Free Perovskites using Time-Resolved X-Ray Diffraction",
+      "doi": null,
+      "journal": null,
+      "publication_date": null
+    },
+    "figure": {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Figure 3 . Figure 3. Time resolved analysis of diffraction data under 400 nm excitation at 0.6 mJ/cm 2 . (a) Differential diffraction pattern at time delays from t = 150 ps to 4 μs. (b) Zoom in of the differential data at (0 2 2) plane (Green rectangle in Figure 1a). (c) Time-dependent evolution for the changes in intensity and FWHM of (0 2 2) peak (top panel) as well as microstrain (bottom panel). (d) Timedependent evolution of lattice expansion examined from the lattice constants a, c and the cell volume V. TR-XRD under elevated laser excitation fluence.FigureS7shows the fluence dependence of the differential TR-XRD signal 300 ps after photoexcitation. By increasing the",
+      "graphic_targets": [],
+      "coords": "4,54.72,604.75,239.92,8.10;4,54.72,614.12,239.68,9.05;4,54.72,625.30,239.73,8.19;4,54.72,635.71,239.76,8.10;4,54.72,646.03,239.69,8.10;4,54.72,656.47,239.69,8.10;4,54.72,666.79,239.68,8.10;4,54.72,677.11,131.75,8.10;4,54.72,693.58,196.80,8.53;4,63.72,707.50,230.56,8.53;4,54.72,718.42,239.69,8.53;4,54.70,448.33,239.69,143.40",
+      "graphic_coords": "4,54.70,448.33,239.69,143.40",
+      "figure_type": null,
+      "xrd_score": 17.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/07_W4220659063_visualizing-light-induced-microstrain-and-phase-transition-in-lead-fre/figures/fig_3.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_3331aea712c8",
+        "paragraph_3d52950e6440",
+        "paragraph_af3251b8eaa0"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_a9bab86839af",
+        "paragraph_e83d1079cfa0",
+        "paragraph_8e8c4183e267",
+        "paragraph_9b830ef2a916",
+        "paragraph_3331aea712c8",
+        "paragraph_d8f9bbbec0cb",
+        "paragraph_9dc3cddd547b",
+        "paragraph_8d24f99ab819",
+        "paragraph_c01d30b63c76",
+        "paragraph_fa3f4540f0c6",
+        "paragraph_3d52950e6440",
+        "paragraph_af3251b8eaa0",
+        "paragraph_626942846bcf",
+        "paragraph_de362df62b1c",
+        "paragraph_3a9da5b3360a"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_3331aea712c8",
+        "text": "Cs3Bi2Br9 nanocrystals (NCs) were synthesized by a modified ligand-assisted precipitation method, 25 and then dispersed in toluene. Figure S1a shows the transmission electron microscopy (TEM) images of the as-synthesized NCs, The Cs3Bi2Br9 nanoparticles are hexagonal plates NCs with average lateral diameter of 80 nm (Figure S1b ). The thickness of the nano plates is estimated to be ~20 nm from vertically oriented flakes in the TEM images. TR-XRD experiments were performed at the Advanced Photon Source 11-ID-D of the Argonne National Laboratory. A 400 nm, a 110 fs (FWHM) laser \"pump\" pulse was used to create band-gap excitation of the NCs, followed by 79 ps (FWHM) X-ray \"probe\" pulses at certain time delays to monitor the structural changes via collecting the X-ray scattering signals (Figure S3 ). The 400 nm laser is selected, which is just over the exciton peak (~ 432 nm, Figure S4 ), to minimize the undesired thermal and hot carrier effect. The details of the experimental setup can be found in the method section and Supporting Information (SI). Figure 1a shows the static XRD pattern of the Cs3Bi2Br9 NC liquid suspension with the scattering contribution from the pure solvent been subtracted. Cs3Bi2Br9 (space group 3 ̅ 1) is a vacancy-ordered 2D perovskite, formed by corrugated layers of corner-sharing BiBr6 octahedra (Figure 1b ). The position and intensity of Cs3Bi2Br9 NCs diffraction peaks match well with those from the calculated XRD pattern of the bulk single crystal analog (ICSD PDF # 70-0493, Figure 1a ). This indicates that NCs retain good crystallinity and purity. The strongest diffraction at Q (scattering vector) of 2.22 Å -1 comes from the (022) crystal plane (Figure 1b ).",
+        "section_path": [
+          "RESULT AND DISCUSSIONR TR-XRD patterns under moderate laser excitation power."
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "1",
+          "3",
+          "4"
+        ],
+        "xrd_score": 11.8,
+        "peak_positions": [],
+        "miller_indices": [
+          "(022)"
+        ],
+        "relevant_text": "A 400 nm, a 110 fs (FWHM) laser \"pump\" pulse was used to create band-gap excitation of the NCs, followed by 79 ps (FWHM) X-ray \"probe\" pulses at certain time delays to monitor the structural changes via collecting the X-ray scattering signals (Figure S3 ).",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_3d52950e6440",
+        "text": "Figure 3a shows the difference between the diffraction patterns before and after laser excitation (0.6 mJ/cm 2 ) at various delays from 150 ps to 4 µs. Figure 3b is a zoomed-in view of the strongest (022) diffraction peak. Recovery kinetics of the peak height and peak width are similar (Figure 3c top panel), revealing two exponential time components: τ1 = 1.3 ± 0.2 ns (72%) and τ2 = 9 ± 4 ns (28 %) (See the fitting details in the SI). The kinetic trace of the photo-induced microstrain (Figure 3c , bottom panel) can be fitted well with a single exponential decay of τ = 1.5 ± 0.3 ns, which is consistent with the dominant fast lifetime component (1.3 ns) in peak height and peak width change kinetics. However, the longer one (9 ns) is missing in the microstrain kinetics. This might be because the microstrain extracted based on Eq. ( 2 ) has larger uncertainties than that can be resolved from width or height of the strongest peak. The contribution of minor lifetime component is too small to be detected in microstrain kinetics. Importantly, the lifetimes of ~ 1 ns and ~ 9 ns are comparable to the lifetime in the reported PL and OTA measurements of Cs3Bi2Br9, 25, 40 suggesting that these structural dynamics component originates from photogenerated excitons.",
+        "section_path": [
+          "TR-XRD kinetics under moderate laser excitation fluence."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "3"
+        ],
+        "xrd_score": 4.4,
+        "peak_positions": [],
+        "miller_indices": [
+          "(022)"
+        ],
+        "relevant_text": "Figure 3a shows the difference between the diffraction patterns before and after laser excitation (0.6 mJ/cm 2 ) at various delays from 150 ps to 4 µs. Figure 3b is a zoomed-in view of the strongest (022) diffraction peak. Recovery kinetics of the peak height and peak width are similar (Figure 3c top panel), revealing two exponential time components: τ1 = 1.3 ± 0.2 ns (72%) and τ2 = 9 ± 4 ns (28 %) (See the fitting details in the SI). The kinetic trace of the photo-induced microstrain (Figure 3c , bottom panel) can be fitted well with a single exponential decay of τ = 1.5 ± 0.3 ns, which is consistent with the dominant fast lifetime component (1.3 ns) in peak height and peak width change kinetics.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_af3251b8eaa0",
+        "text": "In Figure 3a and 3b, the negative shift of the diffraction peak position (ΔQ) indicates a lattice expansion taking in place. The kinetics of the Q shift are displayed in Figure 3d . To further understand the photo-induced lattice expansion, we also studied the evolutions of a/a, c/c and V/V, which are the relative changes of unit cell parameters (Figure 3d ). Here, a, c and V were generated from the Le Bail refinement using space group P-3m (164) and PVII peak function. The kinetics of a/a, c/c and V/V can be globally fitted using the three-exponential decay function, in which the two short lifetime components (τ1 = 1.3 ns and τ2 = 9 ns) are adapted from the kinetics fitting of peak intensity and width changes, plus a long lifetime components 202 ± 32 ns (Figure 3d ). The common lifetime components indicate the NC has homogeneous lattice expansion. The photo-generated electrons in the conduction band can populate antibonding states, whereas the holes in the valence band vacate the bonding states, thus, leading to weakening and elongation of the Bi-Br bonds. 29 It should be pointed out that the photo-induced unit cell expansion here is distinct from the thermal effect. The NC is surrounded by solvent kept at 18°C (experimental detail in SI). Assuming all the absorbed photon energy converts to heat in the NCs, this would only cause an average 22°C rise in temperature and ~ 0.22% increase in cell volume at most, much smaller than the 0.43% cell volume expansion we observed (calculation detailed in SI). In addition, the change of diffraction peak does not follow the heat-induced model of Debye-Waller dependence as discussed previously. Therefore, the observed lattice kinetics does not come solely from thermal expansion, but light-induced lattice expansion and microstrain. The small portion of longlived state ~200 ns might originate from the non-radiative recombination of photoinduced charge carriers localized at some trapping states; The lack of this long-lived state in peak width and peak height also indicates that it is not a thermal state. Figure S7 shows the fluence dependence of the differential TR-XRD signal 300 ps after photoexcitation. By increasing the laser power, the increasing negative peak on the right side indicates enhanced crystal distortion and loss of peak intensity. Under the low fluence of 0.6 mJ/cm 2 , the sharp positive peak comes from the lattice expansion and shift of diffraction peak towards lower Q. The left side of the positive peak broadened significantly under higher fluence (≥ 1.4 mJ/cm 2 ), suggesting the formation of a disordered phase with larger lattice parameters. The corresponding (022) peak could be fitted with a main peak and a broader side peak at lower Q. It is worth noting that with the increasing of excitation fluence from 1.4 to 5.1 mJ/cm 2 , the position of the light-induced broad side peak remains constant (Figure 4a ), suggesting that a metastable state with larger lattice parameters might be produced. Similar analysis was applied to the full range, as shown in Figure 4b and 4c, and a set of side peaks with broader FWHM emerge clearly on the left side of the original crystalline phase. The integrated area change of the main peak and side peak around 2.21 Å -1 are shown in Figure 4d . Because the decay of the disordered phase correlates with the recovering of the originally phase, the integration area changes of both peaks are fitted with the same double-exponential decay function, revealing two lifetime components 0.25 ± 0.05 ns and 3.2 ± 0.7 ns, respectively. Structural modification on crystallinity state by ultrafast pulse laser has been reported before. A metastable transient phase of 1T-TaS2 is triggered by infrared laser with optical doping effect. 41 A study on photoexcited VO2 has attributed the formation of ultrafast disordered phase by transiently modifying the interatomic potential and the atomic positions. 42 We examined the microstrain condition in the main phase by the Halder-Wagner plot, the same approach used for the analysis of the 0.6 mJ/cm 2 excitation data (Figure S8 ). Despite the two-fold increase in the excitation fluence, the photo-induced microstrain in the main phase remained almost unchanged. The microstrain shows saturation at relatively low laser fluence, while the secondary phase keeps growing with increasing fluence. The formation of the secondary disordered phase could be the channel that releases excessive microstrain from the main phase. (red line) with broader FWHM emerges on the left side of the original crystalline phase (blue line). (d) Time-dependent integrated area changes for (0 2 2) main peak and its side peak.",
+        "section_path": [
+          "TR-XRD kinetics under moderate laser excitation fluence."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "3",
+          "7",
+          "4",
+          "8"
+        ],
+        "xrd_score": 12.2,
+        "peak_positions": [
+          18.0,
+          22.0
+        ],
+        "miller_indices": [
+          "(164)",
+          "(022)",
+          "(0 2 2)"
+        ],
+        "relevant_text": "In Figure 3a and 3b, the negative shift of the diffraction peak position (ΔQ) indicates a lattice expansion taking in place. The kinetics of the Q shift are displayed in Figure 3d . To further understand the photo-induced lattice expansion, we also studied the evolutions of a/a, c/c and V/V, which are the relative changes of unit cell parameters (Figure 3d ). The kinetics of a/a, c/c and V/V can be globally fitted using the three-exponential decay function, in which the two short lifetime components (τ1 = 1.3 ns and τ2 = 9 ns) are adapted from the kinetics fitting of peak intensity and width changes, plus a long lifetime components 202 ± 32 ns (Figure 3d ).",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "A 400 nm, a 110 fs (FWHM) laser \"pump\" pulse was used to create band-gap excitation of the NCs, followed by 79 ps (FWHM) X-ray \"probe\" pulses at certain time delays to monitor the structural changes via collecting the X-ray scattering signals (Figure S3 ).\n\nPrevious studies have shown that when semiconducting thin film or metal nanoparticle is excited by photon with energy much larger than its band gap (generating the so-called 'hot carriers'), the diffraction peak intensity changes due to the laser heating effect can be well described using the Debye-Waller (DW) model. 22, [26] [27] ] Here, we apply this model to check whether the observed peak broadening and intensity attenuation after photoexcitation are caused by the similar effect: (, ) ∝ exp (-\n\nFigure 3a shows the difference between the diffraction patterns before and after laser excitation (0.6 mJ/cm 2 ) at various delays from 150 ps to 4 µs. Figure 3b is a zoomed-in view of the strongest (022) diffraction peak. Recovery kinetics of the peak height and peak width are similar (Figure 3c top panel), revealing two exponential time components: τ1 = 1.3 ± 0.2 ns (72%) and τ2 = 9 ± 4 ns (28 %) (See the fitting details in the SI). The kinetic trace of the photo-induced microstrain (Figure 3c , bottom panel) can be fitted well with a single exponential decay of τ = 1.5 ± 0.3 ns, which is consistent with the dominant fast lifetime component (1.3 ns) in peak height and peak width change kinetics.\n\nIn Figure 3a and 3b, the negative shift of the diffraction peak position (ΔQ) indicates a lattice expansion taking in place. The kinetics of the Q shift are displayed in Figure 3d . To further understand the photo-induced lattice expansion, we also studied the evolutions of a/a, c/c and V/V, which are the relative changes of unit cell parameters (Figure 3d ). The kinetics of a/a, c/c and V/V can be globally fitted using the three-exponential decay function, in which the two short lifetime components (τ1 = 1.3 ns and τ2 = 9 ns) are adapted from the kinetics fitting of peak intensity and width changes, plus a long lifetime components 202 ± 32 ns (Figure 3d ).\n\nThe structural dynamics of the halide perovskite studied here is intrinsically correlated with the material's properties. The microstrain arises from inhomogeneous variations of crystal lattice that will increase charge carrier scattering, which is directly associated with non-radiative recombination loss. 47 hen the secondary disordered phase emerges under higher excitation fluence, the phase boundary will further increase the carrier scattering and non-radiative loss. Therefore, learning how to reduce and even eliminate the microstrain and secondary phase under light illumination through the design of perovskites is critical for advancing their optoelectronic properties.",
+    "extracted_features": {
+      "peak_positions_degrees": [
+        18.0,
+        22.0
+      ],
+      "miller_indices": [
+        "(0 2 2)",
+        "(022)",
+        "(164)"
+      ]
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/07_W4220659063_visualizing-light-induced-microstrain-and-phase-transition-in-lead-fre.pdf",
+      "source_sha256": "87263f688f042ff05fbae5fb55e864dcd52518405149f43c512d726d17765128",
+      "title": "Visualizing Light-Induced Microstrain and Phase Transition in Lead-Free Perovskites using Time-Resolved X-Ray Diffraction",
+      "doi": null,
+      "journal": null,
+      "publication_date": null
+    },
+    "figure": {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Figure 4 . Figure 4. Laser power dependence analysis of diffraction peaks at the 150 ps after photo excitation. (a) fitting of (0 2 2) peak and the emerged side peak representing the 2 nd disordered phase under different laser power. With increasing fluence, the position of the side peak remains constant. (b) Red shadow for the 2 nd disordered phase in the differential diffraction spectra. (c) A set of side peaks",
+      "graphic_targets": [],
+      "coords": "4,317.57,670.51,239.79,8.10;4,317.57,680.83,239.81,8.10;4,317.57,690.20,239.79,9.05;4,317.57,701.47,239.72,8.10;4,317.57,710.96,239.84,9.05;4,317.57,722.23,239.78,8.10;4,317.50,454.11,239.70,203.35",
+      "graphic_coords": "4,317.50,454.11,239.70,203.35",
+      "figure_type": null,
+      "xrd_score": 6.7,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_3331aea712c8",
+        "paragraph_af3251b8eaa0"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_a9bab86839af",
+        "paragraph_e83d1079cfa0",
+        "paragraph_8e8c4183e267",
+        "paragraph_9b830ef2a916",
+        "paragraph_3331aea712c8",
+        "paragraph_d8f9bbbec0cb",
+        "paragraph_9dc3cddd547b",
+        "paragraph_8d24f99ab819",
+        "paragraph_c01d30b63c76",
+        "paragraph_fa3f4540f0c6",
+        "paragraph_3d52950e6440",
+        "paragraph_af3251b8eaa0",
+        "paragraph_626942846bcf",
+        "paragraph_de362df62b1c",
+        "paragraph_3a9da5b3360a"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_3331aea712c8",
+        "text": "Cs3Bi2Br9 nanocrystals (NCs) were synthesized by a modified ligand-assisted precipitation method, 25 and then dispersed in toluene. Figure S1a shows the transmission electron microscopy (TEM) images of the as-synthesized NCs, The Cs3Bi2Br9 nanoparticles are hexagonal plates NCs with average lateral diameter of 80 nm (Figure S1b ). The thickness of the nano plates is estimated to be ~20 nm from vertically oriented flakes in the TEM images. TR-XRD experiments were performed at the Advanced Photon Source 11-ID-D of the Argonne National Laboratory. A 400 nm, a 110 fs (FWHM) laser \"pump\" pulse was used to create band-gap excitation of the NCs, followed by 79 ps (FWHM) X-ray \"probe\" pulses at certain time delays to monitor the structural changes via collecting the X-ray scattering signals (Figure S3 ). The 400 nm laser is selected, which is just over the exciton peak (~ 432 nm, Figure S4 ), to minimize the undesired thermal and hot carrier effect. The details of the experimental setup can be found in the method section and Supporting Information (SI). Figure 1a shows the static XRD pattern of the Cs3Bi2Br9 NC liquid suspension with the scattering contribution from the pure solvent been subtracted. Cs3Bi2Br9 (space group 3 ̅ 1) is a vacancy-ordered 2D perovskite, formed by corrugated layers of corner-sharing BiBr6 octahedra (Figure 1b ). The position and intensity of Cs3Bi2Br9 NCs diffraction peaks match well with those from the calculated XRD pattern of the bulk single crystal analog (ICSD PDF # 70-0493, Figure 1a ). This indicates that NCs retain good crystallinity and purity. The strongest diffraction at Q (scattering vector) of 2.22 Å -1 comes from the (022) crystal plane (Figure 1b ).",
+        "section_path": [
+          "RESULT AND DISCUSSIONR TR-XRD patterns under moderate laser excitation power."
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "1",
+          "3",
+          "4"
+        ],
+        "xrd_score": 11.8,
+        "peak_positions": [],
+        "miller_indices": [
+          "(022)"
+        ],
+        "relevant_text": "The 400 nm laser is selected, which is just over the exciton peak (~ 432 nm, Figure S4 ), to minimize the undesired thermal and hot carrier effect.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_af3251b8eaa0",
+        "text": "In Figure 3a and 3b, the negative shift of the diffraction peak position (ΔQ) indicates a lattice expansion taking in place. The kinetics of the Q shift are displayed in Figure 3d . To further understand the photo-induced lattice expansion, we also studied the evolutions of a/a, c/c and V/V, which are the relative changes of unit cell parameters (Figure 3d ). Here, a, c and V were generated from the Le Bail refinement using space group P-3m (164) and PVII peak function. The kinetics of a/a, c/c and V/V can be globally fitted using the three-exponential decay function, in which the two short lifetime components (τ1 = 1.3 ns and τ2 = 9 ns) are adapted from the kinetics fitting of peak intensity and width changes, plus a long lifetime components 202 ± 32 ns (Figure 3d ). The common lifetime components indicate the NC has homogeneous lattice expansion. The photo-generated electrons in the conduction band can populate antibonding states, whereas the holes in the valence band vacate the bonding states, thus, leading to weakening and elongation of the Bi-Br bonds. 29 It should be pointed out that the photo-induced unit cell expansion here is distinct from the thermal effect. The NC is surrounded by solvent kept at 18°C (experimental detail in SI). Assuming all the absorbed photon energy converts to heat in the NCs, this would only cause an average 22°C rise in temperature and ~ 0.22% increase in cell volume at most, much smaller than the 0.43% cell volume expansion we observed (calculation detailed in SI). In addition, the change of diffraction peak does not follow the heat-induced model of Debye-Waller dependence as discussed previously. Therefore, the observed lattice kinetics does not come solely from thermal expansion, but light-induced lattice expansion and microstrain. The small portion of longlived state ~200 ns might originate from the non-radiative recombination of photoinduced charge carriers localized at some trapping states; The lack of this long-lived state in peak width and peak height also indicates that it is not a thermal state. Figure S7 shows the fluence dependence of the differential TR-XRD signal 300 ps after photoexcitation. By increasing the laser power, the increasing negative peak on the right side indicates enhanced crystal distortion and loss of peak intensity. Under the low fluence of 0.6 mJ/cm 2 , the sharp positive peak comes from the lattice expansion and shift of diffraction peak towards lower Q. The left side of the positive peak broadened significantly under higher fluence (≥ 1.4 mJ/cm 2 ), suggesting the formation of a disordered phase with larger lattice parameters. The corresponding (022) peak could be fitted with a main peak and a broader side peak at lower Q. It is worth noting that with the increasing of excitation fluence from 1.4 to 5.1 mJ/cm 2 , the position of the light-induced broad side peak remains constant (Figure 4a ), suggesting that a metastable state with larger lattice parameters might be produced. Similar analysis was applied to the full range, as shown in Figure 4b and 4c, and a set of side peaks with broader FWHM emerge clearly on the left side of the original crystalline phase. The integrated area change of the main peak and side peak around 2.21 Å -1 are shown in Figure 4d . Because the decay of the disordered phase correlates with the recovering of the originally phase, the integration area changes of both peaks are fitted with the same double-exponential decay function, revealing two lifetime components 0.25 ± 0.05 ns and 3.2 ± 0.7 ns, respectively. Structural modification on crystallinity state by ultrafast pulse laser has been reported before. A metastable transient phase of 1T-TaS2 is triggered by infrared laser with optical doping effect. 41 A study on photoexcited VO2 has attributed the formation of ultrafast disordered phase by transiently modifying the interatomic potential and the atomic positions. 42 We examined the microstrain condition in the main phase by the Halder-Wagner plot, the same approach used for the analysis of the 0.6 mJ/cm 2 excitation data (Figure S8 ). Despite the two-fold increase in the excitation fluence, the photo-induced microstrain in the main phase remained almost unchanged. The microstrain shows saturation at relatively low laser fluence, while the secondary phase keeps growing with increasing fluence. The formation of the secondary disordered phase could be the channel that releases excessive microstrain from the main phase. (red line) with broader FWHM emerges on the left side of the original crystalline phase (blue line). (d) Time-dependent integrated area changes for (0 2 2) main peak and its side peak.",
+        "section_path": [
+          "TR-XRD kinetics under moderate laser excitation fluence."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "3",
+          "7",
+          "4",
+          "8"
+        ],
+        "xrd_score": 12.2,
+        "peak_positions": [
+          18.0,
+          22.0
+        ],
+        "miller_indices": [
+          "(164)",
+          "(022)",
+          "(0 2 2)"
+        ],
+        "relevant_text": "It is worth noting that with the increasing of excitation fluence from 1.4 to 5.1 mJ/cm 2 , the position of the light-induced broad side peak remains constant (Figure 4a ), suggesting that a metastable state with larger lattice parameters might be produced. Similar analysis was applied to the full range, as shown in Figure 4b and 4c, and a set of side peaks with broader FWHM emerge clearly on the left side of the original crystalline phase. The integrated area change of the main peak and side peak around 2.21 Å -1 are shown in Figure 4d .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The 400 nm laser is selected, which is just over the exciton peak (~ 432 nm, Figure S4 ), to minimize the undesired thermal and hot carrier effect.\n\nPrevious studies have shown that when semiconducting thin film or metal nanoparticle is excited by photon with energy much larger than its band gap (generating the so-called 'hot carriers'), the diffraction peak intensity changes due to the laser heating effect can be well described using the Debye-Waller (DW) model. 22, [26] [27] ] Here, we apply this model to check whether the observed peak broadening and intensity attenuation after photoexcitation are caused by the similar effect: (, ) ∝ exp (-\n\nIt is worth noting that with the increasing of excitation fluence from 1.4 to 5.1 mJ/cm 2 , the position of the light-induced broad side peak remains constant (Figure 4a ), suggesting that a metastable state with larger lattice parameters might be produced. Similar analysis was applied to the full range, as shown in Figure 4b and 4c, and a set of side peaks with broader FWHM emerge clearly on the left side of the original crystalline phase. The integrated area change of the main peak and side peak around 2.21 Å -1 are shown in Figure 4d .\n\nThe structural dynamics of the halide perovskite studied here is intrinsically correlated with the material's properties. The microstrain arises from inhomogeneous variations of crystal lattice that will increase charge carrier scattering, which is directly associated with non-radiative recombination loss. 47 hen the secondary disordered phase emerges under higher excitation fluence, the phase boundary will further increase the carrier scattering and non-radiative loss. Therefore, learning how to reduce and even eliminate the microstrain and secondary phase under light illumination through the design of perovskites is critical for advancing their optoelectronic properties.",
+    "extracted_features": {
+      "peak_positions_degrees": [
+        18.0,
+        22.0
+      ],
+      "miller_indices": [
+        "(0 2 2)",
+        "(022)",
+        "(164)"
+      ]
+    }
+  }
+]

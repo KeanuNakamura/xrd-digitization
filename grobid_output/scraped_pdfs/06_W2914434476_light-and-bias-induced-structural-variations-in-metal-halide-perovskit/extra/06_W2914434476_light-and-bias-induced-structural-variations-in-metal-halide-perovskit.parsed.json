@@ -1,0 +1,1544 @@
+{
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/06_W2914434476_light-and-bias-induced-structural-variations-in-metal-halide-perovskit.pdf",
+  "source_sha256": "2b5f35bc0c02b619971b762d4d7f86678b28cbc0ad1299c8ac125fdee13a6b92",
+  "metadata": {
+    "title": "Light- and bias-induced structural variations in metal halide perovskites",
+    "doi": "10.1038/s41467-019-08364-1",
+    "abstract": "Organic-inorganic metal halide perovskites have gained considerable attention for nextgeneration photovoltaic cells due to rapid improvement in power conversion efficiencies. However, fundamental understanding of underlying mechanisms related to light-and biasinduced effects at the nanoscale is still required. Here, structural variations of the perovskites induced by light and bias are systematically investigated using scanning probe microscopy techniques. We show that periodically striped ferroelastic domains, spacing between 40 to 350 nm, exist within grains and can be modulated significantly under illumination as well as by electric bias. Williamson-Hall analysis of X-ray diffraction results shows that strain disorder is induced by these applied external stimuli. We show evidence that the structural emergence of domains can provide transfer pathways for holes to a hole transport layer with positive bias. Our findings point to potential origins of I-V hysteresis in halide perovskite solar cells.",
+    "journal": "Nature Communications",
+    "publication_date": "2019-01-25",
+    "authors": [
+      {
+        "given_name": "Dohyung",
+        "middle_name": null,
+        "surname": "Kim",
+        "email": null,
+        "affiliation": "1 School of Materials Science and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Materials Science and Engineering University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      },
+      {
+        "given_name": "Jae",
+        "middle_name": "Sung",
+        "surname": "Yun",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "Pankaj",
+        "middle_name": null,
+        "surname": "Sharma",
+        "email": null,
+        "affiliation": "1 School of Materials Science and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Materials Science and Engineering University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      },
+      {
+        "given_name": "Da",
+        "middle_name": "Seul",
+        "surname": "Lee",
+        "email": null,
+        "affiliation": "2 Australian Centre for Advanced Photovoltaics (ACAP) , School of Photovoltaic and Renewable and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Photovoltaic and Renewable and Engineering Australian Centre for Advanced Photovoltaics (ACAP) University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      },
+      {
+        "given_name": "Jincheol",
+        "middle_name": null,
+        "surname": "Kim",
+        "email": null,
+        "affiliation": "2 Australian Centre for Advanced Photovoltaics (ACAP) , School of Photovoltaic and Renewable and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Photovoltaic and Renewable and Engineering Australian Centre for Advanced Photovoltaics (ACAP) University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      },
+      {
+        "given_name": "Arman",
+        "middle_name": "M",
+        "surname": "Soufiani",
+        "email": null,
+        "affiliation": "2 Australian Centre for Advanced Photovoltaics (ACAP) , School of Photovoltaic and Renewable and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Photovoltaic and Renewable and Engineering Australian Centre for Advanced Photovoltaics (ACAP) University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      },
+      {
+        "given_name": "Shujuan",
+        "middle_name": null,
+        "surname": "Huang",
+        "email": null,
+        "affiliation": "2 Australian Centre for Advanced Photovoltaics (ACAP) , School of Photovoltaic and Renewable and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Photovoltaic and Renewable and Engineering Australian Centre for Advanced Photovoltaics (ACAP) University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      },
+      {
+        "given_name": "Martin",
+        "middle_name": "A",
+        "surname": "Green",
+        "email": null,
+        "affiliation": "2 Australian Centre for Advanced Photovoltaics (ACAP) , School of Photovoltaic and Renewable and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Photovoltaic and Renewable and Engineering Australian Centre for Advanced Photovoltaics (ACAP) University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      },
+      {
+        "given_name": "Anita",
+        "middle_name": "W Y",
+        "surname": "Ho-Baillie",
+        "email": null,
+        "affiliation": "2 Australian Centre for Advanced Photovoltaics (ACAP) , School of Photovoltaic and Renewable and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Photovoltaic and Renewable and Engineering Australian Centre for Advanced Photovoltaics (ACAP) University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": "0000-0001-9849-4755"
+      },
+      {
+        "given_name": "Jan",
+        "middle_name": null,
+        "surname": "Seidel",
+        "email": "jan.seidel@unsw.edu.au",
+        "affiliation": "1 School of Materials Science and Engineering , University of New South Wales , Sydney , NSW 2052 , Australia. School of Materials Science and Engineering University of New South Wales 2052 Sydney NSW Australia",
+        "orcid": null
+      }
+    ],
+    "keywords": []
+  },
+  "sections": [
+    {
+      "section_id": "section_491bb132fc55",
+      "title": "Untitled section 1",
+      "path": [
+        "Untitled section 1"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_ec54e8cc9354",
+          "text": "O rganic-inorganic perovskite solar cells have undergone rapid improvements in energy conversion efficiencies increasing from 3.8% to 22.7% within just a few years [1] [2] [3] [4] [5] . Self-assembling organic-inorganic metal halide perovskite materials have been shown to have excellent photovoltaic properties such as large absorption coefficients, ease of band-gap tuning, high carrier mobilities, high carrier diffusion lengths, and direct band gaps 1, [6] [7] [8] . However, devices fabricated using these materials still exhibit hysteresis in current and voltage (I-V) and transient characteristics which have been widely reported [9] [10] [11] [12] [13] [14] [15] [16] . It is observed that the sweeping voltage direction and the rate affect the I-V characteristics greatly [11] [12] [13] 17 . The e have been numerous efforts to elucidate the underlying mechanisms, i.e., to clarify the origin of the hysteretic behaviour [11] [12] [13] 17 . It has been experimentally and theoretically demonstrated that migration of ionic defects within the film, especially at the grain boundaries, is one of the most prominent causes for the observed transient hysteretic behaviour [18] [19] [20] [21] . Ferroelectric polarization is also presumed to be a possible origin of the hysteresis, which can arise either from the orientation of the organic (dipolar) cations, or from deformation of the inorganic framework 22 . The dipole moment of A-site organic molecules can be rotated by an external electric field producing a balancing field that mitigates the effective field acting on the charge carriers. Although many theoretical studies using first principles calculations affirm the spontaneous polarization in halide perovskites, experimental results often face challenges in interpretation, as the material typically shows a large amount of leakage current and dynamic movement of ionic defects 16, 23, 24 , which can lead to artefacts and inconclusive results.",
+          "section_path": [
+            "Untitled section 1"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_2a7406b57729",
+          "text": "Earlier investigation using piezoresponse force microscopy (PFM) measurements on MAPbI 3 perovskite showed switchable ferroelectric domains that are approximately equal in size to the grain 25 . Nevertheless, strong evidence related to domain and wall motion has not been provided, although hysteretic PFM loops have been observed at room temperature in either single crystalline or polycrystalline samples 26, 27 . Furthermore, possible effects of ion migration were not taken into account. Even though recent work conducted by Rohm et al. 28 showed polarized ferroelectric domains present in each grain using PFM, there was still no observation on switchable states relevant to domain changes by applied electric field 29 . Meanwhile, Strelcov et al. reported the existence of ferroelasticity controlled by external stresses in single and polycrystalline films instead of ferroelectricity, and also showed switchable states under applied stress. These studies point to the possibility of exploring domain properties and their role in perovskite solar cell devices.",
+          "section_path": [
+            "Untitled section 1"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_57cc90136f8c",
+          "text": "In this work, complementary spatial nanoscale imaging techniques, specifically PFM, Kelvin probe force microscopy (KPFM), and AFM are used to identify structural changes of (FAP-bI 3 ) 85 (MA-PbBr 3 ) 15 perovskite under varying illumination and bias conditions. Firstly, nanoscale ferroelastic domains are identified using PFM measurements. In-situ temperature-dependent topography measurements confirm that the domains disappear and reappear at the phase transition temperature. These domains have a strong dependency on external light and electrical bias. When exposed to light, the PFM amplitude greatly increases, thus, domain patterns are clearly visible in both amplitude and phase maps. Structural appearance of domains is also observed in 3D topography maps. Secondly, the effect of bias voltage is observed by applying the voltages to the tip during the PFM measurement. Upon applying positive bias voltages, strong domain patterns appear in both phase and amplitude maps with enhanced amplitude signal. The domains distinctly emerge structurally which is confirmed by a 3D topography map. However, upon applying negative bias voltages, domains are no longer observed structurally, rather, migration of organic cations dominates and causes damage to the surface. Peak broadening analysis from in-situ XRD measurements reveals increase of structural disorder under the applied external stimuli, i.e., the light and electrical bias which is linked to the appearance of the domain. Lastly, we show evidence and propose a mechanism describing how the observed structural changes can influence charge carrier transport and the I-V hysteresis in actual solar cell devices.",
+          "section_path": [
+            "Untitled section 1"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 5.2,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_9c944883b76c",
+      "title": "Results",
+      "path": [
+        "Results"
+      ],
+      "section_type": "results",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_8b02a538a343",
+      "title": "Scanning probe based characterization.",
+      "path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_0f3ca4b469a9",
+          "text": "Figure 1a schematically illustrates the experimental set-up for the PFM measurements. The procedure of sample preparation is described in the experimental methods section. All experiments are carried out under ambient conditions and low humidity conditions below 20%. Our results are consistent over several repetitive scans so we expect that there is no degradation during the measurement. The structure consists of FTO/c-TiO 2 /m-TiO 2 /(FAPbI 3 ) 0.85 (MAPbBr 3 ) 0.15 . Compositional engineering of a mixed cation/ metal halide perovskite in the form of (FAPbI 3 ) 0.85 (MAPbBr 3 ) 0.15 has been shown to be one of the most effective ways to realize record-efficiency perovskite solar cells 30 .",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_70890d889327",
+          "text": "Figure 1b shows an out-of-plane PFM amplitude map under dark and light conditions. The light was turned on half way into the scan (slow scan axis is from bottom-to-top). In dark, the amplitude map shows a rather low response with average value in the range of 900-1000 arbitrary units (a.u.). As soon as the light is turned on half way through the measurement, the signal is greatly enlarged up to 2100 a.u. Further, under illumination, highmagnification PFM amplitude and phase maps (Fig. 1c , d ) resolve the presence of stripe domains for the grains in the polycrystalline sample. We notice that the stripes do not exist for every grain. One reason can be that solution processed polycrystalline perovskites cannot have perfect and homogenous composition all over the film. Especially, halide segregation is often observed in solution processed mixed halide perovskites 31 . Previous PFM results also do not show domain patterns for every grain, even in single cation-based perovskites 29, 32 Another noticeable phenomenon is that the domains start to emerge clearly as stripes under illumination only (Fig. 1c , d ). However, under dark conditions these domains fade away (Fig. 1d , e ). These results imply that the light illumination can induce significant increase in piezoresponse and is possibly associated with the large density of domains and walls. It was previously reported that the effective piezoelectric coefficient increases under white light due to light-induced rearrangement of the molecular dipole moment, resulting from the looseness in hydrogen bonding of the excited perovskite frameworks 26 . The spacing between the domains ranges from about 40 to 350 nm which is consistent with the domains observed in other reports 16, 32, 33 .",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 1.7,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_06c4aa2b39fb",
+          "text": "Light illumination on halide perovskites provokes various phenomena such as phase segregation 34 , photo-induced lattice expansion 35 , and ion migration 36 . Below we consider the possibility that these properties are responsible for the observed emergence of domains. We have previously observed that ion migration gradually proceeds over several minutes and grain boundaries act as facile migrating channels 37 . Supplementary Fig. 1 compares PFM magnitude and CPD maps and light is turned on half way from the measurement. It is apparent that CPD contrast at the grain boundaries becomes visibly brighter under illumination whereas grain boundaries in the amplitude map do not change under illumination. Also, it is apparent from Supplementary Fig. 1 . that the increase in amplitude is abrupt instead of a gradually increase over time. To further examine the effects on ion migration on the PFM signal, we examined the PFM signal before and after the light illumination. Supplementary Fig. 1 . shows that PFM signals return to the initial dark values as soon as light illumination is turned off. These results imply that the ion migration does not have direct effect on the above observed PFM results. However, we cannot completely rule out the effects of ion migration which also occurs within the film and change the octahedral distortion which affects the stress within the film 38 .",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 1.3,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_de2c6268982f",
+          "text": "We performed photoluminescence (PL) spectral measurements over several minutes to examine the effect of phase segregation due to the light illumination, i.e., bromide rich phase and iodide rich phase. It is clear that peak splitting does not occur over time under the illumination as shown in Supplementary Fig. 1 .",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 1.3,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b3b36ec4a039",
+          "text": "To elucidate the origin of the domain patterns, we performed insitu temperature-dependent topography measurements as shown in Supplementary Fig. 2 . It is expected that the domain patterns will disappear upon annealing above ~57 °C, as the perovskite film undergoes a phase transition from tetragonal to cubic, releasing internal strain. We expect that phase transitions in different crystal grains have different transition temperatures due to compositional non-uniformity. Therefore, not every grain should have the phase transition or the same phase transition temperature. We carefully ramped up the temperature (2 °C min -1 ) slowly so that there was no significant thermal stress generated. It was not possible to perform AFM contact-mode measurements at high temperatures as the surface of the sample was then easily damaged due to serious ion migration when the tip is directly in contact with the sample surface. Therefore, only non-contact mode topography measurements could be performed. 3D topography images as a function of temperature are shown in Supplementary Fig. 2 . Supplementary Fig. 2 also shows line profiles of the corresponding coloured regions in the 3D topography image. The domain patterns in Supplementary Fig. 2 gradually diminish as the temperature increases. Once the temperature reaches 72 °C, the domain patterns almost vanish.",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 2.4,
+          "peak_positions": [
+            57.0,
+            2.0,
+            72.0
+          ],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_67606091aad4",
+          "text": "We then slowly decrease the temperature to room temperature and the domain patterns reappear in some of the grains. After the phase transition, corrugated structures of the surface re-appear in the same region although not with completely the same structures. At the same time, KPFM measurements were carried out as a function of temperature as presented in Supplementary Fig. 3 . The stripe domain patterns are strongly present at room temperature while such patterns were unambiguously annihilated above 72 °C which are also apparent in the line profile data. These results are in good agreement with the recently reported TEM results on MAPbI 3 perovskite 33 . Twin domains in tetragonal MAPbI 3 have been directly observed using TEM and a reversible process, that is, the appearance and reappearance of the domains, was observed at the phase transition temperatures. In fact, the spacing between the domains ranging from around 100 to 300 nm wide observed in that work, is in a similar range observed in this work. The grains in tetragonal phase regarding the cubic parent grains can have six crystallographic orientation states, which can be possible to make them a ferroelastic material according to empirical definition 39 . Therefore, we suspect that the observed domain patterns in the films are ferroelastic domains, which are generated during the cooling of the film. It is possible that a cubic to tetragonal phase transition during film processing could induce an internal strain which is released from the existence of twin domains caused by ferroelasticity 33 . Since each grain could have differences in elemental distribution and structure, especially if the sample contains multiple cations and halides, the independent phase transition occurs in individual grains, thus, there exist the distinctive patterns in each grain.",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 1.4,
+          "peak_positions": [
+            72.0
+          ],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_0f3602433138",
+          "text": "To investigate this effect further, we performed high-resolution morphological imaging of the polycrystalline thin film. Figure 2a , b show 3D topographic images of the grains with stripe domain patterns in light and dark conditions respectively. Figure 2c shows the corresponding height profiles for the topography images measured under light (red) and in the dark (blue). The domain patterns emerge strongly under light illumination for some grains.",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_5744f14efdbd",
+          "text": "Observation of domain patterns in the topography map is due to surface corrugations associated with matching of mechanical compatibility conditions imposed by the neighbouring ferroelastic domains. The height difference between each domain is -1 to 1 nm in the dark while it turns to -1 to 3 nm under light. It is important to note that such phenomenon does not occur in every grain. Rather, the appearance of the domain patterns is dependent on the specific grain, which could be due to the non-uniform elemental distribution between grains which also leads to variation in structural properties 31 .",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_39104195b567",
+          "text": "In order to investigate the effect of bias on the evolution of ferroelastic domains, bias-dependent PFM measurement in dark conditions were performed to exclude the effects of photoinduced ionic motion or excited charge carriers. When high bias is applied to the tip during PFM measurements, local damage to the surface of the films occurs owing to strong ion migrations and sensitively fragile film surfaces. We checked that the sample is stable towards positive bias up to +2.5 V applied to the tip, whereas degradation starts when negative bias larger than -0.5 V is applied to the tip with applied AC bias of 2 V. Structural damage induced by large (>-4 V) negative bias is irreversible in our previous report 37 . The ionic motion depending on the positive and negative biases applied to the AFM tip is illustrated in Supplementary Fig. 4 37 . The effect of applying a bias voltage whether positive or negative is apparent from the amplitude plot in Fig. 3a . It can be seen that the amplitude always increases with bias voltage. Figure 3c , d shows the representative amplitude and phase maps acquired with a DC bias voltage of +2 V while Fig. 3e , f shows the same maps when applied DC voltage equals -0.2 V. The full series of the out-of-plane amplitude and phase maps are shown in Supplementary Fig. 5 . Note that the measurements are performed consecutively from 0 to +1 V, +2, 0, -0.2, -0.5, and then 0 V again. In addition to the dark condition, bias-dependent PFM measurements were carried out under light illumination as shown in Supplementary Fig. 6 . The ferroelastic domain patterns become clear in the amplitude map acquired at a DC bias of +2 V (Fig. 3c ). Interestingly, the response resembles that under light illumination in the absence of a DC bias (results shown in Fig. 1b ). The average amplitude signal of the map under light illumination (from Fig. 1b ) is ~1200 a.u. which is close to the results when +2 V is applied as shown in Fig. 3a . These results indicate that light illumination, thus, effect of photo-generated carriers, is not solely responsible for the increase in the piezoelectric response of the film. We also observe a switching of domains (PFM phase signal) when different polarity of bias voltages is applied as shown in Fig. 3b . The profiles are extracted from marked black and red lines in Fig. 3d , f . Specifically, the profiles exhibit alternating phase contrast along the domain pattern under an applied bias of +2 V and is opposite to the profile in the case of an applied voltage of -0.2 V. This flipping of the phase contrast possibly arises from external bias-induced stress which will be further clarified using XRD measurements.",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "4",
+            "3",
+            "5",
+            "6",
+            "1"
+          ],
+          "xrd_score": 5.3,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_2b5c613f0c5e",
+          "text": "Also, the bias-dependent response under illumination was qualitatively similar to that obtained under dark conditions (see Supplementary Fig. 6 for details). Such an inversion of the phase contrast may imply existence of ferroelectricity. We thus performed ferroelectric switching experiments to examine whether the change in stripes contrast originates from ferroelectricity of the perovskite. Results are shown in Supplementary Fig. 7 . Our results show that no reproducible evidence for polarization-electric field hysteresis loops are found in the experiments. Recently, polarized domain patterns have been observed using PFM in MAPbI 3 , however, switching of phases has not yet been observed. Therefore, these well-aligned stripe domains in our investigation are ferroelastic, and consequently do not show electrically switchable hysteretic piezoelectric behaviour consistent with earlier studies 29, 32, 33 . However, the ferroelastic domain structure couples indirectly to an applied external stimulus, which can be in form of an optical illumination or the electrical bias. The applied external stimulus causes ion migration through the sample and can lead to generation of stress or stress gradients of sufficiently high magnitudes. These elastic gradients then in turn can influence ferroelastic domains.",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "6",
+            "7"
+          ],
+          "xrd_score": 1.3,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_45a5a33a161c",
+          "text": "We now move on to the observation of the structural variation of the film upon applying bias voltages in dark. Figure 4a-c shows representatively topographic images in contact mode after applying +7 and -7 V. It is important to note that the previous PFM measurement (Fig. 3 ) requires AC bias applied to the sample and surface damage occurs at much lower bias voltages. Figure 4d shows the corresponding height profiles of the black, blue and red regions in the topography images of Fig. 4a-c . As for domain patterns, it is worth noting that stripe patterns appear strongly with positive bias showing 10-30 nm of height difference which is much higher than those observed in Fig. 1 . However, such patterns almost disappeared when negative bias was applied, although slight corrugated structures are still seen in Fig. 4d . We investigated structural variations of the surface when higher biases were applied but degradation at grain boundaries occurs as can be seen in Fig. 4c under -7 V voltage bias. Also, there is a new hump generated. We have previously shown that organic cations (MA + and FA + ) can escape to the top surface or dissociate and form such a hump, whereas, migration of halides do not damage the sample even at higher voltages 37 . As realized by the increase in the PFM amplitude signal (Fig. 3a ), it would be possible that the negative bias voltages can also form the domain patterns similar to the positive voltages which is also evident that the negative voltages increase the PFM amplitude signal (Fig. 3a ). However, it seems that the structural damage is readily induced by migration of organic cations under such conditions.",
+          "section_path": [
+            "Scanning probe based characterization."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "4",
+            "3",
+            "1"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_19fe67d341cf",
+      "title": "XRD analysis.",
+      "path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_7cba603a23f5",
+          "text": "To further clarify the observed structural and phase variations, we performed XRD measurements of the same test structures under similar conditions: light illumination vs dark and different levels of voltage bias. We deposited a thin layer of gold contact (5-10 nm) on top of the perovskite film for biasing the film normal to its surface. Detailed studies show that full width at half maximum (FWHM) of XRD diffraction peaks increase upon light illumination. We confirmed that there is no major damage during the measurement as the PbI 2 peak does not change significantly (PbI 2 being one of the expected degradation products reported before 40 ) and return to the almost original pattern after applying the stimuli (Supplementary Fig. 8 ). We note however, that some extend of amorphisation of the material could be present as shown by decreased peak intensities (Supplementary Note 1).",
+          "section_path": [
+            "XRD analysis."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "8"
+          ],
+          "xrd_score": 6.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_2f8acca2be8b",
+          "text": "Primarily it is clear that peaks become broader under light illumination in XRD patterns. In particular, we zoomed the peak at around 37.5°that broadened the most and found that the peak returns to the original state only after the illumination but not after the bias (Supplementary Fig. 8 ). Also, the peak at around 44°( Supplementary Fig. 8 ) does not change under the light, however, the new peak extends from 43°(300) and has a maximum at around 44°. We compared peak intensities before and after the external stimuli for the first two peaks (13.9 and 19.5°) (Supplementary Fig. 8 ) in order to confirm crystallinity of the sample before and after the external stimuli. Under light illumination, the peak intensities return almost to the original values. However, significant changes are observed after applying bias voltages. For positive voltages, both peaks increase and slightly decrease when 0 V is applied again. Then, the peak intensities almost do not vary upon negative voltages and remains the same when 0 V is applied again. The reduced intensities after applying voltages suggest that the sample undergoes irreversible amorphisation to some extent (reduced crystallinity) after the bias voltages. Such reversible and irreversible variation of the peak is responsible for both reversible and irreversible chemistry and structural rearrangements, depending on the magnitude of applied bias or light intensity which can induce the observed peak broadening 41, 42 . Also, the peak broadening can be originated from reversible phase segregation 34 or reversible electric field induced phase conversion 41, 42 .",
+          "section_path": [
+            "XRD analysis."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "8"
+          ],
+          "xrd_score": 13.4,
+          "peak_positions": [
+            37.5,
+            44.0,
+            43.0,
+            19.5
+          ],
+          "miller_indices": [
+            "(300)"
+          ]
+        },
+        {
+          "paragraph_id": "paragraph_45592fd651d2",
+          "text": "This peak broadening can be systematically studied by Williamson-Hall (W-H) analysis in order to analyse strain disorder induced by light and bias as shown in Fig. 5a . We have only chosen the (100) and (110) planes for the W-H analysis which is explained in Supplementary Note 2. The strain variation of light-induced metal halide solar cells ranges from 0.32 (dark) to 0.38 (light) in Supplementary Fig. 9 . Under illumination, applied strain is around 20% higher than that in the dark. Such a difference in strain disorder upon illumination would suggest that it is enough to generate structural variation not only on the surface, a so-called distorted tetragonal shape. This strain variation can explain why corrugated structures of the surface are very strong under illumination, as shown in Fig. 2 . Looking at the effect of positive bias shown in Supplementary Fig. 9 , the increase in strain disorder is moderate: around 10% when the applied voltage is <0.5 V. However, there is a linear growth in strain when +1 V is applied. The strain is ~30% higher than that in dark condition. These results correlate with bias-dependent d a b c 0 100 200 300 0 20 40 60 0 20 40 60 0 20 40 60 Profile (nm) -7 V Height (nm) + 7 V Pristine 250 nm 250 nm 250 nm Fig. 4 Effect of bias on structural variation of the surface. a 3D topography in non-contact mode in the dark, b after positive bias, +7 V, and c after negative bias -7 V. d Line profiles for the black, blue, and red regions in a-c",
+          "section_path": [
+            "XRD analysis."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "5",
+            "9",
+            "2",
+            "4"
+          ],
+          "xrd_score": 3.1,
+          "peak_positions": [],
+          "miller_indices": [
+            "(100)",
+            "(110)"
+          ]
+        },
+        {
+          "paragraph_id": "paragraph_9d877f34b4eb",
+          "text": "PFM measurement previously discussed in Fig. 3 . As expected, it is obvious that positive bias makes stripe domains become clearer with light, and also PFM signals stronger including increases in strain disorder as shown in Figs. 2 and 4 . We can also see that negative bias (Supplementary Fig. 9 ) has a higher effect as changes can be seen even at -1 V. Consequently, cations such as organic ions give rise to a large strain rather than anions such as halide ions. Both biases play an important role in generating strains at the surface and bulk including ionic movement.",
+          "section_path": [
+            "XRD analysis."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "3",
+            "2",
+            "9"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_560904f42749",
+          "text": "It is important to note that the effects of light and bias reported and discussed in the previous section only examined the surface of the sample using SPM. It will be useful to examine ionic motion horizontally in future work. Nevertheless, we can conclude from Fig. 5 , that light and bias generate strain disorder as well as structural change on the surface. In addition, much smaller sized organic ions can create strain if we exclude lightinduced halide ion movement in the dark condition with negative bias. Electrical transport measurements. Furthermore, we investigate the impact of our previous observations on charge transport and the I-V hysteresis of actual halide perovskite solar cell devices.",
+          "section_path": [
+            "XRD analysis."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "5"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_4f89bede9664",
+          "text": "Here, we propose a mechanism illustrated in Fig. 6 . J-V curves of perovskite solar cells measured with reverse (-1.1 to +1.1 V) and forward (+1.1 to -1.1 V) scans are shown in Fig. 6a . A relatively high scan rate is used (0.1 V s -1 ) in order to evaluate the hysteresis effect and minimize the effect of slow ionic motion. As can be seen, there is a large performance difference. It is noticeable that FF (%) is significantly lower when measured from reverse scan due to increase in series resistance when measured from reverse bias. When J-V curve is scanned from the positive bias (reverse scan), the domains emerge structurally which is illustrated in Fig. 6b . These corrugated surfaces will provide multidirectional pathways for photo-generated charge carriers (holes) to be transported to a hole transport material (HTM), Spiro-MeOTAD. For an opposite bias, the surface of the film is going to be modified by migration of organic cations and removes the domain patterns or it can even cause severe damage to the perovskite-HTM interface as observed in Fig. 4c and this is illustrated in Fig. 6c . Consequently, lower series resistance is expected from the forward bias scan due to an effective hole extraction.",
+          "section_path": [
+            "XRD analysis."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "6",
+            "4"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_4614db4b8cb2",
+          "text": "In order to observe charge separation behaviour of the domains, KPFM measurements under the light illumination were performed. Supplementary Fig. 10 shows a topography image with domains being present. When +2 V are applied to the tip during the KPFM measurement, the contact potential difference (CPD) varies within the grains similar to what is observed in the topography map as shown in Supplementary Fig. 10 . On the other hand, when -2 V is applied, no such variation within the grains is observed (Supplementary Fig. 10 ). Also, Supplementary Figure 10 shows CPD distributions, and median CPD is 59 mV higher when +2 V is applied to the tip compared to that of -2 V. This implies that the charge separation is more effective when +2 V is applied to the tip. A relevant energy band diagram of the perovskite-HTM interface when the positive bias and negative bias are applied to the top surface is illustrated in Fig. 6d , e respectively. Holes are actively transferred to the HTM from the perovskite layer for the positive bias whereas holes are piled up or can be trapped at the interfacial traps generated by organic cations for negative bias. Of course, there are also other factors such as ion migration, which has been convincingly linked to the origin of the I-V hysteresis that adjusts band alignment at the interfaces [18] [19] [20] [21] . However, our results clearly imply that the observed nanoscale structural variations can also cause imbalanced charge transport depending on sweeping bias polarity. There is a chance that surface modification occurs after deposition of other layers in solar cell devices, so the domains may not be the same as we have observed here. However, based on our XRD results, the strain under light and bias will occur within the film bulk.",
+          "section_path": [
+            "XRD analysis."
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "10",
+            "6"
+          ],
+          "xrd_score": 4.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_39dd9b6fe15c",
+      "title": "Discussion",
+      "path": [
+        "Discussion"
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_47cf0ca1e638",
+          "text": "Our findings clarify stripe pattern formation in halide perovskite grains and shed light onto stripe domain properties under changing light, bias and temperature conditions. Under illumination, corrugated structures on film surfaces were observed to be very strong, which also raised the PFM amplitude signal. Interestingly, the structure of the films when positive bias was applied shows similar results to the case under illumination, while negative bias removes uneven structures on the surface. Williams-Hall plot of XRD results show a pronounced correlation with strain disorder induced by light and bias. We conclude that the observed striation domains form in some grains that have corrugated structure, and their properties can be controlled, leading to strain disorder with changed external conditions such as light, bias, and temperature. Moreover, we propose a mechanism that such structural variation can cause I-V hysteresis. These results provide further understanding of the effects of nanoscale structural variations in solar cell operation and for improving the design of halide perovskite photovoltaic devices.",
+          "section_path": [
+            "Discussion"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_322ab8f08b89",
+      "title": "Methods",
+      "path": [
+        "Methods"
+      ],
+      "section_type": "methods",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_da5b63bdf921",
+      "title": "Solar cell fabrication.",
+      "path": [
+        "Solar cell fabrication."
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_01bad3ecaff2",
+          "text": "The spray pyrolysis deposition method was used for a dense TiO 2 blocking layer of a 60 nm thickness (Compact-TiO 2 ) to deposit it onto a F-doped SnO 2 (FTO, Pilkington, TEC8) substrate. Here, a 20 × 10 -3 M titanium diisopropoxidebis (acetylacetonate) solution (Sigma Adrich) at 450 °C was also used to avoid direct contact between hole-conducting layer and FTO substrate. Approximately 80 nm think mesoporous TiO 2 (m-TiO 2 , Dyesol 30 NR-D) that has average roughly 50 nm nanoparticles, anatase phase, films were dissolved and coated onto the Compact-TiO 2 /FTO substrate by spin coating method with 5000 rpm for 10 s. The films were annealed at 100 °C for 10 min and calcined at 500 °C for 1 h in air for removal of the organic matter. Fabrication methods of the metal halide perovskite solutions are as follows: MAI (CH 3 NH 3 I) and FAI (NH 2 CH=NH 2 I) were firstly synthesized with reacting 30 mL hydroiodic acid (57% in water, Aldrich), 27.86 mL CH 3 NH 2 (40% in methanol, Junsei Chemical), and 15 g formamidine acetate (Aldrich) in a 250 mL round-bottom flask at 0 °C for 2 h with stirring. The precipitates were obtained using an evaporator at 50 °C for 1 h. The precipitated materials were dissolved in ethanol, recrystallinized with diethyl ether, and then dried at 60 °C in a vacuum oven for 24 h. As above, CH 3 NH 3 Br and NH 2 CH=NH 2 Br were also prepared with hydrobromic acid (48 wt% in water, Adrich). The desired perovskite solutions of 85FAPbI 3 15MAPbI 3 were spin-coated onto the mesoporous-TiO 2 /compact-TiO 2 /FTO substrate. The films were finally dried on a hot plate at 100 °C for 20 min. SPM measurements: AFM, PFM, KPFM. The PFM measurements were performed using a commercial AFM system (AIST-NT SmartSPM 1000) under ambient conditions at room temperature. Nitrogen gas was used for cleaning sample surfaces before measurements. PFM images were taken on the surface of the films after they were cleaned with nitrogen gas using Pt-coated (HQ:CSC 37/PT, µmasch, Force constant, k = 0.8 N m -1 ) Si cantilevers that possesses a range of resonance frequencies from 30 to 55 kHz for AFM and PFM. AC bias (1500-2000 mV) was applied to the PFM tips, the lowest one among the resonance peaks was chosen. All PFM data were obtained with out-of-plane and in-plane amplitude and phase maps at the same scan. Light sources were blocked for dark conditions. Tuneable white LED light sources that are not filtered were used for illumination at an intensity of 0.3 to 0.5 W cm -2 . DC bias was applied towards the tip or sample. KPFM measurements were carried out using diamond-coated conductive probes (DCP20, force constant, k = 48 N m -1 ) possessing a resonance frequency of 420 kHz. A heating stage with temperature controller (SRS, PTC10) was used for temperaturedependent AFM and KPFM measurements. In all PFM, AFM and KPFM measurements, the used scan rate is 1.0 Hz, and scan direction starts from bottom to top.",
+          "section_path": [
+            "Solar cell fabrication."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [
+            100.0,
+            0.0,
+            50.0,
+            60.0
+          ],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_07efd7ac11fb",
+      "title": "XRD measurements.",
+      "path": [
+        "XRD measurements."
+      ],
+      "section_type": "methods",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_ffc25c83111b",
+          "text": "The peak broadening of MA-FA perovskites was analysed using X-ray diffraction (PANalytical, Empyrean). LED white light located inside the diffractometer is used for light soaking of the sample at 0.3 kW cm -2 . The samples were connected to a controllable power supply with wire connections to apply positive and negative bias after Au deposition (EMITECH, K550X) onto the surface.",
+          "section_path": [
+            "XRD measurements."
+          ],
+          "section_type": "methods",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "paragraph_ec54e8cc9354",
+      "text": "O rganic-inorganic perovskite solar cells have undergone rapid improvements in energy conversion efficiencies increasing from 3.8% to 22.7% within just a few years [1] [2] [3] [4] [5] . Self-assembling organic-inorganic metal halide perovskite materials have been shown to have excellent photovoltaic properties such as large absorption coefficients, ease of band-gap tuning, high carrier mobilities, high carrier diffusion lengths, and direct band gaps 1, [6] [7] [8] . However, devices fabricated using these materials still exhibit hysteresis in current and voltage (I-V) and transient characteristics which have been widely reported [9] [10] [11] [12] [13] [14] [15] [16] . It is observed that the sweeping voltage direction and the rate affect the I-V characteristics greatly [11] [12] [13] 17 . The e have been numerous efforts to elucidate the underlying mechanisms, i.e., to clarify the origin of the hysteretic behaviour [11] [12] [13] 17 . It has been experimentally and theoretically demonstrated that migration of ionic defects within the film, especially at the grain boundaries, is one of the most prominent causes for the observed transient hysteretic behaviour [18] [19] [20] [21] . Ferroelectric polarization is also presumed to be a possible origin of the hysteresis, which can arise either from the orientation of the organic (dipolar) cations, or from deformation of the inorganic framework 22 . The dipole moment of A-site organic molecules can be rotated by an external electric field producing a balancing field that mitigates the effective field acting on the charge carriers. Although many theoretical studies using first principles calculations affirm the spontaneous polarization in halide perovskites, experimental results often face challenges in interpretation, as the material typically shows a large amount of leakage current and dynamic movement of ionic defects 16, 23, 24 , which can lead to artefacts and inconclusive results.",
+      "section_path": [
+        "Untitled section 1"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_2a7406b57729",
+      "text": "Earlier investigation using piezoresponse force microscopy (PFM) measurements on MAPbI 3 perovskite showed switchable ferroelectric domains that are approximately equal in size to the grain 25 . Nevertheless, strong evidence related to domain and wall motion has not been provided, although hysteretic PFM loops have been observed at room temperature in either single crystalline or polycrystalline samples 26, 27 . Furthermore, possible effects of ion migration were not taken into account. Even though recent work conducted by Rohm et al. 28 showed polarized ferroelectric domains present in each grain using PFM, there was still no observation on switchable states relevant to domain changes by applied electric field 29 . Meanwhile, Strelcov et al. reported the existence of ferroelasticity controlled by external stresses in single and polycrystalline films instead of ferroelectricity, and also showed switchable states under applied stress. These studies point to the possibility of exploring domain properties and their role in perovskite solar cell devices.",
+      "section_path": [
+        "Untitled section 1"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_57cc90136f8c",
+      "text": "In this work, complementary spatial nanoscale imaging techniques, specifically PFM, Kelvin probe force microscopy (KPFM), and AFM are used to identify structural changes of (FAP-bI 3 ) 85 (MA-PbBr 3 ) 15 perovskite under varying illumination and bias conditions. Firstly, nanoscale ferroelastic domains are identified using PFM measurements. In-situ temperature-dependent topography measurements confirm that the domains disappear and reappear at the phase transition temperature. These domains have a strong dependency on external light and electrical bias. When exposed to light, the PFM amplitude greatly increases, thus, domain patterns are clearly visible in both amplitude and phase maps. Structural appearance of domains is also observed in 3D topography maps. Secondly, the effect of bias voltage is observed by applying the voltages to the tip during the PFM measurement. Upon applying positive bias voltages, strong domain patterns appear in both phase and amplitude maps with enhanced amplitude signal. The domains distinctly emerge structurally which is confirmed by a 3D topography map. However, upon applying negative bias voltages, domains are no longer observed structurally, rather, migration of organic cations dominates and causes damage to the surface. Peak broadening analysis from in-situ XRD measurements reveals increase of structural disorder under the applied external stimuli, i.e., the light and electrical bias which is linked to the appearance of the domain. Lastly, we show evidence and propose a mechanism describing how the observed structural changes can influence charge carrier transport and the I-V hysteresis in actual solar cell devices.",
+      "section_path": [
+        "Untitled section 1"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 5.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_0f3ca4b469a9",
+      "text": "Figure 1a schematically illustrates the experimental set-up for the PFM measurements. The procedure of sample preparation is described in the experimental methods section. All experiments are carried out under ambient conditions and low humidity conditions below 20%. Our results are consistent over several repetitive scans so we expect that there is no degradation during the measurement. The structure consists of FTO/c-TiO 2 /m-TiO 2 /(FAPbI 3 ) 0.85 (MAPbBr 3 ) 0.15 . Compositional engineering of a mixed cation/ metal halide perovskite in the form of (FAPbI 3 ) 0.85 (MAPbBr 3 ) 0.15 has been shown to be one of the most effective ways to realize record-efficiency perovskite solar cells 30 .",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_70890d889327",
+      "text": "Figure 1b shows an out-of-plane PFM amplitude map under dark and light conditions. The light was turned on half way into the scan (slow scan axis is from bottom-to-top). In dark, the amplitude map shows a rather low response with average value in the range of 900-1000 arbitrary units (a.u.). As soon as the light is turned on half way through the measurement, the signal is greatly enlarged up to 2100 a.u. Further, under illumination, highmagnification PFM amplitude and phase maps (Fig. 1c , d ) resolve the presence of stripe domains for the grains in the polycrystalline sample. We notice that the stripes do not exist for every grain. One reason can be that solution processed polycrystalline perovskites cannot have perfect and homogenous composition all over the film. Especially, halide segregation is often observed in solution processed mixed halide perovskites 31 . Previous PFM results also do not show domain patterns for every grain, even in single cation-based perovskites 29, 32 Another noticeable phenomenon is that the domains start to emerge clearly as stripes under illumination only (Fig. 1c , d ). However, under dark conditions these domains fade away (Fig. 1d , e ). These results imply that the light illumination can induce significant increase in piezoresponse and is possibly associated with the large density of domains and walls. It was previously reported that the effective piezoelectric coefficient increases under white light due to light-induced rearrangement of the molecular dipole moment, resulting from the looseness in hydrogen bonding of the excited perovskite frameworks 26 . The spacing between the domains ranges from about 40 to 350 nm which is consistent with the domains observed in other reports 16, 32, 33 .",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 1.7,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_06c4aa2b39fb",
+      "text": "Light illumination on halide perovskites provokes various phenomena such as phase segregation 34 , photo-induced lattice expansion 35 , and ion migration 36 . Below we consider the possibility that these properties are responsible for the observed emergence of domains. We have previously observed that ion migration gradually proceeds over several minutes and grain boundaries act as facile migrating channels 37 . Supplementary Fig. 1 compares PFM magnitude and CPD maps and light is turned on half way from the measurement. It is apparent that CPD contrast at the grain boundaries becomes visibly brighter under illumination whereas grain boundaries in the amplitude map do not change under illumination. Also, it is apparent from Supplementary Fig. 1 . that the increase in amplitude is abrupt instead of a gradually increase over time. To further examine the effects on ion migration on the PFM signal, we examined the PFM signal before and after the light illumination. Supplementary Fig. 1 . shows that PFM signals return to the initial dark values as soon as light illumination is turned off. These results imply that the ion migration does not have direct effect on the above observed PFM results. However, we cannot completely rule out the effects of ion migration which also occurs within the film and change the octahedral distortion which affects the stress within the film 38 .",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 1.3,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_de2c6268982f",
+      "text": "We performed photoluminescence (PL) spectral measurements over several minutes to examine the effect of phase segregation due to the light illumination, i.e., bromide rich phase and iodide rich phase. It is clear that peak splitting does not occur over time under the illumination as shown in Supplementary Fig. 1 .",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 1.3,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b3b36ec4a039",
+      "text": "To elucidate the origin of the domain patterns, we performed insitu temperature-dependent topography measurements as shown in Supplementary Fig. 2 . It is expected that the domain patterns will disappear upon annealing above ~57 °C, as the perovskite film undergoes a phase transition from tetragonal to cubic, releasing internal strain. We expect that phase transitions in different crystal grains have different transition temperatures due to compositional non-uniformity. Therefore, not every grain should have the phase transition or the same phase transition temperature. We carefully ramped up the temperature (2 °C min -1 ) slowly so that there was no significant thermal stress generated. It was not possible to perform AFM contact-mode measurements at high temperatures as the surface of the sample was then easily damaged due to serious ion migration when the tip is directly in contact with the sample surface. Therefore, only non-contact mode topography measurements could be performed. 3D topography images as a function of temperature are shown in Supplementary Fig. 2 . Supplementary Fig. 2 also shows line profiles of the corresponding coloured regions in the 3D topography image. The domain patterns in Supplementary Fig. 2 gradually diminish as the temperature increases. Once the temperature reaches 72 °C, the domain patterns almost vanish.",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 2.4,
+      "peak_positions": [
+        57.0,
+        2.0,
+        72.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_67606091aad4",
+      "text": "We then slowly decrease the temperature to room temperature and the domain patterns reappear in some of the grains. After the phase transition, corrugated structures of the surface re-appear in the same region although not with completely the same structures. At the same time, KPFM measurements were carried out as a function of temperature as presented in Supplementary Fig. 3 . The stripe domain patterns are strongly present at room temperature while such patterns were unambiguously annihilated above 72 °C which are also apparent in the line profile data. These results are in good agreement with the recently reported TEM results on MAPbI 3 perovskite 33 . Twin domains in tetragonal MAPbI 3 have been directly observed using TEM and a reversible process, that is, the appearance and reappearance of the domains, was observed at the phase transition temperatures. In fact, the spacing between the domains ranging from around 100 to 300 nm wide observed in that work, is in a similar range observed in this work. The grains in tetragonal phase regarding the cubic parent grains can have six crystallographic orientation states, which can be possible to make them a ferroelastic material according to empirical definition 39 . Therefore, we suspect that the observed domain patterns in the films are ferroelastic domains, which are generated during the cooling of the film. It is possible that a cubic to tetragonal phase transition during film processing could induce an internal strain which is released from the existence of twin domains caused by ferroelasticity 33 . Since each grain could have differences in elemental distribution and structure, especially if the sample contains multiple cations and halides, the independent phase transition occurs in individual grains, thus, there exist the distinctive patterns in each grain.",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 1.4,
+      "peak_positions": [
+        72.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_0f3602433138",
+      "text": "To investigate this effect further, we performed high-resolution morphological imaging of the polycrystalline thin film. Figure 2a , b show 3D topographic images of the grains with stripe domain patterns in light and dark conditions respectively. Figure 2c shows the corresponding height profiles for the topography images measured under light (red) and in the dark (blue). The domain patterns emerge strongly under light illumination for some grains.",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_5744f14efdbd",
+      "text": "Observation of domain patterns in the topography map is due to surface corrugations associated with matching of mechanical compatibility conditions imposed by the neighbouring ferroelastic domains. The height difference between each domain is -1 to 1 nm in the dark while it turns to -1 to 3 nm under light. It is important to note that such phenomenon does not occur in every grain. Rather, the appearance of the domain patterns is dependent on the specific grain, which could be due to the non-uniform elemental distribution between grains which also leads to variation in structural properties 31 .",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_39104195b567",
+      "text": "In order to investigate the effect of bias on the evolution of ferroelastic domains, bias-dependent PFM measurement in dark conditions were performed to exclude the effects of photoinduced ionic motion or excited charge carriers. When high bias is applied to the tip during PFM measurements, local damage to the surface of the films occurs owing to strong ion migrations and sensitively fragile film surfaces. We checked that the sample is stable towards positive bias up to +2.5 V applied to the tip, whereas degradation starts when negative bias larger than -0.5 V is applied to the tip with applied AC bias of 2 V. Structural damage induced by large (>-4 V) negative bias is irreversible in our previous report 37 . The ionic motion depending on the positive and negative biases applied to the AFM tip is illustrated in Supplementary Fig. 4 37 . The effect of applying a bias voltage whether positive or negative is apparent from the amplitude plot in Fig. 3a . It can be seen that the amplitude always increases with bias voltage. Figure 3c , d shows the representative amplitude and phase maps acquired with a DC bias voltage of +2 V while Fig. 3e , f shows the same maps when applied DC voltage equals -0.2 V. The full series of the out-of-plane amplitude and phase maps are shown in Supplementary Fig. 5 . Note that the measurements are performed consecutively from 0 to +1 V, +2, 0, -0.2, -0.5, and then 0 V again. In addition to the dark condition, bias-dependent PFM measurements were carried out under light illumination as shown in Supplementary Fig. 6 . The ferroelastic domain patterns become clear in the amplitude map acquired at a DC bias of +2 V (Fig. 3c ). Interestingly, the response resembles that under light illumination in the absence of a DC bias (results shown in Fig. 1b ). The average amplitude signal of the map under light illumination (from Fig. 1b ) is ~1200 a.u. which is close to the results when +2 V is applied as shown in Fig. 3a . These results indicate that light illumination, thus, effect of photo-generated carriers, is not solely responsible for the increase in the piezoelectric response of the film. We also observe a switching of domains (PFM phase signal) when different polarity of bias voltages is applied as shown in Fig. 3b . The profiles are extracted from marked black and red lines in Fig. 3d , f . Specifically, the profiles exhibit alternating phase contrast along the domain pattern under an applied bias of +2 V and is opposite to the profile in the case of an applied voltage of -0.2 V. This flipping of the phase contrast possibly arises from external bias-induced stress which will be further clarified using XRD measurements.",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "4",
+        "3",
+        "5",
+        "6",
+        "1"
+      ],
+      "xrd_score": 5.3,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_2b5c613f0c5e",
+      "text": "Also, the bias-dependent response under illumination was qualitatively similar to that obtained under dark conditions (see Supplementary Fig. 6 for details). Such an inversion of the phase contrast may imply existence of ferroelectricity. We thus performed ferroelectric switching experiments to examine whether the change in stripes contrast originates from ferroelectricity of the perovskite. Results are shown in Supplementary Fig. 7 . Our results show that no reproducible evidence for polarization-electric field hysteresis loops are found in the experiments. Recently, polarized domain patterns have been observed using PFM in MAPbI 3 , however, switching of phases has not yet been observed. Therefore, these well-aligned stripe domains in our investigation are ferroelastic, and consequently do not show electrically switchable hysteretic piezoelectric behaviour consistent with earlier studies 29, 32, 33 . However, the ferroelastic domain structure couples indirectly to an applied external stimulus, which can be in form of an optical illumination or the electrical bias. The applied external stimulus causes ion migration through the sample and can lead to generation of stress or stress gradients of sufficiently high magnitudes. These elastic gradients then in turn can influence ferroelastic domains.",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "6",
+        "7"
+      ],
+      "xrd_score": 1.3,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_45a5a33a161c",
+      "text": "We now move on to the observation of the structural variation of the film upon applying bias voltages in dark. Figure 4a-c shows representatively topographic images in contact mode after applying +7 and -7 V. It is important to note that the previous PFM measurement (Fig. 3 ) requires AC bias applied to the sample and surface damage occurs at much lower bias voltages. Figure 4d shows the corresponding height profiles of the black, blue and red regions in the topography images of Fig. 4a-c . As for domain patterns, it is worth noting that stripe patterns appear strongly with positive bias showing 10-30 nm of height difference which is much higher than those observed in Fig. 1 . However, such patterns almost disappeared when negative bias was applied, although slight corrugated structures are still seen in Fig. 4d . We investigated structural variations of the surface when higher biases were applied but degradation at grain boundaries occurs as can be seen in Fig. 4c under -7 V voltage bias. Also, there is a new hump generated. We have previously shown that organic cations (MA + and FA + ) can escape to the top surface or dissociate and form such a hump, whereas, migration of halides do not damage the sample even at higher voltages 37 . As realized by the increase in the PFM amplitude signal (Fig. 3a ), it would be possible that the negative bias voltages can also form the domain patterns similar to the positive voltages which is also evident that the negative voltages increase the PFM amplitude signal (Fig. 3a ). However, it seems that the structural damage is readily induced by migration of organic cations under such conditions.",
+      "section_path": [
+        "Scanning probe based characterization."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "4",
+        "3",
+        "1"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7cba603a23f5",
+      "text": "To further clarify the observed structural and phase variations, we performed XRD measurements of the same test structures under similar conditions: light illumination vs dark and different levels of voltage bias. We deposited a thin layer of gold contact (5-10 nm) on top of the perovskite film for biasing the film normal to its surface. Detailed studies show that full width at half maximum (FWHM) of XRD diffraction peaks increase upon light illumination. We confirmed that there is no major damage during the measurement as the PbI 2 peak does not change significantly (PbI 2 being one of the expected degradation products reported before 40 ) and return to the almost original pattern after applying the stimuli (Supplementary Fig. 8 ). We note however, that some extend of amorphisation of the material could be present as shown by decreased peak intensities (Supplementary Note 1).",
+      "section_path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "8"
+      ],
+      "xrd_score": 6.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_2f8acca2be8b",
+      "text": "Primarily it is clear that peaks become broader under light illumination in XRD patterns. In particular, we zoomed the peak at around 37.5°that broadened the most and found that the peak returns to the original state only after the illumination but not after the bias (Supplementary Fig. 8 ). Also, the peak at around 44°( Supplementary Fig. 8 ) does not change under the light, however, the new peak extends from 43°(300) and has a maximum at around 44°. We compared peak intensities before and after the external stimuli for the first two peaks (13.9 and 19.5°) (Supplementary Fig. 8 ) in order to confirm crystallinity of the sample before and after the external stimuli. Under light illumination, the peak intensities return almost to the original values. However, significant changes are observed after applying bias voltages. For positive voltages, both peaks increase and slightly decrease when 0 V is applied again. Then, the peak intensities almost do not vary upon negative voltages and remains the same when 0 V is applied again. The reduced intensities after applying voltages suggest that the sample undergoes irreversible amorphisation to some extent (reduced crystallinity) after the bias voltages. Such reversible and irreversible variation of the peak is responsible for both reversible and irreversible chemistry and structural rearrangements, depending on the magnitude of applied bias or light intensity which can induce the observed peak broadening 41, 42 . Also, the peak broadening can be originated from reversible phase segregation 34 or reversible electric field induced phase conversion 41, 42 .",
+      "section_path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "8"
+      ],
+      "xrd_score": 13.4,
+      "peak_positions": [
+        37.5,
+        44.0,
+        43.0,
+        19.5
+      ],
+      "miller_indices": [
+        "(300)"
+      ]
+    },
+    {
+      "paragraph_id": "paragraph_45592fd651d2",
+      "text": "This peak broadening can be systematically studied by Williamson-Hall (W-H) analysis in order to analyse strain disorder induced by light and bias as shown in Fig. 5a . We have only chosen the (100) and (110) planes for the W-H analysis which is explained in Supplementary Note 2. The strain variation of light-induced metal halide solar cells ranges from 0.32 (dark) to 0.38 (light) in Supplementary Fig. 9 . Under illumination, applied strain is around 20% higher than that in the dark. Such a difference in strain disorder upon illumination would suggest that it is enough to generate structural variation not only on the surface, a so-called distorted tetragonal shape. This strain variation can explain why corrugated structures of the surface are very strong under illumination, as shown in Fig. 2 . Looking at the effect of positive bias shown in Supplementary Fig. 9 , the increase in strain disorder is moderate: around 10% when the applied voltage is <0.5 V. However, there is a linear growth in strain when +1 V is applied. The strain is ~30% higher than that in dark condition. These results correlate with bias-dependent d a b c 0 100 200 300 0 20 40 60 0 20 40 60 0 20 40 60 Profile (nm) -7 V Height (nm) + 7 V Pristine 250 nm 250 nm 250 nm Fig. 4 Effect of bias on structural variation of the surface. a 3D topography in non-contact mode in the dark, b after positive bias, +7 V, and c after negative bias -7 V. d Line profiles for the black, blue, and red regions in a-c",
+      "section_path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "5",
+        "9",
+        "2",
+        "4"
+      ],
+      "xrd_score": 3.1,
+      "peak_positions": [],
+      "miller_indices": [
+        "(100)",
+        "(110)"
+      ]
+    },
+    {
+      "paragraph_id": "paragraph_9d877f34b4eb",
+      "text": "PFM measurement previously discussed in Fig. 3 . As expected, it is obvious that positive bias makes stripe domains become clearer with light, and also PFM signals stronger including increases in strain disorder as shown in Figs. 2 and 4 . We can also see that negative bias (Supplementary Fig. 9 ) has a higher effect as changes can be seen even at -1 V. Consequently, cations such as organic ions give rise to a large strain rather than anions such as halide ions. Both biases play an important role in generating strains at the surface and bulk including ionic movement.",
+      "section_path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "3",
+        "2",
+        "9"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_560904f42749",
+      "text": "It is important to note that the effects of light and bias reported and discussed in the previous section only examined the surface of the sample using SPM. It will be useful to examine ionic motion horizontally in future work. Nevertheless, we can conclude from Fig. 5 , that light and bias generate strain disorder as well as structural change on the surface. In addition, much smaller sized organic ions can create strain if we exclude lightinduced halide ion movement in the dark condition with negative bias. Electrical transport measurements. Furthermore, we investigate the impact of our previous observations on charge transport and the I-V hysteresis of actual halide perovskite solar cell devices.",
+      "section_path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "5"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_4f89bede9664",
+      "text": "Here, we propose a mechanism illustrated in Fig. 6 . J-V curves of perovskite solar cells measured with reverse (-1.1 to +1.1 V) and forward (+1.1 to -1.1 V) scans are shown in Fig. 6a . A relatively high scan rate is used (0.1 V s -1 ) in order to evaluate the hysteresis effect and minimize the effect of slow ionic motion. As can be seen, there is a large performance difference. It is noticeable that FF (%) is significantly lower when measured from reverse scan due to increase in series resistance when measured from reverse bias. When J-V curve is scanned from the positive bias (reverse scan), the domains emerge structurally which is illustrated in Fig. 6b . These corrugated surfaces will provide multidirectional pathways for photo-generated charge carriers (holes) to be transported to a hole transport material (HTM), Spiro-MeOTAD. For an opposite bias, the surface of the film is going to be modified by migration of organic cations and removes the domain patterns or it can even cause severe damage to the perovskite-HTM interface as observed in Fig. 4c and this is illustrated in Fig. 6c . Consequently, lower series resistance is expected from the forward bias scan due to an effective hole extraction.",
+      "section_path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "6",
+        "4"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_4614db4b8cb2",
+      "text": "In order to observe charge separation behaviour of the domains, KPFM measurements under the light illumination were performed. Supplementary Fig. 10 shows a topography image with domains being present. When +2 V are applied to the tip during the KPFM measurement, the contact potential difference (CPD) varies within the grains similar to what is observed in the topography map as shown in Supplementary Fig. 10 . On the other hand, when -2 V is applied, no such variation within the grains is observed (Supplementary Fig. 10 ). Also, Supplementary Figure 10 shows CPD distributions, and median CPD is 59 mV higher when +2 V is applied to the tip compared to that of -2 V. This implies that the charge separation is more effective when +2 V is applied to the tip. A relevant energy band diagram of the perovskite-HTM interface when the positive bias and negative bias are applied to the top surface is illustrated in Fig. 6d , e respectively. Holes are actively transferred to the HTM from the perovskite layer for the positive bias whereas holes are piled up or can be trapped at the interfacial traps generated by organic cations for negative bias. Of course, there are also other factors such as ion migration, which has been convincingly linked to the origin of the I-V hysteresis that adjusts band alignment at the interfaces [18] [19] [20] [21] . However, our results clearly imply that the observed nanoscale structural variations can also cause imbalanced charge transport depending on sweeping bias polarity. There is a chance that surface modification occurs after deposition of other layers in solar cell devices, so the domains may not be the same as we have observed here. However, based on our XRD results, the strain under light and bias will occur within the film bulk.",
+      "section_path": [
+        "XRD analysis."
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "10",
+        "6"
+      ],
+      "xrd_score": 4.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_47cf0ca1e638",
+      "text": "Our findings clarify stripe pattern formation in halide perovskite grains and shed light onto stripe domain properties under changing light, bias and temperature conditions. Under illumination, corrugated structures on film surfaces were observed to be very strong, which also raised the PFM amplitude signal. Interestingly, the structure of the films when positive bias was applied shows similar results to the case under illumination, while negative bias removes uneven structures on the surface. Williams-Hall plot of XRD results show a pronounced correlation with strain disorder induced by light and bias. We conclude that the observed striation domains form in some grains that have corrugated structure, and their properties can be controlled, leading to strain disorder with changed external conditions such as light, bias, and temperature. Moreover, we propose a mechanism that such structural variation can cause I-V hysteresis. These results provide further understanding of the effects of nanoscale structural variations in solar cell operation and for improving the design of halide perovskite photovoltaic devices.",
+      "section_path": [
+        "Discussion"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_01bad3ecaff2",
+      "text": "The spray pyrolysis deposition method was used for a dense TiO 2 blocking layer of a 60 nm thickness (Compact-TiO 2 ) to deposit it onto a F-doped SnO 2 (FTO, Pilkington, TEC8) substrate. Here, a 20 × 10 -3 M titanium diisopropoxidebis (acetylacetonate) solution (Sigma Adrich) at 450 °C was also used to avoid direct contact between hole-conducting layer and FTO substrate. Approximately 80 nm think mesoporous TiO 2 (m-TiO 2 , Dyesol 30 NR-D) that has average roughly 50 nm nanoparticles, anatase phase, films were dissolved and coated onto the Compact-TiO 2 /FTO substrate by spin coating method with 5000 rpm for 10 s. The films were annealed at 100 °C for 10 min and calcined at 500 °C for 1 h in air for removal of the organic matter. Fabrication methods of the metal halide perovskite solutions are as follows: MAI (CH 3 NH 3 I) and FAI (NH 2 CH=NH 2 I) were firstly synthesized with reacting 30 mL hydroiodic acid (57% in water, Aldrich), 27.86 mL CH 3 NH 2 (40% in methanol, Junsei Chemical), and 15 g formamidine acetate (Aldrich) in a 250 mL round-bottom flask at 0 °C for 2 h with stirring. The precipitates were obtained using an evaporator at 50 °C for 1 h. The precipitated materials were dissolved in ethanol, recrystallinized with diethyl ether, and then dried at 60 °C in a vacuum oven for 24 h. As above, CH 3 NH 3 Br and NH 2 CH=NH 2 Br were also prepared with hydrobromic acid (48 wt% in water, Adrich). The desired perovskite solutions of 85FAPbI 3 15MAPbI 3 were spin-coated onto the mesoporous-TiO 2 /compact-TiO 2 /FTO substrate. The films were finally dried on a hot plate at 100 °C for 20 min. SPM measurements: AFM, PFM, KPFM. The PFM measurements were performed using a commercial AFM system (AIST-NT SmartSPM 1000) under ambient conditions at room temperature. Nitrogen gas was used for cleaning sample surfaces before measurements. PFM images were taken on the surface of the films after they were cleaned with nitrogen gas using Pt-coated (HQ:CSC 37/PT, µmasch, Force constant, k = 0.8 N m -1 ) Si cantilevers that possesses a range of resonance frequencies from 30 to 55 kHz for AFM and PFM. AC bias (1500-2000 mV) was applied to the PFM tips, the lowest one among the resonance peaks was chosen. All PFM data were obtained with out-of-plane and in-plane amplitude and phase maps at the same scan. Light sources were blocked for dark conditions. Tuneable white LED light sources that are not filtered were used for illumination at an intensity of 0.3 to 0.5 W cm -2 . DC bias was applied towards the tip or sample. KPFM measurements were carried out using diamond-coated conductive probes (DCP20, force constant, k = 48 N m -1 ) possessing a resonance frequency of 420 kHz. A heating stage with temperature controller (SRS, PTC10) was used for temperaturedependent AFM and KPFM measurements. In all PFM, AFM and KPFM measurements, the used scan rate is 1.0 Hz, and scan direction starts from bottom to top.",
+      "section_path": [
+        "Solar cell fabrication."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [
+        100.0,
+        0.0,
+        50.0,
+        60.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_ffc25c83111b",
+      "text": "The peak broadening of MA-FA perovskites was analysed using X-ray diffraction (PANalytical, Empyrean). LED white light located inside the diffractometer is used for light soaking of the sample at 0.3 kW cm -2 . The samples were connected to a controllable power supply with wire connections to apply positive and negative bias after Au deposition (EMITECH, K550X) onto the surface.",
+      "section_path": [
+        "XRD measurements."
+      ],
+      "section_type": "methods",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Fig. 1 Fig. 1 Light-induced piezoresponse signal enhancement and stripe domains. a Schematic illustration of photo-assisted scanning probe microscopy (SPM) with a perovskite film on compact-TiO 2 /mesoporous-TiO 2 /FTO test structure under illumination. b 3D piezoresponse amplitude map of (out-of-plane) with and without illumination. c Out-of-plane amplitude map in PFM under light condition, and d the corresponding out of plane phase map. e Out-of-plane amplitude map in PFM in dark condition, and f the corresponding out of plane phase map",
+      "graphic_targets": [],
+      "coords": "3,43.60,332.08,508.13,7.21;3,43.60,342.29,506.65,8.29;3,43.60,353.00,508.11,7.21;3,43.60,363.43,302.09,7.21;3,118.36,251.75,355.00,70.36",
+      "graphic_coords": "3,118.36,251.75,355.00,70.36",
+      "figure_type": null,
+      "xrd_score": 9.3,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_0f3ca4b469a9",
+        "paragraph_70890d889327",
+        "paragraph_06c4aa2b39fb",
+        "paragraph_de2c6268982f",
+        "paragraph_39104195b567",
+        "paragraph_45a5a33a161c"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_ec54e8cc9354",
+        "paragraph_2a7406b57729",
+        "paragraph_57cc90136f8c",
+        "paragraph_0f3ca4b469a9",
+        "paragraph_70890d889327",
+        "paragraph_06c4aa2b39fb",
+        "paragraph_de2c6268982f",
+        "paragraph_b3b36ec4a039",
+        "paragraph_67606091aad4",
+        "paragraph_0f3602433138",
+        "paragraph_5744f14efdbd",
+        "paragraph_39104195b567",
+        "paragraph_2b5c613f0c5e",
+        "paragraph_45a5a33a161c",
+        "paragraph_7cba603a23f5",
+        "paragraph_2f8acca2be8b",
+        "paragraph_45592fd651d2",
+        "paragraph_9d877f34b4eb"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Fig. 2 Fig. 2 Light-induced structural surface variation of MA-FA perovskite. 3D topography a with light, b without light, and c corresponding line profiles for topography in under light (red) and in the dark (blue). The inset represents rate enhancement at the marked regions",
+      "graphic_targets": [],
+      "coords": "4,43.60,341.83,505.66,7.21;4,43.60,352.57,393.74,6.93;4,126.19,215.54,145.72,117.64",
+      "graphic_coords": "4,126.19,215.54,145.72,117.64",
+      "figure_type": null,
+      "xrd_score": 7.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_b3b36ec4a039",
+        "paragraph_0f3602433138",
+        "paragraph_45592fd651d2",
+        "paragraph_9d877f34b4eb"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_0f3ca4b469a9",
+        "paragraph_70890d889327",
+        "paragraph_06c4aa2b39fb",
+        "paragraph_de2c6268982f",
+        "paragraph_b3b36ec4a039",
+        "paragraph_67606091aad4",
+        "paragraph_0f3602433138",
+        "paragraph_5744f14efdbd",
+        "paragraph_39104195b567",
+        "paragraph_2b5c613f0c5e",
+        "paragraph_45a5a33a161c",
+        "paragraph_7cba603a23f5",
+        "paragraph_2f8acca2be8b",
+        "paragraph_45592fd651d2",
+        "paragraph_9d877f34b4eb",
+        "paragraph_560904f42749",
+        "paragraph_4f89bede9664",
+        "paragraph_4614db4b8cb2",
+        "paragraph_47cf0ca1e638"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Fig. 3 Fig. 3 Effect of applying positive and negative bias to the film surface. a Graph of average amplitude signals under different bias. b Line profile of black line in d, and red line in f; PFM c out-of-plane amplitude map and d out-of-plane phase map under bias voltage of +2 V; e out-of-plane amplitude map and f out-of-plane phase map under bias voltage of -0.2 V",
+      "graphic_targets": [],
+      "coords": "5,43.60,349.09,508.10,7.97;5,43.60,359.52,508.11,7.97;5,43.60,370.01,185.00,7.97;5,63.46,250.85,462.76,89.80",
+      "graphic_coords": "5,63.46,250.85,462.76,89.80",
+      "figure_type": null,
+      "xrd_score": 8.8,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_67606091aad4",
+        "paragraph_39104195b567",
+        "paragraph_45a5a33a161c",
+        "paragraph_9d877f34b4eb"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_70890d889327",
+        "paragraph_06c4aa2b39fb",
+        "paragraph_de2c6268982f",
+        "paragraph_b3b36ec4a039",
+        "paragraph_67606091aad4",
+        "paragraph_0f3602433138",
+        "paragraph_5744f14efdbd",
+        "paragraph_39104195b567",
+        "paragraph_2b5c613f0c5e",
+        "paragraph_45a5a33a161c",
+        "paragraph_7cba603a23f5",
+        "paragraph_2f8acca2be8b",
+        "paragraph_45592fd651d2",
+        "paragraph_9d877f34b4eb",
+        "paragraph_560904f42749",
+        "paragraph_4f89bede9664",
+        "paragraph_4614db4b8cb2",
+        "paragraph_47cf0ca1e638"
+      ]
+    },
+    {
+      "figure_id": "fig_5",
+      "label": "54",
+      "normalized_label": "54",
+      "caption": "Fig. 5 Fig. 4 Fig.5Photo-induced and bias-dependent Williamson-Hall analysis. a Strain disorder variations under bias and light from successive in-situ XRD measurements (see also Supplementary Figs.8 and 9). b Schematic illustration of the octahedral distortion induced by bias voltage and light illumination",
+      "graphic_targets": [],
+      "coords": "6,43.60,564.52,484.83,7.21;6,43.60,574.95,508.15,7.21;6,83.68,397.01,171.88,139.00",
+      "graphic_coords": "6,83.68,397.01,171.88,139.00",
+      "figure_type": null,
+      "xrd_score": 4.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/06_W2914434476_light-and-bias-induced-structural-variations-in-metal-halide-perovskit/figures/fig_5.png"
+      ],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Fig. 6 Fig. 6 Proposed mechanism of the I-V hysteresis caused by structural variations. a Forward bias (+1.1 to -1.1 V) and reverse bias (-1.1 to +1.1 V) I-V curves measured at a rate of 0.1 V s -1 . Inset shows device performance parameters. Schematic illustration of perovskite surface when b positive bias and c negative bias are applied to the top surface. Corresponding band diagrams of perovskite/HTM interface when d positive bias and e negative bias is applied to the HTM",
+      "graphic_targets": [],
+      "coords": "7,43.60,699.74,504.73,7.97;7,43.60,708.98,508.12,8.61;7,43.60,720.88,502.90,7.21;7,43.60,731.56,66.38,6.93;7,142.72,504.17,293.08,187.12",
+      "graphic_coords": "7,142.72,504.17,293.08,187.12",
+      "figure_type": null,
+      "xrd_score": 10.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_39104195b567",
+        "paragraph_2b5c613f0c5e",
+        "paragraph_4f89bede9664",
+        "paragraph_4614db4b8cb2"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b3b36ec4a039",
+        "paragraph_67606091aad4",
+        "paragraph_0f3602433138",
+        "paragraph_5744f14efdbd",
+        "paragraph_39104195b567",
+        "paragraph_2b5c613f0c5e",
+        "paragraph_45a5a33a161c",
+        "paragraph_7cba603a23f5",
+        "paragraph_2f8acca2be8b",
+        "paragraph_45592fd651d2",
+        "paragraph_9d877f34b4eb",
+        "paragraph_560904f42749",
+        "paragraph_4f89bede9664",
+        "paragraph_4614db4b8cb2",
+        "paragraph_47cf0ca1e638",
+        "paragraph_01bad3ecaff2",
+        "paragraph_ffc25c83111b"
+      ]
+    }
+  ],
+  "tables": [],
+  "references": [
+    {
+      "reference_id": "b0",
+      "title": "Organometal halide perovskites as visible-light sensitizers for photovoltaic cells",
+      "doi": null,
+      "year": "2009",
+      "authors": [
+        "A Kojima",
+        "K Teshima",
+        "Y Shirai",
+        "T Miyasaka"
+      ],
+      "raw_text": "Organometal halide perovskites as visible-light sensitizers for photovoltaic cells A Kojima K Teshima Y Shirai T Miyasaka J. Am. Chem. Soc 131 2009 Kojima, A., Teshima, K., Shirai, Y. & Miyasaka, T. Organometal halide perovskites as visible-light sensitizers for photovoltaic cells. J. Am. Chem. Soc. 131, 6050-6051 (2009)."
+    },
+    {
+      "reference_id": "b1",
+      "title": "Solar cell efficiency tables (version 51)",
+      "doi": null,
+      "year": "2018",
+      "authors": [
+        "M Green"
+      ],
+      "raw_text": "Solar cell efficiency tables (version 51) M A Green Prog. Photovolt. Res Appl 26 2018 Green, M. A. et al. Solar cell efficiency tables (version 51). Prog. Photovolt. Res Appl. 26, 3-12 (2018)."
+    },
+    {
+      "reference_id": "b2",
+      "title": "Solvent engineering for high-performance inorganic-organic hybrid perovskite solar cells",
+      "doi": null,
+      "year": "2014",
+      "authors": [
+        "N Jeon"
+      ],
+      "raw_text": "Solvent engineering for high-performance inorganic-organic hybrid perovskite solar cells N J Jeon Nat. Mater 13 2014 Jeon, N. J. et al. Solvent engineering for high-performance inorganic-organic hybrid perovskite solar cells. Nat. Mater. 13, 897-903 (2014)."
+    },
+    {
+      "reference_id": "b3",
+      "title": "Compositional engineering of perovskite materials for highperformance solar cells",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "N Jeon"
+      ],
+      "raw_text": "Compositional engineering of perovskite materials for highperformance solar cells N J Jeon Nature 517 2015 Jeon, N. J. et al. Compositional engineering of perovskite materials for high- performance solar cells. Nature 517, 476-480 (2015)."
+    },
+    {
+      "reference_id": "b4",
+      "title": "High-performance photovoltaic perovskite layers fabricated through intramolecular exchange",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "W Yang"
+      ],
+      "raw_text": "High-performance photovoltaic perovskite layers fabricated through intramolecular exchange W S Yang Science 348 2015 Yang, W. S. et al. High-performance photovoltaic perovskite layers fabricated through intramolecular exchange. Science 348, 1234-1237 (2015)."
+    },
+    {
+      "reference_id": "b5",
+      "title": "Transport, optical, and magnetic properties of the conducting halide perovskite CH 3 NH 3 Snl 3",
+      "doi": null,
+      "year": "1995",
+      "authors": [
+        "D Mitzi",
+        "C Feild",
+        "Z Schlesinger",
+        "R Laibowitz"
+      ],
+      "raw_text": "Transport, optical, and magnetic properties of the conducting halide perovskite CH 3 NH 3 Snl 3 D B Mitzi C Feild Z Schlesinger R B Laibowitz J. Solid State Chem 114 1995 Mitzi, D. B., Feild, C., Schlesinger, Z. & Laibowitz, R. B. Transport, optical, and magnetic properties of the conducting halide perovskite CH 3 NH 3 Snl 3 . J. Solid State Chem. 114, 159-163 (1995)."
+    },
+    {
+      "reference_id": "b6",
+      "title": "Electron-hole diffusion lengths exceeding 1 micrometer in an organometal trihalide perovskite absorber",
+      "doi": null,
+      "year": "2013",
+      "authors": [
+        "S Stranks"
+      ],
+      "raw_text": "Electron-hole diffusion lengths exceeding 1 micrometer in an organometal trihalide perovskite absorber S D Stranks Science 342 2013 Stranks, S. D. et al. Electron-hole diffusion lengths exceeding 1 micrometer in an organometal trihalide perovskite absorber. Science 342, 341-344 (2013)."
+    },
+    {
+      "reference_id": "b7",
+      "title": "Chemical management for colorful, efficient, and stable inorganic-organic hybrid nanostructured solar cells",
+      "doi": null,
+      "year": "2013",
+      "authors": [
+        "J Noh",
+        "S Im",
+        "J Heo",
+        "T Mandal"
+      ],
+      "raw_text": "Chemical management for colorful, efficient, and stable inorganic-organic hybrid nanostructured solar cells J H Noh S H Im J H Heo T N Mandal Nano. Lett 13 2013 Noh, J. H., Im, S. H., Heo, J. H. & Mandal, T. N. Chemical management for colorful, efficient, and stable inorganic-organic hybrid nanostructured solar cells. Nano. Lett. 13, 1764-1769 (2013)."
+    },
+    {
+      "reference_id": "b8",
+      "title": "The dynamics of methylammonium ions in hybrid organic-inorganic perovskite solar cells",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "A Leguy"
+      ],
+      "raw_text": "The dynamics of methylammonium ions in hybrid organic-inorganic perovskite solar cells A M A Leguy Nat. Comm 6 7124 2015 Leguy, A. M. A. et al. The dynamics of methylammonium ions in hybrid organic-inorganic perovskite solar cells. Nat. Comm. 6, 7124 (2015)."
+    },
+    {
+      "reference_id": "b9",
+      "title": "Revealing underlying processes involved in light soaking effects and hysteresis phenomena in perovskite solar cells",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "C Zhao"
+      ],
+      "raw_text": "Revealing underlying processes involved in light soaking effects and hysteresis phenomena in perovskite solar cells C Zhao Adv. Energy Mater 5 1500279 2015 Zhao, C. et al. Revealing underlying processes involved in light soaking effects and hysteresis phenomena in perovskite solar cells. Adv. Energy Mater. 5, 1500279 (2015)."
+    },
+    {
+      "reference_id": "b10",
+      "title": "Hysteresis and transient behavior in current-voltage measurements of hybridperovskite absorber solar cells",
+      "doi": null,
+      "year": "2014",
+      "authors": [
+        "E Unger",
+        "E Hoke",
+        "C Bailie",
+        "W Nguyen",
+        "A Bowring"
+      ],
+      "raw_text": "Hysteresis and transient behavior in current-voltage measurements of hybridperovskite absorber solar cells E L Unger E T Hoke C D Bailie W H Nguyen A R Bowring Energy Environ. Sci 7 2014 Unger, E. L., Hoke, E. T., Bailie, C. D., Nguyen, W. H. & Bowring, A. R. Hysteresis and transient behavior in current-voltage measurements of hybrid- perovskite absorber solar cells. Energy Environ. Sci. 7, 3690-3698 (2014)."
+    },
+    {
+      "reference_id": "b11",
+      "title": "Anomalous hysteresis in perovskite solar cells",
+      "doi": null,
+      "year": "2014",
+      "authors": [
+        "H Snaith"
+      ],
+      "raw_text": "Anomalous hysteresis in perovskite solar cells H J Snaith J. Phys. Chem. Lett 5 2014 Snaith, H. J. et al. Anomalous hysteresis in perovskite solar cells. J. Phys. Chem. Lett. 5, 1511-1515 (2014)."
+    },
+    {
+      "reference_id": "b12",
+      "title": "Understanding the rate-dependent J-V hysteresis, slow time component, and aging in CH 3 NH 3 PbI 3 perovskite solar cells: the role of a compensated electric field",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "W Tress"
+      ],
+      "raw_text": "Understanding the rate-dependent J-V hysteresis, slow time component, and aging in CH 3 NH 3 PbI 3 perovskite solar cells: the role of a compensated electric field W Tress Energy Environ. Sci 8 2015 Tress, W. et al. Understanding the rate-dependent J-V hysteresis, slow time component, and aging in CH 3 NH 3 PbI 3 perovskite solar cells: the role of a compensated electric field. Energy Environ. Sci. 8, 995-1004 (2015)."
+    },
+    {
+      "reference_id": "b13",
+      "title": "Charge selective contacts, mobile ions and anomalous hysteresis in organic-inorganic perovskite solar cells",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "Y Zhang"
+      ],
+      "raw_text": "Charge selective contacts, mobile ions and anomalous hysteresis in organic-inorganic perovskite solar cells Y Zhang Mater. Horiz 2 2015 Zhang, Y. et al. Charge selective contacts, mobile ions and anomalous hysteresis in organic-inorganic perovskite solar cells. Mater. Horiz. 2, 315-322 (2015)."
+    },
+    {
+      "reference_id": "b14",
+      "title": "Anomalously large interface charge in polarityswitchable photovoltaic devices: an indication of mobile ions in organic-inorganic halide perovskites",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "Y Zhao"
+      ],
+      "raw_text": "Anomalously large interface charge in polarityswitchable photovoltaic devices: an indication of mobile ions in organic-inorganic halide perovskites Y Zhao Energy Environ. Sci 8 2015 Zhao, Y. et al. Anomalously large interface charge in polarityswitchable photovoltaic devices: an indication of mobile ions in organic-inorganic halide perovskites. Energy Environ. Sci. 8, 1256-1260 (2015)."
+    },
+    {
+      "reference_id": "b15",
+      "title": "Ferroelectricity of CH 3 NH 3 PbI 3 perovskite",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "Z Fan"
+      ],
+      "raw_text": "Ferroelectricity of CH 3 NH 3 PbI 3 perovskite Z Fan J. Phys. Chem. Lett 6 2015 Fan, Z. et al. Ferroelectricity of CH 3 NH 3 PbI 3 perovskite. J. Phys. Chem. Lett. 6, 1155-1161 (2015)."
+    },
+    {
+      "reference_id": "b16",
+      "title": "Capacitive dark currents, hysteresis, and electrode polarization in lead halide perovskite solar cells",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "O Almora"
+      ],
+      "raw_text": "Capacitive dark currents, hysteresis, and electrode polarization in lead halide perovskite solar cells O Almora J. Phys. Chem. Lett 6 2015 Almora, O. et al. Capacitive dark currents, hysteresis, and electrode polarization in lead halide perovskite solar cells. J. Phys. Chem. Lett. 6, 1645-1652 (2015)."
+    },
+    {
+      "reference_id": "b17",
+      "title": "Can slow-moving ions explain hysteresis in the current-voltage curves of perovskite solar cells?",
+      "doi": null,
+      "year": "2016",
+      "authors": [
+        "G Richardson"
+      ],
+      "raw_text": "Can slow-moving ions explain hysteresis in the current-voltage curves of perovskite solar cells? G Richardson Energy Environ. Sci 9 2016 Richardson, G. et al. Can slow-moving ions explain hysteresis in the current-voltage curves of perovskite solar cells? Energy Environ. Sci. 9, 1476-1485 (2016)."
+    },
+    {
+      "reference_id": "b18",
+      "title": "Defect migration in methylammonium lead iodide and its role in perovskite solar cell operation",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "J Azpiroz",
+        "E Mosconi",
+        "J Bisquert",
+        "F Angelis"
+      ],
+      "raw_text": "Defect migration in methylammonium lead iodide and its role in perovskite solar cell operation J M Azpiroz E Mosconi J Bisquert F D Angelis Energy Environ. Sci 8 2015 Azpiroz, J. M., Mosconi, E., Bisquert, J. & Angelis, F. D. Defect migration in methylammonium lead iodide and its role in perovskite solar cell operation. Energy Environ. Sci. 8, 2118-2127 (2015)."
+    },
+    {
+      "reference_id": "b19",
+      "title": "Grain boundary dominated ion migration in polycrystalline organic-inorganic halide perovskite films",
+      "doi": null,
+      "year": "2016",
+      "authors": [
+        "Y Shao"
+      ],
+      "raw_text": "Grain boundary dominated ion migration in polycrystalline organic-inorganic halide perovskite films Y Shao Energy Environ. Sci 9 2016 Shao, Y. et al. Grain boundary dominated ion migration in polycrystalline organic-inorganic halide perovskite films. Energy Environ. Sci. 9, 1752-1759 (2016)."
+    },
+    {
+      "reference_id": "b20",
+      "title": "Giant switchable photovoltaic effect in organometal trihalide perovskite devices",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "Z Xiao"
+      ],
+      "raw_text": "Giant switchable photovoltaic effect in organometal trihalide perovskite devices Z G Xiao Nat. Mater 14 2015 Xiao, Z. G. et al. Giant switchable photovoltaic effect in organometal trihalide perovskite devices. Nat. Mater. 14, 193-198 (2015)."
+    },
+    {
+      "reference_id": "b21",
+      "title": "Role of methylammonium orientation in ion diffusion and current-voltage hysteresis in the CH 3 NH 3 PbI 3 perovskite",
+      "doi": null,
+      "year": "2017",
+      "authors": [
+        "C Tong",
+        "W Geng",
+        "O Prezhdo",
+        "L Liu"
+      ],
+      "raw_text": "Role of methylammonium orientation in ion diffusion and current-voltage hysteresis in the CH 3 NH 3 PbI 3 perovskite C J Tong W Geng O V Prezhdo L M Liu ACS Energy Lett 2 2017 Tong, C. J., Geng, W., Prezhdo, O. V. & Liu, L. M. Role of methylammonium orientation in ion diffusion and current-voltage hysteresis in the CH 3 NH 3 PbI 3 perovskite. ACS Energy Lett. 2, 1997-2004 (2017)."
+    },
+    {
+      "reference_id": "b22",
+      "title": "Exploring anomalous polarization dynamics in organometallic halide perovskites",
+      "doi": null,
+      "year": "2018",
+      "authors": [
+        "M Ahmadi"
+      ],
+      "raw_text": "Exploring anomalous polarization dynamics in organometallic halide perovskites M Ahmadi Adv. Mater 30 1705298 2018 Ahmadi, M. et al. Exploring anomalous polarization dynamics in organometallic halide perovskites. Adv. Mater. 30, 1705298 (2018)."
+    },
+    {
+      "reference_id": "b23",
+      "title": "Grain boundary engineering of halide perovskite CH 3 NH 3 PbI 3 solar cells with photochemically active additives",
+      "doi": null,
+      "year": "2018",
+      "authors": [
+        "N Faraji",
+        "C Qin",
+        "T Matsushima",
+        "C Adachi",
+        "J Seidel"
+      ],
+      "raw_text": "Grain boundary engineering of halide perovskite CH 3 NH 3 PbI 3 solar cells with photochemically active additives N Faraji C Qin T Matsushima C Adachi J Seidel J. Phys. Chem. C 122 2018 Faraji, N., Qin, C., Matsushima, T., Adachi, C. & Seidel, J. Grain boundary engineering of halide perovskite CH 3 NH 3 PbI 3 solar cells with photochemically active additives. J. Phys. Chem. C. 122, 4817-4821 (2018)."
+    },
+    {
+      "reference_id": "b24",
+      "title": "Direct observation of ferroelectric domains in solutionprocessed CH 3 NH 3 PbI 3 perovskite thin films",
+      "doi": null,
+      "year": "2014",
+      "authors": [
+        "Y Kutes"
+      ],
+      "raw_text": "Direct observation of ferroelectric domains in solutionprocessed CH 3 NH 3 PbI 3 perovskite thin films Y Kutes J. Phys. Chem. Lett 5 2014 Kutes, Y. et al. Direct observation of ferroelectric domains in solution- processed CH 3 NH 3 PbI 3 perovskite thin films. J. Phys. Chem. Lett. 5, 3335-3339 (2014)."
+    },
+    {
+      "reference_id": "b25",
+      "title": "Polarization switching and light-enhanced piezoelectricity in lead halide perovskites",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "M Coll"
+      ],
+      "raw_text": "Polarization switching and light-enhanced piezoelectricity in lead halide perovskites M Coll J. Phys. Chem. Lett 6 2015 Coll, M. et al. Polarization switching and light-enhanced piezoelectricity in lead halide perovskites. J. Phys. Chem. Lett. 6, 1408-1413 (2015)."
+    },
+    {
+      "reference_id": "b26",
+      "title": "Tetragonal CH 3 NH 3 PbI 3 is ferroelectric",
+      "doi": null,
+      "year": "2017",
+      "authors": [
+        "Y Rakita"
+      ],
+      "raw_text": "Tetragonal CH 3 NH 3 PbI 3 is ferroelectric Y Rakita Proc. Natl Acad. Sci 6 2017 E5504-E5512 Rakita, Y. et al. Tetragonal CH 3 NH 3 PbI 3 is ferroelectric. Proc. Natl Acad. Sci. 6, E5504-E5512 (2017)."
+    },
+    {
+      "reference_id": "b27",
+      "title": "Ferroelectric domains in methylammonium lead iodide perovskite thin-films",
+      "doi": null,
+      "year": "2017",
+      "authors": [
+        "H Ro¨hm",
+        "T Leonhard",
+        "M Hoffmann",
+        "A Colsmann"
+      ],
+      "raw_text": "Ferroelectric domains in methylammonium lead iodide perovskite thin-films H Ro¨hm T Leonhard M J Hoffmann A Colsmann Energy Environ. Sci 10 2017 Ro¨hm, H., Leonhard, T., Hoffmann, M. J. & Colsmann, A. Ferroelectric domains in methylammonium lead iodide perovskite thin-films. Energy Environ. Sci. 10, 950-955 (2017)."
+    },
+    {
+      "reference_id": "b28",
+      "title": "CH 3 NH 3 PbI 3 perovskites: ferroelasticity revealed",
+      "doi": null,
+      "year": "2017",
+      "authors": [
+        "E Strelcov"
+      ],
+      "raw_text": "CH 3 NH 3 PbI 3 perovskites: ferroelasticity revealed E Strelcov Sci. Adv 3 1602165 2017 Strelcov, E. et al. CH 3 NH 3 PbI 3 perovskites: ferroelasticity revealed. Sci. Adv. 3, e1602165 (2017)."
+    },
+    {
+      "reference_id": "b29",
+      "title": "Composition-dependent photoluminescence intensity and prolonged recombination lifetime of perovskite CH 3 NH 3 PbBr 3-x Cl x films",
+      "doi": null,
+      "year": "2014",
+      "authors": [
+        "M Zhang"
+      ],
+      "raw_text": "Composition-dependent photoluminescence intensity and prolonged recombination lifetime of perovskite CH 3 NH 3 PbBr 3-x Cl x films M Zhang Chem. Comm 50 2014 Zhang, M. et al. Composition-dependent photoluminescence intensity and prolonged recombination lifetime of perovskite CH 3 NH 3 PbBr 3-x Cl x films. Chem. Comm. 50, 11727-11730 (2014)."
+    },
+    {
+      "reference_id": "b30",
+      "title": "Intrinsic halide segregation at nanometer scale determines the high efficiency of mixed cation/mixed halide perovskite solar cells",
+      "doi": null,
+      "year": "2016",
+      "authors": [
+        "P Gratia"
+      ],
+      "raw_text": "Intrinsic halide segregation at nanometer scale determines the high efficiency of mixed cation/mixed halide perovskite solar cells P Gratia J. Am. Chem. Soc 138 2016 Gratia, P. et al. Intrinsic halide segregation at nanometer scale determines the high efficiency of mixed cation/mixed halide perovskite solar cells. J. Am. Chem. Soc. 138, 15821-15824 (2016)."
+    },
+    {
+      "reference_id": "b31",
+      "title": "Ferroelastic fingerprints in methylammonium lead iodide perovskite",
+      "doi": null,
+      "year": "2017",
+      "authors": [
+        "I Hermes"
+      ],
+      "raw_text": "Ferroelastic fingerprints in methylammonium lead iodide perovskite I M Hermes J. Phys. Chem. C 120 2017 Hermes, I. M. et al. Ferroelastic fingerprints in methylammonium lead iodide perovskite. J. Phys. Chem. C. 120, 5724-5731 (2017)."
+    },
+    {
+      "reference_id": "b32",
+      "title": "Direct observation of intrinsic twin domains in tetragonal CH 3 NH 3 PbI 3",
+      "doi": null,
+      "year": "2017",
+      "authors": [
+        "M Rothmann"
+      ],
+      "raw_text": "Direct observation of intrinsic twin domains in tetragonal CH 3 NH 3 PbI 3 M U Rothmann Nat. Comm 8 14547 2017 Rothmann, M. U. et al. Direct observation of intrinsic twin domains in tetragonal CH 3 NH 3 PbI 3 . Nat. Comm. 8, 14547 (2017)."
+    },
+    {
+      "reference_id": "b33",
+      "title": "Reversible photo-induced trap formation in mixedhalide hybrid perovskites for photovoltaics",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "E Hoke"
+      ],
+      "raw_text": "Reversible photo-induced trap formation in mixedhalide hybrid perovskites for photovoltaics E T Hoke Chem. Sci 6 2015 Hoke, E. T. et al. Reversible photo-induced trap formation in mixedhalide hybrid perovskites for photovoltaics. Chem. Sci. 6, 613-617 (2015)."
+    },
+    {
+      "reference_id": "b34",
+      "title": "Light-induced lattice expansion leads to high-efficiency perovskite solar cells",
+      "doi": null,
+      "year": "2018",
+      "authors": [
+        "H Tsai"
+      ],
+      "raw_text": "Light-induced lattice expansion leads to high-efficiency perovskite solar cells H Tsai Science 360 2018 Tsai, H. et al. Light-induced lattice expansion leads to high-efficiency perovskite solar cells. Science 360, 67-70 (2018)."
+    },
+    {
+      "reference_id": "b35",
+      "title": "Benefit of grain boundaries in organic-inorganic halide planar perovskite solar cells",
+      "doi": null,
+      "year": "2015",
+      "authors": [
+        "J Yun"
+      ],
+      "raw_text": "Benefit of grain boundaries in organic-inorganic halide planar perovskite solar cells J S Yun J. Phys. Chem. Lett 6 2015 Yun, J. S. et al. Benefit of grain boundaries in organic-inorganic halide planar perovskite solar cells. J. Phys. Chem. Lett. 6, 875-880 (2015)."
+    },
+    {
+      "reference_id": "b36",
+      "title": "Critical role of grain boundaries for ion migration in formamidinium and methylammonium lead halide perovskite solar cells",
+      "doi": null,
+      "year": "2016",
+      "authors": [
+        "J Yun"
+      ],
+      "raw_text": "Critical role of grain boundaries for ion migration in formamidinium and methylammonium lead halide perovskite solar cells J S Yun Adv. Energy Mater 6 1600330 2016 Yun, J. S. et al. Critical role of grain boundaries for ion migration in formamidinium and methylammonium lead halide perovskite solar cells. Adv. Energy Mater. 6, 1600330 (2016)."
+    },
+    {
+      "reference_id": "b37",
+      "title": "Octahedral tilting instabilities in inorganic halide perovskites",
+      "doi": null,
+      "year": "2018",
+      "authors": [
+        "J Bechtel",
+        "A Ven"
+      ],
+      "raw_text": "Octahedral tilting instabilities in inorganic halide perovskites J S Bechtel A V Ven Phys. Rev. Mater 2 25401 2018 Bechtel, J. S. & Ven, A. V. Octahedral tilting instabilities in inorganic halide perovskites. Phys. Rev. Mater. 2, 025401 (2018)."
+    },
+    {
+      "reference_id": "b38",
+      "title": "Thermomechanical behavior of organic-inorganic halide perovskites for solar cells",
+      "doi": null,
+      "year": "2018",
+      "authors": [
+        "C Ramirez",
+        "S Yadavalli",
+        "H Garces",
+        "Y Zhou",
+        "N Padture"
+      ],
+      "raw_text": "Thermomechanical behavior of organic-inorganic halide perovskites for solar cells C Ramirez S K Yadavalli H F Garces Y Zhou N P Padture Scr. Mater 150 2018 Ramirez, C., Yadavalli, S. K., Garces, H. F., Zhou, Y. & Padture, N. P. Thermo- mechanical behavior of organic-inorganic halide perovskites for solar cells. Scr. Mater. 150, 36-41 (2018)."
+    },
+    {
+      "reference_id": "b39",
+      "title": "Humidity-induced degradation via grain boundaries of HC (NH 2 ) 2 PbI 3 planar perovskite solar cells",
+      "doi": null,
+      "year": "2018",
+      "authors": [
+        "J Yun"
+      ],
+      "raw_text": "Humidity-induced degradation via grain boundaries of HC (NH 2 ) 2 PbI 3 planar perovskite solar cells J S Yun Adv. Funct. Mater 28 1705363 2018 Yun, J. S. et al. Humidity-induced degradation via grain boundaries of HC (NH 2 ) 2 PbI 3 planar perovskite solar cells. Adv. Funct. Mater. 28, 1705363 (2018)."
+    },
+    {
+      "reference_id": "b40",
+      "title": "Electric-field-driven reversible conversion between methylammonium lead triiodide perovskites and lead iodide at elevated temperatures",
+      "doi": null,
+      "year": "2016",
+      "authors": [
+        "Y Yuan"
+      ],
+      "raw_text": "Electric-field-driven reversible conversion between methylammonium lead triiodide perovskites and lead iodide at elevated temperatures Y Yuan Adv. Energy Mater 6 1501803 2016 Yuan, Y. et al. Electric-field-driven reversible conversion between methylammonium lead triiodide perovskites and lead iodide at elevated temperatures. Adv. Energy Mater. 6, 1501803 (2016)."
+    },
+    {
+      "reference_id": "b41",
+      "title": "Partially reversible photoinduced chemical changes in a mixed-ion perovskite material for solar cells",
+      "doi": null,
+      "year": "2017",
+      "authors": [
+        "U Cappel"
+      ],
+      "raw_text": "Partially reversible photoinduced chemical changes in a mixed-ion perovskite material for solar cells U B Cappel ACS Appl. Mater. Interfaces 9 34970 2017 Cappel, U. B. et al. Partially reversible photoinduced chemical changes in a mixed-ion perovskite material for solar cells. ACS Appl. Mater. Interfaces 9, 34970 (2017)."
+    }
+  ],
+  "counts": {
+    "sections": 8,
+    "paragraphs": 24,
+    "results_paragraphs": 19,
+    "xrd_paragraphs": 10,
+    "figures": 5,
+    "xrd_figures": 5,
+    "tables": 0,
+    "references": 42
+  }
+}

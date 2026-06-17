@@ -1,0 +1,53 @@
+{
+  "authors": [
+    "Dohyung Kim",
+    "Jae Sung Yun",
+    "Pankaj Sharma",
+    "Da Seul Lee",
+    "Jincheol Kim",
+    "Arman Mahboubi Soufiani",
+    "Shujuan Huang",
+    "Martin A. Green",
+    "Anita Ho‐Baillie",
+    "Jan Seidel"
+  ],
+  "cited_by_count": 127,
+  "doi": "10.1038/s41467-019-08364-1",
+  "download": {
+    "content_type": "application/pdf",
+    "output_path": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/06_W2914434476_light-and-bias-induced-structural-variations-in-metal-halide-perovskit.pdf",
+    "page_count": 9,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://www.nature.com/articles/s41467-019-08364-1.pdf",
+    "resolved_url": "https://www.nature.com/articles/s41467-019-08364-1.pdf",
+    "retrieved_at": "2026-06-17T23:47:38.319741+00:00",
+    "sha256": "2b5f35bc0c02b619971b762d4d7f86678b28cbc0ad1299c8ac125fdee13a6b92",
+    "size_bytes": 1580624
+  },
+  "journal": "Nature Communications",
+  "language": "en",
+  "matched_query": "\"metal halide perovskite\" XRD",
+  "material_score": 76,
+  "open_access": {
+    "any_repository_has_fulltext": true,
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.nature.com/articles/s41467-019-08364-1.pdf"
+  },
+  "openalex_id": "W2914434476",
+  "paper_id": "doi:10.1038/s41467-019-08364-1",
+  "parser": null,
+  "pdf_source": {
+    "host_type": null,
+    "landing_page_url": "https://doi.org/10.1038/s41467-019-08364-1",
+    "license": "cc-by",
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://www.nature.com/articles/s41467-019-08364-1.pdf",
+    "version": "publishedVersion"
+  },
+  "publication_date": "2019-01-25",
+  "publication_year": 2019,
+  "relevance_score": 92,
+  "title": "Light- and bias-induced structural variations in metal halide perovskites",
+  "xrd_score": 16
+}

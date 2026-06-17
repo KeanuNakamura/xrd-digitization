@@ -1,0 +1,2630 @@
+{
+  "source_pdf": "pdf_files/nanosized_powders.pdf",
+  "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+  "metadata": {
+    "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+    "doi": "10.1080/17458080600752482",
+    "abstract": "Crystallite size distributions and particle size distributions were determined by transmissions electron microscopy (TEM), X-ray powder diffraction (XRD), and small-angle X-ray scattering (SAXS) for three commercially available TiO 2 powders (P25, UV100, and TiO2_5 nm) and one SSEC produced powder (SSEC78). The theoretical Guinier model was fitted to the experimental obtained XRD data and compared to analytical expressions. Modeling of the XRD spectra showed a difference between the analytical size dependent expressions and the theoretical Guinier model. Primary particle size distributions were extracted from SAXS measurements by the hard sphere model including an interparticle interference factor. The sizes obtained from SAXS were smaller than the sizes obtained from the XRD experiments; however, a good agreement was obtained between the two techniques. Electron microscopy confirmed the primary particle sizes and the shapes obtained by XRD and SAXS. The SSEC78 powder and the commercially available powders showed different morphologies, but SSEC78, UV100, and TiO2_5 nm all consisted of both primary particles as well as a secondary structure comprised of nanosized primary particles agglomeration into larger clusters. P25 showed the largest primary particle size, but did not show a secondary structure.",
+    "journal": "Journal of Experimental Nanoscience",
+    "publication_date": "2006-09",
+    "authors": [
+      {
+        "given_name": "H",
+        "middle_name": null,
+        "surname": "Jensen",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "J",
+        "middle_name": "H",
+        "surname": "Pedersen",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "J",
+        "middle_name": "E",
+        "surname": "J⊘rgensen",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "J",
+        "middle_name": "Skov",
+        "surname": "Pedersen",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "K",
+        "middle_name": "D",
+        "surname": "Joensen",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "S",
+        "middle_name": "B",
+        "surname": "Iversen",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "E",
+        "middle_name": "G",
+        "surname": "S⊘gaard",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      }
+    ],
+    "keywords": [
+      "Size distribution",
+      "XRD",
+      "SAXS",
+      "TEM",
+      "Nanopowders"
+    ]
+  },
+  "sections": [
+    {
+      "section_id": "section_a5717ab81d52",
+      "title": "Introduction",
+      "path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_59372ae0cc4f",
+          "text": "Production of nanopowders for various applications has gained considerable commercial interest during the last few years. Quality and reproducibility are essential if the nanopowders are to be used in large-scale commercial applications. Furthermore, the ability to characterize various physical and chemical properties of these powders is critical to the increased acceptance and use of nanoparticles [1, 2] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_231ce0ae5674",
+          "text": "In many industrial applications the activity of nanoparticles is size dependent and the price of nanoparticles depends on powder characteristics such as particle size, size distribution, and purity. As an example the morphology of the catalysts drastically affects the photocatalytic properties of nanocrystalline semiconductors as it does in many cases found in solid catalysis. Therefore, controlling the morphology of catalyst particles is a key technology for obtaining well-tailored photocatalysts [3] . In that sense nanopowders prepared by different methods are often stated to have a narrow size distribution. However, the lack of suitable characterization techniques for determination of size distributions in nanopowders makes the stated particle properties questionable.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_2eee03f8dbd1",
+          "text": "Up to now the most common way to determine size distribution of nanopowders is from transmission electron microscopy (TEM). However, this method is relative time consuming and not applicable in large scale industrial processes. The particle size, D, of commercially available nanopowders is often determined from powder X-ray diffraction (XRD) spectra by Scherrer's formula [4, 5] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 8.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b571a4c7f1b0",
+          "text": "The K factor in Scherrer's formula is dimensionless and is accounting for the shape of the specimen and often has the value of 0.9 or close to unity [3] . Langford and Wilson showed in 1978 that K depends on the crystallite shape, crystallite size distribution, and the definition of the FWHM [6] . is the wavelength and FWHM is the full width of the peak at half the maximum intensity after subtraction of instrumental background, and is the diffraction angle.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 2.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_db73eff04dda",
+          "text": "The size obtained from Scherrer's formula is the average or ''apparent'' crystallite size and is not necessarily the same as the particle size. This is the case for partly crystalline powders and aggregated powders made up of smaller primary particles [7] . Furthermore, powders are normally not monodisperse but consist of a size distribution. The polydispersity of nanopowders is not taken into account in Scherrer's formula.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 1.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d8eb413289a5",
+          "text": "Two fundamentally different approaches exist to model the XRD peak shape. Firstly the Rietveld structure refinement where simple analytical functions such as Gaussian, Lorentzian, Pseudo-Voigt, Pearson VII, and empirical profile shape functions are used together with Scherrer's formula [8] . Secondly the physical model approach as Bertaut and Guinier developed in the middle of the last century, where they were the first to establish models extracting size distributions from powder diffraction line profiles [5, 9] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 13.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_55ae7135cd0a",
+          "text": "The principal advantage of modeling powder patterns by physical models is that it can provide physically meaningful quantities to describe the microstructure of the sample. Furthermore, by using a physical model with a size distribution instead of the Rietveld refinement fewer fitting parameters are required.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 4.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_1e10304eb040",
+          "text": "Langford et al. found using the physical model approach that the effect of a broad size distribution on the shape of a diffraction line was a lengthening of its tail compared to a single crystallite size [10] . Ungar et al. showed for nanocrystalline tungsten-carbide that ball-milled specimen had an extremely long tail in XRD indicating a wide crystallite size distribution confirmed by TEM [11] . Gubicza et al. used the model derived by Guinier for size depended XRD line profile analysis and found the variance and the median of the size distribution for nanodisperse silicon nitride powder [12] . Riba´rik et al. continued this work and developed a program for whole profile fitting of diffraction peaks [8] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 5.6,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_40fc24a07617",
+          "text": "Small-angle X-ray scattering (SAXS) is another suitable technique to determine the size and size distribution of nanopowders. Several models have been proposed to extract the size and morphology from SAXS spectra. The most common and accepted model is the physical hard sphere model. The hard sphere model can be extended to describe SAXS spectra from nanopowders containing size distributions with and without interparticle interference [5, [13] [14] [15] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a9cd6cf18ad6",
+          "text": "The main objective of this paper was to develop methods to determine particle size and crystallite size distributions of nanopowders by several consistent techniques. TEM, XRD, and SAXS were used as characterization techniques. Physical models explaining the XRD and SAXS spectra from nanopowders were used and developed to determine the crystallite size distribution and particle size distribution. The morphology upon which the XRD and SAXS models were developed was determined by TEM and the importance of using XRD and electron microscopy, TEM or SEM, together to extract convincing physical models of the nanopowders was demonstrated.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 4.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_7d5f48efd8fc",
+      "title": "Theory",
+      "path": [
+        "Theory"
+      ],
+      "section_type": "other",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_25d8a32984fb",
+      "title": "Particle size, crystallite size, and size distributions",
+      "path": [
+        "Particle size, crystallite size, and size distributions"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_31e73921cfb9",
+          "text": "Nanopowders often consist of primary particles arranged in a larger macroscopic structure. The primary particle size is defined to be the smallest size of individual particles. The primary particles can be made up of several crystals or consist of a crystalline core with an amorphous shell. The size of the primary particles can be determined by for example SAXS and electron microscopy, TEM and SEM. The primary particle size is not necessarily equal to the crystallite size determined by XRD where only the crystalline part is detected.",
+          "section_path": [
+            "Particle size, crystallite size, and size distributions"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 5.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_cb5abe527b49",
+          "text": "If a larger structure is made up through cementation of the primary particles mainly by chemical bonding the structure is defined as agglomerates. Aggregates are similar to agglomerates except that the particles formed are held together by physical Van der Waals bondings, and may be broken down to its individual units of primary particles when subjected to stronger forces or changes in surface charges [16] . Agglomeration and aggregation are normally defined as secondary particle growth. The consequence of secondary growth is that the powder is not monodisperse but polydisperse and needs to be described by a size distribution instead of an average size. The polydispersity can also be caused by the different physical and chemical processes used during particle synthesis.",
+          "section_path": [
+            "Particle size, crystallite size, and size distributions"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_8660e8e4a366",
+          "text": "The most common used particle size distribution is the log-normal distribution and if each particle in a powder is a single crystal, the distribution of crystallite sizes frequently has this form [10] . Furthermore, particle size distributions characterized with a long large tail can often be described by a power-law relationship between particle size and number and in such cases the log-normal distribution is used. The following definition of the log-normal size distribution will be used in this study [12] :",
+          "section_path": [
+            "Particle size, crystallite size, and size distributions"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_7a53f2298fb3",
+          "text": "where and is respectively the variance and the mean size of the normal size distribution, and x is a continuous random size variable. The mean, E(x), and variance, Var(x), of the log-normal size distribution shown in equation ( 2 ) are [17] :",
+          "section_path": [
+            "Particle size, crystallite size, and size distributions"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_78bc001de2d5",
+          "text": "The standard deviation of the log-normal size distribution is the square root of the variance.",
+          "section_path": [
+            "Particle size, crystallite size, and size distributions"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_1ae1083f7f10",
+      "title": "XRD",
+      "path": [
+        "XRD"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_a7ba371a2813",
+          "text": "The crystallite size distribution can be extracted from XRD spectra by analyzing the line profile of the diffraction peak and not only the broadening. A. Guinier derived in 1963 an equation for the line profile including a size distribution function g(M) [5] . This formulation will in this study be used to extract information of the crystallite size distribution from XRD spectra. The theoretical Guinier model for XRD of small crystals will be compared to the average crystallite size obtained from Scherrer's formula, where the FWHM is extracted form the XRD peak by a Pseudo-Voigt function. Furthermore, size dependent analytical expression together with Scherrer's formula will be used to fit the experimental XRD data.",
+          "section_path": [
+            "XRD"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 6.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_1bb838181ec5",
+      "title": "Size dependence in XRD-Guinier's model.",
+      "path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_4973be9242f1",
+          "text": "Guinier showed that the intensity profile of a diffraction peak can be derived as [5] :",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_79020172bcdd",
+          "text": "The intensity profile in equation ( 4 ) is written as an integration of the column length M, the distribution function g(M) of the column lengths, and s 0 which is defined as [5] :",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9b9bc776e93a",
+          "text": "r Ã hkl is the magnitude of the vector defining the node of indices (hkl) of the reciprocal lattice and s is the scattering vector modulus. 0 is the Bragg angle corresponding to the reflection plane (hkl).",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 3.6,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_10e0aee1a9a7",
+          "text": "The relationship between the distribution function of the column length g(M) and the density function f(x) of the size of the crystals, equation (2), depends on the shape of the crystallites [8, 12] . Assuming spherical grains, which in section 4.1 will be confirmed by TEM, the distribution function of the column lengths is:",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_0dc60d868f16",
+          "text": ") represents the probability that the diameter of the spherical crystal, x, is greater than the column height M. f(x) is the density function for spherical grains, and N is a normalization factor. Inserting equation ( 6 ) into equation ( 4 ) and inserting the log-normal size density function for f(x) equation ( 4 ) becomes:",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9e20a05848db",
+          "text": "Equation ( 7 ) describes the distribution of the diffraction intensity including a lognormal crystallite size density function. In figure 1 the diffraction intensity profiles calculated from equation ( 7 ) with different values of and are shown. The profiles in figure 1 show that by increasing the width of the size distribution a larger tail of the line profile of the XRD peak is observed. If is changed from 1.4 to 2.2 and the crystallite size is kept constant it is clearly that the line profile of the XRD peak is changed significantly and a long tail is observed. Keeping constant and changing the crystallite size from 6 nm to 12 nm results in a broadening of the line profile as expected.",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 6.1,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d0fe54dd151d",
+          "text": "0 5 10 15 20 25 30 35 40 0 0.005 0.01 0.015 0.02 Column length (nm) 0 5 10 15 20 25 30 35 40 Column length (nm) Particle no. density (a.u.)",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_980a8b9dddd3",
+          "text": "1.: µ = 6 nm 1.",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_410cbe7c19b9",
+          "text": "2.: µ = 8 nm 2.",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_1ab034cf4e5e",
+          "text": "3.: µ = 12 nm 3.",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_8b93e535b941",
+          "text": "1. 2. 3. 0 0.005 0.01 0.015 0.02 Log normal size distribution Log normal size distribution Particle no. density (a.u.) 1.: σ = 1.4 1. 2.: σ = 1.6 2. 3.: σ = 2.2 3. A) B) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 1. 2θ (°) 22 23 24 25 26 27 28 29 2θ (°) Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD line profile with size distribution XRD line profile with size distribution 2. 3.",
+          "section_path": [
+            "Size dependence in XRD-Guinier's model."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 9.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_7606ea398083",
+      "title": "Extracting the crystallite size from XRD by analytical expressions.",
+      "path": [
+        "Extracting the crystallite size from XRD by analytical expressions."
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_133095105d72",
+          "text": "The most common way to obtain the average crystallite size from an unknown sample is fitting the XRD peak by an analytical expression assuming that the line profile follows a Gaussian or Pseudo-Voigt function. Inserting w from the Pseudo-Voigt function in Scherrer's formula, equation ( 1 ), as the FWHM w can be rewritten as a function of the average crystallite size w ¼ K/(Dcos()). However, as in the case for the theoretical Guinier model a size dependent analytical expression will be proposed. Inserting w from Scherrer's formula into a Pseudo-Voigt function and expressing D by a log-normal size distribution function f(D), equation ( 2 ), the size depend analytical XRD expression becomes:",
+          "section_path": [
+            "Extracting the crystallite size from XRD by analytical expressions."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 5.6,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_0e08675302ef",
+          "text": "where A is the amplitude, x c the peak center, and ' is the profile shape factor from the Pseudo-Voigt function.",
+          "section_path": [
+            "Extracting the crystallite size from XRD by analytical expressions."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_6d18a16b84cf",
+      "title": "SAXS in low density systems",
+      "path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_31ecc461a93b",
+          "text": "In SAXS only the form factor, AE(q), gives rise to scattering in the nano range [18] . The scattering intensity for SAXS in the immediate proximity of the center of the reciprocal space can be deduced which is shown in equation ( 9 ). However, for the SAXS investigation the scattering vector modulus s, equation (5), will be substituted with the scattering vector modulus q equal to 2s [5] .",
+          "section_path": [
+            "SAXS in low density systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_21b82653e97b",
+          "text": "The form factor for a sphere is [13, 14] :",
+          "section_path": [
+            "SAXS in low density systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d837f7b714f8",
+          "text": "Inserting equation ( 10 ) into equation ( 9 ) and instead of a monodisperse scattering a size distribution can be inserted which gives the following scattering intensity for SAXS:",
+          "section_path": [
+            "SAXS in low density systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d70b4358972a",
+          "text": "f(R) is the particle size density function for the radius of the particles and in the following a log-normal size distribution will be used. In figure 2 the difference between the SAXS curve resulting from a narrow size distribution and a broad size distribution is shown.",
+          "section_path": [
+            "SAXS in low density systems"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_dc9cb1dde1d5",
+          "text": "The SAXS model presented in figure 2 is shown in a log-log plot. This plot gives rise to two main features: 1) Typically scattering patterns display power-lay decays in intensity reflecting power lay scaling features of many materials. 2) Power-law decays begin and end at exponential regimes that are shown as a knee in a log-log plot. These exponential knees reflect a preferred size as described by R ¼ 1/q for the knee regime [18] . The scattering patterns in figure 2 show decay in intensity as q increases. This is due to the decreasing number of electrons as the particle size decreases [18] .",
+          "section_path": [
+            "SAXS in low density systems"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_14cb12d98da3",
+          "text": "The SAXS models in figure 2 show that the position of the knee in a log-log plot is changed as the mean radius is changed going to larger q's for smaller radii. The theoretical models displayed in figure 2 show that a narrow size distribution gives an oscillating curve which is often shown in practice. Increasing the width of the size distribution contributes to a more ''smooth'' curve. This kind of behavior is often modeled by an average or apparent particle size, but it is shown that it is more likely to consist of a broad size distribution.",
+          "section_path": [
+            "SAXS in low density systems"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_f2f35651e7e2",
+          "text": "The model in equation ( 11 ) is as the name says only valid for spherical particles. If the sample is cylindrical or ellipsoid different models should be used to describe the form factor [5, 19] . Furthermore in this study a log-normal size density function is chosen for the model. These assumptions vary from sample to sample and therefore it is necessary to investigate the sample by electron microscopy to observe what shape or size distribution the sample has.",
+          "section_path": [
+            "SAXS in low density systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_73a4ed43491b",
+      "title": "SAXS in dense systems",
+      "path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_95cd15b8625e",
+          "text": "To investigate SAXS spectra from dense systems the interparticle interference effect has to be considered and equation (11) becomes [13] : S(q) is the structure factor describing the interference of scattering from different particles and contains information of the interaction between particles and for very dilute systems S(q) ¼ 1 and can be neglected [19] . In this study the structure factor reported by Hoekstra and co-workers will be used [20] :",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_731514fd19ec",
+          "text": "S(q) p is the part of the structure factor that accounts for the direct particle interaction and S(q) p is modeled by the Percus-Yevick approximation, in which the structure factor, S(q, R HS , HS ) p , depends on the scattering vector modulus, q, the hard-sphere radius, R HS , and the volume fraction, HS [19] .",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a6370ac17d3b",
+          "text": "Where:",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_f86a5748ee6d",
+          "text": "and:",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_650ac97c8c50",
+          "text": "HS is the volume fraction of the hard spheres and is related to the volume fraction, , of the precipitates as [13] :",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_68d723bf7ac8",
+          "text": "R HS covers the depleted zone around the precipitate particle and is related to the actual particle radius by a constant:",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c8320d47a774",
+          "text": "S(q) f in equation ( 13 ) is the structure factor of the fractal clusters defined by Teixeira, where S(q, Df, ) f depends on q, the fractal dimension of the clusters, D f , and on the cut off length, , which can be used as a measure for the aggregate size [20, 21] :",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d83a3ffac11f",
+          "text": "3. Materials and method",
+          "section_path": [
+            "SAXS in dense systems"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_d5f9d8a58aa7",
+      "title": "Nanopowders",
+      "path": [
+        "Nanopowders"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_8b263ff3be17",
+          "text": "A SSEC produced [22] powder (SSEC78) and three commercially available nanocrystalline titanium dioxide powders prepared by different methods are investigated and the crystallite size distributions and particle size distributions are determined. In a previous work the absolute crystallinities and the specific surface areas were determined [7] .",
+          "section_path": [
+            "Nanopowders"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_0edcdd1f196d",
+          "text": "These results together with the preparation methods are shown in table 1 .",
+          "section_path": [
+            "Nanopowders"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_93c1c9163481",
+          "text": "Degussa P25 is a commercially available powder from Degussa Company. It is produced by the chloride method where the precursor, TiCl 4 , is oxidized in the gaseous phase at high temperature (985 C) in a H 2 /O 2 flame. Hombikat UV100 is produced by Sachtleben Chemie GmbH. It is produced by the sulphate process where titanium sulphate in the final step is reacting with water resulting in the formation of titanium oxide. The company Nanostructured and Amorphous Material, Inc. produces TiO2_5 nm by a normal sol-gel process. The SEEC produced powder, SSEC78, has been produced by a modified sol-gel process. This process involves a sol-gel reaction, but in the contrary to a normal sol-gel process the reaction is occurring with supercritical CO 2 as solvent. As shown in table 1. Hombikat UV100 and TiO2_5 nm are after the synthesis calcinated at elevated temperatures. The different preparation methods are described in more details in [23] , where it was shown that the surface properties and photocatalytic properties of these powders depend on the preparation method.",
+          "section_path": [
+            "Nanopowders"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_df776af84de7",
+      "title": "Methods",
+      "path": [
+        "Methods"
+      ],
+      "section_type": "methods",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_04f20aa99a96",
+          "text": "The XRD spectra are obtained using a CuK 1 radiation ( ¼ 1.54 A ˚) from a STOE Stadi P transmission diffractometer and to get good statistics a counting time of 30 min/ point is required. The SAXS data were obtained using an adaptation of a Brukers AXS, Nanostar SAXS system, with a rotating anode X-ray generator, cross-coupled Goebel mirrors, three pinholes, and a Bruker AXS Hi-star Area Detector. The scattering intensity, I, was measured in terms of the scattering vector modulus q, where ¼ 1.54 A ˚. The scattering intensity was measured in the range q ¼ 0.0071 A ˚À1 to q ¼ 0.334 A ˚À1 . The data were corrected for background and azimuthally averaged to obtain a spectrum of average intensity vs. q. Transmission electron microscope (TEM) is used to investigate the shape and morphology as well as the size of the samples. The TEM used is a JEOL 100 CX. The acceleration voltage was 100 kV for all samples/images. The samples were prepared by dispersion of the powder onto a formwar film.",
+          "section_path": [
+            "Methods"
+          ],
+          "section_type": "methods",
+          "figure_references": [],
+          "xrd_score": 4.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_42f0b640d690",
+      "title": "Results",
+      "path": [
+        "Results"
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_ff79effaba3d",
+          "text": "The experimental results obtained in this study will in the following be analyzed. The XRD and SAXS models shown in section 2 will be fitted to the experimental data by the Least Square Method. First TEM images of the investigated powders will be analyzed and these images are used to support the theoretical XRD and SAXS models.",
+          "section_path": [
+            "Results"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_650c75b32a63",
+      "title": "TEM",
+      "path": [
+        "TEM"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_8aa7bd892018",
+          "text": "In the XRD and SAXS theory grains of spherical shapes were assumed. This assumption can be confirmed by TEM, figure 3 . The particles are not exactly spherical but it seems to be a good approximation; however, particles of irregular shapes were found as well. For the SSEC78 samples primary particles of 5 nm or less can be observed. These primary particles are agglomerated into larger clusters. The primary particles observed show a narrow size distribution. The TEM images of P25 show typical diameters of 20-30 nm. Although smaller particles well below 20 nm can be observed and the TEM image of P25 shows a wider size distribution than SSEC78. A similar result can be observed for the UV100 powder. The TiO2_5 nm particles are of approximately the same size and have a similar size distribution as the SSEC78 sample.",
+          "section_path": [
+            "TEM"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 4.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_bbb0f57180ef",
+      "title": "XRD -analytical and theoretical models.",
+      "path": [
+        "XRD -analytical and theoretical models."
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_ebfeb5653039",
+          "text": "The Pseudo-Voigt function including a linear term to correct for the background of the 100% anatase peak, $25.4 (2), is used to determine the FWHM and the peak center of the four samples. These values will be used to calculate the average crystallite size from Scherrer's formula. The analytical expressions and the Guinier model will in the following be fitted to the background corrected 100% anatase peak for the four samples.",
+          "section_path": [
+            "XRD -analytical and theoretical models."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 1.6,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b60a0426fcff",
+          "text": "A Gaussian function and a Pseudo-Voigt function with a size distribution terms, equation (8) , are fitted to the XRD spectra as shown in table 2. The peak center is taken from the Pseudo-Voigt fit, resulting in only two unknown parameters for the size dependent Gaussian function; and from the log-normal size distribution, equation ( 2 ), and an extra unknown parameter for the size dependent Pseudo-Voigt function -the ' parameter. In figure 4 the fit of the XRD line profile from the Gaussian function is shown.",
+          "section_path": [
+            "XRD -analytical and theoretical models."
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "4"
+          ],
+          "xrd_score": 4.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_00458b0efb08",
+          "text": "The size dependent Gaussian function fits the experimental data well. However, some problems are observed for the four samples where the tails of the XRD peaks are overestimated compared to the experimental data. From the fits it is observed that the SSEC78 sample shows a very narrow size distribution compared to TiO2_5 nm and Hombikat UV100. Furthermore, Degussa P25 has the largest mean diameter 3-4 times larger then the three other.",
+          "section_path": [
+            "XRD -analytical and theoretical models."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_50a9c8cbd40f",
+          "text": "The Guinier model shown in equation ( 7 ) is fitted to the experimental XRD data for the four powders, which is shown in figure 5 . The grain shape of the crystallites is assumed spherical and a log-normal size distribution function is included.",
+          "section_path": [
+            "XRD -analytical and theoretical models."
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "5"
+          ],
+          "xrd_score": 4.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_f07478d5c905",
+          "text": "The experimental XRD spectra show different line profiles depending on the different preparation method. Fitting the Guinier model to the experimental data confirms the visual observations. SSEC78 shows a broad symmetrical peak corresponding to a narrow size distribution. SSEC78 is shown to consist of nanocrystallites with a mean diameter of 6.9 nm and is equal to 1.40. Hombikat UV100 and TiO2_5 nm have similar line profiles with a relative narrow top of the peak with a wide tail. The different line profiles compared to SSEC78 correspond to a broader size distribution. Hombikat UV100 shows a mean diameter of 2.7 nm and a value of 1.90. TiO2_5 nm has a slightly larger mean diameter of 4.3 nm and a value of 1.79. Degussa P25 has a value of 1.39 and a mean diameter of 25.6 nm.",
+          "section_path": [
+            "XRD -analytical and theoretical models."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_531843e0feda",
+      "title": "SAXS.",
+      "path": [
+        "SAXS."
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_a3d91e3a35c9",
+          "text": "The hard sphere model with size distribution and a structure factor is in the following used to fit the experimental measured SAXS data. In figure 6 the SAXS data for P25 is shown. The particles in the Degussa P25 powder do not show an interference effect and S(q, HS , C HS ) is equal to one. Hombikat UV100 shows a significantly different SAXS",
+          "section_path": [
+            "SAXS."
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "6"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b3f7ade9f094",
+          "text": "0 2 4 6 8 × 10 -3 Log normal size distribution function Particle number density (a.u.) µ = 16.6 nm σ = 1.5 B) XRD -P25 with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) 0 1 0 2 0 3 0 4 0 5 0 Column length (nm) Particle number density (a.u.) µ = 4.6 nm σ = 1.5 A) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -SSEC78 with size distribution Measured data Gaussian function Measured data Gaussian function 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 5.4 nm σ = 1.9 D) XRD -TiO2 5 nm with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 4.9 nm σ = 2.0 C) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -UV100 with size distribution Measured data Gaussian function Measured data Gaussian function curve than Degussa P25 and the ''knee'' for Hombikat UV100 is observed at larger q values. The SAXS data for Hombikat UV100 is shown in figure 7 .",
+          "section_path": [
+            "SAXS."
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "7"
+          ],
+          "xrd_score": 9.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_3334bd6b3f7d",
+          "text": "The structure factor is included for the fit of the SAXS data for Hombikat UV100 indicating that the powder is denser packed compared to Degussa P25. The SAXS curve for TiO2_5 nm has similar trends as Hombikat UV100 (figure 8 ).",
+          "section_path": [
+            "SAXS."
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "8"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_16e78ce5fe5d",
+          "text": "The structure factor was also required to model the SAXS curve for TiO2_5 nm but a mean size of approximately twice as large as for Hombokat UV100 was observed. In figure 9 the SAXS fit for the SSEC78 powder is shown.",
+          "section_path": [
+            "SAXS."
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "9"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_37af50b73a4c",
+          "text": "The SAXS curve for SSEC 78 shows a different tendency at large q values. The hard sphere model could not explain this type of scattering because for the SSEC78 powder a positive deviation from the Porod slope (-4) was observed, which is normally attributed to the scattering from a rough surface or indeed from a surface fractal [24] . This additional features on the primary particle surfaces was taken into account by multiplying the form factor by (qR) where 0 < < 1 and expresses the degree of roughness. The surface fractal of the primary particles can be extracted as D s ¼ 6 À (4 À ).",
+          "section_path": [
+            "SAXS."
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_a56c9190d15c",
+      "title": "Discussion",
+      "path": [
+        "Discussion"
+      ],
+      "section_type": "results",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_029fab6088ef",
+      "title": "XRD: Analytic expressions vs. theoretical model",
+      "path": [
+        "XRD: Analytic expressions vs. theoretical model"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_58481a1d0f97",
+          "text": "In table 2 the mean diameters with standard deviations calculated from equation ( 3 ) are shown for the two analytical XRD models and the Guinier model. The four methods used to extract the crystallite size show a variation in the mean diameter and standard deviation. The Guinier model gives a larger diameter for SSEC78 and Degussa but a significant smaller diameter for Hombikat UV100 and TiO2_5 nm compared to the analytical expressions. Comparing the standard deviations it is observed that the standard deviations obtained from the Pseudo-Voigt function with size distribution are different from the Gaussian function and the Guinier model which are consistent. This indicates that the standard deviation is not obtainable from the Pseudo-Voigt function but should be extracted from one of the other models.",
+          "section_path": [
+            "XRD: Analytic expressions vs. theoretical model"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_3c02a2fd9062",
+          "text": "Based on this XRD investigation no concise conclusion can be made on whether to use Scherrer's analytical formulation or Guinier's theoretical expression. Both the",
+          "section_path": [
+            "XRD: Analytic expressions vs. theoretical model"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_5013482e6168",
+          "text": "0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 0 0.005 0.01 0.015 Log normal size distribution -P25 Radius (nm) Particle no. density (a.u.) µ = 9.8 nm, σ = 0.69 S(q) = 1.0 -2.2 -2 -1.8 -1.6 -1.4 -1.2 -1 -0.8 -0.6 -0.4 -6 -4 -2 0 2 log (q) log(I) SAXS model with size distribution -P25 Fit with size distr. Measured data Scherrer formula from 1918 and Guinier's model from 1963 can be used for extracting crystallite size distribution from experimental XRD spectra.",
+          "section_path": [
+            "XRD: Analytic expressions vs. theoretical model"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_fa2e10957e5e",
+      "title": "SAXS: The hard sphere model",
+      "path": [
+        "SAXS: The hard sphere model"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_6b82a3838aa3",
+          "text": "The analysis of the SAXS curves for the three commercial powders showed that for Hombikat UV100 and TiO2_5 nm the structure factor had to be included in the model to take into account the interference factor for agglomerated nanoparticles. For Degussa P25 the interference factor was found to be unity indicating that no interparticle interference is occurring. For the SSEC produced powder the hard sphere model was not sufficient to model the scattering curve due to a positive deviation from the Porod slope was observed. The positive deviation is caused by a surface roughness or surface fractal of the primary particles. The slope in the Porod regime for SSEC78 was À3.48 with an factor of 0.52 indicating a surface fractal dimension of 2.48. Previously in the literature a positive deviation is reported for aerogels and xerogels [25, 26] but also for supercritical dried aerogels [24, 27] .",
+          "section_path": [
+            "SAXS: The hard sphere model"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_96781e1c2706",
+      "title": "Morphology: TEM, XRD, and SAXS",
+      "path": [
+        "Morphology: TEM, XRD, and SAXS"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_1bbb65f71d12",
+          "text": "The TEM, XRD, and SAXS data have been analyzed by different models. In table 3 the extracted data are shown.",
+          "section_path": [
+            "Morphology: TEM, XRD, and SAXS"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c8c973aa7f70",
+          "text": "0 2 4 6 8 A qualitative judgment of the TEM images shows good agreement with the particle sizes found from XRD and SAXS measurements. The three different analysis methods all show comparable values of the extracted sizes. However, the sizes obtained from the SAXS measurements are for all four samples smaller than the sizes from the XRD measurements expressed by the Guinier model. An explanation to this phenomenon could be that the size extracted from XRD is only for the crystalline areas and the smallest particles in the individual powders are amorphous. SAXS on the other hand can determine the size from both amorphous and crystalline particles and the mean sizes extracted from SAXS thereby become smaller than the size extracted from XRD. However, taken the uncertainties and variances into account the size distributions for each sample are similar from both SAXS and XRD.",
+          "section_path": [
+            "Morphology: TEM, XRD, and SAXS"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9839fc7cc69a",
+          "text": "Some comparisons can be made between the TEM images, figure 3 from this study and the SEM images from Jensen et al. 2004 of the SSEC78 sample. The primary particles seem to be agglomerated into larger clusters as can be seen on both the SEM and TEM images. Occasionally thinner and narrow structures can be observed from the clusters surfaces as observed from TEM. The secondary structure found in both SEM and TEM was confirmed by SAXS, although a smaller secondary structure was extracted from SAXS than seen in SEM and TEM. The SAXS analysis of SSEC78 also confirms this secondary structure by the implementation of the interparticle interference factor.",
+          "section_path": [
+            "Morphology: TEM, XRD, and SAXS"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_914351d68263",
+          "text": "The P25 particles show a significantly larger size of the primary particles than SSEC78. However, as observed by SEM, TEM, and SAXS P25 does not show a",
+          "section_path": [
+            "Morphology: TEM, XRD, and SAXS"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_59eb82a57eb1",
+          "text": "0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 secondary structure. On the other hand the size distribution for P25 is wider than for SSEC78. The UV100 and the TiO2_5 nm particles show the same tendencies in SAXS and XRD and both samples have primary particles of approximately 5 nm or less; although, the TEM analysis revealed that UV100 consists of remarkable larger primary particles than extracted from XRD and SAXS. The TEM images of TiO2_5 nm showed primary particles with sizes in the same range as SSEC78. Both the UV100 and the TiO2_5 nm samples consist of a secondary structure observed from SAXS.",
+          "section_path": [
+            "Morphology: TEM, XRD, and SAXS"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_ef1afe7203bc",
+      "title": "Conclusion",
+      "path": [
+        "Conclusion"
+      ],
+      "section_type": "conclusion",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_a8c02267a1f4",
+          "text": "The present study showed that crystallite and primary particle size distributions can be extracted from experimental measurements by theoretical models assuming spherical 10 12 14 16 18 20 22 24 26 28 particles with a log-normal size distribution. The morphology upon which the XRD and SAXS models were developed was determined by TEM and SEM and the importance of using XRD and electron microscopy together to extract convincing physical models of the nanopowders was shown. The crystallite size extracted from the theoretical Guinier model was in agreement with the SAXS measurements. However, the SAXS analysis showed for all samples a smaller primary particle size compared to XRD. The Guinier model deviated slightly from Scherrer's formula and analytical models including a size dependent term. No exact conclusion can be made from this study to whether Guinier's model or Scherrer's formula is more precise.",
+          "section_path": [
+            "Conclusion"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "paragraph_59372ae0cc4f",
+      "text": "Production of nanopowders for various applications has gained considerable commercial interest during the last few years. Quality and reproducibility are essential if the nanopowders are to be used in large-scale commercial applications. Furthermore, the ability to characterize various physical and chemical properties of these powders is critical to the increased acceptance and use of nanoparticles [1, 2] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_231ce0ae5674",
+      "text": "In many industrial applications the activity of nanoparticles is size dependent and the price of nanoparticles depends on powder characteristics such as particle size, size distribution, and purity. As an example the morphology of the catalysts drastically affects the photocatalytic properties of nanocrystalline semiconductors as it does in many cases found in solid catalysis. Therefore, controlling the morphology of catalyst particles is a key technology for obtaining well-tailored photocatalysts [3] . In that sense nanopowders prepared by different methods are often stated to have a narrow size distribution. However, the lack of suitable characterization techniques for determination of size distributions in nanopowders makes the stated particle properties questionable.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_2eee03f8dbd1",
+      "text": "Up to now the most common way to determine size distribution of nanopowders is from transmission electron microscopy (TEM). However, this method is relative time consuming and not applicable in large scale industrial processes. The particle size, D, of commercially available nanopowders is often determined from powder X-ray diffraction (XRD) spectra by Scherrer's formula [4, 5] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 8.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b571a4c7f1b0",
+      "text": "The K factor in Scherrer's formula is dimensionless and is accounting for the shape of the specimen and often has the value of 0.9 or close to unity [3] . Langford and Wilson showed in 1978 that K depends on the crystallite shape, crystallite size distribution, and the definition of the FWHM [6] . is the wavelength and FWHM is the full width of the peak at half the maximum intensity after subtraction of instrumental background, and is the diffraction angle.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 2.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_db73eff04dda",
+      "text": "The size obtained from Scherrer's formula is the average or ''apparent'' crystallite size and is not necessarily the same as the particle size. This is the case for partly crystalline powders and aggregated powders made up of smaller primary particles [7] . Furthermore, powders are normally not monodisperse but consist of a size distribution. The polydispersity of nanopowders is not taken into account in Scherrer's formula.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 1.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d8eb413289a5",
+      "text": "Two fundamentally different approaches exist to model the XRD peak shape. Firstly the Rietveld structure refinement where simple analytical functions such as Gaussian, Lorentzian, Pseudo-Voigt, Pearson VII, and empirical profile shape functions are used together with Scherrer's formula [8] . Secondly the physical model approach as Bertaut and Guinier developed in the middle of the last century, where they were the first to establish models extracting size distributions from powder diffraction line profiles [5, 9] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 13.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_55ae7135cd0a",
+      "text": "The principal advantage of modeling powder patterns by physical models is that it can provide physically meaningful quantities to describe the microstructure of the sample. Furthermore, by using a physical model with a size distribution instead of the Rietveld refinement fewer fitting parameters are required.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 4.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_1e10304eb040",
+      "text": "Langford et al. found using the physical model approach that the effect of a broad size distribution on the shape of a diffraction line was a lengthening of its tail compared to a single crystallite size [10] . Ungar et al. showed for nanocrystalline tungsten-carbide that ball-milled specimen had an extremely long tail in XRD indicating a wide crystallite size distribution confirmed by TEM [11] . Gubicza et al. used the model derived by Guinier for size depended XRD line profile analysis and found the variance and the median of the size distribution for nanodisperse silicon nitride powder [12] . Riba´rik et al. continued this work and developed a program for whole profile fitting of diffraction peaks [8] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 5.6,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_40fc24a07617",
+      "text": "Small-angle X-ray scattering (SAXS) is another suitable technique to determine the size and size distribution of nanopowders. Several models have been proposed to extract the size and morphology from SAXS spectra. The most common and accepted model is the physical hard sphere model. The hard sphere model can be extended to describe SAXS spectra from nanopowders containing size distributions with and without interparticle interference [5, [13] [14] [15] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a9cd6cf18ad6",
+      "text": "The main objective of this paper was to develop methods to determine particle size and crystallite size distributions of nanopowders by several consistent techniques. TEM, XRD, and SAXS were used as characterization techniques. Physical models explaining the XRD and SAXS spectra from nanopowders were used and developed to determine the crystallite size distribution and particle size distribution. The morphology upon which the XRD and SAXS models were developed was determined by TEM and the importance of using XRD and electron microscopy, TEM or SEM, together to extract convincing physical models of the nanopowders was demonstrated.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 4.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_31e73921cfb9",
+      "text": "Nanopowders often consist of primary particles arranged in a larger macroscopic structure. The primary particle size is defined to be the smallest size of individual particles. The primary particles can be made up of several crystals or consist of a crystalline core with an amorphous shell. The size of the primary particles can be determined by for example SAXS and electron microscopy, TEM and SEM. The primary particle size is not necessarily equal to the crystallite size determined by XRD where only the crystalline part is detected.",
+      "section_path": [
+        "Particle size, crystallite size, and size distributions"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 5.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_cb5abe527b49",
+      "text": "If a larger structure is made up through cementation of the primary particles mainly by chemical bonding the structure is defined as agglomerates. Aggregates are similar to agglomerates except that the particles formed are held together by physical Van der Waals bondings, and may be broken down to its individual units of primary particles when subjected to stronger forces or changes in surface charges [16] . Agglomeration and aggregation are normally defined as secondary particle growth. The consequence of secondary growth is that the powder is not monodisperse but polydisperse and needs to be described by a size distribution instead of an average size. The polydispersity can also be caused by the different physical and chemical processes used during particle synthesis.",
+      "section_path": [
+        "Particle size, crystallite size, and size distributions"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8660e8e4a366",
+      "text": "The most common used particle size distribution is the log-normal distribution and if each particle in a powder is a single crystal, the distribution of crystallite sizes frequently has this form [10] . Furthermore, particle size distributions characterized with a long large tail can often be described by a power-law relationship between particle size and number and in such cases the log-normal distribution is used. The following definition of the log-normal size distribution will be used in this study [12] :",
+      "section_path": [
+        "Particle size, crystallite size, and size distributions"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7a53f2298fb3",
+      "text": "where and is respectively the variance and the mean size of the normal size distribution, and x is a continuous random size variable. The mean, E(x), and variance, Var(x), of the log-normal size distribution shown in equation ( 2 ) are [17] :",
+      "section_path": [
+        "Particle size, crystallite size, and size distributions"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_78bc001de2d5",
+      "text": "The standard deviation of the log-normal size distribution is the square root of the variance.",
+      "section_path": [
+        "Particle size, crystallite size, and size distributions"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a7ba371a2813",
+      "text": "The crystallite size distribution can be extracted from XRD spectra by analyzing the line profile of the diffraction peak and not only the broadening. A. Guinier derived in 1963 an equation for the line profile including a size distribution function g(M) [5] . This formulation will in this study be used to extract information of the crystallite size distribution from XRD spectra. The theoretical Guinier model for XRD of small crystals will be compared to the average crystallite size obtained from Scherrer's formula, where the FWHM is extracted form the XRD peak by a Pseudo-Voigt function. Furthermore, size dependent analytical expression together with Scherrer's formula will be used to fit the experimental XRD data.",
+      "section_path": [
+        "XRD"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 6.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_4973be9242f1",
+      "text": "Guinier showed that the intensity profile of a diffraction peak can be derived as [5] :",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_79020172bcdd",
+      "text": "The intensity profile in equation ( 4 ) is written as an integration of the column length M, the distribution function g(M) of the column lengths, and s 0 which is defined as [5] :",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9b9bc776e93a",
+      "text": "r Ã hkl is the magnitude of the vector defining the node of indices (hkl) of the reciprocal lattice and s is the scattering vector modulus. 0 is the Bragg angle corresponding to the reflection plane (hkl).",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 3.6,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_10e0aee1a9a7",
+      "text": "The relationship between the distribution function of the column length g(M) and the density function f(x) of the size of the crystals, equation (2), depends on the shape of the crystallites [8, 12] . Assuming spherical grains, which in section 4.1 will be confirmed by TEM, the distribution function of the column lengths is:",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_0dc60d868f16",
+      "text": ") represents the probability that the diameter of the spherical crystal, x, is greater than the column height M. f(x) is the density function for spherical grains, and N is a normalization factor. Inserting equation ( 6 ) into equation ( 4 ) and inserting the log-normal size density function for f(x) equation ( 4 ) becomes:",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9e20a05848db",
+      "text": "Equation ( 7 ) describes the distribution of the diffraction intensity including a lognormal crystallite size density function. In figure 1 the diffraction intensity profiles calculated from equation ( 7 ) with different values of and are shown. The profiles in figure 1 show that by increasing the width of the size distribution a larger tail of the line profile of the XRD peak is observed. If is changed from 1.4 to 2.2 and the crystallite size is kept constant it is clearly that the line profile of the XRD peak is changed significantly and a long tail is observed. Keeping constant and changing the crystallite size from 6 nm to 12 nm results in a broadening of the line profile as expected.",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 6.1,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d0fe54dd151d",
+      "text": "0 5 10 15 20 25 30 35 40 0 0.005 0.01 0.015 0.02 Column length (nm) 0 5 10 15 20 25 30 35 40 Column length (nm) Particle no. density (a.u.)",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_980a8b9dddd3",
+      "text": "1.: µ = 6 nm 1.",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_410cbe7c19b9",
+      "text": "2.: µ = 8 nm 2.",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_1ab034cf4e5e",
+      "text": "3.: µ = 12 nm 3.",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8b93e535b941",
+      "text": "1. 2. 3. 0 0.005 0.01 0.015 0.02 Log normal size distribution Log normal size distribution Particle no. density (a.u.) 1.: σ = 1.4 1. 2.: σ = 1.6 2. 3.: σ = 2.2 3. A) B) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 1. 2θ (°) 22 23 24 25 26 27 28 29 2θ (°) Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD line profile with size distribution XRD line profile with size distribution 2. 3.",
+      "section_path": [
+        "Size dependence in XRD-Guinier's model."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 9.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_133095105d72",
+      "text": "The most common way to obtain the average crystallite size from an unknown sample is fitting the XRD peak by an analytical expression assuming that the line profile follows a Gaussian or Pseudo-Voigt function. Inserting w from the Pseudo-Voigt function in Scherrer's formula, equation ( 1 ), as the FWHM w can be rewritten as a function of the average crystallite size w ¼ K/(Dcos()). However, as in the case for the theoretical Guinier model a size dependent analytical expression will be proposed. Inserting w from Scherrer's formula into a Pseudo-Voigt function and expressing D by a log-normal size distribution function f(D), equation ( 2 ), the size depend analytical XRD expression becomes:",
+      "section_path": [
+        "Extracting the crystallite size from XRD by analytical expressions."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 5.6,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_0e08675302ef",
+      "text": "where A is the amplitude, x c the peak center, and ' is the profile shape factor from the Pseudo-Voigt function.",
+      "section_path": [
+        "Extracting the crystallite size from XRD by analytical expressions."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_31ecc461a93b",
+      "text": "In SAXS only the form factor, AE(q), gives rise to scattering in the nano range [18] . The scattering intensity for SAXS in the immediate proximity of the center of the reciprocal space can be deduced which is shown in equation ( 9 ). However, for the SAXS investigation the scattering vector modulus s, equation (5), will be substituted with the scattering vector modulus q equal to 2s [5] .",
+      "section_path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_21b82653e97b",
+      "text": "The form factor for a sphere is [13, 14] :",
+      "section_path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d837f7b714f8",
+      "text": "Inserting equation ( 10 ) into equation ( 9 ) and instead of a monodisperse scattering a size distribution can be inserted which gives the following scattering intensity for SAXS:",
+      "section_path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d70b4358972a",
+      "text": "f(R) is the particle size density function for the radius of the particles and in the following a log-normal size distribution will be used. In figure 2 the difference between the SAXS curve resulting from a narrow size distribution and a broad size distribution is shown.",
+      "section_path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_dc9cb1dde1d5",
+      "text": "The SAXS model presented in figure 2 is shown in a log-log plot. This plot gives rise to two main features: 1) Typically scattering patterns display power-lay decays in intensity reflecting power lay scaling features of many materials. 2) Power-law decays begin and end at exponential regimes that are shown as a knee in a log-log plot. These exponential knees reflect a preferred size as described by R ¼ 1/q for the knee regime [18] . The scattering patterns in figure 2 show decay in intensity as q increases. This is due to the decreasing number of electrons as the particle size decreases [18] .",
+      "section_path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_14cb12d98da3",
+      "text": "The SAXS models in figure 2 show that the position of the knee in a log-log plot is changed as the mean radius is changed going to larger q's for smaller radii. The theoretical models displayed in figure 2 show that a narrow size distribution gives an oscillating curve which is often shown in practice. Increasing the width of the size distribution contributes to a more ''smooth'' curve. This kind of behavior is often modeled by an average or apparent particle size, but it is shown that it is more likely to consist of a broad size distribution.",
+      "section_path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_f2f35651e7e2",
+      "text": "The model in equation ( 11 ) is as the name says only valid for spherical particles. If the sample is cylindrical or ellipsoid different models should be used to describe the form factor [5, 19] . Furthermore in this study a log-normal size density function is chosen for the model. These assumptions vary from sample to sample and therefore it is necessary to investigate the sample by electron microscopy to observe what shape or size distribution the sample has.",
+      "section_path": [
+        "SAXS in low density systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_95cd15b8625e",
+      "text": "To investigate SAXS spectra from dense systems the interparticle interference effect has to be considered and equation (11) becomes [13] : S(q) is the structure factor describing the interference of scattering from different particles and contains information of the interaction between particles and for very dilute systems S(q) ¼ 1 and can be neglected [19] . In this study the structure factor reported by Hoekstra and co-workers will be used [20] :",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_731514fd19ec",
+      "text": "S(q) p is the part of the structure factor that accounts for the direct particle interaction and S(q) p is modeled by the Percus-Yevick approximation, in which the structure factor, S(q, R HS , HS ) p , depends on the scattering vector modulus, q, the hard-sphere radius, R HS , and the volume fraction, HS [19] .",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a6370ac17d3b",
+      "text": "Where:",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_f86a5748ee6d",
+      "text": "and:",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_650ac97c8c50",
+      "text": "HS is the volume fraction of the hard spheres and is related to the volume fraction, , of the precipitates as [13] :",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_68d723bf7ac8",
+      "text": "R HS covers the depleted zone around the precipitate particle and is related to the actual particle radius by a constant:",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c8320d47a774",
+      "text": "S(q) f in equation ( 13 ) is the structure factor of the fractal clusters defined by Teixeira, where S(q, Df, ) f depends on q, the fractal dimension of the clusters, D f , and on the cut off length, , which can be used as a measure for the aggregate size [20, 21] :",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d83a3ffac11f",
+      "text": "3. Materials and method",
+      "section_path": [
+        "SAXS in dense systems"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8b263ff3be17",
+      "text": "A SSEC produced [22] powder (SSEC78) and three commercially available nanocrystalline titanium dioxide powders prepared by different methods are investigated and the crystallite size distributions and particle size distributions are determined. In a previous work the absolute crystallinities and the specific surface areas were determined [7] .",
+      "section_path": [
+        "Nanopowders"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_0edcdd1f196d",
+      "text": "These results together with the preparation methods are shown in table 1 .",
+      "section_path": [
+        "Nanopowders"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_93c1c9163481",
+      "text": "Degussa P25 is a commercially available powder from Degussa Company. It is produced by the chloride method where the precursor, TiCl 4 , is oxidized in the gaseous phase at high temperature (985 C) in a H 2 /O 2 flame. Hombikat UV100 is produced by Sachtleben Chemie GmbH. It is produced by the sulphate process where titanium sulphate in the final step is reacting with water resulting in the formation of titanium oxide. The company Nanostructured and Amorphous Material, Inc. produces TiO2_5 nm by a normal sol-gel process. The SEEC produced powder, SSEC78, has been produced by a modified sol-gel process. This process involves a sol-gel reaction, but in the contrary to a normal sol-gel process the reaction is occurring with supercritical CO 2 as solvent. As shown in table 1. Hombikat UV100 and TiO2_5 nm are after the synthesis calcinated at elevated temperatures. The different preparation methods are described in more details in [23] , where it was shown that the surface properties and photocatalytic properties of these powders depend on the preparation method.",
+      "section_path": [
+        "Nanopowders"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_04f20aa99a96",
+      "text": "The XRD spectra are obtained using a CuK 1 radiation ( ¼ 1.54 A ˚) from a STOE Stadi P transmission diffractometer and to get good statistics a counting time of 30 min/ point is required. The SAXS data were obtained using an adaptation of a Brukers AXS, Nanostar SAXS system, with a rotating anode X-ray generator, cross-coupled Goebel mirrors, three pinholes, and a Bruker AXS Hi-star Area Detector. The scattering intensity, I, was measured in terms of the scattering vector modulus q, where ¼ 1.54 A ˚. The scattering intensity was measured in the range q ¼ 0.0071 A ˚À1 to q ¼ 0.334 A ˚À1 . The data were corrected for background and azimuthally averaged to obtain a spectrum of average intensity vs. q. Transmission electron microscope (TEM) is used to investigate the shape and morphology as well as the size of the samples. The TEM used is a JEOL 100 CX. The acceleration voltage was 100 kV for all samples/images. The samples were prepared by dispersion of the powder onto a formwar film.",
+      "section_path": [
+        "Methods"
+      ],
+      "section_type": "methods",
+      "figure_references": [],
+      "xrd_score": 4.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_ff79effaba3d",
+      "text": "The experimental results obtained in this study will in the following be analyzed. The XRD and SAXS models shown in section 2 will be fitted to the experimental data by the Least Square Method. First TEM images of the investigated powders will be analyzed and these images are used to support the theoretical XRD and SAXS models.",
+      "section_path": [
+        "Results"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8aa7bd892018",
+      "text": "In the XRD and SAXS theory grains of spherical shapes were assumed. This assumption can be confirmed by TEM, figure 3 . The particles are not exactly spherical but it seems to be a good approximation; however, particles of irregular shapes were found as well. For the SSEC78 samples primary particles of 5 nm or less can be observed. These primary particles are agglomerated into larger clusters. The primary particles observed show a narrow size distribution. The TEM images of P25 show typical diameters of 20-30 nm. Although smaller particles well below 20 nm can be observed and the TEM image of P25 shows a wider size distribution than SSEC78. A similar result can be observed for the UV100 powder. The TiO2_5 nm particles are of approximately the same size and have a similar size distribution as the SSEC78 sample.",
+      "section_path": [
+        "TEM"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 4.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_ebfeb5653039",
+      "text": "The Pseudo-Voigt function including a linear term to correct for the background of the 100% anatase peak, $25.4 (2), is used to determine the FWHM and the peak center of the four samples. These values will be used to calculate the average crystallite size from Scherrer's formula. The analytical expressions and the Guinier model will in the following be fitted to the background corrected 100% anatase peak for the four samples.",
+      "section_path": [
+        "XRD -analytical and theoretical models."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 1.6,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b60a0426fcff",
+      "text": "A Gaussian function and a Pseudo-Voigt function with a size distribution terms, equation (8) , are fitted to the XRD spectra as shown in table 2. The peak center is taken from the Pseudo-Voigt fit, resulting in only two unknown parameters for the size dependent Gaussian function; and from the log-normal size distribution, equation ( 2 ), and an extra unknown parameter for the size dependent Pseudo-Voigt function -the ' parameter. In figure 4 the fit of the XRD line profile from the Gaussian function is shown.",
+      "section_path": [
+        "XRD -analytical and theoretical models."
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "4"
+      ],
+      "xrd_score": 4.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_00458b0efb08",
+      "text": "The size dependent Gaussian function fits the experimental data well. However, some problems are observed for the four samples where the tails of the XRD peaks are overestimated compared to the experimental data. From the fits it is observed that the SSEC78 sample shows a very narrow size distribution compared to TiO2_5 nm and Hombikat UV100. Furthermore, Degussa P25 has the largest mean diameter 3-4 times larger then the three other.",
+      "section_path": [
+        "XRD -analytical and theoretical models."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_50a9c8cbd40f",
+      "text": "The Guinier model shown in equation ( 7 ) is fitted to the experimental XRD data for the four powders, which is shown in figure 5 . The grain shape of the crystallites is assumed spherical and a log-normal size distribution function is included.",
+      "section_path": [
+        "XRD -analytical and theoretical models."
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "5"
+      ],
+      "xrd_score": 4.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_f07478d5c905",
+      "text": "The experimental XRD spectra show different line profiles depending on the different preparation method. Fitting the Guinier model to the experimental data confirms the visual observations. SSEC78 shows a broad symmetrical peak corresponding to a narrow size distribution. SSEC78 is shown to consist of nanocrystallites with a mean diameter of 6.9 nm and is equal to 1.40. Hombikat UV100 and TiO2_5 nm have similar line profiles with a relative narrow top of the peak with a wide tail. The different line profiles compared to SSEC78 correspond to a broader size distribution. Hombikat UV100 shows a mean diameter of 2.7 nm and a value of 1.90. TiO2_5 nm has a slightly larger mean diameter of 4.3 nm and a value of 1.79. Degussa P25 has a value of 1.39 and a mean diameter of 25.6 nm.",
+      "section_path": [
+        "XRD -analytical and theoretical models."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a3d91e3a35c9",
+      "text": "The hard sphere model with size distribution and a structure factor is in the following used to fit the experimental measured SAXS data. In figure 6 the SAXS data for P25 is shown. The particles in the Degussa P25 powder do not show an interference effect and S(q, HS , C HS ) is equal to one. Hombikat UV100 shows a significantly different SAXS",
+      "section_path": [
+        "SAXS."
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "6"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b3f7ade9f094",
+      "text": "0 2 4 6 8 × 10 -3 Log normal size distribution function Particle number density (a.u.) µ = 16.6 nm σ = 1.5 B) XRD -P25 with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) 0 1 0 2 0 3 0 4 0 5 0 Column length (nm) Particle number density (a.u.) µ = 4.6 nm σ = 1.5 A) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -SSEC78 with size distribution Measured data Gaussian function Measured data Gaussian function 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 5.4 nm σ = 1.9 D) XRD -TiO2 5 nm with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 4.9 nm σ = 2.0 C) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -UV100 with size distribution Measured data Gaussian function Measured data Gaussian function curve than Degussa P25 and the ''knee'' for Hombikat UV100 is observed at larger q values. The SAXS data for Hombikat UV100 is shown in figure 7 .",
+      "section_path": [
+        "SAXS."
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "7"
+      ],
+      "xrd_score": 9.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_3334bd6b3f7d",
+      "text": "The structure factor is included for the fit of the SAXS data for Hombikat UV100 indicating that the powder is denser packed compared to Degussa P25. The SAXS curve for TiO2_5 nm has similar trends as Hombikat UV100 (figure 8 ).",
+      "section_path": [
+        "SAXS."
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "8"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_16e78ce5fe5d",
+      "text": "The structure factor was also required to model the SAXS curve for TiO2_5 nm but a mean size of approximately twice as large as for Hombokat UV100 was observed. In figure 9 the SAXS fit for the SSEC78 powder is shown.",
+      "section_path": [
+        "SAXS."
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "9"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_37af50b73a4c",
+      "text": "The SAXS curve for SSEC 78 shows a different tendency at large q values. The hard sphere model could not explain this type of scattering because for the SSEC78 powder a positive deviation from the Porod slope (-4) was observed, which is normally attributed to the scattering from a rough surface or indeed from a surface fractal [24] . This additional features on the primary particle surfaces was taken into account by multiplying the form factor by (qR) where 0 < < 1 and expresses the degree of roughness. The surface fractal of the primary particles can be extracted as D s ¼ 6 À (4 À ).",
+      "section_path": [
+        "SAXS."
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_58481a1d0f97",
+      "text": "In table 2 the mean diameters with standard deviations calculated from equation ( 3 ) are shown for the two analytical XRD models and the Guinier model. The four methods used to extract the crystallite size show a variation in the mean diameter and standard deviation. The Guinier model gives a larger diameter for SSEC78 and Degussa but a significant smaller diameter for Hombikat UV100 and TiO2_5 nm compared to the analytical expressions. Comparing the standard deviations it is observed that the standard deviations obtained from the Pseudo-Voigt function with size distribution are different from the Gaussian function and the Guinier model which are consistent. This indicates that the standard deviation is not obtainable from the Pseudo-Voigt function but should be extracted from one of the other models.",
+      "section_path": [
+        "XRD: Analytic expressions vs. theoretical model"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_3c02a2fd9062",
+      "text": "Based on this XRD investigation no concise conclusion can be made on whether to use Scherrer's analytical formulation or Guinier's theoretical expression. Both the",
+      "section_path": [
+        "XRD: Analytic expressions vs. theoretical model"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_5013482e6168",
+      "text": "0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 0 0.005 0.01 0.015 Log normal size distribution -P25 Radius (nm) Particle no. density (a.u.) µ = 9.8 nm, σ = 0.69 S(q) = 1.0 -2.2 -2 -1.8 -1.6 -1.4 -1.2 -1 -0.8 -0.6 -0.4 -6 -4 -2 0 2 log (q) log(I) SAXS model with size distribution -P25 Fit with size distr. Measured data Scherrer formula from 1918 and Guinier's model from 1963 can be used for extracting crystallite size distribution from experimental XRD spectra.",
+      "section_path": [
+        "XRD: Analytic expressions vs. theoretical model"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_6b82a3838aa3",
+      "text": "The analysis of the SAXS curves for the three commercial powders showed that for Hombikat UV100 and TiO2_5 nm the structure factor had to be included in the model to take into account the interference factor for agglomerated nanoparticles. For Degussa P25 the interference factor was found to be unity indicating that no interparticle interference is occurring. For the SSEC produced powder the hard sphere model was not sufficient to model the scattering curve due to a positive deviation from the Porod slope was observed. The positive deviation is caused by a surface roughness or surface fractal of the primary particles. The slope in the Porod regime for SSEC78 was À3.48 with an factor of 0.52 indicating a surface fractal dimension of 2.48. Previously in the literature a positive deviation is reported for aerogels and xerogels [25, 26] but also for supercritical dried aerogels [24, 27] .",
+      "section_path": [
+        "SAXS: The hard sphere model"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_1bbb65f71d12",
+      "text": "The TEM, XRD, and SAXS data have been analyzed by different models. In table 3 the extracted data are shown.",
+      "section_path": [
+        "Morphology: TEM, XRD, and SAXS"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c8c973aa7f70",
+      "text": "0 2 4 6 8 A qualitative judgment of the TEM images shows good agreement with the particle sizes found from XRD and SAXS measurements. The three different analysis methods all show comparable values of the extracted sizes. However, the sizes obtained from the SAXS measurements are for all four samples smaller than the sizes from the XRD measurements expressed by the Guinier model. An explanation to this phenomenon could be that the size extracted from XRD is only for the crystalline areas and the smallest particles in the individual powders are amorphous. SAXS on the other hand can determine the size from both amorphous and crystalline particles and the mean sizes extracted from SAXS thereby become smaller than the size extracted from XRD. However, taken the uncertainties and variances into account the size distributions for each sample are similar from both SAXS and XRD.",
+      "section_path": [
+        "Morphology: TEM, XRD, and SAXS"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9839fc7cc69a",
+      "text": "Some comparisons can be made between the TEM images, figure 3 from this study and the SEM images from Jensen et al. 2004 of the SSEC78 sample. The primary particles seem to be agglomerated into larger clusters as can be seen on both the SEM and TEM images. Occasionally thinner and narrow structures can be observed from the clusters surfaces as observed from TEM. The secondary structure found in both SEM and TEM was confirmed by SAXS, although a smaller secondary structure was extracted from SAXS than seen in SEM and TEM. The SAXS analysis of SSEC78 also confirms this secondary structure by the implementation of the interparticle interference factor.",
+      "section_path": [
+        "Morphology: TEM, XRD, and SAXS"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_914351d68263",
+      "text": "The P25 particles show a significantly larger size of the primary particles than SSEC78. However, as observed by SEM, TEM, and SAXS P25 does not show a",
+      "section_path": [
+        "Morphology: TEM, XRD, and SAXS"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_59eb82a57eb1",
+      "text": "0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 secondary structure. On the other hand the size distribution for P25 is wider than for SSEC78. The UV100 and the TiO2_5 nm particles show the same tendencies in SAXS and XRD and both samples have primary particles of approximately 5 nm or less; although, the TEM analysis revealed that UV100 consists of remarkable larger primary particles than extracted from XRD and SAXS. The TEM images of TiO2_5 nm showed primary particles with sizes in the same range as SSEC78. Both the UV100 and the TiO2_5 nm samples consist of a secondary structure observed from SAXS.",
+      "section_path": [
+        "Morphology: TEM, XRD, and SAXS"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a8c02267a1f4",
+      "text": "The present study showed that crystallite and primary particle size distributions can be extracted from experimental measurements by theoretical models assuming spherical 10 12 14 16 18 20 22 24 26 28 particles with a log-normal size distribution. The morphology upon which the XRD and SAXS models were developed was determined by TEM and SEM and the importance of using XRD and electron microscopy together to extract convincing physical models of the nanopowders was shown. The crystallite size extracted from the theoretical Guinier model was in agreement with the SAXS measurements. However, the SAXS analysis showed for all samples a smaller primary particle size compared to XRD. The Guinier model deviated slightly from Scherrer's formula and analytical models including a size dependent term. No exact conclusion can be made from this study to whether Guinier's model or Scherrer's formula is more precise.",
+      "section_path": [
+        "Conclusion"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Figure 1 . Figure 1. XRD spectra as a function of and ; A) ¼ 10 nm, B) ¼ 1.5.",
+      "graphic_targets": [],
+      "coords": "6,114.29,628.90,264.67,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 5.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/nanosized_powders/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_9e20a05848db"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_79020172bcdd",
+        "paragraph_9b9bc776e93a",
+        "paragraph_10e0aee1a9a7",
+        "paragraph_0dc60d868f16",
+        "paragraph_9e20a05848db",
+        "paragraph_d0fe54dd151d",
+        "paragraph_980a8b9dddd3",
+        "paragraph_410cbe7c19b9",
+        "paragraph_1ab034cf4e5e"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "4 log 2 -2 -1.8 -1.6 -1.4 -1.2 -1 -0.8 -0.6 -02 -2 -1.8 -1.6 -1.4 -1.2 -1 -0.8 -0.6 -0.",
+      "graphic_targets": [],
+      "coords": "8,284.99,143.62,3.89,6.48;8,312.71,143.62,3.89,6.48;8,336.94,143.62,7.78,6.48;8,364.66,143.62,7.78,6.48;8,392.38,143.62,7.78,6.48;8,420.05,143.62,7.78,6.48;8,281.01,137.61,3.89,6.48;8,275.17,127.76,9.73,6.47;8,275.17,117.15,9.73,6.47;8,275.17,106.26,9.73,6.47;8,275.17,95.65,9.73,6.47;8,275.17,85.09,9.73,6.47;8,301.24,78.94,110.10,6.47;8,337.23,154.35,38.12,6.47;8,385.38,93.08,35.36,7.00;8,351.29,121.79,5.84,6.47;8,385.38,101.49,31.47,7.00;8,344.19,127.12,5.84,6.47;8,385.38,110.18,31.47,7.00;8,336.27,132.40,5.84,6.47;8,277.26,230.47,7.74,7.00;8,277.26,222.60,7.74,7.00;8,277.26,212.87,7.74,7.00;8,281.10,203.36,3.89,6.48;8,281.10,193.68,3.89,6.48;8,281.10,183.94,3.89,6.48;8,419.68,224.09,5.84,6.47;8,262.99,207.82,6.48,9.34;8,262.99,199.27,6.48,6.61;8,304.16,172.72,104.26,6.47;8,419.68,216.17,5.84,6.47;8,419.68,210.01,5.84,6.47;8,96.62,143.62,3.89,6.48;8,124.38,143.62,3.89,6.48;8,150.20,143.62,7.78,6.48;8,177.97,143.62,7.78,6.48;8,205.73,143.62,7.78,6.48;8,233.49,143.62,7.78,6.48;8,92.69,139.12,3.89,6.48;8,82.96,129.39,13.62,6.47;8,86.85,119.98,9.73,6.47;8,82.96,110.25,13.62,6.47;8,86.85,100.84,9.73,6.47;8,82.96,91.11,13.62,6.47;8,112.74,78.94,110.10,6.47;8,148.73,154.35,38.11,6.47;8,62.95,103.60,6.48,23.34;8,71.45,130.64,6.47,9.73;8,71.45,106.52,6.48,22.18;8,71.45,88.23,6.47,16.34;8,188.99,97.42,37.30,7.00;8,104.01,88.57,5.84,6.47;8,188.99,105.12,37.30,7.00;8,126.12,125.03,5.84,6.47;8,188.99,112.76,41.19,7.00;8,153.79,129.43,5.84,6.47;8,62.22,78.94,7.00,6.47;8,255.04,103.60,6.48,23.34;8,263.54,130.64,6.48,9.73;8,263.54,106.52,6.48,22.18;8,263.54,88.23,6.47,16.34;8,254.39,78.94,7.00,6.47;8,92.15,237.55,150.82,6.50;8,89.24,230.47,7.74,7.00;8,89.24,221.56,7.74,7.00;8,89.24,211.82,7.74,7.00;8,93.08,202.31,3.89,6.48;8,93.08,192.63,3.89,6.48;8,93.08,182.90,3.89,6.48;8,231.94,229.26,5.00,5.55;8,74.62,207.82,6.48,9.34;8,74.62,199.27,6.47,6.61;8,157.86,248.85,19.84,6.47;8,281.06,237.55,150.81,6.50;8,345.73,248.75,19.84,6.47;8,115.65,172.72,104.26,6.47;8,231.94,223.21,5.00,5.55;8,231.94,218.04,5.00,5.55",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 0.0,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Figure 2 . Figure 2. SAXS model with different size distributions; A) ¼ 1.4, B) ¼ 10 nm.",
+      "graphic_targets": [],
+      "coords": "8,103.86,262.67,285.51,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 0.5,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_d70b4358972a",
+        "paragraph_dc9cb1dde1d5",
+        "paragraph_14cb12d98da3"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_0e08675302ef",
+        "paragraph_31ecc461a93b",
+        "paragraph_21b82653e97b",
+        "paragraph_d837f7b714f8",
+        "paragraph_d70b4358972a",
+        "paragraph_dc9cb1dde1d5",
+        "paragraph_14cb12d98da3",
+        "paragraph_f2f35651e7e2",
+        "paragraph_95cd15b8625e",
+        "paragraph_731514fd19ec",
+        "paragraph_a6370ac17d3b"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Figure 3 . Figure 3. TEM images of the four powders; A) SSEC78, B) P25, C) UV100, D) TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "11,84.59,628.90,324.00,7.09;11,251.22,454.50,112.92,170.51",
+      "graphic_coords": "11,251.22,454.50,112.92,170.51",
+      "figure_type": null,
+      "xrd_score": 6.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_8aa7bd892018",
+        "paragraph_9839fc7cc69a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_0edcdd1f196d",
+        "paragraph_93c1c9163481",
+        "paragraph_04f20aa99a96",
+        "paragraph_ff79effaba3d",
+        "paragraph_8aa7bd892018",
+        "paragraph_ebfeb5653039",
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_5013482e6168",
+        "paragraph_6b82a3838aa3",
+        "paragraph_1bbb65f71d12",
+        "paragraph_c8c973aa7f70",
+        "paragraph_9839fc7cc69a",
+        "paragraph_914351d68263",
+        "paragraph_59eb82a57eb1",
+        "paragraph_a8c02267a1f4"
+      ]
+    },
+    {
+      "figure_id": "fig_4_2",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Figure 4 . Figure 4. Gaussian function with log-normal size distribution function fit; A) SSEC78, B) P25, C) UV100, D) TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "13,61.29,451.96,370.61,7.09;13,61.29,461.15,51.88,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 4.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_b60a0426fcff"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_04f20aa99a96",
+        "paragraph_ff79effaba3d",
+        "paragraph_8aa7bd892018",
+        "paragraph_ebfeb5653039",
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9"
+      ]
+    },
+    {
+      "figure_id": "fig_5",
+      "label": "5",
+      "normalized_label": "5",
+      "caption": "Figure 5 . Figure 5. XRD line profile fit for A) SSEC78, B) P25, C) UV100, and D) TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "14,95.02,450.66,303.19,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 7.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/nanosized_powders/figures/fig_5.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_50a9c8cbd40f"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_8aa7bd892018",
+        "paragraph_ebfeb5653039",
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d"
+      ]
+    },
+    {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Figure 6 . Figure 6. SAXS fit for P25.",
+      "graphic_targets": [],
+      "coords": "15,196.21,333.81,100.77,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 3.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_a3d91e3a35c9"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d",
+        "paragraph_16e78ce5fe5d",
+        "paragraph_37af50b73a4c"
+      ]
+    },
+    {
+      "figure_id": "fig_7",
+      "label": "7",
+      "normalized_label": "7",
+      "caption": "Figure 7 . Figure 7. SAXS fit for UV100.",
+      "graphic_targets": [],
+      "coords": "16,190.49,349.75,112.21,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 3.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_b3f7ade9f094"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d",
+        "paragraph_16e78ce5fe5d",
+        "paragraph_37af50b73a4c",
+        "paragraph_58481a1d0f97"
+      ]
+    },
+    {
+      "figure_id": "fig_8",
+      "label": "8",
+      "normalized_label": "8",
+      "caption": "Figure 8 . Figure 8. SAXS fit for TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "17,183.69,331.94,125.86,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 3.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_3334bd6b3f7d"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d",
+        "paragraph_16e78ce5fe5d",
+        "paragraph_37af50b73a4c",
+        "paragraph_58481a1d0f97",
+        "paragraph_3c02a2fd9062"
+      ]
+    },
+    {
+      "figure_id": "fig_9",
+      "label": "89",
+      "normalized_label": "89",
+      "caption": "8 DFigure 9 . Figure 9. SAXS fit for SC78.",
+      "graphic_targets": [],
+      "coords": "18,193.55,337.39,106.07,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 0.5,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tab_0",
+      "label": "1",
+      "caption": "Table 1 .",
+      "text": "Temperature Pressure Surface Area Method [ C] [Bar] Crystallinity [m 2 /g] Degussa P25 Chloride $985 Ambient 71% anatase 27% 50 rutile 2% amorphous Hombikat UV100 Sulphate 800 to 1000 a Ambient 67% anatase 33% amorphous 360 TiO2_5 nm Sol-Gel >250 a Ambient 60% anatase 40% amorphous 230 SSEC78 SSEC 100 100 63% anatase 37% amorphous 236"
+    },
+    {
+      "table_id": "tab_1",
+      "label": "2",
+      "caption": "Table 2 .",
+      "text": "Pseudo-Voigt and Scherrers formula Gaussian with Pseudo-Voigt with Guinier size distribution size distribution Model X c [ 2] FWHM [ 2] D FWHM [nm] D Gaus [nm] D PV [nm] D GM [nm] SSEC78 25.35 1.528 5.33 5.0 AE 2.1 5.6 AE 0.6 7.3 AE 2.5 Degussa P25 25.32 0.419 19.43 18.0 AE 7.6 20.27 AE 1.9 27.0 AE 9.1 Hombikat UV100 25.30 0.986 8.26 6.2 AE 4.9 8.2 AE 2.8 3.3 AE 2.4 TiO2_5 nm 25.30 0.992 8.21 6.6 AE 4.7 7.7 AE 3.6 5.0 AE 3.2"
+    },
+    {
+      "table_id": "tab_2",
+      "label": "3",
+      "caption": "Table 3 .",
+      "text": "TEM XRD SAXS D [nm] Shape D GM [nm] D HS [nm] HS C HS D f [nm] SSEC78 $5 Spherical 7.3 AE 2.5 3.9 AE 2.1 0.31 2.8 3.48 5.6 Degussa P25 20-30 Spherical 27.0 AE 9.1 21.0 AE 8.2 - - - - Hombikat UV100 5-20 Spherical 3.3 AE 2.4 2.5 AE 0.9 0.11 1.3 2.83 15.7 TiO2_5 nm $5 Spherical 5.0 AE 3.2 4.8 AE 1.5 0.22 1.0 2.55 25.7"
+    }
+  ],
+  "references": [
+    {
+      "reference_id": "b0",
+      "title": "Needs and opportunities for nanoparticle characterization",
+      "doi": null,
+      "year": "2000",
+      "authors": [
+        "C Saltiel",
+        "H Giesche"
+      ],
+      "raw_text": "Needs and opportunities for nanoparticle characterization C Saltiel H Giesche J. Nanopart. Res 2 325 2000 C. Saltiel, H. Giesche. Needs and opportunities for nanoparticle characterization. J. Nanopart. Res., 2, 325 (2000)."
+    },
+    {
+      "reference_id": "b1",
+      "title": "Nanopowder characterization: challenges and future directions",
+      "doi": null,
+      "year": "2002",
+      "authors": [
+        "A Jillavenskatesa",
+        "J Kelly"
+      ],
+      "raw_text": "Nanopowder characterization: challenges and future directions A Jillavenskatesa J F Kelly J. Nanopart. Res 4 463 2002 A. Jillavenskatesa, J.F. Kelly. Nanopowder characterization: challenges and future directions. J. Nanopart. Res., 4, 463 (2002)."
+    },
+    {
+      "reference_id": "b2",
+      "title": "Morphology Control of Materials and Nanoparticles -Advanced Materials Processing and Characterization",
+      "doi": null,
+      "year": "2004",
+      "authors": [],
+      "raw_text": "Y Waseda A Muramatsu Morphology Control of Materials and Nanoparticles -Advanced Materials Processing and Characterization New York Springer 2004 Y. Waseda, A. Muramatsu. Morphology Control of Materials and Nanoparticles -Advanced Materials Processing and Characterization, Springer, New York (2004)."
+    },
+    {
+      "reference_id": "b3",
+      "title": "Bestimmung der Gro¨sse und der inneren Struktur von Kolloidteilchen mittels Ro¨ntgenstrahlen",
+      "doi": null,
+      "year": "1918",
+      "authors": [
+        "P Scherrer"
+      ],
+      "raw_text": "Bestimmung der Gro¨sse und der inneren Struktur von Kolloidteilchen mittels Ro¨ntgenstrahlen P Scherrer Nachrichten von der Ko¨niglichen Gesellschaft der Wissenschaften zu Go¨ttingen Weidmannsche Buchhandlung 1918 Berlin P. Scherrer. Bestimmung der Gro¨sse und der inneren Struktur von Kolloidteilchen mittels Ro¨ntgenstrahlen, Nachrichten von der Ko¨niglichen Gesellschaft der Wissenschaften zu Go¨ttingen Weidmannsche Buchhandlung, Berlin (1918)."
+    },
+    {
+      "reference_id": "b4",
+      "title": "X-Ray Diffraction",
+      "doi": null,
+      "year": "1963",
+      "authors": [
+        "A Guinier"
+      ],
+      "raw_text": "X-Ray Diffraction A Guinier Crystals, Imperfect Crystals, and Amorphous Bodies New York Dover Publication 1963 A. Guinier. X-Ray Diffraction -In Crystals, Imperfect Crystals, and Amorphous Bodies, Dover Publication, New York (1963)."
+    },
+    {
+      "reference_id": "b5",
+      "title": "Scherrer after sixty years: a survey and some new results in the determination of crystallite size",
+      "doi": null,
+      "year": "1978",
+      "authors": [
+        "J Langford",
+        "A Wilson"
+      ],
+      "raw_text": "Scherrer after sixty years: a survey and some new results in the determination of crystallite size J I Langford A J C Wilson J. Appl. Cryst 11 102 1978 J.I. Langford, A.J.C. Wilson. Scherrer after sixty years: a survey and some new results in the determination of crystallite size. J. Appl. Cryst., 11, 102 (1978)."
+    },
+    {
+      "reference_id": "b6",
+      "title": "Characterization of nanosized partly crystalline photocatalysts",
+      "doi": null,
+      "year": "2004",
+      "authors": [
+        "H Jensen",
+        "K Joensen",
+        "J Jørgensen",
+        "J Pedersen",
+        "E Søgaard"
+      ],
+      "raw_text": "Characterization of nanosized partly crystalline photocatalysts H Jensen K D Joensen J E Jørgensen J S Pedersen E G Søgaard J. Nanopart. Res 6 519 2004 H. Jensen, K.D. Joensen, J.E. Jørgensen, J.S. Pedersen, E.G. Søgaard. Characterization of nanosized partly crystalline photocatalysts. J. Nanopart. Res., 6, 519 (2004)."
+    },
+    {
+      "reference_id": "b7",
+      "title": "MWP-fit: A program for multiple whole-profile fitting of diffraction peak profile by ab initio theoretical functions",
+      "doi": null,
+      "year": "2001",
+      "authors": [
+        "G Riba´rik",
+        "T Unga´r",
+        "J Gubicza"
+      ],
+      "raw_text": "MWP-fit: A program for multiple whole-profile fitting of diffraction peak profile by ab initio theoretical functions G Riba´rik T Unga´r J Gubicza J. Appl. Cryst 34 669 2001 G. Riba´rik, T. Unga´r, J. Gubicza. MWP-fit: A program for multiple whole-profile fitting of diffraction peak profile by ab initio theoretical functions. J. Appl. Cryst., 34, 669 (2001)."
+    },
+    {
+      "reference_id": "b8",
+      "title": "Rais de Debye-Scherrer et Re´partition des Dimensions de Bragg dans les Poudres Polycrystallines",
+      "doi": null,
+      "year": "1950",
+      "authors": [
+        "E Bertaut"
+      ],
+      "raw_text": "Rais de Debye-Scherrer et Re´partition des Dimensions de Bragg dans les Poudres Polycrystallines E F Bertaut Acta Cryst 3 14 1950 E.F. Bertaut. Rais de Debye-Scherrer et Re´partition des Dimensions de Bragg dans les Poudres Polycrystallines. Acta Cryst., 3, 14 (1950)."
+    },
+    {
+      "reference_id": "b9",
+      "title": "Effect of a crystallite size distribution on X-ray diffraction line profiles and whole-powder-pattern fitting",
+      "doi": null,
+      "year": "2000",
+      "authors": [
+        "J Langford",
+        "D Lou¨r",
+        "P Scardi"
+      ],
+      "raw_text": "Effect of a crystallite size distribution on X-ray diffraction line profiles and whole-powder-pattern fitting J I Langford D Lou¨r P Scardi J. Appl. Cryst 33 964 2000 J.I. Langford, D. Lou¨r, P. Scardi. Effect of a crystallite size distribution on X-ray diffraction line profiles and whole-powder-pattern fitting. J. Appl. Cryst., 33, 964 (2000)."
+    },
+    {
+      "reference_id": "b10",
+      "title": "Particle-size, size distribution and dislocation in nanocrystalline tungsten-carbide",
+      "doi": null,
+      "year": "1999",
+      "authors": [
+        "T Unga´r",
+        "A Borbe´ly",
+        "G Goren-Muginstein",
+        "S Berger",
+        "A Rosen"
+      ],
+      "raw_text": "Particle-size, size distribution and dislocation in nanocrystalline tungsten-carbide T Unga´r A Borbe´ly G R Goren-Muginstein S Berger A R Rosen Nanostr. Mat 11 103 1999 T. Unga´r, A. Borbe´ly, G.R. Goren-Muginstein, S. Berger, A.R. Rosen. Particle-size, size distribution and dislocation in nanocrystalline tungsten-carbide. Nanostr. Mat., 11, 103 (1999)."
+    },
+    {
+      "reference_id": "b11",
+      "title": "The effect of heat-treatment on the grain-size of nanodipserse plasmathermal silicon nitride powder",
+      "doi": null,
+      "year": "2000",
+      "authors": [
+        "J Gubicza",
+        "J Sze´pvo¨lgyi",
+        "I Mohai",
+        "G Riba´rik",
+        "T Unga´r"
+      ],
+      "raw_text": "The effect of heat-treatment on the grain-size of nanodipserse plasmathermal silicon nitride powder J Gubicza J Sze´pvo¨lgyi I Mohai G Riba´rik T Unga´r J. Mater. Sci 35 3711 2000 J. Gubicza, J. Sze´pvo¨lgyi, I. Mohai, G. Riba´rik, T. Unga´r. The effect of heat-treatment on the grain-size of nanodipserse plasmathermal silicon nitride powder. J. Mater. Sci., 35, 3711 (2000)."
+    },
+    {
+      "reference_id": "b12",
+      "title": "Small-angle scattering from prercipitates: Analysis by use of a polydisperse hard-sphere model",
+      "doi": null,
+      "year": "1993",
+      "authors": [
+        "J Pedersen"
+      ],
+      "raw_text": "Small-angle scattering from prercipitates: Analysis by use of a polydisperse hard-sphere model J S Pedersen Phys. Rev. B 47 657 1993 J.S. Pedersen. Small-angle scattering from prercipitates: Analysis by use of a polydisperse hard-sphere model. Phys. Rev. B, 47, 657 (1993)."
+    },
+    {
+      "reference_id": "b13",
+      "title": "Analysis of small-angle scattering data from colloids and polymer solutions: modeling and least-squares fitting",
+      "doi": null,
+      "year": "1997",
+      "authors": [
+        "J Pedersen"
+      ],
+      "raw_text": "Analysis of small-angle scattering data from colloids and polymer solutions: modeling and least-squares fitting J S Pedersen Advances in Colloid and Interface Science 70 171 1997 J.S. Pedersen. Analysis of small-angle scattering data from colloids and polymer solutions: modeling and least-squares fitting. Advances in Colloid and Interface Science, 70, 171 (1997)."
+    },
+    {
+      "reference_id": "b14",
+      "title": "Analysis of small-angle x-ray scattering data for model polyurethane ionomers: evaluation of hard-sphere models",
+      "doi": null,
+      "year": "1991",
+      "authors": [
+        "S Visser",
+        "S Cooper"
+      ],
+      "raw_text": "Analysis of small-angle x-ray scattering data for model polyurethane ionomers: evaluation of hard-sphere models S A Visser S L Cooper Macromolecules 24 2584 1991 S.A. Visser, S.L. Cooper. Analysis of small-angle x-ray scattering data for model polyurethane ionomers: evaluation of hard-sphere models. Macromolecules, 24, 2584 (1991)."
+    },
+    {
+      "reference_id": "b15",
+      "title": "Particle formation during anatase precipitation of seeded titanyl sulfate solution",
+      "doi": null,
+      "year": "2001",
+      "authors": [
+        "S Sathyamoorthy",
+        "G Moggridge",
+        "J Hounslow"
+      ],
+      "raw_text": "Particle formation during anatase precipitation of seeded titanyl sulfate solution S Sathyamoorthy G D Moggridge J Hounslow Crystal Growth & Design 1 123 2001 S. Sathyamoorthy, G.D. Moggridge, J. Hounslow. Particle formation during anatase precipitation of seeded titanyl sulfate solution. Crystal Growth & Design, 1, 123 (2001)."
+    },
+    {
+      "reference_id": "b16",
+      "title": null,
+      "doi": null,
+      "year": "1998",
+      "authors": [
+        "R Walpole",
+        "R Myers",
+        "S Myers"
+      ],
+      "raw_text": "R E Walpole R H Myers S L Myers Probability and Statistics for Engineers and Scientists 1998 Prentice Hall New Jersey R.E. Walpole, R.H. Myers, S.L. Myers. Probability and Statistics for Engineers and Scientists, Prentice Hall, New Jersey (1998)."
+    },
+    {
+      "reference_id": "b17",
+      "title": "Small Angle X-ray Scattering (SAXS)",
+      "doi": null,
+      "year": "2005-03",
+      "authors": [],
+      "raw_text": "G Beaucage Small Angle X-ray Scattering (SAXS) March. 2005 8 G. Beaucage. Small Angle X-ray Scattering (SAXS), http://www.eng.uc.edu/$gbeaucag ResearchGroup.html, March 8 (2005)."
+    },
+    {
+      "reference_id": "b18",
+      "title": "Modelling of small-angle scattering data from colloids and polymer systems",
+      "doi": null,
+      "year": "2002",
+      "authors": [
+        "J Pedersen"
+      ],
+      "raw_text": "Modelling of small-angle scattering data from colloids and polymer systems J S Pedersen X-Rays and Light P Lidner T Zemb Oxford Elsevier 2002 J.S. Pedersen, Modelling of small-angle scattering data from colloids and polymer systems, In X-Rays and Light, edited by P. Lidner and T. Zemb, Elsevier, Oxford (2002), pp. 391-420."
+    },
+    {
+      "reference_id": "b19",
+      "title": "Multi length scale analysis of the microstructure on sticky sphere dispersions during shear flow",
+      "doi": null,
+      "year": "2005",
+      "authors": [
+        "H Hoekstra",
+        "J Mewis",
+        "T Narayanan",
+        "J Vermant"
+      ],
+      "raw_text": "Multi length scale analysis of the microstructure on sticky sphere dispersions during shear flow H Hoekstra J Mewis T Narayanan J Vermant Langmuir 21 11017 2005 H. Hoekstra, J. Mewis, T. Narayanan, J. Vermant. Multi length scale analysis of the microstructure on sticky sphere dispersions during shear flow. Langmuir, 21, 11017 (2005)."
+    },
+    {
+      "reference_id": "b20",
+      "title": "Small-angle scattering by fractal systems",
+      "doi": null,
+      "year": "1988",
+      "authors": [
+        "J Teixeira"
+      ],
+      "raw_text": "Small-angle scattering by fractal systems J Teixeira J. Appl. Cryst 21 781 1988 J. Teixeira. Small-angle scattering by fractal systems. J. Appl. Cryst, 21, 781 (1988)."
+    },
+    {
+      "reference_id": "b21",
+      "title": "Low Temperature Synthesis of Metal Oxides by a Supercritical Seed Enhanced Crystallization (SSEC) Process",
+      "doi": null,
+      "year": "2006",
+      "authors": [
+        "H Jensen",
+        "K Joensen",
+        "S Iversen",
+        "E Søgaard"
+      ],
+      "raw_text": "Low Temperature Synthesis of Metal Oxides by a Supercritical Seed Enhanced Crystallization (SSEC) Process H Jensen K D Joensen S B Iversen E G Søgaard Ind. Eng. Chem. Res 45 2006 H. Jensen, K.D. Joensen, S.B. Iversen, E.G. Søgaard. Low Temperature Synthesis of Metal Oxides by a Supercritical Seed Enhanced Crystallization (SSEC) Process, Ind. Eng. Chem. Res., 45, 3348-3353 (2006)."
+    },
+    {
+      "reference_id": "b22",
+      "title": "XPS and FTIR investigation of the surface properties of different prepared titania nano-powders",
+      "doi": null,
+      "year": "2005",
+      "authors": [
+        "H Jensen",
+        "A Soloviev",
+        "Z Lie",
+        "E Søgaard"
+      ],
+      "raw_text": "XPS and FTIR investigation of the surface properties of different prepared titania nano-powders H Jensen A Soloviev Z Lie E G Søgaard Applied Surface Science 246 239 2005 H. Jensen, A. Soloviev, Z. Lie, E.G. Søgaard. XPS and FTIR investigation of the surface properties of different prepared titania nano-powders. Applied Surface Science, 246, 239 (2005)."
+    },
+    {
+      "reference_id": "b23",
+      "title": "SAXS from particle and disordered systems. Fibres and Textiles in Eastern Europe",
+      "doi": null,
+      "year": "2005",
+      "authors": [],
+      "raw_text": "L Pajak B Bierska-Piech J Mrowiec-Bialon A B Jarzebski R Diduszko SAXS from particle and disordered systems. Fibres and Textiles in Eastern Europe 2005 13 69 L. Pajak, B. Bierska-Piech, J. Mrowiec-Bialon, A.B. Jarzebski, R. Diduszko. SAXS from particle and disordered systems. Fibres and Textiles in Eastern Europe, 13, 69 (2005)."
+    },
+    {
+      "reference_id": "b24",
+      "title": null,
+      "doi": null,
+      "year": "1999",
+      "authors": [
+        "E Blanco",
+        "L Esquivias",
+        "R Litran",
+        "M Pinero",
+        "M Ramirez-Del-Solar",
+        "N Rosa-Fox"
+      ],
+      "raw_text": "E Blanco L Esquivias R Litran M Pinero M Ramirez-Del-Solar N Rosa-Fox Sonogels and derived materials. Appl. Organometal. Chem 13 399 1999 E. Blanco, L. Esquivias, R. Litran, M. Pinero, M. Ramirez-del-Solar, N. Rosa-Fox. Sonogels and derived materials. Appl. Organometal. Chem., 13, 399 (1999)."
+    },
+    {
+      "reference_id": "b25",
+      "title": "Comparative study using small-angle x-ray scattering and nitrogen adsorption in the characterization of silica xerogels and aerogels",
+      "doi": null,
+      "year": "2004",
+      "authors": [
+        "D Vollet",
+        "D Donatti",
+        "A Ruiz"
+      ],
+      "raw_text": "Comparative study using small-angle x-ray scattering and nitrogen adsorption in the characterization of silica xerogels and aerogels D R Vollet D A Donatti A I Ruiz Phys. Rev. B 69 64202 2004 D.R. Vollet, D.A. Donatti, A.I. Ruiz. Comparative study using small-angle x-ray scattering and nitrogen adsorption in the characterization of silica xerogels and aerogels. Phys. Rev. B, 69, 064202 (2004)."
+    },
+    {
+      "reference_id": "b26",
+      "title": "Structure development in aerogelprocessed nanocrystalline alkaline earth oxides as revealed by SANS",
+      "doi": null,
+      "year": "2005",
+      "authors": [
+        "V Hackley",
+        "P Stoimenov",
+        "D Ho",
+        "L Sung",
+        "K Klabunde"
+      ],
+      "raw_text": "Structure development in aerogelprocessed nanocrystalline alkaline earth oxides as revealed by SANS V A Hackley P K Stoimenov D L Ho L P Sung K J Klabunde J. Appl. Cryst 38 619 2005 V.A. Hackley, P.K. Stoimenov, D.L. Ho, L.P. Sung, K.J. Klabunde. Structure development in aerogel- processed nanocrystalline alkaline earth oxides as revealed by SANS. J. Appl. Cryst., 38, 619 (2005)."
+    }
+  ],
+  "counts": {
+    "sections": 19,
+    "paragraphs": 70,
+    "results_paragraphs": 1,
+    "xrd_paragraphs": 27,
+    "figures": 10,
+    "xrd_figures": 7,
+    "tables": 3,
+    "references": 27
+  }
+}

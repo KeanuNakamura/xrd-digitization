@@ -1,0 +1,411 @@
+[
+  {
+    "document": {
+      "source_pdf": "pdf_files/carbonStacking.pdf",
+      "source_sha256": "4037c4bbb9905492c84e1b5eb57a5c8e5ed7e6c62a673f312bb95a48f566ee5b",
+      "title": "XRD analysis of carbon stacking structure in coal during heat treatment",
+      "doi": "10.1016/j.fuel.2004.06.019",
+      "journal": "Fuel",
+      "publication_date": "2004-07-14"
+    },
+    "figure": {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Fig. 1 . Fig.1. XRD profiles of raw coals.",
+      "graphic_targets": [],
+      "coords": "3,106.87,729.65,110.42,7.01;3,70.07,370.05,184.03,350.87",
+      "graphic_coords": "3,70.07,370.05,184.03,350.87",
+      "figure_type": null,
+      "xrd_score": 7.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/carbonStacking/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_efd8f1103230"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_d02167acbfe0",
+        "paragraph_b6149353f63f",
+        "paragraph_1c8575d36e79",
+        "paragraph_0da122243893",
+        "paragraph_efd8f1103230",
+        "paragraph_7ef8757e6856",
+        "paragraph_23efbe22a68a",
+        "paragraph_11a9011bdcb9",
+        "paragraph_9ae77813fef8"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_efd8f1103230",
+        "text": "Fig. 1 shows the XRD profiles of the demineralized raw coals. The peak at 2qZ20-308 corresponds to the 002 reflection of carbon due to the stacking structure of aromatic layers. The broadening of the 002 peak for the brown coals can be attributed to the small dimensions of the crystallites perpendicular to the aromatic layers. The 002 peaks of the higher-rank coals are sharper than those of the brown coals. Furthermore, the peaks shift to a higher 2q value as the carbon content of the raw coals increases. Table 2 shows the d 002 , L c , and N c values for the raw coals. The parameter d 002 is a measure of the perfection in the stacking structure periodicity. The decrease in d 002 with increasing carbon content is related to the development of the stacking structure (d 002 for the graphite structure is 0.335 nm). However, assessing the stacking structure using only d 002 is difficult. The L c value indicates the thickness of the stacking structure along the c axis. The L c and N c values of the higher-rank coals were larger than those of the lower-rank coal.",
+        "section_path": [
+          "Carbon stacking structure in raw coals"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "1"
+        ],
+        "xrd_score": 6.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Fig. 1 shows the XRD profiles of the demineralized raw coals.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Prior to XRD analysis, the coal samples were stirred in 5 M HF for 24 h at ambient temperature to remove the peaks of mineral matters. The samples were then stirred in 5 M HCl for 24 h at ambient temperature and washed with pure water. In the previous study, we confirmed that the influence of the demineralization treatment on the stacking-structure parameters determined by the STAC-XRD was negligible [7] .\n\nIn STAC-XRD, the fraction of the stacking structure (P s ), the distribution of the number of aromatic layers in the stacking structure (distribution of N), and the average number of N (N ave ) were estimated by analysis of the intensity of the 002 peak of carbon. P s has been defined by Shiraishi [11] as the ratio of the number of carbon atoms in stacked structures to the number of carbon atoms in the entire sample. The distribution of N was calculated by a Fourier transform method [4] . The XRD profiles of the pulverized samples were measured using an X-ray diffractometer (Rigaku, Rotaflex RU-300) with Cu K a radiation by a step-scanning method in the range of 2qZ 10-418. After the XRD profiles were corrected with adsorption, polarization, and atomic scattering factors, the parameters with respect to the stacking structure were estimated. Details of the STAC-XRD method have been reported previously [6] .\n\nThe interlayer spacing of aromatic layers (d 002 ) in the samples was calculated from the peak position by means of Bragg's equation. The mean crystallite size along the c axis (L c ) was calculated from the width at the half maximum of the 002 peak using Scherrer's equation. The average number of N (N c ) was estimated from d 002 and L c by means of the following equation [10] :\n\nFig. 1 shows the XRD profiles of the demineralized raw coals.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/carbonStacking.pdf",
+      "source_sha256": "4037c4bbb9905492c84e1b5eb57a5c8e5ed7e6c62a673f312bb95a48f566ee5b",
+      "title": "XRD analysis of carbon stacking structure in coal during heat treatment",
+      "doi": "10.1016/j.fuel.2004.06.019",
+      "journal": "Fuel",
+      "publication_date": "2004-07-14"
+    },
+    "figure": {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Fig. 3 . Fig. 3. Distribution of the number (N) of aromatic layers in raw coals.",
+      "graphic_targets": [],
+      "coords": "4,188.11,301.11,227.21,7.01;4,145.13,71.22,313.16,221.22",
+      "graphic_coords": "4,145.13,71.22,313.16,221.22",
+      "figure_type": null,
+      "xrd_score": 2.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_7ef8757e6856"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b6149353f63f",
+        "paragraph_1c8575d36e79",
+        "paragraph_0da122243893",
+        "paragraph_efd8f1103230",
+        "paragraph_7ef8757e6856",
+        "paragraph_23efbe22a68a",
+        "paragraph_11a9011bdcb9",
+        "paragraph_9ae77813fef8",
+        "paragraph_dca2c6b83435"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_7ef8757e6856",
+        "text": "The P s values increased linearly with increasing carbon content (Fig. 2 ). Fig. 3 shows the distribution of the number (N) of aromatic layers in raw coals. The distributions of N for the FO and BS coals did not differ significantly: in both of these coals, more than 70% of the stacking structure consisted of two layers. In the NL and HE coals, the proportion of two-layer structure decreased, and that of the three to five-layer structure increased, relative to the values for the FO, BS, MI, and EB coals. Fig. 4 shows the N ave values for the raw coals calculated from the distribution of N. The value for the lower-rank coals with carbon contents of less than 72 wt% was approximately 2.2. For coals with a carbon content more than 81 wt%, the N ave values increased with increasing carbon content. This pattern indicates that the stacking structure of the aromatic layers in the higherrank coals (carbon content O81 wt%) differs from that in the brown coals.",
+        "section_path": [
+          "Carbon stacking structure in raw coals"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "3",
+          "4"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Fig. 3 shows the distribution of the number (N) of aromatic layers in raw coals.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "In STAC-XRD, the fraction of the stacking structure (P s ), the distribution of the number of aromatic layers in the stacking structure (distribution of N), and the average number of N (N ave ) were estimated by analysis of the intensity of the 002 peak of carbon. P s has been defined by Shiraishi [11] as the ratio of the number of carbon atoms in stacked structures to the number of carbon atoms in the entire sample. The distribution of N was calculated by a Fourier transform method [4] . The XRD profiles of the pulverized samples were measured using an X-ray diffractometer (Rigaku, Rotaflex RU-300) with Cu K a radiation by a step-scanning method in the range of 2qZ 10-418. After the XRD profiles were corrected with adsorption, polarization, and atomic scattering factors, the parameters with respect to the stacking structure were estimated. Details of the STAC-XRD method have been reported previously [6] .\n\nThe interlayer spacing of aromatic layers (d 002 ) in the samples was calculated from the peak position by means of Bragg's equation. The mean crystallite size along the c axis (L c ) was calculated from the width at the half maximum of the 002 peak using Scherrer's equation. The average number of N (N c ) was estimated from d 002 and L c by means of the following equation [10] :\n\nFig. 3 shows the distribution of the number (N) of aromatic layers in raw coals.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/carbonStacking.pdf",
+      "source_sha256": "4037c4bbb9905492c84e1b5eb57a5c8e5ed7e6c62a673f312bb95a48f566ee5b",
+      "title": "XRD analysis of carbon stacking structure in coal during heat treatment",
+      "doi": "10.1016/j.fuel.2004.06.019",
+      "journal": "Fuel",
+      "publication_date": "2004-07-14"
+    },
+    "figure": {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Fig. 4 . Fig.4. N ave values of raw coals.",
+      "graphic_targets": [],
+      "coords": "4,381.32,729.65,103.85,7.73;4,338.17,530.94,190.07,190.03",
+      "graphic_coords": "4,338.17,530.94,190.07,190.03",
+      "figure_type": null,
+      "xrd_score": 4.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_7ef8757e6856",
+        "paragraph_23efbe22a68a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b6149353f63f",
+        "paragraph_1c8575d36e79",
+        "paragraph_0da122243893",
+        "paragraph_efd8f1103230",
+        "paragraph_7ef8757e6856",
+        "paragraph_23efbe22a68a",
+        "paragraph_11a9011bdcb9",
+        "paragraph_9ae77813fef8",
+        "paragraph_dca2c6b83435",
+        "paragraph_7a3b23973383"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_7ef8757e6856",
+        "text": "The P s values increased linearly with increasing carbon content (Fig. 2 ). Fig. 3 shows the distribution of the number (N) of aromatic layers in raw coals. The distributions of N for the FO and BS coals did not differ significantly: in both of these coals, more than 70% of the stacking structure consisted of two layers. In the NL and HE coals, the proportion of two-layer structure decreased, and that of the three to five-layer structure increased, relative to the values for the FO, BS, MI, and EB coals. Fig. 4 shows the N ave values for the raw coals calculated from the distribution of N. The value for the lower-rank coals with carbon contents of less than 72 wt% was approximately 2.2. For coals with a carbon content more than 81 wt%, the N ave values increased with increasing carbon content. This pattern indicates that the stacking structure of the aromatic layers in the higherrank coals (carbon content O81 wt%) differs from that in the brown coals.",
+        "section_path": [
+          "Carbon stacking structure in raw coals"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "3",
+          "4"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Fig. 4 shows the N ave values for the raw coals calculated from the distribution of N.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_23efbe22a68a",
+        "text": "The N ave values (Fig. 4 ) of the higher-rank coals differed from the N c values, whereas the variations in N ave and N c with carbon content were in agreement. In STAC-XRD, N ave and the distribution of N are estimated by means of a Patterson function, P(u), which represents the probability of finding a layer at a distance of u normal to a given layer, assuming that there is a distribution of crystallite sizes in the sample. The N c value was estimated from d 002 and L c , which was calculated with Scherrer's equation. This equation is based on the assumption that the width of the diffraction line depends only on the homogeneous size of crystallite without irregularity. In addition, the vagueness of d 002 due to the broadness of the 002 peak in the XRD profile of coal makes the N c value inaccurate. These facts indicate that N ave is more appropriate than N c for coal (that is, for carbon materials with low crystallinity and a distribution of crystallite sizes). The STAC-XRD method gives the distribution of N and P s as well as N ave . This is also an advantage over the classical XRD analysis method using d 002 and L c .",
+        "section_path": [
+          "Carbon stacking structure in raw coals"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "4"
+        ],
+        "xrd_score": 6.1,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The N ave values (Fig. 4 ) of the higher-rank coals differed from the N c values, whereas the variations in N ave and N c with carbon content were in agreement.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "In STAC-XRD, the fraction of the stacking structure (P s ), the distribution of the number of aromatic layers in the stacking structure (distribution of N), and the average number of N (N ave ) were estimated by analysis of the intensity of the 002 peak of carbon. P s has been defined by Shiraishi [11] as the ratio of the number of carbon atoms in stacked structures to the number of carbon atoms in the entire sample. The distribution of N was calculated by a Fourier transform method [4] . The XRD profiles of the pulverized samples were measured using an X-ray diffractometer (Rigaku, Rotaflex RU-300) with Cu K a radiation by a step-scanning method in the range of 2qZ 10-418. After the XRD profiles were corrected with adsorption, polarization, and atomic scattering factors, the parameters with respect to the stacking structure were estimated. Details of the STAC-XRD method have been reported previously [6] .\n\nThe interlayer spacing of aromatic layers (d 002 ) in the samples was calculated from the peak position by means of Bragg's equation. The mean crystallite size along the c axis (L c ) was calculated from the width at the half maximum of the 002 peak using Scherrer's equation. The average number of N (N c ) was estimated from d 002 and L c by means of the following equation [10] :\n\nFig. 4 shows the N ave values for the raw coals calculated from the distribution of N.\n\nThe N ave values (Fig. 4 ) of the higher-rank coals differed from the N c values, whereas the variations in N ave and N c with carbon content were in agreement.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/carbonStacking.pdf",
+      "source_sha256": "4037c4bbb9905492c84e1b5eb57a5c8e5ed7e6c62a673f312bb95a48f566ee5b",
+      "title": "XRD analysis of carbon stacking structure in coal during heat treatment",
+      "doi": "10.1016/j.fuel.2004.06.019",
+      "journal": "Fuel",
+      "publication_date": "2004-07-14"
+    },
+    "figure": {
+      "figure_id": "fig_5",
+      "label": "5",
+      "normalized_label": "5",
+      "caption": "Fig. 5 . Fig. 5. P s values of caking (PI, MI) and non-caking (EB) coals as a function of heat-treatment temperature.",
+      "graphic_targets": [],
+      "coords": "5,42.52,719.67,239.17,7.79;5,42.52,729.65,97.73,7.01;5,74.27,547.33,175.66,163.67",
+      "graphic_coords": "5,74.27,547.33,175.66,163.67",
+      "figure_type": null,
+      "xrd_score": 2.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_9ae77813fef8",
+        "paragraph_01c823e67889"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_efd8f1103230",
+        "paragraph_7ef8757e6856",
+        "paragraph_23efbe22a68a",
+        "paragraph_11a9011bdcb9",
+        "paragraph_9ae77813fef8",
+        "paragraph_dca2c6b83435",
+        "paragraph_7a3b23973383",
+        "paragraph_01c823e67889",
+        "paragraph_3bd348f6a37e",
+        "paragraph_b814cff47f55",
+        "paragraph_4677f222f912",
+        "paragraph_b499af9ffeec"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_9ae77813fef8",
+        "text": "Fig. 5 shows the P s values of caking (PI, MI) and noncaking coals (EB) as a function of heat-treatment temperature. The P s values remained unchanged in the 350-600 8C range and then increased with increasing heat-treatment temperature above 600 8C. The P s value of PI coal at 920 8C was higher than the values for MI and EB coals.",
+        "section_path": [
+          "Change of stacking structure in caking coal during heat treatment"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "5"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Fig. 5 shows the P s values of caking (PI, MI) and noncaking coals (EB) as a function of heat-treatment temperature.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_01c823e67889",
+        "text": "Previous studies with respect to the mechanism of the thermoplasticity of caking coal have proposed that lowermolecular-weight components in caking coal, which are present in the raw coal or are generated by cleavage of covalent bonds during pyrolysis, play an important role in the softening and fluidity [14] [15] [16] [17] . For heat-treated coals obtained at the fluidity stage, the maximum Gieseler fluidity has been reported to increase as the yield of solvent-soluble fraction increases [18] . Since the solvent-soluble fraction corresponds to the lower-molecular-weight components, the increase in the maximum Gieseler fluidity of caking coal indicates that lower-molecular-weight components promote the mobility of coal structure at the fluidity stage. The increase in the mobility of the structure in caking coal at the fluidity stage has also been analyzed by proton magnetic resonance thermal analysis and by an NMR microimaging method [19, 20] . In this study, therefore, the increase in N ave values for the caking coals at around the maximum fluidity temperature, 420 and 427 8C for MI and PI coals, respectively, can be explained by the fact that the development of the stacking structure of the aromatic layers was accelerated by the increase in the mobility of the structure at the fluidity stage. On the other hand, as shown in Fig. 5 , the change of P s of the caking coals at the fluidity stage was small. This fact suggests that the stacking structure of the aromatic layers was partially developed at the fluidity stage but that there was no change in the fraction of the stacked structure relative to the whole structure. That is to say, the number of aromatic layers in the stacking structure increased, and the aromatic layers without stacking in the raw coal did not contribute to the increase in N ave at 400-440 8C.",
+        "section_path": [
+          "Change of stacking structure in caking coal during heat treatment"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "5"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "On the other hand, as shown in Fig. 5 , the change of P s of the caking coals at the fluidity stage was small.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Fig. 5 shows the P s values of caking (PI, MI) and noncaking coals (EB) as a function of heat-treatment temperature.\n\nOn the other hand, as shown in Fig. 5 , the change of P s of the caking coals at the fluidity stage was small.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/carbonStacking.pdf",
+      "source_sha256": "4037c4bbb9905492c84e1b5eb57a5c8e5ed7e6c62a673f312bb95a48f566ee5b",
+      "title": "XRD analysis of carbon stacking structure in coal during heat treatment",
+      "doi": "10.1016/j.fuel.2004.06.019",
+      "journal": "Fuel",
+      "publication_date": "2004-07-14"
+    },
+    "figure": {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Fig. 6 . Fig. 6. N ave values of caking (PI, MI) and non-caking (EB) coals as a function of heat-treatment temperature.",
+      "graphic_targets": [],
+      "coords": "5,305.52,719.56,239.12,7.79;5,305.52,729.54,126.70,7.01;5,338.51,540.81,173.16,170.08",
+      "graphic_coords": "5,338.51,540.81,173.16,170.08",
+      "figure_type": null,
+      "xrd_score": 1.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_dca2c6b83435"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_7ef8757e6856",
+        "paragraph_23efbe22a68a",
+        "paragraph_11a9011bdcb9",
+        "paragraph_9ae77813fef8",
+        "paragraph_dca2c6b83435",
+        "paragraph_7a3b23973383",
+        "paragraph_01c823e67889",
+        "paragraph_3bd348f6a37e",
+        "paragraph_b814cff47f55"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_dca2c6b83435",
+        "text": "Fig. 6 shows the N ave values of caking (PI, MI) and noncaking coals (EB) as a function of heat-treatment temperature. Although carbon content, P s , and N ave values for these caking coals without heat treatment were approximately equal to those for the non-caking coal (Table 1 and Figs. 2 and 4 ), the temperature dependence of N ave for the caking coals differed remarkably from that of the non-caking coal. The N ave value of unheated PI coal was 2.343, but the value increased to 2.672 after heat treatment at 400 8C, and to 2.803 at 440 8C. The N ave value for MI coal also increased after heat treatment at 400 8C. After heat treatment at 920 8C, the N ave values of the caking coals were larger than the value for the non-caking coal. The N ave values of caking and non-caking coals after heat treatment at 427, 800, and 1200 8C in a helium atmosphere were analyzed by Sharma et al., using the modified HRTEM technique [13] . Their results agreed with ours: that is, N ave for caking coal increased significantly at 427 8C and was larger than that of non-caking coal after heat treatment at 800 and 1200 8C.",
+        "section_path": [
+          "Change of stacking structure in caking coal during heat treatment"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "6",
+          "2"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Fig. 6 shows the N ave values of caking (PI, MI) and noncaking coals (EB) as a function of heat-treatment temperature.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Fig. 6 shows the N ave values of caking (PI, MI) and noncaking coals (EB) as a function of heat-treatment temperature.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/carbonStacking.pdf",
+      "source_sha256": "4037c4bbb9905492c84e1b5eb57a5c8e5ed7e6c62a673f312bb95a48f566ee5b",
+      "title": "XRD analysis of carbon stacking structure in coal during heat treatment",
+      "doi": "10.1016/j.fuel.2004.06.019",
+      "journal": "Fuel",
+      "publication_date": "2004-07-14"
+    },
+    "figure": {
+      "figure_id": "fig_7",
+      "label": "7",
+      "normalized_label": "7",
+      "caption": "Fig. 7 . Fig. 7. Influence of heating rate at 920 8C on P s and N ave values of BS, EB, PI, and NL coals.",
+      "graphic_targets": [],
+      "coords": "6,149.67,729.04,304.08,8.00;6,158.68,555.55,286.05,165.09",
+      "graphic_coords": "6,158.68,555.55,286.05,165.09",
+      "figure_type": null,
+      "xrd_score": 1.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_b814cff47f55"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_dca2c6b83435",
+        "paragraph_7a3b23973383",
+        "paragraph_01c823e67889",
+        "paragraph_3bd348f6a37e",
+        "paragraph_b814cff47f55",
+        "paragraph_4677f222f912",
+        "paragraph_b499af9ffeec"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_b814cff47f55",
+        "text": "In order to investigate the influence of the heating rate at 920 8C on the development of the stacking structure in coal, we compared the P s and N ave values after heat treatment for 1 min at a heating rate of 300 8C/min (fast treatment) with the values after heat treatment for 1 h at a rate of 3 8C/min (slow treatment). Table 5 shows yields and elemental analyses of BS, EB, PI, and NL coals after fast and slow treatments at 920 8C. The (OCS) value of BS coal after fast treatment was 8.2 wt%, which was larger than that after slow treatment. Since the sulfur content of BS coal is much lower than the oxygen content (Table 1 ), the (OCS) value can be regarded as the oxygen content. Fig. 7 shows the influence of heating rate at 920 8C on the P s and N ave values of coals. Both the P s and N ave value of BS coal after fast treatment were smaller than those after slow treatment. In the case of other coals, Table 4 Thermoplastic properties of caking coals Coal Softening temperature (8C) Maximum fluidity temperature (8C) Resolidification temperature (8C) MI 355 420 460 PI 369 427 483",
+        "section_path": [
+          "Influence of heat-treatment conditions on carbon stacking structure"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "7"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Fig. 7 shows the influence of heating rate at 920 8C on the P s and N ave values of coals.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Fig. 7 shows the influence of heating rate at 920 8C on the P s and N ave values of coals.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  }
+]

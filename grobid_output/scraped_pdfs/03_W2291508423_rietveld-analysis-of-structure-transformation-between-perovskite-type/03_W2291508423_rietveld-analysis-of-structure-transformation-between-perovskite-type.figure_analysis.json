@@ -1,0 +1,32 @@
+[
+  {
+    "figure": 6,
+    "figure_path": "grobid_output/scraped_pdfs/03_W2291508423_rietveld-analysis-of-structure-transformation-between-perovskite-type/figures/fig_6.png",
+    "caption": "Fig. 6 Fig.6XRD patterns of LaLnO3 prepared by firing at 1400℃.",
+    "text": "Fig. 6 Fig.6XRD patterns of LaLnO3 prepared by firing at 1400℃. 10 20 30 40 50 60 70 80 2θ(deg.) Intensity (a.u.) 112 200 020 111 110 132 204 220 311 224 313 221 212 121 225 332 116 1200℃-10 h 1400℃-10 h 202 111 -402 003 -112 -313 -511 600 313 -801 -425 -207 404 711 421 023 -206 -910 -1003 Rwp = 10.5% S = 1.73 Orthorho mbic Monoclinic B-type ra re S.G.：Pnma 96.4 3.6 S.G.：C 2/m In the LaLnO3 systems, when Ln = Er (0.890Å ) or Yb (0868Å ) which has the smaller the ionic radius than that of Y 3+ , the sample showed the orthorhombic perovskite-type structure regardless 1400℃ or 1600℃ firing, while when Ln = Dy, (0.912Å ) or Ho (0.901Å ) which has larger the ionic radius than that of Y 3+ , it showed the monoclinic B-type rare earth structure regardless the firing temperatures, as shown in Fig. 6 and 7 . Furthermore, LaErxHo1-xO3 system was also produced same as average ionic radius of (Ln, Ln') in LaHoxYb1-xO3 system, and LaErxHo1-xO3 system was performed Rietveld analysis. As a result, when average ionic radius of (Ln, Ln') which has smaller than rav = 0.8977Å , the sample showed the orthorhombic perovskite-type structure, while when average ionic radius of (Ln, Ln') which has larger than rav = 0.8994 Å , it showed the monoclinic B-type rare earth structure. Therefore, in the La(Ln, Ln')O3 systems, controlling for the average ionic radius of (Ln, Ln'), we could produce the orthorhombic perovskite-type or monoclinic B-type rare earth structures."
+  },
+  {
+    "figure": 8,
+    "figure_path": "grobid_output/scraped_pdfs/03_W2291508423_rietveld-analysis-of-structure-transformation-between-perovskite-type/figures/fig_8.png",
+    "caption": "Fig. 8 Fig.8XRD patterns of LaHoxYb1-xO3 firing 1400℃ and annealed at 1300℃.",
+    "text": "Fig. 8 Fig.8XRD patterns of LaHoxYb1-xO3 firing 1400℃ and annealed at 1300℃. The samples with x = 0.90 (rav.=0.8977Å ) showed the orthorhombic perovskite-type structure, and then changed to the mixed phases of the orthorhombic perovskite-type and monoclinic B-type rare earth structures in the composition range, 0.90<x≦ 0.95, as shown in Fig. 8 . Furthermore, LaErxHo1-xO3 system was also produced same as average ionic radius of (Ln, Ln') in LaHoxYb1-xO3 system, and LaErxHo1-xO3 system was performed Rietveld analysis. As a result, when average ionic radius of (Ln, Ln') which has smaller than rav = 0.8977Å , the sample showed the orthorhombic perovskite-type structure, while when average ionic radius of (Ln, Ln') which has larger than rav = 0.8994 Å , it showed the monoclinic B-type rare earth structure. Therefore, in the La(Ln, Ln')O3 systems, controlling for the average ionic radius of (Ln, Ln'), we could produce the orthorhombic perovskite-type or monoclinic B-type rare earth structures."
+  },
+  {
+    "figure": 9,
+    "figure_path": "grobid_output/scraped_pdfs/03_W2291508423_rietveld-analysis-of-structure-transformation-between-perovskite-type/figures/fig_9.png",
+    "caption": "Fig. 9 Fig.9XRD patterns of LaHoxYb1-xO3 prepared by firing at 1600℃.",
+    "text": "Fig. 9 Fig.9XRD patterns of LaHoxYb1-xO3 prepared by firing at 1600℃. Fig. 9 shows XRD patterns of LaHoxYb1-xO3 system prepared by firing at 1600 ℃ for 20 h. Furthermore, LaErxHo1-xO3 system was also produced same as average ionic radius of (Ln, Ln') in LaHoxYb1-xO3 system, and LaErxHo1-xO3 system was performed Rietveld analysis. As a result, when average ionic radius of (Ln, Ln') which has smaller than rav = 0.8977Å , the sample showed the orthorhombic perovskite-type structure, while when average ionic radius of (Ln, Ln') which has larger than rav = 0.8994 Å , it showed the monoclinic B-type rare earth structure. Therefore, in the La(Ln, Ln')O3 systems, controlling for the average ionic radius of (Ln, Ln'), we could produce the orthorhombic perovskite-type or monoclinic B-type rare earth structures."
+  },
+  {
+    "figure": 24,
+    "figure_path": "grobid_output/scraped_pdfs/03_W2291508423_rietveld-analysis-of-structure-transformation-between-perovskite-type/figures/fig_2.png",
+    "caption": "Fig. 2 Fig. 4 Fig.2XRD patterns of LaYO3 prepared by firing at 1400℃ and 1600℃.",
+    "text": "Fig. 2 Fig. 4 Fig.2XRD patterns of LaYO3 prepared by firing at 1400℃ and 1600℃."
+  },
+  {
+    "figure": 35,
+    "figure_path": "grobid_output/scraped_pdfs/03_W2291508423_rietveld-analysis-of-structure-transformation-between-perovskite-type/figures/fig_3.png",
+    "caption": "Fig. 3 Fig. 5 Fig.3XRD patterns of LaYO3 annealed at 1400℃ and 1200℃ for 10 h after the 1600℃ firing.",
+    "text": "Fig. 3 Fig. 5 Fig.3XRD patterns of LaYO3 annealed at 1400℃ and 1200℃ for 10 h after the 1600℃ firing."
+  }
+]

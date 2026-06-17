@@ -1,0 +1,53 @@
+{
+  "authors": [
+    "R. Pradheesh",
+    "Harikrishnan S. Nair",
+    "C. M. N. Kumar",
+    "Jagat Lamsal",
+    "R. Nirmala",
+    "P. N. Santhosh",
+    "W. B. Yelon",
+    "S. K. Malik",
+    "V. Sankaranarayanan",
+    "K. Sethupathi"
+  ],
+  "cited_by_count": 62,
+  "doi": "10.1063/1.3686137",
+  "download": {
+    "content_type": "application/pdf",
+    "output_path": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/01_W1969065097_observation-of-spin-glass-state-in-weakly-ferromagnetic-sr2fecoo6-doub.pdf",
+    "page_count": 23,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://arxiv.org/pdf/1111.5136",
+    "resolved_url": "https://arxiv.org/pdf/1111.5136",
+    "retrieved_at": "2026-06-17T23:47:22.274741+00:00",
+    "sha256": "3823f988bec4c877ac66e2c60b87f5bb8c7f42503663f8dbe23b9a5e57a5bfaf",
+    "size_bytes": 1690302
+  },
+  "journal": "Journal of Applied Physics",
+  "language": "en",
+  "matched_query": "\"double perovskite\" \"X-ray diffraction\"",
+  "material_score": 57,
+  "open_access": {
+    "any_repository_has_fulltext": true,
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://arxiv.org/pdf/1111.5136"
+  },
+  "openalex_id": "W1969065097",
+  "paper_id": "doi:10.1063/1.3686137",
+  "parser": null,
+  "pdf_source": {
+    "host_type": null,
+    "landing_page_url": "http://arxiv.org/abs/1111.5136",
+    "license": null,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://arxiv.org/pdf/1111.5136",
+    "version": "submittedVersion"
+  },
+  "publication_date": "2012-03-01",
+  "publication_year": 2012,
+  "relevance_score": 112,
+  "title": "Observation of spin glass state in weakly ferromagnetic Sr2FeCoO6 double perovskite",
+  "xrd_score": 55
+}

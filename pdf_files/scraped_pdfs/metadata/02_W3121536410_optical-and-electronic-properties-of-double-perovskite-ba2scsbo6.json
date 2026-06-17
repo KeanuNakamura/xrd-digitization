@@ -1,0 +1,50 @@
+{
+  "authors": [
+    "Rajyavardhan Ray",
+    "A. K. Himanshu",
+    "Joydev Lahiri",
+    "Uday Kumar",
+    "Pintu Sen",
+    "S.K. Bandyopadhyay",
+    "T.P. Sinha"
+  ],
+  "cited_by_count": 15,
+  "doi": "10.1063/1.4948207",
+  "download": {
+    "content_type": "application/pdf",
+    "output_path": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/02_W3121536410_optical-and-electronic-properties-of-double-perovskite-ba2scsbo6.pdf",
+    "page_count": 4,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://arxiv.org/pdf/1506.09012",
+    "resolved_url": "https://arxiv.org/pdf/1506.09012",
+    "retrieved_at": "2026-06-17T23:47:22.457007+00:00",
+    "sha256": "75f7b271e8b9ddaad27ea455869a8fe9b76624f305e888e977531c9ab2d097df",
+    "size_bytes": 553649
+  },
+  "journal": "AIP conference proceedings",
+  "language": "en",
+  "matched_query": "\"double perovskite\" Rietveld",
+  "material_score": 47,
+  "open_access": {
+    "any_repository_has_fulltext": true,
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://arxiv.org/pdf/1506.09012"
+  },
+  "openalex_id": "W3121536410",
+  "paper_id": "doi:10.1063/1.4948207",
+  "parser": null,
+  "pdf_source": {
+    "host_type": null,
+    "landing_page_url": "http://arxiv.org/abs/1506.09012",
+    "license": null,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://arxiv.org/pdf/1506.09012",
+    "version": "submittedVersion"
+  },
+  "publication_date": "2016-01-01",
+  "publication_year": 2016,
+  "relevance_score": 112,
+  "title": "Optical and electronic properties of double perovskite Ba2ScSbO6",
+  "xrd_score": 65
+}

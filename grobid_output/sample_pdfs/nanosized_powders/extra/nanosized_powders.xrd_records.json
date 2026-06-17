@@ -1,0 +1,458 @@
+[
+  {
+    "document": {
+      "source_pdf": "pdf_files/nanosized_powders.pdf",
+      "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+      "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+      "doi": "10.1080/17458080600752482",
+      "journal": "Journal of Experimental Nanoscience",
+      "publication_date": "2006-09"
+    },
+    "figure": {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Figure 1 . Figure 1. XRD spectra as a function of and ; A) ¼ 10 nm, B) ¼ 1.5.",
+      "graphic_targets": [],
+      "coords": "6,114.29,628.90,264.67,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 5.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/nanosized_powders/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_9e20a05848db"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_79020172bcdd",
+        "paragraph_9b9bc776e93a",
+        "paragraph_10e0aee1a9a7",
+        "paragraph_0dc60d868f16",
+        "paragraph_9e20a05848db",
+        "paragraph_d0fe54dd151d",
+        "paragraph_980a8b9dddd3",
+        "paragraph_410cbe7c19b9",
+        "paragraph_1ab034cf4e5e"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_9e20a05848db",
+        "text": "Equation ( 7 ) describes the distribution of the diffraction intensity including a lognormal crystallite size density function. In figure 1 the diffraction intensity profiles calculated from equation ( 7 ) with different values of and are shown. The profiles in figure 1 show that by increasing the width of the size distribution a larger tail of the line profile of the XRD peak is observed. If is changed from 1.4 to 2.2 and the crystallite size is kept constant it is clearly that the line profile of the XRD peak is changed significantly and a long tail is observed. Keeping constant and changing the crystallite size from 6 nm to 12 nm results in a broadening of the line profile as expected.",
+        "section_path": [
+          "Size dependence in XRD-Guinier's model."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "1"
+        ],
+        "xrd_score": 6.1,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "In figure 1 the diffraction intensity profiles calculated from equation ( 7 ) with different values of and are shown. The profiles in figure 1 show that by increasing the width of the size distribution a larger tail of the line profile of the XRD peak is observed.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "r Ã hkl is the magnitude of the vector defining the node of indices (hkl) of the reciprocal lattice and s is the scattering vector modulus. 0 is the Bragg angle corresponding to the reflection plane (hkl).\n\nIn figure 1 the diffraction intensity profiles calculated from equation ( 7 ) with different values of and are shown. The profiles in figure 1 show that by increasing the width of the size distribution a larger tail of the line profile of the XRD peak is observed.\n\n1. 2. 3. 0 0.005 0.01 0.015 0.02 Log normal size distribution Log normal size distribution Particle no. density (a.u.) 1.: σ = 1.4 1. 2.: σ = 1.6 2. 3.: σ = 2.2 3. A) B) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 1. 2θ (°) 22 23 24 25 26 27 28 29 2θ (°) Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD line profile with size distribution XRD line profile with size distribution 2. 3.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/nanosized_powders.pdf",
+      "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+      "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+      "doi": "10.1080/17458080600752482",
+      "journal": "Journal of Experimental Nanoscience",
+      "publication_date": "2006-09"
+    },
+    "figure": {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Figure 3 . Figure 3. TEM images of the four powders; A) SSEC78, B) P25, C) UV100, D) TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "11,84.59,628.90,324.00,7.09;11,251.22,454.50,112.92,170.51",
+      "graphic_coords": "11,251.22,454.50,112.92,170.51",
+      "figure_type": null,
+      "xrd_score": 6.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_8aa7bd892018",
+        "paragraph_9839fc7cc69a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_0edcdd1f196d",
+        "paragraph_93c1c9163481",
+        "paragraph_04f20aa99a96",
+        "paragraph_ff79effaba3d",
+        "paragraph_8aa7bd892018",
+        "paragraph_ebfeb5653039",
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_5013482e6168",
+        "paragraph_6b82a3838aa3",
+        "paragraph_1bbb65f71d12",
+        "paragraph_c8c973aa7f70",
+        "paragraph_9839fc7cc69a",
+        "paragraph_914351d68263",
+        "paragraph_59eb82a57eb1",
+        "paragraph_a8c02267a1f4"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_8aa7bd892018",
+        "text": "In the XRD and SAXS theory grains of spherical shapes were assumed. This assumption can be confirmed by TEM, figure 3 . The particles are not exactly spherical but it seems to be a good approximation; however, particles of irregular shapes were found as well. For the SSEC78 samples primary particles of 5 nm or less can be observed. These primary particles are agglomerated into larger clusters. The primary particles observed show a narrow size distribution. The TEM images of P25 show typical diameters of 20-30 nm. Although smaller particles well below 20 nm can be observed and the TEM image of P25 shows a wider size distribution than SSEC78. A similar result can be observed for the UV100 powder. The TiO2_5 nm particles are of approximately the same size and have a similar size distribution as the SSEC78 sample.",
+        "section_path": [
+          "TEM"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "3"
+        ],
+        "xrd_score": 4.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "This assumption can be confirmed by TEM, figure 3 .",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_9839fc7cc69a",
+        "text": "Some comparisons can be made between the TEM images, figure 3 from this study and the SEM images from Jensen et al. 2004 of the SSEC78 sample. The primary particles seem to be agglomerated into larger clusters as can be seen on both the SEM and TEM images. Occasionally thinner and narrow structures can be observed from the clusters surfaces as observed from TEM. The secondary structure found in both SEM and TEM was confirmed by SAXS, although a smaller secondary structure was extracted from SAXS than seen in SEM and TEM. The SAXS analysis of SSEC78 also confirms this secondary structure by the implementation of the interparticle interference factor.",
+        "section_path": [
+          "Morphology: TEM, XRD, and SAXS"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "3"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Some comparisons can be made between the TEM images, figure 3 from this study and the SEM images from Jensen et al.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The XRD spectra are obtained using a CuK 1 radiation ( ¼ 1.54 A ˚) from a STOE Stadi P transmission diffractometer and to get good statistics a counting time of 30 min/ point is required. The SAXS data were obtained using an adaptation of a Brukers AXS, Nanostar SAXS system, with a rotating anode X-ray generator, cross-coupled Goebel mirrors, three pinholes, and a Bruker AXS Hi-star Area Detector. The scattering intensity, I, was measured in terms of the scattering vector modulus q, where ¼ 1.54 A ˚. The scattering intensity was measured in the range q ¼ 0.0071 A ˚À1 to q ¼ 0.334 A ˚À1 . The data were corrected for background and azimuthally averaged to obtain a spectrum of average intensity vs. q. Transmission electron microscope (TEM) is used to investigate the shape and morphology as well as the size of the samples. The TEM used is a JEOL 100 CX. The acceleration voltage was 100 kV for all samples/images. The samples were prepared by dispersion of the powder onto a formwar film.\n\nThe experimental results obtained in this study will in the following be analyzed. The XRD and SAXS models shown in section 2 will be fitted to the experimental data by the Least Square Method. First TEM images of the investigated powders will be analyzed and these images are used to support the theoretical XRD and SAXS models.\n\nThis assumption can be confirmed by TEM, figure 3 .\n\nThe TEM, XRD, and SAXS data have been analyzed by different models. In table 3 the extracted data are shown.\n\n0 2 4 6 8 A qualitative judgment of the TEM images shows good agreement with the particle sizes found from XRD and SAXS measurements. The three different analysis methods all show comparable values of the extracted sizes. However, the sizes obtained from the SAXS measurements are for all four samples smaller than the sizes from the XRD measurements expressed by the Guinier model. An explanation to this phenomenon could be that the size extracted from XRD is only for the crystalline areas and the smallest particles in the individual powders are amorphous. SAXS on the other hand can determine the size from both amorphous and crystalline particles and the mean sizes extracted from SAXS thereby become smaller than the size extracted from XRD. However, taken the uncertainties and variances into account the size distributions for each sample are similar from both SAXS and XRD.\n\nSome comparisons can be made between the TEM images, figure 3 from this study and the SEM images from Jensen et al.\n\n0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 secondary structure. On the other hand the size distribution for P25 is wider than for SSEC78. The UV100 and the TiO2_5 nm particles show the same tendencies in SAXS and XRD and both samples have primary particles of approximately 5 nm or less; although, the TEM analysis revealed that UV100 consists of remarkable larger primary particles than extracted from XRD and SAXS. The TEM images of TiO2_5 nm showed primary particles with sizes in the same range as SSEC78. Both the UV100 and the TiO2_5 nm samples consist of a secondary structure observed from SAXS.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/nanosized_powders.pdf",
+      "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+      "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+      "doi": "10.1080/17458080600752482",
+      "journal": "Journal of Experimental Nanoscience",
+      "publication_date": "2006-09"
+    },
+    "figure": {
+      "figure_id": "fig_4_2",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Figure 4 . Figure 4. Gaussian function with log-normal size distribution function fit; A) SSEC78, B) P25, C) UV100, D) TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "13,61.29,451.96,370.61,7.09;13,61.29,461.15,51.88,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 4.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_b60a0426fcff"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_04f20aa99a96",
+        "paragraph_ff79effaba3d",
+        "paragraph_8aa7bd892018",
+        "paragraph_ebfeb5653039",
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_b60a0426fcff",
+        "text": "A Gaussian function and a Pseudo-Voigt function with a size distribution terms, equation (8) , are fitted to the XRD spectra as shown in table 2. The peak center is taken from the Pseudo-Voigt fit, resulting in only two unknown parameters for the size dependent Gaussian function; and from the log-normal size distribution, equation ( 2 ), and an extra unknown parameter for the size dependent Pseudo-Voigt function -the ' parameter. In figure 4 the fit of the XRD line profile from the Gaussian function is shown.",
+        "section_path": [
+          "XRD -analytical and theoretical models."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "4"
+        ],
+        "xrd_score": 4.9,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "In figure 4 the fit of the XRD line profile from the Gaussian function is shown.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The XRD spectra are obtained using a CuK 1 radiation ( ¼ 1.54 A ˚) from a STOE Stadi P transmission diffractometer and to get good statistics a counting time of 30 min/ point is required. The SAXS data were obtained using an adaptation of a Brukers AXS, Nanostar SAXS system, with a rotating anode X-ray generator, cross-coupled Goebel mirrors, three pinholes, and a Bruker AXS Hi-star Area Detector. The scattering intensity, I, was measured in terms of the scattering vector modulus q, where ¼ 1.54 A ˚. The scattering intensity was measured in the range q ¼ 0.0071 A ˚À1 to q ¼ 0.334 A ˚À1 . The data were corrected for background and azimuthally averaged to obtain a spectrum of average intensity vs. q. Transmission electron microscope (TEM) is used to investigate the shape and morphology as well as the size of the samples. The TEM used is a JEOL 100 CX. The acceleration voltage was 100 kV for all samples/images. The samples were prepared by dispersion of the powder onto a formwar film.\n\nThe experimental results obtained in this study will in the following be analyzed. The XRD and SAXS models shown in section 2 will be fitted to the experimental data by the Least Square Method. First TEM images of the investigated powders will be analyzed and these images are used to support the theoretical XRD and SAXS models.\n\nThe Pseudo-Voigt function including a linear term to correct for the background of the 100% anatase peak, $25.4 (2), is used to determine the FWHM and the peak center of the four samples. These values will be used to calculate the average crystallite size from Scherrer's formula. The analytical expressions and the Guinier model will in the following be fitted to the background corrected 100% anatase peak for the four samples.\n\nIn figure 4 the fit of the XRD line profile from the Gaussian function is shown.\n\nThe size dependent Gaussian function fits the experimental data well. However, some problems are observed for the four samples where the tails of the XRD peaks are overestimated compared to the experimental data. From the fits it is observed that the SSEC78 sample shows a very narrow size distribution compared to TiO2_5 nm and Hombikat UV100. Furthermore, Degussa P25 has the largest mean diameter 3-4 times larger then the three other.\n\nThe experimental XRD spectra show different line profiles depending on the different preparation method. Fitting the Guinier model to the experimental data confirms the visual observations. SSEC78 shows a broad symmetrical peak corresponding to a narrow size distribution. SSEC78 is shown to consist of nanocrystallites with a mean diameter of 6.9 nm and is equal to 1.40. Hombikat UV100 and TiO2_5 nm have similar line profiles with a relative narrow top of the peak with a wide tail. The different line profiles compared to SSEC78 correspond to a broader size distribution. Hombikat UV100 shows a mean diameter of 2.7 nm and a value of 1.90. TiO2_5 nm has a slightly larger mean diameter of 4.3 nm and a value of 1.79. Degussa P25 has a value of 1.39 and a mean diameter of 25.6 nm.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/nanosized_powders.pdf",
+      "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+      "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+      "doi": "10.1080/17458080600752482",
+      "journal": "Journal of Experimental Nanoscience",
+      "publication_date": "2006-09"
+    },
+    "figure": {
+      "figure_id": "fig_5",
+      "label": "5",
+      "normalized_label": "5",
+      "caption": "Figure 5 . Figure 5. XRD line profile fit for A) SSEC78, B) P25, C) UV100, and D) TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "14,95.02,450.66,303.19,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 7.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/nanosized_powders/figures/fig_5.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_50a9c8cbd40f"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_8aa7bd892018",
+        "paragraph_ebfeb5653039",
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_50a9c8cbd40f",
+        "text": "The Guinier model shown in equation ( 7 ) is fitted to the experimental XRD data for the four powders, which is shown in figure 5 . The grain shape of the crystallites is assumed spherical and a log-normal size distribution function is included.",
+        "section_path": [
+          "XRD -analytical and theoretical models."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "5"
+        ],
+        "xrd_score": 4.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The Guinier model shown in equation ( 7 ) is fitted to the experimental XRD data for the four powders, which is shown in figure 5 .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The Pseudo-Voigt function including a linear term to correct for the background of the 100% anatase peak, $25.4 (2), is used to determine the FWHM and the peak center of the four samples. These values will be used to calculate the average crystallite size from Scherrer's formula. The analytical expressions and the Guinier model will in the following be fitted to the background corrected 100% anatase peak for the four samples.\n\nThe size dependent Gaussian function fits the experimental data well. However, some problems are observed for the four samples where the tails of the XRD peaks are overestimated compared to the experimental data. From the fits it is observed that the SSEC78 sample shows a very narrow size distribution compared to TiO2_5 nm and Hombikat UV100. Furthermore, Degussa P25 has the largest mean diameter 3-4 times larger then the three other.\n\nThe Guinier model shown in equation ( 7 ) is fitted to the experimental XRD data for the four powders, which is shown in figure 5 .\n\nThe experimental XRD spectra show different line profiles depending on the different preparation method. Fitting the Guinier model to the experimental data confirms the visual observations. SSEC78 shows a broad symmetrical peak corresponding to a narrow size distribution. SSEC78 is shown to consist of nanocrystallites with a mean diameter of 6.9 nm and is equal to 1.40. Hombikat UV100 and TiO2_5 nm have similar line profiles with a relative narrow top of the peak with a wide tail. The different line profiles compared to SSEC78 correspond to a broader size distribution. Hombikat UV100 shows a mean diameter of 2.7 nm and a value of 1.90. TiO2_5 nm has a slightly larger mean diameter of 4.3 nm and a value of 1.79. Degussa P25 has a value of 1.39 and a mean diameter of 25.6 nm.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/nanosized_powders.pdf",
+      "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+      "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+      "doi": "10.1080/17458080600752482",
+      "journal": "Journal of Experimental Nanoscience",
+      "publication_date": "2006-09"
+    },
+    "figure": {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Figure 6 . Figure 6. SAXS fit for P25.",
+      "graphic_targets": [],
+      "coords": "15,196.21,333.81,100.77,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 3.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_a3d91e3a35c9"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b60a0426fcff",
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d",
+        "paragraph_16e78ce5fe5d",
+        "paragraph_37af50b73a4c"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_a3d91e3a35c9",
+        "text": "The hard sphere model with size distribution and a structure factor is in the following used to fit the experimental measured SAXS data. In figure 6 the SAXS data for P25 is shown. The particles in the Degussa P25 powder do not show an interference effect and S(q, HS , C HS ) is equal to one. Hombikat UV100 shows a significantly different SAXS",
+        "section_path": [
+          "SAXS."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "6"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "In figure 6 the SAXS data for P25 is shown.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "In figure 6 the SAXS data for P25 is shown.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/nanosized_powders.pdf",
+      "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+      "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+      "doi": "10.1080/17458080600752482",
+      "journal": "Journal of Experimental Nanoscience",
+      "publication_date": "2006-09"
+    },
+    "figure": {
+      "figure_id": "fig_7",
+      "label": "7",
+      "normalized_label": "7",
+      "caption": "Figure 7 . Figure 7. SAXS fit for UV100.",
+      "graphic_targets": [],
+      "coords": "16,190.49,349.75,112.21,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 3.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_b3f7ade9f094"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_00458b0efb08",
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d",
+        "paragraph_16e78ce5fe5d",
+        "paragraph_37af50b73a4c",
+        "paragraph_58481a1d0f97"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_b3f7ade9f094",
+        "text": "0 2 4 6 8 × 10 -3 Log normal size distribution function Particle number density (a.u.) µ = 16.6 nm σ = 1.5 B) XRD -P25 with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) 0 1 0 2 0 3 0 4 0 5 0 Column length (nm) Particle number density (a.u.) µ = 4.6 nm σ = 1.5 A) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -SSEC78 with size distribution Measured data Gaussian function Measured data Gaussian function 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 5.4 nm σ = 1.9 D) XRD -TiO2 5 nm with size distribution 0 10 20 30 40 50 0 0.007 0.014 0.021 0.028 Log normal size distribution function Column length (nm) Particle number density (a.u.) µ = 4.9 nm σ = 2.0 C) 22 23 24 25 26 27 28 29 0 0.2 0.4 0.6 0.8 1 2θ 22 23 24 25 26 27 28 29 2θ Normalized intensity 0 0.2 0.4 0.6 0.8 1 Normalized intensity XRD -UV100 with size distribution Measured data Gaussian function Measured data Gaussian function curve than Degussa P25 and the ''knee'' for Hombikat UV100 is observed at larger q values. The SAXS data for Hombikat UV100 is shown in figure 7 .",
+        "section_path": [
+          "SAXS."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "7"
+        ],
+        "xrd_score": 9.9,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The SAXS data for Hombikat UV100 is shown in figure 7 .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The SAXS data for Hombikat UV100 is shown in figure 7 .",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/nanosized_powders.pdf",
+      "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
+      "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
+      "doi": "10.1080/17458080600752482",
+      "journal": "Journal of Experimental Nanoscience",
+      "publication_date": "2006-09"
+    },
+    "figure": {
+      "figure_id": "fig_8",
+      "label": "8",
+      "normalized_label": "8",
+      "caption": "Figure 8 . Figure 8. SAXS fit for TiO2_5 nm.",
+      "graphic_targets": [],
+      "coords": "17,183.69,331.94,125.86,7.09",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 3.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_3334bd6b3f7d"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_50a9c8cbd40f",
+        "paragraph_f07478d5c905",
+        "paragraph_a3d91e3a35c9",
+        "paragraph_b3f7ade9f094",
+        "paragraph_3334bd6b3f7d",
+        "paragraph_16e78ce5fe5d",
+        "paragraph_37af50b73a4c",
+        "paragraph_58481a1d0f97",
+        "paragraph_3c02a2fd9062"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_3334bd6b3f7d",
+        "text": "The structure factor is included for the fit of the SAXS data for Hombikat UV100 indicating that the powder is denser packed compared to Degussa P25. The SAXS curve for TiO2_5 nm has similar trends as Hombikat UV100 (figure 8 ).",
+        "section_path": [
+          "SAXS."
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "8"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The SAXS curve for TiO2_5 nm has similar trends as Hombikat UV100 (figure 8 ).",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The SAXS curve for TiO2_5 nm has similar trends as Hombikat UV100 (figure 8 ).",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  }
+]

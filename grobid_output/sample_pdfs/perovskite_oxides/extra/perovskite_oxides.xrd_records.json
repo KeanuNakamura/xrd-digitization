@@ -1,0 +1,442 @@
+[
+  {
+    "document": {
+      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
+      "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
+      "doi": "10.1002/advs.201500187",
+      "journal": "Advanced Science",
+      "publication_date": "2015-09-27"
+    },
+    "figure": {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Figure 1 . Figure 1. a) XRD patterns of BCFSn perovskites. b) High-resolution XPS spectra of Co 2p 3/2 core levels of BCFSn perovskites.",
+      "graphic_targets": [],
+      "coords": "2,47.00,204.63,311.94,8.13;2,47.00,214.13,110.06,7.09;2,46.97,71.18,312.01,124.27",
+      "graphic_coords": "2,46.97,71.18,312.01,124.27",
+      "figure_type": null,
+      "xrd_score": 11.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/perovskite_oxides/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_dee05ced560d",
+        "paragraph_d317af514844",
+        "paragraph_fce29120392b",
+        "paragraph_19e888b4867c"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b746ae88fc82",
+        "paragraph_785d08566c97",
+        "paragraph_dee05ced560d",
+        "paragraph_d317af514844",
+        "paragraph_c16849c79b08",
+        "paragraph_fce29120392b",
+        "paragraph_4fb017e6ec95",
+        "paragraph_ffc85b7c0132",
+        "paragraph_09b573804f28",
+        "paragraph_19e888b4867c",
+        "paragraph_bf3c8ad5fdc3",
+        "paragraph_e4c6557a07ff"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_dee05ced560d",
+        "text": "BCFSn perovskite oxides with different Sn and Fe doping concentrations were synthesized by conventional high-temperature solid-state reactions and their phase structures were analyzed by X-ray diffraction (XRD). The parent oxide BaCoO 3-δ displayed a complicated lattice structure (Figure S1 , Supporting Information), composed mainly of a hexagonal phase (space group: P6 3 / mmc ) similar to 12HBaCoO 2.6 , [ 33 ] with a small amount of an orthorhombic phase. [ 34 ] Doping of the cobalt site in BaCoO 3-δ with tin alone or iron alone failed to induce the formation of an oxygen vacancy-disordered cubic phase (Figure S1 , Supporting Information). Co-doping these two metals, surprisingly, facilitated the formation of a cubic perovskite structure (space group: Pm -3 m ) as is evidenced by the typical XRD profi les shown in Figure 1 a. Such a cubic structure can be well maintained regardless of the variation in the iron dopant concentration when the structure is doped with an optimal amount of tin (Figure 1 a ). No extra characteristic peaks emerged from any of the three codoped perovskite oxides, suggesting that there were no impurities The design of cost-effective and highly effi cient catalysts for a wide range of electrochemical energy storage applications remains a key element in the societal pursuit of sustainable energy. [1] [2] [3] ] In particular, the electrocatalytic splitting of water to generate hydrogen and oxygen enables the storage of a large amount of energy. [4] [5] [6] ] However, the oxygen evolution reaction (OER) at the anode of a water electrolyzer is kinetically hampered by a complex four-electron oxidation process and therefore requires a considerable overpotential (η) that could cause signifi cant losses to the overall effi ciency of water splitting. To afford fast kinetics and low overpotential in practical applications, noble metal oxide catalysts (e.g., IrO 2 and RuO 2 ) are often involved, [ 7, 8 ] but the high cost and scarcity of precious metals hinder their large-scale use. Furthermore, these precious-metal catalysts suffer from poor durability over long-term operations. [9] [10] [11] 1] Therefore, it is of prime importance to develop low-cost and earth-abundant alternatives with comparable or even better catalytic activity and improved stability than stateof-the-art precious metal catalysts to achieve energy production on a large scale.",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "1"
+        ],
+        "xrd_score": 10.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The parent oxide BaCoO 3-δ displayed a complicated lattice structure (Figure S1 , Supporting Information), composed mainly of a hexagonal phase (space group: P6 3 / mmc ) similar to 12HBaCoO 2.6 , [ 33 ] with a small amount of an orthorhombic phase. [ 34 ] Doping of the cobalt site in BaCoO 3-δ with tin alone or iron alone failed to induce the formation of an oxygen vacancy-disordered cubic phase (Figure S1 , Supporting Information). Co-doping these two metals, surprisingly, facilitated the formation of a cubic perovskite structure (space group: Pm -3 m ) as is evidenced by the typical XRD profi les shown in Figure 1 a. Such a cubic structure can be well maintained regardless of the variation in the iron dopant concentration when the structure is doped with an optimal amount of tin (Figure 1 a ).",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_d317af514844",
+        "text": "Noble-metal-free perovskite oxides, with a general formula of ABO 3 , where A is commonly a rare-earth or alkaline-earth metal and B a transition metal, possess great structural fl exibility and thus have been extensively studied for a myriad of applications. [12] [13] [14] 4] [15] Most recently, their role as an OER electrocatalyst has gained renewed attention, [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] ever since the seminal research work of Bockris and Otagawa peroformed during the 1980s. [ 26, 27 ] Noticeably, Ba 0.5 Sr 0.5 Co 0.8 Fe 0.2 O 3-δ (BSCF), in these three products. Rietveld refi nement reconfi rmed the structure of each composition and reasonably good fi tting was obtained based on a cubic symmetry (Figure S2 and Table S1 , Supporting Information), which is consistent with previously reported results. [ 35, 36 ] The above results revealed that co-doping with Sn and Fe is indispensable for the stabilization of a cubic phase perovskite structure. The surface areas of the as-prepared BCFSn powders were measured by nitrogen adsorption/ desorption isotherms and calculated based on the Brunauer-Emmett-Teller (BET) method. All samples investigated in this study possessed similar surface areas of ≈1 m 2 g -1 (Table S2 , Supporting Information). In addition, these oxides were porefree, as evidenced by their broad Barrett-Joyner-Halenda (BJH) pore size distribution curves and low pore volumes as obtained from the desorption branch of the nitrogen sorption isotherms (Figures S3 and S4 , Table S2 , Supporting Information). Representative fi eld-emission scanning electron microscopy (FE-SEM) images for BCFSn perovskites are shown in Figure S5 , Supporting Information, at different magnifi cations. Particles of several micrometers were clearly observed and no obvious morphological distinction between these oxides was found. The oxygen nonstoichiometries of BCFSn oxides were determined to be ≈0.30 using iodometric titration (Table S3 , Supporting Information). From the X-ray photoelectron spectroscopy (XPS) survey shown in Figure S6 , Supporting Information, the presence of Ba, Co, Fe, and Sn in the perovskites was demonstrated. High-resolution XPS spectra revealed that the surface Co species were mainly in the oxidation state of approximately 3.0+ for all three BCFSn perovskite oxides (Figure 1 b ). It is noteworthy that the simultaneous deconvolution of both Co 2p and Ba 3d in (Ba, Co)-containing perovskites was required due to the overlap between the Co 2p and Ba 3d peaks. [37] [38] [39] 9] The surface oxidation state of Sn in the three BCFSn perovskites is 4.0+, whereas that of Fe is diffi cult to determine from XPS but is estimated to be ≈4.0+ to maintain electrical neutrality (Figure S7 , Supporting Information). [ 40 ] Above results demonstrated that solid-state reactions produced phase structures, surface areas, morphologies, oxygen nonstoichiometries, and surface Co oxidation states that are substantially invariant among the different BCFSn perovskites reported herein, thus enabling their systematic evaluation as electrocatalysts for oxygen evolution.",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "3",
+          "5",
+          "6",
+          "1",
+          "7"
+        ],
+        "xrd_score": 6.1,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "High-resolution XPS spectra revealed that the surface Co species were mainly in the oxidation state of approximately 3.0+ for all three BCFSn perovskite oxides (Figure 1 b ).",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_fce29120392b",
+        "text": "-1 oxide www.MaterialsViews.com www.advancedscience.com Adv. Sci. 2016, 3, 1500187 for BCFSn-631 and BCFSn-721, respectively. Notably, with an increasing number of Co cations occupying the perovskite structure, the OER mass activity ascends by ≈1.8× and ≈2.5× for BCFSn-631 and BCFSn-721, respectively, with respect to BCFSn-541. Likewise, the OER specifi c activity increased with a larger number of Co ions in BCFSn perovskites considering their similar surface areas. The OER specifi c activity was 4.2, 6.6, and 10.6 mA cm -2 oxide for BCFSn-541, BCFSn-631 and BCFSn-721, respectively, again suggesting that BCFSn-721 exhibited the highest OER activity. The minimal specifi c activity of the IrO 2 catalyst was further elucidated at this selected overpotential. However, BCFSn catalysts underperform IrO 2 with respect to mass activity as displayed in Figure 2 c . Nonetheless, the mass activity of these BCFSn perovskites could be further enhanced to reach that of IrO 2 by reducing their particle sizes via ball milling or developing hierarchical pore structures with larger surface areas. [ 16, 22, 23 ] o gain insight into the origin of the quantitative trend in OER activity of BCFSn perovskites with altered co-doping levels of iron and tin, we looked into the OER mechanism based upon the latest theoretical and experimental studies of Co-based oxides for OER catalysis. [ 18, 19, 42, 43 ] The electrocatalytic OER in alkaline electrolyte usually proceeds exclusively through four single-electron charge-transfer steps involving a sequence of reaction intermediates, HO*, O*, and HOO* (the asterisk indicates a bond to the catalyst surface), followed by the formation and desorption of the generated O 2 . [ 18, 19, 42 ] or BCFSn perovskites with trivalent Co ions as the dominant Co species (Figure 1 b ), the adsorption of OH -to form HO* involves the oxidation of Co 3+ to Co 4+ , which would lead to ineffi cient adsorption, thereby making the formation of HO* ratelimiting. [ 42 ] Accordingly, we examined the capability of BCFSn perovskites to adsorb OH -in alkaline solutions, as evidenced by Fourier transform infrared spectroscopy (FT-IR) measurements in Figure 3 a. Broad IR bands centered at approximately 3420 cm -1 , corresponding to H-bonded stretching vibrations, appeared for all three BCFSn perovskites exposed to alkaline media. [ 44 ] Markedly, BCFSn-721 exhibited the strongest OH - adsorption band, followed by BCFSn-631 and BCFSn-541, although as-prepared BCFSn perovskites all tend to adsorb some water as revealed by thermogravimetry-mass spectrometry (TG-MS, Figure S11a , Supporting Information). Hence the rate of HO* formation follows the order of BCFSn-541 < BCFSn-631 < BCFSn-721, and a similar trend is expected for the OER rate.",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "1",
+          "3",
+          "11"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "[ 18, 19, 42 ] or BCFSn perovskites with trivalent Co ions as the dominant Co species (Figure 1 b ), the adsorption of OH -to form HO* involves the oxidation of Co 3+ to Co 4+ , which would lead to ineffi cient adsorption, thereby making the formation of HO* ratelimiting.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_19e888b4867c",
+        "text": "Stronger OH -adsorption and greater O 2 desorption capabilities, lower average metal-oxygen bond energy, better charge transfer ability, together with higher electrical conductivity, have given rise to a highly active OER catalyst, BCFSn-721, among the various BCFSn perovskites reported herein. When regarding the trivalent Co cations as the major OER activity contributor, the exceptionally high intrinsic OER activity of BCFSn-721 could be partially understood by employing the e g activity descriptor. [ 16 ] he electronic confi guration of Co cations in BCFSn-721 can be assigned as t 2g 5 e g ≈1.0 with e g fi lling approaching unity under the assumption that the surface Co state in BCFSn-721 is in an intermediate spin (IS) state at room temperatures. This, however, needs more experimental support despite the fact that previous cobalt-based perovskites were reported to give the IS state under low temperatures. [ 49, 50 ] Additionally, ambiguities could arise when adopting the e g descriptor, [ 17, 19 ] thus necessitating a case-by-case understanding of the perovskite oxides in catalyzing OER. In this study, when the less OER-active ions, Fe and Sn, are doped into the BaCoO 3-δ parent oxide, certain synergistic effect of these two elements is believed to be at work, as is the case of Mn and Cu in LaMn 1-x Cu x O 4 for enhanced CO oxidation catalysis. [ 51 ] Figure 4 www.MaterialsViews.com www.advancedscience.com Adv. Sci. 2016, 3, 1500187 into the BaCoO 3-δ oxide decreases the onset potential of OER to some degree with a concomitant decrease in the Tafel slope and increase in the intrinsic activity, whereas doping Sn alone merely shifts the onset potential with a larger Tafel slope and smaller intrinsic activity (Figure 4 a,b, Figure S13 , Supporting Information). By contrast, co-doping with Fe and Sn to form a cubic-phase perovskite structure improved the OER activity and kinetics signifi cantly. Remarkably, the OER activity of BCFSn-721 per Co atom is greater than that of BaCoO 3-δ by ≈1 order of magnitude, while that of BCF or BCSn is larger only to a limited extent (Figure 4 b ). Additionally, at η = 0.45 V, both the mass and specifi c activity of BCFSn-721 surpasses the sum of that of the un-doped and single-doped oxides (Figure 4 c and Table S3 , Supporting Information). The synergistic effect brought about by such a co-doping strategy may arise from the stabilized oxygen vacancy-disordered cubic phase structure of BCFSn-721 while the iron dopant further modifi es the surface properties. This hypothesis is further supported by the observation that the excessively tin doped BaCo 0.7 Fe 0.1 Sn 0.2 O 3-δ (BCFSn-712) with a secondary BaSnO 3 phase showed inferior OER performance (Figures S1 and S14 , Supporting Information). In addition, the cubic-phase BCFSn-541 and BCFSn-631 perovskites, with fewer cobalt ions within their structure, exhibited OER activity on par or better than BaCoO 3-δ , BCSn and BCF (Figure S15 and Table S3 , Supporting Information).",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "4",
+          "13",
+          "1",
+          "15"
+        ],
+        "xrd_score": 1.3,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "This hypothesis is further supported by the observation that the excessively tin doped BaCo 0.7 Fe 0.1 Sn 0.2 O 3-δ (BCFSn-712) with a secondary BaSnO 3 phase showed inferior OER performance (Figures S1 and S14 , Supporting Information).",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The parent oxide BaCoO 3-δ displayed a complicated lattice structure (Figure S1 , Supporting Information), composed mainly of a hexagonal phase (space group: P6 3 / mmc ) similar to 12HBaCoO 2.6 , [ 33 ] with a small amount of an orthorhombic phase. [ 34 ] Doping of the cobalt site in BaCoO 3-δ with tin alone or iron alone failed to induce the formation of an oxygen vacancy-disordered cubic phase (Figure S1 , Supporting Information). Co-doping these two metals, surprisingly, facilitated the formation of a cubic perovskite structure (space group: Pm -3 m ) as is evidenced by the typical XRD profi les shown in Figure 1 a. Such a cubic structure can be well maintained regardless of the variation in the iron dopant concentration when the structure is doped with an optimal amount of tin (Figure 1 a ).\n\nHigh-resolution XPS spectra revealed that the surface Co species were mainly in the oxidation state of approximately 3.0+ for all three BCFSn perovskite oxides (Figure 1 b ).\n\n[ 18, 19, 42 ] or BCFSn perovskites with trivalent Co ions as the dominant Co species (Figure 1 b ), the adsorption of OH -to form HO* involves the oxidation of Co 3+ to Co 4+ , which would lead to ineffi cient adsorption, thereby making the formation of HO* ratelimiting.\n\nThis hypothesis is further supported by the observation that the excessively tin doped BaCo 0.7 Fe 0.1 Sn 0.2 O 3-δ (BCFSn-712) with a secondary BaSnO 3 phase showed inferior OER performance (Figures S1 and S14 , Supporting Information).",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
+      "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
+      "doi": "10.1002/advs.201500187",
+      "journal": "Advanced Science",
+      "publication_date": "2015-09-27"
+    },
+    "figure": {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Figure 2 . Figure 2. a) CV scans of BCFSn catalysts (catalyst loading of 0.232 mg oxide cm -2 disk ), where measurements were performed on an RDE (1600 rpm) in 0.1 M KOH with a scanning rate of 10 mV s -1 . The background OER activity of a carbon-supported GC electrode is shown for reference. b) Tafel plots of BCFSn catalysts. c) Mass and specifi c activity of BCFSn catalysts at an overpotential of 0.45 V; the arrow indicates an ascending trend for the OER activity of BCFSn perovskites with decreasing iron dopants. The OER activity of commercial IrO 2 (catalyst loading of 0.058 mg oxide cm -2 disk ) is shown for comparison. Error bars represent standard deviations from at least three independent measurements.",
+      "graphic_targets": [],
+      "coords": "3,50.39,615.80,240.94,7.09;3,50.39,623.53,65.49,9.90;3,115.93,625.30,175.41,8.13;3,50.38,633.03,240.95,8.86;3,50.39,644.30,240.95,7.09;3,50.39,653.79,240.94,7.09;3,50.39,663.29,240.95,7.09;3,50.39,672.79,240.95,7.09;3,50.39,682.28,240.95,8.15;3,50.39,690.03,116.58,9.90;3,167.02,691.80,124.31,8.13;3,50.39,701.30,240.95,7.09;3,50.39,710.79,52.59,7.09;3,50.27,71.12,241.09,536.11",
+      "graphic_coords": "3,50.27,71.12,241.09,536.11",
+      "figure_type": null,
+      "xrd_score": 3.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_d317af514844",
+        "paragraph_c16849c79b08",
+        "paragraph_fce29120392b"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b746ae88fc82",
+        "paragraph_785d08566c97",
+        "paragraph_dee05ced560d",
+        "paragraph_d317af514844",
+        "paragraph_c16849c79b08",
+        "paragraph_fce29120392b",
+        "paragraph_4fb017e6ec95",
+        "paragraph_ffc85b7c0132",
+        "paragraph_09b573804f28",
+        "paragraph_19e888b4867c"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_d317af514844",
+        "text": "Noble-metal-free perovskite oxides, with a general formula of ABO 3 , where A is commonly a rare-earth or alkaline-earth metal and B a transition metal, possess great structural fl exibility and thus have been extensively studied for a myriad of applications. [12] [13] [14] 4] [15] Most recently, their role as an OER electrocatalyst has gained renewed attention, [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] ever since the seminal research work of Bockris and Otagawa peroformed during the 1980s. [ 26, 27 ] Noticeably, Ba 0.5 Sr 0.5 Co 0.8 Fe 0.2 O 3-δ (BSCF), in these three products. Rietveld refi nement reconfi rmed the structure of each composition and reasonably good fi tting was obtained based on a cubic symmetry (Figure S2 and Table S1 , Supporting Information), which is consistent with previously reported results. [ 35, 36 ] The above results revealed that co-doping with Sn and Fe is indispensable for the stabilization of a cubic phase perovskite structure. The surface areas of the as-prepared BCFSn powders were measured by nitrogen adsorption/ desorption isotherms and calculated based on the Brunauer-Emmett-Teller (BET) method. All samples investigated in this study possessed similar surface areas of ≈1 m 2 g -1 (Table S2 , Supporting Information). In addition, these oxides were porefree, as evidenced by their broad Barrett-Joyner-Halenda (BJH) pore size distribution curves and low pore volumes as obtained from the desorption branch of the nitrogen sorption isotherms (Figures S3 and S4 , Table S2 , Supporting Information). Representative fi eld-emission scanning electron microscopy (FE-SEM) images for BCFSn perovskites are shown in Figure S5 , Supporting Information, at different magnifi cations. Particles of several micrometers were clearly observed and no obvious morphological distinction between these oxides was found. The oxygen nonstoichiometries of BCFSn oxides were determined to be ≈0.30 using iodometric titration (Table S3 , Supporting Information). From the X-ray photoelectron spectroscopy (XPS) survey shown in Figure S6 , Supporting Information, the presence of Ba, Co, Fe, and Sn in the perovskites was demonstrated. High-resolution XPS spectra revealed that the surface Co species were mainly in the oxidation state of approximately 3.0+ for all three BCFSn perovskite oxides (Figure 1 b ). It is noteworthy that the simultaneous deconvolution of both Co 2p and Ba 3d in (Ba, Co)-containing perovskites was required due to the overlap between the Co 2p and Ba 3d peaks. [37] [38] [39] 9] The surface oxidation state of Sn in the three BCFSn perovskites is 4.0+, whereas that of Fe is diffi cult to determine from XPS but is estimated to be ≈4.0+ to maintain electrical neutrality (Figure S7 , Supporting Information). [ 40 ] Above results demonstrated that solid-state reactions produced phase structures, surface areas, morphologies, oxygen nonstoichiometries, and surface Co oxidation states that are substantially invariant among the different BCFSn perovskites reported herein, thus enabling their systematic evaluation as electrocatalysts for oxygen evolution.",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "3",
+          "5",
+          "6",
+          "1",
+          "7"
+        ],
+        "xrd_score": 6.1,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Rietveld refi nement reconfi rmed the structure of each composition and reasonably good fi tting was obtained based on a cubic symmetry (Figure S2 and Table S1 , Supporting Information), which is consistent with previously reported results.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_c16849c79b08",
+        "text": "The catalytic activity of BCFSn perovskites for OER was examined in a 0.1 M KOH solution using a typical rotating disk electrode (RDE) technique. [ 39 ] Cyclic voltammetry (CV) measurements reveal that BCFSn-721 exhibits the lowest onset potential (≈1.53 V) with respect to a reversible hydrogen electrode (RHE) among the various BCFSn catalysts ( Figure 2 a), indicating its high OER activity. This value is comparable to that of a high-surface-area commercial IrO 2 catalyst (≈1.47 V vs RHE, Figure S8 , Supporting Information), which serves as the benchmark for electrocatalysis in OER. [ 7, 16 ] The OER activity of the glassy carbon (GC) substrate and conductive carbon (61.5 m 2 g -1 , Figure S9 , Supporting Information) added to improve the conductivity of oxide electrodes was also measured, ensuring negligible background contributions from the GC disk and carbon. BCFSn-541 and BCFSn-631 both display comparable OER activity with somewhat larger onset potentials of ≈1.55 and ≈1.58 V vs RHE, respectively. Figure S10 , Supporting Information, gives a more clear illustration of this observation, where OER activity was normalized by the catalyst loading and surface area of each perovskite oxide to gain the mass activity and specifi c activity, the latter known as intrinsic OER activity. [ 16, 41 ] Based upon this, Tafel plots of BCFSn catalysts were plotted in Figure 2 b together with IrO 2 , the activity of which is consistent with earlier reports. [ 7, 16 ] As is clearly shown in Figure 2 b , BCFSn catalysts were more active than IrO 2 on a surface area basis, regardless of their variation in compositions, with intrinsic OER activity at least one order of magnitude higher than IrO 2 . Moreover, the Tafel slopes of the three BCFSn catalysts are 76, 68, and 69 mV dec -1 for BCFSn-541, BCFSn-631, BCFSn-721, respectively (Table S4 , Supporting Information). These values are in line with those of cobalt-based perovskites as reported by Bockris and Otagawa. [ 26 ] The analogous Tafel slopes of the three BCFSn catalysts (≈70 mV dec -1 ) compared to IrO 2 (63 mV dec -1 ) indicate that BCFSn perovskites have outstanding OER kinetics and can therefore serve as highly effi cient electrocatalysts that are competitive with some currently known high-performance OER catalysts (Table S5 , Supporting Information). [ 16, 17, 20 ] he results shown in Figure 2 a,b signify the high effi ciency of BCFSn perovskites as OER electrocatalysts. We further report that their intrinsic OER activity can be tuned by tailoring the relative concentrations of the B-site ions, namely, by increasing the concntration of the more OER-active transition-metal cation, e.g., Co cations in this case (or conversely, by decreasing the amount of the less OER-active Fe dopant). This is despite the fact that the substitution of Co with Fe in (Pr 0.5 Ba 0.5 )CoO 3-δ was reported to have a negligible effect on the OER activity. [ 17 ] vidence of this fact fi rst came from the OER onset potential sequence of the three perovskites as discussed above. Further evaluation disclosed that the intrinsic OER activity of BCFSn perovskites with varied Co/Fe proportions follows the order of BCFSn-541 < BCFSn-631 < BCFSn-721 (Figure 2 b ). This is particularly the case at more positive potential ranges where the anodic OER current increased rapidly. Specifi cally, a comparison of the mass and specifi c OER activity of various BCFSn electrocatalysts was made at η = 0.45 V (1.68 V vs RHE). As shown in Figure 2 c , the OER mass activity for BCFSn-541 was 33.7 mA mg -1 oxide , followed by 59.4 and 84.5 mA mg",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "8",
+          "9",
+          "10"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "[ 39 ] Cyclic voltammetry (CV) measurements reveal that BCFSn-721 exhibits the lowest onset potential (≈1.53 V) with respect to a reversible hydrogen electrode (RHE) among the various BCFSn catalysts ( Figure 2 a), indicating its high OER activity. [ 16, 41 ] Based upon this, Tafel plots of BCFSn catalysts were plotted in Figure 2 b together with IrO 2 , the activity of which is consistent with earlier reports. [ 7, 16 ] As is clearly shown in Figure 2 b , BCFSn catalysts were more active than IrO 2 on a surface area basis, regardless of their variation in compositions, with intrinsic OER activity at least one order of magnitude higher than IrO 2 . [ 16, 17, 20 ] he results shown in Figure 2 a,b signify the high effi ciency of BCFSn perovskites as OER electrocatalysts. Further evaluation disclosed that the intrinsic OER activity of BCFSn perovskites with varied Co/Fe proportions follows the order of BCFSn-541 < BCFSn-631 < BCFSn-721 (Figure 2 b ). As shown in Figure 2 c , the OER mass activity for BCFSn-541 was 33.7 mA mg -1 oxide , followed by 59.4 and 84.5 mA mg",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_fce29120392b",
+        "text": "-1 oxide www.MaterialsViews.com www.advancedscience.com Adv. Sci. 2016, 3, 1500187 for BCFSn-631 and BCFSn-721, respectively. Notably, with an increasing number of Co cations occupying the perovskite structure, the OER mass activity ascends by ≈1.8× and ≈2.5× for BCFSn-631 and BCFSn-721, respectively, with respect to BCFSn-541. Likewise, the OER specifi c activity increased with a larger number of Co ions in BCFSn perovskites considering their similar surface areas. The OER specifi c activity was 4.2, 6.6, and 10.6 mA cm -2 oxide for BCFSn-541, BCFSn-631 and BCFSn-721, respectively, again suggesting that BCFSn-721 exhibited the highest OER activity. The minimal specifi c activity of the IrO 2 catalyst was further elucidated at this selected overpotential. However, BCFSn catalysts underperform IrO 2 with respect to mass activity as displayed in Figure 2 c . Nonetheless, the mass activity of these BCFSn perovskites could be further enhanced to reach that of IrO 2 by reducing their particle sizes via ball milling or developing hierarchical pore structures with larger surface areas. [ 16, 22, 23 ] o gain insight into the origin of the quantitative trend in OER activity of BCFSn perovskites with altered co-doping levels of iron and tin, we looked into the OER mechanism based upon the latest theoretical and experimental studies of Co-based oxides for OER catalysis. [ 18, 19, 42, 43 ] The electrocatalytic OER in alkaline electrolyte usually proceeds exclusively through four single-electron charge-transfer steps involving a sequence of reaction intermediates, HO*, O*, and HOO* (the asterisk indicates a bond to the catalyst surface), followed by the formation and desorption of the generated O 2 . [ 18, 19, 42 ] or BCFSn perovskites with trivalent Co ions as the dominant Co species (Figure 1 b ), the adsorption of OH -to form HO* involves the oxidation of Co 3+ to Co 4+ , which would lead to ineffi cient adsorption, thereby making the formation of HO* ratelimiting. [ 42 ] Accordingly, we examined the capability of BCFSn perovskites to adsorb OH -in alkaline solutions, as evidenced by Fourier transform infrared spectroscopy (FT-IR) measurements in Figure 3 a. Broad IR bands centered at approximately 3420 cm -1 , corresponding to H-bonded stretching vibrations, appeared for all three BCFSn perovskites exposed to alkaline media. [ 44 ] Markedly, BCFSn-721 exhibited the strongest OH - adsorption band, followed by BCFSn-631 and BCFSn-541, although as-prepared BCFSn perovskites all tend to adsorb some water as revealed by thermogravimetry-mass spectrometry (TG-MS, Figure S11a , Supporting Information). Hence the rate of HO* formation follows the order of BCFSn-541 < BCFSn-631 < BCFSn-721, and a similar trend is expected for the OER rate.",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "1",
+          "3",
+          "11"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "However, BCFSn catalysts underperform IrO 2 with respect to mass activity as displayed in Figure 2 c .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Rietveld refi nement reconfi rmed the structure of each composition and reasonably good fi tting was obtained based on a cubic symmetry (Figure S2 and Table S1 , Supporting Information), which is consistent with previously reported results.\n\n[ 39 ] Cyclic voltammetry (CV) measurements reveal that BCFSn-721 exhibits the lowest onset potential (≈1.53 V) with respect to a reversible hydrogen electrode (RHE) among the various BCFSn catalysts ( Figure 2 a), indicating its high OER activity. [ 16, 41 ] Based upon this, Tafel plots of BCFSn catalysts were plotted in Figure 2 b together with IrO 2 , the activity of which is consistent with earlier reports. [ 7, 16 ] As is clearly shown in Figure 2 b , BCFSn catalysts were more active than IrO 2 on a surface area basis, regardless of their variation in compositions, with intrinsic OER activity at least one order of magnitude higher than IrO 2 . [ 16, 17, 20 ] he results shown in Figure 2 a,b signify the high effi ciency of BCFSn perovskites as OER electrocatalysts. Further evaluation disclosed that the intrinsic OER activity of BCFSn perovskites with varied Co/Fe proportions follows the order of BCFSn-541 < BCFSn-631 < BCFSn-721 (Figure 2 b ). As shown in Figure 2 c , the OER mass activity for BCFSn-541 was 33.7 mA mg -1 oxide , followed by 59.4 and 84.5 mA mg\n\nHowever, BCFSn catalysts underperform IrO 2 with respect to mass activity as displayed in Figure 2 c .",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
+      "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
+      "doi": "10.1002/advs.201500187",
+      "journal": "Advanced Science",
+      "publication_date": "2015-09-27"
+    },
+    "figure": {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Figure 3 . Figure 3. a) FT-IR spectra of BCFSn perovskites after exposure to 0.1 M KOH. b) Correlation between the OER activity of BCFSn catalysts and the average B-O bond energy (〈B-O〉) or the average metal (A, B)-O bond energy (〈ABE〉) within each perovskite lattice. c) O 2 -TPD profi les of BCFSn perovskites; arrows indicate the temperatures at which O 2 desorption occurs. d) Electrochemical impedance spectra of BCFSn catalysts recorded at 1.63 V vs RHE under the infl uence of an AC voltage of 5 mV.",
+      "graphic_targets": [],
+      "coords": "4,47.00,379.23,496.07,7.09;4,47.00,388.73,496.07,8.13;4,47.00,398.23,496.09,8.13;4,47.00,407.73,151.23,7.09;4,115.01,71.18,360.07,298.87",
+      "graphic_coords": "4,115.01,71.18,360.07,298.87",
+      "figure_type": null,
+      "xrd_score": 3.9,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_d317af514844",
+        "paragraph_fce29120392b",
+        "paragraph_4fb017e6ec95",
+        "paragraph_09b573804f28"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b746ae88fc82",
+        "paragraph_785d08566c97",
+        "paragraph_dee05ced560d",
+        "paragraph_d317af514844",
+        "paragraph_c16849c79b08",
+        "paragraph_fce29120392b",
+        "paragraph_4fb017e6ec95",
+        "paragraph_ffc85b7c0132",
+        "paragraph_09b573804f28",
+        "paragraph_19e888b4867c",
+        "paragraph_bf3c8ad5fdc3",
+        "paragraph_e4c6557a07ff"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_d317af514844",
+        "text": "Noble-metal-free perovskite oxides, with a general formula of ABO 3 , where A is commonly a rare-earth or alkaline-earth metal and B a transition metal, possess great structural fl exibility and thus have been extensively studied for a myriad of applications. [12] [13] [14] 4] [15] Most recently, their role as an OER electrocatalyst has gained renewed attention, [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] ever since the seminal research work of Bockris and Otagawa peroformed during the 1980s. [ 26, 27 ] Noticeably, Ba 0.5 Sr 0.5 Co 0.8 Fe 0.2 O 3-δ (BSCF), in these three products. Rietveld refi nement reconfi rmed the structure of each composition and reasonably good fi tting was obtained based on a cubic symmetry (Figure S2 and Table S1 , Supporting Information), which is consistent with previously reported results. [ 35, 36 ] The above results revealed that co-doping with Sn and Fe is indispensable for the stabilization of a cubic phase perovskite structure. The surface areas of the as-prepared BCFSn powders were measured by nitrogen adsorption/ desorption isotherms and calculated based on the Brunauer-Emmett-Teller (BET) method. All samples investigated in this study possessed similar surface areas of ≈1 m 2 g -1 (Table S2 , Supporting Information). In addition, these oxides were porefree, as evidenced by their broad Barrett-Joyner-Halenda (BJH) pore size distribution curves and low pore volumes as obtained from the desorption branch of the nitrogen sorption isotherms (Figures S3 and S4 , Table S2 , Supporting Information). Representative fi eld-emission scanning electron microscopy (FE-SEM) images for BCFSn perovskites are shown in Figure S5 , Supporting Information, at different magnifi cations. Particles of several micrometers were clearly observed and no obvious morphological distinction between these oxides was found. The oxygen nonstoichiometries of BCFSn oxides were determined to be ≈0.30 using iodometric titration (Table S3 , Supporting Information). From the X-ray photoelectron spectroscopy (XPS) survey shown in Figure S6 , Supporting Information, the presence of Ba, Co, Fe, and Sn in the perovskites was demonstrated. High-resolution XPS spectra revealed that the surface Co species were mainly in the oxidation state of approximately 3.0+ for all three BCFSn perovskite oxides (Figure 1 b ). It is noteworthy that the simultaneous deconvolution of both Co 2p and Ba 3d in (Ba, Co)-containing perovskites was required due to the overlap between the Co 2p and Ba 3d peaks. [37] [38] [39] 9] The surface oxidation state of Sn in the three BCFSn perovskites is 4.0+, whereas that of Fe is diffi cult to determine from XPS but is estimated to be ≈4.0+ to maintain electrical neutrality (Figure S7 , Supporting Information). [ 40 ] Above results demonstrated that solid-state reactions produced phase structures, surface areas, morphologies, oxygen nonstoichiometries, and surface Co oxidation states that are substantially invariant among the different BCFSn perovskites reported herein, thus enabling their systematic evaluation as electrocatalysts for oxygen evolution.",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "3",
+          "5",
+          "6",
+          "1",
+          "7"
+        ],
+        "xrd_score": 6.1,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "In addition, these oxides were porefree, as evidenced by their broad Barrett-Joyner-Halenda (BJH) pore size distribution curves and low pore volumes as obtained from the desorption branch of the nitrogen sorption isotherms (Figures S3 and S4 , Table S2 , Supporting Information).",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_fce29120392b",
+        "text": "-1 oxide www.MaterialsViews.com www.advancedscience.com Adv. Sci. 2016, 3, 1500187 for BCFSn-631 and BCFSn-721, respectively. Notably, with an increasing number of Co cations occupying the perovskite structure, the OER mass activity ascends by ≈1.8× and ≈2.5× for BCFSn-631 and BCFSn-721, respectively, with respect to BCFSn-541. Likewise, the OER specifi c activity increased with a larger number of Co ions in BCFSn perovskites considering their similar surface areas. The OER specifi c activity was 4.2, 6.6, and 10.6 mA cm -2 oxide for BCFSn-541, BCFSn-631 and BCFSn-721, respectively, again suggesting that BCFSn-721 exhibited the highest OER activity. The minimal specifi c activity of the IrO 2 catalyst was further elucidated at this selected overpotential. However, BCFSn catalysts underperform IrO 2 with respect to mass activity as displayed in Figure 2 c . Nonetheless, the mass activity of these BCFSn perovskites could be further enhanced to reach that of IrO 2 by reducing their particle sizes via ball milling or developing hierarchical pore structures with larger surface areas. [ 16, 22, 23 ] o gain insight into the origin of the quantitative trend in OER activity of BCFSn perovskites with altered co-doping levels of iron and tin, we looked into the OER mechanism based upon the latest theoretical and experimental studies of Co-based oxides for OER catalysis. [ 18, 19, 42, 43 ] The electrocatalytic OER in alkaline electrolyte usually proceeds exclusively through four single-electron charge-transfer steps involving a sequence of reaction intermediates, HO*, O*, and HOO* (the asterisk indicates a bond to the catalyst surface), followed by the formation and desorption of the generated O 2 . [ 18, 19, 42 ] or BCFSn perovskites with trivalent Co ions as the dominant Co species (Figure 1 b ), the adsorption of OH -to form HO* involves the oxidation of Co 3+ to Co 4+ , which would lead to ineffi cient adsorption, thereby making the formation of HO* ratelimiting. [ 42 ] Accordingly, we examined the capability of BCFSn perovskites to adsorb OH -in alkaline solutions, as evidenced by Fourier transform infrared spectroscopy (FT-IR) measurements in Figure 3 a. Broad IR bands centered at approximately 3420 cm -1 , corresponding to H-bonded stretching vibrations, appeared for all three BCFSn perovskites exposed to alkaline media. [ 44 ] Markedly, BCFSn-721 exhibited the strongest OH - adsorption band, followed by BCFSn-631 and BCFSn-541, although as-prepared BCFSn perovskites all tend to adsorb some water as revealed by thermogravimetry-mass spectrometry (TG-MS, Figure S11a , Supporting Information). Hence the rate of HO* formation follows the order of BCFSn-541 < BCFSn-631 < BCFSn-721, and a similar trend is expected for the OER rate.",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "2",
+          "1",
+          "3",
+          "11"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "[ 42 ] Accordingly, we examined the capability of BCFSn perovskites to adsorb OH -in alkaline solutions, as evidenced by Fourier transform infrared spectroscopy (FT-IR) measurements in Figure 3 a.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_4fb017e6ec95",
+        "text": "Recent research work has noted that lattice oxygen may participate in the formation of the O-O bond in the HOO* intermediate to play a partial role in the OER. [ 18, 19 ] Based upon that idea, attempts were made to study the overall catalytic effect of B-site cations (and A-site cations, too) using the average B-O bond energy (〈B-O〉) or the average metal (A, B)-O bond energy (〈ABE〉) within the perovskite lattice, [ 45 ] as estimated from the thermodynamic data. [ 46 ] Figure 3 b demonstrates the correlation between 〈B-O〉, or 〈ABE〉, and the OER activity of BCFSn perovskites, the latter being defi ned by the overpotential needed to oxidize water at a current density of 10 mA cm -2 disk , a convention widely used in the OER literature. [ 47 ] The negative values obtained for 〈B-O〉 and 〈ABE〉 indicate the exothermic character of the bond formation. The lower bond energy for BCFSn-721",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "3"
+        ],
+        "xrd_score": 0.9,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "[ 46 ] Figure 3 b demonstrates the correlation between 〈B-O〉, or 〈ABE〉, and the OER activity of BCFSn perovskites, the latter being defi ned by the overpotential needed to oxidize water at a current density of 10 mA cm -2 disk , a convention widely used in the OER literature.",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_09b573804f28",
+        "text": "Oxygen desorption, the last step needed to complete the OER cycle, is also an important factor for effective OER catalysis. The O 2 desorption ability of BCFSn perovskites was characterized by performing O 2 temperature-programmed desorption (O 2 -TPD, Figure 3 c ) and TG-MS (Figure S11b , Supporting Information). The O 2 desorption peak of BCFSn-721 occurred at the lowest temperature, and those of BCFSn-631 and BCFSn-541 at more elevated temperatures. As a result, BCFSn-721 shows enhanced OER activity. [ 23 ] Charge transfer is a crucial factor for performance as effi cient OER catalysts. As revealed by electrochemical impedance spectra (EIS) measurements in Figure 3 d , the diameter of the semicircle for BCFSn-541 is much larger than those of BCFSn-631 and BCFSn-721, which indicates a much higher charge transfer resistance for BCFSn-541. [ 48 ] In contrast, reducing the iron dopant concentration in BCFSn perovskites accelerated the charge transfer of the reactants to the catalysts. The rate of OER therefore follows the order of BCFSn-541 < BCFSn-631 < BCFSn-721. Also of note is the increasing lowtemperature electrical conductivity resulting from the reduced doping with Fe that could benefi t the OER (Figure S12 , Supporting Information).",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "3",
+          "11",
+          "12"
+        ],
+        "xrd_score": 0.9,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The O 2 desorption ability of BCFSn perovskites was characterized by performing O 2 temperature-programmed desorption (O 2 -TPD, Figure 3 c ) and TG-MS (Figure S11b , Supporting Information). As revealed by electrochemical impedance spectra (EIS) measurements in Figure 3 d , the diameter of the semicircle for BCFSn-541 is much larger than those of BCFSn-631 and BCFSn-721, which indicates a much higher charge transfer resistance for BCFSn-541.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "In addition, these oxides were porefree, as evidenced by their broad Barrett-Joyner-Halenda (BJH) pore size distribution curves and low pore volumes as obtained from the desorption branch of the nitrogen sorption isotherms (Figures S3 and S4 , Table S2 , Supporting Information).\n\n[ 42 ] Accordingly, we examined the capability of BCFSn perovskites to adsorb OH -in alkaline solutions, as evidenced by Fourier transform infrared spectroscopy (FT-IR) measurements in Figure 3 a.\n\n[ 46 ] Figure 3 b demonstrates the correlation between 〈B-O〉, or 〈ABE〉, and the OER activity of BCFSn perovskites, the latter being defi ned by the overpotential needed to oxidize water at a current density of 10 mA cm -2 disk , a convention widely used in the OER literature.\n\nThe O 2 desorption ability of BCFSn perovskites was characterized by performing O 2 temperature-programmed desorption (O 2 -TPD, Figure 3 c ) and TG-MS (Figure S11b , Supporting Information). As revealed by electrochemical impedance spectra (EIS) measurements in Figure 3 d , the diameter of the semicircle for BCFSn-541 is much larger than those of BCFSn-631 and BCFSn-721, which indicates a much higher charge transfer resistance for BCFSn-541.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
+      "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
+      "doi": "10.1002/advs.201500187",
+      "journal": "Advanced Science",
+      "publication_date": "2015-09-27"
+    },
+    "figure": {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Figure 4 . Figure 4. a) CV scans, b) OER activity normalized to the total Co atoms, and c) mass and specifi c activity at an overpotential of 0.45 V of BaCoO 3-δ , BCF, BCSn and BCFSn-721 catalysts (catalyst loading of 0.232 mg oxide cm -2 disk ) in 0.1 M KOH. d) Chronopotentiometry curves of BCFSn-721 and commercial IrO 2 catalysts (catalyst loading of 0.232 and 0.058 mg oxide cm -2 disk , respectively) at a constant current density of 5 mA cm -2 disk and 2400 rpm in 0.1 M KOH; the inset shows the 2nd, 20th, and 50th CV scans of BCFSn-721 catalyst recorded at 10 mV s -1 and 1600 rpm.",
+      "graphic_targets": [],
+      "coords": "5,50.39,330.87,490.10,8.13;5,540.49,330.00,5.97,8.12;5,50.39,338.59,248.31,9.90;5,298.70,340.37,247.76,8.13;5,50.39,348.09,236.67,9.90;5,287.05,348.09,200.75,9.90;5,487.81,349.87,58.65,8.13;5,50.39,357.59,414.91,8.86;5,118.37,71.12,360.07,250.27",
+      "graphic_coords": "5,118.37,71.12,360.07,250.27",
+      "figure_type": null,
+      "xrd_score": 0.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_19e888b4867c",
+        "paragraph_bf3c8ad5fdc3"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_fce29120392b",
+        "paragraph_4fb017e6ec95",
+        "paragraph_ffc85b7c0132",
+        "paragraph_09b573804f28",
+        "paragraph_19e888b4867c",
+        "paragraph_bf3c8ad5fdc3",
+        "paragraph_e4c6557a07ff"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_19e888b4867c",
+        "text": "Stronger OH -adsorption and greater O 2 desorption capabilities, lower average metal-oxygen bond energy, better charge transfer ability, together with higher electrical conductivity, have given rise to a highly active OER catalyst, BCFSn-721, among the various BCFSn perovskites reported herein. When regarding the trivalent Co cations as the major OER activity contributor, the exceptionally high intrinsic OER activity of BCFSn-721 could be partially understood by employing the e g activity descriptor. [ 16 ] he electronic confi guration of Co cations in BCFSn-721 can be assigned as t 2g 5 e g ≈1.0 with e g fi lling approaching unity under the assumption that the surface Co state in BCFSn-721 is in an intermediate spin (IS) state at room temperatures. This, however, needs more experimental support despite the fact that previous cobalt-based perovskites were reported to give the IS state under low temperatures. [ 49, 50 ] Additionally, ambiguities could arise when adopting the e g descriptor, [ 17, 19 ] thus necessitating a case-by-case understanding of the perovskite oxides in catalyzing OER. In this study, when the less OER-active ions, Fe and Sn, are doped into the BaCoO 3-δ parent oxide, certain synergistic effect of these two elements is believed to be at work, as is the case of Mn and Cu in LaMn 1-x Cu x O 4 for enhanced CO oxidation catalysis. [ 51 ] Figure 4 www.MaterialsViews.com www.advancedscience.com Adv. Sci. 2016, 3, 1500187 into the BaCoO 3-δ oxide decreases the onset potential of OER to some degree with a concomitant decrease in the Tafel slope and increase in the intrinsic activity, whereas doping Sn alone merely shifts the onset potential with a larger Tafel slope and smaller intrinsic activity (Figure 4 a,b, Figure S13 , Supporting Information). By contrast, co-doping with Fe and Sn to form a cubic-phase perovskite structure improved the OER activity and kinetics signifi cantly. Remarkably, the OER activity of BCFSn-721 per Co atom is greater than that of BaCoO 3-δ by ≈1 order of magnitude, while that of BCF or BCSn is larger only to a limited extent (Figure 4 b ). Additionally, at η = 0.45 V, both the mass and specifi c activity of BCFSn-721 surpasses the sum of that of the un-doped and single-doped oxides (Figure 4 c and Table S3 , Supporting Information). The synergistic effect brought about by such a co-doping strategy may arise from the stabilized oxygen vacancy-disordered cubic phase structure of BCFSn-721 while the iron dopant further modifi es the surface properties. This hypothesis is further supported by the observation that the excessively tin doped BaCo 0.7 Fe 0.1 Sn 0.2 O 3-δ (BCFSn-712) with a secondary BaSnO 3 phase showed inferior OER performance (Figures S1 and S14 , Supporting Information). In addition, the cubic-phase BCFSn-541 and BCFSn-631 perovskites, with fewer cobalt ions within their structure, exhibited OER activity on par or better than BaCoO 3-δ , BCSn and BCF (Figure S15 and Table S3 , Supporting Information).",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "4",
+          "13",
+          "1",
+          "15"
+        ],
+        "xrd_score": 1.3,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "[ 51 ] Figure 4 www.MaterialsViews.com www.advancedscience.com Adv. 2016, 3, 1500187 into the BaCoO 3-δ oxide decreases the onset potential of OER to some degree with a concomitant decrease in the Tafel slope and increase in the intrinsic activity, whereas doping Sn alone merely shifts the onset potential with a larger Tafel slope and smaller intrinsic activity (Figure 4 a,b, Figure S13 , Supporting Information). Remarkably, the OER activity of BCFSn-721 per Co atom is greater than that of BaCoO 3-δ by ≈1 order of magnitude, while that of BCF or BCSn is larger only to a limited extent (Figure 4 b ). Additionally, at η = 0.45 V, both the mass and specifi c activity of BCFSn-721 surpasses the sum of that of the un-doped and single-doped oxides (Figure 4 c and Table S3 , Supporting Information).",
+        "selection_reason": "explicit_figure_reference"
+      },
+      {
+        "paragraph_id": "paragraph_bf3c8ad5fdc3",
+        "text": "Large-scale application of water splitting requires the OER electrocatalysts to have high stability. When biased galvanostatically at a constant current density of 5 mA cm -2 disk on GC electrode, the BCFSn-721 catalyst exhibited a nearly unchanged operating potential, at ≈1.61 V vs RHE in 0.1 M KOH, whereas IrO 2 showed an apparent decline in OER activity as evidenced by the ascending overpotential needed to retain 5 mA cm -2 disk (Figure 4 d ). The inset in Figure 4 d shows repeated CV scans of BCFSn-721 and the 50th CV curve overlays almost exactly with the 2nd one. This confi rms that BCFSn-721 is highly stable to withstand operational conditions of the OER. BCFSn-541 and BCFSn-631 also exihited good stability during the same durability tests (Figures S16 and S17 , Supporting Information).",
+        "section_path": [
+          "DOI: 10.1002/advs.201500187"
+        ],
+        "section_type": "other",
+        "figure_references": [
+          "4",
+          "16"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "When biased galvanostatically at a constant current density of 5 mA cm -2 disk on GC electrode, the BCFSn-721 catalyst exhibited a nearly unchanged operating potential, at ≈1.61 V vs RHE in 0.1 M KOH, whereas IrO 2 showed an apparent decline in OER activity as evidenced by the ascending overpotential needed to retain 5 mA cm -2 disk (Figure 4 d ). The inset in Figure 4 d shows repeated CV scans of BCFSn-721 and the 50th CV curve overlays almost exactly with the 2nd one.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "[ 51 ] Figure 4 www.MaterialsViews.com www.advancedscience.com Adv. 2016, 3, 1500187 into the BaCoO 3-δ oxide decreases the onset potential of OER to some degree with a concomitant decrease in the Tafel slope and increase in the intrinsic activity, whereas doping Sn alone merely shifts the onset potential with a larger Tafel slope and smaller intrinsic activity (Figure 4 a,b, Figure S13 , Supporting Information). Remarkably, the OER activity of BCFSn-721 per Co atom is greater than that of BaCoO 3-δ by ≈1 order of magnitude, while that of BCF or BCSn is larger only to a limited extent (Figure 4 b ). Additionally, at η = 0.45 V, both the mass and specifi c activity of BCFSn-721 surpasses the sum of that of the un-doped and single-doped oxides (Figure 4 c and Table S3 , Supporting Information).\n\nWhen biased galvanostatically at a constant current density of 5 mA cm -2 disk on GC electrode, the BCFSn-721 catalyst exhibited a nearly unchanged operating potential, at ≈1.61 V vs RHE in 0.1 M KOH, whereas IrO 2 showed an apparent decline in OER activity as evidenced by the ascending overpotential needed to retain 5 mA cm -2 disk (Figure 4 d ). The inset in Figure 4 d shows repeated CV scans of BCFSn-721 and the 50th CV curve overlays almost exactly with the 2nd one.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  }
+]

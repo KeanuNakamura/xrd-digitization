@@ -1,0 +1,804 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites</title>
+				<funder>
+					<orgName type="full">Research Management Centre</orgName>
+				</funder>
+				<funder ref="#_NdmuuM5">
+					<orgName type="full">Universiti Teknologi MARA</orgName>
+				</funder>
+				<funder ref="#_Ez7xW35">
+					<orgName type="full">Ministry of Higher Education Malaysia (MOHE)</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Akademia Baru Publishing</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-02-07">7 February 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct status="consolidated" source="crossref">
+					<analytic>
+						<author>
+							<persName><surname>Muhammad Afiq Ikhwan Zainuddin</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Adlin Abdul Rahim</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Zakiah Mohamed</surname></persName>
+						</author>
+						<title level="a" type="main">The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Journal of Advanced Research in Applied Sciences and Engineering Technology</title>
+						<title level="j" type="abbrev">ARASET</title>
+						<idno type="ISSN">2462-1943</idno>
+						<imprint>
+							<publisher>Akademia Baru Publishing</publisher>
+							<biblScope unit="volume">29</biblScope>
+							<biblScope unit="issue">3</biblScope>
+							<biblScope unit="page" from="87" to="96"/>
+							<date type="published" when="2023-02-07">7 February 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">33643CC95ED8AA7B2D153B0865D58089</idno>
+					<idno type="DOI">10.37934/araset.29.9.8796</idno>
+					<note type="submission">Received 22 December 2022 Received in revised form 12 January 2023 Accepted 26 January 2023</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.9.0" ident="GROBID" when="2026-06-17T23:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.9.0</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>X-Ray diffraction</term>
+					<term>Rietveld refinement</term>
+					<term>Crystal structure</term>
+					<term>Magnetic properties</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p coords="1,218.33,329.54,317.26,9.00;1,218.33,340.58,317.18,9.00;1,218.33,351.50,317.12,9.00;1,218.33,362.54,317.22,9.00;1,218.33,373.48,317.04,9.00;1,218.33,384.52,317.24,9.00;1,218.33,395.44,317.09,9.00;1,218.33,406.48,317.27,9.00;1,218.33,417.25,317.31,9.27;1,218.33,428.44,317.37,9.00;1,218.33,439.48,317.05,9.00;1,218.33,450.40,317.15,9.00;1,218.33,461.44,182.66,9.00"><s coords="1,218.33,329.54,154.74,9.00">The perovskite structure of La0.7Pb0.3MnO3</s><s coords="1,375.07,329.54,81.81,9.00">has been investigated.</s><s coords="1,458.91,329.54,76.68,9.00;1,218.33,340.58,140.96,9.00">The sample has been prepared using the solid-state method.</s><s coords="1,360.86,340.58,174.65,9.00;1,218.33,351.50,131.52,9.00">The structural analysis of the sample was carried out by using X-ray diffraction (XRD).</s><s coords="1,352.14,351.50,183.31,9.00;1,218.33,362.54,228.46,9.00">The Rietveld refinement technique was applied to refine and determine the structural parameters of the sample.</s><s coords="1,448.95,362.54,86.61,9.00;1,218.33,373.48,317.04,9.00;1,218.33,384.52,134.05,9.00">The XRD analysis shows that the compound exhibits a single phase and is crystalized in a rhombohedral structure with a space group of R-3c.</s><s coords="1,354.31,384.52,181.26,9.00;1,218.33,395.44,160.67,9.00">The tolerance factor of the sample was calculated to determine the stability of the structure.</s><s coords="1,382.00,395.44,153.41,9.00;1,218.33,406.48,300.80,9.00">The visualisation of the sample structure using VESTA software indicates the formation of the MnO6 octahedral structure.</s><s coords="1,522.01,406.48,13.59,9.00;1,218.33,417.25,317.31,9.27;1,218.33,428.44,157.90,9.00">The FTIR revealed the absorption band of the sample is around 496 cm -1 , corresponding with the stretching vibration of the Mn-O bond.</s><s coords="1,378.64,428.44,157.06,9.00;1,218.33,439.48,317.05,9.00;1,218.33,450.40,317.15,9.00;1,218.33,461.44,182.66,9.00">The AC susceptibility and Vibrating-sample Magnetometer (VSM) were done to study the magnetic properties of the sample and confirm the transition from ferromagnetic (FM) to paramagnetic (PM) at 298K with a maximum value of magnetization of 37.77 emu/g.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="595.32" lry="841.92"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1." coords="1,54.00,495.07,74.45,12.00">Introduction</head><p coords="1,71.90,524.50,469.62,12.00;1,54.00,539.14,123.24,12.00;1,177.38,538.15,8.08,8.04;1,185.42,539.14,16.14,12.00;1,212.45,539.14,35.08,12.00;1,247.61,538.15,8.08,8.04;1,255.65,539.14,285.49,12.00;1,54.00,553.78,486.91,12.00;1,54.00,568.42,487.23,12.00;1,54.00,583.06,376.82,12.00;1,459.41,583.06,81.78,12.00;1,54.00,597.70,487.03,12.00;1,54.00,612.34,487.32,12.00;1,54.00,626.98,256.92,12.00;1,326.02,626.98,4.11,12.00"><s coords="1,71.90,524.50,469.62,12.00;1,54.00,539.14,123.24,12.00;1,177.38,538.15,8.08,8.04;1,185.42,539.14,16.14,12.00;1,201.65,538.15,8.08,8.04;1,212.45,539.14,35.08,12.00;1,247.61,538.15,8.08,8.04;1,255.65,539.14,285.49,12.00;1,54.00,553.78,486.91,12.00;1,54.00,568.42,487.23,12.00;1,54.00,583.06,409.65,12.00">Perovskite-type manganites present a composition of R1-xAxMnO3, where R denotes trivalent lanthanoid metal ions (La 3+ , Pr 3+ and Nd 3+ ) and A denotes divalent alkaline metal ions (Ca, Sr, Ba and Pb); this compound has attracted considerable research attention worldwide because it displays important properties, such as transformation of structure, metal-insulator (MI) transition, charge ordering, ferroelectricity and colossal magnetoresistance (CMR) phenomena <ref type="bibr" coords="1,434.30,583.06,12.83,12.00" target="#b0">[1,</ref><ref type="bibr" coords="1,450.94,583.06,8.47,12.00" target="#b1">2]</ref>.</s><s coords="1,467.25,583.06,73.94,12.00;1,54.00,597.70,487.03,12.00;1,54.00,612.34,53.84,12.00">The compound can be regarded as high value from a technological perspective because of its magnetic and electrical properties.</s><s coords="1,113.34,612.34,427.98,12.00;1,54.00,626.98,276.13,12.00">An important feature of perovskite manganite is its substitution ability with other elements when compared with other types of oxides <ref type="bibr" coords="1,313.68,626.98,12.34,12.00" target="#b1">[2]</ref>.</s></p><p coords="1,71.90,641.62,469.40,12.00;1,54.00,656.26,444.23,12.00;1,514.91,656.26,26.54,12.00;1,54.00,670.92,80.27,12.00;1,134.42,669.93,8.08,8.04;1,147.14,670.92,394.17,12.00;1,54.00,685.56,93.82,12.00;1,147.98,684.57,8.08,8.04;1,156.02,685.56,21.06,12.00;1,177.14,684.57,8.08,8.04;1,187.94,685.56,334.06,12.00;2,54.00,74.42,487.39,12.00;2,54.00,89.06,134.99,12.00;2,189.14,88.07,8.08,8.04;2,199.37,89.06,31.38,12.00;2,230.81,88.07,8.08,8.04;2,238.85,89.06,294.25,12.00;2,533.38,88.07,8.08,8.04;2,54.00,103.70,37.93,12.00;2,92.06,102.71,8.08,8.04;2,102.02,103.70,273.26,12.00;2,390.55,103.70,44.73,12.00;2,435.55,102.71,8.08,8.04;2,443.59,103.70,21.17,12.00;2,464.86,102.71,8.08,8.04;2,475.90,103.70,65.46,12.00;2,54.00,118.34,487.24,12.00;2,54.00,132.98,343.87,12.00;2,398.11,131.99,8.08,8.04;2,409.27,132.98,132.09,12.00;2,54.00,147.62,487.09,12.00;2,54.00,162.26,55.22,12.00;2,109.34,161.27,11.14,8.04;2,120.50,162.26,16.50,12.00;2,137.06,161.27,8.08,8.04;2,147.86,161.92,121.79,12.34;2,284.90,162.26,96.79,12.00;2,400.86,162.26,140.46,12.00;2,54.00,176.90,487.28,12.00;2,54.00,191.66,118.98,12.00;2,172.94,190.67,8.08,8.04;2,180.98,191.66,360.28,12.00;2,54.00,206.30,371.57,12.00;2,440.72,206.30,4.13,12.00"><s coords="1,71.90,641.62,469.40,12.00;1,54.00,656.26,465.04,12.00">A previous study showed that the inorganic perovskite of LaMnO3 displays antiferromagnetic (AFM) insulating transition behaviour with a slightly low Nѐel temperature (TN = 140 K) <ref type="bibr" coords="1,502.50,656.26,12.40,12.00" target="#b2">[3]</ref>.</s><s coords="1,523.36,656.26,18.08,12.00;1,54.00,670.92,80.27,12.00;1,134.42,669.93,8.08,8.04;1,147.14,670.92,394.17,12.00;1,54.00,685.56,53.84,12.00">The presence of Mn 4+ ions exhibit a significant correlation with the LaMnO3 structure and magnetic properties.</s><s coords="1,110.46,685.56,37.36,12.00;1,147.98,684.57,8.08,8.04;1,156.02,685.56,21.06,12.00;1,177.14,684.57,8.08,8.04;1,187.94,685.56,334.06,12.00;2,54.00,74.42,389.28,12.00">The Mn 3+ /Mn 4+ ratio alters due to the substitution at the A-site, which also endorses orbital and charge ordering and is influenced by eg and t2g electron interaction.</s><s coords="2,446.36,74.42,95.03,12.00;2,54.00,89.06,134.99,12.00;2,189.14,88.07,8.08,8.04;2,199.37,89.06,31.38,12.00;2,230.81,88.07,8.08,8.04;2,238.85,89.06,294.25,12.00;2,533.38,88.07,8.08,8.04;2,54.00,103.70,37.93,12.00;2,92.06,102.71,8.08,8.04;2,102.02,103.70,292.67,12.00">The introduction of divalent cations, such as Ca 2+ and Sr 2+ , into the compound will introduce a mixture valency of Mn 3+ and Mn 4+ ions and contribute to the double exchange mechanism <ref type="bibr" coords="2,378.15,103.70,12.40,12.00" target="#b3">[4]</ref>.</s><s coords="2,397.69,103.70,37.60,12.00;2,435.55,102.71,8.08,8.04;2,443.59,103.70,21.17,12.00;2,464.86,102.71,8.08,8.04;2,475.90,103.70,65.46,12.00;2,54.00,118.34,487.24,12.00;2,54.00,132.98,227.24,12.00">The Mn 3+ /Mn 4+ ratio can also alter if substitution exists at the Mn-site, which also endorses orbital and charge ordering and is influenced by eg and t2g electron interaction.</s><s coords="2,285.64,132.98,112.22,12.00;2,398.11,131.99,8.08,8.04;2,409.27,132.98,132.09,12.00;2,54.00,147.62,487.09,12.00;2,54.00,162.26,55.22,12.00;2,109.34,161.27,11.14,8.04;2,120.50,162.26,16.50,12.00;2,137.06,161.27,8.08,8.04;2,147.86,161.92,141.15,12.34">The substitution of Ca 2+ in La1-xCaxMnO3 induces a ferromagnetic (FM) to paramagnetic (PM) transition between 0.2 &lt; x &lt; 0.45, where the optimum ratio of Mn 3+/ Mn 4+ was obtained at x ∼ 0.33 <ref type="bibr" coords="2,272.56,162.26,12.34,12.00" target="#b4">[5]</ref>.</s><s coords="2,291.65,162.26,249.67,12.00;2,54.00,176.90,80.06,12.00">Manjunatha et al., <ref type="bibr" coords="2,384.55,162.26,13.40,12.00" target="#b5">[6]</ref> reported that the compound La0.65Ca0.35MnO3</s><s coords="2,136.94,176.90,404.34,12.00;2,54.00,191.66,118.98,12.00;2,172.94,190.67,8.08,8.04;2,180.98,191.66,258.91,12.00">undergoes the same transition with a TC value of ~264 K. Another substitution of a divalent atom, such as Sr 2+ , increased the TC value from 208 K to 275 K (x = 0-0.7)</s><s coords="2,442.02,191.66,99.24,12.00;2,54.00,206.30,390.85,12.00">as the concentration of Sr increased due to the enhancement of the double exchange mechanism <ref type="bibr" coords="2,428.32,206.30,12.40,12.00" target="#b6">[7]</ref>.</s></p><p coords="2,71.90,220.97,469.56,12.00;2,54.00,235.61,487.00,12.00;2,54.00,250.25,487.27,12.00;2,54.00,264.89,487.38,12.00;2,54.00,279.53,97.28,12.00;2,167.04,279.53,374.30,12.00;2,54.00,294.17,487.19,12.00;2,54.00,308.81,487.19,12.00;2,54.00,323.45,328.56,12.00;2,382.75,322.46,8.08,8.04;2,393.91,323.45,30.04,12.00;2,424.03,322.46,8.08,8.04;2,435.31,323.45,106.04,12.00;2,54.00,338.09,487.19,12.00;2,54.00,352.73,314.82,12.00;2,383.83,352.73,4.11,12.00"><s coords="2,71.90,220.97,469.56,12.00;2,54.00,235.61,246.05,12.00">Previous studies on magnetic properties of La1-xPbxMnO3 (x = 0-0.2) showed that properties are remarkably influenced by the compound structure.</s><s coords="2,302.33,235.61,238.67,12.00;2,54.00,250.25,487.27,12.00;2,54.00,264.89,145.77,12.00">Magnetic hysteresis studies at room temperature (T = 300 K) demonstrated that the compound is paramagnetic for x = 0-0.1 compositions and ferromagnetic for x = 0.15-0.2</s><s coords="2,201.97,264.89,339.41,12.00;2,54.00,279.53,117.14,12.00">compositions, with maximum magnetisation values of 16.97 and 30.45 emu/g, respectively <ref type="bibr" coords="2,154.72,279.53,12.32,12.00" target="#b7">[8]</ref>.</s><s coords="2,174.62,279.53,366.72,12.00;2,54.00,294.17,487.19,12.00;2,54.00,308.81,163.08,12.00">The transition can be attributed to the MnO6 octahedral distortion, which can be improved with the increase of Pb doping and subsequently increase the tolerance value τ from 0.851 for x =0 to 0.862 for x = 0.2.</s><s coords="2,219.69,308.81,321.50,12.00;2,54.00,323.45,195.35,12.00">The Mn ̶ O ̶ Mn bond angle can directly affect the electron transfer mechanism and Curie temperature (TC).</s><s coords="2,252.52,323.45,130.04,12.00;2,382.75,322.46,8.08,8.04;2,393.91,323.45,30.04,12.00;2,424.03,322.46,8.08,8.04;2,435.31,323.45,106.04,12.00;2,54.00,338.09,181.76,12.00">Electron hopping from Mn 3+ to Mn 4+ improves significantly with the increase of the bond angle.</s><s coords="2,239.47,338.09,301.71,12.00;2,54.00,352.73,333.94,12.00">The Mn ̶ O ̶ Mn bond angle and the Mn ̶ Mn bond are highly correlated with the tilting of the neighbouring MnO6 octahedron <ref type="bibr" coords="2,371.51,352.73,12.32,12.00" target="#b7">[8]</ref>.</s></p><p coords="2,71.90,367.39,469.04,12.00;2,54.00,382.03,487.00,12.00;2,54.00,396.79,487.29,12.00;2,54.00,411.43,487.33,12.00;2,54.00,426.07,31.56,12.00;2,85.70,425.08,8.08,8.04;2,96.50,426.07,444.67,12.00;2,54.00,440.71,487.24,12.00;2,54.00,455.35,487.16,12.00;2,54.00,469.99,487.37,12.00;2,54.00,484.63,487.38,12.00;2,54.00,499.27,52.78,12.00"><s coords="2,71.90,367.39,469.04,12.00;2,54.00,382.03,222.58,12.00">The Pb element exists in the 2+ state with an ionic radius of 1.19 Å, whilst the La element exists in the 3+ state with an ionic radius of 1.032 Å.</s><s coords="2,279.20,382.03,261.79,12.00;2,54.00,396.79,91.46,12.00">The influence of differences of ionic state and radii on the La0.7Pb0.3MnO3</s><s coords="2,148.34,396.79,343.33,12.00">crystal structure and magnetic behaviour requires further exploration.</s><s coords="2,494.51,396.79,46.78,12.00;2,54.00,411.43,259.73,12.00">However, studies on the magnetic interaction of La0.7Pb0.3MnO3</s><s coords="2,316.25,411.43,108.84,12.00">perovskite are lacking.</s><s coords="2,427.69,411.43,113.64,12.00;2,54.00,426.07,31.56,12.00;2,85.70,425.08,8.08,8.04;2,96.50,426.07,444.67,12.00;2,54.00,440.71,290.86,12.00">Therefore, the effect of the Pb 2+ ion with a concentration of x = 0.3 substitution at the A-site on alterations of structural and magnetic behaviours of LaMnO3 should be investigated.</s><s coords="2,350.58,440.71,190.66,12.00;2,54.00,455.35,135.62,12.00">The results of synthesised crystalline samples of La0.7Pb0.3MnO3</s><s coords="2,195.17,455.35,345.99,12.00;2,54.00,469.99,487.37,12.00;2,54.00,484.63,487.38,12.00;2,54.00,499.27,52.78,12.00">by the means of solid-state reaction method and effects of the introduction of Pb into the A-site on the crystal structure and magnetic properties of the sample whilst considering the enhancement of magnetic interaction of La0.7Pb0.3MnO3 in the FM region are presented.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2." coords="2,54.00,528.58,79.34,12.00">Methodology</head><p coords="2,71.90,557.86,469.56,12.00;2,54.00,572.50,487.52,12.00;2,54.00,587.14,487.43,12.00;2,54.00,601.90,487.35,12.00;2,54.00,616.54,487.61,12.00;2,54.00,631.18,487.28,12.00;2,54.00,645.82,487.50,12.00;2,54.00,660.46,487.60,12.00;2,54.00,675.12,487.48,12.00;2,54.00,689.76,487.43,12.00;2,54.00,704.40,487.52,12.00;2,54.00,719.04,487.16,12.00;2,54.00,733.68,486.96,12.00;2,54.00,748.32,487.52,12.00;3,54.00,74.42,487.29,12.00;3,54.00,89.06,487.17,12.00;3,54.00,103.70,385.23,12.00;3,439.27,102.71,8.04,8.04;3,447.31,103.70,94.18,12.00;3,54.00,118.34,487.40,12.00;3,54.00,132.98,487.37,12.00;3,54.00,147.62,487.40,12.00;3,54.00,162.26,369.81,12.00"><s coords="2,71.90,557.86,233.78,12.00">The sample of polycrystalline for La0.7Pb0.3MnO3</s><s coords="2,308.21,557.86,233.26,12.00;2,54.00,572.50,148.82,12.00">was prepared using conventional synthetisation method (solid-state reaction).</s><s coords="2,207.07,572.50,334.45,12.00;2,54.00,587.14,487.43,12.00;2,54.00,601.90,335.39,12.00">The stoichiometric ratio of high purity (99.999%) lanthanum oxide (La2O3), lead (III) oxide (Pb3O4) and manganese (IV) oxide (MnO2) powder as the raw material was weighed to a predetermined amount using a digital weight machine.</s><s coords="2,392.47,601.90,148.88,12.00;2,54.00,616.54,487.61,12.00;2,54.00,631.18,261.62,12.00">Weighing samples were mixed in appropriate amounts separately for each series and ground continuously using an agate mortar to achieve satisfactory homogeneity for about 2 hours.</s><s coords="2,319.63,631.18,221.65,12.00;2,54.00,645.82,487.50,12.00;2,54.00,660.46,402.89,12.00">Mixture powders were placed in an alumina crucible to undergo calcination in a box furnace (carbolite furnace model CWF 11/5) at 700 °C for about 24 hours at a heating rate of 15 °C/minute and a cooling rate of 1 °C/minute.</s><s coords="2,459.58,660.46,82.02,12.00;2,54.00,675.12,425.28,12.00">All samples were then calcined again at 900 °C for about 24 hours to eliminate volatile foreign particles.</s><s coords="2,482.37,675.12,59.11,12.00;2,54.00,689.76,487.43,12.00;2,54.00,704.40,28.94,12.00">The mixture powder was poured in the mould and reground before pressing into pellet form with a hydraulic press.</s><s coords="2,88.16,704.40,409.13,12.00">The pellets were sintered at 1100 °C for another 24 hours in the box furnace.</s><s coords="2,502.66,704.40,38.86,12.00;2,54.00,719.04,487.16,12.00;2,54.00,733.68,486.96,12.00;2,54.00,748.32,413.89,12.00">Physical characterisations of the sample were completed by means of X-ray diffraction with CuKα radiation with a wavelength of 1.5406 Å using an XRD Philips X'Pert Pro Model PW3040 diffractometer and scanning electron microscope with equipment model LEO 14551 VPSEM system.</s><s coords="2,473.15,748.32,68.37,12.00;3,54.00,74.42,487.29,12.00;3,54.00,89.06,135.04,12.00">XRD data are subjected to a refinement process to determine the structure and lattice parameter of the sample through Rietveld program.</s><s coords="3,194.77,89.06,346.40,12.00;3,54.00,103.70,385.23,12.00;3,439.27,102.71,8.04,8.04;3,447.31,103.70,3.02,12.00">The results of Fourier transform infrared spectroscopy (FTIR) were obtained using FTIR-Raman Drift Nicolet 6700 within a range of 400-1200 cm -1 .</s><s coords="3,453.90,103.70,87.59,12.00;3,54.00,118.34,487.40,12.00;3,54.00,132.98,487.37,12.00;3,54.00,147.62,487.40,12.00;3,54.00,162.26,369.81,12.00">The temperaturedependent AC susceptibility measurements were carried out within the temperature range of 30-300 K in a Cryogenics Model HC-4A Zephyr, CTI-Cryogenics cryostat Janis Model CCS-900T, vacuum turbo pump Model EXT 75DX Edwards and temperature controller, which were connected to a computer using the interfaced device IEEE-488 GPIB socket for data logging.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3." coords="3,54.00,186.98,47.96,12.00">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1" coords="3,54.00,201.62,98.69,12.00">Crystal Structure</head><p coords="3,71.90,230.93,30.43,12.00;3,114.82,230.93,426.51,12.00;3,54.00,245.57,486.94,12.00;3,54.00,260.21,486.85,12.00;3,54.00,274.85,487.26,12.00;3,54.00,289.49,463.52,12.00;3,531.75,289.49,9.49,12.00;3,54.00,304.13,164.00,12.00;3,232.30,304.13,49.37,12.00;3,295.88,304.13,17.94,12.00;3,329.18,304.13,211.96,12.00;3,54.00,318.77,486.95,12.00;3,54.00,333.53,280.08,12.00;3,349.07,333.53,4.11,12.00;3,71.90,613.78,469.08,12.00;3,54.00,628.42,194.07,12.00;3,257.28,628.42,283.78,12.00;3,54.00,643.06,339.20,12.00;3,404.38,643.06,136.53,12.00;3,54.00,657.82,486.83,12.00;3,54.00,672.48,487.34,12.00;3,54.00,687.12,486.72,12.00;3,54.00,701.76,487.32,12.00;3,54.00,716.40,487.33,12.00;3,54.00,731.04,487.14,12.00;4,54.00,74.42,221.10,12.00;4,275.21,73.43,4.08,8.04;4,279.29,74.42,261.88,12.00;4,54.00,89.06,79.98,12.00;4,149.05,89.06,4.12,12.00;5,71.90,74.42,469.25,12.00;5,54.00,89.06,163.42,12.00;5,243.46,89.06,297.89,12.00;5,54.00,103.70,110.60,12.00;5,164.78,102.71,8.08,8.04;5,176.06,103.70,255.76,12.00;5,431.83,102.71,8.08,8.04;5,443.23,103.70,98.11,12.00;5,54.00,118.34,486.85,12.00;5,54.00,132.98,170.02,12.00;5,54.00,468.31,487.35,12.00;5,54.00,482.95,319.73,12.00;5,373.87,481.96,8.08,8.04;5,385.39,482.95,155.87,12.00;5,54.00,497.59,515.52,12.00;5,54.00,512.23,487.37,12.00;5,54.00,526.90,487.31,12.00;5,54.00,541.54,487.03,12.00;5,54.00,556.18,487.19,12.00;5,54.00,570.82,349.09,12.00;5,423.78,570.82,4.51,12.00;5,90.02,585.46,451.00,12.00;5,54.00,600.10,43.70,12.00;5,118.51,600.10,106.23,12.00;5,228.88,600.10,8.27,12.00"><s coords="3,71.90,230.93,429.91,12.00">Figure <ref type="figure" coords="3,105.59,230.93,6.08,12.00" target="#fig_1">1</ref> illustrates the XRD results obtained from La0.7Pb0.3MnO3 at room temperature.</s><s coords="3,504.90,230.93,36.43,12.00;3,54.00,245.57,486.94,12.00;3,54.00,260.21,231.50,12.00">Further observation demonstrated that extra peaks are absent, thereby indicating the absence of the formation of secondary phase in the sample.</s><s coords="3,290.41,260.21,250.44,12.00;3,54.00,274.85,166.16,12.00">This finding is consistent with the conclusions of previous studies on manganites.</s><s coords="3,226.01,274.85,315.25,12.00;3,54.00,289.49,487.24,12.00;3,54.00,304.13,334.17,12.00">The crystalline composition of the perovskite sample can be confirmed at their respective positions (2θ) according to peaks (012), (110), (104), (113), (202), ( <ref type="formula" coords="3,517.52,289.49,14.23,12.00">006</ref>), (024), (122), (116), (214), (018), ( <ref type="formula" coords="3,218.00,304.13,14.29,12.00">220</ref>), (208), ( <ref type="formula" coords="3,281.66,304.13,14.22,12.00">224</ref>), ( <ref type="formula" coords="3,313.83,304.13,15.35,12.00">134</ref>) and (128).</s><s coords="3,391.50,304.13,149.64,12.00;3,54.00,318.77,486.95,12.00;3,54.00,333.53,299.17,12.00">The intensity of peaks reaches the maximum at an approximate angle of 32.79° with two different peaks of (110) and (104) and further confirmed by the JCPDF card number of #32-0484 <ref type="bibr" coords="3,336.75,333.53,12.32,12.00" target="#b8">[9]</ref>.</s><s coords="3,71.90,613.78,469.08,12.00;3,54.00,628.42,207.91,12.00">The structural parameter information of the sample can be obtained from the Rietveld refinement analysis as shown in Table <ref type="table" coords="3,252.64,628.42,4.64,12.00" target="#tab_0">1</ref>.</s><s coords="3,266.44,628.42,274.62,12.00;3,54.00,643.06,486.91,12.00;3,54.00,657.82,486.83,12.00;3,54.00,672.48,62.17,12.00">XRD data undergoing refinement through the Rietveld refinement method with GSAS software are visualised in Figure <ref type="figure" coords="3,399.83,643.06,4.55,12.00" target="#fig_2">2</ref>. The samples are clearly monophasic in nature and undergo crystallisation with a rhombohedral crystal structure (α = β = 90 and γ = 120).</s><s coords="3,118.70,672.48,185.33,12.00">The space group of the sample is R-3c.</s><s coords="3,306.53,672.48,234.81,12.00;3,54.00,687.12,486.72,12.00;3,54.00,701.76,220.68,12.00">The pseudo-Voigt profile function was chosen to stimulate the data obtained from XRD due to the function containing Wyckoff atomic positions and understand the nature of the sample further.</s><s coords="3,277.52,701.76,263.79,12.00;3,54.00,716.40,278.71,12.00">La/Pb, Mn and O atoms were conditioned at positions 6a(0, 0, 0.25), 6b(0, 0, 0) and 18e(x, 0, 0.25), respectively.</s><s coords="3,335.35,716.40,205.98,12.00;3,54.00,731.04,487.14,12.00;4,54.00,74.42,211.45,12.00">Other relevant information, such as lattice parameters and unit volume, were also determined through the Rietveld refinement software, where a = b = 5.5333, c = 13.3943 and V = 355.167</s><s coords="4,268.15,74.42,6.95,12.00;4,275.21,73.43,4.08,8.04;4,279.29,74.42,3.02,12.00">A 3 .</s><s coords="4,284.92,74.42,256.25,12.00;4,54.00,89.06,99.16,12.00">These findings are consistent with the conclusions of a previous study <ref type="bibr" coords="4,136.70,89.06,12.35,12.00" target="#b7">[8]</ref>.</s><s coords="5,71.90,74.42,154.10,12.00">The structure of La0.7Pb0.3MnO3</s><s coords="5,228.89,74.42,312.26,12.00;5,54.00,89.06,129.52,12.00">was constructed using visualisation for electronic and structural analysis (VESTA) software.</s><s coords="5,186.98,89.06,354.36,12.00;5,54.00,103.70,110.60,12.00;5,164.78,102.71,8.08,8.04;5,176.06,103.70,255.76,12.00;5,431.83,102.71,8.08,8.04;5,443.23,103.70,33.49,12.00">Figure <ref type="figure" coords="5,220.91,89.06,19.10,12.00" target="#fig_3">3(a)</ref> indicates the formation of the MnO6 octahedral structure in which every single Mn 3+ atom is surrounded and connected by six pairs of O 2-atoms.</s><s coords="5,480.03,103.70,61.31,12.00;5,54.00,118.34,486.85,12.00;5,54.00,132.98,170.02,12.00;5,54.00,468.31,487.35,12.00;5,54.00,482.95,319.73,12.00;5,373.87,481.96,8.08,8.04;5,385.39,482.95,85.09,12.00">Additionally, the stability of the structure formed by the compound can be calculated using the tolerance factor τ, which can be expressed as follows: where &lt; rA &gt; is the average ionic radius of the A-site cation (1.0794 Å), &lt; rB&gt; is the average ionic radius of the B-site cation (0.6105 Å) and rO is the ionic radius of the O 2-anion (1.4000 Å).</s><s coords="5,473.90,482.95,67.36,12.00;5,54.00,497.59,515.52,12.00;5,54.00,512.23,96.87,12.00">Note that the value of τ can explain the octahedron degree of distortion of MnO6 based on the matching of La/Pb ̶ O and Mn ̶ O layers.</s><s coords="5,153.58,512.23,253.89,12.00">The perovskite structure with a value of τ=1 is ideal.</s><s coords="5,410.18,512.23,131.19,12.00;5,54.00,526.90,72.26,12.00">The obtained value of τ for La0.7Pb0.3MnO3</s><s coords="5,128.30,526.90,413.01,12.00;5,54.00,541.54,177.07,12.00">was 0.8720, which indicates that mismatches exist between La/Pb ̶ O and Mn ̶ O layers due to MnO6 octahedron distortion.</s><s coords="5,234.39,541.54,306.64,12.00;5,54.00,556.18,487.19,12.00;5,54.00,570.82,374.29,12.00">Furthermore, the tolerance value obtained is within the range of 0.75 &lt; τ &lt; 0.9, thereby indicating that A-cations are small in size to fit into their corresponding spaces and may demonstrate a possible rhombohedral crystal structure <ref type="bibr" coords="5,405.75,570.82,18.03,12.00" target="#b9">[10]</ref>.</s><s coords="5,90.02,585.46,451.00,12.00;5,54.00,600.10,183.15,12.00">The calculation of the crystalline size of the sample was carried out by utilising Scherrer equation <ref type="bibr" coords="5,100.50,600.10,18.01,12.00" target="#b10">[11]</ref>, as expressed in Eq. ( <ref type="formula" coords="5,224.74,600.10,4.13,12.00" target="#formula_2">2</ref>):</s></p><formula xml:id="formula_0" coords="5,62.30,159.52,473.98,32.71">𝑡 = &lt; 𝑟 𝐴 &gt; +𝑟 𝑂 √2(&lt; 𝑟 𝐵 &gt; +𝑟𝑜 (<label>1</label></formula><formula xml:id="formula_1" coords="5,259.97,176.90,280.77,194.76">) (a) (b)</formula><formula xml:id="formula_2" coords="5,65.06,627.72,477.11,30.79">𝐷 = 𝑘𝜆 𝛽 ℎ𝑘𝑙 𝑐𝑜𝑠𝜃<label>(2)</label></formula><p coords="5,54.00,680.16,487.14,12.00;5,54.00,694.80,487.38,12.00;5,54.00,709.44,486.85,12.00;5,54.00,724.08,130.35,12.00"><s coords="5,54.00,680.16,487.14,12.00;5,54.00,694.80,487.38,12.00;5,54.00,709.44,259.39,12.00">where k indicates a constant with a value of 0.94, λ is the CuKα radiation wavelength emitted by the XRD (1.5406 Å), βhkl is the full width at half maximum (FWHM) in radians (0.4439 rad) and θ is the angle with the most intense peak in XRD (32.79°).</s><s coords="5,318.36,709.44,222.49,12.00;5,54.00,724.08,72.26,12.00">The obtained value of crystalline size D for La0.7Pb0.3MnO3</s><s coords="5,128.90,724.08,55.45,12.00">was 39 nm.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2" coords="6,54.00,74.42,162.94,12.00">Scanning Electron Microscope</head><p coords="6,71.90,103.70,30.43,12.00;6,121.58,103.70,419.51,12.00;6,54.00,118.34,487.20,12.00;6,54.00,132.98,486.98,12.00;6,54.00,147.62,487.23,12.00;6,54.00,162.26,486.91,12.00;6,54.00,176.90,126.91,12.00;6,220.77,176.90,320.35,12.00;6,54.00,191.66,19.21,12.00"><s coords="6,71.90,103.70,469.18,12.00;6,54.00,118.34,72.26,12.00">Figure <ref type="figure" coords="6,108.95,103.70,6.08,12.00" target="#fig_4">4</ref> depicts the morphology obtained from scanning electron microscopy (SEM) for La0.7Pb0.3MnO3</s><s coords="6,128.54,118.34,201.72,12.00">with a magnification magnitude of 7000×.</s><s coords="6,332.54,118.34,208.66,12.00;6,54.00,132.98,43.04,12.00">Grains for the sample are irregular in shape and size.</s><s coords="6,100.39,132.98,440.59,12.00;6,54.00,147.62,487.23,12.00;6,54.00,162.26,65.39,12.00">The agglomeration of grains was conducted in the samples due to the grain quick rate of nucleation as the samples undergo calcination and the sintering process at a relatively high temperature.</s><s coords="6,122.35,162.26,418.56,12.00;6,54.00,176.90,171.51,12.00">The accumulation of grains happened because of the limited duration of proper grain dispersal from each other <ref type="bibr" coords="6,184.28,176.90,18.80,12.00" target="#b11">[12,</ref><ref type="bibr" coords="6,206.57,176.90,14.20,12.00" target="#b12">13]</ref>.</s><s coords="6,228.75,176.90,312.37,12.00;6,54.00,191.66,19.21,12.00">The average grain size obtained from the morphology was 2.13 μm.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3" coords="6,54.00,502.51,213.92,12.00">Fourier Transform Infrared Spectroscopy</head><p coords="6,71.90,531.94,30.43,12.00;6,113.05,531.94,428.46,12.00;6,54.00,546.58,130.68,12.00;6,184.70,545.59,6.60,8.04;6,193.85,546.58,54.46,12.00;6,248.33,545.59,6.60,8.04;6,257.45,546.58,283.74,12.00;6,54.00,561.22,463.00,12.00;6,517.42,560.23,6.60,8.04;6,527.38,561.22,14.11,12.00;6,54.00,575.86,487.33,12.00;6,54.00,590.50,487.15,12.00;6,54.00,605.14,487.40,12.00;6,54.00,619.78,487.23,12.00;6,54.00,634.42,487.25,12.00;6,107.71,649.06,333.98,12.00"><s coords="6,71.90,531.94,428.35,12.00">Figure <ref type="figure" coords="6,104.65,531.94,6.08,12.00" target="#fig_5">5</ref> illustrates the broad band of absorption using the FTIR spectra of La0.7Pb0.3MnO3</s><s coords="6,501.82,531.94,39.70,12.00;6,54.00,546.58,130.68,12.00;6,184.70,545.59,6.60,8.04;6,193.85,546.58,54.46,12.00;6,248.33,545.59,6.60,8.04;6,257.45,546.58,67.09,12.00">samples within the range of 400 cm -1 to 1200 cm -1 (wavelength).</s><s coords="6,327.00,546.58,214.19,12.00;6,54.00,561.22,243.01,12.00">The typical functional groups of the samples can be identified based on the absorption bands.</s><s coords="6,300.46,561.22,216.54,12.00;6,517.42,560.23,6.60,8.04;6,527.38,561.22,14.11,12.00;6,54.00,575.86,75.28,12.00">It reveals a significant absorption at 496 cm -1 for La0.7Pb0.3MnO3.</s><s coords="6,132.13,575.86,409.20,12.00;6,54.00,590.50,487.15,12.00;6,54.00,605.14,417.53,12.00">The obvious absorption band at the state wavelengths can be attributed to the high intensity stretching mode (νs) and can be further explained by internal manganese ion movement in respect of the MnO6 octahedron and being highly delicate towards Mn ̶ O bond length.</s><s coords="6,473.78,605.14,67.62,12.00;6,54.00,619.78,274.31,12.00">The structural refinement process may also contribute to the changes.</s><s coords="6,331.39,619.78,209.83,12.00;6,54.00,634.42,487.25,12.00;6,54.00,649.06,58.45,12.00">The metal oxide band obtained affirms the possibility of perovskite with the structure of ABO3 and corresponds with past studies on manganites <ref type="bibr" coords="6,54.00,649.06,18.96,12.00" target="#b13">[14,</ref><ref type="bibr" coords="6,75.62,649.06,15.24,12.00" target="#b14">15,</ref><ref type="bibr" coords="6,93.50,649.06,14.21,12.00" target="#b20">21]</ref>.</s><s coords="6,115.09,649.06,326.61,12.00">Thus, the spectra formed describe the formation of the LaPbMnO3.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4" coords="7,54.00,338.57,116.53,12.00">Magnetic Properties</head><p coords="7,71.90,367.99,469.49,12.00;7,54.00,382.63,175.28,12.00;7,241.66,382.63,299.34,12.00;7,54.00,397.27,487.27,12.00;7,54.00,411.91,487.35,12.00;7,54.00,426.55,487.00,12.00;7,54.00,441.19,332.67,12.00;7,393.89,441.19,147.60,12.00;7,54.00,455.83,487.04,12.00;7,54.00,470.47,487.21,12.00;7,54.00,485.11,328.76,12.00;7,422.77,485.11,118.23,12.00;7,54.00,499.75,51.85,12.00;7,105.98,498.76,8.08,8.04;7,114.02,499.75,295.63,12.00;7,409.87,498.76,7.96,8.04;7,417.79,499.75,21.28,12.00;7,439.15,498.76,8.08,8.04;7,450.46,499.75,64.21,12.00;7,514.78,498.76,8.08,8.04;7,526.06,499.75,15.30,12.00;7,54.00,514.39,119.00,12.00;7,194.78,514.39,346.50,12.00;7,54.00,529.06,310.27,12.00;7,403.12,529.06,138.22,12.00;7,54.00,543.70,14.25,12.00;7,68.30,550.24,47.31,4.56;7,116.90,543.70,97.79,12.00;7,222.73,543.70,318.22,12.00;7,54.00,558.46,487.08,12.00;7,54.00,573.10,487.41,12.00;7,54.00,587.74,487.23,12.00;7,54.00,602.38,487.41,12.00;7,54.00,617.02,25.27,12.00;7,100.08,617.02,4.51,12.00"><s coords="7,71.90,367.99,185.42,12.00">Magnetic properties of La0.7Pb0.3MnO3</s><s coords="7,259.49,367.99,281.90,12.00;7,54.00,382.63,141.77,12.00">were examined via the AC susceptibility measurement and magnetic hysteresis method.</s><s coords="7,198.85,382.63,342.14,12.00;7,54.00,397.27,368.13,12.00">Figure <ref type="figure" coords="7,232.31,382.63,6.08,12.00" target="#fig_6">6</ref> visualises the plots of the real part of AC susceptibility and χ' against temperature after normalisation for the sample La0.7Pb0.3MnO3.</s><s coords="7,427.74,397.27,113.53,12.00;7,54.00,411.91,487.35,12.00;7,54.00,426.55,9.26,12.00">The sample exhibits a transition from ferromagnetic (FM) to paramagnetic (PM) with a Curie temperature TC of around 298 K.</s><s coords="7,65.98,426.55,475.03,12.00;7,54.00,441.19,344.45,12.00">The determination of TC was performed by identifying the lowest point (minimum point) from the dχ'/dT versus the temperature curve, as shown in the inset of Figure <ref type="figure" coords="7,389.34,441.19,4.55,12.00" target="#fig_6">6</ref>.</s><s coords="7,401.10,441.19,140.39,12.00;7,54.00,455.83,377.93,12.00">Differences in A-site ions will modify the magnetic behaviour as well as transport properties of manganites.</s><s coords="7,434.56,455.83,106.49,12.00;7,54.00,470.47,487.21,12.00;7,54.00,485.11,373.48,12.00">Manganese ions were mainly in the 3+ state for LaMnO3 undoped manganite but the manganese ion displays the difference in valency of manganites after a specified concentration of doping <ref type="bibr" coords="7,386.22,485.11,18.91,12.00" target="#b15">[16,</ref><ref type="bibr" coords="7,408.63,485.11,14.14,12.00" target="#b16">17]</ref>.</s><s coords="7,431.05,485.11,109.96,12.00;7,54.00,499.75,51.85,12.00;7,105.98,498.76,8.08,8.04;7,114.02,499.75,295.63,12.00;7,409.87,498.76,7.96,8.04;7,417.79,499.75,21.28,12.00;7,439.15,498.76,8.08,8.04;7,450.46,499.75,23.06,12.00">The doping of cations, such as Pb 2+ , in the A-site of LaMnO3 will change the overall ratio of Mn 3+ /Mn 4+ ions.</s><s coords="7,476.84,499.75,37.84,12.00;7,514.78,498.76,8.08,8.04;7,526.06,499.75,15.30,12.00;7,54.00,514.39,145.32,12.00">The Mn 4+ ion concentration increased <ref type="bibr" coords="7,176.64,514.39,18.14,12.00" target="#b17">[18]</ref>.</s><s coords="7,202.88,514.39,338.40,12.00;7,54.00,529.06,353.83,12.00">The double-exchange mechanism will likely occur within the sample and directly contribute towards the high TC value of the sample <ref type="bibr" coords="7,367.17,529.06,18.91,12.00" target="#b18">[19,</ref><ref type="bibr" coords="7,388.98,529.06,14.14,12.00" target="#b19">20]</ref>.</s><s coords="7,410.83,529.06,130.51,12.00;7,54.00,543.70,14.25,12.00">The magnetic hysteresis of La0.</s><s coords="7,68.30,550.24,47.31,4.56;7,116.90,543.70,110.39,12.00">7Pb0.3MnO3 is depicted in Figure <ref type="figure" coords="7,218.18,543.70,4.55,12.00" target="#fig_7">7</ref>.</s><s coords="7,230.77,543.70,310.19,12.00;7,54.00,558.46,256.83,12.00">The sample exhibits ferromagnetic behaviour with a maximum magnetisation (moment mass) value of 37.27 emu/g.</s><s coords="7,313.19,558.46,227.89,12.00;7,54.00,573.10,270.64,12.00">The possible explanation for this behaviour can be attributed to the substitution of Pb 2+ into the A-site.</s><s coords="7,327.87,573.10,213.54,12.00;7,54.00,587.74,487.23,12.00;7,54.00,602.38,487.41,12.00;7,54.00,617.02,50.59,12.00">The substitution improves the Mn 3+ ̶ O ̶ Mn 4+ bond angle of LaMnO3, induces the overlap integral between Mn-3d and O-2p orbitals, and further encourages the electron exchange interaction to take place between the layers of the Mn 3+ ̶ O ̶ Mn 4+ bond <ref type="bibr" coords="7,82.06,617.02,18.03,12.00" target="#b20">[21]</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4." coords="8,54.00,607.06,71.08,12.00">Conclusions</head><p coords="8,71.90,636.34,469.49,12.00;8,54.00,650.98,487.00,12.00;8,54.00,665.64,487.40,12.00;8,54.00,680.28,487.33,12.00;8,54.00,694.92,486.94,12.00;8,54.00,709.56,487.14,12.00;8,54.00,724.20,266.10,12.00;8,320.47,723.21,8.04,8.04;8,332.83,724.20,208.54,12.00;8,54.00,738.84,487.39,12.00;8,54.00,753.48,487.08,12.00;9,54.00,74.42,167.39,12.00;9,221.57,73.43,8.08,8.04;9,229.61,74.42,36.42,12.00;9,266.09,73.43,8.08,8.04;9,280.01,74.42,261.31,12.00;9,54.00,89.06,205.53,12.00"><s coords="8,71.90,636.34,72.23,12.00">La0.7Pb0.3MnO3</s><s coords="8,147.74,636.34,372.00,12.00">was successfully synthesised through the conventional solid-state reaction.</s><s coords="8,523.31,636.34,18.08,12.00;8,54.00,650.98,464.39,12.00">The XRD results of the sample were thoroughly analysed through Rietveld refinement software.</s><s coords="8,522.91,650.98,18.08,12.00;8,54.00,665.64,337.17,12.00">The sample formed a rhombohedral structure with a space group of R-3c.</s><s coords="8,393.78,665.64,147.62,12.00;8,54.00,680.28,367.08,12.00">The tolerance factor value τ of the sample of 0.8720 indicated the presence of MnO6 octahedron distortion.</s><s coords="8,423.07,680.28,118.26,12.00;8,54.00,694.92,167.48,12.00">The crystalline size value obtained for the sample is 39 nm.</s><s coords="8,224.70,694.92,316.24,12.00;8,54.00,709.56,430.63,12.00">The morphology study on the sample indicates the formation of grains with various sizes and shapes and the occurrence of grain agglomerations.</s><s coords="8,490.71,709.56,50.44,12.00;8,54.00,724.20,266.10,12.00;8,320.47,723.21,8.04,8.04;8,332.83,724.20,186.17,12.00">Significant absorption bands from the FTIR spectrum at 496 cm -1 indicate the formation of LaPbMnO3.</s><s coords="8,523.29,724.20,18.08,12.00;8,54.00,738.84,72.26,12.00">The La0.7Pb0.3MnO3</s><s coords="8,132.86,738.84,408.53,12.00;8,54.00,753.48,182.46,12.00">sample transitions from PM to FM with a TC value of 298 K and maximum magnetisation value of 37.27 emu/g.</s><s coords="8,239.77,753.48,301.31,12.00;9,54.00,74.42,167.39,12.00;9,221.57,73.43,8.08,8.04;9,229.61,74.42,36.42,12.00;9,266.09,73.43,8.08,8.04;9,280.01,74.42,261.31,12.00;9,54.00,89.06,205.53,12.00">This magnetic behaviour verified that the doping of Pb alters the Mn-O bond length and Mn 3+ -O-Mn 4+ bond angle and leads to minimal MnO6 distortion consequently improve the DE mechanism.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="3,161.42,574.06,260.68,11.04;3,156.75,361.82,269.30,208.99"><head>Fig. 1 .</head><label>1</label><figDesc><div><p><s coords="3,161.42,574.06,26.94,11.04">Fig. 1.</s><s coords="3,190.85,574.06,196.63,11.04">Peaks obtained from XRD for La0.7Pb0.3MnO3</s><s coords="3,389.95,574.06,32.15,11.04">sample</s></p></div></figDesc><graphic coords="3,156.75,361.82,269.30,208.99" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="4,167.30,588.10,262.35,11.04;4,167.30,601.54,262.33,11.04;4,167.30,614.98,262.24,11.04;4,167.30,628.42,225.90,11.04;4,168.40,390.88,257.39,194.45"><head>Fig. 2 .</head><label>2</label><figDesc><div><p><s coords="4,167.30,588.10,224.63,11.04">Fig. 2. The Rietveld refinement for La0.7Pb0.3MnO3</s><s coords="4,394.72,588.10,34.93,11.04">sample.</s><s coords="4,167.30,601.54,262.33,11.04;4,167.30,614.98,262.24,11.04;4,167.30,628.42,225.90,11.04">The black line indicates the observed data, the solid red line indicates calculated patterns, the blue line indicates the differences between observed and calculated data</s></p></div></figDesc><graphic coords="4,168.40,390.88,257.39,194.45" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="5,153.14,373.99,283.74,11.04;5,153.14,387.43,283.45,11.04;5,153.14,400.87,283.44,11.04;5,153.14,414.31,283.76,11.04;5,153.14,427.75,71.24,11.04;5,154.63,205.08,285.55,154.00"><head>Fig. 3 .</head><label>3</label><figDesc><div><p><s coords="5,153.14,373.99,242.02,11.04">Fig. 3. (a) MnO6 octahedral structure of La0.7Pb0.3MnO3</s><s coords="5,396.67,373.99,40.21,11.04;5,153.14,387.43,120.28,11.04">obtained from the VESTA software.</s><s coords="5,277.62,387.43,158.98,11.04;5,153.14,400.87,283.44,11.04;5,153.14,414.31,98.85,11.04">Green indicates the La atom, gray indicates the Pb atom, purple indicates the Mn atom and red indicates the O atom.</s><s coords="5,255.44,414.31,80.92,11.04">(b) La0.7Pb0.3MnO3</s><s coords="5,338.47,414.31,98.43,11.04;5,153.14,427.75,71.24,11.04">structure visualises in polyhedral style</s></p></div></figDesc><graphic coords="5,154.63,205.08,285.55,154.00" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="6,146.06,460.75,282.42,11.04;6,146.06,474.19,148.16,11.04;6,147.15,218.48,300.47,240.10"><head>Fig. 4 .</head><label>4</label><figDesc><div><p><s coords="6,146.06,460.75,268.42,11.04">Fig. 4. The micrograph obtained from SEM of La0.7Pb0.3MnO3</s><s coords="6,415.99,460.75,12.49,11.04;6,146.06,474.19,148.16,11.04">(b) The EDX result for La0.7Pb0.3MnO3</s></p></div></figDesc><graphic coords="6,147.15,218.48,300.47,240.10" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="7,145.82,310.25,303.40,11.04;7,127.15,72.00,340.25,236.10"><head>Fig. 5 .</head><label>5</label><figDesc><div><p><s coords="7,145.82,310.25,26.94,11.04">Fig. 5.</s><s coords="7,175.34,310.25,240.10,11.04">The FTIR absorption band obtained for La0.7Pb0.3MnO3</s><s coords="7,416.95,310.25,32.27,11.04">sample</s></p></div></figDesc><graphic coords="7,127.15,72.00,340.25,236.10" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6" coords="8,139.22,310.25,319.00,11.04;8,139.22,323.57,116.42,11.04;8,135.52,72.00,329.80,235.97"><head>Fig. 6 .</head><label>6</label><figDesc><div><p><s coords="8,139.22,310.25,26.94,11.04">Fig. 6.</s><s coords="8,168.74,310.25,289.48,11.04;8,139.22,323.57,82.64,11.04">The plot of Temperature-dependent real AC susceptibility (χ') for the La0.7Pb0.3MnO3</s><s coords="8,223.37,323.57,32.27,11.04">sample</s></p></div></figDesc><graphic coords="8,135.52,72.00,329.80,235.97" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7" coords="8,124.94,565.30,350.27,11.04;8,124.94,578.62,99.86,11.04;8,116.15,349.75,362.46,212.35"><head>Fig. 7 .</head><label>7</label><figDesc><div><p><s coords="8,124.94,565.30,26.94,11.04">Fig. 7.</s><s coords="8,154.46,565.30,320.75,11.04;8,124.94,578.62,65.09,11.04">The plot of magnetization as a function of applied magnetic field for the La0.7Pb0.3MnO3</s><s coords="8,192.53,578.62,32.27,11.04">sample</s></p></div></figDesc><graphic coords="8,116.15,349.75,362.46,212.35" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" coords="4,167.42,118.10,260.20,257.54"><head>Table 1</head><label>1</label><figDesc><div><p><s coords="4,167.42,131.54,226.42,11.04">Rietveld refinement parameters for La0.7Pb0.3MnO3</s><s coords="4,395.35,131.54,32.27,11.04">sample</s></p></div></figDesc><table coords="4,172.10,145.43,228.44,230.21"><row><cell>General Information</cell><cell/></row><row><cell>Space group</cell><cell>R-3c</cell></row><row><cell>Symmetry</cell><cell>2</cell></row><row><cell>Lattice Parameters</cell><cell/></row><row><cell>a(Å)</cell><cell>5.5333</cell></row><row><cell>b(Å)</cell><cell>5.5333</cell></row><row><cell>c(Å)</cell><cell>13.3943</cell></row><row><cell>α</cell><cell>90.00</cell></row><row><cell>β</cell><cell>90.00</cell></row><row><cell>γ</cell><cell>120.00</cell></row><row><cell>Unit cell volume, V (A 3 )</cell><cell>355.167</cell></row><row><cell>Mn-O bond distance (Å)</cell><cell>1.9612(8)</cell></row><row><cell>Mn 3+ -O-Mn 4+ bond angle (°)</cell><cell>167.1(4)</cell></row><row><cell>Fit of goodness</cell><cell/></row><row><cell>χ 2</cell><cell>5.019</cell></row><row><cell>Rp (%)</cell><cell>5.81</cell></row><row><cell>Rwp (%)</cell><cell>8.57</cell></row><row><cell>τ</cell><cell>0.8720</cell></row><row><cell>Crystalline size, D (nm)</cell><cell>39</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head coords="9,54.00,118.34,93.37,12.00">Acknowledgement</head><p coords="9,54.00,132.98,487.41,12.00;9,54.00,147.62,487.34,12.00;9,54.00,162.26,487.08,12.00;9,54.00,176.90,302.69,12.00"><s coords="9,54.00,132.98,487.41,12.00;9,54.00,147.62,487.34,12.00;9,54.00,162.26,57.59,12.00">This research was funded by a <rs type="funder">Ministry of Higher Education Malaysia (MOHE)</rs>, grant number <rs type="grantNumber">FRGS/1/2019/STG07/UITM/02/3</rs> and <rs type="funder">Universiti Teknologi MARA</rs>, grant number <rs type="grantNumber">600-IRMI/FRGS 5/3 (311/2019</rs>).</s><s coords="9,116.35,162.26,424.73,12.00;9,54.00,176.90,302.69,12.00">The APC was funded by <rs type="funder">Research Management Centre</rs>, <rs type="person">University Teknologi MARA</rs> under <rs type="person">Pembiayaan Yuran Penerbitan Artikel</rs> berindeks (PYPA).</s></p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_Ez7xW35">
+					<idno type="grant-number">FRGS/1/2019/STG07/UITM/02/3</idno>
+				</org>
+				<org type="funding" xml:id="_NdmuuM5">
+					<idno type="grant-number">600-IRMI/FRGS 5/3 (311/2019</idno>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Colossal magnetoresistant materials: the key role of phase separation</title>
+		<author>
+			<persName><forename type="first">Elbio</forename><surname>Dagotto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Takashi</forename><surname>Hotta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adriana</forename><surname>Moreo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0370-1573(00)00121-6</idno>
+		<ptr target="https://doi.org/10.1016/S0370-1573(00)00121-6"/>
+	</analytic>
+	<monogr>
+		<title level="j">Physics reports</title>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="issue">1-3</biblScope>
+			<biblScope unit="page" from="1" to="153"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Dagotto, Elbio, Takashi Hotta, and Adriana Moreo. "Colossal magnetoresistant materials: the key role of phase separation." Physics reports 344, no. 1-3 (2001): 1-153. https://doi.org/10.1016/S0370-1573(00)00121-6</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Synthesis and magnetic characterization of LaMnO3 nanoparticles</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hernández</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sagredo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Delgado</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Revista mexicana de física</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="166" to="169"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hernández, E., V. Sagredo, and G. E. Delgado. "Synthesis and magnetic characterization of LaMnO3 nanoparticles." Revista mexicana de física 61, no. 3 (2015): 166-169.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">MnO3: an ideal ferromagnetic system?</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Kunkel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Z</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Roshko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gwyn</forename><surname>Williams</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/0953-8984/12/30/318</idno>
+		<idno>La0. 95Mg0. 05</idno>
+		<ptr target="https://doi.org/10.1088/0953-8984/12/30/318"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Physics: Condensed Matter</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">30</biblScope>
+			<biblScope unit="page">6903</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Zhao, J. H., T. Song, H. P. Kunkel, X. Z. Zhou, R. M. Roshko, and Gwyn Williams. "La0. 95Mg0. 05MnO3: an ideal ferromagnetic system?" Journal of Physics: Condensed Matter 12, no. 30 (2000): 6903. https://doi.org/10.1088/0953-8984/12/30/318</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Effect of divalent Ions (A= Ca, Ba and Sr) substitution in La-A-Mn-O manganite on structural, magnetic and electrical transport properties</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Halim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Wong</surname></persName>
+		</author>
+		<idno type="DOI">10.3844/ajassp.2009.1153.1157</idno>
+		<ptr target="https://doi.org/10.3844/ajassp.2009.1153.1157"/>
+	</analytic>
+	<monogr>
+		<title level="j">American Journal of Applied Sciences</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">1153</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lim, K. P., S. W. Ng, S. A. Halim, S. K. Chen, and J. K. Wong. "Effect of divalent Ions (A= Ca, Ba and Sr) substitution in La-A-Mn-O manganite on structural, magnetic and electrical transport properties." American Journal of Applied Sciences 6, no. 6 (2009): 1153. https://doi.org/10.3844/ajassp.2009.1153.1157</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Effects of Bi substitution on magnetic and transport properties of La 0.7-x Bi x Ag 0.3 MnO 3 ceramics</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Ghani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Yahya</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10948-012-1617-y</idno>
+		<ptr target="https://doi.org/10.1007/s10948-012-1617-y"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of superconductivity and novel magnetism</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="2395" to="2402"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ghani, M. A., Z. Mohamed, and A. K. Yahya. "Effects of Bi substitution on magnetic and transport properties of La 0.7-x Bi x Ag 0.3 MnO 3 ceramics." Journal of superconductivity and novel magnetism 25 (2012): 2395-2402. https://doi.org/10.1007/s10948-012-1617-y</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Magnetic inhomogeneity and Griffiths phase in Bi substituted La0. 65-xBixCa0. 35MnO3 manganites</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">O</forename><surname>Manjunatha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ashok Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Poornesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y-K</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kuo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.physb.2016.06.031</idno>
+		<ptr target="https://doi.org/10.1016/j.physb.2016.06.031"/>
+	</analytic>
+	<monogr>
+		<title level="j">Physica B: Condensed Matter</title>
+		<imprint>
+			<biblScope unit="volume">498</biblScope>
+			<biblScope unit="page" from="82" to="91"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Manjunatha, S. O., Ashok Rao, P. Poornesh, W. J. Lin, and Y-K. Kuo. "Magnetic inhomogeneity and Griffiths phase in Bi substituted La0. 65-xBixCa0. 35MnO3 manganites." Physica B: Condensed Matter 498 (2016): 82-91. https://doi.org/10.1016/j.physb.2016.06.031</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Nanoparticles Nearly Freestanding in Water: Preparation and Magnetic Properties</title>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dairong</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiuling</forename><surname>Jiao</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm0622349</idno>
+		<ptr target="https://doi.org/10.1021/cm0622349"/>
+	</analytic>
+	<monogr>
+		<title level="j">Chemistry of materials</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">26</biblScope>
+			<biblScope unit="page" from="6088" to="6090"/>
+			<date type="published" when="2006-07-00">x= 0, 0.3, 0.5, 0.7. 2006</date>
+		</imprint>
+	</monogr>
+	<note>La1-x Sr x MnO</note>
+	<note type="raw_reference">Tian, Yang, Dairong Chen, and Xiuling Jiao. "La1-x Sr x MnO3 (x= 0, 0.3, 0.5, 0.7) Nanoparticles Nearly Freestanding in Water: Preparation and Magnetic Properties." Chemistry of materials 18, no. 26 (2006): 6088-6090. https://doi.org/10.1021/cm0622349</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Polaron hopping conduction mechanism and magnetic properties of Pb-doped LaMnO3</title>
+		<author>
+			<persName><forename type="first">Faraz</forename><forename type="middle">A</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Arshad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abushad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Swaleha</forename><surname>Naseem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hilal</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Azizurrahaman</forename><surname>Ansari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vishal</forename><surname>Kumar Chakradhary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shahid</forename><surname>Husain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wasi</forename><surname>Khan</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/jace.18061</idno>
+		<ptr target="https://doi.org/10.1111/jace.18061"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Ceramic Society</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="348" to="361"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Khan, Faraz A., M. Arshad, M. Abushad, Swaleha Naseem, Hilal Ahmed, Azizurrahaman Ansari, Vishal Kumar Chakradhary, Shahid Husain, and Wasi Khan. "Polaron hopping conduction mechanism and magnetic properties of Pb-doped LaMnO3." Journal of the American Ceramic Society 105, no. 1 (2022): 348-361. https://doi.org/10.1111/jace.18061</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">X-ray peak broadening analysis in LaMnO3+ δ nano-particles with rhombohedral crystal structure</title>
+		<author>
+			<persName><forename type="first">Ahmad</forename><surname>Gholizadeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Advanced Materials and Processing</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="71" to="83"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Gholizadeh, Ahmad. "X-ray peak broadening analysis in LaMnO3+ δ nano-particles with rhombohedral crystal structure." Journal of Advanced Materials and Processing 3, no. 3 (2015): 71-83.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Influence of distortions and tolerance factor on the structure of ABO3 type perovskites and complex perovskites</title>
+		<author>
+			<persName><forename type="first">Ch</forename><surname>Devi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sameera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Omprakash</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rajani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Malathi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Prasad</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/00150193.2019.1684759</idno>
+		<ptr target="https://doi.org/10.1080/00150193.2019.1684759"/>
+	</analytic>
+	<monogr>
+		<title level="j">Ferroelectrics</title>
+		<imprint>
+			<biblScope unit="volume">554</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="172" to="186"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Devi, Ch Sameera, J. Omprakash, A. Rajani Malathi, G. S. Kumar, and G. Prasad. "Influence of distortions and tolerance factor on the structure of ABO3 type perovskites and complex perovskites." Ferroelectrics 554, no. 1 (2020): 172-186. https://doi.org/10.1080/00150193.2019.1684759</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Synthesis and Characterization of Sn/Ag Nanoparticle Composite as Electro-Catalyst for Fuel Cell</title>
+		<author>
+			<persName><forename type="first">Tan</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siti</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohd</forename><surname>Husnaa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pooria</forename><surname>Taib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mikio</forename><surname>Moozarm Nia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kamyar</forename><surname>Miyake</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Shameli</surname></persName>
+		</author>
+		<idno type="DOI">10.37934/jrnn.1.1.1221</idno>
+		<ptr target="https://doi.org/10.37934/jrnn.1.1.1221"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Research in Nanoscience and Nanotechnology</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="12" to="21"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Kang, Tan Wei, Siti Husnaa Mohd Taib, Pooria Moozarm Nia, Mikio Miyake, and Kamyar Shameli. "Synthesis and Characterization of Sn/Ag Nanoparticle Composite as Electro-Catalyst for Fuel Cell." Journal of Research in Nanoscience and Nanotechnology 1, no. 1 (2021): 12-21. https://doi.org/10.37934/jrnn.1.1.1221</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Dielectric, AC Conductivity, and DC Conductivity Behaviours of Sr2CaTeO6 Double Perovskite</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Z</forename><surname>Halizan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Mohamed</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/ma15124363</idno>
+		<ptr target="https://doi.org/10.3390/ma15124363"/>
+	</analytic>
+	<monogr>
+		<title level="j">Materials</title>
+		<imprint>
+			<biblScope unit="volume">2022</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Halizan, M. Z., and Z. Mohamed. "Dielectric, AC Conductivity, and DC Conductivity Behaviours of Sr2CaTeO6 Double Perovskite. Materials 2022, 15, 4363." (2022). https://doi.org/10.3390/ma15124363</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The agglomeration, coalescence and sliding of nanoparticles, leading to the rapid sintering of zirconia nanoceramics</title>
+		<author>
+			<persName><forename type="first">Andraž</forename><surname>Kocjan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manca</forename><surname>Logar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhijian</forename><surname>Shen</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-017-02760-7</idno>
+		<ptr target="https://doi.org/10.1038/s41598-017-02760-7"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">2541</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Kocjan, Andraž, Manca Logar, and Zhijian Shen. "The agglomeration, coalescence and sliding of nanoparticles, leading to the rapid sintering of zirconia nanoceramics." Scientific Reports 7, no. 1 (2017): 2541. https://doi.org/10.1038/s41598-017-02760-7</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Synthesis and evaluation of Fe-doped zinc oxide photocatalyst for methylene blue and congo red removal</title>
+		<author>
+			<persName><forename type="first">Kingsly</forename><forename type="middle">Tian</forename><surname>Cheah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><forename type="middle">Yao</forename><surname>Chee</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sum</surname></persName>
+		</author>
+		<idno type="DOI">10.37934/progee.22.1.1328</idno>
+		<ptr target="https://doi.org/10.37934/progee.22.1.1328"/>
+	</analytic>
+	<monogr>
+		<title level="j">Progress in Energy and Environment</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="13" to="28"/>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Cheah, Kingsly Tian Chee, and Jing Yao Sum. "Synthesis and evaluation of Fe-doped zinc oxide photocatalyst for methylene blue and congo red removal." Progress in Energy and Environment 22 (2022): 13-28. https://doi.org/10.37934/progee.22.1.1328</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Study of structural, dielectric and optical properties of NdMnO3</title>
+		<author>
+			<persName><forename type="first">Anand</forename><surname>Somvanshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shahid</forename><surname>Husain</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5032577</idno>
+		<ptr target="https://doi.org/10.1063/1.5032577"/>
+	</analytic>
+	<monogr>
+		<title level="m">AIP Conference Proceedings</title>
+		<imprint>
+			<publisher>AIP Publishing LLC</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1953</biblScope>
+			<biblScope unit="page">30242</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Somvanshi, Anand, and Shahid Husain. "Study of structural, dielectric and optical properties of NdMnO3." In AIP Conference Proceedings, vol. 1953, no. 1, p. 030242. AIP Publishing LLC, 2018. https://doi.org/10.1063/1.5032577</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A study on structural and physical properties of NdMnO3 and Nd0. 7Ag0. 3MnO3</title>
+		<author>
+			<persName><forename type="first">Nurul</forename><surname>Azhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Umirah</forename><surname>Atiqah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nur</forename><surname>Rashidah Rosli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Azhan</forename><surname>Baizura Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zakiah</forename><surname>Hashim</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mohamed</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/5.0058036</idno>
+		<ptr target="https://doi.org/10.1063/5.0058036"/>
+	</analytic>
+	<monogr>
+		<title level="m">AIP Conference Proceedings</title>
+		<imprint>
+			<publisher>AIP Publishing LLC</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">2368</biblScope>
+			<biblScope unit="page">30007</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Azhar, Nurul Atiqah, Umirah Rashidah Rosli, Nur Baizura Mohamed, Azhan Hashim, and Zakiah Mohamed. "A study on structural and physical properties of NdMnO3 and Nd0. 7Ag0. 3MnO3." In AIP Conference Proceedings, vol. 2368, no. 1, p. 030007. AIP Publishing LLC, 2021. https://doi.org/10.1063/5.0058036</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Electrical and magnetic properties of La1-xSrxMnO3 (0.1≤ x≤ 0.25) ceramics prepared by sol-gel technique</title>
+		<author>
+			<persName><forename type="first">Yule</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qingming</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qinghua</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ceramint.2019.05.159</idno>
+		<ptr target="https://doi.org/10.1016/j.ceramint.2019.05.159"/>
+	</analytic>
+	<monogr>
+		<title level="j">Ceramics International</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="16323" to="16330"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Li, Yule, Hui Zhang, Xiang Liu, Qingming Chen, and Qinghua Chen. "Electrical and magnetic properties of La1- xSrxMnO3 (0.1≤ x≤ 0.25) ceramics prepared by sol-gel technique." Ceramics International 45, no. 13 (2019): 16323- 16330. https://doi.org/10.1016/j.ceramint.2019.05.159</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Effect of Pb2+ substitution at A-site on structural and magnetic properties of LaMnO3</title>
+		<author>
+			<persName><forename type="first">Sunil</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jaswinder</forename><surname>Pal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Shubhpreet Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mandeep</forename><surname>Agrawal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anupinder</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Singh</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5033095</idno>
+		<ptr target="https://doi.org/10.1063/1.5033095"/>
+	</analytic>
+	<monogr>
+		<title level="m">AIP Conference proceedings</title>
+		<imprint>
+			<publisher>AIP Publishing LLC</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1953</biblScope>
+			<biblScope unit="page">120030</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Kumar, Sunil, Jaswinder Pal, Shubhpreet Kaur, P. Agrawal, Mandeep Singh, and Anupinder Singh. "Effect of Pb2+ substitution at A-site on structural and magnetic properties of LaMnO3." In AIP Conference proceedings, vol. 1953, no. 1, p. 120030. AIP Publishing LLC, 2018. https://doi.org/10.1063/1.5033095</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Effect of Asite substitution by Ca or Sr on the structure and electrochemical performance of LaMnO3 perovskite</title>
+		<author>
+			<persName><forename type="first">Pian</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Pian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ling</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Na</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yong</forename><forename type="middle">Kun</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shu</forename><surname>Hong Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guo Hua</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.electacta.2019.135489</idno>
+		<ptr target="https://doi.org/10.1016/j.electacta.2019.135489"/>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochimica Acta</title>
+		<imprint>
+			<biblScope unit="volume">332</biblScope>
+			<biblScope unit="page">135489</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ma, Pian Pian, Qiu Ling Lu, Na Lei, Yong Kun Liu, Bo Yu, Jian Ming Dai, Shu Hong Li, and Guo Hua Jiang. "Effect of A- site substitution by Ca or Sr on the structure and electrochemical performance of LaMnO3 perovskite." Electrochimica Acta 332 (2020): 135489. https://doi.org/10.1016/j.electacta.2019.135489</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Influence of ruthenium doping on the crystal structure and magnetic properties of Pr0. 67Ba0. 33Mn1-xRuxO3 manganites</title>
+		<author>
+			<persName><forename type="first">Zakiah</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Intan</forename><surname>Syazwani Shahron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Norazila</forename><surname>Ibrahim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohd</forename><surname>Fauzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maulud</forename></persName>
+		</author>
+		<idno type="DOI">10.3390/cryst10040295</idno>
+		<ptr target="https://doi.org/10.3390/cryst10040295"/>
+	</analytic>
+	<monogr>
+		<title level="j">Crystals</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">295</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Mohamed, Zakiah, Intan Syazwani Shahron, Norazila Ibrahim, and Mohd Fauzi Maulud. "Influence of ruthenium doping on the crystal structure and magnetic properties of Pr0. 67Ba0. 33Mn1-xRuxO3 manganites." Crystals 10, no. 4 (2020): 295. https://doi.org/10.3390/cryst10040295</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Effect of Ag substitution on the electromagnetic property and microwave absorption of LaMnO3</title>
+		<author>
+			<persName><forename type="first">Shengxiang</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lianwen</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kesheng</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhaowen</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuyuan</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuanwei</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Xiao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jmmm.2012.05.024</idno>
+		<ptr target="https://doi.org/10.1016/j.jmmm.2012.05.024"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of magnetism and magnetic materials</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="issue">19</biblScope>
+			<biblScope unit="page" from="3149" to="3153"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Huang, Shengxiang, Lianwen Deng, Kesheng Zhou, Zhaowen Hu, Shuyuan Sun, Yuanwei Ma, and Peng Xiao. "Effect of Ag substitution on the electromagnetic property and microwave absorption of LaMnO3." Journal of magnetism and magnetic materials 324, no. 19 (2012): 3149-3153. https://doi.org/10.1016/j.jmmm.2012.05.024</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

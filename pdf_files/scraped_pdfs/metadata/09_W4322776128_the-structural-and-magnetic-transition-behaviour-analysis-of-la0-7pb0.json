@@ -1,0 +1,46 @@
+{
+  "authors": [
+    "M.A.I. Zainuddin",
+    "Adlin Abdul Rahim",
+    "Zakiah Mohamed"
+  ],
+  "cited_by_count": 2,
+  "doi": "10.37934/araset.29.9.8796",
+  "download": {
+    "content_type": "application/pdf",
+    "output_path": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/09_W4322776128_the-structural-and-magnetic-transition-behaviour-analysis-of-la0-7pb0.pdf",
+    "page_count": 10,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/download/1429/1014",
+    "resolved_url": "https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/download/1429/1014",
+    "retrieved_at": "2026-06-17T23:47:49.684047+00:00",
+    "sha256": "c4b6f74fa2f16ae2bb25fdbfd8f5f3c694e126611cd29eb8ec6ee23f09a7bb36",
+    "size_bytes": 689560
+  },
+  "journal": "Journal of Advanced Research in Applied Sciences and Engineering Technology",
+  "language": "en",
+  "matched_query": "\"ABO3-type\" diffraction",
+  "material_score": 35,
+  "open_access": {
+    "any_repository_has_fulltext": false,
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/download/1429/1014"
+  },
+  "openalex_id": "W4322776128",
+  "paper_id": "doi:10.37934/araset.29.9.8796",
+  "parser": null,
+  "pdf_source": {
+    "host_type": null,
+    "landing_page_url": "http://dx.doi.org/10.37934/araset.29.9.8796",
+    "license": "cc-by-nc",
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/download/1429/1014",
+    "version": "publishedVersion"
+  },
+  "publication_date": "2023-02-08",
+  "publication_year": 2023,
+  "relevance_score": 88,
+  "title": "The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites",
+  "xrd_score": 53
+}

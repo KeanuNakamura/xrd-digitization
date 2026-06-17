@@ -1,0 +1,2788 @@
+{
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/05_W1999730932_crystallographic-and-magnetic-structure-of-the-perovskite-type-compoun.pdf",
+  "source_sha256": "c0827f4fab06dc6dfedb96bbac2dad04d41e40512fcde509c2f5a2b810b377a1",
+  "metadata": {
+    "title": "Crystallographic and Magnetic Structure of the Perovskite-Type Compound BaFeO<sub>2.5</sub>: Unrivaled Complexity in Oxygen Vacancy Ordering",
+    "doi": "10.1021/ic402988y",
+    "abstract": "We report here on the characterisation of the vacancy ordered perovskite-type structure of BaFeO 2.5 by means of combined Rietveld analysis of X-ray-and neutronpowder diffraction data. The compound crystallizes in the monoclinic space group P2 1 /c (a = 6.9753(1) Å, b = 11.7281(2) Å, c = 23.4507(4) Å, β = 98.813(1) °, Z = 28) containing seven crystallographically different iron atoms. The coordination scheme is determined to be Ba",
+    "journal": "Inorganic Chemistry",
+    "publication_date": "2014-06-05",
+    "authors": [
+      {
+        "given_name": "Oliver",
+        "middle_name": null,
+        "surname": "Clemens",
+        "email": "oliver.clemens@kit.edu",
+        "affiliation": "b ) KIT, Institute of Nanotechnology , Hermann-von-Helmholtz-Platz 1 , 76344 Eggenstein-Leopoldshafen , Germany. Institute of Nanotechnology Hermann-von-Helmholtz-Platz 1 76344 Eggenstein-Leopoldshafen Germany",
+        "orcid": null
+      },
+      {
+        "given_name": "Melanie",
+        "middle_name": null,
+        "surname": "Gröting",
+        "email": null,
+        "affiliation": "c ) Fachgebiet Materialmodellierung , Technische Universität Darmstadt , Jovanka- Bontschits-Straße 2 , 64287 Darmstadt , Germany Fachgebiet Materialmodellierung Technische Universität Darmstadt Jovanka- Bontschits-Straße 2 64287 Darmstadt Germany",
+        "orcid": null
+      },
+      {
+        "given_name": "Ralf",
+        "middle_name": null,
+        "surname": "Witte",
+        "email": null,
+        "affiliation": "b ) KIT, Institute of Nanotechnology , Hermann-von-Helmholtz-Platz 1 , 76344 Eggenstein-Leopoldshafen , Germany. Institute of Nanotechnology Hermann-von-Helmholtz-Platz 1 76344 Eggenstein-Leopoldshafen Germany",
+        "orcid": null
+      },
+      {
+        "given_name": "J",
+        "middle_name": "Manuel",
+        "surname": "Perez-Mato",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "Christoph",
+        "middle_name": null,
+        "surname": "Loho",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "Frank",
+        "middle_name": "J",
+        "surname": "Berry",
+        "email": null,
+        "affiliation": "f ) School of Chemistry , The University of Birmingham , Birmingham B15 2TT , United Kingdom. School of Chemistry The University of Birmingham B15 2TT Birmingham United Kingdom",
+        "orcid": null
+      },
+      {
+        "given_name": "Robert",
+        "middle_name": null,
+        "surname": "Kruk",
+        "email": null,
+        "affiliation": "b ) KIT, Institute of Nanotechnology , Hermann-von-Helmholtz-Platz 1 , 76344 Eggenstein-Leopoldshafen , Germany. Institute of Nanotechnology Hermann-von-Helmholtz-Platz 1 76344 Eggenstein-Leopoldshafen Germany",
+        "orcid": null
+      },
+      {
+        "given_name": "Kevin",
+        "middle_name": "S",
+        "surname": "Knight",
+        "email": null,
+        "affiliation": "e ) ISIS Facility , Rutherford Appleton Laboratory , Harwell Oxford , Didcot , OX11 0QX , United Kingdom. Appleton Laboratory ISIS Facility Harwell Oxford OX11 0QX Rutherford Didcot United Kingdom",
+        "orcid": null
+      },
+      {
+        "given_name": "Adrian",
+        "middle_name": "J",
+        "surname": "Wright",
+        "email": null,
+        "affiliation": "f ) School of Chemistry , The University of Birmingham , Birmingham B15 2TT , United Kingdom. School of Chemistry The University of Birmingham B15 2TT Birmingham United Kingdom",
+        "orcid": null
+      },
+      {
+        "given_name": "Horst",
+        "middle_name": null,
+        "surname": "Hahn",
+        "email": null,
+        "affiliation": "b ) KIT, Institute of Nanotechnology , Hermann-von-Helmholtz-Platz 1 , 76344 Eggenstein-Leopoldshafen , Germany. Institute of Nanotechnology Hermann-von-Helmholtz-Platz 1 76344 Eggenstein-Leopoldshafen Germany",
+        "orcid": null
+      },
+      {
+        "given_name": "Peter",
+        "middle_name": "R",
+        "surname": "Slater",
+        "email": null,
+        "affiliation": "f ) School of Chemistry , The University of Birmingham , Birmingham B15 2TT , United Kingdom. School of Chemistry The University of Birmingham B15 2TT Birmingham United Kingdom",
+        "orcid": null
+      }
+    ],
+    "keywords": [
+      "Neutron Powder Diffraction",
+      "X-ray Powder Diffraction",
+      "BaFeO 2.5",
+      "Ba 2 Fe 2 O 5",
+      "Magnetic Structure Determination",
+      "Mössbauer spectroscopy",
+      "DFT calculations"
+    ]
+  },
+  "sections": [
+    {
+      "section_id": "section_a5717ab81d52",
+      "title": "Introduction",
+      "path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_1749b9cc3dc5",
+          "text": "Perovskite-type compounds have many applications, ranging from electrode materials in solid oxide fuel cells (e. g. La 1-x Sr x CoO 3-d 1 and La 1-x Sr x FeO 3-d 2, 3",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_dcdf8cab0817",
+          "text": "), ferroelectrics (e. g. BaTiO 3 4 ), multiferroics (e. g. BiFeO 3 , Bi 1-x A x FeO 3d , A = Ba, Sr, Ca, Pb [5] [6] [7] [8] [9] [10] [11] ) to materials with interesting magnetic properties (e. g. ferromagnetic BaFeO 3 12 (by oxidation of BaFeO 2.5 using O 3 ) as compared with antiferromagnetic BaFeO 2 F compounds [13] [14] [15] ). The possibility of vacancies on the anion sublattice gives rise to many of the properties of such compounds, including ionic (anionic) conductivity (facilitated by anion vacancies) and electronic conductivity (due to mixed valence) and magnetic order which is often promoted via superexchange interactions via the anions. In addition, ordering of vacancies can give rise to polar crystal structures (polar space group Ima2), as for example often found in brownmillerite type compounds ABO 2.5 (or alternatively written as A 2 B 2 O 5, and named after the mineral brownmillerite, Ca 2 Fe [6] Al [4] O 5 16 , [6 and 4] = coordination number).",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_35fd0cd12611",
+          "text": "Vacancy ordering for ABO 2.5 \"cubic perovskite\" type compounds (i. e. ccp arrangement of the AO 3 layers) is most often achieved by adopting this brownmillerite structure. The symmetry relationship between the cubic perovskite and brownmillerite can be well understood in terms of group-subgroup relationships (e. g. 17 ). In the brownmillerite-type structure, the B site cation is found in octahedral and tetrahedral coordination (ratio 1:1, with layered ordering of the differently coordinated B-site ions)",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_002d35355aa1",
+          "text": "and the structure can be found in a large variety of compounds, including SrFeO 2.5 pyramidal coordination of the B-site cations 23, 24 . Since such anion deficient perovskites are of interest for a wide range of applications, the clarification of the different types of anion vacancy ordering is important, since even for systems which appear cubic by diffraction techniques, local vacancy ordering may occur.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_deb379f8be7b",
+          "text": "The anion deficient phase BaFeO 2.5 is the subject of investigation in this work, and is important because it has been reported to adopt a different vacancy ordered \"cubic perovskite\" type modification, the nature of which is currently not fully understood.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_e5eed0ae10b4",
+          "text": "Initial structural investigations 25 on this compound have been shown to be incorrect and a variety of techniques (among them Mössbauer spectroscopy, HREM, CIP [26] [27] [28] have subsequently been used to investigate the crystallographic structure of BaFeO 2.5 . Using electron diffraction, Parras et al. 26, 27 managed to index their data in the monoclinic space group P2 1 /c, with lattice parameters of a = 7.05(1) Å, b = 11.71(1) Å, c = 23.40(1) Å, β = 98.3(1)° with 28 formula units of BaFeO 2.5 per unit cell. Mössbauer spectroscopy data 27 were interpreted in terms of the structure which was assumed to contain seven crystallographically different Fe 3+ ions resulting in a coordination scheme of Ba 7 Fe [6] 3 Fe [5] 1 Fe [4] 3 O 17.5 and which, in principal, is in agreement with a general site multiplicity of 4 for P2 1 /c. Attempts to investigate the explicit order of vacancies were performed by HREM and CIP experiments 28 and helped to reveal a general pattern for this ordering. Howeve , the reported structure was described in such a way that all the atoms were located on \"ideal sites\" derived from the cubic prototype, leaving out distinct oxygen ions without allowing shifts from the ideal positions.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 1.6,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_de64ff97033e",
+          "text": "In their article from 1990, Parras et al. observed that \"In any case neutron diffraction experiments are highly necessary\" 27 . In this article, we describe a detailed investigation of the crystallographic structure by means of a coupled Rietveld analysis of X-ray-and neutron-powder diffraction data, to clarify the real vacancy ordering and resulting iron coordination geometries for this compound, and we also interpret our Mössbauer spectroscopy data by comparison with that reported previously 27 . To our knowledge (and we have compared a large variety of such superstructures reported in reviews on this topic 21, 22 ), the structure of BaFeO 2.5 reported here is the most complicated perovskite-type superstructure reported so far (largest primitive cell, number of ABX 2.5 units, number of different crystallographic sites). In addition, we report on the magnetic structure, which agrees well with the magnetic characterisation from SQUID measurements and we additionally describe the results of DFT based calculations as well as group theoretical considerations revealing the structural relationship to the cubic perovskite structure.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 8.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_8140815b1215",
+      "title": "Experimental",
+      "path": [
+        "Experimental"
+      ],
+      "section_type": "methods",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_0a1633600320",
+      "title": "Sample preparation",
+      "path": [
+        "Sample preparation"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_dc4c63e5da9e",
+          "text": "BaFeO 2.5 was prepared as reported in 27 . Stoichiometric amounts of BaCO 3 (Sigma-Aldrich, ≥ 99 %) and Fe 2 O 3 (Fluka, ≥ 99 %) were ground by the use of a planetary ball mill (300 rpm, 15 min) and twice heated at 1100°C for 15 h under flowing N 2 with one intermediate grinding. It must be noted that contact of the sample to CO 2- 29, 30 and H 2 O- 31 containing atmospheres must to be avoided after preparation since BaFeO 2.5 is not stable due to water incorporation into the anion vacancies.",
+          "section_path": [
+            "Sample preparation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.9,
+          "peak_positions": [
+            100.0
+          ],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_f59dc786907f",
+      "title": "Diffraction experiments",
+      "path": [
+        "Diffraction experiments"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_8dac28d0d8b9",
+          "text": "X-ray powder diffraction (XRD) patterns were recorded on a Bruker D8 diffractometer with Bragg-Brentano geometry and a fine focus X-ray tube with Cu anode. No primary beam monochromator was attached. A VANTEC detector and a variable divergence slit were used. The total scan time was 17 hours for the angular range between 5 and 130° 2θ.",
+          "section_path": [
+            "Diffraction experiments"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 19.9,
+          "peak_positions": [
+            130.0
+          ],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b86a1d11fb83",
+          "text": "Time of flight powder neutron diffraction (NPD) data were recorded on the HRPD high resolution diffractometer at the ISIS pulsed spallation source (Rutherford Appleton Laboratory, UK). 4 g of powdered BaFeO 2.5 were loaded into 8 mm diameter thin-walled, cylindrical vanadium sample cans and data collected at ambient temperature for 130 µAh proton beam current to the ISIS target (corresponding to ~3.5 hours beamtime).",
+          "section_path": [
+            "Diffraction experiments"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c4758b6a42df",
+          "text": "Initial refinement of the nuclear structure using both the XRD and NPD data were performed using the Rietveld method with the program TOPAS 4.2 (Bruker AXS, Karlsruhe, Germany) 32 . For the room temperature XRD data the whole 2θ-range was used, while for the NPD data only those data collected in the highest resolution backscattering detector bank (bank 1, average 2θ = 168.329º, d max ~ 2.5 Å) were used. The instrumental intensity distribution for the X-ray data was determined empirically from a sort of fundamental parameters set 33 , using a reference scan of LaB 6 , and the microstructural parameters were refined to adjust the peak shapes for the XRD data. For the neutron diffraction data, a corresponding TOF shape model was used. Lattice parameters were constrained to be the same for neutron -and XRD -data and the same positional parameters were used and refined for both data sets. Independent thermal displacement parameters were refined for each type of atom. While these parameters were also constrained to be the same both for X-rayand neutron-powder diffraction data, an additional B overall value was refined for XRD data accounting for further effects such as absorption or surface roughness.",
+          "section_path": [
+            "Diffraction experiments"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 19.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_da59d3ed3e79",
+          "text": "Reflections that showed a large magnetic scattering contribution were omitted from the initial crystallographic refinement.",
+          "section_path": [
+            "Diffraction experiments"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_081ae1a71a02",
+          "text": "Refinement of the magnetic structure of BaFeO 2.5 was performed with the program TOPAS Academic 5 32, 34 using the NPD data collected in all of the HRPD detector banks 1-3 at room temperature. A magnetic propagation vector of [ 1 / 2 0 0] was indicated from Pawley fits of the pattern and this vector is compatible with a G-type arrangement of the magnetic moments. This G-type arrangement was then tested and verified by introducing a second phase with doubled a-axis for which only the magnetic scattering was calculated and using constraints belonging to a G-type setting, thus allowing only the refinement of an overall magnitude and an overall orientation of the magnetic moment without differing between different crystallographic Fe sites. Unit cell, atomic position and thermal vibration parameters in this second phase were set to the refined values determined from the coupled analysis of bank 1 and XRD data. Different starting orientations of the magnetic moment in this G-type arrangement were investigated and evaluated and from this the correct magnetic symmetry and space group (P a 2 1 /c) were derived, indicating that the M y component is virtually zero. Other magnetic symmetries which are in principle also compatible with a space group of P a 2 1 /c and the k-vector of [ 1 / 2 0 0] were also tested and could be ruled out.",
+          "section_path": [
+            "Diffraction experiments"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_dcadb1d22ac6",
+          "text": "For the final analysis of the diffraction data, both the nuclear and the magnetic structure parameters were refined at once using the as-determined magnetic symmetry with space group P a 2 1 /c and with M y = 0 (the symmetry relationships are provided in detail in the Supplementary Material); the X-ray diffraction and neutron diffraction data of all the detector banks were used for this analysis. For the refinement of the magnetic structure, the amount of constraints was lowered allowing for different magnitudes and orientations of the magnetic moments on different crystallographic sites. For refinement of the nuclear structure, the same constraints were used as described above. Structural parameters given in this article refer to this final analysis.",
+          "section_path": [
+            "Diffraction experiments"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_8677130d6d4b",
+      "title": "Magnetometric measurements",
+      "path": [
+        "Magnetometric measurements"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_8312542ce2e0",
+          "text": "DC susceptibility measurements were performed over the temperature range 5 -390 K using a Quantum Design MPMS-XL SQUID magnetometer. The sample was pre-cooled to 5 K in zero magnetic field, then in an applied magnetic field µ 0 H of 20 mT . The susceptibility was subsequently measured whilst warming the sample up to 390 K (ZFC) and then cooling it again in the applied magnetic field to 5 K (FC).",
+          "section_path": [
+            "Magnetometric measurements"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_8c20fc4c7c62",
+          "text": "Field-dependent DC susceptibility measurements were performed on the same instrument at 5 and 390 K between 0 and 4.5 T.",
+          "section_path": [
+            "Magnetometric measurements"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_3ccf63a668fb",
+      "title": "Mössbauer measurements",
+      "path": [
+        "Mössbauer measurements"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_e7bde351976e",
+          "text": "The 57 Fe Mössbauer spectrum for BaFeO 2.5 was recorded in standard transmission geometry in constant acceleration mode using a ca. 15 mCi 57 Co/Rh source at room temperature. The data are computed using the WinNormos software by R. A. Brand (WISSEL company) 35 . All isomer shifts are quoted relative to metallic iron at room temperature.",
+          "section_path": [
+            "Mössbauer measurements"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_5a80b5a2f2e5",
+      "title": "Computational Method",
+      "path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_041b7eef48df",
+          "text": "For the density functional theory calculations the Vienna Ab-initio Simulation Package (VASP, Version 5.3) was used [36] [37] [38] [39] . Projector Augmented Plane Waves 40 were applied with the spin-polarized GGA-PBE exchange correlation functional 41 . Due to the already large unit cell size the magnetic order was restricted to ferromagnetic.",
+          "section_path": [
+            "Computational Method"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_e193540b5942",
+          "text": "The valence electron configurations of the PAW datasets were:",
+          "section_path": [
+            "Computational Method"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_6899df8b5182",
+          "text": "Ba 5s 2 5p 6 6s 2 , Fe 3s 2 3p 6 4s 2 3d 6 , O 2s 2 2p 4 .",
+          "section_path": [
+            "Computational Method"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_7dfa31a35c9b",
+          "text": "For the Fe 3d-electrons an additional Hubbard-U parameter was introduced. The LSDA+U calculations were performed in the formulation of Dudarev 42 with U-J=4 eV, as was used for Fe 3+ in the multiferroic perovskite BiFeO 3 43 .",
+          "section_path": [
+            "Computational Method"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9328a82fce7c",
+          "text": "The plane-wave energy cutoff was set to 600 eV and a 6x4x2 Monkhorst-Pack k-point mesh was used for Brillouin zone integration.",
+          "section_path": [
+            "Computational Method"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_80fb5bbcaaba",
+          "text": "The crystal structure (lattice parameters and atomic positions) was relaxed at fixed unit cell volume (the experimental value) until residual forces were less than 0.01 eV/A.",
+          "section_path": [
+            "Computational Method"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9d666b5fcdee",
+          "text": "The partial densities of states were calculated by integrating the charge density over spheres of the ionic radii 44 around each ion (Ba 2+ 1.45 Å, Fe 3+ 0.55 Å, O 2-1.35 Å).",
+          "section_path": [
+            "Computational Method"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_0b77b0e1c5f2",
+      "title": "Scanning Electron Microscopy (SEM) and Energy Dispersive X-ray Spectroscopy (EDX)",
+      "path": [
+        "Scanning Electron Microscopy (SEM) and Energy Dispersive X-ray Spectroscopy (EDX)"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_7ccd22d767bc",
+          "text": "The SEM images were taken using the secondary electron detector of a Philips XL30 FEG scanning electron microscope operating at 30 keV. For EDX analysis the EDAX Genesis system was used and an energy resolution of about 140 eV was applied.",
+          "section_path": [
+            "Scanning Electron Microscopy (SEM) and Energy Dispersive X-ray Spectroscopy (EDX)"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c71aa2bc570f",
+          "text": "The mapped area was of the order of 100 μm² and the Ba to Fe ratio was determined from the Ba L and Fe K lines. The sample was sputtered with approximately 10 nm of Au prior to the measurements.",
+          "section_path": [
+            "Scanning Electron Microscopy (SEM) and Energy Dispersive X-ray Spectroscopy (EDX)"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_13ba04330a95",
+      "title": "Results and Discussion",
+      "path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_e02f921528a6",
+      "title": "Structural analysis",
+      "path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_de10a80f4913",
+          "text": "The structural model of Zou et al. 28 was used as a starting model for the refinement of the crystal structure of BaFeO 2.5 . In agreement with the magnetic characterisation reported in section 3.3, we could conclude that their proposed space group P2 1 /c is likely to be correct and is consistent with the (001) and (010) reflections found in the XRD data at ~ 8°. Due to the high number of parameters for this refinement (7 Ba, 7",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 6.7,
+          "peak_positions": [
+            8.0
+          ],
+          "miller_indices": [
+            "(001)",
+            "(010)"
+          ]
+        },
+        {
+          "paragraph_id": "paragraph_9fefd8b622f6",
+          "text": "Fe, 17 O ions on the general site 4c (x, y, z), only 1 O at a special site 2a) constraints were used for the thermal parameters (same thermal parameter for each type of atom). A coupled analysis of X-ray-and neutron-powder diffraction data (XRD and NPD) is beneficial in such cases where strong X-ray scatterers (e. g. transition metals and heavy alkaline earths) are found adjacent to light X-ray scatterers (e. g. O and F) 14, 15, 45 . The initial coupled Rietveld analysis of XRD and NPD data (relaxing all positional parameters from the starting model of Zou et al. 28 ) generally gave a good description for the intensities of most of the superstructure reflections, but some of them showed significant misfit. This misfit could be attributed to the incorrect allocation of three different oxygen ions due to strong correlation for the refinement, since the fit of the X-ray diffraction data was superior to the one of the neutron diffraction data. Therefore, a Fourier difference analysis was performed on the neutron diffraction data, which assisted in identifying the correct positions for these 3 oxygen ions. Those ions were therefore placed at the positions indicated from the Fourier difference analysis, and the refinement then resulted in a similar pattern of vacancy distribution to that observed by Zou et al. 28 but also showing strong tilt and/or rotation of the iron coordination polyhedra and a different coordination scheme of the iron atoms (see later in this section). The final coupled Rietveld analysis (including the magnetic contribution, see section 3.3) is in excellent agreement with the observed patterns and is shown in Figure 1 , the refined structural parameters are listed in Table 1 .",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 17.7,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9af371fa4401",
+          "text": "To verify the structural model, we also attempted to build different starting models (by reallocating some of the oxygen ions to different vacancies), but the refinements always converged back to the reported structural model or gave a significantly worse description of the neutron pattern. We also failed to find evidence for significant partial occupancy of the anion sites. Such refinement is highly critical due to a high correlation of parameters for this complicated structure.",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_bff5c2e527f0",
+          "text": "In addition, EDX analysis (see Supplementary Material) was performed and confirmed within experimental error the Ba:Fe ratio of 1:1 (experimentally 1.035:1).",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_024f9f49417b",
+          "text": "This, together with the Mössbauer experiments (reported in section 3.2) showing only the presence of Fe 3+ , gives clear evidence that the compound has a composition BaFeO 2.5 (Ba 2 Fe 2 O 5 ).",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a3467c22663c",
+          "text": "SEM images further showed that the sample is a homogeneous powder with grain sizes of ~ 5-10 µm (see Supplementary Material). In their HRTEM analysis, Zou et al. 28 reported that they observed a simple hexagonal pattern only \"at the thinnest areas near the edge\" of the particles (up to a maximum of a couple of nm; however, we think that this could also be affected by the uptake of small amounts of water 31 ) and that the monoclinic structure with space group P2 1 /c represents the crystallites otherwise (> 100 nm). We could confirm this by estimating the degree of crystallinity Table 1. Crystal structure of BaFeO2.5 (space group P21/c) from the final coupled Rietveld analysis of XRD and NPD data. Atom Wyckoff site x y Z occ. B [Å²] Ba 2+ Ba1 / 4c 0.0546(9) 0.3517(6) 0.1145(3) 1 0.55(4) Ba 2+ Ba2 / 4c 0.2500(10) 0.6141(6) 0.3283(3) 1 0.55(4) Ba 2+ Ba3 / 4c 0.1431(9) 0.1304(6) 0.3215(3) 1 0.55(4) Ba 2+ Ba4 / 4c 0.3257(10) 0.6328(5) 0.0379(4) 1 0.55(4) Ba 2+ Ba5 / 4c 0.0547(11) 0.6176(7) 0.6001(4) 1 0.55(4) Ba 2+ Ba6 / 4c 0.5603(10) 0.3549(6) 0.2558(3) 1 0.55(4) Ba 2+ Ba7 / 4c 0.3544(13) 0.1102(5) 0.0364(4) 1 0.55(4) Fe 3+ Fe1 / 4c 0.5249(8) 0.3531(5) 0.1038(3) 1 0.47(3) Fe 3+ Fe2 / 4c 0.3848(8) 0.5816(4) 0.1860(3) 1 0.47(3) Fe 3+ Fe3 / 4c 0.0620(9) 0.3996(5) 0.2595(3) 1 0.47(3) Fe 3+ Fe4 / 4c 0.1739(10) 0.1525(5) 0.4707(3) 1 0.47(3) Fe 3+ Fe5 / 4c 0.4359(9) 0.3817(5) 0.3988(3) 1 0.47(3) Fe 3+ Fe6 / 4c 0.2707(9) 0.1045(5) 0.1746(3) 1 0.47(3) Fe 3+ Fe7 / 4c 0.1458(11) 0.6217(4) 0.4644(4) 1 0.47(3) O -2 O1 / 2a 0 0 0 1 0.66(2) O -2 O2 / 4c 0.2972(13) 0.7097(8) 0.1485(4) 1 0.66(2) O -2 O3 / 4c -0.0628(13) 0.2770(8) 0.2271(4) 1 0.66(2) O -2 O4 / 4c 0.0382(14) 0.0449(7) 0.4273(4) 1 0.66(2) O -2 O5 / 4c 0.0080(14) 0.2474(9) 0.0021(5) 1 0.66(2) O -2 O6 / 4c 0.2954(15) 0.5000(9) 0.4297(5) 1 0.66(2) O -2 O7 / 4c 0.7133(14) 0.2597(9) 0.0766(4) 1 0.66(2) O -2 O8 / 4c 0.0559(15) 0.1195(10) 0.1079(5) 1 0.66(2) O -2 O9 / 4c 0.4060(15) -0.0138(9) 0.1436(5) 1 0.66(2) O -2 O10 / 4c 0.4063(13) 0.2443(8) 0.1470(5) 1 0.66(2) O -2 O11 / 4c 0.1173(15) 0.0036(10) 0.2168(5) 1 0.66(2) O -2 O12 / 4c 0.4500(14) 0.1263(9) 0.2497(5) 1 0.66(2) O -2 O13 / 4c 0.1944(16) 0.4907(10) 0.2110(5) 1 0.66(2) O -2 O14 / 4c 0.5416(13) 0.4917(8) 0.1449(4) 1 0.66(2) O -2 O15 / 4c 0.3115(14) 0.2406(10) 0.4261(5) 1 0.66(2) O -2 O16 / 4c 0.3596(16) 0.3923(7) 0.0364(6) 1 0.66(2) O -2 O17 / 4c 0.2515(16) 0.3583(8) 0.3225(5) 1 0.66(2) O -2 O18 / 4c 0.653(2) 0.3669(7) 0.4636(6) 1 0.66(2) a [Å] 6.9753(1) c [Å] 23.4507(4) V [Å³] 1895.39(5) b [Å] 11.7281(2) β [°] 98.813(1) R wp (XRD+NPD) [%] 7.67 GOF (XRD+NPD) 6.00 R Bragg [%] 1.28 (XRD) 2.32 (NPD bank 1)",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 11.6,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b2642a0840f0",
+          "text": "Bond distances and formal coordination numbers of the respective cations are given in Table 2 , and drawings of the coordination polyhedra of the different iron sites are shown in Figure 2a -g. The structure was shown to be in good agreement with calculations of bond valence sums, giving a global instability index of 0.2 and a relatively good description of the valences of the different ions (see Table 3 ), although we acknowledge that bond valence sums can be problematic for perovskite compounds 46, 47 . The fact that some of the values of the BVS sums for iron are smaller than three might be consistent with the sensitivity of the compound towards uptake of water 31 and/or CO 2 29, 30 (allowing for the formation of additional Fe-O bonds), which might then allow for structural relaxation and more stable local environments. In addition, all the O-O distances are in agreement with the minimum distance expected from ionic radii (2.70 Å from Shannon radii 44 compared to the lowest distance found for the pair O11-O12 of 2.74(1) Å). The structure contains seven crystallographically different iron atoms, for which the effective coordination numbers 48 (ECoN) have been calculated and are shown in Table 4 .",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_5dc18cde5374",
+          "text": "Four of these iron atoms (Fe1-4) are found in tetrahedral coordination. The tetrahedron of Fe1 (see Figure 2a ) properly shares its corners with other iron-coordination polyhedra. In contrast, Fe2-4 (see Figure 2b-d ) share only three of their corners with other iron-coordination polyhedra. Their fourth corner is not shared with other polyhedra and the large distance to a neighboring iron atom precludes consideration as a coordinating polyhedron (distances of 3.07, 3.45 and 3.68 Å). This was confirmed by bond valence sums which showed that a Fe-O distance of 3.07 Å only gives an additional charge increment of ~0.05 and is also confirmed by considering the effective coordination numbers of the cations. In addition, this is expressed by the shape of the polyhedra in which the \"freestanding O ions\" point outwards. Furthermore, very long additional bonds (d > 3.6 Å) are found for Fe2-4 (exemplarily shown for Fe2, see Figure 2b ), which again should not be considered to contribute to bonding from the ECoN calculations and the bond valence sums. In addition, the non-shared oxygen ions connected to Fe4 and Fe3 (O4 and O3) show relatively short bond distances of 2.51 and 2.55 Å to the neighboring Ba ions, Ba1 and Ba2.",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_3cae9dd18300",
+          "text": "The Fe5 and Fe6 (see Figure 2e , f ) sites are found in fivefold square-pyramidal coordination. Again, for both, Fe5 and Fe6, an additional very long bond is formed to another neighboring tetrahedron (Fe2 and Fe3) with bond distances of 3.07 and 3.45 Å, increasing the coordination to a pseudo-octahedron. However, Fe5 and Fe6 show a clear off-center shift to the corner opposite to the long-distance bond, which is very typical for square-pyramidal coordination.",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_7e7d6c162694",
+          "text": "The Fe7 site (see Figure 2g ) was found in a slightly distorted octahedral coordination.",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_05683749b2d7",
+          "text": "The atom is connected to the oxygen located at the special position 2a and is therefore connected to another polyhedron of Fe7.",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_74156cfdf900",
+          "text": "In conclusion, the coordination scheme is in agreement with the composition BaFeO 2.5 and can be described by the following formula / coordination scheme Ba 7 (FeO 4/2 ) 1 (FeO 3/2 O 1/1 ) 3 (FeO 5/2 ) 2 (FeO 6/2 ) 1 = Ba 7 Fe [6] 1 Fe [5] 2 Fe [4] 4 O 17.5 = Ba 7 Fe 7 O 17.5 = BaFeO 2.5",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a3aa257efd9a",
+          "text": "Although this scheme is in contrast to that proposed by Parras et al.(which had been derived from Mössbauer data only 27 ) and Zou et al. 28 , Ba 7 Fe [6] 3 Fe [5] 1 Fe [4] 3 O 17.5",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9e6dc4403f31",
+          "text": "we will show in section 3.2 that the Mössbauer data of Parras et al. 27 are in agreement with our own recorded data but can be interpreted in excellent agreement with the structure described in this article and with Mössbauer spectroscopy data from similar Fe 3+ containing compounds.",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a9362d9967fe",
+          "text": "Table 2. M-O bond distances (given in Å) and formal coordination numbers [CN] for Ba1-7 and Fe1-7. For the Ba ions, only oxygen ions with d < 4 Å have been considered. For Fe atoms with CN lower than 6, another next nearest oxygen which should not be considered to be bonded is given. Ba1 Ba2 Ba3 Ba4 Ba5 Ba6 Ba7 CN [9] CN [10] CN [10] CN [10] CN [10] CN [10] CN [12] O4 2.51(1) O3 2.55(1) O14 2.75(1) O18 2.75(1) O1 2.70(1) O12 2.79(1) O6 2.77(1) O7 2.64(1) O6 2.70(1) O17 2.78(1) O5 2.76(1) O18 2.71(1) O9 2.80(1) O6 2.79(1) O8 2.73(1) O7 2.79(1) O11 2.85(1) O2 2.78(1) O2 2.77(1) O11 2.84(1) O1 2.80(1) O10 2.76(1) O8 2.80(1) O15 2.86(1) O16 2.83(1) O9 2.79(1) O17 2.85(1) O18 2.85(1) O13 2.84(1) O9 2.82(1) O4 2.87(1) O15 2.84(1) O8 2.79(1) O2 2.87(1) O8 2.87(1) O5 2.88(1) O10 2.83(1) O13 2.87(1) O7 2.94(1) O6 2.80(1) O10 2.92(1) O9 2.88(1) O3 3.01(1) O11 2.92(1) O12 2.92(1) O4 2.97(1) O5 2.82(2) O3 2.96(1) O18 2.90(1) O16 3.05(1) O12 2.99(1) O3 2.99(1) O16 3.02(1) O17 3.02(1) O14 3.04(1) O5 2.91(1) O14 3.74(1) O17 3.00(1) O2 3.38(1) O14 3.19(1) O15 3.03(1) O13 3.05(1) O10 3.00(1) O13 3.08(1) O2 3.97(1) O4 3.67(1) O11 3.06(1) O12 3.19(1) O7 3.08(1) O15 3.10(1) O16 3.31(1) Fe1 Fe2 Fe3 Fe4 Fe5 Fe6 Fe7 CN [4] CN [4] CN [4] CN [4] CN [5] CN [5] CN [6] O16 1.87(1) O2 1.80(1) O3 1.79(1) O4 1.80(1) O6 1.90(1) O9 1.89(1) O1 2.01(1) O14 1.88(1) O12 1.83(1) O17 1.89(1) O15 1.84(1) O18 1.98(2) O11 1.96(1) O6 2.01(1) O7 1.89(1) O13 1.87(1) O11 1.89(1) O5 1.88(1) O9 2.01(1) O8 2.00(1) O18 2.03(1) O10 1.90(1) O14 1.89(1) O13 1.90(1) O16 1.93(1) O15 2.02(1) O12 2.01(1) O8 2.03(2) O17 2.06(1) O10 2.05(1) O5 2.05(1) O7 2.19(1) O3 3.86(1) O4 3.68(1) O9 4.17(1) O4 3.79(1) O2 3.07(1) O3 3.45(1)",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_acf569b40e8a",
+          "text": "(a) Fe1 (b) Fe2 (c) Fe3 (d) Fe4 (e) Fe5 (f) Fe6 (g) Fe7 Table 3. Bond valence sums (BVS) for the different crystallographic sites in monoclinic BaFeO2.5. The global instability indexed (GII) was calculated to be 0.20. site BVS site BVS site BVS site BVS Ba1 2.06 Fe1 2.66 O1 2.05 O10 1.90 Ba2 2.23 Fe2 2.94 O2 1.63 O11 1.94 Ba3 1.73 Fe3 2.79 O3 1.74 O12 1.92 Ba4 1.81 Fe4 2.84 O4 1.69 O13 2.00 Ba5 2.21 Fe5 2.61 O5 1.99 O14 1.86 Ba6 1.82 Fe6 2.67 O6 2.14 O15 1.90 Ba7 2.15 Fe7 2.69 O7 1.84 O16 1.86 O8 1.94 O17 1.85 O9 2.05 O18 1.95",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_003a47bc6676",
+          "text": "Table 4. Effective coordination numbers (ECoN 48 ) for the different Ba and Fe ions. site ECoN site ECoN Ba1 6.41 Fe1 4.00 Ba2 8.41 Fe2 3.95 Ba3 8.10 Fe3 3.89 Ba4 8.30 Fe4 3.89 Ba5 9.20 Fe5 4.86 Ba6 9.31 Fe6 4.82 Ba7 10.86 Fe7 5.81",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_4405440050b5",
+          "text": "Additionally, the vacancy ordered monoclinic structure of BaFeO 2.5 can be understood in terms of a group-subgroup relationship derived from the ideal cubic perovskite structure. This symmetry tree is described in more detail in the Supplementary Material, however, a shortened scheme showing the essential structural relationship is shown in Figure 3 . This symmetry relationship could, in principle, help elucidate how topochemical reactions 17 , which can be used to transform the compound into cubic perovskite type BaFeO 3 12 and BaFeO 2 F 13, 49, 50 (also altering the magnetic properties), can work from a structural point of view. The approximate positions of the vacancies (the four vacant oxygen positions derived from the \"undistorted\" cubic structure are given in the Supplementary Material), appear to order in a rhombic-type pattern in the b-c-plane (see Figure 4a ). This principal pattern was also observed by Zou et al. using HREM and CIP measurements 28 and can therefore be confirmed by our investigations. On closer examination of the structure in comparison to the pseudocubic setting, we found that O2, O3, and O4 showed by far the strongest shift from their ideal positions (mainly along the a-axis), whereas all the other oxygen ions remained far closer to their position for a pseudocubic arrangement (see Figure 4b and c ).",
+          "section_path": [
+            "Structural analysis"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "3",
+            "4"
+          ],
+          "xrd_score": 1.3,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_46375d0bcd0a",
+      "title": "Mössbauer spectroscopic investigation of BaFeO 2.5",
+      "path": [
+        "Mössbauer spectroscopic investigation of BaFeO 2.5"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_b76078370363",
+          "text": "The 57 Fe Mössbauer spectrum recorded from BaFeO 2.5 at 298 K was best fitted to five components and is shown in Figure 5 . The line-widths of all components were constrained to 0.35 mm*s -1 .The parameters are collected in Table 5 . The spectrum and fitted parameters are very similar to those reported previously 27 for BaFeO 2.5.",
+          "section_path": [
+            "Mössbauer spectroscopic investigation of BaFeO 2.5"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "5"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_377ec13d91ae",
+          "text": "The chemical isomer shifts are all characteristic of Fe 3+ and are therefore consistent with the formulation BaFeO 2.5 . In addition the relative areas agree well with the site multiplicities of the different iron sites deduced from the structural analysis. The 57 Fe Mössbauer chemical isomer shifts are highly dependent on the coordination number 51 and the component in the Mössbauer spectrum reported here with a chemical isomer shift of 0.45 mms -1 is consistent with octahedrally coordinated Fe 3+ and we assign this component to Fe7. This spectral component also shows the largest magnetic hyperfine field and the chemical isomer shift is similar to that reported for Fe 3+ in structural variants of the compound BaFeO 2 F which also contains Fe 3+ in octahedral coordination 14, 15, 50 . The two components with lower chemical isomer shifts of 0.37 and 0.33 mm*s -1 indicate 51 lower coordination about Fe 3+ and we associate these with Fe5 and Fe6 in five-fold square pyramidal coordination but in which the sixth oxygen ion at longer distance corresponds to pseudo-octahedral coordination. The component with chemical isomer shift 0.37 mms -1 is assigned to Fe5 which has shorter distances to the sixth oxygen ion. We note that our analysis gives lower isomer shifts for the two components with 5-fold coordination as compared to the report of Parras et al. 27 (0.45 and 0.44 mm*s -1 ). The components with chemical isomer shifts of 0.23 and 0.15 mm*s -1 are similar to those of Fe 3+ in tetrahedral coordination as found in CaFeO 2.5 and SrFeO 2.5 27 and we assign these to the Fe1 and Fe2-4 sites. Amongst these tetrahedral sites the Fe2-4 are very similar since their tetrahedra possess one corner which is not shared with other iron-containing polyhedra. The unshared oxygen ion in these tetrahedra would be expected to induce a higher degree of covalency in the bonding to Fe 3+ and lower the chemical isomer shift and magnitude of the magnetic hyperfine field. Hence we associate the component with chemical isomer shift 0.15 mm*s -1 , B HF = 40 T and 44% area ratio with Fe2-4. Finally, we associate the component with chemical isomer shift 0.23 mm*s -1 to Fe1 which corresponds to tetrahedrally coordinated Fe 3+ where",
+          "section_path": [
+            "Mössbauer spectroscopic investigation of BaFeO 2.5"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_74361efcd199",
+          "text": "all corners of the tetrahedron are shared with other polyhedra thereby reducing the degree of covalency in the Fe-O bonds, which is reflected in the more positive chemical isomer shift and larger magnetic hyperfine field. Hence, the 57 Fe Mössbauer spectrum reported here, although similar to that described earlier 27 for BaFeO 2.5, endorses the new structural description proposed here. Table 5 . 57 Fe Mössbauer spectroscopy parameters (Δ chemical isomer shift, BHF magnetic hyperfine field, ε effective quadrupole interaction parameter) for BaFeO2.5 determined from the fit of the spectrum shown in Figure 5 . * := Tetrahedra for which one corner is not shared with another polyhedron.",
+          "section_path": [
+            "Mössbauer spectroscopic investigation of BaFeO 2.5"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "5"
+          ],
+          "xrd_score": 0.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_23180da9da3b",
+          "text": "+ = parameter is fixed in the refinement. The values given for Fe2-4 site are average values, as the component is fitted with a distribution of hyperfine parameters.",
+          "section_path": [
+            "Mössbauer spectroscopic investigation of BaFeO 2.5"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_c03719cd6362",
+      "title": "Site δ (mm s -1 ) B HF [T] ε [mm s -1 ] Area [%]",
+      "path": [
+        "Site δ (mm s -1 ) B HF [T] ε [mm s -1 ] Area [%]"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_3ee82a09c8e7",
+          "text": "Fe7, CN = 6 0.45(1) 50.3(5) -0.13( 2 ) 13(2) Fe5, CN = 5 0.37(1) 49.2(5) -0.50(2) 15(2) Fe6, CN = 5 0.33(1) 47.3(5) -0.64(2) 13(2) Fe1, CN = 4 0.23 + 42.1(5) 0.63(2) 15(2) Fe2-4*, CN = 4 0.15(1) 40.0(5) -0.2 + 44(4)",
+          "section_path": [
+            "Site δ (mm s -1 ) B HF [T] ε [mm s -1 ] Area [%]"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_365328e50854",
+      "title": "Magnetometric Characterisation and Determination of the Magnetic Structure",
+      "path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_6ca85ac34de7",
+          "text": "BaFeO 2.5 has been described as a room temperature antiferromagnet with a Néel temperature of 720 K 27 . Magnetisation measurements as a function of the applied magnetic field at 5 and 390 K are presented in Figure 6a and show a linear dependence reaching only very low magnetisation values. ZFC/FC measurements (see Figure 6b ) exhibit no feature of a magnetic transition or a ferri-/ ferro-magnetic contribution in the temperature range examined. These observations are in agreement with the antiferromagnetic order determined from the neutron powder diffraction examination of the magnetic structure of BaFeO 2.5 . reflections which cannot be indexed on the basis of the crystallographic unit cell. Therefore, Pawley fits were performed assuming doubling of one of the crystallographic axes (high resolution backscattering bank of HRPD, d-spacing range limited to 1.75 -2.55 Å) using the space group P2 (no absences of reflections due to translational symmetry). All the reflections could be indexed on the basis of a cell with 2*a nuc , b nuc , c nuc (R wp = 7.25 %), clearly indicating a k-vector of [ 1 / 2 0 0]. In contrast doubling of the b (k = [0 ½ 0]) and c axes (k = [0 0 ½]) (R wp = 7.97 % and 9.01 % for the same refinement conditions) did not result in a valid description of the reflections resulting from magnetic scattering, and a Pawley fit using a cell with a nuc , b nuc , c nuc (k = [0 0 0]) can be clearly discarded for not describing the magnetic reflections properly (R wp = 12.36).",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "6"
+          ],
+          "xrd_score": 6.1,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_8f7540cb674a",
+          "text": "G-type antiferromagnetic ordering is often found for antiferromagnetic \"cubic\" perovskite-type compounds which contain only Fe 3+ 13, 45, 50, 52 . This antiferromagnetic ordering is usually enhanced by 180° superexchange coupling (or nearly 180° superexchange which is found to be the case for BaFeO 2.5 ) for corner sharing Fe-O-Fe polyhedra. Such an antiferromagnetic alignment between neighbouring polyhedra enables a G-type antiferromagnetic order to be envisaged for the vacancy ordered variant of BaFeO 2.5 (see Figure 7 ). Such an ordering requires a doubling of the a-axis of the nuclear cell to describe the magnetic cell, in agreement with the results from the Pawley fit and the determined k-vector of [ 1 / 2 0 0] and indicates that such (or a similar) magnetic ordering might exist in BaFeO 2.5 . ions red). The k-vector with respect to the monoclinic cell is [½ 0 0].",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "7"
+          ],
+          "xrd_score": 1.0,
+          "peak_positions": [
+            180.0
+          ],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_cfa6d7e3410d",
+          "text": "In a first attempt to confirm this G-type order and since only a few reflections resulting from magnetic ordering were present in the neutron diffraction data, the magnitude of the magnetic moments of all iron ions were constrained to be the same. In addition, the orientations of the magnetic moments of the iron atoms in polyhedra connected via corners (e. g. FeA-O-FeB) were constrained in such a way that Mx(FeA) = -Mx(FeB), My(FeA) = -My(FeB) and Mz(FeA) = -Mz(FeB), i. e. only an overall orientation of the magnetic moments was refined and only two different overall orientations of the magnetic moment were possible for all the iron atoms, namely (Mx, My, Mz) and (-Mx, -My, -Mz), implying G-type magnetic order and in agreement with overall antiferromagnetic properties. This principle alignment of the magnetic moments would correspond to P s -1 as the magnetic space group. Several starting orientations of the magnetic moments were examined for this analysis. The best fit to the recorded pattern was obtained for a magnetic moment of Mx = 1.86 µB, My = 0.66 µB, Mz = 2.99 µB, Mtotal = 3.35(1) µB, pointing mainly along the c-axis, with a very minor contribution of the moment along b-axis.",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 1.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_7c8fae6e878b",
+          "text": "Despite the strict constraints, such an alignment of the magnetic moments already gives a very good description of the intensities resulting from magnetic scattering, and therefore indicates that the assumption of G-type ordering for BaFeO 2.5 is valid. This is also in agreement with the results from the SQUID measurements.",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_19c23cfa23e5",
+          "text": "Analyzing the magnetic structure further 53 shows that among the magnetic space groups derived from the Fedorov space group P2 1 /c, only the magnetic space group P a 2 1 /c (BNS 14.80) [54] [55] [56] is compatible with a propagation vector of [ 1 / 2 0 0] (see Supplementary Material). In total, four magnetic symmetries with space groups P a 2 1 /c 53 would be possible, which would all be compatible with overall antiferromagnetic properties of the compound (those symmetries differ with respect to the origin for the antitranslation operation and the choice of the c-axis of the cell, see Supplementary information for detailed transformation matrixes). Among them, two settings are in principle compatible with G-type order of the magnetic moments, one of them allowing for a magnetic moment along the M x and M z axes (M y is then incompatible with G-type order) and the other allowing for a magnetic moment along the M y axis (M x and M z are then incompatible with G-type order). The two other settings are incompatible with G-type order at all and will have to result in ferromagnetic alignment of the magnetic moments between at least some of the Fe polyhedra connected by corners. We found that only the setting with magnetic moments pointing mainly along the M x and M z axes in a G-type order (allowing for different magnitudes and directions for the magnetic moments on the different Fe sites) can be used to describe the magnetic reflections properly (also see Supplementary Material). This was also already indicated by the refinement using space group P s -1, where M y is the weakest among the three different crystallographic directions (this component therefore has only a minor influence on the quality of the fit of the magnetic reflections). The final refinement using space group P a 2 1 /c shown in Figure 1 (with M y = 0) results in an almost equally good fit of the diffraction pattern (ΔR wp ~ 0.01) compared to using the P a 2 1 /c setting without fixing M y to 0, confirming the alignment of the magnetic moments in the a/c plane. Furthermore the magnetic space group P a 2 1 /c is also maximal, i. e. a propagation vector of [ 1 / 2 , 0, 0] would not allow for any magnetic ordering with higher symmetry. The magnetic structure is included in a cif-like file (mcif format), which is supported by programs like ISODISTORT 57 , VESTA 58 , etc., in the Supplementary Material.",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 5.1,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_36b3100837d9",
+          "text": "The magnetic moments for the different Fe sites are listed in Table 6 . The magnetic moment increases with the coordination number by trend, and this agrees well with the fact that the magnetic moment obtained from neutron diffraction is lowered if covalent bonding is present (which is stronger for shorter Fe-O bonds, i. e. lower coordination numbers). Among the four tetrahedrally coordinated Fe atoms, the magnetic moments for Fe2-4 are significantly lower than the one for Fe1, and those iron atoms are connected to one oxygen ion which is not shared with another Fe coordination polyhedron. This trend is also confirmed regarding the magnetic hyperfine fields obtained from the fit of the Mössbauer spectrum (see Table 5 , section 3.2) and from the behavior of the pDOS reported in the following section.",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_0349e5010811",
+          "text": "Furthermore, the overall magnitude of the magnetic moments agrees well with what was found for similar perovskite-type compounds also containing mainly/only Fe 3+ 14, 15, 45, 59 and showing magnetic order at room temperature. Due to the high correlation and the small number of magnetic reflections, we think the small canting of magnetic moments between neighbouring sites should not be overinterpreted.",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_068ee7753eac",
+          "text": "Table 6. Magnetic moments for the different crystallographic sites determined from a Rietveld analysis of the magnetic structure of BaFeO2.5 (CN = coordination number). * := one corner of the coordination tetrahedron is not properly shared with a neighbouring polyhedron. site CN Mx [µ B ] Mz [µ B ] Mtotal [µ B ] Fe1 4 2.4(2) 3.4(1) 3.8 Fe2* 4 -1.9(2) -2.6(1) 3.0 Fe3* 4 1.6(2) 2.4(1) 2.6 Fe4* 4 1.9(2) 2.9(1) 3.2 Fe5 5 -2.4(2) -3.3(1) 3.8 Fe6 5 -1.4(2) -3.6(1) 3.7 Fe7 6 1.3(2) 4.2(1) 4.2 Among them, the pDOS of Fe4 is again slightly different due to the fact that its outstanding oxygen is pointing towards the face of the coordination tetrahedron of Fe2, whereas for Fe2+3 the freestanding oxygen could be considered slightly bonded to the Fe5 with respect to the Fe6 atom. Therefore, Fe4 should be more covalently bonded to its freestanding oxygen than in the situation with Fe2+3. This is also reflected in the Mössbauer data attributed to the tetrahedral sites (see Section 3.3) with Fe1 having a more positive and Fe2-4 a slightly reduced isomer shift.",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c5e41789e855",
+          "text": "The pDOS of the octahedral / square pyramidal sites for Fe5, Fe6, and Fe7 are rather similar and again with different center of gravities for the occupied states. The pDOS for Fe7, which shows proper octahedral coordination, again looks slightly different compared to the pDOS of Fe5 and Fe6, with the center of gravity of the occupied states shifted to slightly higher energies for Fe7. Overall, we can conclude that the behavior of isomer shifts recorded by Mössbauer spectroscopy agrees well with the results from the DFT based calculations.",
+          "section_path": [
+            "Magnetometric Characterisation and Determination of the Magnetic Structure"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_94d56612670f",
+      "title": "Conclusion",
+      "path": [
+        "Conclusion"
+      ],
+      "section_type": "conclusion",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_4e90f08ba8e0",
+          "text": "We show here that the crystal structure of monoclinic BaFeO 2.5 can be understood in terms of a highly complex vacancy ordered modification of the cubic perovskite structure. This structure is, to our knowledge, the least symmetric vacancy ordered perovskite so far reported, containing seven crystallographically different iron ions.",
+          "section_path": [
+            "Conclusion"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_170075dbe39d",
+          "text": "Solving the structure was only possible by the use of high resolution neutron powder diffraction data in combination with laboratory XRD data. The structure contains iron in octahedral (1/7), square-pyramidal (2/7), and tetrahedral coordination (4/7). The compound shows antiferromagnetic ordering at room temperature. Although the crystallographic structure is highly complicated, the magnetic structure can be understood in terms of a simple G-type antiferromagnetic order, being in agreement with FC/ZFC and Field Sweep measurements.",
+          "section_path": [
+            "Conclusion"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 8.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "paragraph_1749b9cc3dc5",
+      "text": "Perovskite-type compounds have many applications, ranging from electrode materials in solid oxide fuel cells (e. g. La 1-x Sr x CoO 3-d 1 and La 1-x Sr x FeO 3-d 2, 3",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_dcdf8cab0817",
+      "text": "), ferroelectrics (e. g. BaTiO 3 4 ), multiferroics (e. g. BiFeO 3 , Bi 1-x A x FeO 3d , A = Ba, Sr, Ca, Pb [5] [6] [7] [8] [9] [10] [11] ) to materials with interesting magnetic properties (e. g. ferromagnetic BaFeO 3 12 (by oxidation of BaFeO 2.5 using O 3 ) as compared with antiferromagnetic BaFeO 2 F compounds [13] [14] [15] ). The possibility of vacancies on the anion sublattice gives rise to many of the properties of such compounds, including ionic (anionic) conductivity (facilitated by anion vacancies) and electronic conductivity (due to mixed valence) and magnetic order which is often promoted via superexchange interactions via the anions. In addition, ordering of vacancies can give rise to polar crystal structures (polar space group Ima2), as for example often found in brownmillerite type compounds ABO 2.5 (or alternatively written as A 2 B 2 O 5, and named after the mineral brownmillerite, Ca 2 Fe [6] Al [4] O 5 16 , [6 and 4] = coordination number).",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_35fd0cd12611",
+      "text": "Vacancy ordering for ABO 2.5 \"cubic perovskite\" type compounds (i. e. ccp arrangement of the AO 3 layers) is most often achieved by adopting this brownmillerite structure. The symmetry relationship between the cubic perovskite and brownmillerite can be well understood in terms of group-subgroup relationships (e. g. 17 ). In the brownmillerite-type structure, the B site cation is found in octahedral and tetrahedral coordination (ratio 1:1, with layered ordering of the differently coordinated B-site ions)",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_002d35355aa1",
+      "text": "and the structure can be found in a large variety of compounds, including SrFeO 2.5 pyramidal coordination of the B-site cations 23, 24 . Since such anion deficient perovskites are of interest for a wide range of applications, the clarification of the different types of anion vacancy ordering is important, since even for systems which appear cubic by diffraction techniques, local vacancy ordering may occur.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_deb379f8be7b",
+      "text": "The anion deficient phase BaFeO 2.5 is the subject of investigation in this work, and is important because it has been reported to adopt a different vacancy ordered \"cubic perovskite\" type modification, the nature of which is currently not fully understood.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_e5eed0ae10b4",
+      "text": "Initial structural investigations 25 on this compound have been shown to be incorrect and a variety of techniques (among them Mössbauer spectroscopy, HREM, CIP [26] [27] [28] have subsequently been used to investigate the crystallographic structure of BaFeO 2.5 . Using electron diffraction, Parras et al. 26, 27 managed to index their data in the monoclinic space group P2 1 /c, with lattice parameters of a = 7.05(1) Å, b = 11.71(1) Å, c = 23.40(1) Å, β = 98.3(1)° with 28 formula units of BaFeO 2.5 per unit cell. Mössbauer spectroscopy data 27 were interpreted in terms of the structure which was assumed to contain seven crystallographically different Fe 3+ ions resulting in a coordination scheme of Ba 7 Fe [6] 3 Fe [5] 1 Fe [4] 3 O 17.5 and which, in principal, is in agreement with a general site multiplicity of 4 for P2 1 /c. Attempts to investigate the explicit order of vacancies were performed by HREM and CIP experiments 28 and helped to reveal a general pattern for this ordering. Howeve , the reported structure was described in such a way that all the atoms were located on \"ideal sites\" derived from the cubic prototype, leaving out distinct oxygen ions without allowing shifts from the ideal positions.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 1.6,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_de64ff97033e",
+      "text": "In their article from 1990, Parras et al. observed that \"In any case neutron diffraction experiments are highly necessary\" 27 . In this article, we describe a detailed investigation of the crystallographic structure by means of a coupled Rietveld analysis of X-ray-and neutron-powder diffraction data, to clarify the real vacancy ordering and resulting iron coordination geometries for this compound, and we also interpret our Mössbauer spectroscopy data by comparison with that reported previously 27 . To our knowledge (and we have compared a large variety of such superstructures reported in reviews on this topic 21, 22 ), the structure of BaFeO 2.5 reported here is the most complicated perovskite-type superstructure reported so far (largest primitive cell, number of ABX 2.5 units, number of different crystallographic sites). In addition, we report on the magnetic structure, which agrees well with the magnetic characterisation from SQUID measurements and we additionally describe the results of DFT based calculations as well as group theoretical considerations revealing the structural relationship to the cubic perovskite structure.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 8.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_dc4c63e5da9e",
+      "text": "BaFeO 2.5 was prepared as reported in 27 . Stoichiometric amounts of BaCO 3 (Sigma-Aldrich, ≥ 99 %) and Fe 2 O 3 (Fluka, ≥ 99 %) were ground by the use of a planetary ball mill (300 rpm, 15 min) and twice heated at 1100°C for 15 h under flowing N 2 with one intermediate grinding. It must be noted that contact of the sample to CO 2- 29, 30 and H 2 O- 31 containing atmospheres must to be avoided after preparation since BaFeO 2.5 is not stable due to water incorporation into the anion vacancies.",
+      "section_path": [
+        "Sample preparation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.9,
+      "peak_positions": [
+        100.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8dac28d0d8b9",
+      "text": "X-ray powder diffraction (XRD) patterns were recorded on a Bruker D8 diffractometer with Bragg-Brentano geometry and a fine focus X-ray tube with Cu anode. No primary beam monochromator was attached. A VANTEC detector and a variable divergence slit were used. The total scan time was 17 hours for the angular range between 5 and 130° 2θ.",
+      "section_path": [
+        "Diffraction experiments"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 19.9,
+      "peak_positions": [
+        130.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b86a1d11fb83",
+      "text": "Time of flight powder neutron diffraction (NPD) data were recorded on the HRPD high resolution diffractometer at the ISIS pulsed spallation source (Rutherford Appleton Laboratory, UK). 4 g of powdered BaFeO 2.5 were loaded into 8 mm diameter thin-walled, cylindrical vanadium sample cans and data collected at ambient temperature for 130 µAh proton beam current to the ISIS target (corresponding to ~3.5 hours beamtime).",
+      "section_path": [
+        "Diffraction experiments"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c4758b6a42df",
+      "text": "Initial refinement of the nuclear structure using both the XRD and NPD data were performed using the Rietveld method with the program TOPAS 4.2 (Bruker AXS, Karlsruhe, Germany) 32 . For the room temperature XRD data the whole 2θ-range was used, while for the NPD data only those data collected in the highest resolution backscattering detector bank (bank 1, average 2θ = 168.329º, d max ~ 2.5 Å) were used. The instrumental intensity distribution for the X-ray data was determined empirically from a sort of fundamental parameters set 33 , using a reference scan of LaB 6 , and the microstructural parameters were refined to adjust the peak shapes for the XRD data. For the neutron diffraction data, a corresponding TOF shape model was used. Lattice parameters were constrained to be the same for neutron -and XRD -data and the same positional parameters were used and refined for both data sets. Independent thermal displacement parameters were refined for each type of atom. While these parameters were also constrained to be the same both for X-rayand neutron-powder diffraction data, an additional B overall value was refined for XRD data accounting for further effects such as absorption or surface roughness.",
+      "section_path": [
+        "Diffraction experiments"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 19.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_da59d3ed3e79",
+      "text": "Reflections that showed a large magnetic scattering contribution were omitted from the initial crystallographic refinement.",
+      "section_path": [
+        "Diffraction experiments"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_081ae1a71a02",
+      "text": "Refinement of the magnetic structure of BaFeO 2.5 was performed with the program TOPAS Academic 5 32, 34 using the NPD data collected in all of the HRPD detector banks 1-3 at room temperature. A magnetic propagation vector of [ 1 / 2 0 0] was indicated from Pawley fits of the pattern and this vector is compatible with a G-type arrangement of the magnetic moments. This G-type arrangement was then tested and verified by introducing a second phase with doubled a-axis for which only the magnetic scattering was calculated and using constraints belonging to a G-type setting, thus allowing only the refinement of an overall magnitude and an overall orientation of the magnetic moment without differing between different crystallographic Fe sites. Unit cell, atomic position and thermal vibration parameters in this second phase were set to the refined values determined from the coupled analysis of bank 1 and XRD data. Different starting orientations of the magnetic moment in this G-type arrangement were investigated and evaluated and from this the correct magnetic symmetry and space group (P a 2 1 /c) were derived, indicating that the M y component is virtually zero. Other magnetic symmetries which are in principle also compatible with a space group of P a 2 1 /c and the k-vector of [ 1 / 2 0 0] were also tested and could be ruled out.",
+      "section_path": [
+        "Diffraction experiments"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_dcadb1d22ac6",
+      "text": "For the final analysis of the diffraction data, both the nuclear and the magnetic structure parameters were refined at once using the as-determined magnetic symmetry with space group P a 2 1 /c and with M y = 0 (the symmetry relationships are provided in detail in the Supplementary Material); the X-ray diffraction and neutron diffraction data of all the detector banks were used for this analysis. For the refinement of the magnetic structure, the amount of constraints was lowered allowing for different magnitudes and orientations of the magnetic moments on different crystallographic sites. For refinement of the nuclear structure, the same constraints were used as described above. Structural parameters given in this article refer to this final analysis.",
+      "section_path": [
+        "Diffraction experiments"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8312542ce2e0",
+      "text": "DC susceptibility measurements were performed over the temperature range 5 -390 K using a Quantum Design MPMS-XL SQUID magnetometer. The sample was pre-cooled to 5 K in zero magnetic field, then in an applied magnetic field µ 0 H of 20 mT . The susceptibility was subsequently measured whilst warming the sample up to 390 K (ZFC) and then cooling it again in the applied magnetic field to 5 K (FC).",
+      "section_path": [
+        "Magnetometric measurements"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8c20fc4c7c62",
+      "text": "Field-dependent DC susceptibility measurements were performed on the same instrument at 5 and 390 K between 0 and 4.5 T.",
+      "section_path": [
+        "Magnetometric measurements"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_e7bde351976e",
+      "text": "The 57 Fe Mössbauer spectrum for BaFeO 2.5 was recorded in standard transmission geometry in constant acceleration mode using a ca. 15 mCi 57 Co/Rh source at room temperature. The data are computed using the WinNormos software by R. A. Brand (WISSEL company) 35 . All isomer shifts are quoted relative to metallic iron at room temperature.",
+      "section_path": [
+        "Mössbauer measurements"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_041b7eef48df",
+      "text": "For the density functional theory calculations the Vienna Ab-initio Simulation Package (VASP, Version 5.3) was used [36] [37] [38] [39] . Projector Augmented Plane Waves 40 were applied with the spin-polarized GGA-PBE exchange correlation functional 41 . Due to the already large unit cell size the magnetic order was restricted to ferromagnetic.",
+      "section_path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_e193540b5942",
+      "text": "The valence electron configurations of the PAW datasets were:",
+      "section_path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_6899df8b5182",
+      "text": "Ba 5s 2 5p 6 6s 2 , Fe 3s 2 3p 6 4s 2 3d 6 , O 2s 2 2p 4 .",
+      "section_path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7dfa31a35c9b",
+      "text": "For the Fe 3d-electrons an additional Hubbard-U parameter was introduced. The LSDA+U calculations were performed in the formulation of Dudarev 42 with U-J=4 eV, as was used for Fe 3+ in the multiferroic perovskite BiFeO 3 43 .",
+      "section_path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9328a82fce7c",
+      "text": "The plane-wave energy cutoff was set to 600 eV and a 6x4x2 Monkhorst-Pack k-point mesh was used for Brillouin zone integration.",
+      "section_path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_80fb5bbcaaba",
+      "text": "The crystal structure (lattice parameters and atomic positions) was relaxed at fixed unit cell volume (the experimental value) until residual forces were less than 0.01 eV/A.",
+      "section_path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9d666b5fcdee",
+      "text": "The partial densities of states were calculated by integrating the charge density over spheres of the ionic radii 44 around each ion (Ba 2+ 1.45 Å, Fe 3+ 0.55 Å, O 2-1.35 Å).",
+      "section_path": [
+        "Computational Method"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7ccd22d767bc",
+      "text": "The SEM images were taken using the secondary electron detector of a Philips XL30 FEG scanning electron microscope operating at 30 keV. For EDX analysis the EDAX Genesis system was used and an energy resolution of about 140 eV was applied.",
+      "section_path": [
+        "Scanning Electron Microscopy (SEM) and Energy Dispersive X-ray Spectroscopy (EDX)"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c71aa2bc570f",
+      "text": "The mapped area was of the order of 100 μm² and the Ba to Fe ratio was determined from the Ba L and Fe K lines. The sample was sputtered with approximately 10 nm of Au prior to the measurements.",
+      "section_path": [
+        "Scanning Electron Microscopy (SEM) and Energy Dispersive X-ray Spectroscopy (EDX)"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_de10a80f4913",
+      "text": "The structural model of Zou et al. 28 was used as a starting model for the refinement of the crystal structure of BaFeO 2.5 . In agreement with the magnetic characterisation reported in section 3.3, we could conclude that their proposed space group P2 1 /c is likely to be correct and is consistent with the (001) and (010) reflections found in the XRD data at ~ 8°. Due to the high number of parameters for this refinement (7 Ba, 7",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 6.7,
+      "peak_positions": [
+        8.0
+      ],
+      "miller_indices": [
+        "(001)",
+        "(010)"
+      ]
+    },
+    {
+      "paragraph_id": "paragraph_9fefd8b622f6",
+      "text": "Fe, 17 O ions on the general site 4c (x, y, z), only 1 O at a special site 2a) constraints were used for the thermal parameters (same thermal parameter for each type of atom). A coupled analysis of X-ray-and neutron-powder diffraction data (XRD and NPD) is beneficial in such cases where strong X-ray scatterers (e. g. transition metals and heavy alkaline earths) are found adjacent to light X-ray scatterers (e. g. O and F) 14, 15, 45 . The initial coupled Rietveld analysis of XRD and NPD data (relaxing all positional parameters from the starting model of Zou et al. 28 ) generally gave a good description for the intensities of most of the superstructure reflections, but some of them showed significant misfit. This misfit could be attributed to the incorrect allocation of three different oxygen ions due to strong correlation for the refinement, since the fit of the X-ray diffraction data was superior to the one of the neutron diffraction data. Therefore, a Fourier difference analysis was performed on the neutron diffraction data, which assisted in identifying the correct positions for these 3 oxygen ions. Those ions were therefore placed at the positions indicated from the Fourier difference analysis, and the refinement then resulted in a similar pattern of vacancy distribution to that observed by Zou et al. 28 but also showing strong tilt and/or rotation of the iron coordination polyhedra and a different coordination scheme of the iron atoms (see later in this section). The final coupled Rietveld analysis (including the magnetic contribution, see section 3.3) is in excellent agreement with the observed patterns and is shown in Figure 1 , the refined structural parameters are listed in Table 1 .",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 17.7,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9af371fa4401",
+      "text": "To verify the structural model, we also attempted to build different starting models (by reallocating some of the oxygen ions to different vacancies), but the refinements always converged back to the reported structural model or gave a significantly worse description of the neutron pattern. We also failed to find evidence for significant partial occupancy of the anion sites. Such refinement is highly critical due to a high correlation of parameters for this complicated structure.",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_bff5c2e527f0",
+      "text": "In addition, EDX analysis (see Supplementary Material) was performed and confirmed within experimental error the Ba:Fe ratio of 1:1 (experimentally 1.035:1).",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_024f9f49417b",
+      "text": "This, together with the Mössbauer experiments (reported in section 3.2) showing only the presence of Fe 3+ , gives clear evidence that the compound has a composition BaFeO 2.5 (Ba 2 Fe 2 O 5 ).",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a3467c22663c",
+      "text": "SEM images further showed that the sample is a homogeneous powder with grain sizes of ~ 5-10 µm (see Supplementary Material). In their HRTEM analysis, Zou et al. 28 reported that they observed a simple hexagonal pattern only \"at the thinnest areas near the edge\" of the particles (up to a maximum of a couple of nm; however, we think that this could also be affected by the uptake of small amounts of water 31 ) and that the monoclinic structure with space group P2 1 /c represents the crystallites otherwise (> 100 nm). We could confirm this by estimating the degree of crystallinity Table 1. Crystal structure of BaFeO2.5 (space group P21/c) from the final coupled Rietveld analysis of XRD and NPD data. Atom Wyckoff site x y Z occ. B [Å²] Ba 2+ Ba1 / 4c 0.0546(9) 0.3517(6) 0.1145(3) 1 0.55(4) Ba 2+ Ba2 / 4c 0.2500(10) 0.6141(6) 0.3283(3) 1 0.55(4) Ba 2+ Ba3 / 4c 0.1431(9) 0.1304(6) 0.3215(3) 1 0.55(4) Ba 2+ Ba4 / 4c 0.3257(10) 0.6328(5) 0.0379(4) 1 0.55(4) Ba 2+ Ba5 / 4c 0.0547(11) 0.6176(7) 0.6001(4) 1 0.55(4) Ba 2+ Ba6 / 4c 0.5603(10) 0.3549(6) 0.2558(3) 1 0.55(4) Ba 2+ Ba7 / 4c 0.3544(13) 0.1102(5) 0.0364(4) 1 0.55(4) Fe 3+ Fe1 / 4c 0.5249(8) 0.3531(5) 0.1038(3) 1 0.47(3) Fe 3+ Fe2 / 4c 0.3848(8) 0.5816(4) 0.1860(3) 1 0.47(3) Fe 3+ Fe3 / 4c 0.0620(9) 0.3996(5) 0.2595(3) 1 0.47(3) Fe 3+ Fe4 / 4c 0.1739(10) 0.1525(5) 0.4707(3) 1 0.47(3) Fe 3+ Fe5 / 4c 0.4359(9) 0.3817(5) 0.3988(3) 1 0.47(3) Fe 3+ Fe6 / 4c 0.2707(9) 0.1045(5) 0.1746(3) 1 0.47(3) Fe 3+ Fe7 / 4c 0.1458(11) 0.6217(4) 0.4644(4) 1 0.47(3) O -2 O1 / 2a 0 0 0 1 0.66(2) O -2 O2 / 4c 0.2972(13) 0.7097(8) 0.1485(4) 1 0.66(2) O -2 O3 / 4c -0.0628(13) 0.2770(8) 0.2271(4) 1 0.66(2) O -2 O4 / 4c 0.0382(14) 0.0449(7) 0.4273(4) 1 0.66(2) O -2 O5 / 4c 0.0080(14) 0.2474(9) 0.0021(5) 1 0.66(2) O -2 O6 / 4c 0.2954(15) 0.5000(9) 0.4297(5) 1 0.66(2) O -2 O7 / 4c 0.7133(14) 0.2597(9) 0.0766(4) 1 0.66(2) O -2 O8 / 4c 0.0559(15) 0.1195(10) 0.1079(5) 1 0.66(2) O -2 O9 / 4c 0.4060(15) -0.0138(9) 0.1436(5) 1 0.66(2) O -2 O10 / 4c 0.4063(13) 0.2443(8) 0.1470(5) 1 0.66(2) O -2 O11 / 4c 0.1173(15) 0.0036(10) 0.2168(5) 1 0.66(2) O -2 O12 / 4c 0.4500(14) 0.1263(9) 0.2497(5) 1 0.66(2) O -2 O13 / 4c 0.1944(16) 0.4907(10) 0.2110(5) 1 0.66(2) O -2 O14 / 4c 0.5416(13) 0.4917(8) 0.1449(4) 1 0.66(2) O -2 O15 / 4c 0.3115(14) 0.2406(10) 0.4261(5) 1 0.66(2) O -2 O16 / 4c 0.3596(16) 0.3923(7) 0.0364(6) 1 0.66(2) O -2 O17 / 4c 0.2515(16) 0.3583(8) 0.3225(5) 1 0.66(2) O -2 O18 / 4c 0.653(2) 0.3669(7) 0.4636(6) 1 0.66(2) a [Å] 6.9753(1) c [Å] 23.4507(4) V [Å³] 1895.39(5) b [Å] 11.7281(2) β [°] 98.813(1) R wp (XRD+NPD) [%] 7.67 GOF (XRD+NPD) 6.00 R Bragg [%] 1.28 (XRD) 2.32 (NPD bank 1)",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 11.6,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b2642a0840f0",
+      "text": "Bond distances and formal coordination numbers of the respective cations are given in Table 2 , and drawings of the coordination polyhedra of the different iron sites are shown in Figure 2a -g. The structure was shown to be in good agreement with calculations of bond valence sums, giving a global instability index of 0.2 and a relatively good description of the valences of the different ions (see Table 3 ), although we acknowledge that bond valence sums can be problematic for perovskite compounds 46, 47 . The fact that some of the values of the BVS sums for iron are smaller than three might be consistent with the sensitivity of the compound towards uptake of water 31 and/or CO 2 29, 30 (allowing for the formation of additional Fe-O bonds), which might then allow for structural relaxation and more stable local environments. In addition, all the O-O distances are in agreement with the minimum distance expected from ionic radii (2.70 Å from Shannon radii 44 compared to the lowest distance found for the pair O11-O12 of 2.74(1) Å). The structure contains seven crystallographically different iron atoms, for which the effective coordination numbers 48 (ECoN) have been calculated and are shown in Table 4 .",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_5dc18cde5374",
+      "text": "Four of these iron atoms (Fe1-4) are found in tetrahedral coordination. The tetrahedron of Fe1 (see Figure 2a ) properly shares its corners with other iron-coordination polyhedra. In contrast, Fe2-4 (see Figure 2b-d ) share only three of their corners with other iron-coordination polyhedra. Their fourth corner is not shared with other polyhedra and the large distance to a neighboring iron atom precludes consideration as a coordinating polyhedron (distances of 3.07, 3.45 and 3.68 Å). This was confirmed by bond valence sums which showed that a Fe-O distance of 3.07 Å only gives an additional charge increment of ~0.05 and is also confirmed by considering the effective coordination numbers of the cations. In addition, this is expressed by the shape of the polyhedra in which the \"freestanding O ions\" point outwards. Furthermore, very long additional bonds (d > 3.6 Å) are found for Fe2-4 (exemplarily shown for Fe2, see Figure 2b ), which again should not be considered to contribute to bonding from the ECoN calculations and the bond valence sums. In addition, the non-shared oxygen ions connected to Fe4 and Fe3 (O4 and O3) show relatively short bond distances of 2.51 and 2.55 Å to the neighboring Ba ions, Ba1 and Ba2.",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_3cae9dd18300",
+      "text": "The Fe5 and Fe6 (see Figure 2e , f ) sites are found in fivefold square-pyramidal coordination. Again, for both, Fe5 and Fe6, an additional very long bond is formed to another neighboring tetrahedron (Fe2 and Fe3) with bond distances of 3.07 and 3.45 Å, increasing the coordination to a pseudo-octahedron. However, Fe5 and Fe6 show a clear off-center shift to the corner opposite to the long-distance bond, which is very typical for square-pyramidal coordination.",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7e7d6c162694",
+      "text": "The Fe7 site (see Figure 2g ) was found in a slightly distorted octahedral coordination.",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_05683749b2d7",
+      "text": "The atom is connected to the oxygen located at the special position 2a and is therefore connected to another polyhedron of Fe7.",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_74156cfdf900",
+      "text": "In conclusion, the coordination scheme is in agreement with the composition BaFeO 2.5 and can be described by the following formula / coordination scheme Ba 7 (FeO 4/2 ) 1 (FeO 3/2 O 1/1 ) 3 (FeO 5/2 ) 2 (FeO 6/2 ) 1 = Ba 7 Fe [6] 1 Fe [5] 2 Fe [4] 4 O 17.5 = Ba 7 Fe 7 O 17.5 = BaFeO 2.5",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a3aa257efd9a",
+      "text": "Although this scheme is in contrast to that proposed by Parras et al.(which had been derived from Mössbauer data only 27 ) and Zou et al. 28 , Ba 7 Fe [6] 3 Fe [5] 1 Fe [4] 3 O 17.5",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9e6dc4403f31",
+      "text": "we will show in section 3.2 that the Mössbauer data of Parras et al. 27 are in agreement with our own recorded data but can be interpreted in excellent agreement with the structure described in this article and with Mössbauer spectroscopy data from similar Fe 3+ containing compounds.",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a9362d9967fe",
+      "text": "Table 2. M-O bond distances (given in Å) and formal coordination numbers [CN] for Ba1-7 and Fe1-7. For the Ba ions, only oxygen ions with d < 4 Å have been considered. For Fe atoms with CN lower than 6, another next nearest oxygen which should not be considered to be bonded is given. Ba1 Ba2 Ba3 Ba4 Ba5 Ba6 Ba7 CN [9] CN [10] CN [10] CN [10] CN [10] CN [10] CN [12] O4 2.51(1) O3 2.55(1) O14 2.75(1) O18 2.75(1) O1 2.70(1) O12 2.79(1) O6 2.77(1) O7 2.64(1) O6 2.70(1) O17 2.78(1) O5 2.76(1) O18 2.71(1) O9 2.80(1) O6 2.79(1) O8 2.73(1) O7 2.79(1) O11 2.85(1) O2 2.78(1) O2 2.77(1) O11 2.84(1) O1 2.80(1) O10 2.76(1) O8 2.80(1) O15 2.86(1) O16 2.83(1) O9 2.79(1) O17 2.85(1) O18 2.85(1) O13 2.84(1) O9 2.82(1) O4 2.87(1) O15 2.84(1) O8 2.79(1) O2 2.87(1) O8 2.87(1) O5 2.88(1) O10 2.83(1) O13 2.87(1) O7 2.94(1) O6 2.80(1) O10 2.92(1) O9 2.88(1) O3 3.01(1) O11 2.92(1) O12 2.92(1) O4 2.97(1) O5 2.82(2) O3 2.96(1) O18 2.90(1) O16 3.05(1) O12 2.99(1) O3 2.99(1) O16 3.02(1) O17 3.02(1) O14 3.04(1) O5 2.91(1) O14 3.74(1) O17 3.00(1) O2 3.38(1) O14 3.19(1) O15 3.03(1) O13 3.05(1) O10 3.00(1) O13 3.08(1) O2 3.97(1) O4 3.67(1) O11 3.06(1) O12 3.19(1) O7 3.08(1) O15 3.10(1) O16 3.31(1) Fe1 Fe2 Fe3 Fe4 Fe5 Fe6 Fe7 CN [4] CN [4] CN [4] CN [4] CN [5] CN [5] CN [6] O16 1.87(1) O2 1.80(1) O3 1.79(1) O4 1.80(1) O6 1.90(1) O9 1.89(1) O1 2.01(1) O14 1.88(1) O12 1.83(1) O17 1.89(1) O15 1.84(1) O18 1.98(2) O11 1.96(1) O6 2.01(1) O7 1.89(1) O13 1.87(1) O11 1.89(1) O5 1.88(1) O9 2.01(1) O8 2.00(1) O18 2.03(1) O10 1.90(1) O14 1.89(1) O13 1.90(1) O16 1.93(1) O15 2.02(1) O12 2.01(1) O8 2.03(2) O17 2.06(1) O10 2.05(1) O5 2.05(1) O7 2.19(1) O3 3.86(1) O4 3.68(1) O9 4.17(1) O4 3.79(1) O2 3.07(1) O3 3.45(1)",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_acf569b40e8a",
+      "text": "(a) Fe1 (b) Fe2 (c) Fe3 (d) Fe4 (e) Fe5 (f) Fe6 (g) Fe7 Table 3. Bond valence sums (BVS) for the different crystallographic sites in monoclinic BaFeO2.5. The global instability indexed (GII) was calculated to be 0.20. site BVS site BVS site BVS site BVS Ba1 2.06 Fe1 2.66 O1 2.05 O10 1.90 Ba2 2.23 Fe2 2.94 O2 1.63 O11 1.94 Ba3 1.73 Fe3 2.79 O3 1.74 O12 1.92 Ba4 1.81 Fe4 2.84 O4 1.69 O13 2.00 Ba5 2.21 Fe5 2.61 O5 1.99 O14 1.86 Ba6 1.82 Fe6 2.67 O6 2.14 O15 1.90 Ba7 2.15 Fe7 2.69 O7 1.84 O16 1.86 O8 1.94 O17 1.85 O9 2.05 O18 1.95",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_003a47bc6676",
+      "text": "Table 4. Effective coordination numbers (ECoN 48 ) for the different Ba and Fe ions. site ECoN site ECoN Ba1 6.41 Fe1 4.00 Ba2 8.41 Fe2 3.95 Ba3 8.10 Fe3 3.89 Ba4 8.30 Fe4 3.89 Ba5 9.20 Fe5 4.86 Ba6 9.31 Fe6 4.82 Ba7 10.86 Fe7 5.81",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_4405440050b5",
+      "text": "Additionally, the vacancy ordered monoclinic structure of BaFeO 2.5 can be understood in terms of a group-subgroup relationship derived from the ideal cubic perovskite structure. This symmetry tree is described in more detail in the Supplementary Material, however, a shortened scheme showing the essential structural relationship is shown in Figure 3 . This symmetry relationship could, in principle, help elucidate how topochemical reactions 17 , which can be used to transform the compound into cubic perovskite type BaFeO 3 12 and BaFeO 2 F 13, 49, 50 (also altering the magnetic properties), can work from a structural point of view. The approximate positions of the vacancies (the four vacant oxygen positions derived from the \"undistorted\" cubic structure are given in the Supplementary Material), appear to order in a rhombic-type pattern in the b-c-plane (see Figure 4a ). This principal pattern was also observed by Zou et al. using HREM and CIP measurements 28 and can therefore be confirmed by our investigations. On closer examination of the structure in comparison to the pseudocubic setting, we found that O2, O3, and O4 showed by far the strongest shift from their ideal positions (mainly along the a-axis), whereas all the other oxygen ions remained far closer to their position for a pseudocubic arrangement (see Figure 4b and c ).",
+      "section_path": [
+        "Structural analysis"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "3",
+        "4"
+      ],
+      "xrd_score": 1.3,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b76078370363",
+      "text": "The 57 Fe Mössbauer spectrum recorded from BaFeO 2.5 at 298 K was best fitted to five components and is shown in Figure 5 . The line-widths of all components were constrained to 0.35 mm*s -1 .The parameters are collected in Table 5 . The spectrum and fitted parameters are very similar to those reported previously 27 for BaFeO 2.5.",
+      "section_path": [
+        "Mössbauer spectroscopic investigation of BaFeO 2.5"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "5"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_377ec13d91ae",
+      "text": "The chemical isomer shifts are all characteristic of Fe 3+ and are therefore consistent with the formulation BaFeO 2.5 . In addition the relative areas agree well with the site multiplicities of the different iron sites deduced from the structural analysis. The 57 Fe Mössbauer chemical isomer shifts are highly dependent on the coordination number 51 and the component in the Mössbauer spectrum reported here with a chemical isomer shift of 0.45 mms -1 is consistent with octahedrally coordinated Fe 3+ and we assign this component to Fe7. This spectral component also shows the largest magnetic hyperfine field and the chemical isomer shift is similar to that reported for Fe 3+ in structural variants of the compound BaFeO 2 F which also contains Fe 3+ in octahedral coordination 14, 15, 50 . The two components with lower chemical isomer shifts of 0.37 and 0.33 mm*s -1 indicate 51 lower coordination about Fe 3+ and we associate these with Fe5 and Fe6 in five-fold square pyramidal coordination but in which the sixth oxygen ion at longer distance corresponds to pseudo-octahedral coordination. The component with chemical isomer shift 0.37 mms -1 is assigned to Fe5 which has shorter distances to the sixth oxygen ion. We note that our analysis gives lower isomer shifts for the two components with 5-fold coordination as compared to the report of Parras et al. 27 (0.45 and 0.44 mm*s -1 ). The components with chemical isomer shifts of 0.23 and 0.15 mm*s -1 are similar to those of Fe 3+ in tetrahedral coordination as found in CaFeO 2.5 and SrFeO 2.5 27 and we assign these to the Fe1 and Fe2-4 sites. Amongst these tetrahedral sites the Fe2-4 are very similar since their tetrahedra possess one corner which is not shared with other iron-containing polyhedra. The unshared oxygen ion in these tetrahedra would be expected to induce a higher degree of covalency in the bonding to Fe 3+ and lower the chemical isomer shift and magnitude of the magnetic hyperfine field. Hence we associate the component with chemical isomer shift 0.15 mm*s -1 , B HF = 40 T and 44% area ratio with Fe2-4. Finally, we associate the component with chemical isomer shift 0.23 mm*s -1 to Fe1 which corresponds to tetrahedrally coordinated Fe 3+ where",
+      "section_path": [
+        "Mössbauer spectroscopic investigation of BaFeO 2.5"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_74361efcd199",
+      "text": "all corners of the tetrahedron are shared with other polyhedra thereby reducing the degree of covalency in the Fe-O bonds, which is reflected in the more positive chemical isomer shift and larger magnetic hyperfine field. Hence, the 57 Fe Mössbauer spectrum reported here, although similar to that described earlier 27 for BaFeO 2.5, endorses the new structural description proposed here. Table 5 . 57 Fe Mössbauer spectroscopy parameters (Δ chemical isomer shift, BHF magnetic hyperfine field, ε effective quadrupole interaction parameter) for BaFeO2.5 determined from the fit of the spectrum shown in Figure 5 . * := Tetrahedra for which one corner is not shared with another polyhedron.",
+      "section_path": [
+        "Mössbauer spectroscopic investigation of BaFeO 2.5"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "5"
+      ],
+      "xrd_score": 0.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_23180da9da3b",
+      "text": "+ = parameter is fixed in the refinement. The values given for Fe2-4 site are average values, as the component is fitted with a distribution of hyperfine parameters.",
+      "section_path": [
+        "Mössbauer spectroscopic investigation of BaFeO 2.5"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_3ee82a09c8e7",
+      "text": "Fe7, CN = 6 0.45(1) 50.3(5) -0.13( 2 ) 13(2) Fe5, CN = 5 0.37(1) 49.2(5) -0.50(2) 15(2) Fe6, CN = 5 0.33(1) 47.3(5) -0.64(2) 13(2) Fe1, CN = 4 0.23 + 42.1(5) 0.63(2) 15(2) Fe2-4*, CN = 4 0.15(1) 40.0(5) -0.2 + 44(4)",
+      "section_path": [
+        "Site δ (mm s -1 ) B HF [T] ε [mm s -1 ] Area [%]"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_6ca85ac34de7",
+      "text": "BaFeO 2.5 has been described as a room temperature antiferromagnet with a Néel temperature of 720 K 27 . Magnetisation measurements as a function of the applied magnetic field at 5 and 390 K are presented in Figure 6a and show a linear dependence reaching only very low magnetisation values. ZFC/FC measurements (see Figure 6b ) exhibit no feature of a magnetic transition or a ferri-/ ferro-magnetic contribution in the temperature range examined. These observations are in agreement with the antiferromagnetic order determined from the neutron powder diffraction examination of the magnetic structure of BaFeO 2.5 . reflections which cannot be indexed on the basis of the crystallographic unit cell. Therefore, Pawley fits were performed assuming doubling of one of the crystallographic axes (high resolution backscattering bank of HRPD, d-spacing range limited to 1.75 -2.55 Å) using the space group P2 (no absences of reflections due to translational symmetry). All the reflections could be indexed on the basis of a cell with 2*a nuc , b nuc , c nuc (R wp = 7.25 %), clearly indicating a k-vector of [ 1 / 2 0 0]. In contrast doubling of the b (k = [0 ½ 0]) and c axes (k = [0 0 ½]) (R wp = 7.97 % and 9.01 % for the same refinement conditions) did not result in a valid description of the reflections resulting from magnetic scattering, and a Pawley fit using a cell with a nuc , b nuc , c nuc (k = [0 0 0]) can be clearly discarded for not describing the magnetic reflections properly (R wp = 12.36).",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "6"
+      ],
+      "xrd_score": 6.1,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8f7540cb674a",
+      "text": "G-type antiferromagnetic ordering is often found for antiferromagnetic \"cubic\" perovskite-type compounds which contain only Fe 3+ 13, 45, 50, 52 . This antiferromagnetic ordering is usually enhanced by 180° superexchange coupling (or nearly 180° superexchange which is found to be the case for BaFeO 2.5 ) for corner sharing Fe-O-Fe polyhedra. Such an antiferromagnetic alignment between neighbouring polyhedra enables a G-type antiferromagnetic order to be envisaged for the vacancy ordered variant of BaFeO 2.5 (see Figure 7 ). Such an ordering requires a doubling of the a-axis of the nuclear cell to describe the magnetic cell, in agreement with the results from the Pawley fit and the determined k-vector of [ 1 / 2 0 0] and indicates that such (or a similar) magnetic ordering might exist in BaFeO 2.5 . ions red). The k-vector with respect to the monoclinic cell is [½ 0 0].",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "7"
+      ],
+      "xrd_score": 1.0,
+      "peak_positions": [
+        180.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_cfa6d7e3410d",
+      "text": "In a first attempt to confirm this G-type order and since only a few reflections resulting from magnetic ordering were present in the neutron diffraction data, the magnitude of the magnetic moments of all iron ions were constrained to be the same. In addition, the orientations of the magnetic moments of the iron atoms in polyhedra connected via corners (e. g. FeA-O-FeB) were constrained in such a way that Mx(FeA) = -Mx(FeB), My(FeA) = -My(FeB) and Mz(FeA) = -Mz(FeB), i. e. only an overall orientation of the magnetic moments was refined and only two different overall orientations of the magnetic moment were possible for all the iron atoms, namely (Mx, My, Mz) and (-Mx, -My, -Mz), implying G-type magnetic order and in agreement with overall antiferromagnetic properties. This principle alignment of the magnetic moments would correspond to P s -1 as the magnetic space group. Several starting orientations of the magnetic moments were examined for this analysis. The best fit to the recorded pattern was obtained for a magnetic moment of Mx = 1.86 µB, My = 0.66 µB, Mz = 2.99 µB, Mtotal = 3.35(1) µB, pointing mainly along the c-axis, with a very minor contribution of the moment along b-axis.",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 1.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7c8fae6e878b",
+      "text": "Despite the strict constraints, such an alignment of the magnetic moments already gives a very good description of the intensities resulting from magnetic scattering, and therefore indicates that the assumption of G-type ordering for BaFeO 2.5 is valid. This is also in agreement with the results from the SQUID measurements.",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_19c23cfa23e5",
+      "text": "Analyzing the magnetic structure further 53 shows that among the magnetic space groups derived from the Fedorov space group P2 1 /c, only the magnetic space group P a 2 1 /c (BNS 14.80) [54] [55] [56] is compatible with a propagation vector of [ 1 / 2 0 0] (see Supplementary Material). In total, four magnetic symmetries with space groups P a 2 1 /c 53 would be possible, which would all be compatible with overall antiferromagnetic properties of the compound (those symmetries differ with respect to the origin for the antitranslation operation and the choice of the c-axis of the cell, see Supplementary information for detailed transformation matrixes). Among them, two settings are in principle compatible with G-type order of the magnetic moments, one of them allowing for a magnetic moment along the M x and M z axes (M y is then incompatible with G-type order) and the other allowing for a magnetic moment along the M y axis (M x and M z are then incompatible with G-type order). The two other settings are incompatible with G-type order at all and will have to result in ferromagnetic alignment of the magnetic moments between at least some of the Fe polyhedra connected by corners. We found that only the setting with magnetic moments pointing mainly along the M x and M z axes in a G-type order (allowing for different magnitudes and directions for the magnetic moments on the different Fe sites) can be used to describe the magnetic reflections properly (also see Supplementary Material). This was also already indicated by the refinement using space group P s -1, where M y is the weakest among the three different crystallographic directions (this component therefore has only a minor influence on the quality of the fit of the magnetic reflections). The final refinement using space group P a 2 1 /c shown in Figure 1 (with M y = 0) results in an almost equally good fit of the diffraction pattern (ΔR wp ~ 0.01) compared to using the P a 2 1 /c setting without fixing M y to 0, confirming the alignment of the magnetic moments in the a/c plane. Furthermore the magnetic space group P a 2 1 /c is also maximal, i. e. a propagation vector of [ 1 / 2 , 0, 0] would not allow for any magnetic ordering with higher symmetry. The magnetic structure is included in a cif-like file (mcif format), which is supported by programs like ISODISTORT 57 , VESTA 58 , etc., in the Supplementary Material.",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 5.1,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_36b3100837d9",
+      "text": "The magnetic moments for the different Fe sites are listed in Table 6 . The magnetic moment increases with the coordination number by trend, and this agrees well with the fact that the magnetic moment obtained from neutron diffraction is lowered if covalent bonding is present (which is stronger for shorter Fe-O bonds, i. e. lower coordination numbers). Among the four tetrahedrally coordinated Fe atoms, the magnetic moments for Fe2-4 are significantly lower than the one for Fe1, and those iron atoms are connected to one oxygen ion which is not shared with another Fe coordination polyhedron. This trend is also confirmed regarding the magnetic hyperfine fields obtained from the fit of the Mössbauer spectrum (see Table 5 , section 3.2) and from the behavior of the pDOS reported in the following section.",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_0349e5010811",
+      "text": "Furthermore, the overall magnitude of the magnetic moments agrees well with what was found for similar perovskite-type compounds also containing mainly/only Fe 3+ 14, 15, 45, 59 and showing magnetic order at room temperature. Due to the high correlation and the small number of magnetic reflections, we think the small canting of magnetic moments between neighbouring sites should not be overinterpreted.",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_068ee7753eac",
+      "text": "Table 6. Magnetic moments for the different crystallographic sites determined from a Rietveld analysis of the magnetic structure of BaFeO2.5 (CN = coordination number). * := one corner of the coordination tetrahedron is not properly shared with a neighbouring polyhedron. site CN Mx [µ B ] Mz [µ B ] Mtotal [µ B ] Fe1 4 2.4(2) 3.4(1) 3.8 Fe2* 4 -1.9(2) -2.6(1) 3.0 Fe3* 4 1.6(2) 2.4(1) 2.6 Fe4* 4 1.9(2) 2.9(1) 3.2 Fe5 5 -2.4(2) -3.3(1) 3.8 Fe6 5 -1.4(2) -3.6(1) 3.7 Fe7 6 1.3(2) 4.2(1) 4.2 Among them, the pDOS of Fe4 is again slightly different due to the fact that its outstanding oxygen is pointing towards the face of the coordination tetrahedron of Fe2, whereas for Fe2+3 the freestanding oxygen could be considered slightly bonded to the Fe5 with respect to the Fe6 atom. Therefore, Fe4 should be more covalently bonded to its freestanding oxygen than in the situation with Fe2+3. This is also reflected in the Mössbauer data attributed to the tetrahedral sites (see Section 3.3) with Fe1 having a more positive and Fe2-4 a slightly reduced isomer shift.",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c5e41789e855",
+      "text": "The pDOS of the octahedral / square pyramidal sites for Fe5, Fe6, and Fe7 are rather similar and again with different center of gravities for the occupied states. The pDOS for Fe7, which shows proper octahedral coordination, again looks slightly different compared to the pDOS of Fe5 and Fe6, with the center of gravity of the occupied states shifted to slightly higher energies for Fe7. Overall, we can conclude that the behavior of isomer shifts recorded by Mössbauer spectroscopy agrees well with the results from the DFT based calculations.",
+      "section_path": [
+        "Magnetometric Characterisation and Determination of the Magnetic Structure"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_4e90f08ba8e0",
+      "text": "We show here that the crystal structure of monoclinic BaFeO 2.5 can be understood in terms of a highly complex vacancy ordered modification of the cubic perovskite structure. This structure is, to our knowledge, the least symmetric vacancy ordered perovskite so far reported, containing seven crystallographically different iron ions.",
+      "section_path": [
+        "Conclusion"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_170075dbe39d",
+      "text": "Solving the structure was only possible by the use of high resolution neutron powder diffraction data in combination with laboratory XRD data. The structure contains iron in octahedral (1/7), square-pyramidal (2/7), and tetrahedral coordination (4/7). The compound shows antiferromagnetic ordering at room temperature. Although the crystallographic structure is highly complicated, the magnetic structure can be understood in terms of a simple G-type antiferromagnetic order, being in agreement with FC/ZFC and Field Sweep measurements.",
+      "section_path": [
+        "Conclusion"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 8.0,
+      "peak_positions": [],
+      "miller_indices": []
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig_22",
+      "label": "22",
+      "normalized_label": "22",
+      "caption": "22 . However, other superstructures are also known showing square instead of tetrahedral coordination as well as square-",
+      "graphic_targets": [],
+      "coords": "5,512.26,664.89,8.91,7.44;5,521.14,667.56,3.34,11.10;5,70.82,695.16,38.72,11.10;5,109.58,699.57,11.18,7.44;5,124.34,692.49,8.91,7.44;5,133.22,695.16,40.98,11.10;5,174.26,699.57,11.06,7.44;5,188.90,692.49,8.79,7.44;5,197.69,695.16,43.62,11.10;5,241.37,699.57,11.18,7.44;5,256.13,692.49,8.91,7.44;5,265.01,695.16,22.28,11.10;5,287.33,699.57,4.47,7.44;5,291.77,695.16,41.96,11.10;5,333.79,699.57,4.47,7.44;5,340.75,692.49,8.91,7.44;5,349.63,695.16,174.86,11.10;5,70.82,722.76,453.59,11.10",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 0.0,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_2_2",
+      "label": null,
+      "normalized_label": null,
+      "caption": "( see Supplementary Material), and those experiments indicate that the sample can be assumed to be represented by the monoclinic structure with space group P2 1 /c to close to 100 % within errors. The actual crystallite size determined from reflection broadening of the XRD patterns is about one order of magnitude smaller (~ 150 -200 nm), indicating the presence of domain walls within the grains. However, the Rietveld analysis also indicates that strain has an additional influence on the broadening of the reflections making separation of both effects extremely difficult via a fundamental parameters technique and nearly impossible via the Williamson Hall method due to strong peak overlap. Despite the presence of domain walls, the fact that the sample contains only Fe 3+ (see Mössbauer section 3.2) in combination with the principle of local charge neutrality and the excellent fit of the diffraction patterns indicates that the oxygen content and vacancy distribution is likely to be equal and homogenous between different domains.",
+      "graphic_targets": [],
+      "coords": "13,70.82,414.55,453.22,11.10;13,70.82,441.93,426.15,11.10;13,497.02,446.34,4.47,7.44;13,501.46,441.93,23.09,11.10;13,70.82,469.65,453.54,11.10;13,70.82,497.13,453.75,11.26;13,74.18,524.85,450.39,11.10;13,70.82,552.45,453.75,11.10;13,70.82,580.05,453.29,11.10;13,70.82,607.68,453.28,11.10;13,70.82,635.28,453.70,11.10;13,70.82,662.88,175.90,11.10;13,246.77,660.21,9.14,7.44;13,263.81,662.88,260.50,11.10;13,70.82,690.48,453.40,11.10;13,70.82,718.08,453.72,11.10;13,70.82,745.80,216.80,11.10",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 17.8,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Figure 1 . Figure 1. Coupled Rietveld analysis of the nuclear and magnetic structure of BaFeO2.5 of HRPD bank 1 (a), bank 2 (b), bank 3 (c) and XRD (d) data.",
+      "graphic_targets": [],
+      "coords": "14,71.54,428.97,452.14,8.32;14,214.13,439.29,167.03,8.32;14,71.65,248.50,221.60,154.90",
+      "graphic_coords": "14,71.65,248.50,221.60,154.90",
+      "figure_type": null,
+      "xrd_score": 11.9,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/scraped_pdfs/05_W1999730932_crystallographic-and-magnetic-structure-of-the-perovskite-type-compoun/figures/fig_1.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_9fefd8b622f6",
+        "paragraph_19c23cfa23e5"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_9d666b5fcdee",
+        "paragraph_7ccd22d767bc",
+        "paragraph_c71aa2bc570f",
+        "paragraph_de10a80f4913",
+        "paragraph_9fefd8b622f6",
+        "paragraph_9af371fa4401",
+        "paragraph_bff5c2e527f0",
+        "paragraph_024f9f49417b",
+        "paragraph_a3467c22663c",
+        "paragraph_6ca85ac34de7",
+        "paragraph_8f7540cb674a",
+        "paragraph_cfa6d7e3410d",
+        "paragraph_7c8fae6e878b",
+        "paragraph_19c23cfa23e5",
+        "paragraph_36b3100837d9",
+        "paragraph_0349e5010811",
+        "paragraph_068ee7753eac",
+        "paragraph_c5e41789e855"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Figure 2 . Figure 2. Local coordination of the seven crystallographically different iron sites and connectivity to neighboring polyhedra.",
+      "graphic_targets": [],
+      "coords": "20,83.66,578.37,427.86,8.33;20,247.61,588.81,99.87,8.33;20,245.90,439.84,123.80,122.97",
+      "graphic_coords": "20,245.90,439.84,123.80,122.97",
+      "figure_type": null,
+      "xrd_score": 2.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_b2642a0840f0",
+        "paragraph_5dc18cde5374",
+        "paragraph_3cae9dd18300",
+        "paragraph_7e7d6c162694"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_9af371fa4401",
+        "paragraph_bff5c2e527f0",
+        "paragraph_024f9f49417b",
+        "paragraph_a3467c22663c",
+        "paragraph_b2642a0840f0",
+        "paragraph_5dc18cde5374",
+        "paragraph_3cae9dd18300",
+        "paragraph_7e7d6c162694",
+        "paragraph_05683749b2d7",
+        "paragraph_74156cfdf900",
+        "paragraph_a3aa257efd9a",
+        "paragraph_9e6dc4403f31"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Figure 3 . Figure 3. Schematic group-subgroup relationship between the cubic perovskite structure and the monoclinic structure of BaFeO2.5.",
+      "graphic_targets": [],
+      "coords": "22,90.02,213.40,415.00,8.32;22,226.49,223.72,142.44,8.32;22,71.90,70.85,451.50,117.00",
+      "graphic_coords": "22,71.90,70.85,451.50,117.00",
+      "figure_type": null,
+      "xrd_score": 0.5,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_4405440050b5"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_9e6dc4403f31",
+        "paragraph_a9362d9967fe",
+        "paragraph_acf569b40e8a",
+        "paragraph_003a47bc6676",
+        "paragraph_4405440050b5",
+        "paragraph_b76078370363",
+        "paragraph_377ec13d91ae",
+        "paragraph_74361efcd199",
+        "paragraph_23180da9da3b"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Figure 4 . Figure 4. Schematic representation of the location of the vacancies (black balls) in BaFeO2.5 (Ba ions are not shown). Strongly shifted oxygen ions O2, O3, and O4 are shown as green balls, the pseudocubic positions of O2, O3, and O4 are shown as purple balls. Viewing directions were chosen along the a-(a), b-(b) and c-axis (c).",
+      "graphic_targets": [],
+      "coords": "23,74.78,725.16,445.59,8.33;23,82.70,735.47,429.84,8.33;23,77.06,745.79,441.28,8.33;23,255.17,756.11,85.04,8.33;23,202.60,462.44,204.10,234.52",
+      "graphic_coords": "23,202.60,462.44,204.10,234.52",
+      "figure_type": null,
+      "xrd_score": 0.9,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_5",
+      "label": "557",
+      "normalized_label": "557",
+      "caption": "Figure 5 . 57 Fe Figure 5. 57 Fe Mössbauer spectrum recorded from BaFeO2.5 at room temperature.",
+      "graphic_targets": [],
+      "coords": "25,124.46,675.48,37.66,8.33;25,164.54,673.07,6.70,5.55;25,171.26,675.48,299.53,8.33;25,140.15,384.42,314.25,264.75",
+      "graphic_coords": "25,140.15,384.42,314.25,264.75",
+      "figure_type": null,
+      "xrd_score": 0.5,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Figure 6 . Figure 6. Magnetisation measurements as function of a) the external magnetic field and b) the temperature.Close examination of the neutron diffraction data showed the appearance of",
+      "graphic_targets": [],
+      "coords": "27,97.46,454.89,399.99,8.32;27,270.41,465.21,54.53,8.32;27,70.82,486.33,453.65,11.10;27,165.50,70.85,264.30,358.10",
+      "graphic_coords": "27,165.50,70.85,264.30,358.10",
+      "figure_type": null,
+      "xrd_score": 1.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_6ca85ac34de7"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_377ec13d91ae",
+        "paragraph_74361efcd199",
+        "paragraph_23180da9da3b",
+        "paragraph_3ee82a09c8e7",
+        "paragraph_6ca85ac34de7",
+        "paragraph_8f7540cb674a",
+        "paragraph_cfa6d7e3410d",
+        "paragraph_7c8fae6e878b",
+        "paragraph_19c23cfa23e5"
+      ]
+    },
+    {
+      "figure_id": "fig_7",
+      "label": "7",
+      "normalized_label": "7",
+      "caption": "Figure 7 . Figure 7. Schematic representation of the magnetic structure of BaFeO2.5. Fe 3+ ions in spin-up state are found in the blue, Fe 3+ ions in spin-down state are found in the green polyhedra (Ba 2+ ions orange, O 2-",
+      "graphic_targets": [],
+      "coords": "28,77.54,690.60,327.12,8.33;28,404.71,688.19,6.86,5.55;28,414.07,690.60,103.52,8.33;28,80.30,700.92,87.97,8.33;28,168.38,698.51,6.86,5.55;28,177.74,700.92,259.28,8.33;28,437.23,698.51,6.86,5.55;28,446.59,700.92,63.10,8.33;28,509.74,698.51,5.24,5.55;28,91.40,422.02,412.50,242.25",
+      "graphic_coords": "28,91.40,422.02,412.50,242.25",
+      "figure_type": null,
+      "xrd_score": 1.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_8f7540cb674a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_74361efcd199",
+        "paragraph_23180da9da3b",
+        "paragraph_3ee82a09c8e7",
+        "paragraph_6ca85ac34de7",
+        "paragraph_8f7540cb674a",
+        "paragraph_cfa6d7e3410d",
+        "paragraph_7c8fae6e878b",
+        "paragraph_19c23cfa23e5",
+        "paragraph_36b3100837d9"
+      ]
+    },
+    {
+      "figure_id": "fig_8_2",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "3. 4 DFT based optimization of the crystallographic and electronic structure DFT based calculations showed only very small changes in the local coordination environments of the iron atoms, i. e. small changes (e. g. < 0.09 Å in the bond distances for the Fe-O bonds), same principal coordination and very similar lattice parameters (a = 6.957 Å, b = 11.759 Å, c = 23.409 Å, beta = 98.28°). Overall the DFT calculations give a good indication that the structural arrangement from the analysis of XRD and NPD data can be considered to be stable, i. e. no square pyramidal coordination changed into octahedral coordination.The density of states (DOS) and partial density of states (pDOS) of the seven crystallographically different iron atoms are plotted in Figure8. Comparing the pDOS for the tetrahedrally coordinated iron atoms Fe1-4, one can see that the center of gravity of the states of Fe1 is shifted to lower energies compared to Fe2-4. This can be explained by the fact that all the O ions connected to Fe1 are properly shared with other iron atoms, whereas Fe2-4 each have one oxygen, which is not shared with other polyhedra.",
+      "graphic_targets": [],
+      "coords": "31,70.82,585.12,453.44,11.99;31,99.62,615.03,56.27,11.99;31,70.82,644.64,453.23,11.10;31,70.82,672.24,453.24,11.10;31,70.82,699.84,453.30,11.10;31,70.82,727.44,453.53,11.10;31,70.82,755.04,453.70,11.10;32,70.82,73.22,453.51,11.10;32,70.82,100.96,269.06,11.10;32,70.82,138.52,453.28,11.10;32,70.82,166.12,453.61,11.10;32,70.82,193.72,453.41,11.10;32,70.82,221.32,453.69,11.10;32,70.82,248.92,453.66,11.10;32,70.82,276.55,453.70,11.10;32,70.82,304.27,86.75,11.10",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 6.2,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_4405440050b5"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_9e6dc4403f31",
+        "paragraph_a9362d9967fe",
+        "paragraph_acf569b40e8a",
+        "paragraph_003a47bc6676",
+        "paragraph_4405440050b5",
+        "paragraph_b76078370363",
+        "paragraph_377ec13d91ae",
+        "paragraph_74361efcd199",
+        "paragraph_23180da9da3b"
+      ]
+    },
+    {
+      "figure_id": "fig_8",
+      "label": "8",
+      "normalized_label": "8",
+      "caption": "Figure 8 . Figure 8. Total DOS and partial DOS for the different Fe sites in BaFeO2.5.",
+      "graphic_targets": [],
+      "coords": "33,141.86,399.43,311.67,8.32;33,73.23,70.85,448.85,302.97",
+      "graphic_coords": "33,73.23,70.85,448.85,302.97",
+      "figure_type": null,
+      "xrd_score": 0.5,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    }
+  ],
+  "tables": [],
+  "references": [
+    {
+      "reference_id": "b0",
+      "title": null,
+      "doi": null,
+      "year": "2013",
+      "authors": [
+        "C Benel",
+        "A Darbandi",
+        "R Djenadic",
+        "A Evans",
+        "R Tölke",
+        "M Prestat",
+        "H Hahn"
+      ],
+      "raw_text": "C Benel A J Darbandi R Djenadic A Evans R Tölke M Prestat H Hahn J. Power Sources 229 2013 Benel, C.; Darbandi, A. J.; Djenadic, R.; Evans, A.; Tölke, R.; Prestat, M.; Hahn, H., J. Power Sources 2013, 229, 258-264."
+    },
+    {
+      "reference_id": "b1",
+      "title": null,
+      "doi": null,
+      "year": "1983",
+      "authors": [
+        "J Mizusaki",
+        "T Sasamoto",
+        "W Cannon",
+        "H Bowen"
+      ],
+      "raw_text": "J Mizusaki T Sasamoto W R Cannon H K Bowen J. Am. Ceram. Soc 66 1983 Mizusaki, J.; Sasamoto, T.; Cannon, W. R.; Bowen, H. K., J. Am. Ceram. Soc. 1983, 66, 247-252."
+    },
+    {
+      "reference_id": "b2",
+      "title": null,
+      "doi": null,
+      "year": "2009",
+      "authors": [
+        "G Deng",
+        "Y Chen",
+        "M Tao",
+        "C Wu",
+        "X Shen",
+        "H Yang"
+      ],
+      "raw_text": "G Deng Y Chen M Tao C Wu X Shen H Yang Electrochim. Acta 54 2009 Deng, G.; Chen, Y.; Tao, M.; Wu, C.; Shen, X.; Yang, H., Electrochim. Acta 2009, 54, 3910-3914."
+    },
+    {
+      "reference_id": "b3",
+      "title": null,
+      "doi": null,
+      "year": "1970",
+      "authors": [
+        "J Harada",
+        "T Pedersen",
+        "Z Barnea"
+      ],
+      "raw_text": "J Harada T Pedersen Z Barnea Acta Crystallogr 26 1970 Harada, J.; Pedersen, T.; Barnea, Z., Acta Crystallogr. 1970, 26, 336-344."
+    },
+    {
+      "reference_id": "b4",
+      "title": null,
+      "doi": null,
+      "year": "1970",
+      "authors": [
+        "J Teague",
+        "R Gerson",
+        "W James"
+      ],
+      "raw_text": "J R Teague R Gerson W J James Solid State Commun 8 1970 Teague, J. R.; Gerson, R.; James, W. J., Solid State Commun. 1970, 8, 1073- 1074."
+    },
+    {
+      "reference_id": "b5",
+      "title": null,
+      "doi": null,
+      "year": "1982",
+      "authors": [
+        "I Sosnowska",
+        "T Peterlin-Neumaier",
+        "E Steichele"
+      ],
+      "raw_text": "I Sosnowska T Peterlin-Neumaier E Steichele J. Phys. C: Solid State Phys 15 1982 Sosnowska, I.; Peterlin-Neumaier, T.; Steichele, E., J. Phys. C: Solid State Phys. 1982, 15, 4835-4846."
+    },
+    {
+      "reference_id": "b6",
+      "title": null,
+      "doi": null,
+      "year": "2005",
+      "authors": [
+        "J Neaton",
+        "C Ederer",
+        "U Waghmare",
+        "N Spaldin",
+        "K Rabe"
+      ],
+      "raw_text": "J B Neaton C Ederer U V Waghmare N A Spaldin K M Rabe Physical Review B 71 2005 Neaton, J. B.; Ederer, C.; Waghmare, U. V.; Spaldin, N. A.; Rabe, K. M., Physical Review B 2005, 71."
+    },
+    {
+      "reference_id": "b7",
+      "title": null,
+      "doi": null,
+      "year": "2007",
+      "authors": [
+        "V Khomchenko",
+        "D Kiselev",
+        "J Vieira",
+        "A Kholkin",
+        "M Sa",
+        "Y Pogorelov"
+      ],
+      "raw_text": "V A Khomchenko D A Kiselev J M Vieira A L Kholkin M A Sa Y G Pogorelov Appl. Phys. Lett 242901 2007 Khomchenko, V. A.; Kiselev, D. A.; Vieira, J. M.; Kholkin, A. L.; Sa, M. A.; Pogorelov, Y. G., Appl. Phys. Lett. 2007, 90, 242901."
+    },
+    {
+      "reference_id": "b8",
+      "title": null,
+      "doi": null,
+      "year": "2008",
+      "authors": [
+        "V Khomchenko",
+        "D Kiselev",
+        "E Seluneva",
+        "J Vieira",
+        "A Lopes",
+        "Y Pogorelov",
+        "J Araujo",
+        "A Kholkin"
+      ],
+      "raw_text": "V A Khomchenko D A Kiselev E K Seluneva J M Vieira A M L Lopes Y G Pogorelov J P Araujo A L Kholkin Mater. Lett 62 2008 Khomchenko, V. A.; Kiselev, D. A.; Seluneva, E. K.; Vieira, J. M.; Lopes, A. M. L.; Pogorelov, Y. G.; Araujo, J. P.; Kholkin, A. L., Mater. Lett. 2008, 62, 1927-1929."
+    },
+    {
+      "reference_id": "b9",
+      "title": null,
+      "doi": null,
+      "year": "2009",
+      "authors": [
+        "G Catalan",
+        "J Scott"
+      ],
+      "raw_text": "G Catalan J F Scott Adv. Mater. (Weinheim, Ger.) 21 2009 Catalan, G.; Scott, J. F., Adv. Mater. (Weinheim, Ger.) 2009, 21, 2463-2485."
+    },
+    {
+      "reference_id": "b10",
+      "title": null,
+      "doi": null,
+      "year": "2012",
+      "authors": [
+        "N Masó",
+        "A West"
+      ],
+      "raw_text": "N Masó A R West Chem. Mater 24 2012 Masó, N.; West, A. R., Chem. Mater. 2012, 24, 2127-2132."
+    },
+    {
+      "reference_id": "b11",
+      "title": null,
+      "doi": null,
+      "year": "2011",
+      "authors": [
+        "N Hayashi",
+        "T Yamamoto",
+        "H Kageyama",
+        "M Nishi",
+        "Y Watanabe",
+        "T Kawakami",
+        "Y Matsushita",
+        "A Fujimori",
+        "M Takano"
+      ],
+      "raw_text": "N Hayashi T Yamamoto H Kageyama M Nishi Y Watanabe T Kawakami Y Matsushita A Fujimori M Takano Angewandte Chemie International Edition 50 2011 Hayashi, N.; Yamamoto, T.; Kageyama, H.; Nishi, M.; Watanabe, Y.; Kawakami, T.; Matsushita, Y.; Fujimori, A.; Takano, M., Angewandte Chemie International Edition 2011, 50, 12547-12550."
+    },
+    {
+      "reference_id": "b12",
+      "title": "Solid State Commun",
+      "doi": null,
+      "year": "2007",
+      "authors": [],
+      "raw_text": "Solid State Commun R Heap P R Slater F J Berry O Helgason A J Wright 2007 141 Heap, R.; Slater, P. R.; Berry, F. J.; Helgason, O.; Wright, A. J., Solid State Commun. 2007, 141, 467-470."
+    },
+    {
+      "reference_id": "b13",
+      "title": null,
+      "doi": null,
+      "year": "2013",
+      "authors": [
+        "O Clemens",
+        "F Berry",
+        "J Bauer",
+        "A Wright",
+        "K Knight",
+        "P Slater"
+      ],
+      "raw_text": "O Clemens F J Berry J Bauer A J Wright K S Knight P R Slater J. Solid State Chem 203 2013 Clemens, O.; Berry, F. J.; Bauer, J.; Wright, A. J.; Knight, K. S.; Slater, P. R., J. Solid State Chem. 2013, 203, 218-226."
+    },
+    {
+      "reference_id": "b14",
+      "title": null,
+      "doi": null,
+      "year": "2013",
+      "authors": [
+        "O Clemens",
+        "A Wright",
+        "F Berry",
+        "R Smith",
+        "P Slater"
+      ],
+      "raw_text": "O Clemens A J Wright F J Berry R I Smith P R Slater J. Solid State Chem 198 2013 Clemens, O.; Wright, A. J.; Berry, F. J.; Smith, R. I.; Slater, P. R., J. Solid State Chem. 2013, 198, 262-269."
+    },
+    {
+      "reference_id": "b15",
+      "title": null,
+      "doi": null,
+      "year": "1971",
+      "authors": [
+        "A Colville",
+        "S Geller"
+      ],
+      "raw_text": "A A Colville S Geller Acta Crystallographica Section B 27 1971 Colville, A. A.; Geller, S., Acta Crystallographica Section B 1971, 27, 2311- 2315."
+    },
+    {
+      "reference_id": "b16",
+      "title": null,
+      "doi": null,
+      "year": "2013",
+      "authors": [
+        "O Clemens",
+        "P Slater"
+      ],
+      "raw_text": "O Clemens P R Slater Rev. Inorg. Chem 33 2013 Clemens, O.; Slater, P. R., Rev. Inorg. Chem. 2013, 33, 105-117."
+    },
+    {
+      "reference_id": "b17",
+      "title": null,
+      "doi": null,
+      "year": "2001",
+      "authors": [
+        "M Schmidt",
+        "S Campbell"
+      ],
+      "raw_text": "M Schmidt S J Campbell J. Solid State Chem 156 2001 Schmidt, M.; Campbell, S. J., J. Solid State Chem. 2001, 156, 292-304."
+    },
+    {
+      "reference_id": "b18",
+      "title": null,
+      "doi": null,
+      "year": "1999",
+      "authors": [
+        "P Berastegui",
+        "S Eriksson",
+        "S Hull"
+      ],
+      "raw_text": "P Berastegui S G Eriksson S Hull Mater. Res. Bull 34 1999 Berastegui, P.; Eriksson, S. G.; Hull, S., Mater. Res. Bull. 1999, 34, 303-314."
+    },
+    {
+      "reference_id": "b19",
+      "title": null,
+      "doi": null,
+      "year": "2002",
+      "authors": [],
+      "raw_text": "J. Solid State Chem P Ull S Garc A-Garc A, . . Riksson S G 164 2002 erastegui, P. ull, S. Garc a-Garc a, . . riksson, S. G., J. Solid State Chem. 2002, 164, 119-130."
+    },
+    {
+      "reference_id": "b20",
+      "title": null,
+      "doi": null,
+      "year": "2008",
+      "authors": [
+        "A Muñoz",
+        "C De La Calle",
+        "J Alonso",
+        "P Botta",
+        "V Pardo",
+        "D Baldomir",
+        "J Rivas"
+      ],
+      "raw_text": "A Muñoz C De La Calle J A Alonso P M Botta V Pardo D Baldomir J Rivas Physical Review B 54404 2008 Muñoz, A.; de la Calle, C.; Alonso, J. A.; Botta, P. M.; Pardo, V.; Baldomir, D.; Rivas, J., Physical Review B 2008, 78, 054404."
+    },
+    {
+      "reference_id": "b21",
+      "title": null,
+      "doi": null,
+      "year": "2001",
+      "authors": [
+        "A Abakumov",
+        "M Rozova",
+        "B Pavlyuk",
+        "M Lobanov",
+        "E Antipov",
+        "O Lebedev",
+        "G Van Tendeloo",
+        "D Sheptyakov",
+        "A Balagurov",
+        "F Bourée"
+      ],
+      "raw_text": "A M Abakumov M G Rozova B P Pavlyuk M V Lobanov E V Antipov O I Lebedev G Van Tendeloo D V Sheptyakov A M Balagurov F Bourée J. Solid State Chem 158 2001 Abakumov, A. M.; Rozova, M. G.; Pavlyuk, B. P.; Lobanov, M. V.; Antipov, E. V.; Lebedev, O. I.; Van Tendeloo, G.; Sheptyakov, D. V.; Balagurov, A. M.; Bourée, F., J. Solid State Chem. 2001, 158, 100-111."
+    },
+    {
+      "reference_id": "b22",
+      "title": null,
+      "doi": null,
+      "year": "2006",
+      "authors": [
+        "S Stolen",
+        "E Bakken",
+        "C Mohn"
+      ],
+      "raw_text": "S Stolen E Bakken C E Mohn Phys. Chem. Chem. Phys 8 2006 Stolen, S.; Bakken, E.; Mohn, C. E., Phys. Chem. Chem. Phys. 2006, 8, 429- 447."
+    },
+    {
+      "reference_id": "b23",
+      "title": null,
+      "doi": null,
+      "year": "1993",
+      "authors": [
+        "M Anderson",
+        "J Vaughey",
+        "K Poeppelmeier"
+      ],
+      "raw_text": "M T Anderson J T Vaughey K R Poeppelmeier Chem. Mater 5 1993 Anderson, M. T.; Vaughey, J. T.; Poeppelmeier, K. R., Chem. Mater. 1993, 5, 151-165."
+    },
+    {
+      "reference_id": "b24",
+      "title": null,
+      "doi": null,
+      "year": "1966",
+      "authors": [
+        "S Mori"
+      ],
+      "raw_text": "S Mori J. Am. Ceram. Soc 49 1966 Mori, S., J. Am. Ceram. Soc. 1966, 49, 600-605."
+    },
+    {
+      "reference_id": "b25",
+      "title": null,
+      "doi": null,
+      "year": "1987",
+      "authors": [
+        "M Parras",
+        "M Vallet-Regi",
+        "J Gonzalez-Calbet",
+        "M Alario-Franco",
+        "J Grenier",
+        "P Hagenmuller"
+      ],
+      "raw_text": "M Parras M Vallet-Regi J M Gonzalez-Calbet M A Alario-Franco J C Grenier P Hagenmuller Mater. Res. Bull 22 1987 Parras, M.; Vallet-Regi, M.; Gonzalez-Calbet, J. M.; Alario-Franco, M. A.; Grenier, J. C.; Hagenmuller, P., Mater. Res. Bull. 1987, 22, 1413-1419."
+    },
+    {
+      "reference_id": "b26",
+      "title": null,
+      "doi": null,
+      "year": "1990",
+      "authors": [
+        "M Parras",
+        "L Fournes",
+        "J Grenier",
+        "M Pouchard",
+        "M Vallet",
+        "J Calbet",
+        "P Hagenmuller"
+      ],
+      "raw_text": "M Parras L Fournes J C Grenier M Pouchard M Vallet J M Calbet P Hagenmuller J. Solid State Chem 88 1990 Parras, M.; Fournes, L.; Grenier, J. C.; Pouchard, M.; Vallet, M.; Calbet, J. M.; Hagenmuller, P., J. Solid State Chem. 1990, 88, 261-268."
+    },
+    {
+      "reference_id": "b27",
+      "title": null,
+      "doi": null,
+      "year": "1993",
+      "authors": [
+        "X Zou",
+        "S Hovmoller",
+        "M Parras",
+        "J Gonzalez-Calbet",
+        "M Vallet-Regi",
+        "J Grenier"
+      ],
+      "raw_text": "X D Zou S Hovmoller M Parras J M Gonzalez-Calbet M Vallet-Regi J C Grenier Acta Crystallographica Section A 49 1993 Zou, X. D.; Hovmoller, S.; Parras, M.; Gonzalez-Calbet, J. M.; Vallet-Regi, M.; Grenier, J. C., Acta Crystallographica Section A 1993, 49, 27-35."
+    },
+    {
+      "reference_id": "b28",
+      "title": null,
+      "doi": null,
+      "year": "2011",
+      "authors": [
+        "F Fujishiro",
+        "K Fukasawa",
+        "T Hashimoto"
+      ],
+      "raw_text": "F Fujishiro K Fukasawa T Hashimoto J. Am. Ceram. Soc 94 2011 Fujishiro, F.; Fukasawa, K.; Hashimoto, T., J. Am. Ceram. Soc. 2011, 94, 3675-3678."
+    },
+    {
+      "reference_id": "b29",
+      "title": null,
+      "doi": null,
+      "year": "2012",
+      "authors": [
+        "F Fujishiro",
+        "Y Kojima",
+        "T Hashimoto"
+      ],
+      "raw_text": "F Fujishiro Y Kojima T Hashimoto J. Am. Ceram. Soc 95 2012 Fujishiro, F.; Kojima, Y.; Hashimoto, T., J. Am. Ceram. Soc. 2012, 95, 3634- 3637."
+    },
+    {
+      "reference_id": "b30",
+      "title": null,
+      "doi": null,
+      "year": null,
+      "authors": [],
+      "raw_text": "O Clemens H Hahn P R Slater in preparation Clemens, O.; Hahn, H.; Slater, P. R., in preparation."
+    },
+    {
+      "reference_id": "b31",
+      "title": "General profile and structure analysis software for powder diffraction data, User's Manual. Bruker AXS: Karlsruhe",
+      "doi": null,
+      "year": "2008",
+      "authors": [],
+      "raw_text": "V4 Topas General profile and structure analysis software for powder diffraction data, User's Manual. Bruker AXS: Karlsruhe Germany 2008 Topas V4.2, General profile and structure analysis software for powder diffraction data, User's Manual. Bruker AXS: Karlsruhe, Germany, 2008."
+    },
+    {
+      "reference_id": "b32",
+      "title": null,
+      "doi": null,
+      "year": "2004",
+      "authors": [
+        "R Cheary",
+        "A Coelho",
+        "J Cline"
+      ],
+      "raw_text": "R W Cheary A A Coelho J P Cline J. Res. Nat. Inst. Stand. Technol 109 2004 Cheary, R. W.; Coelho, A. A.; Cline, J. P., J. Res. Nat. Inst. Stand. Technol. 2004, 109, 1-25."
+    },
+    {
+      "reference_id": "b33",
+      "title": null,
+      "doi": null,
+      "year": "2004",
+      "authors": [],
+      "raw_text": "A A Coelho Topas-Academic 2004 Coelho, A. A. TOPAS-Academic, http://www.topas-academic.net, 2004."
+    },
+    {
+      "reference_id": "b34",
+      "title": null,
+      "doi": null,
+      "year": "1983",
+      "authors": [
+        "R Brand",
+        "J Lauer",
+        "D Herlach"
+      ],
+      "raw_text": "R A Brand J Lauer D M Herlach Journal of Physics F: Metal Physics 13 675 1983 Brand, R. A.; Lauer, J.; Herlach, D. M., Journal of Physics F: Metal Physics 1983, 13, 675."
+    },
+    {
+      "reference_id": "b35",
+      "title": null,
+      "doi": null,
+      "year": "1993",
+      "authors": [
+        "G Kresse",
+        "J Hafner"
+      ],
+      "raw_text": "G Kresse J Hafner Phys. Rev. B 558 1993 Kresse, G.; Hafner, J., Phys. Rev. B 1993, 47, 558."
+    },
+    {
+      "reference_id": "b36",
+      "title": null,
+      "doi": null,
+      "year": "1994",
+      "authors": [
+        "G Kresse",
+        "J Hafner"
+      ],
+      "raw_text": "G Kresse J Hafner Physical Review B 14251 1994 Kresse, G.; Hafner, J., Physical Review B 1994, 49, 14251."
+    },
+    {
+      "reference_id": "b37",
+      "title": null,
+      "doi": null,
+      "year": "1996",
+      "authors": [
+        "G Kresse",
+        "J Furthmüller"
+      ],
+      "raw_text": "G Kresse J Furthmüller Comput. Mat. Sci 6 15 1996 Kresse, G.; Furthmüller, J., Comput. Mat. Sci. 1996, 6, 15."
+    },
+    {
+      "reference_id": "b38",
+      "title": null,
+      "doi": null,
+      "year": "1996",
+      "authors": [
+        "G Kresse",
+        "J Furthmüller"
+      ],
+      "raw_text": "G Kresse J Furthmüller Phys. Rev. B 11169 1996 Kresse, G.; Furthmüller, J., Phys. Rev. B 1996, 54, 11169."
+    },
+    {
+      "reference_id": "b39",
+      "title": null,
+      "doi": null,
+      "year": "1999",
+      "authors": [
+        "G Kresse",
+        "D Joubert"
+      ],
+      "raw_text": "G Kresse D Joubert Phys. Rev. B 1758 1999 Kresse, G.; Joubert, D., Phys. Rev. B 1999, 59, 1758."
+    },
+    {
+      "reference_id": "b40",
+      "title": null,
+      "doi": null,
+      "year": "1996",
+      "authors": [
+        "J Perdew",
+        "K Burke",
+        "M Ernzerhof"
+      ],
+      "raw_text": "J P Perdew K Burke M Ernzerhof Phys. Rev. Lett 3865 1996 Perdew, J. P.; Burke, K.; Ernzerhof, M., Phys. Rev. Lett. 1996, 77, 3865."
+    },
+    {
+      "reference_id": "b41",
+      "title": null,
+      "doi": null,
+      "year": "1998",
+      "authors": [
+        "S Dudarev",
+        "G Botton",
+        "S Savrasov",
+        "C Humphreys",
+        "A Sutton"
+      ],
+      "raw_text": "S L Dudarev G A Botton S Y Savrasov C J Humphreys A P Sutton Phys. Rev. B 1505 1998 Dudarev, S. L.; Botton, G. A.; Savrasov, S. Y.; Humphreys, C. J.; Sutton, A. P., Phys. Rev. B 1998, 57, 1505."
+    },
+    {
+      "reference_id": "b42",
+      "title": null,
+      "doi": null,
+      "year": "2007",
+      "authors": [
+        "I Kornev",
+        "S Lisenkov",
+        "R Haumont",
+        "B Dkhil",
+        "L Bellaiche"
+      ],
+      "raw_text": "I A Kornev S Lisenkov R Haumont B Dkhil L Bellaiche Phys. Rev. Lett 227602 2007 Kornev, I. A.; Lisenkov, S.; Haumont, R.; Dkhil, B.; Bellaiche, L., Phys. Rev. Lett. 2007, 99, 227602."
+    },
+    {
+      "reference_id": "b43",
+      "title": null,
+      "doi": null,
+      "year": "1976",
+      "authors": [
+        "R Shannon"
+      ],
+      "raw_text": "R D Shannon Acta Crystallogr 32 1976 Shannon, R. D., Acta Crystallogr. 1976, A32, 751-767."
+    },
+    {
+      "reference_id": "b44",
+      "title": null,
+      "doi": null,
+      "year": "2013",
+      "authors": [
+        "O Clemens",
+        "F Berry",
+        "A Wright",
+        "K Knight",
+        "J Perez-Mato",
+        "J Igartua",
+        "P Slater"
+      ],
+      "raw_text": "O Clemens F J Berry A J Wright K S Knight J M Perez-Mato J M Igartua P R Slater J. Solid State Chem 206 2013 Clemens, O.; Berry, F. J.; Wright, A. J.; Knight, K. S.; Perez-Mato, J. M.; Igartua, J. M.; Slater, P. R., J. Solid State Chem. 2013, 206, 158-169."
+    },
+    {
+      "reference_id": "b45",
+      "title": null,
+      "doi": null,
+      "year": "1994",
+      "authors": [
+        "C Darlington",
+        "W David",
+        "K Knight"
+      ],
+      "raw_text": "C N W Darlington W I F David K S Knight Phase Transitions 48 1994 Darlington, C. N. W.; David, W. I. F.; Knight, K. S., Phase Transitions 1994, 48, 217-236."
+    },
+    {
+      "reference_id": "b46",
+      "title": null,
+      "doi": null,
+      "year": "1976",
+      "authors": [
+        "I Brown",
+        "K Wu"
+      ],
+      "raw_text": "I D Brown K K Wu Acta Crystallographica Section B 32 1976 Brown, I. D.; Wu, K. K., Acta Crystallographica Section B 1976, 32, 1957- 1959."
+    },
+    {
+      "reference_id": "b47",
+      "title": null,
+      "doi": null,
+      "year": "1979",
+      "authors": [
+        "R Hoppe"
+      ],
+      "raw_text": "R Hoppe Z. Kristallogr 150 1979 Hoppe, R., Z. Kristallogr. 1979, 150, 23-52."
+    },
+    {
+      "reference_id": "b48",
+      "title": null,
+      "doi": null,
+      "year": "2010",
+      "authors": [
+        "O Clemens",
+        "R Haberkorn",
+        "P Slater",
+        "H Beck"
+      ],
+      "raw_text": "O Clemens R Haberkorn P R Slater H P Beck Solid State Sci 12 2010 Clemens, O.; Haberkorn, R.; Slater, P. R.; Beck, H. P., Solid State Sci. 2010, 12, 1455-1463."
+    },
+    {
+      "reference_id": "b49",
+      "title": null,
+      "doi": null,
+      "year": "2011",
+      "authors": [
+        "F Berry",
+        "F Coomer",
+        "C Hancock",
+        "Ö Helgason",
+        "E Moore",
+        "P Slater",
+        "A Wright",
+        "M Thomas"
+      ],
+      "raw_text": "F J Berry F C Coomer C Hancock Ö Helgason E A Moore P R Slater A J Wright M F Thomas J. Solid State Chem 184 2011 Berry, F. J.; Coomer, F. C.; Hancock, C.; Helgason, Ö.; Moore, E. A.; Slater, P. R.; Wright, A. J.; Thomas, M. F., J. Solid State Chem. 2011, 184, 1361-1366."
+    },
+    {
+      "reference_id": "b50",
+      "title": null,
+      "doi": null,
+      "year": "1985",
+      "authors": [
+        "F Menil"
+      ],
+      "raw_text": "F Menil J. Phys. Chem. Solids 46 1985 Menil, F., J. Phys. Chem. Solids 1985, 46, 763-789."
+    },
+    {
+      "reference_id": "b51",
+      "title": null,
+      "doi": null,
+      "year": "2008",
+      "authors": [
+        "F Berry",
+        "R Heap",
+        "Ö Helgason",
+        "E Moore",
+        "S Shim",
+        "P Slater",
+        "M Thomas"
+      ],
+      "raw_text": "F J Berry R Heap Ö Helgason E A Moore S Shim P R Slater M F Thomas J. Phys.: Condens. Matter 20 215207 2008 Berry, F. J.; Heap, R.; Helgason, Ö.; Moore, E. A.; Shim, S.; Slater, P. R.; Thomas, M. F., J. Phys.: Condens. Matter 2008, 20, 215207."
+    },
+    {
+      "reference_id": "b52",
+      "title": "MAXMAGN in the Bilbao Crystallographic Server",
+      "doi": null,
+      "year": null,
+      "authors": [],
+      "raw_text": "MAXMAGN in the Bilbao Crystallographic Server MAXMAGN in the Bilbao Crystallographic Server. http://cryst.ehu.es"
+    },
+    {
+      "reference_id": "b53",
+      "title": null,
+      "doi": null,
+      "year": "2012",
+      "authors": [
+        "S Gallego",
+        "E Tasci",
+        "G De La Flor",
+        "J Perez-Mato",
+        "M Aroyo"
+      ],
+      "raw_text": "S V Gallego E S Tasci G De La Flor J M Perez-Mato M I Aroyo J. Appl. Crystallogr 45 2012 Gallego, S. V.; Tasci, E. S.; de la Flor, G.; Perez-Mato, J. M.; Aroyo, M. I., J. Appl. Crystallogr. 2012, 45, 1236-1247."
+    },
+    {
+      "reference_id": "b54",
+      "title": "MGENPOS in the Bilbao Crystallographic Server",
+      "doi": null,
+      "year": null,
+      "authors": [],
+      "raw_text": "MGENPOS in the Bilbao Crystallographic Server MGENPOS in the Bilbao Crystallographic Server. http://cryst.ehu.es"
+    },
+    {
+      "reference_id": "b55",
+      "title": null,
+      "doi": null,
+      "year": "2011",
+      "authors": [],
+      "raw_text": "H T Stokes B J Campbell 2011 Stokes, H. T.; Campbell, B. J., http://stokes.byu.edu/magneticspacegroups.html 2011."
+    },
+    {
+      "reference_id": "b56",
+      "title": null,
+      "doi": null,
+      "year": "2006",
+      "authors": [
+        "B Campbell",
+        "H Stokes",
+        "D Tanner",
+        "D Hatch"
+      ],
+      "raw_text": "B J Campbell H T Stokes D E Tanner D M Hatch J. Appl. Crystallogr 39 2006 Campbell, B. J.; Stokes, H. T.; Tanner, D. E.; Hatch, D. M., J. Appl. Crystallogr. 2006, 39, 607-614."
+    },
+    {
+      "reference_id": "b57",
+      "title": null,
+      "doi": null,
+      "year": "2011",
+      "authors": [
+        "K Momma",
+        "F Izumi"
+      ],
+      "raw_text": "K Momma F Izumi J. Appl. Crystallogr 44 2011 Momma, K.; Izumi, F., J. Appl. Crystallogr. 2011, 44, 1272-1276."
+    },
+    {
+      "reference_id": "b58",
+      "title": null,
+      "doi": null,
+      "year": "2011",
+      "authors": [
+        "M Sturza",
+        "H Kabbour",
+        "S Daviero-Minaud",
+        "D Filimonov",
+        "K Pokholok",
+        "N Tiercelin",
+        "F Porcher",
+        "L Aldon",
+        "O Mentre"
+      ],
+      "raw_text": "M Sturza H Kabbour S Daviero-Minaud D Filimonov K Pokholok N Tiercelin F Porcher L Aldon O Mentre J. Am. Chem. Soc 133 2011 Sturza, M.; Kabbour, H.; Daviero-Minaud, S.; Filimonov, D.; Pokholok, K.; Tiercelin, N.; Porcher, F.; Aldon, L.; Mentre, O., J. Am. Chem. Soc. 2011, 133, 10901-10909."
+    }
+  ],
+  "counts": {
+    "sections": 14,
+    "paragraphs": 60,
+    "results_paragraphs": 18,
+    "xrd_paragraphs": 12,
+    "figures": 11,
+    "xrd_figures": 6,
+    "tables": 0,
+    "references": 59
+  }
+}

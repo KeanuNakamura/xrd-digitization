@@ -1,0 +1,48 @@
+{
+  "authors": [
+    "Naohisa Okita",
+    "A. Higashide",
+    "Takeshi Hagiwara",
+    "Miwa Saito",
+    "Hiroshi Yamamura"
+  ],
+  "cited_by_count": 1,
+  "doi": "10.14723/tmrsj.40.425",
+  "download": {
+    "content_type": "application/pdf;charset=UTF-8",
+    "output_path": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/03_W2291508423_rietveld-analysis-of-structure-transformation-between-perovskite-type.pdf",
+    "page_count": 4,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://www.jstage.jst.go.jp/article/tmrsj/40/4/40_425/_pdf",
+    "resolved_url": "https://www.jstage.jst.go.jp/article/tmrsj/40/4/40_425/_pdf",
+    "retrieved_at": "2026-06-17T23:47:27.174531+00:00",
+    "sha256": "6c3fc611d50b418acdb20252b136e6c5d80519e92dfb0a31d26dd22be31ddddd",
+    "size_bytes": 1530639
+  },
+  "journal": "Transactions of the Materials Research Society of Japan",
+  "language": "en",
+  "matched_query": "\"ABO3-type\" diffraction",
+  "material_score": 44,
+  "open_access": {
+    "any_repository_has_fulltext": false,
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://www.jstage.jst.go.jp/article/tmrsj/40/4/40_425/_pdf"
+  },
+  "openalex_id": "W2291508423",
+  "paper_id": "doi:10.14723/tmrsj.40.425",
+  "parser": null,
+  "pdf_source": {
+    "host_type": null,
+    "landing_page_url": "https://doi.org/10.14723/tmrsj.40.425",
+    "license": null,
+    "provider": "openalex:best_oa_location",
+    "requested_url": "https://www.jstage.jst.go.jp/article/tmrsj/40/4/40_425/_pdf",
+    "version": "publishedVersion"
+  },
+  "publication_date": "2015-01-01",
+  "publication_year": 2015,
+  "relevance_score": 110,
+  "title": "Rietveld analysis of structure transformation between perovskite-type and B-type rare earth structures",
+  "xrd_score": 66
+}

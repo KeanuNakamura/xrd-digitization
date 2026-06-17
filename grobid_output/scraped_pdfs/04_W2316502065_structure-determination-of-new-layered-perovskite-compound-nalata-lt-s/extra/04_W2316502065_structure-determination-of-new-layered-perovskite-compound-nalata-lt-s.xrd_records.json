@@ -1,0 +1,62 @@
+[
+  {
+    "document": {
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/scraped_pdfs/pdfs/04_W2316502065_structure-determination-of-new-layered-perovskite-compound-nalata-lt-s.pdf",
+      "source_sha256": "930cb72d11c93c479e3d38e14c5ae0213a0ba119e74b420a55d34c303562ee0d",
+      "title": "Structure Determination of New Layered Perovskite Compound, NaLaTa2O7, Synthesized by Ion-Exchange Reaction",
+      "doi": null,
+      "journal": null,
+      "publication_date": null
+    },
+    "figure": {
+      "figure_id": "fig_5",
+      "label": "5",
+      "normalized_label": "5",
+      "caption": "Fig. 5 . Fig. 5. X-ray powder pattern fitting for NaLaTa2O7. The addition al rows of Bragg reflection marks corresponding to Pt holder.",
+      "graphic_targets": [],
+      "coords": "3,312.00,491.22,228.95,6.30;3,312.00,501.22,217.64,6.30",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 3.8,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_4147777f6dc4"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_30ba7e929fcd",
+        "paragraph_9896a9e7403e",
+        "paragraph_246b5b146016",
+        "paragraph_2dc3c0fef28e",
+        "paragraph_4147777f6dc4",
+        "paragraph_0134d4b87b36",
+        "paragraph_7213eebbc8f8"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_4147777f6dc4",
+        "text": "Fig. 5 . The crystallographic data for NaLaTa2O7 are listed in Tables 3 and 4 . Figure 6 shows the crystal structure of NaLaTa2O7, together with those for LiLaTa2O7, RbLaTa2O7 and KLaTa2O7, as a reference.8),14) All struc ures are characterized as a nearly two-dimensional frame work comprised of two coner-shared TaO6 octahedra. The alkali ions in these layered compounds are located in the in terlayer space between the perovskite slabs. The relative ar rangement of the adjacent perovskite sheets is dependent on the size of ions existing in the interlayer. The perovskite layer in rubidium compound is stacked up without a dis placement. The adjacent perovskite layers of the potassium compound are stacked with a displacement by 1/2 along the only one direction within the layer plane. The potassium ions are located in the interlayer space and are in a trigonal prismatic coordination. On the other hand, the adjacent perovskite sheets in sodium and lithium ion-exchanged com pound are stacked with a displacement by 1/2 along the di agonal direction within the layer plane. The sodium and lithium ions occupy the four-fold sites between the two perovskite layers. The tetrahedral coordination of Na-O found in NaLaTa2O7 is extremely rare in the normal oxides with layered structures. The coordination number of the so dium ions is usually larger than five. The tetrahedral coordi nation of sodium atoms are probably thermodynamically metastable. This seems to be one of the reason for difficulty of direct synthesis. This stacking feature is in contrast to that of titanate compound.4),5),15) In titanate compounds, the relative arran gement of the adjacent perovskite sheets is independent of its ionic size while existing in the interlayer. The lower charge (4+) of the central ion in the titanate compound is compensated by two interlayer monovalent ions, i.e., a high positive charge density state is realized in the interlayer space. On the other hand, the high positive charge (5+) of the central ion in the tantalate compound can lead to a lower charge density state for the interlayer space. The coulomb interaction between the perovskite layer and the interlayer ion is relatively weak, reflecting a variety of stacking fea tures of the adjacent perovskite layer blocks owing to the ionic size of the interlayer ions. The stacking sequences are dependent on the space volume formed between the perov skite layers. The structural features in these compounds are the same as those of the corresponding niobate compounds.11) It is very interesting that the structures of tantalate compounds and niobate compounds are same. Despite of the difference in electron configuration between the tantalum and niobium atoms, the crystal structures of the tantalate compounds are practically unchanged. The nio bium and tantalum ions have the same electric charge and almost same ionic radius.16) Structural data indicate that electric charge and ionic radius play an important role in structural properties of these materials.",
+        "section_path": [
+          "Experimental"
+        ],
+        "section_type": "methods",
+        "figure_references": [
+          "5",
+          "6"
+        ],
+        "xrd_score": 0.9,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Fig. 5 .",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Fig. 5 .",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  }
+]

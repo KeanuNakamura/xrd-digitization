@@ -1,0 +1,1883 @@
+{
+  "source_pdf": "pdf_files/mn_zr.pdf",
+  "source_sha256": "07c157f66aa695ef47087fcf6e3c6ae2f3211c3b077650fc28376c4c24ac125c",
+  "metadata": {
+    "title": "Reduction of mixed Mn–Zr oxides: in situ XPS and XRD studies",
+    "doi": "10.1039/c5dt01440a",
+    "abstract": "A series of mixed Mn-Zr oxides with different molar ratios Mn/Zr (0.1-9) have been prepared by coprecipitation of manganese and zirconium nitrates and characterized by X-ray diffraction (XRD) and BET methods. It has been found that at concentrations of Mn below 30 at%, the samples are single-phase solid solutions (Mn x Zr 1-x O 2-δ ) based on a ZrO 2 structure. X-ray photoelectron spectroscopy (XPS) measurements showed that manganese in these solutions exists mainly in the Mn 4+ state on the surface. An increase in Mn content mostly leads to an increase in the number of Mn cations in the structure of solid solutions; however, a part of the manganese cations form Mn 2 O 3 and Mn 3 O 4 in the crystalline and amorphous states. The reduction of these oxides with hydrogen was studied by a temperatureprogrammed reduction technique, in situ XRD, and near ambient pressure XPS in the temperature range from 100 to 650 °C. It was shown that the reduction of the solid solutions Mn x Zr 1-x O 2-δ proceeds via two stages. During the first stage, at temperatures between 100 and 500 °C, the Mn cations incorporated into the solid solutions Mn x Zr 1-x O 2-δ undergo partial reduction. During the second stage, at temperatures between 500 and 700 °C, Mn cations segregate on the surface of the solid solution. In the samples with more than 30 at% Mn, the reduction of manganese oxides was observed: Mn",
+    "journal": "Dalton Transactions",
+    "publication_date": "2015-07-22",
+    "authors": [
+      {
+        "given_name": "O",
+        "middle_name": "A",
+        "surname": "Bulavchenko",
+        "email": null,
+        "affiliation": "a Novosibirsk State University , Pirogova Str. 2 , 630090 Novosibirsk , Russia. Novosibirsk State University Pirogova Str. 2 630090 Novosibirsk Russia; b Boreskov Institute of Catalysis SB RAS , Lavrentieva Ave. 5 , 630090 Novosibirsk , Russia Boreskov Institute of Catalysis SB RAS Lavrentieva Ave. 5 630090 Novosibirsk Russia",
+        "orcid": null
+      },
+      {
+        "given_name": "Z",
+        "middle_name": "S",
+        "surname": "Vinokurov",
+        "email": null,
+        "affiliation": "a Novosibirsk State University , Pirogova Str. 2 , 630090 Novosibirsk , Russia. Novosibirsk State University Pirogova Str. 2 630090 Novosibirsk Russia; b Boreskov Institute of Catalysis SB RAS , Lavrentieva Ave. 5 , 630090 Novosibirsk , Russia Boreskov Institute of Catalysis SB RAS Lavrentieva Ave. 5 630090 Novosibirsk Russia",
+        "orcid": null
+      },
+      {
+        "given_name": "T",
+        "middle_name": "N",
+        "surname": "Afonasenko",
+        "email": null,
+        "affiliation": "c Institute of Hydrocarbon Processing SB RAS , Neftezavodskaya Str. 54 , 644040 Omsk , Russia Institute of Hydrocarbon Processing SB RAS Neftezavodskaya Str. 54 644040 Omsk Russia",
+        "orcid": null
+      },
+      {
+        "given_name": "P",
+        "middle_name": "G",
+        "surname": "Tsyrul'nikov",
+        "email": null,
+        "affiliation": "c Institute of Hydrocarbon Processing SB RAS , Neftezavodskaya Str. 54 , 644040 Omsk , Russia Institute of Hydrocarbon Processing SB RAS Neftezavodskaya Str. 54 644040 Omsk Russia",
+        "orcid": null
+      },
+      {
+        "given_name": "S",
+        "middle_name": "V",
+        "surname": "Tsybulya",
+        "email": null,
+        "affiliation": "a Novosibirsk State University , Pirogova Str. 2 , 630090 Novosibirsk , Russia. Novosibirsk State University Pirogova Str. 2 630090 Novosibirsk Russia; b Boreskov Institute of Catalysis SB RAS , Lavrentieva Ave. 5 , 630090 Novosibirsk , Russia Boreskov Institute of Catalysis SB RAS Lavrentieva Ave. 5 630090 Novosibirsk Russia",
+        "orcid": null
+      },
+      {
+        "given_name": "A",
+        "middle_name": "A",
+        "surname": "Saraev",
+        "email": null,
+        "affiliation": "a Novosibirsk State University , Pirogova Str. 2 , 630090 Novosibirsk , Russia. Novosibirsk State University Pirogova Str. 2 630090 Novosibirsk Russia; b Boreskov Institute of Catalysis SB RAS , Lavrentieva Ave. 5 , 630090 Novosibirsk , Russia Boreskov Institute of Catalysis SB RAS Lavrentieva Ave. 5 630090 Novosibirsk Russia",
+        "orcid": null
+      },
+      {
+        "given_name": "V",
+        "middle_name": "V",
+        "surname": "Kaichev",
+        "email": null,
+        "affiliation": "a Novosibirsk State University , Pirogova Str. 2 , 630090 Novosibirsk , Russia. Novosibirsk State University Pirogova Str. 2 630090 Novosibirsk Russia; b Boreskov Institute of Catalysis SB RAS , Lavrentieva Ave. 5 , 630090 Novosibirsk , Russia Boreskov Institute of Catalysis SB RAS Lavrentieva Ave. 5 630090 Novosibirsk Russia",
+        "orcid": null
+      }
+    ],
+    "keywords": []
+  },
+  "sections": [
+    {
+      "section_id": "section_a5717ab81d52",
+      "title": "Introduction",
+      "path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_5d186e2f603e",
+          "text": "Materials based on zirconium dioxide (ZrO 2 ) demonstrate unique properties and hence find wide applications in various industrial fields. For example, their high durability, corrosion resistance, and low thermal conductivity allow the application of ZrO 2 in the production of coatings for various toolware. 1, 2 he high stability and ionic conductivity of ZrO 2 -based materials allow their use as electrochemical oxygen sensors, solid electrolytes in fuel cells, etc. [3] [4] [5] In heterogeneous catalysis, ZrO 2 is widely used as a support with high thermal resistance. [6] [7] 7] [8] Moreover, solid solutions based on ZrO 2 exhibit high catalytic activity in a number of practically important reactions. For instance, recently it has been shown that Mn-Zn mixed oxides can effectively catalyze the gas-phase oxidation of hydrocarbons or chlorocarbons. [9] [10] 0] [11] Although there is agreement that the catalytic performance of these catalysts is determined by their redox properties, the exact mechanism of these reactions is not yet clear. The main reason for this incomprehension is due to the complexity of the reduction of Mn-Zn mixed oxides.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a1a6c0b3624c",
+          "text": "Manganese cations can enter the lattice of ZrO 2 with the formation of the solid solutions Zr 1-x Mn x O 2 , 9, [12] [13] [14] [15] in which lattice oxygen possesses sufficiently high mobility and hence high reactivity. On the other hand, some authors 10, [16] [17] [18] suppose that the active species in oxidation reactions is mobile oxygen that is incorporated into disperse MnO x rather than lattice oxygen of the solid solution. Moreover, under reduction conditions, segregation of manganese with the formation of dispersed MnO x may occur on the surface of the solid solution Zr 1-x Mn x O 2 .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_3b558b02c58d",
+          "text": "One of the main ways to study the redox properties of different oxides is a temperature-programmed reduction (TPR) technique. On the basis of its results, it is possible, for example, to draw some conclusions about the presence of various forms of manganese oxides. However, TPR is an indirect method that allows monitoring only the absorption of hydrogen rather than the change in the structural characteristics of catalysts and in the charge state of Mn and Zr cations. The aim of this work was to obtain detailed information on various stages of the reduction of Mn-Zn mixed oxides. The study was carried out using a combination of methods: temperature-programmed reduction, X-ray diffraction (XRD), and X-ray photoelectron spectroscopy (XPS).",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 8.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_0039806d40eb",
+      "title": "Results and discussion",
+      "path": [
+        "Results and discussion"
+      ],
+      "section_type": "results",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_b751f86b3ba0",
+      "title": "XRD study of as-prepared samples",
+      "path": [
+        "XRD study of as-prepared samples"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_5b9a77b55285",
+          "text": "The results of the study of freshly synthesized samples indicate that the concentration of Mn in the samples xMn(1x)Zr significantly affects their phase composition, unit cell parameters of the solid solution and the size of the coherently scattering domain (CSD). The main results of the XRD study are presented in Table 1 . At x = 0, the sample xMn(1x)Zr is ZrO 2 with the lattice parameter of 5.115 Å. Although this modification of ZrO 2 cannot be considered strictly cubic, its lattice parameter was calculated in the cubic approximation because of the low calcination temperature (650 °C) and because of the small size of the obtained particles that led to the broadening of diffraction peaks. In comparison, the lattice parameter of the metastable cubic phase ZrO 2 is 5.09 Å. 22 An increase in the Mn content resulted in a monotonic decrease in the lattice parameter of zirconia, indicating that Mn cations modify the lattice of ZrO 2 to form a solid solution Mn y Zr 1-y O 2 . Indeed, substitution of smaller cations Mn 3+ (ionic radius 0.66 Å) for bigger cations Zr 4+ (ionic radius 0.79 Å) should lead to a decrease in the lattice parameter of the solid solution based on zirconia. 10 The detected decrease in the size of CSD correlates with an increase in the surface area (Table 1 ), i.e. the dispersion of particles Mn y Zr 1-y O 2 increases. In the samples with the high Mn content (x ≥ 0.5), there also appears a phase of manganese oxide Mn 2 O 3 . A further increase in the concentration of Mn (x = 0.7) leads to the formation of an additional phase β-Mn 3 O 4 .",
+          "section_path": [
+            "XRD study of as-prepared samples"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 6.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_fbe1ad7ff44a",
+          "text": "The multi-phase composition of the samples leads to a nonmonotonic dependence of their specific surface area on the concentration of Mn. With an increase in the Mn content in the x range from 0.0 to 0.4, the specific surface area increases from 43 to 103 m 2 g -1 and then almost does not change until x = 0.6. The addition of Mn in larger amounts leads to a drop in S BET to 79 and 44 m 2 g -1 at x = 0.7 and 0.9, respectively. Reducing the specific surface area at high concentrations of Mn may be associated with an increase in the content of manganese oxides in the sample up to 85 wt%. Note that the specific surface area of most of the samples xMn(1x)Zr exceeds the specific surface area of individual oxides of manganese and zirconium that were subjected to the same stages of synthesis.",
+          "section_path": [
+            "XRD study of as-prepared samples"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_94d64e8f544b",
+          "text": "Fig. 1 shows the lattice parameter of the solid-solution Mn y Zr 1-y O 4 as a function of the manganese content x calculated based on the XRD data obtained in our experiments and the XRD data published elsewhere. 9, 10, 23 As seen from the picture, the lattice parameter in the solid solutions depends on several factors: the content of Mn cations, preparation conditions, temperature, the environment and the duration of calcination that affects the oxidation state of Mn and the Other symbols show published lattice parameters of Mn y Zr 1-y O 2 obtained under other conditions: in air at 600 °C for 4 h (diamonds); 5 in air at 600 °C but for 3 h (stars); 9 in air at 800 °C for 3 h (squares); 10 in hydrogen at 800 °C for 10 h (triangles). 23 onstoichiometry of the oxide with respect to oxygen. According to literature data 9, 10 (Fig. 1 , diamonds, stars), the lattice parameter decreases with the increasing Mn content almost linearly (up to x = 0.5). It indicates the formation of a wide range of solid solutions, as in our case. The dotted line in Fig. 1 , which is drawn through two points x = 0 and x = 0.12, extrapolates the dependence of the formation of the solid solution Mn y Zr 1-y O 4 to y = x. It is evident that in the range from x = 0.0 to x = 0.3, the experimental lattice parameters coincide with the calculated data, which may indicate complete incorporation of Mn into the lattice of ZrO 2 . Moreover, even the point at x = 0.4 deviates from the extrapolated data only slightly. For large values of x, the deviation of the experimentally observed lattice parameters from the calculated data increases. One of the factors determining this behavior is the formation of manganese oxide particles on the surface of solid solutions. According to the XRD data, the phase of Mn 2 O 3 appears already at x = 0.5, and its amount increases with the Mn content. Thus, the change in the lattice parameter of the ZrO 2 -based phase demonstrates that the coprecipitation method actually provides the formation of the solid solutions Mn y Zr 1-y O 2 . Taking into account the linearity of the initial part of the obtained dependence, one can assume that all Mn atoms are incorporated into the lattice of ZrO 2 in the samples with the concentration of Mn up to 30 at%. With a further increase in the Mn content, the number of Mn cations included in the solid solution Mn y Zr 1-y O 2 also increases; however besides this, a part of the manganese cations enter the composition of crystalline oxides Mn 2 O 3 , Mn 3 O 4 , or an amorphized state.",
+          "section_path": [
+            "XRD study of as-prepared samples"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 6.1,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_c18055f4cef6",
+      "title": "Transmission electron microscopy (TEM) characterization",
+      "path": [
+        "Transmission electron microscopy (TEM) characterization"
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_20b01bd53ec3",
+          "text": "Fig. 2 shows the TEM images of 0.3Mn0.7Zr and 0.5Mn0.5Zr. The sample consists of small particles of the solid solution Mn y Zr 1-y O 4 10-15 nm in size. For 0.5Mn0.5Zr, large particles of Mn 2 O 3 are also observed. Energy dispersive X-ray (EDX) analysis indicates that Mn : Zr ratios are 26 : 74 and 53 : 47 for 0.3Mn0.7Zr and 0.5Mn0.5Zr, respectively. These values are close to the original content of elements.",
+          "section_path": [
+            "Transmission electron microscopy (TEM) characterization"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_af933e364414",
+      "title": "TPR-H 2 study",
+      "path": [
+        "TPR-H 2 study"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_5b19a1c43e99",
+          "text": "The reduction of mixed Mn-Zr oxides was studied by TPR under a hydrogen atmosphere. The TPR profiles obtained for xMn(1x)Zr in the range from 30 to 900 °C are shown in Fig. 3 ; the positions of the observed peaks and the amounts of absorbed hydrogen are summarized in Table 2 . The reduction of 0Mn1Zr (i.e., ZrO 2 ) appears as one narrow peak of the hydrogen absorption with a maximum near 635 °C. Such a dependence is not typical of well-crystallized ZrO 2 . However in some cases, TPR profiles of ZrO 2 exhibit intense peaks, whose position and intensity depend on the phase composition and the synthesis method used. 14, 24, 25 For example, Damyanova et al. 25 observed two peaks at 440 and 630 °C and attributed them to the reduction of surface carbonates and hydroxyl groups. Dravid et al. 14 suggested that the partial reduction of ZrO 2 may result from the high mobility of oxygen at elevated temperatures. In our case, heating the sample 0Mn1Zr in argon to 200 °C resulted in the release of only adsorbed water and CO 2 , which decreased rapidly with temperature. Consequently, the hydrogen absorption peak at 635 °C (Fig. 3 ) should be attributed to some transformations of ZrO 2 itself, for example, to the partial reduction of zirconium in the surface layers of 0Mn1Zr.",
+          "section_path": [
+            "TPR-H 2 study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 2.1,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b053ad0eee9c",
+          "text": "For the samples containing Mn, there are two ranges of hydrogen absorption: at 150-500 °C and 500-640 °C, respectively (Fig. 3 ). On the TPR profiles of the samples 0.12Mn0.88Zr and 0.3Mn0.7Zr, there is a broad low-temperature peak with a maximum (T max ) at 320 and 340 °C, respectively. In the literature, peaks in the range 200-500 °C are often associated with the reduction of highly dispersed manganese oxides that do not manifest themselves by XRD. 10, 26 owever, this assumption is questionable, because the presence of an X-ray amorphous phase is usually not proven. Taking into account that up to 14 wt% of manganese oxides, Mn cations can dissolve in the structure of ZrO 2 , 14 and that the samples 0.12Mn0.88Zr and 0.3Mn0.7Zr consist of only the solid solution Mn y Zr 1-y O 2 , the peak at 320-340 °C should be attributed to the reduction of Mn cations located in the lattice of ZrO 2 . For the sample 0.4Mn0.6Zr, the low-temperature peak has a more complex shape: there is a small shoulder near 220 °C. According to the XRD data (Table 1 ), the lattice parameter of this sample slightly deviates from the value calculated for the solid solution Mn 0.4 Zr 0.6 O 2 (Fig. 1 ).",
+          "section_path": [
+            "TPR-H 2 study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "3",
+            "1"
+          ],
+          "xrd_score": 6.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_50db5e480d78",
+          "text": "On the other hand, this sample does not contain crystalline manganese oxides. Therefore, the additional peak at 220 °C can be attributed to the reduction of an amorphous oxide MnO x , which may exist on the surface of Mn y Zr 1-y O 2 particles in the form of, for example, an epitaxial layer. 26 t higher concentrations of Mn, the shape of the low-temperature peak becomes even more complicated: there appears an additional peak at higher temperatures, the intensity of which increases with an increase in the Mn content. For example, TPR profiles of the samples with x = 0.5 and 0.7 exhibit three peaks in the low temperature region with the maxima located at 290, 350, 410 °C and at 250, 365, 450 °C, respectively. According to the XRD data (Table 1 ), these samples contain the crystalline phase Mn 2 O 3 , whose reduction proceeds in two steps: (1) Mn 2 O 3 → Mn 3 O 4 at 250-350 °C and (2) Mn 3 O 4 → MnO at 350-500 °C. 27, 28 Therefore, it can be assumed that the hydrogen absorption peaks at 290 and 250 °C can be attributed to the reduction of amorphous MnO x , while the peaks at 350 and 410 °C and the peaks at 365 and 450 °C can be due to the reduction of the crystalline oxide Mn 2 O 3 . The shift of these peaks to the higher temperatures may be associated with an increase in the size of manganese oxide particles.",
+          "section_path": [
+            "TPR-H 2 study"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 6.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_637f8c30f0dd",
+          "text": "The origin of the high-temperature peak, which is observed at 550-580 °C, is still debatable. It is usually attributed to the reduction of cations Mn 3+ → Mn 2+ in the lattice of zirconia. 10, 11, 26 However, sometimes this peak is associated with the reduction of zirconia itself, 29 which is indicated by the presence of this peak in the TPR profile of the Mn-free sample 0Mn1Zr. Fig. 3 shows that the high-temperature peak for the samples xMn(1x)Zr shifts to lower temperatures with an increase in the Mn content. This peak for \"pure\" ZrO 2 (sample 0Mn1Zr) is significantly shifted in comparison with the peak for all the Mn-containing samples. For the samples with x = 0 and x = 0.12, this shift is 55 °C, while a further increase in the Mn content leads to an additional shift of the high-temperature peak toward lower temperatures by 30 °C.",
+          "section_path": [
+            "TPR-H 2 study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 2.7,
+          "peak_positions": [
+            55.0,
+            30.0
+          ],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_ffe4d688507f",
+      "title": "In situ XRD study",
+      "path": [
+        "In situ XRD study"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_2c6cdcf33a34",
+          "text": "To determine structural transformations that accompany the reduction of mixed Zr-Mn oxides, we recorded in situ XRD patterns of the samples 0.3Mn0.7Zr and 0.5Mn0.5Zr during their reduction with hydrogen at temperatures up to 700 °C. For 0.3Mn0.7Zr, the increase in temperature led to a shift of the peaks of the solid solution Mn y Zr 1-y O 4 , and no other changes in the diffraction patterns occurred (Fig. 4 ).",
+          "section_path": [
+            "In situ XRD study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "4"
+          ],
+          "xrd_score": 12.7,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_f8a81e784b15",
+          "text": "Fig. 5 shows a series of diffraction patterns recorded during the reduction of 0.5Mn0.5Zr. At room temperature, the sample contains two phases: the solid solution Mn y Zr 1-y O 4 and Mn 2 O 3 . The reduction of this sample leads to a change in the lattice parameter of the solid solution Mn y Zr 1-y O 4 , which is indicated by the shift of the corresponding peaks to larger angles. Besides, the reduction leads to the transformations of manganese oxides. For example, in the range of 275-325 °C, relative intensities of the peaks of Mn 2 O 3 gradually decrease, while the peaks of Mn 3 O 4 increase. At 375 °C, there appears the phase of MnO. Upon further heating, the relative intensity of the reflections of MnO increases (Fig. 5 ). For clarity, Fig. 6 shows diffraction patterns recorded at 275-400 °C in the 2θ range 17-28°.",
+          "section_path": [
+            "In situ XRD study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "5",
+            "6"
+          ],
+          "xrd_score": 13.0,
+          "peak_positions": [
+            28.0
+          ],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d49f6aa2d2f6",
+          "text": "Hence, the XRD data agree well with the TPR results, illustrating the two-stage reduction of manganese: Mn 2 O 3 → Mn 3 O 4 → MnO.",
+          "section_path": [
+            "In situ XRD study"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_708d2c8911b8",
+          "text": "Fig. 7 represents the change in the lattice parameter of the solid solution Mn y Zr 1-y O 2 as a function of temperature. It can be seen that the lattice parameter changes in two steps: there is a wide low-temperature peak between 100 and 550 °C and a high-temperature peak starting near 480 °C (Fig. 7 ). The maximum of the low-temperature peak is located at 290 and 350 °C for 0.3Mn0.7Zr and 0.5Mn0.5Zr, respectively. It can be seen that the change in the lattice parameter correlates well with the TPR results shown above (Fig. 3 ). After the reduction at 700 °C, the lattice parameter of Mn y Zr 1-y O 2 increases from 5.040 to 5.074 Å for 0.3Mn0.7Zr and from 5.003 to 5.053 Å for 0.5Mn0.5Zr; i.e., the lattice parameter of the solid solution approaches the value that is characteristic of \"pure\" zirconium oxide. This change in the lattice parameter may result from the change both in the composition of the solid solution (exit of manganese cations to the surface, i.e., the segregation of Mn) and in the oxidation state of Mn cations in the lattice of the solid solution, for example, Mn 3+ → Mn 2+ . 15, 23, 29 In the latter case, the number of anion vacancies changes and may affect the lattice parameter as well.",
+          "section_path": [
+            "In situ XRD study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "7",
+            "3"
+          ],
+          "xrd_score": 1.7,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_ba618f85d5f1",
+          "text": "To elucidate the reasons for the increase in the lattice parameter of Mn y Zr 1-y O 2 during its reduction, we conducted an experiment on the oxidation of reduced samples. For this, samples reduced at 700 °C were calcined in air at 650 °C for 4 h. It was found that after such treatment, the lattice parameter of Mn y Zr 1-y O 2 decreased to 5.053 Å and 5.018 Å for 0.3Mn0.7Zr and 0.5Mn0.5Zr, respectively. It means that the lattice parameters did not return to initial values (Table 1 ), which most likely indicates a partial exit of manganese cations from the bulk structure of the solid solution. The following XPS data confirm this idea. It was interesting to compare bulk (XRD and TPR data) and surface (XPS data) behavior of the solid solution during reduction.",
+          "section_path": [
+            "In situ XRD study"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_24efced2e411",
+      "title": "In situ XPS study",
+      "path": [
+        "In situ XPS study"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_d4b906f60acb",
+          "text": "The reduction of 0.3Mn0.7Zr in hydrogen was additionally studied in situ using near ambient pressure XPS. The obtained relative concentrations (atomic ratios) of Zr and Mn in the surface layer of 0.3Mn0.7Zr, as well as the Zr 3d 5/2 and Mn 2p 3/2 binding energies are shown in Table 3 . Fig. 8 shows the Zr 3d and Mn 2p core-level spectra that demonstrate the change in the chemical composition of this sample during the reduction. The Zr 3d spectra demonstrate that zirconium, even after the treatment in hydrogen at 620 °C, remains in the state Zr 4+ . As is well known, the Zr 3d spectrum is a doublet Zr 3d 5/2 -Zr 3d 3/2 .",
+          "section_path": [
+            "In situ XPS study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "8"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b3a7bf6a69bc",
+          "text": "The integral intensities of its components relate as 3 : 2, and the spin-orbit splitting (the difference between the Zr 3d 3/2 and Zr 3d 5/2 binding energies) is 2.43 eV. In our case, all the Zr 3d spectra are well described with one doublet with the Zr 3d 5/2 binding energy ranging from 182.2 to 182.5 eV (Table 3 ), which corresponds to zirconium in the Zr 4+ state. The stoichiometric oxide ZrO 2 is characterized by the Zr 3d 5/2 binding energy in the range of 182.2-183.3 eV. [30] [31] ] [32] [33] The shape and position of the Mn 2p spectra significantly change during the reduction, which certainly indicates a change in the chemical state of Mn. The Mn 2p spectrum obtained ex situ in a vacuum at room temperature is a doublet Mn 2p 3/2 -Mn 2p 1/2 with the component ratio of 2 : 1 and with the spin-orbit splitting of 11.8 eV. The doublet peaks have an asymmetrical shape, which results from multielectron pro-cesses. 34 The Mn 2p 3/2 binding energy of 642.4 eV corresponds to manganese in the Mn 4+ state. For comparison, MnO, Mn 2 O 3 , and MnO 2 are characterized by the Mn 2p 3/2 binding energies in the range of 640.6-641.7, 35-40 641.7-641.9, [35] [36] [37] 38] 40, 41 and 641.9-642.6 eV, [35] [36] [37] [39] [40] [41] respectively. The re uction in hydrogen at 350 °C and above leads to a shift of the Mn 2p spectrum to lower binding energies. Considering the shift of the Mn 2p 3/2 peak (641.5-641.6 eV) and the presence in the spectra of intense \"shake up\" satellites that are typical of Mn 2+ , 35, 36, 42 one can assume that manganese in the structure of the solid solution Mn y Zr 1-y O 2 is initially in the state Mn 4+ ; however, then it reduces to Mn 2+ at 350 °C. These data confirm our supposition that the low-temperature peaks of hydrogen absorption with a maximum in the range 320-340 °C (Fig. 3 ), which were observed for the samples 0.12Mn0.88Zr, 0.3Mn0.7Zr, and 0.4Mn0.6Zr, correspond to the reduction of manganese cations in the lattice of Mn y Zr 1-y O 2 . Note that with an increase in the reduction temperature, the Zr 3d 5/2 peak shifts toward higher binding energies by 0.4 eV. Earlier, a similar shift was observed after annealing a ZrO 2 film in a vacuum at 600 °C. 31 Most likely, this shift is related to the partial removal of oxygen from the lattice of the solid solution. Indeed, an increase in the reduction temperature from 350 to 620 °C leads to an increase in the Zr 3d 5/2 binding energy from 182.3 to 182.5 eV and to a decrease in the atomic ratio [O]/[Zr + Mn] from 2.04 to 1.90. At this, the Mn 2p 3/2 binding energy does not change, which means that reduction indeed leads to the formation of oxygen vacancies in the structure of the solid solution Mn y Zr 1-y O 2 .",
+          "section_path": [
+            "In situ XPS study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 2.1,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_80edf6a5640f",
+          "text": "The atomic ratio [Mn]/[Zr] at temperatures between 30 and 500 °C varies in a narrow range of 0.19-0.23, whereas the further heating to 620 °C leads to a significant increase in the atomic ratio to 0.31. According to the XPS data, a change in the atomic ratio [Mn]/[Zr] on the surface indicates that the reduction at high temperatures leads to the segregation of Mn on the surface of the solid solution. Consequently, the hightemperature peaks of hydrogen absorption (Fig. 3 ) are determined by the segregation and reduction of manganese cations.",
+          "section_path": [
+            "In situ XPS study"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 1.3,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_de4806f0d11f",
+      "title": "Reduction mechanism",
+      "path": [
+        "Reduction mechanism"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_8bc09d5bde1a",
+          "text": "On the basis of these data, we suggested a mechanism for the reduction of mixed Mn-Zr oxides (Fig. 9 ). With the example of 0.3Mn0.7Zr (Mn 0.3 Zr 0.7 O 2 ), let us consider how the reduction of the solid solutions Mn y Zr 1-y O 2 proceeds. According to the TPR data (Fig. 3 ) and the data on the change in the lattice parameter (Fig. 7 ), the reduction of the solid solutions proceeds in two steps. The XPS results indicate that the initial state of manganese in the solid solution mainly corresponds to Mn 4+ at the surface. One can assume that the Mn 3+ ions are in the bulk, because for \"pure\" manganese oxides, Mn 2 O 3 is formed under the same synthesis conditions. In the first stage, at temperatures of 100-500 °C, manganese cations undergo reduction to Mn 2+ , whose presence is confirmed by XPS. However, the presence of the second TPR peak indicates that not all manganese cations are reduced to Mn 2+ in the first a Ex situ analysis of the as-prepared sample in a vacuum. stage. The lattice parameter of Mn 0.3 Zr 0.7 O 2 in this case varies because of changes in the oxidation state of manganese cations in the bulk of the solid solution. In the second stage, at temperatures of 500-650 °C, manganese cations exit from the bulk of the solid solution and segregate on its surface (Table 3 ). The lattice parameter at this stage increases to 5.074 Å because of the decrease in the number of Mn cations in the oxide. The partial exit of Mn from the bulk of the solid solution is also confirmed by XRD in the experiments on the re-oxidation of the pre-reduced sample after which the lattice parameter does not return to the initial value of 5.003 Å but becomes equal to 5.053 Å. At high concentrations of manganese, a part of the Mn cations in xMn(1x)Zr are not incorporated into the structure of the solid solution and form oxide particles of crystallized phases Mn 2 O 3 and Mn 3 O 4 and an amorphized phase MnO x . The reduction of Mn in these states proceeds reversibly via the successive change in the oxidation state of the Mn cations: MnO 2 → Mn 2 O 3 → Mn 3 O 4 → MnO. 28",
+          "section_path": [
+            "Reduction mechanism"
+          ],
+          "section_type": "other",
+          "figure_references": [
+            "9",
+            "3",
+            "7"
+          ],
+          "xrd_score": 6.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_e6c42fc87d36",
+      "title": "Experimental section",
+      "path": [
+        "Experimental section"
+      ],
+      "section_type": "methods",
+      "paragraphs": [],
+      "children": []
+    },
+    {
+      "section_id": "section_64ec9fc412f6",
+      "title": "Sample preparation and characterization",
+      "path": [
+        "Sample preparation and characterization"
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_9e18a0bc7169",
+          "text": "Samples were synthesized by calcination of the corresponding hydroxides, which were prepared by precipitation from a joint solution of nitrates ZrO(NO 3 ) 2 and Mn(NO 3 ) 2 . The precipitation was carried out under constant mixing at 550 rpm via gradual addition of an NH 4 OH solution until pH = 10. The resulting precipitate was filtered, washed with water until pH = 6, and dried at 120 °C. The powder was ground in a mortar and calcined at 650 °C in air for 4 h. Using this method, 9 samples were synthesized with different amounts of Mn and Zr. The color of the samples was dark brown. Hereinafter, the samples are referred to as xMn(1x)Zr, where x is the portion of Mn cations.",
+          "section_path": [
+            "Sample preparation and characterization"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.5,
+          "peak_positions": [
+            120.0
+          ],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a99136d0bd56",
+          "text": "The specific surface areas (S BET ) of the samples were determined by the Brunauer-Emmett-Teller method from adsorption of N 2 at 180 mbar measured at liquid nitrogen temperature using a Sorpty-1750 apparatus (Carlo Erba). The obtained data were within a relative error of 4%.",
+          "section_path": [
+            "Sample preparation and characterization"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d77a653aa811",
+          "text": "The as-prepared samples were characterized ex situ by a powder XRD technique using a D8 Advance diffractometer (Bruker) equipped with a Lynxeye linear detector. The ex situ XRD patterns were obtained in the 2θ range from 15°to 65°w ith a step of 0.05°using monochromatic Cu K α radiation (λ = 1.5418 Å).",
+          "section_path": [
+            "Sample preparation and characterization"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 14.5,
+          "peak_positions": [
+            15.0,
+            65.0,
+            0.05
+          ],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_853e06171791",
+          "text": "TEM images were obtained with the use of a JEM-2010 microscope (JEOL, Japan) with a resolution of 1.4 Å. EDX analysis was carried out using an energy dispersive spectrometer with a Si (Li) detector and an energy resolution of 130 eV.",
+          "section_path": [
+            "Sample preparation and characterization"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_35319c04f0f1",
+          "text": "The temperature-programmed reduction in hydrogen (TPR-H 2 ) was performed with 100 mg of a sample in a quartz reactor using a flow setup equipped with a thermal conductivity detector. The reducing mixture (10 vol% of H 2 in Ar) was fed at 40 mL min -1 . The rate of heating from room temperature to 900 °C was approximately 10 °C min -1 .",
+          "section_path": [
+            "Sample preparation and characterization"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.5,
+          "peak_positions": [
+            10.0
+          ],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_83ecdd901d4f",
+      "title": "In situ XRD measurements",
+      "path": [
+        "In situ XRD measurements"
+      ],
+      "section_type": "methods",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_0d1dfe1b13b7",
+          "text": "The reduction of the catalysts was studied in situ using synchrotron radiation at the Siberian Synchrotron and Terahertz Radiation Center (Novosibirsk, Russia). The in situ diffractometer was equipped with a high-temperature reactor chamber XRK-900 (Anton Paar). A sample was loaded into the reactor on an open holder, allowing hydrogen to pass through the sample volume. The chamber was mounted on the diffractometer so that the monochromatic synchrotron radiation beam was incident on the sample surface at an angle of approximately 15°. The in situ diffraction patterns were recorded in the 2θ ranges from 15°to 46°for 0Mn1Zr and 0.3Mn0.7Zr and from 31°to 62°for 0.5Mn0.5Zr with an acquisition time of 1 min. The wavelength of synchrotron radiation was 1.7273 and 1.0157 Å, respectively. The samples were reduced at atmospheric pressure under a flow of H 2 diluted with He. The heating rate was approximately 5 °C min -1 ; the total flow rate was 150 mL min -1 .",
+          "section_path": [
+            "In situ XRD measurements"
+          ],
+          "section_type": "methods",
+          "figure_references": [],
+          "xrd_score": 10.5,
+          "peak_positions": [
+            15.0,
+            46.0,
+            31.0,
+            62.0,
+            5.0
+          ],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_61227135cf18",
+      "title": "In situ XPS measurements",
+      "path": [
+        "In situ XPS measurements"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_cb017296bbdd",
+          "text": "In situ XPS experiments were performed at the ISISS (Innovative Station for In Situ Spectroscopy) beamline in the synchrotron radiation facility BESSY II (Berlin, Germany). The experimental station was described in detail elsewhere. 19 In short, this station is equipped with an electron energy analyzer PHOIBOS-150 (SPECS Surface Nano Analysis GmbH), a gas cell, and a system of electron lenses. The lens system was combined with three differential pumping stages that provided UHV conditions in the electron energy analyzer even when the pressure in the gas cell was 10 mbar. The high brilliance of the synchrotron radiation combined with a short travel length of the photoelectrons through a \"high-pressure\" zone in the gas cell allowed us to obtain high-quality core-level spectra under flow conditions. In these experiments, the Zr 3d, Mn 2p, O 1s, and C 1s core-level spectra of 0.3Mn0.7Zr were recorded under a H 2 flow at 140, 350, 500, and 620 °C. The total pressure of H 2 was 0.5 mbar. All the spectra were obtained with a photon energy of 860 eV. Atomic ratios [Mn]/[Zr] and [O]/[Zr + Mn] were calculated on the basis of total intensities of the Zr 3d, Mn 2p, and O 1s spectra normalized to the ring current and cross-sections published elsewhere 20 taking into account the XPS analysis depth.",
+          "section_path": [
+            "In situ XPS measurements"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d7b868dec5e4",
+          "text": "Because the in situ XPS experiments at room temperature were heavily hindered with a strong charge effect, the chemical state of the as-prepared 0.3Mn0.7Zr catalyst was studied using an X-ray photoelectron spectrometer (SPECS Surface Nano Analysis GmbH) equipped with a hemispherical analyzer PHOIBOS-150, an X-ray monochromator FOCUS-500, and an X-ray source XR-50M with a double Al/Ag anode. The XPS spectra were acquired in the fixed pass energy mode using monochromatic Al Kα radiation (hν = 1486.74 eV). Relative concentrations of elements in this case were determined from the total intensities of the corresponding core-level spectra using cross-sections according to Scofield. 21 ll the spectra were analyzed using the CasaXPS software. In short, after the subtraction of a Shirley-type background, the spectra were fitted using Gaussian/Lorentzian line-shapes. The charge effect was corrected by setting the C 1s peak (due to adventitious hydrocarbons) at 284.8 eV.",
+          "section_path": [
+            "In situ XPS measurements"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_4a3de2ad0797",
+      "title": "Conclusions",
+      "path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_91b5af88f946",
+          "text": "In this work, Mn-Zr mixed oxides were obtained by coprecipitation of the corresponding nitrates, and their physical and chemical characteristics were studied. At concentrations of Mn below 30 at%, the mixed oxides consist of the single-phase solid solution Mn x Zr 1-x O 2-δ based on the structure of ZrO 2 , which includes all the Mn cations in the system. When the content of Mn in the samples increases, the amount of Mn incorporated into the solid solution Mn x Zr 1-x O 2-δ also increases; however, a part of the manganese cations exist in an amorphized state and enter the composition of crystalline oxides Mn 2 O 3 or Mn 3 O 4 .",
+          "section_path": [
+            "Conclusions"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b7be8dce12d8",
+          "text": "The reduction of mixed oxides in hydrogen was studied by in situ XRD, TPR, and in situ XPS. It has been shown that the reduction of the solid solutions Mn x Zr 1-x O 2-δ proceeds in a wide temperature range of 100-700 °C via two steps. In the first step, at 100-500 °C, Mn cations, which constitute the solid solution, undergo partial reduction. In the second step, at 500-700 °C, Mn cations irreversibly exit to the particle surface. In the samples with more than 30 at% of Mn, the reduction of the solid solution Mn x Zr 1-x O 2-δ is accompanied by the reduction of manganese oxides Mn 2 O 3 → Mn 3 O 4 → MnO.",
+          "section_path": [
+            "Conclusions"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "paragraph_5d186e2f603e",
+      "text": "Materials based on zirconium dioxide (ZrO 2 ) demonstrate unique properties and hence find wide applications in various industrial fields. For example, their high durability, corrosion resistance, and low thermal conductivity allow the application of ZrO 2 in the production of coatings for various toolware. 1, 2 he high stability and ionic conductivity of ZrO 2 -based materials allow their use as electrochemical oxygen sensors, solid electrolytes in fuel cells, etc. [3] [4] [5] In heterogeneous catalysis, ZrO 2 is widely used as a support with high thermal resistance. [6] [7] 7] [8] Moreover, solid solutions based on ZrO 2 exhibit high catalytic activity in a number of practically important reactions. For instance, recently it has been shown that Mn-Zn mixed oxides can effectively catalyze the gas-phase oxidation of hydrocarbons or chlorocarbons. [9] [10] 0] [11] Although there is agreement that the catalytic performance of these catalysts is determined by their redox properties, the exact mechanism of these reactions is not yet clear. The main reason for this incomprehension is due to the complexity of the reduction of Mn-Zn mixed oxides.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a1a6c0b3624c",
+      "text": "Manganese cations can enter the lattice of ZrO 2 with the formation of the solid solutions Zr 1-x Mn x O 2 , 9, [12] [13] [14] [15] in which lattice oxygen possesses sufficiently high mobility and hence high reactivity. On the other hand, some authors 10, [16] [17] [18] suppose that the active species in oxidation reactions is mobile oxygen that is incorporated into disperse MnO x rather than lattice oxygen of the solid solution. Moreover, under reduction conditions, segregation of manganese with the formation of dispersed MnO x may occur on the surface of the solid solution Zr 1-x Mn x O 2 .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_3b558b02c58d",
+      "text": "One of the main ways to study the redox properties of different oxides is a temperature-programmed reduction (TPR) technique. On the basis of its results, it is possible, for example, to draw some conclusions about the presence of various forms of manganese oxides. However, TPR is an indirect method that allows monitoring only the absorption of hydrogen rather than the change in the structural characteristics of catalysts and in the charge state of Mn and Zr cations. The aim of this work was to obtain detailed information on various stages of the reduction of Mn-Zn mixed oxides. The study was carried out using a combination of methods: temperature-programmed reduction, X-ray diffraction (XRD), and X-ray photoelectron spectroscopy (XPS).",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 8.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_5b9a77b55285",
+      "text": "The results of the study of freshly synthesized samples indicate that the concentration of Mn in the samples xMn(1x)Zr significantly affects their phase composition, unit cell parameters of the solid solution and the size of the coherently scattering domain (CSD). The main results of the XRD study are presented in Table 1 . At x = 0, the sample xMn(1x)Zr is ZrO 2 with the lattice parameter of 5.115 Å. Although this modification of ZrO 2 cannot be considered strictly cubic, its lattice parameter was calculated in the cubic approximation because of the low calcination temperature (650 °C) and because of the small size of the obtained particles that led to the broadening of diffraction peaks. In comparison, the lattice parameter of the metastable cubic phase ZrO 2 is 5.09 Å. 22 An increase in the Mn content resulted in a monotonic decrease in the lattice parameter of zirconia, indicating that Mn cations modify the lattice of ZrO 2 to form a solid solution Mn y Zr 1-y O 2 . Indeed, substitution of smaller cations Mn 3+ (ionic radius 0.66 Å) for bigger cations Zr 4+ (ionic radius 0.79 Å) should lead to a decrease in the lattice parameter of the solid solution based on zirconia. 10 The detected decrease in the size of CSD correlates with an increase in the surface area (Table 1 ), i.e. the dispersion of particles Mn y Zr 1-y O 2 increases. In the samples with the high Mn content (x ≥ 0.5), there also appears a phase of manganese oxide Mn 2 O 3 . A further increase in the concentration of Mn (x = 0.7) leads to the formation of an additional phase β-Mn 3 O 4 .",
+      "section_path": [
+        "XRD study of as-prepared samples"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 6.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_fbe1ad7ff44a",
+      "text": "The multi-phase composition of the samples leads to a nonmonotonic dependence of their specific surface area on the concentration of Mn. With an increase in the Mn content in the x range from 0.0 to 0.4, the specific surface area increases from 43 to 103 m 2 g -1 and then almost does not change until x = 0.6. The addition of Mn in larger amounts leads to a drop in S BET to 79 and 44 m 2 g -1 at x = 0.7 and 0.9, respectively. Reducing the specific surface area at high concentrations of Mn may be associated with an increase in the content of manganese oxides in the sample up to 85 wt%. Note that the specific surface area of most of the samples xMn(1x)Zr exceeds the specific surface area of individual oxides of manganese and zirconium that were subjected to the same stages of synthesis.",
+      "section_path": [
+        "XRD study of as-prepared samples"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_94d64e8f544b",
+      "text": "Fig. 1 shows the lattice parameter of the solid-solution Mn y Zr 1-y O 4 as a function of the manganese content x calculated based on the XRD data obtained in our experiments and the XRD data published elsewhere. 9, 10, 23 As seen from the picture, the lattice parameter in the solid solutions depends on several factors: the content of Mn cations, preparation conditions, temperature, the environment and the duration of calcination that affects the oxidation state of Mn and the Other symbols show published lattice parameters of Mn y Zr 1-y O 2 obtained under other conditions: in air at 600 °C for 4 h (diamonds); 5 in air at 600 °C but for 3 h (stars); 9 in air at 800 °C for 3 h (squares); 10 in hydrogen at 800 °C for 10 h (triangles). 23 onstoichiometry of the oxide with respect to oxygen. According to literature data 9, 10 (Fig. 1 , diamonds, stars), the lattice parameter decreases with the increasing Mn content almost linearly (up to x = 0.5). It indicates the formation of a wide range of solid solutions, as in our case. The dotted line in Fig. 1 , which is drawn through two points x = 0 and x = 0.12, extrapolates the dependence of the formation of the solid solution Mn y Zr 1-y O 4 to y = x. It is evident that in the range from x = 0.0 to x = 0.3, the experimental lattice parameters coincide with the calculated data, which may indicate complete incorporation of Mn into the lattice of ZrO 2 . Moreover, even the point at x = 0.4 deviates from the extrapolated data only slightly. For large values of x, the deviation of the experimentally observed lattice parameters from the calculated data increases. One of the factors determining this behavior is the formation of manganese oxide particles on the surface of solid solutions. According to the XRD data, the phase of Mn 2 O 3 appears already at x = 0.5, and its amount increases with the Mn content. Thus, the change in the lattice parameter of the ZrO 2 -based phase demonstrates that the coprecipitation method actually provides the formation of the solid solutions Mn y Zr 1-y O 2 . Taking into account the linearity of the initial part of the obtained dependence, one can assume that all Mn atoms are incorporated into the lattice of ZrO 2 in the samples with the concentration of Mn up to 30 at%. With a further increase in the Mn content, the number of Mn cations included in the solid solution Mn y Zr 1-y O 2 also increases; however besides this, a part of the manganese cations enter the composition of crystalline oxides Mn 2 O 3 , Mn 3 O 4 , or an amorphized state.",
+      "section_path": [
+        "XRD study of as-prepared samples"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 6.1,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_20b01bd53ec3",
+      "text": "Fig. 2 shows the TEM images of 0.3Mn0.7Zr and 0.5Mn0.5Zr. The sample consists of small particles of the solid solution Mn y Zr 1-y O 4 10-15 nm in size. For 0.5Mn0.5Zr, large particles of Mn 2 O 3 are also observed. Energy dispersive X-ray (EDX) analysis indicates that Mn : Zr ratios are 26 : 74 and 53 : 47 for 0.3Mn0.7Zr and 0.5Mn0.5Zr, respectively. These values are close to the original content of elements.",
+      "section_path": [
+        "Transmission electron microscopy (TEM) characterization"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_5b19a1c43e99",
+      "text": "The reduction of mixed Mn-Zr oxides was studied by TPR under a hydrogen atmosphere. The TPR profiles obtained for xMn(1x)Zr in the range from 30 to 900 °C are shown in Fig. 3 ; the positions of the observed peaks and the amounts of absorbed hydrogen are summarized in Table 2 . The reduction of 0Mn1Zr (i.e., ZrO 2 ) appears as one narrow peak of the hydrogen absorption with a maximum near 635 °C. Such a dependence is not typical of well-crystallized ZrO 2 . However in some cases, TPR profiles of ZrO 2 exhibit intense peaks, whose position and intensity depend on the phase composition and the synthesis method used. 14, 24, 25 For example, Damyanova et al. 25 observed two peaks at 440 and 630 °C and attributed them to the reduction of surface carbonates and hydroxyl groups. Dravid et al. 14 suggested that the partial reduction of ZrO 2 may result from the high mobility of oxygen at elevated temperatures. In our case, heating the sample 0Mn1Zr in argon to 200 °C resulted in the release of only adsorbed water and CO 2 , which decreased rapidly with temperature. Consequently, the hydrogen absorption peak at 635 °C (Fig. 3 ) should be attributed to some transformations of ZrO 2 itself, for example, to the partial reduction of zirconium in the surface layers of 0Mn1Zr.",
+      "section_path": [
+        "TPR-H 2 study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 2.1,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b053ad0eee9c",
+      "text": "For the samples containing Mn, there are two ranges of hydrogen absorption: at 150-500 °C and 500-640 °C, respectively (Fig. 3 ). On the TPR profiles of the samples 0.12Mn0.88Zr and 0.3Mn0.7Zr, there is a broad low-temperature peak with a maximum (T max ) at 320 and 340 °C, respectively. In the literature, peaks in the range 200-500 °C are often associated with the reduction of highly dispersed manganese oxides that do not manifest themselves by XRD. 10, 26 owever, this assumption is questionable, because the presence of an X-ray amorphous phase is usually not proven. Taking into account that up to 14 wt% of manganese oxides, Mn cations can dissolve in the structure of ZrO 2 , 14 and that the samples 0.12Mn0.88Zr and 0.3Mn0.7Zr consist of only the solid solution Mn y Zr 1-y O 2 , the peak at 320-340 °C should be attributed to the reduction of Mn cations located in the lattice of ZrO 2 . For the sample 0.4Mn0.6Zr, the low-temperature peak has a more complex shape: there is a small shoulder near 220 °C. According to the XRD data (Table 1 ), the lattice parameter of this sample slightly deviates from the value calculated for the solid solution Mn 0.4 Zr 0.6 O 2 (Fig. 1 ).",
+      "section_path": [
+        "TPR-H 2 study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "3",
+        "1"
+      ],
+      "xrd_score": 6.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_50db5e480d78",
+      "text": "On the other hand, this sample does not contain crystalline manganese oxides. Therefore, the additional peak at 220 °C can be attributed to the reduction of an amorphous oxide MnO x , which may exist on the surface of Mn y Zr 1-y O 2 particles in the form of, for example, an epitaxial layer. 26 t higher concentrations of Mn, the shape of the low-temperature peak becomes even more complicated: there appears an additional peak at higher temperatures, the intensity of which increases with an increase in the Mn content. For example, TPR profiles of the samples with x = 0.5 and 0.7 exhibit three peaks in the low temperature region with the maxima located at 290, 350, 410 °C and at 250, 365, 450 °C, respectively. According to the XRD data (Table 1 ), these samples contain the crystalline phase Mn 2 O 3 , whose reduction proceeds in two steps: (1) Mn 2 O 3 → Mn 3 O 4 at 250-350 °C and (2) Mn 3 O 4 → MnO at 350-500 °C. 27, 28 Therefore, it can be assumed that the hydrogen absorption peaks at 290 and 250 °C can be attributed to the reduction of amorphous MnO x , while the peaks at 350 and 410 °C and the peaks at 365 and 450 °C can be due to the reduction of the crystalline oxide Mn 2 O 3 . The shift of these peaks to the higher temperatures may be associated with an increase in the size of manganese oxide particles.",
+      "section_path": [
+        "TPR-H 2 study"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 6.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_637f8c30f0dd",
+      "text": "The origin of the high-temperature peak, which is observed at 550-580 °C, is still debatable. It is usually attributed to the reduction of cations Mn 3+ → Mn 2+ in the lattice of zirconia. 10, 11, 26 However, sometimes this peak is associated with the reduction of zirconia itself, 29 which is indicated by the presence of this peak in the TPR profile of the Mn-free sample 0Mn1Zr. Fig. 3 shows that the high-temperature peak for the samples xMn(1x)Zr shifts to lower temperatures with an increase in the Mn content. This peak for \"pure\" ZrO 2 (sample 0Mn1Zr) is significantly shifted in comparison with the peak for all the Mn-containing samples. For the samples with x = 0 and x = 0.12, this shift is 55 °C, while a further increase in the Mn content leads to an additional shift of the high-temperature peak toward lower temperatures by 30 °C.",
+      "section_path": [
+        "TPR-H 2 study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 2.7,
+      "peak_positions": [
+        55.0,
+        30.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_2c6cdcf33a34",
+      "text": "To determine structural transformations that accompany the reduction of mixed Zr-Mn oxides, we recorded in situ XRD patterns of the samples 0.3Mn0.7Zr and 0.5Mn0.5Zr during their reduction with hydrogen at temperatures up to 700 °C. For 0.3Mn0.7Zr, the increase in temperature led to a shift of the peaks of the solid solution Mn y Zr 1-y O 4 , and no other changes in the diffraction patterns occurred (Fig. 4 ).",
+      "section_path": [
+        "In situ XRD study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "4"
+      ],
+      "xrd_score": 12.7,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_f8a81e784b15",
+      "text": "Fig. 5 shows a series of diffraction patterns recorded during the reduction of 0.5Mn0.5Zr. At room temperature, the sample contains two phases: the solid solution Mn y Zr 1-y O 4 and Mn 2 O 3 . The reduction of this sample leads to a change in the lattice parameter of the solid solution Mn y Zr 1-y O 4 , which is indicated by the shift of the corresponding peaks to larger angles. Besides, the reduction leads to the transformations of manganese oxides. For example, in the range of 275-325 °C, relative intensities of the peaks of Mn 2 O 3 gradually decrease, while the peaks of Mn 3 O 4 increase. At 375 °C, there appears the phase of MnO. Upon further heating, the relative intensity of the reflections of MnO increases (Fig. 5 ). For clarity, Fig. 6 shows diffraction patterns recorded at 275-400 °C in the 2θ range 17-28°.",
+      "section_path": [
+        "In situ XRD study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "5",
+        "6"
+      ],
+      "xrd_score": 13.0,
+      "peak_positions": [
+        28.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d49f6aa2d2f6",
+      "text": "Hence, the XRD data agree well with the TPR results, illustrating the two-stage reduction of manganese: Mn 2 O 3 → Mn 3 O 4 → MnO.",
+      "section_path": [
+        "In situ XRD study"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_708d2c8911b8",
+      "text": "Fig. 7 represents the change in the lattice parameter of the solid solution Mn y Zr 1-y O 2 as a function of temperature. It can be seen that the lattice parameter changes in two steps: there is a wide low-temperature peak between 100 and 550 °C and a high-temperature peak starting near 480 °C (Fig. 7 ). The maximum of the low-temperature peak is located at 290 and 350 °C for 0.3Mn0.7Zr and 0.5Mn0.5Zr, respectively. It can be seen that the change in the lattice parameter correlates well with the TPR results shown above (Fig. 3 ). After the reduction at 700 °C, the lattice parameter of Mn y Zr 1-y O 2 increases from 5.040 to 5.074 Å for 0.3Mn0.7Zr and from 5.003 to 5.053 Å for 0.5Mn0.5Zr; i.e., the lattice parameter of the solid solution approaches the value that is characteristic of \"pure\" zirconium oxide. This change in the lattice parameter may result from the change both in the composition of the solid solution (exit of manganese cations to the surface, i.e., the segregation of Mn) and in the oxidation state of Mn cations in the lattice of the solid solution, for example, Mn 3+ → Mn 2+ . 15, 23, 29 In the latter case, the number of anion vacancies changes and may affect the lattice parameter as well.",
+      "section_path": [
+        "In situ XRD study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "7",
+        "3"
+      ],
+      "xrd_score": 1.7,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_ba618f85d5f1",
+      "text": "To elucidate the reasons for the increase in the lattice parameter of Mn y Zr 1-y O 2 during its reduction, we conducted an experiment on the oxidation of reduced samples. For this, samples reduced at 700 °C were calcined in air at 650 °C for 4 h. It was found that after such treatment, the lattice parameter of Mn y Zr 1-y O 2 decreased to 5.053 Å and 5.018 Å for 0.3Mn0.7Zr and 0.5Mn0.5Zr, respectively. It means that the lattice parameters did not return to initial values (Table 1 ), which most likely indicates a partial exit of manganese cations from the bulk structure of the solid solution. The following XPS data confirm this idea. It was interesting to compare bulk (XRD and TPR data) and surface (XPS data) behavior of the solid solution during reduction.",
+      "section_path": [
+        "In situ XRD study"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d4b906f60acb",
+      "text": "The reduction of 0.3Mn0.7Zr in hydrogen was additionally studied in situ using near ambient pressure XPS. The obtained relative concentrations (atomic ratios) of Zr and Mn in the surface layer of 0.3Mn0.7Zr, as well as the Zr 3d 5/2 and Mn 2p 3/2 binding energies are shown in Table 3 . Fig. 8 shows the Zr 3d and Mn 2p core-level spectra that demonstrate the change in the chemical composition of this sample during the reduction. The Zr 3d spectra demonstrate that zirconium, even after the treatment in hydrogen at 620 °C, remains in the state Zr 4+ . As is well known, the Zr 3d spectrum is a doublet Zr 3d 5/2 -Zr 3d 3/2 .",
+      "section_path": [
+        "In situ XPS study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "8"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b3a7bf6a69bc",
+      "text": "The integral intensities of its components relate as 3 : 2, and the spin-orbit splitting (the difference between the Zr 3d 3/2 and Zr 3d 5/2 binding energies) is 2.43 eV. In our case, all the Zr 3d spectra are well described with one doublet with the Zr 3d 5/2 binding energy ranging from 182.2 to 182.5 eV (Table 3 ), which corresponds to zirconium in the Zr 4+ state. The stoichiometric oxide ZrO 2 is characterized by the Zr 3d 5/2 binding energy in the range of 182.2-183.3 eV. [30] [31] ] [32] [33] The shape and position of the Mn 2p spectra significantly change during the reduction, which certainly indicates a change in the chemical state of Mn. The Mn 2p spectrum obtained ex situ in a vacuum at room temperature is a doublet Mn 2p 3/2 -Mn 2p 1/2 with the component ratio of 2 : 1 and with the spin-orbit splitting of 11.8 eV. The doublet peaks have an asymmetrical shape, which results from multielectron pro-cesses. 34 The Mn 2p 3/2 binding energy of 642.4 eV corresponds to manganese in the Mn 4+ state. For comparison, MnO, Mn 2 O 3 , and MnO 2 are characterized by the Mn 2p 3/2 binding energies in the range of 640.6-641.7, 35-40 641.7-641.9, [35] [36] [37] 38] 40, 41 and 641.9-642.6 eV, [35] [36] [37] [39] [40] [41] respectively. The re uction in hydrogen at 350 °C and above leads to a shift of the Mn 2p spectrum to lower binding energies. Considering the shift of the Mn 2p 3/2 peak (641.5-641.6 eV) and the presence in the spectra of intense \"shake up\" satellites that are typical of Mn 2+ , 35, 36, 42 one can assume that manganese in the structure of the solid solution Mn y Zr 1-y O 2 is initially in the state Mn 4+ ; however, then it reduces to Mn 2+ at 350 °C. These data confirm our supposition that the low-temperature peaks of hydrogen absorption with a maximum in the range 320-340 °C (Fig. 3 ), which were observed for the samples 0.12Mn0.88Zr, 0.3Mn0.7Zr, and 0.4Mn0.6Zr, correspond to the reduction of manganese cations in the lattice of Mn y Zr 1-y O 2 . Note that with an increase in the reduction temperature, the Zr 3d 5/2 peak shifts toward higher binding energies by 0.4 eV. Earlier, a similar shift was observed after annealing a ZrO 2 film in a vacuum at 600 °C. 31 Most likely, this shift is related to the partial removal of oxygen from the lattice of the solid solution. Indeed, an increase in the reduction temperature from 350 to 620 °C leads to an increase in the Zr 3d 5/2 binding energy from 182.3 to 182.5 eV and to a decrease in the atomic ratio [O]/[Zr + Mn] from 2.04 to 1.90. At this, the Mn 2p 3/2 binding energy does not change, which means that reduction indeed leads to the formation of oxygen vacancies in the structure of the solid solution Mn y Zr 1-y O 2 .",
+      "section_path": [
+        "In situ XPS study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 2.1,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_80edf6a5640f",
+      "text": "The atomic ratio [Mn]/[Zr] at temperatures between 30 and 500 °C varies in a narrow range of 0.19-0.23, whereas the further heating to 620 °C leads to a significant increase in the atomic ratio to 0.31. According to the XPS data, a change in the atomic ratio [Mn]/[Zr] on the surface indicates that the reduction at high temperatures leads to the segregation of Mn on the surface of the solid solution. Consequently, the hightemperature peaks of hydrogen absorption (Fig. 3 ) are determined by the segregation and reduction of manganese cations.",
+      "section_path": [
+        "In situ XPS study"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 1.3,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8bc09d5bde1a",
+      "text": "On the basis of these data, we suggested a mechanism for the reduction of mixed Mn-Zr oxides (Fig. 9 ). With the example of 0.3Mn0.7Zr (Mn 0.3 Zr 0.7 O 2 ), let us consider how the reduction of the solid solutions Mn y Zr 1-y O 2 proceeds. According to the TPR data (Fig. 3 ) and the data on the change in the lattice parameter (Fig. 7 ), the reduction of the solid solutions proceeds in two steps. The XPS results indicate that the initial state of manganese in the solid solution mainly corresponds to Mn 4+ at the surface. One can assume that the Mn 3+ ions are in the bulk, because for \"pure\" manganese oxides, Mn 2 O 3 is formed under the same synthesis conditions. In the first stage, at temperatures of 100-500 °C, manganese cations undergo reduction to Mn 2+ , whose presence is confirmed by XPS. However, the presence of the second TPR peak indicates that not all manganese cations are reduced to Mn 2+ in the first a Ex situ analysis of the as-prepared sample in a vacuum. stage. The lattice parameter of Mn 0.3 Zr 0.7 O 2 in this case varies because of changes in the oxidation state of manganese cations in the bulk of the solid solution. In the second stage, at temperatures of 500-650 °C, manganese cations exit from the bulk of the solid solution and segregate on its surface (Table 3 ). The lattice parameter at this stage increases to 5.074 Å because of the decrease in the number of Mn cations in the oxide. The partial exit of Mn from the bulk of the solid solution is also confirmed by XRD in the experiments on the re-oxidation of the pre-reduced sample after which the lattice parameter does not return to the initial value of 5.003 Å but becomes equal to 5.053 Å. At high concentrations of manganese, a part of the Mn cations in xMn(1x)Zr are not incorporated into the structure of the solid solution and form oxide particles of crystallized phases Mn 2 O 3 and Mn 3 O 4 and an amorphized phase MnO x . The reduction of Mn in these states proceeds reversibly via the successive change in the oxidation state of the Mn cations: MnO 2 → Mn 2 O 3 → Mn 3 O 4 → MnO. 28",
+      "section_path": [
+        "Reduction mechanism"
+      ],
+      "section_type": "other",
+      "figure_references": [
+        "9",
+        "3",
+        "7"
+      ],
+      "xrd_score": 6.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9e18a0bc7169",
+      "text": "Samples were synthesized by calcination of the corresponding hydroxides, which were prepared by precipitation from a joint solution of nitrates ZrO(NO 3 ) 2 and Mn(NO 3 ) 2 . The precipitation was carried out under constant mixing at 550 rpm via gradual addition of an NH 4 OH solution until pH = 10. The resulting precipitate was filtered, washed with water until pH = 6, and dried at 120 °C. The powder was ground in a mortar and calcined at 650 °C in air for 4 h. Using this method, 9 samples were synthesized with different amounts of Mn and Zr. The color of the samples was dark brown. Hereinafter, the samples are referred to as xMn(1x)Zr, where x is the portion of Mn cations.",
+      "section_path": [
+        "Sample preparation and characterization"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.5,
+      "peak_positions": [
+        120.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a99136d0bd56",
+      "text": "The specific surface areas (S BET ) of the samples were determined by the Brunauer-Emmett-Teller method from adsorption of N 2 at 180 mbar measured at liquid nitrogen temperature using a Sorpty-1750 apparatus (Carlo Erba). The obtained data were within a relative error of 4%.",
+      "section_path": [
+        "Sample preparation and characterization"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d77a653aa811",
+      "text": "The as-prepared samples were characterized ex situ by a powder XRD technique using a D8 Advance diffractometer (Bruker) equipped with a Lynxeye linear detector. The ex situ XRD patterns were obtained in the 2θ range from 15°to 65°w ith a step of 0.05°using monochromatic Cu K α radiation (λ = 1.5418 Å).",
+      "section_path": [
+        "Sample preparation and characterization"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 14.5,
+      "peak_positions": [
+        15.0,
+        65.0,
+        0.05
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_853e06171791",
+      "text": "TEM images were obtained with the use of a JEM-2010 microscope (JEOL, Japan) with a resolution of 1.4 Å. EDX analysis was carried out using an energy dispersive spectrometer with a Si (Li) detector and an energy resolution of 130 eV.",
+      "section_path": [
+        "Sample preparation and characterization"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_35319c04f0f1",
+      "text": "The temperature-programmed reduction in hydrogen (TPR-H 2 ) was performed with 100 mg of a sample in a quartz reactor using a flow setup equipped with a thermal conductivity detector. The reducing mixture (10 vol% of H 2 in Ar) was fed at 40 mL min -1 . The rate of heating from room temperature to 900 °C was approximately 10 °C min -1 .",
+      "section_path": [
+        "Sample preparation and characterization"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.5,
+      "peak_positions": [
+        10.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_0d1dfe1b13b7",
+      "text": "The reduction of the catalysts was studied in situ using synchrotron radiation at the Siberian Synchrotron and Terahertz Radiation Center (Novosibirsk, Russia). The in situ diffractometer was equipped with a high-temperature reactor chamber XRK-900 (Anton Paar). A sample was loaded into the reactor on an open holder, allowing hydrogen to pass through the sample volume. The chamber was mounted on the diffractometer so that the monochromatic synchrotron radiation beam was incident on the sample surface at an angle of approximately 15°. The in situ diffraction patterns were recorded in the 2θ ranges from 15°to 46°for 0Mn1Zr and 0.3Mn0.7Zr and from 31°to 62°for 0.5Mn0.5Zr with an acquisition time of 1 min. The wavelength of synchrotron radiation was 1.7273 and 1.0157 Å, respectively. The samples were reduced at atmospheric pressure under a flow of H 2 diluted with He. The heating rate was approximately 5 °C min -1 ; the total flow rate was 150 mL min -1 .",
+      "section_path": [
+        "In situ XRD measurements"
+      ],
+      "section_type": "methods",
+      "figure_references": [],
+      "xrd_score": 10.5,
+      "peak_positions": [
+        15.0,
+        46.0,
+        31.0,
+        62.0,
+        5.0
+      ],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_cb017296bbdd",
+      "text": "In situ XPS experiments were performed at the ISISS (Innovative Station for In Situ Spectroscopy) beamline in the synchrotron radiation facility BESSY II (Berlin, Germany). The experimental station was described in detail elsewhere. 19 In short, this station is equipped with an electron energy analyzer PHOIBOS-150 (SPECS Surface Nano Analysis GmbH), a gas cell, and a system of electron lenses. The lens system was combined with three differential pumping stages that provided UHV conditions in the electron energy analyzer even when the pressure in the gas cell was 10 mbar. The high brilliance of the synchrotron radiation combined with a short travel length of the photoelectrons through a \"high-pressure\" zone in the gas cell allowed us to obtain high-quality core-level spectra under flow conditions. In these experiments, the Zr 3d, Mn 2p, O 1s, and C 1s core-level spectra of 0.3Mn0.7Zr were recorded under a H 2 flow at 140, 350, 500, and 620 °C. The total pressure of H 2 was 0.5 mbar. All the spectra were obtained with a photon energy of 860 eV. Atomic ratios [Mn]/[Zr] and [O]/[Zr + Mn] were calculated on the basis of total intensities of the Zr 3d, Mn 2p, and O 1s spectra normalized to the ring current and cross-sections published elsewhere 20 taking into account the XPS analysis depth.",
+      "section_path": [
+        "In situ XPS measurements"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d7b868dec5e4",
+      "text": "Because the in situ XPS experiments at room temperature were heavily hindered with a strong charge effect, the chemical state of the as-prepared 0.3Mn0.7Zr catalyst was studied using an X-ray photoelectron spectrometer (SPECS Surface Nano Analysis GmbH) equipped with a hemispherical analyzer PHOIBOS-150, an X-ray monochromator FOCUS-500, and an X-ray source XR-50M with a double Al/Ag anode. The XPS spectra were acquired in the fixed pass energy mode using monochromatic Al Kα radiation (hν = 1486.74 eV). Relative concentrations of elements in this case were determined from the total intensities of the corresponding core-level spectra using cross-sections according to Scofield. 21 ll the spectra were analyzed using the CasaXPS software. In short, after the subtraction of a Shirley-type background, the spectra were fitted using Gaussian/Lorentzian line-shapes. The charge effect was corrected by setting the C 1s peak (due to adventitious hydrocarbons) at 284.8 eV.",
+      "section_path": [
+        "In situ XPS measurements"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_91b5af88f946",
+      "text": "In this work, Mn-Zr mixed oxides were obtained by coprecipitation of the corresponding nitrates, and their physical and chemical characteristics were studied. At concentrations of Mn below 30 at%, the mixed oxides consist of the single-phase solid solution Mn x Zr 1-x O 2-δ based on the structure of ZrO 2 , which includes all the Mn cations in the system. When the content of Mn in the samples increases, the amount of Mn incorporated into the solid solution Mn x Zr 1-x O 2-δ also increases; however, a part of the manganese cations exist in an amorphized state and enter the composition of crystalline oxides Mn 2 O 3 or Mn 3 O 4 .",
+      "section_path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b7be8dce12d8",
+      "text": "The reduction of mixed oxides in hydrogen was studied by in situ XRD, TPR, and in situ XPS. It has been shown that the reduction of the solid solutions Mn x Zr 1-x O 2-δ proceeds in a wide temperature range of 100-700 °C via two steps. In the first step, at 100-500 °C, Mn cations, which constitute the solid solution, undergo partial reduction. In the second step, at 500-700 °C, Mn cations irreversibly exit to the particle surface. In the samples with more than 30 at% of Mn, the reduction of the solid solution Mn x Zr 1-x O 2-δ is accompanied by the reduction of manganese oxides Mn 2 O 3 → Mn 3 O 4 → MnO.",
+      "section_path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [],
+      "miller_indices": []
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Fig. 1 Fig.1Our experimental (circles) and estimated (dotted line) dependence of the lattice parameter of Mn y Zr 1-y O 2 on the Mn content x. Other symbols show published lattice parameters of Mn y Zr 1-y O 2 obtained under other conditions: in air at 600 °C for 4 h (diamonds); 5 in air at 600 °C but for 3 h (stars); 9 in air at 800 °C for 3 h (squares); 10 in hydrogen at 800 °C for 10 h (triangles). 23",
+      "graphic_targets": [],
+      "coords": "2,303.31,445.27,249.41,6.90;2,303.31,454.95,249.45,8.12;2,303.31,465.26,249.43,7.79;2,303.31,473.71,249.40,8.45;2,303.31,483.69,249.40,8.45;2,303.31,493.72,140.46,8.45;2,317.48,217.76,222.23,217.19",
+      "graphic_coords": "2,317.48,217.76,222.23,217.19",
+      "figure_type": null,
+      "xrd_score": 7.8,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_94d64e8f544b",
+        "paragraph_b053ad0eee9c"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_a1a6c0b3624c",
+        "paragraph_3b558b02c58d",
+        "paragraph_5b9a77b55285",
+        "paragraph_fbe1ad7ff44a",
+        "paragraph_94d64e8f544b",
+        "paragraph_20b01bd53ec3",
+        "paragraph_5b19a1c43e99",
+        "paragraph_b053ad0eee9c",
+        "paragraph_50db5e480d78",
+        "paragraph_637f8c30f0dd",
+        "paragraph_2c6cdcf33a34",
+        "paragraph_f8a81e784b15"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Fig. 2 Fig. 2 TEM images and EDX analysis of 0.3Mn0.7Zr (a) and 0.5Mn0.5Zr (b) samples.",
+      "graphic_targets": [],
+      "coords": "3,42.52,701.52,249.44,6.90;3,42.52,711.59,40.70,6.87;3,51.02,477.19,235.19,214.07",
+      "graphic_coords": "3,51.02,477.19,235.19,214.07",
+      "figure_type": null,
+      "xrd_score": 4.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_20b01bd53ec3"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_3b558b02c58d",
+        "paragraph_5b9a77b55285",
+        "paragraph_fbe1ad7ff44a",
+        "paragraph_94d64e8f544b",
+        "paragraph_20b01bd53ec3",
+        "paragraph_5b19a1c43e99",
+        "paragraph_b053ad0eee9c",
+        "paragraph_50db5e480d78",
+        "paragraph_637f8c30f0dd"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Fig. 3 Fig. 3 TPR profiles of the xMn(1 -x)Zr samples under study.",
+      "graphic_targets": [],
+      "coords": "3,303.31,277.22,209.65,7.50;3,317.48,50.63,218.84,216.57",
+      "graphic_coords": "3,317.48,50.63,218.84,216.57",
+      "figure_type": null,
+      "xrd_score": 20.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_5b19a1c43e99",
+        "paragraph_b053ad0eee9c",
+        "paragraph_637f8c30f0dd",
+        "paragraph_708d2c8911b8",
+        "paragraph_b3a7bf6a69bc",
+        "paragraph_80edf6a5640f",
+        "paragraph_8bc09d5bde1a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_5b9a77b55285",
+        "paragraph_fbe1ad7ff44a",
+        "paragraph_94d64e8f544b",
+        "paragraph_20b01bd53ec3",
+        "paragraph_5b19a1c43e99",
+        "paragraph_b053ad0eee9c",
+        "paragraph_50db5e480d78",
+        "paragraph_637f8c30f0dd",
+        "paragraph_2c6cdcf33a34",
+        "paragraph_f8a81e784b15",
+        "paragraph_d49f6aa2d2f6",
+        "paragraph_708d2c8911b8",
+        "paragraph_ba618f85d5f1",
+        "paragraph_d4b906f60acb",
+        "paragraph_b3a7bf6a69bc",
+        "paragraph_80edf6a5640f",
+        "paragraph_8bc09d5bde1a",
+        "paragraph_9e18a0bc7169",
+        "paragraph_a99136d0bd56",
+        "paragraph_d77a653aa811",
+        "paragraph_853e06171791"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "label": "4",
+      "normalized_label": "4",
+      "caption": "Fig. 4 Fig.4Series of diffraction patterns (λ = 1.7273 Å) recorded in situ during the reduction of 0.3Mn0.7Zr with hydrogen in the temperature range from 30 to 700 °C.",
+      "graphic_targets": [],
+      "coords": "4,303.31,691.24,249.41,7.50;4,303.31,701.55,249.45,6.87;4,303.31,711.59,85.89,6.87;4,311.81,518.97,232.53,162.26",
+      "graphic_coords": "4,311.81,518.97,232.53,162.26",
+      "figure_type": null,
+      "xrd_score": 7.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/mn_zr/figures/fig_4.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_2c6cdcf33a34"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_5b19a1c43e99",
+        "paragraph_b053ad0eee9c",
+        "paragraph_50db5e480d78",
+        "paragraph_637f8c30f0dd",
+        "paragraph_2c6cdcf33a34",
+        "paragraph_f8a81e784b15",
+        "paragraph_d49f6aa2d2f6",
+        "paragraph_708d2c8911b8",
+        "paragraph_ba618f85d5f1"
+      ]
+    },
+    {
+      "figure_id": "fig_5",
+      "label": "5",
+      "normalized_label": "5",
+      "caption": "Fig. 5 Fig.5Series of diffraction patterns (λ = 1.0157 Å) recorded in situ during the reduction of 0.5Mn0.5Zr with hydrogen in the temperature range from 30 to 700 °C.",
+      "graphic_targets": [],
+      "coords": "5,42.52,224.32,249.41,7.50;5,42.52,234.63,249.45,6.87;5,42.52,244.66,85.89,6.87;5,51.02,50.63,232.53,163.67",
+      "graphic_coords": "5,51.02,50.63,232.53,163.67",
+      "figure_type": null,
+      "xrd_score": 7.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/mn_zr/figures/fig_5.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_f8a81e784b15"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b053ad0eee9c",
+        "paragraph_50db5e480d78",
+        "paragraph_637f8c30f0dd",
+        "paragraph_2c6cdcf33a34",
+        "paragraph_f8a81e784b15",
+        "paragraph_d49f6aa2d2f6",
+        "paragraph_708d2c8911b8",
+        "paragraph_ba618f85d5f1",
+        "paragraph_d4b906f60acb"
+      ]
+    },
+    {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Fig. 6 Fig.6Series of diffraction patterns (λ = 1.0157 Å) recorded in situ during the reduction of 0.5Mn0.5Zr with hydrogen in the temperature range from 275 to 400 °C.",
+      "graphic_targets": [],
+      "coords": "5,42.52,691.24,249.41,7.50;5,42.52,701.55,249.45,6.87;5,42.52,711.59,89.97,6.87;5,59.53,462.62,212.60,218.61",
+      "graphic_coords": "5,59.53,462.62,212.60,218.61",
+      "figure_type": null,
+      "xrd_score": 7.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/mn_zr/figures/fig_6.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_f8a81e784b15"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_b053ad0eee9c",
+        "paragraph_50db5e480d78",
+        "paragraph_637f8c30f0dd",
+        "paragraph_2c6cdcf33a34",
+        "paragraph_f8a81e784b15",
+        "paragraph_d49f6aa2d2f6",
+        "paragraph_708d2c8911b8",
+        "paragraph_ba618f85d5f1",
+        "paragraph_d4b906f60acb"
+      ]
+    },
+    {
+      "figure_id": "fig_7",
+      "label": "7",
+      "normalized_label": "7",
+      "caption": "Fig. 7 Fig. 7 Differential dependence of the lattice parameter of Mn y Zr 1-y O 2 on temperature for 0.3Mn0.7Zr (1) and 0.5Mn0.5Zr (2).",
+      "graphic_targets": [],
+      "coords": "5,303.31,272.07,249.44,7.82;5,303.31,282.14,186.43,6.87;5,320.32,50.63,213.35,211.18",
+      "graphic_coords": "5,320.32,50.63,213.35,211.18",
+      "figure_type": null,
+      "xrd_score": 6.3,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_708d2c8911b8",
+        "paragraph_8bc09d5bde1a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_637f8c30f0dd",
+        "paragraph_2c6cdcf33a34",
+        "paragraph_f8a81e784b15",
+        "paragraph_d49f6aa2d2f6",
+        "paragraph_708d2c8911b8",
+        "paragraph_ba618f85d5f1",
+        "paragraph_d4b906f60acb",
+        "paragraph_b3a7bf6a69bc",
+        "paragraph_80edf6a5640f",
+        "paragraph_8bc09d5bde1a",
+        "paragraph_9e18a0bc7169",
+        "paragraph_a99136d0bd56",
+        "paragraph_d77a653aa811",
+        "paragraph_853e06171791"
+      ]
+    },
+    {
+      "figure_id": "fig_8",
+      "label": "8",
+      "normalized_label": "8",
+      "caption": "Fig. 8 Fig.8Normalized Zr 3d and Mn 2p core-level spectra of 0.3Mn0.7Zr obtained in a vacuum at room temperature (RT) and during reduction in H 2 at 350, 500, and 620 °C, respectively.",
+      "graphic_targets": [],
+      "coords": "6,42.52,691.54,249.38,6.90;6,42.52,701.55,249.45,6.87;6,42.52,711.59,138.67,7.59;6,53.86,517.78,228.01,163.45",
+      "graphic_coords": "6,53.86,517.78,228.01,163.45",
+      "figure_type": null,
+      "xrd_score": 3.0,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_d4b906f60acb"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_f8a81e784b15",
+        "paragraph_d49f6aa2d2f6",
+        "paragraph_708d2c8911b8",
+        "paragraph_ba618f85d5f1",
+        "paragraph_d4b906f60acb",
+        "paragraph_b3a7bf6a69bc",
+        "paragraph_80edf6a5640f",
+        "paragraph_8bc09d5bde1a",
+        "paragraph_9e18a0bc7169"
+      ]
+    },
+    {
+      "figure_id": "fig_9",
+      "label": "9",
+      "normalized_label": "9",
+      "caption": "Fig. 9 Fig.9Mechanism for the reduction and re-oxidation of the solid solution Mn 0.3 Zr 0.7 O 2 .",
+      "graphic_targets": [],
+      "coords": "7,42.52,277.63,249.40,6.90;7,42.52,287.64,60.89,7.59;7,59.53,50.63,213.34,216.68",
+      "graphic_coords": "7,59.53,50.63,213.34,216.68",
+      "figure_type": null,
+      "xrd_score": 2.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_8bc09d5bde1a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_ba618f85d5f1",
+        "paragraph_d4b906f60acb",
+        "paragraph_b3a7bf6a69bc",
+        "paragraph_80edf6a5640f",
+        "paragraph_8bc09d5bde1a",
+        "paragraph_9e18a0bc7169",
+        "paragraph_a99136d0bd56",
+        "paragraph_d77a653aa811",
+        "paragraph_853e06171791"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tab_0",
+      "label": "1",
+      "caption": "Table 1",
+      "text": "Sample Phase composition wt% Lattice parameter of Mn y Zr 1-y O 2 , Å CSD, Å S BET , m 2 g -1 0Mn1Zr ZrO 2 100 5.115(1) 250 43 0.12Mn0.88Zr Mn y Zr 1-y O 2 100 5.081(1) 140 85 0.3Mn0.7Zr Mn y Zr 1-y O 2 100 5.040(1) 120 94 0.4Mn0.6Zr Mn y Zr 1-y O 2 100 5.019(1) 120 103 0.5Mn0.5Zr Mn y Zr 1-y O 2 90 5.003(1) 90 100 Mn 2 O 3 10 290 0.6Mn0.4Zr Mn y Zr 1-y O 2 95 4.988(1) 90 100 Mn 2 O 3 5 280 0.7Mn0.3Zr Mn y Zr 1-y O 2 50 4.987(2) 70 80 β-Mn 3 O 4 30 370 Mn 2 O 3 20 400 0.9Mn0.1Zr Mn y Zr 1-y O 2 15 4.983(5) 100 44 β-Mn 3 O 4 45 480 Mn 2 O 3 30 700 1Mn0Zr Mn 2 O 3 100 - 800 36"
+    },
+    {
+      "table_id": "tab_1",
+      "label": "2",
+      "caption": "Table 2",
+      "text": "Peak deconvolution Peak Amount of Total amount Sample T max , °C ratio, % absorbed H 2 , mmol g -1 of absorbed H 2 , mmol H 2 per g 0Mn1Zr 635 100 0.456 0.456 0.12Mn0.88Zr 320 52 0.389 0.755 580 48 0.360 0.3Mn0.7Zr 340 69 1.089 1.569 570 31 0.480 0.4Mn0.6Zr 220 1 0.02 1.76 340 73 1.31 560 26 0.45 0.5Mn0.5Zr 290 26 0.592 2.26 350 14 0.320 410 42 0.952 550 18 0.396 0.7Mn0.3Zr 250 8 0.262 3.19 365 48 1.524 450 37 1.167 550 7 0.237"
+    },
+    {
+      "table_id": "tab_2",
+      "label": "3",
+      "caption": "Table 3",
+      "text": "T, °C [Mn]/[Zr] [O]/[Zr + Mn] Zr 3d 5/2 Mn 2p 3/2 30 a 0.22 2.22 182.2 642.4 140 0.21 2.09 - - 350 0.19 2.04 182.3 641.5 500 0.23 1.97 182.4 641.5 620 0.31 1.90 182.5 641.6"
+    }
+  ],
+  "references": [
+    {
+      "reference_id": "b0",
+      "title": null,
+      "doi": null,
+      "year": "1975",
+      "authors": [
+        "R Garvie",
+        "R Hannink",
+        "R Pascoe"
+      ],
+      "raw_text": "R C Garvie R H Hannink R T Pascoe Nature 258 703 1975 R. C. Garvie, R. H. Hannink and R. T. Pascoe, Nature, 1975, 258, 703."
+    },
+    {
+      "reference_id": "b1",
+      "title": null,
+      "doi": null,
+      "year": "2009",
+      "authors": [
+        "H Luo",
+        "Q Cai",
+        "B Wei",
+        "B Yu",
+        "J He",
+        "D Li"
+      ],
+      "raw_text": "H Luo Q Cai B Wei B Yu J He D Li J. Alloys Compd 474 551 2009 H. Luo, Q. Cai, B. Wei, B. Yu, J. He and D. Li, J. Alloys Compd., 2009, 474, 551."
+    },
+    {
+      "reference_id": "b2",
+      "title": null,
+      "doi": null,
+      "year": "1970",
+      "authors": [
+        "T Etsell",
+        "S Flengas"
+      ],
+      "raw_text": "T H Etsell S N Flengas Chem. Rev 339 1970 T. H. Etsell and S. N. Flengas, Chem. Rev., 1970, 70, 339."
+    },
+    {
+      "reference_id": "b3",
+      "title": null,
+      "doi": null,
+      "year": "1996",
+      "authors": [
+        "R Chiba",
+        "T Ishii",
+        "F Yoshimura"
+      ],
+      "raw_text": "R Chiba T Ishii F Yoshimura Solid State Ionics 249 1996 R. Chiba, T. Ishii and F. Yoshimura, Solid State Ionics, 1996, 91, 249."
+    },
+    {
+      "reference_id": "b4",
+      "title": null,
+      "doi": null,
+      "year": "2007",
+      "authors": [
+        "Z Lv",
+        "P Yao",
+        "R Guo",
+        "F Dai"
+      ],
+      "raw_text": "Z G Lv P Yao R S Guo F Y Dai Mater. Sci. Eng., A 458 355 2007 Z. G. Lv, P. Yao, R. S. Guo and F. Y. Dai, Mater. Sci. Eng., A, 2007, 458, 355."
+    },
+    {
+      "reference_id": "b5",
+      "title": null,
+      "doi": null,
+      "year": "1990",
+      "authors": [
+        "P Mercera",
+        "J Van Ommen",
+        "E Doesburg",
+        "A Burggraaf",
+        "J Ross"
+      ],
+      "raw_text": "P D L Mercera J G Van Ommen E B M Doesburg A J Burggraaf J R H Ross Appl. Catal 57 127 1990 P. D. L. Mercera, J. G. van Ommen, E. B. M. Doesburg, A. J. Burggraaf and J. R. H. Ross, Appl. Catal., 1990, 57, 127."
+    },
+    {
+      "reference_id": "b6",
+      "title": null,
+      "doi": null,
+      "year": "1991",
+      "authors": [
+        "P Mercera",
+        "J Van Ommen",
+        "E Doesburg",
+        "A Burggraaf",
+        "J Ross"
+      ],
+      "raw_text": "P D L Mercera J G Van Ommen E B M Doesburg A J Burggraaf J R H Ross Appl. Catal 71 363 1991 P. D. L. Mercera, J. G. van Ommen, E. B. M. Doesburg, A. J. Burggraaf and J. R. H. Ross, Appl. Catal., 1991, 71, 363."
+    },
+    {
+      "reference_id": "b7",
+      "title": null,
+      "doi": null,
+      "year": "1994",
+      "authors": [
+        "T Yamaguchi"
+      ],
+      "raw_text": "T Yamaguchi Catal. Today 1994, 20, 199 T. Yamaguchi, Catal. Today, 1994, 20, 199."
+    },
+    {
+      "reference_id": "b8",
+      "title": null,
+      "doi": null,
+      "year": "2001",
+      "authors": [
+        "E Lopez",
+        "V Escribano",
+        "C Resini",
+        "J Gallardo-Amores",
+        "G Busca"
+      ],
+      "raw_text": "E F Lopez V S Escribano C Resini J M Gallardo-Amores G Busca Appl. Catal., B 29 251 2001 E. F. Lopez, V. S. Escribano, C. Resini, J. M. Gallardo- Amores and G. Busca, Appl. Catal., B, 2001, 29, 251."
+    },
+    {
+      "reference_id": "b9",
+      "title": null,
+      "doi": null,
+      "year": "2007",
+      "authors": [
+        "J Gutierrez-Ortiz",
+        "B De Rivas",
+        "R Lopez-Fonseca",
+        "S Martin",
+        "J Gonzalez-Velasco"
+      ],
+      "raw_text": "J I Gutierrez-Ortiz B De Rivas R Lopez-Fonseca S Martin J R Gonzalez-Velasco Chemosphere 1004 2007 J. I. Gutierrez-Ortiz, B. de Rivas, R. Lopez-Fonseca, S. Martin and J. R. Gonzalez-Velasco, Chemosphere, 2007, 68, 1004."
+    },
+    {
+      "reference_id": "b10",
+      "title": null,
+      "doi": null,
+      "year": "2004",
+      "authors": [
+        "D Döbber",
+        "D Kiessling",
+        "W Schmitz",
+        "G Wendt"
+      ],
+      "raw_text": "D Döbber D Kiessling W Schmitz G Wendt Appl. Catal., B 52 135 2004 D. Döbber, D. Kiessling, W. Schmitz and G. Wendt, Appl. Catal., B, 2004, 52, 135."
+    },
+    {
+      "reference_id": "b11",
+      "title": null,
+      "doi": null,
+      "year": "2002",
+      "authors": [
+        "V Choudhary",
+        "B Uphade",
+        "S Pataskar"
+      ],
+      "raw_text": "V R Choudhary B S Uphade S G Pataskar Appl. Catal., A 227 29 2002 V. R. Choudhary, B. S. Uphade and S. G. Pataskar, Appl. Catal., A, 2002, 227, 29."
+    },
+    {
+      "reference_id": "b12",
+      "title": null,
+      "doi": null,
+      "year": "2012",
+      "authors": [
+        "L Gao",
+        "L Zhou",
+        "C Li",
+        "J Feng",
+        "Y Lu",
+        "Optoelectron"
+      ],
+      "raw_text": "L Gao L Zhou C Li J Feng Y Lu Optoelectron Adv. Mater., Rapid Commun 2012, 6, 178 L. Gao, L. Zhou, C. Li, J. Feng and Y. Lu, Optoelectron. Adv. Mater., Rapid Commun., 2012, 6, 178."
+    },
+    {
+      "reference_id": "b13",
+      "title": null,
+      "doi": null,
+      "year": "1994",
+      "authors": [
+        "V Dravid",
+        "V Ravikumar",
+        "M Notis",
+        "C Lyman",
+        "G Dhalenne",
+        "A Revcolevschi"
+      ],
+      "raw_text": "V P Dravid V Ravikumar M R Notis C E Lyman G Dhalenne A Revcolevschi J. Am. Ceram. Soc 2758 1994 V. P. Dravid, V. Ravikumar, M. R. Notis, C. E. Lyman, G. Dhalenne and A. Revcolevschi, J. Am. Ceram. Soc., 1994, 77, 2758."
+    },
+    {
+      "reference_id": "b14",
+      "title": null,
+      "doi": null,
+      "year": "1994",
+      "authors": [
+        "A Keshavaraja",
+        "A Ramaswamy"
+      ],
+      "raw_text": "A Keshavaraja A V Ramaswamy J. Mater. Res 9 836 1994 A. Keshavaraja and A. V. Ramaswamy, J. Mater. Res., 1994, 9, 836."
+    },
+    {
+      "reference_id": "b15",
+      "title": null,
+      "doi": null,
+      "year": "2010",
+      "authors": [
+        "Q Zhao",
+        "W Shih",
+        "H.-L Chang",
+        "W.-H Shih"
+      ],
+      "raw_text": "Q Zhao W Y Shih H.-L Chang W.-H Shih Ind. Eng. Chem. Res 49 2010 Q. Zhao, W. Y. Shih, H.-L. Chang and W.-H. Shih, Ind. Eng. Chem. Res., 2010, 49, 1725-1731."
+    },
+    {
+      "reference_id": "b16",
+      "title": null,
+      "doi": null,
+      "year": "2000",
+      "authors": [
+        "C Doornkamp",
+        "V Ponec"
+      ],
+      "raw_text": "C Doornkamp V Ponec J. Mol. Catal. A: Chem 2000, 162, 19 C. Doornkamp and V. Ponec, J. Mol. Catal. A: Chem., 2000, 162, 19."
+    },
+    {
+      "reference_id": "b17",
+      "title": null,
+      "doi": null,
+      "year": "2002",
+      "authors": [
+        "E Kantzer",
+        "D Dobber",
+        "D Kießling",
+        "G Wendt"
+      ],
+      "raw_text": "E Kantzer D Dobber D Kießling G Wendt Stud. Surf. Sci. Catal 489 2002 E. Kantzer, D. Dobber, D. Kießling and G. Wendt, Stud. Surf. Sci. Catal., 2002, 143, 489."
+    },
+    {
+      "reference_id": "b18",
+      "title": null,
+      "doi": null,
+      "year": "2009",
+      "authors": [
+        "A Knop-Gericke",
+        "E Kleimenov",
+        "M Hävecker",
+        "R Blume",
+        "D Teschner",
+        "S Zafeiratos",
+        "R Schlögl",
+        "V Bukhtiyarov",
+        "V Kaichev",
+        "I Prosvirin",
+        "A Nizovskii",
+        "H Bluhm",
+        "A Barinov",
+        "P Dudin",
+        "M Kiskinova"
+      ],
+      "raw_text": "A Knop-Gericke E Kleimenov M Hävecker R Blume D Teschner S Zafeiratos R Schlögl V I Bukhtiyarov V V Kaichev I P Prosvirin A I Nizovskii H Bluhm A Barinov P Dudin M Kiskinova Adv. Catal 213 2009 A. Knop-Gericke, E. Kleimenov, M. Hävecker, R. Blume, D. Teschner, S. Zafeiratos, R. Schlögl, V. I. Bukhtiyarov, V. V. Kaichev, I. P. Prosvirin, A. I. Nizovskii, H. Bluhm, A. Barinov, P. Dudin and M. Kiskinova, Adv. Catal., 2009, 52, 213."
+    },
+    {
+      "reference_id": "b19",
+      "title": "At. Data Nucl. Data Tables",
+      "doi": null,
+      "year": "1985",
+      "authors": [],
+      "raw_text": "At. Data Nucl. Data Tables J J Yeh I Lindau 1985 32 1 J. J. Yeh and I. Lindau, At. Data Nucl. Data Tables, 1985, 32, 1."
+    },
+    {
+      "reference_id": "b20",
+      "title": null,
+      "doi": null,
+      "year": "1976",
+      "authors": [
+        "J Scofield"
+      ],
+      "raw_text": "J H Scofield J. Electron Spectrosc. Relat. Phenom 1976, 8, 129 J. H. Scofield, J. Electron Spectrosc. Relat. Phenom., 1976, 8, 129."
+    },
+    {
+      "reference_id": "b21",
+      "title": null,
+      "doi": null,
+      "year": "1971",
+      "authors": [
+        "G Katz"
+      ],
+      "raw_text": "G Katz J. Am. Ceram. Soc 54 531 1971 G. Katz, J. Am. Ceram. Soc., 1971, 54, 531."
+    },
+    {
+      "reference_id": "b22",
+      "title": null,
+      "doi": null,
+      "year": "1996",
+      "authors": [
+        "M Valigi",
+        "D Gazzoli",
+        "R Dragone",
+        "G Marucci",
+        "G Mattei"
+      ],
+      "raw_text": "M Valigi D Gazzoli R Dragone G A Marucci G Mattei J. Mater. Chem 6 403 1996 M. Valigi, D. Gazzoli, R. Dragone, G. A. Marucci and G. Mattei, J. Mater. Chem., 1996, 6, 403."
+    },
+    {
+      "reference_id": "b23",
+      "title": null,
+      "doi": null,
+      "year": "2007",
+      "authors": [
+        "J Pigos",
+        "C Brooks",
+        "G Jacobs",
+        "B Davis"
+      ],
+      "raw_text": "J M Pigos C J Brooks G Jacobs B H Davis Appl. Catal., A 47 2007 J. M. Pigos, C. J. Brooks, G. Jacobs and B. H. Davis, Appl. Catal., A, 2007, 319, 47."
+    },
+    {
+      "reference_id": "b24",
+      "title": null,
+      "doi": null,
+      "year": "2009",
+      "authors": [
+        "S Damyanova",
+        "B Pawelec",
+        "K Arishtirova",
+        "M Martinez Huerta",
+        "J Fierro"
+      ],
+      "raw_text": "S Damyanova B Pawelec K Arishtirova M V Martinez Huerta J L G Fierro Appl. Catal., B 89 149 2009 S. Damyanova, B. Pawelec, K. Arishtirova, M. V. Martinez Huerta and J. L. G. Fierro, Appl. Catal., B, 2009, 89, 149."
+    },
+    {
+      "reference_id": "b25",
+      "title": null,
+      "doi": null,
+      "year": "2005",
+      "authors": [
+        "J Trawczyńsky",
+        "B Bielak",
+        "W Miśta"
+      ],
+      "raw_text": "J Trawczyńsky B Bielak W Miśta Appl. Catal., B 55 277 2005 J. Trawczyńsky, B. Bielak and W. Miśta, Appl. Catal., B, 2005, 55, 277."
+    },
+    {
+      "reference_id": "b26",
+      "title": null,
+      "doi": null,
+      "year": "1997",
+      "authors": [
+        "L Christel",
+        "A Pierre",
+        "D",
+        ".-M Abel"
+      ],
+      "raw_text": "L Christel A Pierre D A .-M R Abel Thermochim. Acta 306 51 1997 L. Christel, A. Pierre and D. A.-M. R. Abel, Thermochim. Acta, 1997, 306, 51."
+    },
+    {
+      "reference_id": "b27",
+      "title": null,
+      "doi": null,
+      "year": "1999",
+      "authors": [
+        "E Stobbe",
+        "B De Boer",
+        "J Geus"
+      ],
+      "raw_text": "E R Stobbe B A De Boer J W Geus Catal. Today 47 161 1999 E. R. Stobbe, B. A. de Boer and J. W. Geus, Catal. Today, 1999, 47, 161."
+    },
+    {
+      "reference_id": "b28",
+      "title": null,
+      "doi": null,
+      "year": "2004",
+      "authors": [
+        "W Li",
+        "W Chu",
+        "M Zhuang",
+        "J Hua"
+      ],
+      "raw_text": "W B Li W B Chu M Zhuang J Hua Catal. Today 205 2004 W. B. Li, W. B. Chu, M. Zhuang and J. Hua, Catal. Today, 2004, 93-95, 205."
+    },
+    {
+      "reference_id": "b29",
+      "title": null,
+      "doi": null,
+      "year": "2005",
+      "authors": [
+        "S Tsunekawa",
+        "K Asami",
+        "S Ito",
+        "M Yashima",
+        "T Sugimoto"
+      ],
+      "raw_text": "S Tsunekawa K Asami S Ito M Yashima T Sugimoto Appl. Surf. Sci 1651 2005 S. Tsunekawa, K. Asami, S. Ito, M. Yashima and T. Sugimoto, Appl. Surf. Sci., 2005, 252, 1651."
+    },
+    {
+      "reference_id": "b30",
+      "title": null,
+      "doi": null,
+      "year": "2001",
+      "authors": [
+        "T Jeon",
+        "J White",
+        "D Kwong"
+      ],
+      "raw_text": "T S Jeon J M White D L Kwong Appl. Phys. Lett 78 368 2001 T. S. Jeon, J. M. White and D. L. Kwong, Appl. Phys. Lett., 2001, 78, 368."
+    },
+    {
+      "reference_id": "b31",
+      "title": null,
+      "doi": null,
+      "year": "2004",
+      "authors": [
+        "M.-S Kim",
+        "Y.-D Ko",
+        "J.-H Hong",
+        "M.-C Jeong",
+        "J.-M Myoung",
+        "I Yun"
+      ],
+      "raw_text": "M.-S Kim Y.-D Ko J.-H Hong M.-C Jeong J.-M Myoung I Yun Appl. Surf. Sci 2004, 1-4, 387 M.-S. Kim, Y.-D. Ko, J.-H. Hong, M.-C. Jeong, J.-M. Myoung and I. Yun, Appl. Surf. Sci., 2004, 1-4, 387."
+    },
+    {
+      "reference_id": "b32",
+      "title": null,
+      "doi": null,
+      "year": "1978",
+      "authors": [
+        "T Barr"
+      ],
+      "raw_text": "T L Barr J. Phys. Chem 82 1801 1978 T. L. Barr, J. Phys. Chem., 1978, 82, 1801."
+    },
+    {
+      "reference_id": "b33",
+      "title": null,
+      "doi": null,
+      "year": "1998",
+      "authors": [
+        "H Nesbitt",
+        "D Banerjee"
+      ],
+      "raw_text": "H W Nesbitt D Banerjee Am. Mineral 305 1998 H. W. Nesbitt and D. Banerjee, Am. Mineral., 1998, 83, 305."
+    },
+    {
+      "reference_id": "b34",
+      "title": null,
+      "doi": null,
+      "year": "1975",
+      "authors": [
+        "M Oku",
+        "K Hirokawa",
+        "S Ikeda"
+      ],
+      "raw_text": "M Oku K Hirokawa S Ikeda J. Electron Spectrosc. Relat. Phenom 1975, 7, 465 M. Oku, K. Hirokawa and S. Ikeda, J. Electron Spectrosc. Relat. Phenom., 1975, 7, 465."
+    },
+    {
+      "reference_id": "b35",
+      "title": null,
+      "doi": null,
+      "year": "1989",
+      "authors": [
+        "V Castro",
+        "G Polzonetti"
+      ],
+      "raw_text": "V D Castro G Polzonetti J. Electron Spectrosc. Relat. Phenom 117 1989 V. D. Castro and G. Polzonetti, J. Electron Spectrosc. Relat. Phenom., 1989, 48, 117."
+    },
+    {
+      "reference_id": "b36",
+      "title": null,
+      "doi": null,
+      "year": "1972",
+      "authors": [
+        "J Carver",
+        "G Schweitzer",
+        "T Carlson"
+      ],
+      "raw_text": "J C Carver G K Schweitzer T A Carlson J. Chem. Phys 57 973 1972 J. C. Carver, G. K. Schweitzer and T. A. Carlson, J. Chem. Phys., 1972, 57, 973."
+    },
+    {
+      "reference_id": "b37",
+      "title": null,
+      "doi": null,
+      "year": "1976",
+      "authors": [
+        "M Oku",
+        "K Hirokawa"
+      ],
+      "raw_text": "M Oku K Hirokawa J. Electron Spectrosc. Relat. Phenom 8 475 1976 M. Oku and K. Hirokawa, J. Electron Spectrosc. Relat. Phenom., 1976, 8, 475."
+    },
+    {
+      "reference_id": "b38",
+      "title": null,
+      "doi": null,
+      "year": "1979",
+      "authors": [
+        "C Rao",
+        "D Sarma",
+        "S Vasudevan",
+        "M Hegde"
+      ],
+      "raw_text": "C N R Rao D D Sarma S Vasudevan M S Hegde Proc. R. Soc. London, A 367 239 1979 C. N. R. Rao, D. D. Sarma, S. Vasudevan and M. S. Hegde, Proc. R. Soc. London, A, 1979, 367, 239."
+    },
+    {
+      "reference_id": "b39",
+      "title": null,
+      "doi": null,
+      "year": "1984",
+      "authors": [
+        "J Foord",
+        "R Jackman",
+        "G Allen"
+      ],
+      "raw_text": "J S Foord R B Jackman G C Allen Philos. Mag. A 657 1984 J. S. Foord, R. B. Jackman and G. C. Allen, Philos. Mag. A, 1984, 449, 657."
+    },
+    {
+      "reference_id": "b40",
+      "title": null,
+      "doi": null,
+      "year": "1989",
+      "authors": [
+        "G Allen",
+        "S Harris",
+        "A Jutson",
+        "J Dyke"
+      ],
+      "raw_text": "G C Allen S J Harris A Jutson J M Dyke Appl. Surf. Sci 37 111 1989 G. C. Allen, S. J. Harris, A. Jutson and J. M. Dyke, Appl. Surf. Sci., 1989, 37, 111."
+    },
+    {
+      "reference_id": "b41",
+      "title": null,
+      "doi": null,
+      "year": "1999",
+      "authors": [
+        "F Parmigiani",
+        "L Sangaletti"
+      ],
+      "raw_text": "F Parmigiani L Sangaletti J. Electron Spectrosc. Relat. Phenom 287 1999 F. Parmigiani and L. Sangaletti, J. Electron Spectrosc. Relat. Phenom., 1999, 98-99, 287."
+    }
+  ],
+  "counts": {
+    "sections": 13,
+    "paragraphs": 30,
+    "results_paragraphs": 6,
+    "xrd_paragraphs": 16,
+    "figures": 9,
+    "xrd_figures": 9,
+    "tables": 3,
+    "references": 42
+  }
+}

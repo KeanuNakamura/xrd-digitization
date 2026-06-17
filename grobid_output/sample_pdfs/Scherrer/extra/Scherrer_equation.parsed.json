@@ -1,0 +1,1350 @@
+{
+  "source_pdf": "pdf_files/Scherrer_equation.pdf",
+  "source_sha256": "b399b684ef681d66a5042e62cc5570bf302a35d63db792c3535c751b6fabb063",
+  "metadata": {
+    "title": "Modified Scherrer Equation to Estimate More Accurately Nano-Crystallite Size Using XRD",
+    "doi": "10.4236/wjnse.2012.23020",
+    "abstract": "Scherrer Equation, .cos L K    , was developed in 1918, to calculate the nano crystallite size (L) by XRD radiation of wavelength λ (nm) from measuring full width at half maximum of peaks (β) in radian located at any 2θ in the pattern. Shape factor of K can be 0.62 -2.08 and is usually taken as about 0.89. But, if all of the peaks of a pattern are going to give a similar value of L, then .cosθ  must be identical. This means that for a typical 5nm crystallite size and λ Cukα 1 = 0.15405 nm the peak at 2θ = 170˚ must be more than ten times wide with respect to the peak at 2θ = 10˚, which is never observed. The purpose of modified Scherrer equation given in this paper is to provide a new approach to the kind of using Scherrer equation, so that a least squares technique can be applied to minimize the sources of errors. Modified Scherrer equation plots lnβ against ln(1/cosθ) and obtains the intercept of a least squares line regression, ln / K L   , from which a single value of L is obtained through all of the available peaks. This novel technique is used for a natural Hydroxyapatite (HA) of bovine bone fired at 600˚C, 700˚C, 900˚C and 1100˚C from which nano crystallite sizes of 22.8, 35.5, 37.3 and 38.1 nm were respectively obtained and 900˚C was selected for biomaterials purposes. These results show that modified Scherrer equation method is promising in nano materials applications and can distinguish between 37.3 and 38.1 nm by using the data from all of the available peaks.",
+    "journal": "World Journal of Nano Science and Engineering",
+    "publication_date": "2012-09",
+    "authors": [
+      {
+        "given_name": "Ahmad",
+        "middle_name": null,
+        "surname": "Monshi",
+        "email": "monshi@cc.iut.ac.ir",
+        "affiliation": "Department of Materials Engineering , Najafabad branch , Islamic Azad University , Isfahan , Iran Department of Materials Engineering Islamic Azad University Najafabad branch Isfahan Iran",
+        "orcid": null
+      },
+      {
+        "given_name": "Mohammad",
+        "middle_name": "Reza",
+        "surname": "Foroughi",
+        "email": null,
+        "affiliation": null,
+        "orcid": null
+      },
+      {
+        "given_name": "Mohammad",
+        "middle_name": "Reza",
+        "surname": "Monshi",
+        "email": null,
+        "affiliation": "Department of Materials Engineering , Najafabad branch , Islamic Azad University , Isfahan , Iran Department of Materials Engineering Islamic Azad University Najafabad branch Isfahan Iran",
+        "orcid": null
+      }
+    ],
+    "keywords": [
+      "X-Ray Diffraction",
+      "Nano-Crystal",
+      "Scherrer Equation",
+      "Hydroxyapatite"
+    ]
+  },
+  "sections": [
+    {
+      "section_id": "section_a5717ab81d52",
+      "title": "Introduction",
+      "path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_533f7cc30819",
+          "text": "X-ray diffraction is a convenient method for determining the mean size of nano crystallites in nano crystalline bulk materials. The first scientist, Paul Scherrer, published his results in a paper that included what became known as the Scherrer equation in 1981 [1] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a91ec4e406cc",
+          "text": "This can be attributed to the fact that \"crystallite size\" is not synonymous with \"particle size\", while X-Ray diffraction is sensitive to the crystallite size inside the particles. From the well-known Scherrer formula the average crystallite size, L, is:",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 4.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c042bdfc3cae",
+          "text": ".cos",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_8f8276024065",
+          "text": "where λ is the X-ray wavelength in nanometer (nm), β is the peak width of the diffraction peak profile at half maximum height resulting from small crystallite size in radians and K is a constant related to crystallite shape, normally taken as 0.9. The value of β in 2θ axis of diffraction profile must be in radians. The θ can be in degrees or radians, since the cosθ corresponds to the same number;",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 5.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_270b3b173a7b",
+          "text": "π 2 cos cos 45 4 2   ",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_ae9dcfdce0dd",
+          "text": "It can be taken as 0.89 or 0.9 for Full Width Half Maximum (FWHM) of spherical crystals with cubic unit cells. For an excellent discussion of K, a good reference is the paper \"Scherrer after sixty years\" in 1978 [2] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_3b54be03b10d",
+          "text": "In conventional approximation, the integrated width of the pure profile (β) is separated from that of the observed diffraction profile (B) assuming that both profiles are either Gaussian or Cauchy [3] .",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_e0b0d4b6d410",
+          "text": "If Gaussian profile is accepted, then 2 2 B b 2    in the case of Cauchy B = b + β, where b is the instrument profile width. If the broadening of the pure profile is due to both crystallite size and lattice strain, one has to make another assumption concerning the shapes of the two contributing line profiles. Normally, these are supposed to be either Gaussian or both Cauchy, then",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 1.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b788c9aac9c1",
+          "text": "sulting from small crystallite size, and n  is the line broadening due to the lattice strain. Then we have [4] :",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 1.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b53a5169fbc3",
+          "text": "It is usually considered that Cauchy function is rather well approximated, while Gaussian function gave considerably larger errors. In order to separate the size and strain contribution:",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_34c72358d9c5",
+          "text": "In the case of crystallite size and lattice strain, two diffraction peaks must be used to calculate two unknown parameters L and ε.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 1.6,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_43174e5c698f",
+          "text": "In order to consider the Scherrer equation with obtained value of ε concerning only crystallite size, when no mechanical activation such as ball milling and mechanical alloying is the case, or the crystallite size is due to a nucleation and growth at high temperatures, we must only be concerned about corrections for instrumental profile width.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_57583b9c4131",
+          "text": "The Scherrer equation predicts crystallite thickness if crystals are smaller than 1000 Å or 100 nm. The simplest way to obtain Scherrer equation is to take the derivation of Bragg's Law, 2 sin d    . Holding the wavelength λ constant and allowing the diffraction angle to broaden from a sharp diffraction peak from an infinite single crystal with perfect 3-dimeintinal order. For a single crystal, the diffraction from a set of planes with the distance d * occurs at a precisely θ * , so that λ = 2d * sinθ *.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 4.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d7cffb1a0f74",
+          "text": "For many small nano crystals, diffraction from a lot of tiny crystals deviate ± Δθ from θ * . This means 2Δθ on the 2θ axis of diffraction pattern. The value of Δθ correspond to FWHM or β, which is approximately half of 2Δθ. In other words since Δθ can be positive or negative, the absolute value must be taken and it reflects the half width of the shape line deviation in 2θ axis (full width at half maximum height, β). Derivative in d and θ of Bragg's Law with constant λ gives λ = 2Δd.cosθ.Δθ.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 11.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_d202211b0a9b",
+          "text": "The thickness Δd = L can be taken as;",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_9cd2b7cda9e0",
+          "text": "By applying a shape factor K, which is near the value of unit (0.9), the Scherrer equation can be given as:",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_23d3c266c061",
+          "text": "The derivation approach is taken by Alexander in Klug and Alexander \"X-ray Diffraction\" [3] to describe the Scherrer equation. It is also easily adoptable to describe the dependence of any two terms in the Bragg equation in terms of variability. For crystals longer than 1000 Å (100 nm), grainy patterns can be analyzed in terms of a statistical analysis to grain size, although this is rarely done since grain size can be more easily determined from optical or electron microscopy studies in this size range.",
+          "section_path": [
+            "Introduction"
+          ],
+          "section_type": "introduction",
+          "figure_references": [],
+          "xrd_score": 6.8,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_59733911dce9",
+      "title": "Modified Scherrer Equation",
+      "path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_1613b593cb52",
+          "text": "It is assumed that if there are N different peaks of a specific nano crystal in the range of 0 -180˚ (2θ) or 0 -90˚ (θ), then all of these N peaks must present identical L values for the crystal size. But, during the extensive research of the first author of thins paper, on different nano ceramic crystals, which were synthesized or minerally achieved, it was surprisingly observed that each peak yields a different value and there is a systematic error on the results obtained from each peak. Further investigation approved the presence of a systematic error in Scherrer formula. In fact since .cos",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 6.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_6aec50fdec6c",
+          "text": ", if L is going to be a fixed value for different peaks of a substance, considering that K and λ and therefore Kλ are fixed values, then it is essential that β.cosθ be a fixed multiple during 0 < 2θ < 180˚ or 0 < θ < 90˚. Suppose that for a crystallite size of 5nm, obtained at a peak of say 2θ = 10˚ (θ = 5˚) by using K = 0.89 and λCukα 1 = 0.15405 nm. then β 10 must be,",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 6.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_2b514deab41c",
+          "text": "    10 0.89 0.15405 0.0275 1.576 5cos 5 rad        (8) Now, suppose that the N th peak of this nano crystal occurs at 2θ = 170˚ (or θ = 85˚), then;     170 0.89 0.15405 0.3146 18.03 5cos85 rad",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 5.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_ecf8d7e658f0",
+          "text": "This means that the ratio of 18.03 1.576 11.44  must be applied 170 10 / for     . In other words if the first peak has a β 10 of around 2 mm on the monitor of computer plot, or for example, a paper plot 21 cm width on A4 paper, then the last peak must have a β 170 more than 22.88 mm and a base of peak more than 45.76 mm (4.576 cm).",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_26187f1e1640",
+          "text": "This has never been observed and cannot be true. Modified Scherrer formula is based on the face that we must decrease the errors and obtain the average value of L though all the peaks (or any number of selected peaks) by using least squares method to mathematically decrease the source of errors.",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 1.2,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_df774cd8e578",
+          "text": "We can write the basic Scherrer formula as:",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.4,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c800153c48dc",
+          "text": "Now by making logarithm on both sides; 1 ln ln ln ln .cos cos",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_46df0891de67",
+          "text": "If we plot the results of lnβ against ln(1 cos ), then a straight line with a slope of around one and an intercept",
+          "section_path": [
+            "Modified Scherrer Equation"
+          ],
+          "section_type": "other",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_5f9c0c4ea626",
+      "title": "Experimental",
+      "path": [
+        "Experimental"
+      ],
+      "section_type": "methods",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_9e606db7731d",
+          "text": "of about lnK/L must be obtained. Theoretically this straight line must be with a slope of 45˚ since tg45˚ = 1 (Figure 1 ). But, since errors are associated with experimental data, the least squares method gives the best slope and most accurate lnK/L. After getting the intercept, then the exponential of the intercept is obtained: Bovine bones were boiled for 2 hr to remove flesh and fat. The bones were heated at 60˚C for 24 hr to remove moisture. To prevent blackening with soot during heating, the bones are cut into small pieces of about 10 mm thick and heated at 400˚C (bone ash) for 3 hr in air to allow for evaporation of organic substances. The resulting black bone ash was heated for 2 hr at 600˚C, 700˚C, 900˚C and 1100˚C [5] .",
+          "section_path": [
+            "Experimental"
+          ],
+          "section_type": "methods",
+          "figure_references": [
+            "1"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_7884262f6edd",
+          "text": "Having K = 0.9 and λ(such as λCukα 1 = 0.15405 nm), a single value of L in nanometer can be calculated.",
+          "section_path": [
+            "Experimental"
+          ],
+          "section_type": "methods",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_c777e8130767",
+          "text": "A Philips XRD instrument with Cukα radiation using 40 KV and 30 mA, step size of 0.05˚ (2θ) and scan rate of 1˚/min were employed. X'Pert software was used for qualitative analysis and report of β values at FWHM at different 2θ values according to location of the peaks. According to JCPDS:9-432 standard the main peaks are from the planes of ( 200 ), (111), (002), (102), (210), ( 211 ), (112), (300), (202), (212), (310), (311), (113), ( 222 ), (312) and (213) of HA phase for 20 -50 deg. 2θ.",
+          "section_path": [
+            "Experimental"
+          ],
+          "section_type": "methods",
+          "figure_references": [],
+          "xrd_score": 14.4,
+          "peak_positions": [
+            50.0
+          ],
+          "miller_indices": [
+            "( 200 )",
+            "(111)",
+            "(002)",
+            "(102)",
+            "(210)",
+            "( 211 )",
+            "(112)",
+            "(300)",
+            "(202)",
+            "(212)",
+            "(310)",
+            "(311)",
+            "(113)",
+            "( 222 )",
+            "(312)",
+            "(213)"
+          ]
+        },
+        {
+          "paragraph_id": "paragraph_a9885575ab54",
+          "text": "In (1/cosθ) In β",
+          "section_path": [
+            "Experimental"
+          ],
+          "section_type": "methods",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_a5eb52965e5d",
+      "title": "Results and Discussion",
+      "path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_9a5a2bc0d115",
+          "text": "Table 1 shows the β.cosθ values for different peaks at any given temperature.",
+          "section_path": [
+            "Results and Discussion"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 0.8,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_2a2838d25537",
+          "text": "The XRD patterns are observed in Figure 2 with gradual sharpness of the peaks as the soaking temperature increases, indicating the growth and increase of crystallite size.",
+          "section_path": [
+            "Results and Discussion"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "2"
+          ],
+          "xrd_score": 9.7,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_7f12cbd98117",
+          "text": "Relatively gradual decrease in β.cosθ and almost increase in L values ( ./ .cos L const )    is observed with the increase of 2θ. Such as increase in crystallite Table 1. Values of β.cosθ for different peaks. Temperature (˚C) d 400 600 700 900 1100 Calculated L at 900˚C (nm) (200) --5.06 × 10 -3 5.06 × 10 -3 5.06 × 10 -3 27.1 (111) ---5.05 × 10 -3 5.05 × 10 -3 27.1 (002) 2.24 × 10 -3 5.02 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 40.9 (102) --2.50 × 10 -3 3.34 × 10 -3 2.50 × 10 -3 41 (210) ---3.23 × 10 -3 2.50 × 10 -3 42.4 (211) 9.90 × 10 -3 11.5 × 10 -3 2.48 × 10 -3 3.31 × 10 -3 2.48 × 10 -3 41.4 (112) --2.48 × 10 -3 2.48 × 10 -3 2.48 × 10 -3 55.2 (300) --2.47 × 10 -3 3.30 × 10 -3 3.30 × 10 -3 41.5 (202) --3.29 × 10 -3 3.29 × 10 -3 3.29 × 10 -3 41.6 (212) ---2.43 × 10 -3 2.43 × 10 -3 56.4 (310) 11.3 × 10 -3 12.9 × 10 -3 2.42 × 10 -3 2.16 × 10 -3 3.23 × 10 -3 63.4 (311) --2.41 × 10 -3 4.81 × 10 -3 2.41 × 10 -3 28.5 (113) --3.19 × 10 -3 6.38 × 10 -3 3.19 × 10 -3 21.5 (222) 7.88 × 10 -3 7.88 × 10 -3 3.16 × 10 -3 2.11 × 10 -3 3.16 × 10 -3 65 (312) --3.14 × 10 -3 3.14 × 10 -3 3.14 × 10 -3 43.6 (213) 9.35 × 10 -3 6.25 × 10 -3 3.89 × 10 -3 3.12 × 10 -3 2.09 × 10 -3 44 size of HA were also observed by Shipmen et al. [6] . The samples fired at 600˚C -1100˚C were used.",
+          "section_path": [
+            "Results and Discussion"
+          ],
+          "section_type": "results",
+          "figure_references": [],
+          "xrd_score": 8.3,
+          "peak_positions": [],
+          "miller_indices": [
+            "(200)",
+            "(111)",
+            "(002)",
+            "(102)",
+            "(210)",
+            "(211)",
+            "(112)",
+            "(300)",
+            "(202)",
+            "(212)",
+            "(310)",
+            "(311)",
+            "(113)",
+            "(222)",
+            "(312)",
+            "(213)"
+          ]
+        },
+        {
+          "paragraph_id": "paragraph_e2a80a07a74a",
+          "text": "Figure 3 indicates four plots of lnβ vs. ln(1cos ) for individual soaking temperatures; together with the equations of linear least squares method obtained from linear regression of data in excel plots. Due to sources of error in measuring β and treating for different available peaks, since the β.cosθ multiple is not really a constant value for all the peaks, π   deviate from 45˚ and are negative in some cases. The reason that the slopes are negative are due to the fact that at higher angles, of 2θ, with lower values of cosθ and higher values of ln( 1cos ), the amounts of β observed and measured are less than it must be according to Scherrer's formula. This means that a 45˚ slope for the linear plots are hardly achieved. The errors involved in Scherrer equation when employing different peaks are the main cause of scattering of the points. It is interesting to notice that although variations exist in lnβ values, but the intercept systematically changes as -5.1196, -5.5542, -5.6054 and -5.6276 respectively for 600˚C, 700˚C, 900˚C and 1100˚C. The treatment is shown in Table 2 leading to values of 22.8, 35.5, 37.3 and 38.1 nanometers respectively. Danilchenko et al. [6] have also reported the bone mineral crystalline size of about 20 nm.",
+          "section_path": [
+            "Results and Discussion"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "3"
+          ],
+          "xrd_score": 7.1,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_b2ab5253391c",
+          "text": "The plot of crystal size of HA vs. firing temperature is given in Figure 4 . From this figure it can be understood that the shape is similar to that of parabolic Law. Crystallinity sharply increase from 600˚C to 700˚C, but the rate slows down from 700˚C to 1100˚C. It seems that the driving force for the growth of nano crystallite size of HA is highly provided when the temperature increases from 600˚C to 700˚C, but is less affected by higher temperature increases. In other words the experimental activation energy for the growth of nano HA crystallites can be provided in 600˚C to 700˚C. The values of ∆L/∆T representing the rate of growth in size are plotted against Temperature (˚C) in Figure 5 . This figure can confirm",
+          "section_path": [
+            "Results and Discussion"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "4",
+            "5"
+          ],
+          "xrd_score": 1.3,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_6ed4c5f84d15",
+          "text": "Table 2. Treatment of linear plots to obtain nano size of crystallites. Temperature (˚C) ln 0.89 0.154051 k L e L    L (nm) 600 5.1196 0.006 e   22.8 700 5.5542 0.00387 e   35.5 900 5.6054 0.00368 e   37.3 1100 5.16276 0.0036 e   38.1 Copyright © 2012 SciRes. WJNSE A. MONSHI ET AL. 159 Figure 5. Plot of ∆L/∆T (slope of plot in Figure 4) against temperature (˚C). e about discussion that the most increase in size of",
+          "section_path": [
+            "Results and Discussion"
+          ],
+          "section_type": "results",
+          "figure_references": [
+            "5",
+            "4"
+          ],
+          "xrd_score": 0.5,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "section_id": "section_101a5efdd00d",
+      "title": "Conclusions",
+      "path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "paragraphs": [
+        {
+          "paragraph_id": "paragraph_d8b8f6c3d8f4",
+          "text": "tion systematically show increased values of employed, the intercept gives ln = Kλ/L, from th nano HA or ∆L/∆T occurs at 600˚C to 700˚C.",
+          "section_path": [
+            "Conclusions"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_a448b2fddf60",
+          "text": "Some peaks of β-Tricalcium phosphate (β-TCP) shows up at 1100˚C. In order to obtain well developed crystallines of HA without the side effect of β-TCP, firing at 900˚C was selected for biomaterial purposes. The XRD pattern of this sample is shown in Figure 6 , showing all of the diffraction planes. 1) Scherrer equa nano crystalline size as d values decrease and 2θ values increase, since β.cosθ cannot be maintained as constant.",
+          "section_path": [
+            "Conclusions"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [
+            "6"
+          ],
+          "xrd_score": 15.9,
+          "peak_positions": [],
+          "miller_indices": []
+        },
+        {
+          "paragraph_id": "paragraph_31317afab917",
+          "text": "2) If lnβ is plotted against ln(1/cosθ) and least squares method is w to give a more ac 00˚C, 700˚C, 90˚C and 1100˚C, the values of 22 for producing HA for biomateria",
+          "section_path": [
+            "Conclusions"
+          ],
+          "section_type": "conclusion",
+          "figure_references": [],
+          "xrd_score": 0.0,
+          "peak_positions": [],
+          "miller_indices": []
+        }
+      ],
+      "children": []
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "paragraph_533f7cc30819",
+      "text": "X-ray diffraction is a convenient method for determining the mean size of nano crystallites in nano crystalline bulk materials. The first scientist, Paul Scherrer, published his results in a paper that included what became known as the Scherrer equation in 1981 [1] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a91ec4e406cc",
+      "text": "This can be attributed to the fact that \"crystallite size\" is not synonymous with \"particle size\", while X-Ray diffraction is sensitive to the crystallite size inside the particles. From the well-known Scherrer formula the average crystallite size, L, is:",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 4.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c042bdfc3cae",
+      "text": ".cos",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_8f8276024065",
+      "text": "where λ is the X-ray wavelength in nanometer (nm), β is the peak width of the diffraction peak profile at half maximum height resulting from small crystallite size in radians and K is a constant related to crystallite shape, normally taken as 0.9. The value of β in 2θ axis of diffraction profile must be in radians. The θ can be in degrees or radians, since the cosθ corresponds to the same number;",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 5.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_270b3b173a7b",
+      "text": "π 2 cos cos 45 4 2   ",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_ae9dcfdce0dd",
+      "text": "It can be taken as 0.89 or 0.9 for Full Width Half Maximum (FWHM) of spherical crystals with cubic unit cells. For an excellent discussion of K, a good reference is the paper \"Scherrer after sixty years\" in 1978 [2] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_3b54be03b10d",
+      "text": "In conventional approximation, the integrated width of the pure profile (β) is separated from that of the observed diffraction profile (B) assuming that both profiles are either Gaussian or Cauchy [3] .",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_e0b0d4b6d410",
+      "text": "If Gaussian profile is accepted, then 2 2 B b 2    in the case of Cauchy B = b + β, where b is the instrument profile width. If the broadening of the pure profile is due to both crystallite size and lattice strain, one has to make another assumption concerning the shapes of the two contributing line profiles. Normally, these are supposed to be either Gaussian or both Cauchy, then",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 1.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b788c9aac9c1",
+      "text": "sulting from small crystallite size, and n  is the line broadening due to the lattice strain. Then we have [4] :",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 1.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b53a5169fbc3",
+      "text": "It is usually considered that Cauchy function is rather well approximated, while Gaussian function gave considerably larger errors. In order to separate the size and strain contribution:",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_34c72358d9c5",
+      "text": "In the case of crystallite size and lattice strain, two diffraction peaks must be used to calculate two unknown parameters L and ε.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 1.6,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_43174e5c698f",
+      "text": "In order to consider the Scherrer equation with obtained value of ε concerning only crystallite size, when no mechanical activation such as ball milling and mechanical alloying is the case, or the crystallite size is due to a nucleation and growth at high temperatures, we must only be concerned about corrections for instrumental profile width.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_57583b9c4131",
+      "text": "The Scherrer equation predicts crystallite thickness if crystals are smaller than 1000 Å or 100 nm. The simplest way to obtain Scherrer equation is to take the derivation of Bragg's Law, 2 sin d    . Holding the wavelength λ constant and allowing the diffraction angle to broaden from a sharp diffraction peak from an infinite single crystal with perfect 3-dimeintinal order. For a single crystal, the diffraction from a set of planes with the distance d * occurs at a precisely θ * , so that λ = 2d * sinθ *.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 4.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d7cffb1a0f74",
+      "text": "For many small nano crystals, diffraction from a lot of tiny crystals deviate ± Δθ from θ * . This means 2Δθ on the 2θ axis of diffraction pattern. The value of Δθ correspond to FWHM or β, which is approximately half of 2Δθ. In other words since Δθ can be positive or negative, the absolute value must be taken and it reflects the half width of the shape line deviation in 2θ axis (full width at half maximum height, β). Derivative in d and θ of Bragg's Law with constant λ gives λ = 2Δd.cosθ.Δθ.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 11.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d202211b0a9b",
+      "text": "The thickness Δd = L can be taken as;",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9cd2b7cda9e0",
+      "text": "By applying a shape factor K, which is near the value of unit (0.9), the Scherrer equation can be given as:",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_23d3c266c061",
+      "text": "The derivation approach is taken by Alexander in Klug and Alexander \"X-ray Diffraction\" [3] to describe the Scherrer equation. It is also easily adoptable to describe the dependence of any two terms in the Bragg equation in terms of variability. For crystals longer than 1000 Å (100 nm), grainy patterns can be analyzed in terms of a statistical analysis to grain size, although this is rarely done since grain size can be more easily determined from optical or electron microscopy studies in this size range.",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_type": "introduction",
+      "figure_references": [],
+      "xrd_score": 6.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_1613b593cb52",
+      "text": "It is assumed that if there are N different peaks of a specific nano crystal in the range of 0 -180˚ (2θ) or 0 -90˚ (θ), then all of these N peaks must present identical L values for the crystal size. But, during the extensive research of the first author of thins paper, on different nano ceramic crystals, which were synthesized or minerally achieved, it was surprisingly observed that each peak yields a different value and there is a systematic error on the results obtained from each peak. Further investigation approved the presence of a systematic error in Scherrer formula. In fact since .cos",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 6.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_6aec50fdec6c",
+      "text": ", if L is going to be a fixed value for different peaks of a substance, considering that K and λ and therefore Kλ are fixed values, then it is essential that β.cosθ be a fixed multiple during 0 < 2θ < 180˚ or 0 < θ < 90˚. Suppose that for a crystallite size of 5nm, obtained at a peak of say 2θ = 10˚ (θ = 5˚) by using K = 0.89 and λCukα 1 = 0.15405 nm. then β 10 must be,",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 6.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_2b514deab41c",
+      "text": "    10 0.89 0.15405 0.0275 1.576 5cos 5 rad        (8) Now, suppose that the N th peak of this nano crystal occurs at 2θ = 170˚ (or θ = 85˚), then;     170 0.89 0.15405 0.3146 18.03 5cos85 rad",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 5.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_ecf8d7e658f0",
+      "text": "This means that the ratio of 18.03 1.576 11.44  must be applied 170 10 / for     . In other words if the first peak has a β 10 of around 2 mm on the monitor of computer plot, or for example, a paper plot 21 cm width on A4 paper, then the last peak must have a β 170 more than 22.88 mm and a base of peak more than 45.76 mm (4.576 cm).",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_26187f1e1640",
+      "text": "This has never been observed and cannot be true. Modified Scherrer formula is based on the face that we must decrease the errors and obtain the average value of L though all the peaks (or any number of selected peaks) by using least squares method to mathematically decrease the source of errors.",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 1.2,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_df774cd8e578",
+      "text": "We can write the basic Scherrer formula as:",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.4,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c800153c48dc",
+      "text": "Now by making logarithm on both sides; 1 ln ln ln ln .cos cos",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_46df0891de67",
+      "text": "If we plot the results of lnβ against ln(1 cos ), then a straight line with a slope of around one and an intercept",
+      "section_path": [
+        "Modified Scherrer Equation"
+      ],
+      "section_type": "other",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9e606db7731d",
+      "text": "of about lnK/L must be obtained. Theoretically this straight line must be with a slope of 45˚ since tg45˚ = 1 (Figure 1 ). But, since errors are associated with experimental data, the least squares method gives the best slope and most accurate lnK/L. After getting the intercept, then the exponential of the intercept is obtained: Bovine bones were boiled for 2 hr to remove flesh and fat. The bones were heated at 60˚C for 24 hr to remove moisture. To prevent blackening with soot during heating, the bones are cut into small pieces of about 10 mm thick and heated at 400˚C (bone ash) for 3 hr in air to allow for evaporation of organic substances. The resulting black bone ash was heated for 2 hr at 600˚C, 700˚C, 900˚C and 1100˚C [5] .",
+      "section_path": [
+        "Experimental"
+      ],
+      "section_type": "methods",
+      "figure_references": [
+        "1"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7884262f6edd",
+      "text": "Having K = 0.9 and λ(such as λCukα 1 = 0.15405 nm), a single value of L in nanometer can be calculated.",
+      "section_path": [
+        "Experimental"
+      ],
+      "section_type": "methods",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_c777e8130767",
+      "text": "A Philips XRD instrument with Cukα radiation using 40 KV and 30 mA, step size of 0.05˚ (2θ) and scan rate of 1˚/min were employed. X'Pert software was used for qualitative analysis and report of β values at FWHM at different 2θ values according to location of the peaks. According to JCPDS:9-432 standard the main peaks are from the planes of ( 200 ), (111), (002), (102), (210), ( 211 ), (112), (300), (202), (212), (310), (311), (113), ( 222 ), (312) and (213) of HA phase for 20 -50 deg. 2θ.",
+      "section_path": [
+        "Experimental"
+      ],
+      "section_type": "methods",
+      "figure_references": [],
+      "xrd_score": 14.4,
+      "peak_positions": [
+        50.0
+      ],
+      "miller_indices": [
+        "( 200 )",
+        "(111)",
+        "(002)",
+        "(102)",
+        "(210)",
+        "( 211 )",
+        "(112)",
+        "(300)",
+        "(202)",
+        "(212)",
+        "(310)",
+        "(311)",
+        "(113)",
+        "( 222 )",
+        "(312)",
+        "(213)"
+      ]
+    },
+    {
+      "paragraph_id": "paragraph_a9885575ab54",
+      "text": "In (1/cosθ) In β",
+      "section_path": [
+        "Experimental"
+      ],
+      "section_type": "methods",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_9a5a2bc0d115",
+      "text": "Table 1 shows the β.cosθ values for different peaks at any given temperature.",
+      "section_path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 0.8,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_2a2838d25537",
+      "text": "The XRD patterns are observed in Figure 2 with gradual sharpness of the peaks as the soaking temperature increases, indicating the growth and increase of crystallite size.",
+      "section_path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "2"
+      ],
+      "xrd_score": 9.7,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_7f12cbd98117",
+      "text": "Relatively gradual decrease in β.cosθ and almost increase in L values ( ./ .cos L const )    is observed with the increase of 2θ. Such as increase in crystallite Table 1. Values of β.cosθ for different peaks. Temperature (˚C) d 400 600 700 900 1100 Calculated L at 900˚C (nm) (200) --5.06 × 10 -3 5.06 × 10 -3 5.06 × 10 -3 27.1 (111) ---5.05 × 10 -3 5.05 × 10 -3 27.1 (002) 2.24 × 10 -3 5.02 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 40.9 (102) --2.50 × 10 -3 3.34 × 10 -3 2.50 × 10 -3 41 (210) ---3.23 × 10 -3 2.50 × 10 -3 42.4 (211) 9.90 × 10 -3 11.5 × 10 -3 2.48 × 10 -3 3.31 × 10 -3 2.48 × 10 -3 41.4 (112) --2.48 × 10 -3 2.48 × 10 -3 2.48 × 10 -3 55.2 (300) --2.47 × 10 -3 3.30 × 10 -3 3.30 × 10 -3 41.5 (202) --3.29 × 10 -3 3.29 × 10 -3 3.29 × 10 -3 41.6 (212) ---2.43 × 10 -3 2.43 × 10 -3 56.4 (310) 11.3 × 10 -3 12.9 × 10 -3 2.42 × 10 -3 2.16 × 10 -3 3.23 × 10 -3 63.4 (311) --2.41 × 10 -3 4.81 × 10 -3 2.41 × 10 -3 28.5 (113) --3.19 × 10 -3 6.38 × 10 -3 3.19 × 10 -3 21.5 (222) 7.88 × 10 -3 7.88 × 10 -3 3.16 × 10 -3 2.11 × 10 -3 3.16 × 10 -3 65 (312) --3.14 × 10 -3 3.14 × 10 -3 3.14 × 10 -3 43.6 (213) 9.35 × 10 -3 6.25 × 10 -3 3.89 × 10 -3 3.12 × 10 -3 2.09 × 10 -3 44 size of HA were also observed by Shipmen et al. [6] . The samples fired at 600˚C -1100˚C were used.",
+      "section_path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "figure_references": [],
+      "xrd_score": 8.3,
+      "peak_positions": [],
+      "miller_indices": [
+        "(200)",
+        "(111)",
+        "(002)",
+        "(102)",
+        "(210)",
+        "(211)",
+        "(112)",
+        "(300)",
+        "(202)",
+        "(212)",
+        "(310)",
+        "(311)",
+        "(113)",
+        "(222)",
+        "(312)",
+        "(213)"
+      ]
+    },
+    {
+      "paragraph_id": "paragraph_e2a80a07a74a",
+      "text": "Figure 3 indicates four plots of lnβ vs. ln(1cos ) for individual soaking temperatures; together with the equations of linear least squares method obtained from linear regression of data in excel plots. Due to sources of error in measuring β and treating for different available peaks, since the β.cosθ multiple is not really a constant value for all the peaks, π   deviate from 45˚ and are negative in some cases. The reason that the slopes are negative are due to the fact that at higher angles, of 2θ, with lower values of cosθ and higher values of ln( 1cos ), the amounts of β observed and measured are less than it must be according to Scherrer's formula. This means that a 45˚ slope for the linear plots are hardly achieved. The errors involved in Scherrer equation when employing different peaks are the main cause of scattering of the points. It is interesting to notice that although variations exist in lnβ values, but the intercept systematically changes as -5.1196, -5.5542, -5.6054 and -5.6276 respectively for 600˚C, 700˚C, 900˚C and 1100˚C. The treatment is shown in Table 2 leading to values of 22.8, 35.5, 37.3 and 38.1 nanometers respectively. Danilchenko et al. [6] have also reported the bone mineral crystalline size of about 20 nm.",
+      "section_path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "3"
+      ],
+      "xrd_score": 7.1,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_b2ab5253391c",
+      "text": "The plot of crystal size of HA vs. firing temperature is given in Figure 4 . From this figure it can be understood that the shape is similar to that of parabolic Law. Crystallinity sharply increase from 600˚C to 700˚C, but the rate slows down from 700˚C to 1100˚C. It seems that the driving force for the growth of nano crystallite size of HA is highly provided when the temperature increases from 600˚C to 700˚C, but is less affected by higher temperature increases. In other words the experimental activation energy for the growth of nano HA crystallites can be provided in 600˚C to 700˚C. The values of ∆L/∆T representing the rate of growth in size are plotted against Temperature (˚C) in Figure 5 . This figure can confirm",
+      "section_path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "4",
+        "5"
+      ],
+      "xrd_score": 1.3,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_6ed4c5f84d15",
+      "text": "Table 2. Treatment of linear plots to obtain nano size of crystallites. Temperature (˚C) ln 0.89 0.154051 k L e L    L (nm) 600 5.1196 0.006 e   22.8 700 5.5542 0.00387 e   35.5 900 5.6054 0.00368 e   37.3 1100 5.16276 0.0036 e   38.1 Copyright © 2012 SciRes. WJNSE A. MONSHI ET AL. 159 Figure 5. Plot of ∆L/∆T (slope of plot in Figure 4) against temperature (˚C). e about discussion that the most increase in size of",
+      "section_path": [
+        "Results and Discussion"
+      ],
+      "section_type": "results",
+      "figure_references": [
+        "5",
+        "4"
+      ],
+      "xrd_score": 0.5,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_d8b8f6c3d8f4",
+      "text": "tion systematically show increased values of employed, the intercept gives ln = Kλ/L, from th nano HA or ∆L/∆T occurs at 600˚C to 700˚C.",
+      "section_path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_a448b2fddf60",
+      "text": "Some peaks of β-Tricalcium phosphate (β-TCP) shows up at 1100˚C. In order to obtain well developed crystallines of HA without the side effect of β-TCP, firing at 900˚C was selected for biomaterial purposes. The XRD pattern of this sample is shown in Figure 6 , showing all of the diffraction planes. 1) Scherrer equa nano crystalline size as d values decrease and 2θ values increase, since β.cosθ cannot be maintained as constant.",
+      "section_path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [
+        "6"
+      ],
+      "xrd_score": 15.9,
+      "peak_positions": [],
+      "miller_indices": []
+    },
+    {
+      "paragraph_id": "paragraph_31317afab917",
+      "text": "2) If lnβ is plotted against ln(1/cosθ) and least squares method is w to give a more ac 00˚C, 700˚C, 90˚C and 1100˚C, the values of 22 for producing HA for biomateria",
+      "section_path": [
+        "Conclusions"
+      ],
+      "section_type": "conclusion",
+      "figure_references": [],
+      "xrd_score": 0.0,
+      "peak_positions": [],
+      "miller_indices": []
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Figure 1 . Figure 1. Modified scherrer equation plot.",
+      "graphic_targets": [],
+      "coords": "3,91.26,436.65,161.66,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 1.4,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_9e606db7731d"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_26187f1e1640",
+        "paragraph_df774cd8e578",
+        "paragraph_c800153c48dc",
+        "paragraph_46df0891de67",
+        "paragraph_9e606db7731d",
+        "paragraph_7884262f6edd",
+        "paragraph_c777e8130767",
+        "paragraph_a9885575ab54",
+        "paragraph_9a5a2bc0d115"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Figure 2 . Figure 2. Patterns of XRD analysis related to natural HA of thermal analysis at temperatures of: (a) 400˚C (bone ash); (b) 600˚C; (c) 700˚C; (d) 900˚C and (e) 1100˚C.",
+      "graphic_targets": [],
+      "coords": "4,56.70,325.05,481.94,9.96;4,56.70,335.42,166.05,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 6.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/Scherrer/figures/fig_2.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_2a2838d25537"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_7884262f6edd",
+        "paragraph_c777e8130767",
+        "paragraph_a9885575ab54",
+        "paragraph_9a5a2bc0d115",
+        "paragraph_2a2838d25537",
+        "paragraph_7f12cbd98117",
+        "paragraph_e2a80a07a74a",
+        "paragraph_b2ab5253391c",
+        "paragraph_6ed4c5f84d15"
+      ]
+    },
+    {
+      "figure_id": "fig_6",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "6 . Some other sources of error are measuring ln  and ln(1cos ). The significance of this work is to minimize the errors by applying a method to use least squares technique for obtaining the best results.The modified Scherrer equation can provide the advantage of decreasing the sum of absolute values of errorsln1 / cos , and producing a single line through the points to give a single value of intercept lnK/L. At 600˚C, the linear regression plot is obtained as . This is equivalent to 4From this line, the intercept is -5.1196 and and 0.15405 / 0.006 22.8 nm L   (13)",
+      "graphic_targets": [],
+      "coords": "4,56.70,565.73,230.96,12.96;4,56.70,579.73,230.97,11.11;4,56.70,592.03,231.02,11.10;4,56.70,604.32,157.76,11.10;4,66.72,616.62,221.06,11.10;4,56.70,628.91,231.13,11.10;4,56.70,641.21,26.93,11.10;4,101.82,637.67,3.27,16.09;4,139.32,638.86,3.01,6.67;4,118.92,637.67,20.19,16.09;4,128.40,639.50,5.51,12.99;4,105.96,640.07,11.61,12.29;4,90.84,638.02,10.02,17.21;4,92.20,678.15,51.31,11.01;4,59.46,678.15,4.41,11.01;4,102.85,678.15,4.41,11.01;4,66.72,677.01,5.46,12.17;4,109.14,677.01,5.46,12.17;4,85.14,690.47,64.73,11.06;4,145.02,641.22,142.91,11.12;4,56.70,653.52,231.03,11.12;4,56.70,665.82,231.07,11.12;4,145.68,678.12,86.53,11.12;4,74.70,678.15,17.44,11.01;4,58.38,690.47,7.64,11.06;4,113.58,686.94,3.28,16.01;4,157.44,686.94,19.82,16.01;4,194.89,690.47,2.78,11.06;4,179.28,690.47,26.37,11.06;4,150.36,688.76,17.48,12.92;4,160.56,702.76,41.27,11.06;4,168.18,701.03,5.50,12.96;4,202.14,701.14,3.29,7.34;4,189.54,701.63,5.48,12.23;4,67.92,688.76,14.72,12.92;4,186.84,688.76,5.48,12.92;4,238.50,702.77,17.48,11.06;4,207.66,690.42,80.00,11.12;4,56.70,702.72,96.79,11.12;4,263.46,702.72,14.43,11.12;4,205.44,701.80,16.51,6.67;4,176.16,702.77,2.78,11.06;4,233.46,702.77,4.99,11.06;4,225.66,701.63,5.48,12.23;4,102.42,716.24,3.31,15.84;4,124.62,716.24,7.63,15.84;4,166.14,716.24,3.31,15.84;4,227.70,716.24,21.13,15.84;4,106.44,719.72,138.21,10.94;4,86.40,718.59,13.71,12.10;4,201.18,718.59,5.43,12.10;4,270.96,719.52,16.67,11.12",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 0.4,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Figure 3 . Figure 3. Linear plots of modified scherrer equation and obtained intercepts for different firings of ha.",
+      "graphic_targets": [],
+      "coords": "5,101.04,465.09,393.28,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 2.9,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_e2a80a07a74a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_a9885575ab54",
+        "paragraph_9a5a2bc0d115",
+        "paragraph_2a2838d25537",
+        "paragraph_7f12cbd98117",
+        "paragraph_e2a80a07a74a",
+        "paragraph_b2ab5253391c",
+        "paragraph_6ed4c5f84d15",
+        "paragraph_d8b8f6c3d8f4",
+        "paragraph_a448b2fddf60"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "label": "45",
+      "normalized_label": "45",
+      "caption": "Figure 4 .Figure 5 . Figure 4. Crystal size (nm) of HA against firing temperature.",
+      "graphic_targets": [],
+      "coords": "5,180.78,725.61,233.74,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 0.5,
+      "is_likely_xrd": false,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [],
+      "context_paragraph_ids": []
+    },
+    {
+      "figure_id": "fig_6_2",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Figure 6 . Figure 6. All of the diffraction planes of HA firing at 900˚C.",
+      "graphic_targets": [],
+      "coords": "6,183.30,617.61,228.75,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 2.3,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_a448b2fddf60"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_e2a80a07a74a",
+        "paragraph_b2ab5253391c",
+        "paragraph_6ed4c5f84d15",
+        "paragraph_d8b8f6c3d8f4",
+        "paragraph_a448b2fddf60",
+        "paragraph_31317afab917"
+      ]
+    }
+  ],
+  "tables": [],
+  "references": [
+    {
+      "reference_id": "b0",
+      "title": "e und der Inneren Struktur von Röntgenstrahlen, s in the Determination of hich a single value of L can be obtained",
+      "doi": null,
+      "year": null,
+      "authors": [],
+      "raw_text": "e und der Inneren Struktur von Röntgenstrahlen, s in the Determination of hich a single value of L can be obtained P Scherrer P. Scherrer, \" e und der Inneren Struktur von Röntgenstrahlen, s in the Determination of hich a single value of L can be obtained."
+    },
+    {
+      "reference_id": "b1",
+      "title": "Modified Scherrer equation can provide the advantage of decreasing the errors or (ln) 2 Cry curate value of L from all or some of the different peaks",
+      "doi": null,
+      "year": null,
+      "authors": [],
+      "raw_text": "Modified Scherrer equation can provide the advantage of decreasing the errors or (ln) 2 Cry curate value of L from all or some of the different peaks Modified Scherrer equation can provide the advan- tage of decreasing the errors or (ln) 2 Cry curate value of L from all or some of the different peaks."
+    },
+    {
+      "reference_id": "b2",
+      "title": "Since at 1100˚C, peaks of β-TCP start to show up, 900˚C firing was selected ls purposes. Bestimmung der Gröss Kolloidteilchen Mittels Nachrichten von der Gesellschaft der Wissenschaften",
+      "doi": null,
+      "year": "1918",
+      "authors": [],
+      "raw_text": "Since at 1100˚C, peaks of β-TCP start to show up, 900˚C firing was selected ls purposes. Bestimmung der Gröss Kolloidteilchen Mittels Nachrichten von der Gesellschaft der Wissenschaften Mathematisch-Physikalische Klasse 2 1918 Göttingen Since at 1100˚C, peaks of β-TCP start to show up, 900˚C firing was selected ls purposes. Bestimmung der Gröss Kolloidteilchen Mittels Nachrichten von der Gesellschaft der Wissenschaften, Göttingen,\" Mathematisch-Physikalische Klasse, Vol. 2, 1918, pp. 98-100."
+    },
+    {
+      "reference_id": "b3",
+      "title": "Scherrer after Sixty Years: A Survey and Some New Result stallite Size",
+      "doi": "10.1107/S0021889878012844",
+      "year": "1978",
+      "authors": [
+        "J Langford",
+        "A Wilson"
+      ],
+      "raw_text": "Scherrer after Sixty Years: A Survey and Some New Result stallite Size J Langford A Wilson 10.1107/S0021889878012844 Journal of Applied Crystallography 11 1978 J. Langford and A. Wilson, \"Scherrer after Sixty Years: A Survey and Some New Result stallite Size,\" Journal of Applied Crystallography, Vol. 11, 1978, pp. 102-103. doi:10.1107/S0021889878012844"
+    },
+    {
+      "reference_id": "b4",
+      "title": "X-Ray for Polycrystallite and Amorphous Diffraction Procedure Materials",
+      "doi": null,
+      "year": "1974",
+      "authors": [],
+      "raw_text": "X-Ray for Polycrystallite and Amorphous Diffraction Procedure Materials H Klug L Alexander 1974 John Wiley and Sons New York 2nd Ediation of the ly-3-Hy-tion H. Klug and L. Alexander, \"X-Ray for Polycrystallite and Amorphous Diffraction Procedure Materials,\" 2nd Edi- ation of the ly-3-Hy- tion, John Wiley and Sons, New York, 1974."
+    },
+    {
+      "reference_id": "b5",
+      "title": "Determin Bone Mineral Crystallite Size and Lattice Strain from Diffraction Line Broadening",
+      "doi": null,
+      "year": "2002",
+      "authors": [
+        "S Dinilchenko",
+        "O Kukharenko",
+        "C Moseke",
+        "I Protsenko",
+        "L Sukhodub",
+        "B Sulkio-Cleff"
+      ],
+      "raw_text": "Determin Bone Mineral Crystallite Size and Lattice Strain from Diffraction Line Broadening S Dinilchenko O Kukharenko C Moseke I Protsenko L Sukhodub B Sulkio-Cleff Research and Technology Crystal 37 11 2002 S. Dinilchenko, O. Kukharenko, C. Moseke, I. Protsenko, L. Sukhodub and B. Sulkio-Cleff, \"Determin Bone Mineral Crystallite Size and Lattice Strain from Diffraction Line Broadening,\" Research and Technology Crystal, Vol. 37, No. 11, 2002, pp. 1234-1240."
+    },
+    {
+      "reference_id": "b6",
+      "title": "Physical and Mechanical Properties of a Po droxylbutyrate-coated Nanocrystalline Hydroxyapatite Scaffold for Bone Tissue Engineering",
+      "doi": "10.1007/s10934-011-9518-1",
+      "year": "2011",
+      "authors": [
+        "M Foroughi",
+        "S Karbasi",
+        "R Ebrahimi-Kahrizsangi"
+      ],
+      "raw_text": "Physical and Mechanical Properties of a Po droxylbutyrate-coated Nanocrystalline Hydroxyapatite Scaffold for Bone Tissue Engineering M R Foroughi S Karbasi R Ebrahimi-Kahrizsangi 10.1007/s10934-011-9518-1 Journal of Porous Materials 19 5 2011 M. R. Foroughi, S. Karbasi and R. Ebrahimi-Kahrizsangi, \"Physical and Mechanical Properties of a Po droxylbutyrate-coated Nanocrystalline Hydroxyapatite Scaf- fold for Bone Tissue Engineering,\" Journal of Porous Materials, Vol. 19, No. 5, 2011, pp. 667-675. doi:10.1007/s10934-011-9518-1."
+    },
+    {
+      "reference_id": "b7",
+      "title": "Bu and Teeth: An Experimental Study of",
+      "doi": null,
+      "year": null,
+      "authors": [],
+      "raw_text": "Bu and Teeth: An Experimental Study of P Shipman G Foster M Schoeninger P. Shipman, G. Foster and M. Schoeninger, \"Bu and Teeth: An Experimental Study of"
+    }
+  ],
+  "counts": {
+    "sections": 5,
+    "paragraphs": 38,
+    "results_paragraphs": 6,
+    "xrd_paragraphs": 14,
+    "figures": 6,
+    "xrd_figures": 4,
+    "tables": 0,
+    "references": 8
+  }
+}

@@ -1,0 +1,245 @@
+[
+  {
+    "document": {
+      "source_pdf": "pdf_files/Scherrer_equation.pdf",
+      "source_sha256": "b399b684ef681d66a5042e62cc5570bf302a35d63db792c3535c751b6fabb063",
+      "title": "Modified Scherrer Equation to Estimate More Accurately Nano-Crystallite Size Using XRD",
+      "doi": "10.4236/wjnse.2012.23020",
+      "journal": "World Journal of Nano Science and Engineering",
+      "publication_date": "2012-09"
+    },
+    "figure": {
+      "figure_id": "fig_1",
+      "label": "1",
+      "normalized_label": "1",
+      "caption": "Figure 1 . Figure 1. Modified scherrer equation plot.",
+      "graphic_targets": [],
+      "coords": "3,91.26,436.65,161.66,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 1.4,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_9e606db7731d"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_26187f1e1640",
+        "paragraph_df774cd8e578",
+        "paragraph_c800153c48dc",
+        "paragraph_46df0891de67",
+        "paragraph_9e606db7731d",
+        "paragraph_7884262f6edd",
+        "paragraph_c777e8130767",
+        "paragraph_a9885575ab54",
+        "paragraph_9a5a2bc0d115"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_9e606db7731d",
+        "text": "of about lnK/L must be obtained. Theoretically this straight line must be with a slope of 45˚ since tg45˚ = 1 (Figure 1 ). But, since errors are associated with experimental data, the least squares method gives the best slope and most accurate lnK/L. After getting the intercept, then the exponential of the intercept is obtained: Bovine bones were boiled for 2 hr to remove flesh and fat. The bones were heated at 60˚C for 24 hr to remove moisture. To prevent blackening with soot during heating, the bones are cut into small pieces of about 10 mm thick and heated at 400˚C (bone ash) for 3 hr in air to allow for evaporation of organic substances. The resulting black bone ash was heated for 2 hr at 600˚C, 700˚C, 900˚C and 1100˚C [5] .",
+        "section_path": [
+          "Experimental"
+        ],
+        "section_type": "methods",
+        "figure_references": [
+          "1"
+        ],
+        "xrd_score": 0.5,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Theoretically this straight line must be with a slope of 45˚ since tg45˚ = 1 (Figure 1 ).",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Theoretically this straight line must be with a slope of 45˚ since tg45˚ = 1 (Figure 1 ).\n\nA Philips XRD instrument with Cukα radiation using 40 KV and 30 mA, step size of 0.05˚ (2θ) and scan rate of 1˚/min were employed. X'Pert software was used for qualitative analysis and report of β values at FWHM at different 2θ values according to location of the peaks. According to JCPDS:9-432 standard the main peaks are from the planes of ( 200 ), (111), (002), (102), (210), ( 211 ), (112), (300), (202), (212), (310), (311), (113), ( 222 ), (312) and (213) of HA phase for 20 -50 deg. 2θ.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/Scherrer_equation.pdf",
+      "source_sha256": "b399b684ef681d66a5042e62cc5570bf302a35d63db792c3535c751b6fabb063",
+      "title": "Modified Scherrer Equation to Estimate More Accurately Nano-Crystallite Size Using XRD",
+      "doi": "10.4236/wjnse.2012.23020",
+      "journal": "World Journal of Nano Science and Engineering",
+      "publication_date": "2012-09"
+    },
+    "figure": {
+      "figure_id": "fig_2",
+      "label": "2",
+      "normalized_label": "2",
+      "caption": "Figure 2 . Figure 2. Patterns of XRD analysis related to natural HA of thermal analysis at temperatures of: (a) 400˚C (bone ash); (b) 600˚C; (c) 700˚C; (d) 900˚C and (e) 1100˚C.",
+      "graphic_targets": [],
+      "coords": "4,56.70,325.05,481.94,9.96;4,56.70,335.42,166.05,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 6.5,
+      "is_likely_xrd": true,
+      "is_caption_xrd": true,
+      "image_paths": [
+        "grobid_output/Scherrer/figures/fig_2.png"
+      ],
+      "referenced_by_paragraph_ids": [
+        "paragraph_2a2838d25537"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_7884262f6edd",
+        "paragraph_c777e8130767",
+        "paragraph_a9885575ab54",
+        "paragraph_9a5a2bc0d115",
+        "paragraph_2a2838d25537",
+        "paragraph_7f12cbd98117",
+        "paragraph_e2a80a07a74a",
+        "paragraph_b2ab5253391c",
+        "paragraph_6ed4c5f84d15"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_2a2838d25537",
+        "text": "The XRD patterns are observed in Figure 2 with gradual sharpness of the peaks as the soaking temperature increases, indicating the growth and increase of crystallite size.",
+        "section_path": [
+          "Results and Discussion"
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "2"
+        ],
+        "xrd_score": 9.7,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The XRD patterns are observed in Figure 2 with gradual sharpness of the peaks as the soaking temperature increases, indicating the growth and increase of crystallite size.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "A Philips XRD instrument with Cukα radiation using 40 KV and 30 mA, step size of 0.05˚ (2θ) and scan rate of 1˚/min were employed. X'Pert software was used for qualitative analysis and report of β values at FWHM at different 2θ values according to location of the peaks. According to JCPDS:9-432 standard the main peaks are from the planes of ( 200 ), (111), (002), (102), (210), ( 211 ), (112), (300), (202), (212), (310), (311), (113), ( 222 ), (312) and (213) of HA phase for 20 -50 deg. 2θ.\n\nThe XRD patterns are observed in Figure 2 with gradual sharpness of the peaks as the soaking temperature increases, indicating the growth and increase of crystallite size.\n\nRelatively gradual decrease in β.cosθ and almost increase in L values ( ./ .cos L const )    is observed with the increase of 2θ. Such as increase in crystallite Table 1. Values of β.cosθ for different peaks. Temperature (˚C) d 400 600 700 900 1100 Calculated L at 900˚C (nm) (200) --5.06 × 10 -3 5.06 × 10 -3 5.06 × 10 -3 27.1 (111) ---5.05 × 10 -3 5.05 × 10 -3 27.1 (002) 2.24 × 10 -3 5.02 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 40.9 (102) --2.50 × 10 -3 3.34 × 10 -3 2.50 × 10 -3 41 (210) ---3.23 × 10 -3 2.50 × 10 -3 42.4 (211) 9.90 × 10 -3 11.5 × 10 -3 2.48 × 10 -3 3.31 × 10 -3 2.48 × 10 -3 41.4 (112) --2.48 × 10 -3 2.48 × 10 -3 2.48 × 10 -3 55.2 (300) --2.47 × 10 -3 3.30 × 10 -3 3.30 × 10 -3 41.5 (202) --3.29 × 10 -3 3.29 × 10 -3 3.29 × 10 -3 41.6 (212) ---2.43 × 10 -3 2.43 × 10 -3 56.4 (310) 11.3 × 10 -3 12.9 × 10 -3 2.42 × 10 -3 2.16 × 10 -3 3.23 × 10 -3 63.4 (311) --2.41 × 10 -3 4.81 × 10 -3 2.41 × 10 -3 28.5 (113) --3.19 × 10 -3 6.38 × 10 -3 3.19 × 10 -3 21.5 (222) 7.88 × 10 -3 7.88 × 10 -3 3.16 × 10 -3 2.11 × 10 -3 3.16 × 10 -3 65 (312) --3.14 × 10 -3 3.14 × 10 -3 3.14 × 10 -3 43.6 (213) 9.35 × 10 -3 6.25 × 10 -3 3.89 × 10 -3 3.12 × 10 -3 2.09 × 10 -3 44 size of HA were also observed by Shipmen et al. [6] . The samples fired at 600˚C -1100˚C were used.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/Scherrer_equation.pdf",
+      "source_sha256": "b399b684ef681d66a5042e62cc5570bf302a35d63db792c3535c751b6fabb063",
+      "title": "Modified Scherrer Equation to Estimate More Accurately Nano-Crystallite Size Using XRD",
+      "doi": "10.4236/wjnse.2012.23020",
+      "journal": "World Journal of Nano Science and Engineering",
+      "publication_date": "2012-09"
+    },
+    "figure": {
+      "figure_id": "fig_3",
+      "label": "3",
+      "normalized_label": "3",
+      "caption": "Figure 3 . Figure 3. Linear plots of modified scherrer equation and obtained intercepts for different firings of ha.",
+      "graphic_targets": [],
+      "coords": "5,101.04,465.09,393.28,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 2.9,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_e2a80a07a74a"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_a9885575ab54",
+        "paragraph_9a5a2bc0d115",
+        "paragraph_2a2838d25537",
+        "paragraph_7f12cbd98117",
+        "paragraph_e2a80a07a74a",
+        "paragraph_b2ab5253391c",
+        "paragraph_6ed4c5f84d15",
+        "paragraph_d8b8f6c3d8f4",
+        "paragraph_a448b2fddf60"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_e2a80a07a74a",
+        "text": "Figure 3 indicates four plots of lnβ vs. ln(1cos ) for individual soaking temperatures; together with the equations of linear least squares method obtained from linear regression of data in excel plots. Due to sources of error in measuring β and treating for different available peaks, since the β.cosθ multiple is not really a constant value for all the peaks, π   deviate from 45˚ and are negative in some cases. The reason that the slopes are negative are due to the fact that at higher angles, of 2θ, with lower values of cosθ and higher values of ln( 1cos ), the amounts of β observed and measured are less than it must be according to Scherrer's formula. This means that a 45˚ slope for the linear plots are hardly achieved. The errors involved in Scherrer equation when employing different peaks are the main cause of scattering of the points. It is interesting to notice that although variations exist in lnβ values, but the intercept systematically changes as -5.1196, -5.5542, -5.6054 and -5.6276 respectively for 600˚C, 700˚C, 900˚C and 1100˚C. The treatment is shown in Table 2 leading to values of 22.8, 35.5, 37.3 and 38.1 nanometers respectively. Danilchenko et al. [6] have also reported the bone mineral crystalline size of about 20 nm.",
+        "section_path": [
+          "Results and Discussion"
+        ],
+        "section_type": "results",
+        "figure_references": [
+          "3"
+        ],
+        "xrd_score": 7.1,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "Figure 3 indicates four plots of lnβ vs. ln(1cos ) for individual soaking temperatures; together with the equations of linear least squares method obtained from linear regression of data in excel plots.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "Relatively gradual decrease in β.cosθ and almost increase in L values ( ./ .cos L const )    is observed with the increase of 2θ. Such as increase in crystallite Table 1. Values of β.cosθ for different peaks. Temperature (˚C) d 400 600 700 900 1100 Calculated L at 900˚C (nm) (200) --5.06 × 10 -3 5.06 × 10 -3 5.06 × 10 -3 27.1 (111) ---5.05 × 10 -3 5.05 × 10 -3 27.1 (002) 2.24 × 10 -3 5.02 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 3.35 × 10 -3 40.9 (102) --2.50 × 10 -3 3.34 × 10 -3 2.50 × 10 -3 41 (210) ---3.23 × 10 -3 2.50 × 10 -3 42.4 (211) 9.90 × 10 -3 11.5 × 10 -3 2.48 × 10 -3 3.31 × 10 -3 2.48 × 10 -3 41.4 (112) --2.48 × 10 -3 2.48 × 10 -3 2.48 × 10 -3 55.2 (300) --2.47 × 10 -3 3.30 × 10 -3 3.30 × 10 -3 41.5 (202) --3.29 × 10 -3 3.29 × 10 -3 3.29 × 10 -3 41.6 (212) ---2.43 × 10 -3 2.43 × 10 -3 56.4 (310) 11.3 × 10 -3 12.9 × 10 -3 2.42 × 10 -3 2.16 × 10 -3 3.23 × 10 -3 63.4 (311) --2.41 × 10 -3 4.81 × 10 -3 2.41 × 10 -3 28.5 (113) --3.19 × 10 -3 6.38 × 10 -3 3.19 × 10 -3 21.5 (222) 7.88 × 10 -3 7.88 × 10 -3 3.16 × 10 -3 2.11 × 10 -3 3.16 × 10 -3 65 (312) --3.14 × 10 -3 3.14 × 10 -3 3.14 × 10 -3 43.6 (213) 9.35 × 10 -3 6.25 × 10 -3 3.89 × 10 -3 3.12 × 10 -3 2.09 × 10 -3 44 size of HA were also observed by Shipmen et al. [6] . The samples fired at 600˚C -1100˚C were used.\n\nFigure 3 indicates four plots of lnβ vs. ln(1cos ) for individual soaking temperatures; together with the equations of linear least squares method obtained from linear regression of data in excel plots.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  },
+  {
+    "document": {
+      "source_pdf": "pdf_files/Scherrer_equation.pdf",
+      "source_sha256": "b399b684ef681d66a5042e62cc5570bf302a35d63db792c3535c751b6fabb063",
+      "title": "Modified Scherrer Equation to Estimate More Accurately Nano-Crystallite Size Using XRD",
+      "doi": "10.4236/wjnse.2012.23020",
+      "journal": "World Journal of Nano Science and Engineering",
+      "publication_date": "2012-09"
+    },
+    "figure": {
+      "figure_id": "fig_6_2",
+      "label": "6",
+      "normalized_label": "6",
+      "caption": "Figure 6 . Figure 6. All of the diffraction planes of HA firing at 900˚C.",
+      "graphic_targets": [],
+      "coords": "6,183.30,617.61,228.75,9.96",
+      "graphic_coords": null,
+      "figure_type": null,
+      "xrd_score": 2.3,
+      "is_likely_xrd": true,
+      "is_caption_xrd": false,
+      "image_paths": [],
+      "referenced_by_paragraph_ids": [
+        "paragraph_a448b2fddf60"
+      ],
+      "context_paragraph_ids": [
+        "paragraph_e2a80a07a74a",
+        "paragraph_b2ab5253391c",
+        "paragraph_6ed4c5f84d15",
+        "paragraph_d8b8f6c3d8f4",
+        "paragraph_a448b2fddf60",
+        "paragraph_31317afab917"
+      ]
+    },
+    "analysis_paragraphs": [
+      {
+        "paragraph_id": "paragraph_a448b2fddf60",
+        "text": "Some peaks of β-Tricalcium phosphate (β-TCP) shows up at 1100˚C. In order to obtain well developed crystallines of HA without the side effect of β-TCP, firing at 900˚C was selected for biomaterial purposes. The XRD pattern of this sample is shown in Figure 6 , showing all of the diffraction planes. 1) Scherrer equa nano crystalline size as d values decrease and 2θ values increase, since β.cosθ cannot be maintained as constant.",
+        "section_path": [
+          "Conclusions"
+        ],
+        "section_type": "conclusion",
+        "figure_references": [
+          "6"
+        ],
+        "xrd_score": 15.9,
+        "peak_positions": [],
+        "miller_indices": [],
+        "relevant_text": "The XRD pattern of this sample is shown in Figure 6 , showing all of the diffraction planes.",
+        "selection_reason": "explicit_figure_reference"
+      }
+    ],
+    "combined_analysis_text": "The XRD pattern of this sample is shown in Figure 6 , showing all of the diffraction planes.",
+    "extracted_features": {
+      "peak_positions_degrees": [],
+      "miller_indices": []
+    }
+  }
+]

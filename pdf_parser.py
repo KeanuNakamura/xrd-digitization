@@ -1801,6 +1801,46 @@ def build_figure_analysis_dataset(
     return dataset
 
 
+def xrd_figure_extraction_counts(document: ParsedDocument) -> tuple[int, int]:
+    xrd_figures = [
+        figure for figure in document.figures if figure.is_likely_xrd
+    ]
+    extracted = sum(
+        1 for figure in xrd_figures if figure.image_paths
+    )
+    return extracted, len(xrd_figures)
+
+
+def truncate_display_title(title: str | None, *, max_length: int = 80) -> str:
+    cleaned = normalize_whitespace(title)
+    if not cleaned:
+        return "Unknown title"
+    if len(cleaned) <= max_length:
+        return cleaned
+    return cleaned[: max_length - 3].rstrip() + "..."
+
+
+def format_quiet_summary_line(
+    index: int,
+    extracted_xrd_figures: int | None,
+    total_xrd_figures: int | None,
+    *,
+    success: bool,
+    title: str | None = None,
+) -> str:
+    if success and extracted_xrd_figures is not None and total_xrd_figures is not None:
+        figures_summary = f"{extracted_xrd_figures}/{total_xrd_figures}"
+    else:
+        figures_summary = "-/-"
+
+    status = "Successful" if success else "Failed"
+    display_title = truncate_display_title(title)
+    return (
+        f"PDF {index}: {figures_summary} XRD figures | "
+        f"{display_title} | {status}"
+    )
+
+
 def parse_pdf(
     pdf_path: str | Path,
     output_directory: str | Path,
@@ -1904,6 +1944,41 @@ def parse_pdf(
     return document
 
 
+def collect_pdf_paths(input_path: Path) -> list[Path]:
+    if input_path.is_file():
+        if input_path.suffix.lower() != ".pdf":
+            raise ValueError(f"Expected a PDF file: {input_path}")
+        return [input_path]
+
+    if not input_path.is_dir():
+        raise FileNotFoundError(f"Path not found: {input_path}")
+
+    pdf_paths = sorted(
+        {
+            path.resolve()
+            for path in input_path.rglob("*.pdf")
+            if path.is_file()
+        }
+    )
+
+    if not pdf_paths:
+        raise FileNotFoundError(f"No PDF files found in {input_path}")
+
+    return pdf_paths
+
+
+def resolve_output_directory(
+    input_path: Path,
+    output_directory: Path | None,
+    pdf_path: Path,
+) -> Path:
+    if input_path.is_file():
+        return output_directory or Path("parsed_output")
+
+    batch_root = output_directory or Path("grobid_output") / input_path.name
+    return batch_root / pdf_path.stem
+
+
 def main() -> None:
     argument_parser = argparse.ArgumentParser(
         description=(
@@ -1913,16 +1988,23 @@ def main() -> None:
     )
 
     argument_parser.add_argument(
-        "pdf",
+        "input_path",
         type=Path,
-        help="Path to the PDF file.",
+        help=(
+            "Path to a PDF file or a directory containing PDFs "
+            "(searched recursively)."
+        ),
     )
 
     argument_parser.add_argument(
         "--output",
         type=Path,
-        default=Path("parsed_output"),
-        help="Directory for TEI and JSON outputs.",
+        default=None,
+        help=(
+            "Output directory for a single PDF, or the batch root directory "
+            "when parsing a folder. Defaults to parsed_output for one file "
+            "and grobid_output/<folder_name> for a directory."
+        ),
     )
 
     argument_parser.add_argument(
@@ -1954,8 +2036,17 @@ def main() -> None:
     )
 
     argument_parser.add_argument(
+        "--quiet",
+        action="store_true",
+        help=(
+            "Print one summary line per PDF instead of verbose logs and JSON "
+            "output."
+        ),
+    )
+
+    argument_parser.add_argument(
         "--log-level",
-        default="INFO",
+        default=None,
         choices={
             "DEBUG",
             "INFO",
@@ -1963,39 +2054,130 @@ def main() -> None:
             "ERROR",
             "CRITICAL",
         },
+        help="Logging verbosity. Defaults to ERROR with --quiet, INFO otherwise.",
     )
 
     args = argument_parser.parse_args()
 
+    log_level = args.log_level or ("ERROR" if args.quiet else "INFO")
+
     logging.basicConfig(
-        level=getattr(logging, args.log_level),
+        level=getattr(logging, log_level),
         format="%(asctime)s | %(levelname)s | %(message)s",
     )
 
     try:
-        document = parse_pdf(
-            pdf_path=args.pdf,
-            output_directory=args.output,
-            grobid_url=args.grobid_url,
-            extract_figures=not args.skip_figures,
-            figure_dpi=args.figure_dpi,
-            xrd_figures_only=args.xrd_figures_only,
-        )
-    except Exception as exc:
-        LOGGER.exception("PDF parsing failed: %s", exc)
+        pdf_paths = collect_pdf_paths(args.input_path)
+    except (FileNotFoundError, ValueError) as exc:
+        LOGGER.error("%s", exc)
         raise SystemExit(1) from exc
 
-    print(
-        json.dumps(
+    batch_mode = args.input_path.is_dir()
+    results: list[dict[str, Any]] = []
+    failures: list[dict[str, str]] = []
+
+    for index, pdf_path in enumerate(pdf_paths, start=1):
+        output_directory = resolve_output_directory(
+            input_path=args.input_path,
+            output_directory=args.output,
+            pdf_path=pdf_path,
+        )
+
+        if batch_mode and not args.quiet:
+            LOGGER.info(
+                "Processing PDF %d/%d: %s",
+                index,
+                len(pdf_paths),
+                pdf_path,
+            )
+
+        try:
+            document = parse_pdf(
+                pdf_path=pdf_path,
+                output_directory=output_directory,
+                grobid_url=args.grobid_url,
+                extract_figures=not args.skip_figures,
+                figure_dpi=args.figure_dpi,
+                xrd_figures_only=args.xrd_figures_only,
+            )
+        except Exception as exc:
+            if args.quiet:
+                print(
+                    format_quiet_summary_line(
+                        index,
+                        None,
+                        None,
+                        success=False,
+                        title=pdf_path.stem.replace("_", " "),
+                    )
+                )
+            else:
+                LOGGER.exception("PDF parsing failed for %s: %s", pdf_path, exc)
+            failures.append(
+                {
+                    "source_pdf": str(pdf_path),
+                    "error": str(exc),
+                }
+            )
+            continue
+
+        extracted_xrd_figures, total_xrd_figures = xrd_figure_extraction_counts(
+            document
+        )
+
+        if args.quiet:
+            print(
+                format_quiet_summary_line(
+                    index,
+                    extracted_xrd_figures,
+                    total_xrd_figures,
+                    success=True,
+                    title=document.metadata.title,
+                )
+            )
+
+        results.append(
             {
                 "source_pdf": document.source_pdf,
+                "output_directory": str(output_directory),
                 "title": document.metadata.title,
                 "doi": document.metadata.doi,
                 "counts": document.counts,
-            },
-            indent=2,
+            }
         )
-    )
+
+    if batch_mode:
+        if not args.quiet:
+            summary = {
+                "input_directory": str(args.input_path.resolve()),
+                "processed": len(results),
+                "failed": len(failures),
+                "results": results,
+                "failures": failures,
+            }
+
+            if args.output is not None:
+                summary["output_root"] = str(args.output)
+            else:
+                summary["output_root"] = str(
+                    Path("grobid_output") / args.input_path.name
+                )
+
+            print(json.dumps(summary, indent=2))
+
+        if failures and not results:
+            raise SystemExit(1)
+
+        if failures:
+            raise SystemExit(2)
+
+        return
+
+    if not results:
+        raise SystemExit(1)
+
+    if not args.quiet:
+        print(json.dumps(results[0], indent=2))
 
 
 if __name__ == "__main__":
