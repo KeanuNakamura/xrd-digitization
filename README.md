@@ -83,13 +83,6 @@ pdf_files/
 
 Only articles with an accessible open-access PDF can be downloaded. Some OpenAlex records may contain useful metadata but may not provide a downloadable PDF.
 
-### Example (In action) 
-Scraping using OpenAlex
-<img width="1207" height="354" alt="Screenshot 2026-06-17 at 5 20 08 PM" src="https://github.com/user-attachments/assets/10a8aa9c-94f7-46cc-a8dc-78cd08a5eb41" />
-
-Parsing using GrobID and PyMuPDF
-<img width="860" height="505" alt="Screenshot 2026-06-17 at 5 20 44 PM" src="https://github.com/user-attachments/assets/d6f6ef03-c980-46d0-9466-a10f3ba58faf" />
-
 
 
 
