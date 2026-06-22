@@ -25,6 +25,8 @@
       "intensity_normalization": "normalized_within_curve",
       "peaks": [
         {"2theta": 8.5, "intensity": 0.72, "fwhm": 0.35},
+        {"2theta": 10.0, "intensity": 0.35, "fwhm": 0.30},
+        {"2theta": 12.0, "intensity": 0.28, "fwhm": 0.30},
         {"2theta": 14.2, "intensity": 0.28, "fwhm": 0.30},
         {"2theta": 15.0, "intensity": 0.55, "fwhm": 0.30},
         {"2theta": 15.8, "intensity": 0.58, "fwhm": 0.30},
@@ -48,7 +50,10 @@
       "intensity_normalization": "normalized_within_curve",
       "peaks": [
         {"2theta": 8.5, "intensity": 0.88, "fwhm": 0.35},
+        {"2theta": 10.0, "intensity": 0.42, "fwhm": 0.30},
+        {"2theta": 12.0, "intensity": 0.35, "fwhm": 0.30},
         {"2theta": 14.5, "intensity": 0.62, "fwhm": 0.30},
+        {"2theta": 15.0, "intensity": 0.55, "fwhm": 0.30},
         {"2theta": 15.5, "intensity": 0.68, "fwhm": 0.30},
         {"2theta": 17.0, "intensity": 1.00, "fwhm": 0.35},
         {"2theta": 18.8, "intensity": 0.82, "fwhm": 0.30},
@@ -68,11 +73,13 @@
       "intensity_normalization": "normalized_within_curve",
       "peaks": [
         {"2theta": 8.5, "intensity": 0.87, "fwhm": 0.35},
+        {"2theta": 12.0, "intensity": 0.55, "fwhm": 0.30},
         {"2theta": 14.8, "intensity": 0.72, "fwhm": 0.30},
         {"2theta": 17.0, "intensity": 1.00, "fwhm": 0.35},
         {"2theta": 19.0, "intensity": 0.78, "fwhm": 0.30},
         {"2theta": 24.2, "intensity": 0.38, "fwhm": 0.30},
-        {"2theta": 25.8, "intensity": 0.42, "fwhm": 0.30}
+        {"2theta": 25.8, "intensity": 0.42, "fwhm": 0.30},
+        {"2theta": 30.0, "intensity": 0.30, "fwhm": 0.30}
       ]
     }
   ]

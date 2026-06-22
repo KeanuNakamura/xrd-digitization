@@ -1,0 +1,110 @@
+{
+  "source_image": "figure_7.png",
+  "figure_type": "xrd",
+  "curve_layout": "overlay",
+  "x_axis": {
+    "label": "2theta",
+    "unit": "degrees",
+    "min": 0.0,
+    "max": 45.0
+  },
+  "y_axis": {
+    "label": "intensity",
+    "unit": "normalized",
+    "min": 0.0,
+    "max": 1.0
+  },
+  "curves": [
+    {
+      "curve_id": "curve_1",
+      "label": "ICSD icsd_156218",
+      "color": "orange",
+      "position": null,
+      "baseline_offset": null,
+      "intensity_scale": null,
+      "peaks": [
+        {
+          "2theta": 8.0,
+          "intensity": 0.18,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 10.0,
+          "intensity": 0.22,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 14.0,
+          "intensity": 0.28,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 19.0,
+          "intensity": 0.55,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 21.0,
+          "intensity": 0.48,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 24.0,
+          "intensity": 0.42,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 25.0,
+          "intensity": 0.38,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 27.0,
+          "intensity": 0.72,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 29.6,
+          "intensity": 1.0,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 30.5,
+          "intensity": 0.35,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 31.5,
+          "intensity": 0.5,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 34.0,
+          "intensity": 0.22,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 37.0,
+          "intensity": 0.3,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 38.0,
+          "intensity": 0.25,
+          "fwhm": 0.25
+        },
+        {
+          "2theta": 41.0,
+          "intensity": 0.35,
+          "fwhm": 0.25
+        }
+      ]
+    }
+  ],
+  "plot_id": "plot_1",
+  "label": "ICSD icsd_156218",
+  "position": "top",
+  "notes": "ICSD reference (top) vs RRUFF experimental (bottom) for dumortierite-related phases.",
+  "noise": 0.0,
+  "background": 0.0
+}

@@ -1,0 +1,96 @@
+{
+  "source_image": "figure_7.png",
+  "figure_type": "xrd",
+  "figure_layout": "multi_panel",
+  "notes": "ICSD reference (top) vs RRUFF experimental (bottom) for dumortierite-related phases.",
+  "plots": [
+    {
+      "plot_id": "plot_1",
+      "label": "ICSD icsd_156218",
+      "position": "top",
+      "curve_layout": "overlay",
+      "noise": 0.0,
+      "background": 0.0,
+      "x_axis": {
+        "label": "2theta",
+        "unit": "degrees",
+        "min": 0.0,
+        "max": 45.0
+      },
+      "y_axis": {
+        "label": "intensity",
+        "unit": "normalized",
+        "min": 0.0,
+        "max": 1.0
+      },
+      "curves": [
+        {
+          "curve_id": "curve_1",
+          "label": "ICSD icsd_156218",
+          "color": "orange",
+          "intensity_normalization": "normalized_within_curve",
+          "peaks": [
+            {"2theta": 8.0, "intensity": 0.18, "fwhm": 0.25},
+            {"2theta": 10.0, "intensity": 0.22, "fwhm": 0.25},
+            {"2theta": 14.0, "intensity": 0.28, "fwhm": 0.25},
+            {"2theta": 19.0, "intensity": 0.55, "fwhm": 0.25},
+            {"2theta": 21.0, "intensity": 0.48, "fwhm": 0.25},
+            {"2theta": 24.0, "intensity": 0.42, "fwhm": 0.25},
+            {"2theta": 25.0, "intensity": 0.38, "fwhm": 0.25},
+            {"2theta": 27.0, "intensity": 0.72, "fwhm": 0.25},
+            {"2theta": 29.6, "intensity": 1.00, "fwhm": 0.25},
+            {"2theta": 30.5, "intensity": 0.35, "fwhm": 0.25},
+            {"2theta": 31.5, "intensity": 0.50, "fwhm": 0.25},
+            {"2theta": 34.0, "intensity": 0.22, "fwhm": 0.25},
+            {"2theta": 37.0, "intensity": 0.30, "fwhm": 0.25},
+            {"2theta": 38.0, "intensity": 0.25, "fwhm": 0.25},
+            {"2theta": 41.0, "intensity": 0.35, "fwhm": 0.25}
+          ]
+        }
+      ]
+    },
+    {
+      "plot_id": "plot_2",
+      "label": "RRUFF R060558",
+      "position": "bottom",
+      "curve_layout": "overlay",
+      "noise": 0.03,
+      "background": 0.02,
+      "x_axis": {
+        "label": "2theta",
+        "unit": "degrees",
+        "min": 0.0,
+        "max": 45.0
+      },
+      "y_axis": {
+        "label": "intensity",
+        "unit": "normalized",
+        "min": 0.0,
+        "max": 1.0
+      },
+      "curves": [
+        {
+          "curve_id": "curve_1",
+          "label": "RRUFF R060558",
+          "color": "blue",
+          "intensity_normalization": "normalized_within_curve",
+          "peaks": [
+            {"2theta": 8.0, "intensity": 0.15, "fwhm": 0.30},
+            {"2theta": 10.0, "intensity": 0.25, "fwhm": 0.30},
+            {"2theta": 14.0, "intensity": 0.20, "fwhm": 0.30},
+            {"2theta": 19.0, "intensity": 0.40, "fwhm": 0.30},
+            {"2theta": 21.0, "intensity": 0.55, "fwhm": 0.30},
+            {"2theta": 24.5, "intensity": 1.00, "fwhm": 0.30},
+            {"2theta": 25.5, "intensity": 0.45, "fwhm": 0.30},
+            {"2theta": 27.0, "intensity": 0.35, "fwhm": 0.30},
+            {"2theta": 28.0, "intensity": 0.70, "fwhm": 0.30},
+            {"2theta": 31.0, "intensity": 0.30, "fwhm": 0.30},
+            {"2theta": 34.0, "intensity": 0.18, "fwhm": 0.30},
+            {"2theta": 38.0, "intensity": 0.35, "fwhm": 0.30},
+            {"2theta": 41.0, "intensity": 0.25, "fwhm": 0.30}
+          ]
+        }
+      ]
+    }
+  ]
+}

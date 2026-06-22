@@ -1,0 +1,115 @@
+{
+  "source_image": "figure_6.png",
+  "figure_type": "xrd",
+  "curve_layout": "stacked",
+  "x_axis": {
+    "label": "2theta",
+    "unit": "degrees",
+    "min": 17.0,
+    "max": 28.0
+  },
+  "y_axis": {
+    "label": "intensity",
+    "unit": "arbitrary",
+    "min": 0.0,
+    "max": 1.0
+  },
+  "noise": 0.015,
+  "background": 0.03,
+  "notes": "In situ XRD during H2 reduction of 0.5Mn0.5Zr (λ = 1.0157 Å). Six stacked temperature traces (275–400 °C) showing Mn2O3 → Mn3O4 → MnO reduction. Phase markers: Mn_yZr_{1-y}O_2 (~20.2°, 23.4°), Mn3O4 (~21.1°), Mn2O3 (~21.5°, 24.9°), MnO (~22.8°, 26.4°).",
+  "curves": [
+    {
+      "curve_id": "curve_1",
+      "label": "275 °C",
+      "color": "blue",
+      "intensity_normalization": "normalized_within_curve",
+      "peaks": [
+        {"2theta": 18.0, "intensity": 0.25, "fwhm": 0.45},
+        {"2theta": 20.2, "intensity": 0.85, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 21.1, "intensity": 0.55, "fwhm": 0.35, "name": "Mn3O4"},
+        {"2theta": 21.5, "intensity": 0.65, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 22.8, "intensity": 0.25, "fwhm": 0.35, "name": "MnO"},
+        {"2theta": 23.4, "intensity": 1.00, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 24.9, "intensity": 0.55, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 26.4, "intensity": 0.40, "fwhm": 0.35, "name": "MnO"}
+      ]
+    },
+    {
+      "curve_id": "curve_2",
+      "label": "300 °C",
+      "color": "blue",
+      "intensity_normalization": "normalized_within_curve",
+      "peaks": [
+        {"2theta": 18.0, "intensity": 0.22, "fwhm": 0.45},
+        {"2theta": 20.2, "intensity": 0.88, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 21.1, "intensity": 0.70, "fwhm": 0.35, "name": "Mn3O4"},
+        {"2theta": 21.5, "intensity": 0.60, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 22.8, "intensity": 0.35, "fwhm": 0.35, "name": "MnO"},
+        {"2theta": 23.4, "intensity": 1.00, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 24.9, "intensity": 0.50, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 26.4, "intensity": 0.50, "fwhm": 0.35, "name": "MnO"}
+      ]
+    },
+    {
+      "curve_id": "curve_3",
+      "label": "325 °C",
+      "color": "purple",
+      "intensity_normalization": "normalized_within_curve",
+      "peaks": [
+        {"2theta": 18.0, "intensity": 0.18, "fwhm": 0.45},
+        {"2theta": 20.2, "intensity": 0.85, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 21.1, "intensity": 1.00, "fwhm": 0.35, "name": "Mn3O4"},
+        {"2theta": 21.5, "intensity": 0.45, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 22.8, "intensity": 0.40, "fwhm": 0.35, "name": "MnO"},
+        {"2theta": 23.4, "intensity": 0.95, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 24.9, "intensity": 0.38, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 26.4, "intensity": 0.55, "fwhm": 0.35, "name": "MnO"}
+      ]
+    },
+    {
+      "curve_id": "curve_4",
+      "label": "350 °C",
+      "color": "pink",
+      "intensity_normalization": "normalized_within_curve",
+      "peaks": [
+        {"2theta": 20.2, "intensity": 0.80, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 21.1, "intensity": 0.85, "fwhm": 0.35, "name": "Mn3O4"},
+        {"2theta": 21.5, "intensity": 0.30, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 22.8, "intensity": 0.15, "fwhm": 0.35, "name": "MnO"},
+        {"2theta": 23.4, "intensity": 0.95, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 24.9, "intensity": 0.22, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 26.4, "intensity": 0.25, "fwhm": 0.35, "name": "MnO"}
+      ]
+    },
+    {
+      "curve_id": "curve_5",
+      "label": "375 °C",
+      "color": "green",
+      "intensity_normalization": "normalized_within_curve",
+      "peaks": [
+        {"2theta": 20.2, "intensity": 0.78, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 21.1, "intensity": 0.40, "fwhm": 0.35, "name": "Mn3O4"},
+        {"2theta": 21.5, "intensity": 0.18, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 22.8, "intensity": 0.55, "fwhm": 0.35, "name": "MnO"},
+        {"2theta": 23.4, "intensity": 0.90, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 24.9, "intensity": 0.15, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 26.4, "intensity": 1.00, "fwhm": 0.35, "name": "MnO"}
+      ]
+    },
+    {
+      "curve_id": "curve_6",
+      "label": "400 °C",
+      "color": "red",
+      "intensity_normalization": "normalized_within_curve",
+      "peaks": [
+        {"2theta": 20.2, "intensity": 0.88, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 21.1, "intensity": 0.18, "fwhm": 0.35, "name": "Mn3O4"},
+        {"2theta": 21.5, "intensity": 0.12, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 22.8, "intensity": 0.50, "fwhm": 0.35, "name": "MnO"},
+        {"2theta": 23.4, "intensity": 1.00, "fwhm": 0.35, "name": "Mn_yZr_{1-y}O_2"},
+        {"2theta": 24.9, "intensity": 0.10, "fwhm": 0.35, "name": "Mn2O3"},
+        {"2theta": 26.4, "intensity": 0.65, "fwhm": 0.35, "name": "MnO"}
+      ]
+    }
+  ]
+}
