@@ -32,6 +32,7 @@ REPO_ROOT = Path(__file__).resolve().parent
 BAND_PADDING = 4
 MIN_BAND_HEIGHT = 120
 PATTERN_STEM_RE = re.compile(r"^pattern_(\d+)$", re.IGNORECASE)
+FIGURE_STEM_RE = re.compile(r"^figure_(\d+)$", re.IGNORECASE)
 DEFAULT_CNRS_DIGITIZED_DIR = REPO_ROOT / "data" / "CNRS_digitized"
 DEFAULT_CNRS_JSON_DIR = REPO_ROOT / "data" / "CNRS"
 
@@ -1523,10 +1524,11 @@ def _normalize_intensity(values: np.ndarray) -> np.ndarray:
 
 
 def pattern_index_from_stem(stem: str) -> int | None:
-    match = PATTERN_STEM_RE.match(stem)
-    if match is None:
-        return None
-    return int(match.group(1))
+    for regex in (PATTERN_STEM_RE, FIGURE_STEM_RE):
+        match = regex.match(stem)
+        if match is not None:
+            return int(match.group(1))
+    return None
 
 
 def save_sid_overlay(
@@ -1596,53 +1598,51 @@ def digitize_png_directory(
     overwrite: bool = False,
     limit: int | None = None,
 ) -> dict[str, int]:
-    """Digitize every pattern_N.png into figure_N_digitized/ with SID overlay."""
+    """Digitize PNGs into figure_*_digitized/ folders; SID overlay when JSON exists."""
     png_dir = png_dir.resolve()
     output_dir = output_dir.resolve()
     json_dir = json_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
     png_files = sorted(png_dir.glob("pattern_*.png"))
+    if not png_files:
+        png_files = sorted(png_dir.glob("figure_*.png"))
+    if not png_files:
+        png_files = sorted(png_dir.glob("*.png"))
     if limit is not None:
         png_files = png_files[: max(0, limit)]
 
     if not png_files:
-        raise FileNotFoundError(f"No pattern_*.png files found in {png_dir}")
+        raise FileNotFoundError(f"No PNG files found in {png_dir}")
 
     counts = {"succeeded": 0, "failed": 0, "skipped": 0, "total": len(png_files)}
 
     for index, png_path in enumerate(png_files, start=1):
         pattern_index = pattern_index_from_stem(png_path.stem)
-        if pattern_index is None:
-            LOGGER.warning("Skipping unexpected PNG name: %s", png_path.name)
-            counts["failed"] += 1
-            continue
-
-        figure_id = f"figure_{pattern_index}"
+        figure_id = (
+            f"figure_{pattern_index}" if pattern_index is not None else png_path.stem
+        )
         figure_dir = output_dir / f"{figure_id}_digitized"
         csv_path = figure_dir / f"{figure_id}.csv"
         digitized_png = figure_dir / f"{figure_id}_digitized.png"
         overlay_path = figure_dir / f"{figure_id}_overlay.png"
         original_copy = figure_dir / png_path.name
-        json_path = json_dir / f"pattern_{pattern_index}.json"
+        json_path = (
+            json_dir / f"pattern_{pattern_index}.json"
+            if PATTERN_STEM_RE.match(png_path.stem) and pattern_index is not None
+            else None
+        )
+        has_truth = json_path is not None and json_path.is_file()
 
         already_done = (
             csv_path.is_file()
             and digitized_png.is_file()
-            and overlay_path.is_file()
             and original_copy.is_file()
+            and (not has_truth or overlay_path.is_file())
         )
         if already_done and skip_existing and not overwrite:
             counts["skipped"] += 1
             print(f"[{index}/{counts['total']}] skip (exists): {figure_dir.name}")
-            continue
-
-        if not json_path.is_file():
-            counts["failed"] += 1
-            print(
-                f"[{index}/{counts['total']}] FAILED {png_path.name}: "
-                f"missing truth JSON {json_path}"
-            )
             continue
 
         try:
@@ -1672,17 +1672,18 @@ def digitize_png_directory(
             elif not digitized_png.is_file():
                 save_digitized_preview(csv_path, digitized_png, title=figure_id)
 
-            comparison = save_sid_overlay(
-                json_path,
-                csv_path,
-                overlay_path,
-                title=figure_id,
-            )
+            if has_truth:
+                comparison = save_sid_overlay(
+                    json_path,
+                    csv_path,
+                    overlay_path,
+                    title=figure_id,
+                )
+                sid_note = f" SID={comparison['symmetric_sid']:.6g}"
+            else:
+                sid_note = ""
             counts["succeeded"] += 1
-            print(
-                f"[{index}/{counts['total']}] ok {figure_dir.name} "
-                f"SID={comparison['symmetric_sid']:.6g}"
-            )
+            print(f"[{index}/{counts['total']}] ok {figure_dir.name}{sid_note}")
         except Exception as exc:
             counts["failed"] += 1
             LOGGER.exception("Failed digitizing %s", png_path.name)
@@ -1697,7 +1698,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
             "Run PlotDigitizer on a parsed paper directory, or on a directory "
-            "of pattern_*.png files (--png-dir)."
+            "of PNG figure files (--png-dir)."
         ),
     )
     parser.add_argument(
@@ -1711,7 +1712,7 @@ def main() -> None:
     parser.add_argument(
         "--png-dir",
         action="store_true",
-        help="Treat input_dir as a folder of pattern_*.png files to digitize.",
+        help="Treat input_dir as a folder of PNG figures to digitize.",
     )
     parser.add_argument(
         "--output-dir",

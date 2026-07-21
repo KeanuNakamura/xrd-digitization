@@ -1,134 +1,35 @@
+# XRD Digitization
+
+Digitize XRD figure images into calibrated CSV curves and preview PNGs, using axis OCR plus [PlotDigitizer](https://github.com/dilawar/PlotDigitizer).
+
 ## Setup
 
-### 1. Start GROBID with Docker
-
-Run the GROBID server in a Docker container:
-
 ```bash
-docker run --rm \
-  --init \
-  --ulimit core=0 \
-  -p 8070:8070 \
-  grobid/grobid:0.9.0-crf
-```
-
-### 2. Create a Virtual Environment
-
-Create the Python virtual environment:
-
-```bash
-python3 -m venv .venv
-```
-```bash
-source .venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-```bash
+git clone --recurse-submodules git@github.com:KeanuNakamura/xrd-digitization.git
+cd xrd-digitization
+python3 -m venv .venv && source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-## PDF Parser Usage
+If you already cloned without submodules: `git submodule update --init`.
 
-Run the parser using the following format:
+Install [Tesseract](https://github.com/tesseract-ocr/tesseract) for axis tick OCR (`brew install tesseract` on macOS).
 
-```bash
-python pdf_parser.py <pdf_path> --output <output_path>
-include '--xrd-figures-only' for xrd figures/analysis only
-include '--quiet' for concise output
-```
+## Usage
 
-### Example
+Digitize a folder of figure PNGs:
 
 ```bash
-Single File: 
-python pdf_parser.py pdf_files/sample_pdfs/tio2_powder.pdf \
-  --output grobid_output/sample_pdfs/tio2_powder --quiet --xrd-figures-only
-
-Directory:
-python pdf_parser.py pdf_files/scraped_pdfs --output grobid_output/scraped_pdfs --quiet --xrd-figures-only
+python plotdigitizer_pipeline.py examples/ --png-dir --output-dir output/
 ```
 
-### Figure Digitization with PlotDigitizer
-
-After parsing, automatically digitize extracted XRD figure PNGs with PlotDigitizer:
+Alternate (deterministic package pipeline):
 
 ```bash
-python pdf_parser.py pdf_files/sample_pdfs/ti02_powder.pdf \
-  --output grobid_output/sample_pdfs/ti02_powder \
-  --xrd-figures-only \
-  --digitize-figures \
-  --quiet
+python -m xrd_digitization examples/figure_3.png --skip-classification
 ```
 
-Batch mode with digitization:
+## Output
 
-```bash
-python pdf_parser.py pdf_files/sample_pdfs \
-  --output grobid_output/sample_pdfs \
-  --xrd-figures-only \
-  --digitize-figures \
-  --quiet
-```
-
-You can also re-digitize an already-parsed paper without re-running GROBID:
-
-```bash
-python plotdigitizer_pipeline.py grobid_output/sample_pdfs/ti02_powder
-```
-
-**Requirements:** Tesseract OCR must be installed for axis tick detection (`brew install tesseract` on macOS). PlotDigitizer is installed from the vendored `./PlotDigitizer` package.
-
-**Output layout** (per paper):
-
-```text
-ti02_powder/
-├── extra/                          # TEI XML, parsed JSON, xrd_records
-├── figures/                        # cropped figure PNGs from the PDF
-└── figures_digitized/              # PlotDigitizer outputs
-    ├── fig_1_curve_1.csv
-    ├── fig_1_curve_1_digitized.png
-    ├── fig_1_curve_2.csv
-    ├── fig_1_curve_2_digitized.png
-    └── digitization_manifest.json
-```
-
-Stacked multi-curve XRD figures are split into horizontal bands; each band produces a separate CSV and preview PNG. PlotDigitizer extracts one curve per image and works best on grayscale plots with light backgrounds.
-
-## Scraping XRD Research Articles with OpenAlex
-
-```bash
-python xrd_article_scraper.py \
-    --output-dir pdf_files/scraped_pdfs \
-    --count 10
-```
-
-### OpenAlex API Key
-
-An OpenAlex API key can be provided through an environment variable:
-
-```bash
-export OPENALEX_API_KEY="your_openalex_api_key"
-```
-
-### Output Structure
-
-After a successful run, the output directory will resemble:
-
-```text
-pdf_files/
-└── scraped_pdfs/
-    ├── manifest.jsonl
-    └── pdfs/
-        ├── article_001.pdf
-        ├── article_002.pdf
-        └── ...
-```
-
-Only articles with an accessible open-access PDF can be downloaded. Some OpenAlex records may contain useful metadata but may not provide a downloadable PDF.
-
-
-
-
+Each figure writes a CSV of `(x, y)` points plus a `_digitized.png` overlay. Multi-curve stacked plots are split into horizontal bands with one CSV/preview per band.

@@ -1,0 +1,3 @@
+[submodule "PlotDigitizer"]
+	path = PlotDigitizer
+	url = https://github.com/dilawar/PlotDigitizer.git
