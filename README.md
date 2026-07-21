@@ -33,3 +33,20 @@ python -m xrd_digitization examples/figure_3.png --skip-classification
 ## Output
 
 Each figure writes a CSV of `(x, y)` points plus a `_digitized.png` overlay. Multi-curve stacked plots are split into horizontal bands with one CSV/preview per band.
+
+## Examples
+
+CNRS figure 1034 — original plot, reconstructed curve, and overlay against ground-truth JSON (SID ≈ 1.02).
+
+<table>
+  <tr>
+    <td align="center" width="33%"><strong>Original</strong></td>
+    <td align="center" width="33%"><strong>Digitized</strong></td>
+    <td align="center" width="33%"><strong>Overlay</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="examples/figure_1034_original.png" alt="Original XRD figure 1034" width="100%"/></td>
+    <td align="center"><img src="examples/figure_1034_digitized.png" alt="Digitized XRD curve for figure 1034" width="100%"/></td>
+    <td align="center"><img src="examples/figure_1034_overlay.png" alt="Overlay of original vs digitized figure 1034" width="100%"/></td>
+  </tr>
+</table>
