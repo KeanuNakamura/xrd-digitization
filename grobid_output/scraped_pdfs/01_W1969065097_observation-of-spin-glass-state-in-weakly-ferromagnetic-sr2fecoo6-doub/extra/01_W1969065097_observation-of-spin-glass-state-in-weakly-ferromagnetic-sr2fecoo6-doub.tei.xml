@@ -4,10 +4,10 @@
 		<fileDesc>
 			<titleStmt>
 				<title level="a" type="main">Observation of spin glass state in weakly ferromagnetic Sr 2 FeCoO 6 double perovskite</title>
-				<funder ref="#_QbpCyD8">
+				<funder ref="#_6QaaQhc">
 					<orgName type="full">unknown</orgName>
 				</funder>
-				<funder ref="#_WgsYuRp">
+				<funder ref="#_WE9qTmk">
 					<orgName type="full">Department of Science and Technology</orgName>
 					<orgName type="abbreviated">DST</orgName>
 				</funder>
@@ -175,7 +175,7 @@
 		</fileDesc>
 		<encodingDesc>
 			<appInfo>
-				<application version="0.9.0" ident="GROBID" when="2026-06-17T23:48+0000">
+				<application version="0.9.0" ident="GROBID" when="2026-06-18T00:16+0000">
 					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
 					<label type="revision">0.9.0</label>
 					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
@@ -241,10 +241,10 @@
 <div><head coords="11,72.00,73.59,159.99,8.51">ACKNOWLEDGEMENTS</head><p coords="11,87.00,108.03,451.30,11.97;11,72.00,129.03,466.29,11.97;11,72.00,149.91,466.21,11.97;11,72.00,170.91,204.60,11.97;11,72.00,191.98,1.41,6.45"><s coords="11,87.00,108.03,451.30,11.97;11,72.00,129.03,466.29,11.97;11,72.00,149.91,289.20,11.97">The authors acknowledge the <rs type="funder">Department of Science and Technology (DST), India</rs> for the financial support for providing the facilities used in this study (Grant No. <rs type="grantNumber">SR/FST/ PSII-002/2007</rs>) and (Grant No. <rs type="grantNumber">SR/NM/NAT-02/2005</rs>).</s><s coords="11,366.12,149.91,172.09,11.97;11,72.00,170.91,204.60,11.97;11,72.00,191.98,1.41,6.45">PR wishes to thank <rs type="person">M. Angst</rs> and <rs type="person">K. Balamurugan</rs> for fruitful discussions.</s></p><p coords="11,73.41,191.98,2.82,6.45;11,80.64,191.79,251.05,11.97"><s coords="11,73.41,191.98,2.82,6.45;11,80.64,191.79,251.05,11.97">* vsn@physics.iitm.ac.in, ksethu@physics.iitm.ac.in</s></p></div>
 			</div>
 			<listOrg type="funding">
-				<org type="funding" xml:id="_WgsYuRp">
+				<org type="funding" xml:id="_WE9qTmk">
 					<idno type="grant-number">SR/FST/ PSII-002/2007</idno>
 				</org>
-				<org type="funding" xml:id="_QbpCyD8">
+				<org type="funding" xml:id="_6QaaQhc">
 					<idno type="grant-number">SR/NM/NAT-02/2005</idno>
 				</org>
 			</listOrg>

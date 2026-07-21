@@ -4,15 +4,15 @@
 		<fileDesc>
 			<titleStmt>
 				<title level="a" type="main">Visualizing Light-Induced Microstrain and Phase Transition in Lead-Free Perovskites using Time-Resolved X-Ray Diffraction</title>
-				<funder ref="#_V7bV8kT">
+				<funder ref="#_v3wKMKc #_JVE22Bv">
+					<orgName type="full">DOE Office of Science by Argonne National Laboratory</orgName>
+				</funder>
+				<funder ref="#_Ue7v3fk">
 					<orgName type="full">National Nature Science Foundation of China</orgName>
 					<orgName type="abbreviated">NSFC</orgName>
 				</funder>
-				<funder ref="#_4FypxvS">
+				<funder ref="#_FEbaxwD">
 					<orgName type="full">Science Challenge</orgName>
-				</funder>
-				<funder ref="#_QkUVdzr #_Md6SeQK">
-					<orgName type="full">DOE Office of Science by Argonne National Laboratory</orgName>
 				</funder>
 				<funder>
 					<orgName type="full">China Scholarship Council</orgName>
@@ -191,7 +191,7 @@
 		</fileDesc>
 		<encodingDesc>
 			<appInfo>
-				<application version="0.9.0" ident="GROBID" when="2026-06-17T23:48+0000">
+				<application version="0.9.0" ident="GROBID" when="2026-06-18T00:16+0000">
 					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
 					<label type="revision">0.9.0</label>
 					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
@@ -240,16 +240,16 @@
 <div><p coords="5,317.57,288.28,110.91,9.50;5,317.57,303.02,239.62,8.10;5,317.57,313.34,239.63,8.10;5,317.57,324.26,239.87,8.10;5,317.57,335.30,239.53,8.10;5,317.57,345.74,239.93,8.10;5,317.57,356.06,239.69,8.10;5,317.57,366.38,239.45,8.10;5,317.57,376.70,239.65,8.10;5,317.57,387.14,232.91,8.10"><s coords="5,317.57,288.28,110.91,9.50;5,317.57,303.02,239.62,8.10;5,317.57,313.34,239.63,8.10;5,317.57,324.26,149.43,8.10">ACKNOWLEDGMENT Wang is supported by <rs type="funder">Science Challenge</rs> Project No. <rs type="grantNumber">TZ2016001</rs>, <rs type="funder">China Scholarship Council</rs> and the <rs type="funder">National Nature Science Foundation of China (NSFC)</rs> (Grant Nos.</s><s coords="5,469.05,324.26,88.39,8.10"><rs type="grantNumber">51527801，U1930401</rs>).</s><s coords="5,317.57,335.30,239.53,8.10;5,317.57,345.74,239.93,8.10;5,317.57,356.06,46.26,8.10">Liu, Zuo and Zhang are supported by the <rs type="funder">DOE Office of Science by Argonne National Laboratory</rs> under Contract No. <rs type="grantNumber">DE-AC02-06CH11357</rs>.</s><s coords="5,366.01,356.06,191.25,8.10;5,317.57,366.38,239.45,8.10;5,317.57,376.70,239.65,8.10;5,317.57,387.14,232.91,8.10">This research used resources of the Advanced Photon Source; a <rs type="funder">U.S. Department of Energy (DOE) Office of Science User Facility</rs> operated for the <rs type="funder">DOE Office of Science by Argonne National Laboratory</rs> under Contract No. <rs type="grantNumber">DE-AC02-06CH11357</rs>.</s></p></div>
 			</div>
 			<listOrg type="funding">
-				<org type="funding" xml:id="_4FypxvS">
+				<org type="funding" xml:id="_FEbaxwD">
 					<idno type="grant-number">TZ2016001</idno>
 				</org>
-				<org type="funding" xml:id="_V7bV8kT">
+				<org type="funding" xml:id="_Ue7v3fk">
 					<idno type="grant-number">51527801，U1930401</idno>
 				</org>
-				<org type="funding" xml:id="_QkUVdzr">
+				<org type="funding" xml:id="_v3wKMKc">
 					<idno type="grant-number">DE-AC02-06CH11357</idno>
 				</org>
-				<org type="funding" xml:id="_Md6SeQK">
+				<org type="funding" xml:id="_JVE22Bv">
 					<idno type="grant-number">DE-AC02-06CH11357</idno>
 				</org>
 			</listOrg>

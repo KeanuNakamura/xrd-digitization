@@ -1,7 +1,7 @@
 [
   {
     "document": {
-      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/perovskite_oxides.pdf",
       "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
       "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
       "doi": "10.1002/advs.201500187",
@@ -21,7 +21,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/perovskite_oxides/figures/fig_1.png"
+        "grobid_output/sample_pdfs/perovskite_oxides/figures/fig_1.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_dee05ced560d",
@@ -129,7 +129,7 @@
   },
   {
     "document": {
-      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/perovskite_oxides.pdf",
       "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
       "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
       "doi": "10.1002/advs.201500187",
@@ -236,7 +236,7 @@
   },
   {
     "document": {
-      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/perovskite_oxides.pdf",
       "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
       "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
       "doi": "10.1002/advs.201500187",
@@ -361,7 +361,7 @@
   },
   {
     "document": {
-      "source_pdf": "pdf_files/perovskite_oxides.pdf",
+      "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/perovskite_oxides.pdf",
       "source_sha256": "63815889de4c52659cc78d29085482d25278086e7601d5d87f843b2e88e842b3",
       "title": "Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction",
       "doi": "10.1002/advs.201500187",

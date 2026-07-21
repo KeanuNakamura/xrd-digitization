@@ -4,14 +4,14 @@
 		<fileDesc>
 			<titleStmt>
 				<title level="a" type="main">The Structural and Magnetic Transition Behaviour Analysis of La0.7Pb0.3MnO3 Perovskite-Type Manganites</title>
-				<funder>
-					<orgName type="full">Research Management Centre</orgName>
-				</funder>
-				<funder ref="#_NdmuuM5">
+				<funder ref="#_JAsc8YX">
 					<orgName type="full">Universiti Teknologi MARA</orgName>
 				</funder>
-				<funder ref="#_Ez7xW35">
+				<funder ref="#_D82dR7x">
 					<orgName type="full">Ministry of Higher Education Malaysia (MOHE)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Research Management Centre</orgName>
 				</funder>
 			</titleStmt>
 			<publicationStmt>
@@ -55,7 +55,7 @@
 		</fileDesc>
 		<encodingDesc>
 			<appInfo>
-				<application version="0.9.0" ident="GROBID" when="2026-06-17T23:48+0000">
+				<application version="0.9.0" ident="GROBID" when="2026-06-18T00:16+0000">
 					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
 					<label type="revision">0.9.0</label>
 					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
@@ -113,10 +113,10 @@
 <div><head coords="9,54.00,118.34,93.37,12.00">Acknowledgement</head><p coords="9,54.00,132.98,487.41,12.00;9,54.00,147.62,487.34,12.00;9,54.00,162.26,487.08,12.00;9,54.00,176.90,302.69,12.00"><s coords="9,54.00,132.98,487.41,12.00;9,54.00,147.62,487.34,12.00;9,54.00,162.26,57.59,12.00">This research was funded by a <rs type="funder">Ministry of Higher Education Malaysia (MOHE)</rs>, grant number <rs type="grantNumber">FRGS/1/2019/STG07/UITM/02/3</rs> and <rs type="funder">Universiti Teknologi MARA</rs>, grant number <rs type="grantNumber">600-IRMI/FRGS 5/3 (311/2019</rs>).</s><s coords="9,116.35,162.26,424.73,12.00;9,54.00,176.90,302.69,12.00">The APC was funded by <rs type="funder">Research Management Centre</rs>, <rs type="person">University Teknologi MARA</rs> under <rs type="person">Pembiayaan Yuran Penerbitan Artikel</rs> berindeks (PYPA).</s></p></div>
 			</div>
 			<listOrg type="funding">
-				<org type="funding" xml:id="_Ez7xW35">
+				<org type="funding" xml:id="_D82dR7x">
 					<idno type="grant-number">FRGS/1/2019/STG07/UITM/02/3</idno>
 				</org>
-				<org type="funding" xml:id="_NdmuuM5">
+				<org type="funding" xml:id="_JAsc8YX">
 					<idno type="grant-number">600-IRMI/FRGS 5/3 (311/2019</idno>
 				</org>
 			</listOrg>

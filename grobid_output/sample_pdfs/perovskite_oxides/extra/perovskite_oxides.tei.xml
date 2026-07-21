@@ -4,10 +4,10 @@
 		<fileDesc>
 			<titleStmt>
 				<title level="a" type="main">Co‐doping Strategy for Developing Perovskite Oxides as Highly Efficient Electrocatalysts for Oxygen Evolution Reaction</title>
-				<funder ref="#_EWh5ZCv">
+				<funder ref="#_sVwB8tF">
 					<orgName type="full">Key Projects in Nature Science Foundation of Jiangsu Province</orgName>
 				</funder>
-				<funder ref="#_UKGfzDw">
+				<funder ref="#_erTYjpa">
 					<orgName type="full">"National Nature Science Foundation of China</orgName>
 				</funder>
 				<funder>
@@ -104,7 +104,7 @@
 		</fileDesc>
 		<encodingDesc>
 			<appInfo>
-				<application version="0.9.0" ident="GROBID" when="2026-06-16T20:35+0000">
+				<application version="0.9.0" ident="GROBID" when="2026-06-22T00:30+0000">
 					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
 					<label type="revision">0.9.0</label>
 					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
@@ -140,10 +140,10 @@
 <div><head coords="6,47.00,134.14,92.94,10.17">Acknowledgements</head><p coords="6,47.00,151.92,241.21,7.09;6,47.00,161.41,241.21,7.09;6,47.00,170.91,241.21,7.09;6,47.00,180.41,241.21,7.09;6,47.00,189.90,241.21,7.09;6,47.00,199.40,233.06,7.09"><s coords="6,47.00,151.92,241.21,7.09;6,47.00,161.41,241.21,7.09;6,47.00,170.91,241.21,7.09;6,47.00,180.41,241.21,7.09;6,47.00,189.90,140.56,7.09">This work was supported by the <rs type="funder">Key Projects in Nature Science Foundation of Jiangsu Province</rs> under Contract No. <rs type="grantNumber">BK2011030</rs>, by the <rs type="funder">"National Nature Science Foundation of China</rs>" under Contract No. <rs type="grantNumber">21103089</rs>, and by the <rs type="programName">Priority Academic Program Development of Jiangsu Higher Education Institutions</rs>.</s><s coords="6,190.81,189.90,97.40,7.09;6,47.00,199.40,233.06,7.09"><rs type="person">Prof. W. Zhou</rs> acknowledges support from the <rs type="funder">Program for Jiangsu Specially-Appointed Professors</rs>.</s></p></div>
 			</div>
 			<listOrg type="funding">
-				<org type="funding" xml:id="_EWh5ZCv">
+				<org type="funding" xml:id="_sVwB8tF">
 					<idno type="grant-number">BK2011030</idno>
 				</org>
-				<org type="funding" xml:id="_UKGfzDw">
+				<org type="funding" xml:id="_erTYjpa">
 					<idno type="grant-number">21103089</idno>
 					<orgName type="program" subtype="full">Priority Academic Program Development of Jiangsu Higher Education Institutions</orgName>
 				</org>

@@ -1,5 +1,5 @@
 {
-  "source_pdf": "pdf_files/mn_zr.pdf",
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/mn_zr.pdf",
   "source_sha256": "07c157f66aa695ef47087fcf6e3c6ae2f3211c3b077650fc28376c4c24ac125c",
   "metadata": {
     "title": "Reduction of mixed Mn–Zr oxides: in situ XPS and XRD studies",
@@ -1148,7 +1148,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/mn_zr/figures/fig_4.png"
+        "grobid_output/sample_pdfs/mn_zr/figures/fig_4.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_2c6cdcf33a34"
@@ -1178,7 +1178,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/mn_zr/figures/fig_5.png"
+        "grobid_output/sample_pdfs/mn_zr/figures/fig_5.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_f8a81e784b15"
@@ -1208,7 +1208,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/mn_zr/figures/fig_6.png"
+        "grobid_output/sample_pdfs/mn_zr/figures/fig_6.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_f8a81e784b15"

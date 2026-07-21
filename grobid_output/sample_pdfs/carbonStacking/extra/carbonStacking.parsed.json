@@ -1,5 +1,5 @@
 {
-  "source_pdf": "pdf_files/carbonStacking.pdf",
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/carbonStacking.pdf",
   "source_sha256": "4037c4bbb9905492c84e1b5eb57a5c8e5ed7e6c62a673f312bb95a48f566ee5b",
   "metadata": {
     "title": "XRD analysis of carbon stacking structure in coal during heat treatment",
@@ -710,7 +710,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/carbonStacking/figures/fig_1.png"
+        "grobid_output/sample_pdfs/carbonStacking/figures/fig_1.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_efd8f1103230"

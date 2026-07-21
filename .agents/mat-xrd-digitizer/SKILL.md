@@ -80,7 +80,42 @@ If a figure is not an XRD-like plot, the agent should skip it and briefly record
 
 ---
 
-## 2. Digitize All Curves in Each Figure
+## 2. Distinguish Single-Plot vs Multi-Panel Figures
+
+Before extracting peaks, determine whether the image contains:
+
+| Type | Description | JSON structure | Example |
+|---|---|---|---|
+| **Single plot** | One axes area; may contain one or many curves | Top-level `curves` array | `figure_1`, `figure_6` |
+| **Multi-panel** | Two or more separate subplot axes in one image | Top-level `plots` array | `figure_7` |
+
+### Single plot
+
+Use when multiple curves belong to the **same axes**:
+* overlay traces (Rietveld observed/calc/diff)
+* vertically stacked patterns sharing one x-axis block (temperature series, e.g. `figure_6`)
+* multiple samples offset within one panel
+
+### Multi-panel
+
+Use when the figure contains **separate subplot axes**, each with its own y-axis scale and/or title:
+* top/bottom comparison panels (e.g. ICSD vs RRUFF in `figure_7`)
+* side-by-side XRD panels
+* figure composites where each panel is an independent plot
+
+Do **not** encode separate subplots as `curve_layout: "stacked"` curves in one plot. Instead, create one entry per panel in `plots`.
+
+Each plot entry has its own:
+* `plot_id`
+* `label` (panel title or identifier)
+* `position` (`top`, `bottom`, `left`, `right` when visible)
+* `x_axis`, `y_axis`
+* `curve_layout` (usually `overlay` for one curve per panel)
+* `curves` array
+
+---
+
+## 3. Digitize All Curves in Each Figure / Panel
 
 The agent must digitize the entire XRD figure.
 
@@ -200,7 +235,7 @@ The agent should not discard weak peaks simply because they are small. Tiny visi
 
 ---
 
-## 3. Output File Naming and Location
+## 4. Output File Naming and Location
 
 For every original figure image, output files must be saved in a new directory inside of the directory containing the original image. 
 
@@ -239,9 +274,38 @@ xrd_plot.png  -> xrd_plot.json, xrd_plot_digitized.xy
 
 Do not write all outputs to a shared global directory. Keep every output beside its source figure.
 
+### Multi-panel output naming
+
+For a multi-panel figure such as `figure_7.png`, keep the master JSON at:
+
+```text
+sample_figures/figure_7/figure_7.json
+```
+
+and write numbered outputs per panel:
+
+```text
+sample_figures/figure_7/figure_7_digitized_1.xy
+sample_figures/figure_7/figure_7_digitized_1.png
+sample_figures/figure_7/figure_7_digitized_2.xy
+sample_figures/figure_7/figure_7_digitized_2.png
+sample_figures/figure_7/figure_7_1.json
+sample_figures/figure_7/figure_7_2.json
+```
+
+Numbering follows panel order (`1` = top/first panel, `2` = next panel, etc.).
+
+Single-plot figures keep the existing naming with no numeric suffix:
+
+```text
+figure_1.json
+figure_1_digitized.xy
+figure_1_digitized.png
+```
+
 ---
 
-## 4. JSON Output Format
+## 5. JSON Output Format
 
 The JSON file should contain metadata about the source image and a separate peak list for each curve.
 
@@ -335,10 +399,59 @@ Example format (stacked — curves vertically offset):
 }
 ```
 
+Example format (multi-panel — separate subplots in one figure):
+
+```json
+{
+  "source_image": "figure_7.png",
+  "figure_type": "xrd",
+  "figure_layout": "multi_panel",
+  "notes": "ICSD reference (top) vs RRUFF experimental (bottom).",
+  "plots": [
+    {
+      "plot_id": "plot_1",
+      "label": "ICSD icsd_156218",
+      "position": "top",
+      "curve_layout": "overlay",
+      "x_axis": {"label": "2theta", "unit": "degrees", "min": 0.0, "max": 45.0},
+      "y_axis": {"label": "intensity", "unit": "normalized", "min": 0.0, "max": 1.0},
+      "curves": [
+        {
+          "curve_id": "curve_1",
+          "label": "ICSD icsd_156218",
+          "color": "orange",
+          "intensity_normalization": "normalized_within_curve",
+          "peaks": [{"2theta": 29.6, "intensity": 1.00, "fwhm": 0.25}]
+        }
+      ]
+    },
+    {
+      "plot_id": "plot_2",
+      "label": "RRUFF R060558",
+      "position": "bottom",
+      "curve_layout": "overlay",
+      "x_axis": {"label": "2theta", "unit": "degrees", "min": 0.0, "max": 45.0},
+      "y_axis": {"label": "intensity", "unit": "normalized", "min": 0.0, "max": 1.0},
+      "curves": [
+        {
+          "curve_id": "curve_1",
+          "label": "RRUFF R060558",
+          "color": "blue",
+          "intensity_normalization": "normalized_within_curve",
+          "peaks": [{"2theta": 24.5, "intensity": 1.00, "fwhm": 0.25}]
+        }
+      ]
+    }
+  ]
+}
+```
+
 Rules:
 
 * `source_image` must be the filename of the original figure.
 * `figure_type` should usually be `"xrd"` for digitized XRD figures.
+* Use top-level `plots` for multi-panel figures; use top-level `curves` for single-plot figures.
+* `figure_layout: "multi_panel"` is recommended when `plots` is present.
 * `curve_layout` should be `"stacked"` for vertically offset multi-curve figures and `"overlay"` when curves share a baseline. Use `"auto"` or omit to let the script infer from metadata.
 * For stacked figures with numeric y-axis labels, every curve must include `baseline_offset` and `intensity_scale`.
 * For stacked figures with arbitrary y-axis units, set `position` on every curve; offsets are auto-computed.
@@ -349,21 +462,27 @@ Rules:
   * `max = 80.0`
 * Intensities should be normalized between `0.0` and `1.0`.
 * Intensities should be normalized independently for each curve unless the figure clearly uses a shared intensity scale.
+* For normalized y-axes (`y_axis.max` ≤ 2 or `unit: normalized`), set `intensity_scale: 1.0` on curves or rely on script auto-scaling.
+* For clean simulated/reference patterns (e.g. ICSD), set per-plot `"noise": 0.0` and `"background": 0.0`.
+* For noisy experimental patterns (e.g. RRUFF), use small per-plot noise/background values and visually curate relative intensities; automated peak-height extraction from noisy baselines is unreliable.
+* In multi-panel comparison figures, use **shared 2θ peak positions** across panels when the patterns represent the same phase, but keep **panel-specific relative intensities**.
 * `fwhm` should default to `0.3` unless the visual peak widths suggest a better estimate.
 * Every curve must have its own `peaks` list.
 * Every visible peak should be reported, including tiny minor peaks.
 
 ---
 
-## 5. Generate the Digitized `.xy` File
+## 6. Generate the Digitized `.xy` File
 
 Use the provided script to generate the `.xy` file from the extracted peaks.
 
-The script should be called once per original figure.
+Call the script once per original figure image.
+
+### Single-plot figures
 
 ```bash
 # Env: base-agent
-python .agents/skills/mat-xrd-digitizer/scripts/digitize_plot.py \
+python .agents/mat-xrd-digitizer/scripts/digitize_plot.py \
   grobid_output/sample_pdfs/{example_dir}/figures/figure_1.json \
   --output grobid_output/sample_pdfs/{example_dir}/figures/figure_1_digitized.xy \
   --min-x 5.0 \
@@ -385,7 +504,7 @@ then use:
 
 ```bash
 # Env: base-agent
-python .agents/skills/mat-xrd-digitizer/scripts/digitize_plot.py \
+python .agents/mat-xrd-digitizer/scripts/digitize_plot.py \
   grobid_output/sample_pdfs/{example_dir}/figures/figure_1.json \
   --output grobid_output/sample_pdfs/{example_dir}/figures/figure_1_digitized.xy \
   --min-x 10.0 \
@@ -406,9 +525,29 @@ Parameters:
 
 The script reads `curve_layout`, `baseline_offset`, and `intensity_scale` from the JSON. For stacked figures, y-values in the `.xy` output include the vertical offset so each curve block matches its position in the original figure.
 
+### Multi-panel figures
+
+For JSON with a top-level `plots` array, the script automatically detects the multi-panel layout and writes numbered outputs:
+
+```bash
+# Env: base-agent
+python .agents/mat-xrd-digitizer/scripts/digitize_plot.py \
+  sample_figures/figure_7/figure_7.json \
+  --output sample_figures/figure_7/figure_7_digitized.xy \
+  --min-x 0.0 \
+  --max-x 45.0
+```
+
+This produces:
+* `figure_7_digitized_1.xy`, `figure_7_digitized_1.png`
+* `figure_7_digitized_2.xy`, `figure_7_digitized_2.png`
+* `figure_7_1.json`, `figure_7_2.json` (single-plot JSON per panel, enabled by default)
+
+Use `--no-write-plot-jsons` to skip per-panel JSON export.
+
 ---
 
-## 6. Multi-Curve `.xy` Formatting
+## 7. Multi-Curve `.xy` Formatting
 
 If the figure contains multiple curves, the `.xy` output must preserve curve separation.
 
@@ -448,13 +587,20 @@ The final output must still be one `.xy` file per original figure:
 figure_1_digitized.xy
 ```
 
+For **multi-panel** figures, use numbered files instead:
+
+```text
+figure_7_digitized_1.xy
+figure_7_digitized_2.xy
+```
+
 and that file must contain all digitized curves from the figure.
 
 The agent should not overwrite one curve with another.
 
 ---
 
-## 7. Expected Batch Processing Behavior
+## 8. Expected Batch Processing Behavior
 
 When asked to digitize all GROBID-extracted sample figures, the agent should perform the following high-level process:
 
@@ -472,9 +618,10 @@ for each example_dir in grobid_output/sample_pdfs:
         visually inspect image
         identify x-axis range
         identify all curves
+        determine single-plot vs multi-panel layout
         extract all visible peaks for each curve
         save {figure_stem}.json in figures_dir
-        generate {figure_stem}_digitized.xy in figures_dir
+        generate digitized outputs with digitize_plot.py
 ```
 
 The agent should produce or summarize:
@@ -489,7 +636,7 @@ The agent should produce or summarize:
 
 ---
 
-## 8. Quality Requirements
+## 9. Quality Requirements
 
 The agent must prioritize completeness.
 
@@ -513,7 +660,7 @@ If the figure is too ambiguous, the agent should still make a best effort and in
 
 ---
 
-## 9. Single-Image Usage
+## 10. Single-Image Usage
 
 For a single image, the same output naming rules apply.
 
@@ -528,21 +675,43 @@ then output:
 ```text
 path/to/figure_1.json
 path/to/figure_1_digitized.xy
+path/to/figure_1_digitized.png
+```
+
+For multi-panel images:
+
+```text
+path/to/figure_7.json
+path/to/figure_7_digitized_1.xy
+path/to/figure_7_digitized_1.png
+path/to/figure_7_digitized_2.xy
+path/to/figure_7_digitized_2.png
 ```
 
 The agent should digitize all curves in that image.
 
 ---
 
-## 10. Example Command
+## 11. Example Command
 
 ```bash
 # Env: base-agent
-python .agents/skills/mat-xrd-digitizer/scripts/digitize_plot.py \
+python .agents/mat-xrd-digitizer/scripts/digitize_plot.py \
   grobid_output/sample_pdfs/example_paper/figures/figure_1.json \
   --output grobid_output/sample_pdfs/example_paper/figures/figure_1_digitized.xy \
   --min-x 5.0 \
   --max-x 80.0
+```
+
+Multi-panel example:
+
+```bash
+# Env: base-agent
+python .agents/mat-xrd-digitizer/scripts/digitize_plot.py \
+  sample_figures/figure_7/figure_7.json \
+  --output sample_figures/figure_7/figure_7_digitized.xy \
+  --min-x 0.0 \
+  --max-x 45.0
 ```
 
 ---
@@ -559,7 +728,7 @@ The accuracy of peak positions depends on image resolution, plot clarity, visibl
 
 ### Multiple Curves
 
-All visible XRD curves must be digitized separately. Multi-curve figures must produce one JSON file containing all curves and one `.xy` file containing separate curve blocks.
+All visible XRD curves must be digitized separately. Multi-curve figures must produce one JSON file containing all curves and one `.xy` file containing separate curve blocks (single-plot), or numbered `.xy`/`.png` files per panel (multi-panel).
 
 For vertically stacked figures, the JSON must include `curve_layout: "stacked"` plus per-curve `baseline_offset` and `intensity_scale` (when the y-axis has numeric labels) or `position` (for arbitrary-unit axes). Without this metadata, the script will overlay all curves at the same baseline and the digitized preview will not match the original figure.
 

@@ -4,31 +4,31 @@
 		<fileDesc>
 			<titleStmt>
 				<title level="a" type="main">Vacancy-Ordered Double Perovskite Cs&lt;sub&gt;2&lt;/sub&gt;TeI&lt;sub&gt;6&lt;/sub&gt; Thin Films for Optoelectronics</title>
-				<funder ref="#_xtJqCDf #_2X5HGtN">
-					<orgName type="full">unknown</orgName>
-				</funder>
-				<funder ref="#_qhkD5ry">
-					<orgName type="full">Singapore</orgName>
-				</funder>
-				<funder ref="#_BD2Cyxq">
+				<funder ref="#_VMX7asu">
 					<orgName type="full">Department of Atomic Energy</orgName>
 					<orgName type="abbreviated">DAE</orgName>
 				</funder>
-				<funder ref="#_33jdhDV">
-					<orgName type="full">Singapore-Berkeley Research Initiative for Sustainable Energy CREATE Program</orgName>
+				<funder ref="#_QBM9r4n #_57YDr4s">
+					<orgName type="full">unknown</orgName>
 				</funder>
-				<funder ref="#_Uf6kV2X">
+				<funder ref="#_qzrGaqw">
 					<orgName type="full">U.S. Department of Energy, Office of Science, Office of Basic Energy Sciences, Materials Sciences and Engineering Division</orgName>
-				</funder>
-				<funder ref="#_PrRU36A">
-					<orgName type="full">EPSRC</orgName>
 				</funder>
 				<funder>
 					<orgName type="full">India</orgName>
 				</funder>
+				<funder ref="#_gWnCFjD">
+					<orgName type="full">EPSRC</orgName>
+				</funder>
 				<funder>
 					<orgName type="full">National Research Foundation</orgName>
 					<orgName type="abbreviated">NRF</orgName>
+				</funder>
+				<funder ref="#_rT32Dad">
+					<orgName type="full">Singapore</orgName>
+				</funder>
+				<funder ref="#_k5NyBtd">
+					<orgName type="full">Singapore-Berkeley Research Initiative for Sustainable Energy CREATE Program</orgName>
 				</funder>
 			</titleStmt>
 			<publicationStmt>
@@ -306,7 +306,7 @@
 		</fileDesc>
 		<encodingDesc>
 			<appInfo>
-				<application version="0.9.0" ident="GROBID" when="2026-06-17T23:48+0000">
+				<application version="0.9.0" ident="GROBID" when="2026-06-18T00:16+0000">
 					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
 					<label type="revision">0.9.0</label>
 					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
@@ -356,26 +356,26 @@
 <div><head coords="8,324.45,124.76,10.21,32.00;8,341.01,137.72,99.48,9.27">■ ACKNOWLEDGMENTS</head><p coords="8,324.45,153.56,240.04,8.99;8,324.45,164.56,240.01,8.99;8,324.45,175.56,240.00,8.99;8,324.45,186.56,240.00,8.99;8,324.45,197.56,240.04,8.99;8,324.45,208.55,240.03,8.99;8,324.45,219.55,240.06,8.99;8,324.45,230.55,240.03,8.99;8,324.45,241.55,240.02,8.99;8,324.45,252.55,240.04,8.99;8,324.45,263.55,240.00,8.99;8,324.45,274.54,240.02,8.99;8,324.45,285.54,240.00,8.99;8,324.45,296.54,72.93,8.99"><s coords="8,324.45,153.56,240.04,8.99;8,324.45,164.56,240.01,8.99;8,324.45,175.56,140.39,8.99">The authors acknowledge funding from <rs type="funder">EPSRC</rs> Grants <rs type="grantNumber">EP/ P02484X/1</rs> and <rs type="grantNumber">EP/L01551X/1</rs> and support for the XRD facility under Grant <rs type="grantNumber">EP/P001513/1</rs>.</s><s coords="8,468.12,175.56,96.34,8.99;8,324.45,186.56,240.00,8.99;8,324.45,197.56,177.01,8.99">P.K.N. acknowledges the support via intramural funds at <rs type="institution">TIFR Hyderabad</rs> from the <rs type="funder">Department of Atomic Energy (DAE)</rs>, <rs type="funder">India</rs>.</s><s coords="8,505.08,197.56,59.41,8.99;8,324.45,208.55,240.03,8.99;8,324.45,219.55,240.06,8.99;8,324.45,230.55,240.03,8.99;8,324.45,241.55,240.02,8.99;8,324.45,252.55,240.04,8.99;8,324.45,263.55,240.00,8.99;8,324.45,274.54,240.02,8.99;8,324.45,285.54,240.00,8.99;8,324.45,296.54,72.93,8.99">The theoretical calculations were supported by the <rs type="funder">National Research Foundation (NRF)</rs>, <rs type="funder">Singapore</rs> (<rs type="grantNumber">CRP NRF2014-NRF-CRP002-036</rs> and <rs type="grantNumber">NRF-CRP14-2014-03</rs>), the <rs type="funder">Singapore-Berkeley Research Initiative for Sustainable Energy CREATE Program</rs> (W.X. and M.P.S.), and the <rs type="funder">U.S. Department of Energy, Office of Science, Office of Basic Energy Sciences, Materials Sciences and Engineering Division</rs> under Contract <rs type="grantNumber">DE-AC02-05-CH11231</rs> (<rs type="projectName">Materials</rs> Project <rs type="projectName">Program</rs> <rs type="grantNumber">KC23MP</rs>) (M.A.).</s></p></div>
 			</div>
 			<listOrg type="funding">
-				<org type="funding" xml:id="_PrRU36A">
+				<org type="funding" xml:id="_gWnCFjD">
 					<idno type="grant-number">EP/ P02484X/1</idno>
 				</org>
-				<org type="funding" xml:id="_xtJqCDf">
+				<org type="funding" xml:id="_QBM9r4n">
 					<idno type="grant-number">EP/L01551X/1</idno>
 				</org>
-				<org type="funding" xml:id="_BD2Cyxq">
+				<org type="funding" xml:id="_VMX7asu">
 					<idno type="grant-number">EP/P001513/1</idno>
 				</org>
-				<org type="funding" xml:id="_qhkD5ry">
+				<org type="funding" xml:id="_rT32Dad">
 					<idno type="grant-number">CRP NRF2014-NRF-CRP002-036</idno>
 				</org>
-				<org type="funding" xml:id="_33jdhDV">
+				<org type="funding" xml:id="_k5NyBtd">
 					<idno type="grant-number">NRF-CRP14-2014-03</idno>
 				</org>
-				<org type="funded-project" xml:id="_Uf6kV2X">
+				<org type="funded-project" xml:id="_qzrGaqw">
 					<idno type="grant-number">DE-AC02-05-CH11231</idno>
 					<orgName type="project" subtype="full">Materials</orgName>
 				</org>
-				<org type="funded-project" xml:id="_2X5HGtN">
+				<org type="funded-project" xml:id="_57YDr4s">
 					<idno type="grant-number">KC23MP</idno>
 					<orgName type="project" subtype="full">Program</orgName>
 				</org>

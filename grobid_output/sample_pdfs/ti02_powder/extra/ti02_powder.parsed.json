@@ -1,5 +1,5 @@
 {
-  "source_pdf": "pdf_files/ti02_powder.pdf",
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/ti02_powder.pdf",
   "source_sha256": "47638c32ba42cb1e0c97298b64dc9ffac57d29f0c4658a3f96ca3cd308acd4f7",
   "metadata": {
     "title": "Phase Characterization of TiO 2 Powder by XRD and TEM",
@@ -379,7 +379,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/ti02_powder/figures/fig_1.png"
+        "grobid_output/sample_pdfs/ti02_powder/figures/fig_1.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_378f2afe20bd"
@@ -408,7 +408,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/ti02_powder/figures/fig_2.png"
+        "grobid_output/sample_pdfs/ti02_powder/figures/fig_2.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_378f2afe20bd"

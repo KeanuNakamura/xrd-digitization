@@ -2036,6 +2036,15 @@ def main() -> None:
     )
 
     argument_parser.add_argument(
+        "--digitize-figures",
+        action="store_true",
+        help=(
+            "After parsing, run PlotDigitizer on extracted figure PNGs into "
+            "figures_digitized/."
+        ),
+    )
+
+    argument_parser.add_argument(
         "--quiet",
         action="store_true",
         help=(
@@ -2124,6 +2133,28 @@ def main() -> None:
         extracted_xrd_figures, total_xrd_figures = xrd_figure_extraction_counts(
             document
         )
+
+        if args.digitize_figures:
+            from plotdigitizer_pipeline import digitize_parsed_paper
+
+            try:
+                digitize_parsed_paper(
+                    output_directory,
+                    xrd_only=args.xrd_figures_only,
+                )
+            except Exception as exc:
+                if args.quiet:
+                    LOGGER.error(
+                        "Figure digitization failed for %s: %s",
+                        output_directory,
+                        exc,
+                    )
+                else:
+                    LOGGER.exception(
+                        "Figure digitization failed for %s: %s",
+                        output_directory,
+                        exc,
+                    )
 
         if args.quiet:
             print(

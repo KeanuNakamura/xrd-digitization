@@ -3,7 +3,7 @@ from __future__ import annotations
 """
 Generates simulated XRD .xy data from manually extracted peaks.
 
-Supports two JSON formats:
+Supports three JSON formats:
 
 1. Legacy single-curve format:
 [
@@ -11,22 +11,12 @@ Supports two JSON formats:
   {"2theta": 20.1, "intensity": 0.6, "fwhm": 0.3}
 ]
 
-2. Multi-curve format:
+2. Single-plot multi-curve format:
 {
   "source_image": "figure_1.png",
   "curve_layout": "stacked",
-  "x_axis": {
-    "label": "2theta",
-    "unit": "degrees",
-    "min": 5.0,
-    "max": 80.0
-  },
-  "y_axis": {
-    "label": "intensity",
-    "unit": "counts_per_pixel",
-    "min": 0.0,
-    "max": 10000.0
-  },
+  "x_axis": {"label": "2theta", "unit": "degrees", "min": 5.0, "max": 80.0},
+  "y_axis": {"label": "intensity", "unit": "counts_per_pixel", "min": 0.0, "max": 10000.0},
   "curves": [
     {
       "curve_id": "curve_1",
@@ -35,17 +25,46 @@ Supports two JSON formats:
       "position": "bottom",
       "baseline_offset": 500.0,
       "intensity_scale": 1250.0,
-      "peaks": [
-        {"2theta": 10.5, "intensity": 1.0, "fwhm": 0.3}
-      ]
+      "peaks": [{"2theta": 10.5, "intensity": 1.0, "fwhm": 0.3}]
+    }
+  ]
+}
+
+3. Multi-panel format (separate subplots in one figure image):
+{
+  "source_image": "figure_7.png",
+  "figure_layout": "multi_panel",
+  "plots": [
+    {
+      "plot_id": "plot_1",
+      "label": "ICSD icsd_156218",
+      "position": "top",
+      "curve_layout": "overlay",
+      "x_axis": {"label": "2theta", "unit": "degrees", "min": 0.0, "max": 45.0},
+      "y_axis": {"label": "intensity", "unit": "normalized", "min": 0.0, "max": 1.0},
+      "curves": [{"curve_id": "curve_1", "label": "ICSD icsd_156218", "color": "orange", "peaks": [...]}]
+    },
+    {
+      "plot_id": "plot_2",
+      "label": "RRUFF R060558",
+      "position": "bottom",
+      "curve_layout": "overlay",
+      "x_axis": {"label": "2theta", "unit": "degrees", "min": 0.0, "max": 45.0},
+      "y_axis": {"label": "intensity", "unit": "normalized", "min": 0.0, "max": 1.0},
+      "curves": [{"curve_id": "curve_1", "label": "RRUFF R060558", "color": "blue", "peaks": [...]}]
     }
   ]
 }
 
 curve_layout values:
-  - "stacked": vertically offset curves (common in multi-pattern XRD figures)
-  - "overlay": curves share the same baseline (e.g. Rietveld observed/calc/diff)
+  - "stacked": vertically offset curves within one plot
+  - "overlay": curves share the same baseline within one plot
   - "auto": infer from metadata (default)
+
+Multi-panel output naming (from --output figure_7/figure_7_digitized.xy):
+  - figure_7_digitized_1.xy, figure_7_digitized_1.png
+  - figure_7_digitized_2.xy, figure_7_digitized_2.png
+  - figure_7_1.json, figure_7_2.json (single-plot JSON per panel)
 
 Usage:
     python digitize_plot.py peaks.json --output digitized.xy --min-x 5 --max-x 80 --points 4000
@@ -118,89 +137,137 @@ def load_json(path: str) -> Any:
         sys.exit(1)
 
 
-def normalize_input(data: Any) -> dict[str, Any]:
-    """
-    Convert either supported JSON format into a common internal format.
-    """
-    if isinstance(data, list):
-        return {
-            "source_image": None,
-            "curve_layout": "overlay",
-            "x_axis": {},
-            "y_axis": {},
-            "curves": [
-                {
-                    "curve_id": "curve_1",
-                    "label": None,
-                    "color": None,
-                    "position": None,
-                    "baseline_offset": None,
-                    "intensity_scale": None,
-                    "peaks": data,
-                }
-            ],
-        }
+def normalize_curves(curves: list[Any]) -> list[dict[str, Any]]:
+    normalized_curves = []
 
-    if isinstance(data, dict):
-        curves = data.get("curves")
+    for i, curve in enumerate(curves, start=1):
+        if not isinstance(curve, dict):
+            print(f"Warning: Skipping invalid curve entry: {curve}")
+            continue
 
-        if isinstance(curves, list):
-            normalized_curves = []
+        peaks = curve.get("peaks", [])
+        if not isinstance(peaks, list):
+            print(
+                f"Warning: Curve {curve.get('curve_id', i)} has invalid peaks field. Skipping."
+            )
+            continue
 
-            for i, curve in enumerate(curves, start=1):
-                if not isinstance(curve, dict):
-                    print(f"Warning: Skipping invalid curve entry: {curve}")
-                    continue
-
-                peaks = curve.get("peaks", [])
-                if not isinstance(peaks, list):
-                    print(
-                        f"Warning: Curve {curve.get('curve_id', i)} has invalid peaks field. Skipping."
-                    )
-                    continue
-
-                normalized_curves.append(
-                    {
-                        "curve_id": curve.get("curve_id") or f"curve_{i}",
-                        "label": curve.get("label"),
-                        "color": curve.get("color"),
-                        "position": curve.get("position"),
-                        "baseline_offset": curve.get("baseline_offset"),
-                        "intensity_scale": curve.get("intensity_scale"),
-                        "peaks": peaks,
-                    }
-                )
-
-            return {
-                "source_image": data.get("source_image"),
-                "curve_layout": data.get("curve_layout", "auto"),
-                "x_axis": data.get("x_axis", {}),
-                "y_axis": data.get("y_axis", {}),
-                "curves": normalized_curves,
+        normalized_curves.append(
+            {
+                "curve_id": curve.get("curve_id") or f"curve_{i}",
+                "label": curve.get("label"),
+                "color": curve.get("color"),
+                "position": curve.get("position"),
+                "baseline_offset": curve.get("baseline_offset"),
+                "intensity_scale": curve.get("intensity_scale"),
+                "peaks": peaks,
             }
+        )
 
+    return normalized_curves
+
+
+def normalize_single_plot(
+    data: dict[str, Any],
+    defaults: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    defaults = defaults or {}
+    curves = data.get("curves")
+
+    if not isinstance(curves, list):
         peaks = data.get("peaks")
         if isinstance(peaks, list):
-            return {
-                "source_image": data.get("source_image"),
-                "curve_layout": data.get("curve_layout", "overlay"),
-                "x_axis": data.get("x_axis", {}),
-                "y_axis": data.get("y_axis", {}),
-                "curves": [
-                    {
-                        "curve_id": data.get("curve_id", "curve_1"),
-                        "label": data.get("label"),
-                        "color": data.get("color"),
-                        "position": data.get("position"),
-                        "baseline_offset": data.get("baseline_offset"),
-                        "intensity_scale": data.get("intensity_scale"),
-                        "peaks": peaks,
-                    }
-                ],
-            }
+            curves = [
+                {
+                    "curve_id": data.get("curve_id", "curve_1"),
+                    "label": data.get("label"),
+                    "color": data.get("color"),
+                    "position": data.get("position"),
+                    "baseline_offset": data.get("baseline_offset"),
+                    "intensity_scale": data.get("intensity_scale"),
+                    "peaks": peaks,
+                }
+            ]
+        else:
+            curves = []
+
+    return {
+        "plot_id": data.get("plot_id"),
+        "label": data.get("label"),
+        "position": data.get("position"),
+        "source_image": data.get("source_image", defaults.get("source_image")),
+        "figure_type": data.get("figure_type", defaults.get("figure_type")),
+        "curve_layout": data.get("curve_layout", defaults.get("curve_layout", "auto")),
+        "x_axis": data.get("x_axis", defaults.get("x_axis", {})),
+        "y_axis": data.get("y_axis", defaults.get("y_axis", {})),
+        "notes": data.get("notes", defaults.get("notes")),
+        "noise": data.get("noise", defaults.get("noise")),
+        "background": data.get("background", defaults.get("background")),
+        "curves": normalize_curves(curves),
+    }
+
+
+def normalize_input(data: Any) -> dict[str, Any]:
+    """
+    Convert supported JSON formats into a common internal format.
+
+    Returns either:
+      {"mode": "single", ...plot fields...}
+      {"mode": "multi_panel", "source_image": ..., "plots": [...]}
+    """
+    if isinstance(data, list):
+        plot = normalize_single_plot({"curves": [{"curve_id": "curve_1", "peaks": data}]})
+        plot["curve_layout"] = "overlay"
+        return {"mode": "single", **plot}
+
+    if not isinstance(data, dict):
+        print(
+            "Error: Unsupported JSON format. Expected a list of peaks or a JSON object."
+        )
+        sys.exit(1)
+
+    plots = data.get("plots")
+    if isinstance(plots, list) and plots:
+        defaults = {
+            "source_image": data.get("source_image"),
+            "figure_type": data.get("figure_type"),
+            "notes": data.get("notes"),
+            "x_axis": data.get("x_axis", {}),
+            "y_axis": data.get("y_axis", {}),
+            "curve_layout": data.get("curve_layout", "auto"),
+        }
+
+        normalized_plots = []
+        for i, plot in enumerate(plots, start=1):
+            if not isinstance(plot, dict):
+                print(f"Warning: Skipping invalid plot entry: {plot}")
+                continue
+
+            normalized = normalize_single_plot(plot, defaults=defaults)
+            if not normalized.get("plot_id"):
+                normalized["plot_id"] = f"plot_{i}"
+            normalized_plots.append(normalized)
+
+        if not normalized_plots:
+            print("Error: No valid plots found in input JSON.")
+            sys.exit(1)
+
+        return {
+            "mode": "multi_panel",
+            "source_image": data.get("source_image"),
+            "figure_type": data.get("figure_type"),
+            "figure_layout": data.get("figure_layout", "multi_panel"),
+            "notes": data.get("notes"),
+            "plots": normalized_plots,
+        }
+
+    if isinstance(data.get("curves"), list) or isinstance(data.get("peaks"), list):
+        plot = normalize_single_plot(data)
+        return {"mode": "single", **plot}
 
     print(
-        "Error: Unsupported JSON format. Expected a list of peaks or a dict with a 'curves' field."
+        "Error: Unsupported JSON format. Expected a list of peaks, a dict with "
+        "'curves', or a dict with 'plots'."
     )
     sys.exit(1)
 
@@ -215,26 +282,22 @@ def sort_curves_by_position(curves: list[dict[str, Any]]) -> list[dict[str, Any]
 
 
 def detect_curve_layout(
-    normalized: dict[str, Any],
+    plot: dict[str, Any],
     curves: list[dict[str, Any]],
     cli_layout: str | None = None,
 ) -> str:
     if cli_layout and cli_layout != "auto":
         return cli_layout
 
-    layout = normalized.get("curve_layout", "auto")
+    layout = plot.get("curve_layout", "auto")
     if layout in ("stacked", "overlay"):
         return layout
 
     if len(curves) <= 1:
         return "overlay"
 
-    has_position = any(
-        curve.get("position") in POSITION_ORDER for curve in curves
-    )
-    has_baseline = any(
-        curve.get("baseline_offset") is not None for curve in curves
-    )
+    has_position = any(curve.get("position") in POSITION_ORDER for curve in curves)
+    has_baseline = any(curve.get("baseline_offset") is not None for curve in curves)
 
     if has_baseline or has_position:
         return "stacked"
@@ -251,7 +314,12 @@ def default_intensity_scale(
         return float(curve["intensity_scale"])
 
     y_max = y_axis.get("max")
-    if layout == "stacked" and isinstance(y_max, (int, float)) and y_max <= 2.0:
+    y_unit = (y_axis.get("unit") or "").lower()
+
+    if isinstance(y_max, (int, float)) and y_max <= 2.0:
+        return 1.0
+
+    if y_unit in ("normalized", "arbitrary", "norm"):
         return 1.0
 
     if layout == "stacked":
@@ -260,17 +328,33 @@ def default_intensity_scale(
     return 1000.0
 
 
-def get_x_range(args, normalized: dict[str, Any]) -> tuple[float, float]:
+def resolve_plot_simulation_params(
+    plot: dict[str, Any],
+    args: argparse.Namespace,
+) -> tuple[float, float]:
+    noise = plot.get("noise")
+    background = plot.get("background")
+
+    if noise is None:
+        noise = args.noise
+    if background is None:
+        background = args.background
+
+    return float(noise), float(background)
+
+
+def get_x_range(
+    args: argparse.Namespace,
+    plot: dict[str, Any],
+    user_set_min: bool,
+    user_set_max: bool,
+) -> tuple[float, float]:
     min_x = args.min_x
     max_x = args.max_x
 
-    x_axis = normalized.get("x_axis") or {}
-
+    x_axis = plot.get("x_axis") or {}
     json_min = x_axis.get("min")
     json_max = x_axis.get("max")
-
-    user_set_min = "--min-x" in sys.argv
-    user_set_max = "--max-x" in sys.argv
 
     if not user_set_min and isinstance(json_min, (int, float)):
         min_x = float(json_min)
@@ -347,9 +431,7 @@ def apply_stacked_offsets(
     stack_gap: float,
 ) -> dict[str, np.ndarray]:
     ordered = sort_curves_by_position(curves)
-    explicit_offsets = [
-        curve.get("baseline_offset") for curve in ordered
-    ]
+    explicit_offsets = [curve.get("baseline_offset") for curve in ordered]
 
     if all(offset is not None for offset in explicit_offsets):
         for curve in ordered:
@@ -396,6 +478,8 @@ def write_multi_curve_xy(
     x: np.ndarray,
     y_by_curve: dict[str, np.ndarray],
     layout: str,
+    plot_id: str | None = None,
+    plot_label: str | None = None,
 ) -> None:
     with open(output_path, "w", encoding="utf-8") as f:
         for curve in curves:
@@ -407,6 +491,10 @@ def write_multi_curve_xy(
             y = y_by_curve[curve_id]
 
             f.write(f"# source_image: {source_image or ''}\n")
+            if plot_id:
+                f.write(f"# plot_id: {plot_id}\n")
+            if plot_label:
+                f.write(f"# plot_label: {plot_label}\n")
             f.write(f"# curve_id: {curve_id}\n")
             f.write(f"# curve_layout: {layout}\n")
 
@@ -436,6 +524,7 @@ def save_plot(
     max_x: float,
     layout: str,
     y_axis: dict[str, Any],
+    title: str | None = None,
 ) -> None:
     fig_height = 5 if layout == "overlay" else max(5, 2 + len(curves) * 1.5)
     plt.figure(figsize=(10, fig_height))
@@ -492,7 +581,7 @@ def save_plot(
 
     plt.xlabel("2 theta (deg)")
     plt.ylabel(y_label)
-    plt.title("Digitized XRD Pattern")
+    plt.title(title or "Digitized XRD Pattern")
     plt.xlim(min_x, max_x)
 
     if global_max_y > global_min_y:
@@ -505,6 +594,151 @@ def save_plot(
     plt.tight_layout()
     plt.savefig(plot_output, dpi=300)
     plt.close()
+
+
+def numbered_output_path(base_output: str, index: int) -> str:
+    root, ext = os.path.splitext(base_output)
+    return f"{root}_{index}{ext}"
+
+
+def plot_json_output_path(input_json: str, index: int) -> str:
+    directory = os.path.dirname(os.path.abspath(input_json))
+    stem = os.path.splitext(os.path.basename(input_json))[0]
+    return os.path.join(directory, f"{stem}_{index}.json")
+
+
+def plot_to_export_json(plot: dict[str, Any]) -> dict[str, Any]:
+    export = {
+        "source_image": plot.get("source_image"),
+        "figure_type": plot.get("figure_type", "xrd"),
+        "curve_layout": plot.get("curve_layout", "auto"),
+        "x_axis": plot.get("x_axis", {}),
+        "y_axis": plot.get("y_axis", {}),
+        "curves": plot.get("curves", []),
+    }
+
+    if plot.get("plot_id"):
+        export["plot_id"] = plot["plot_id"]
+    if plot.get("label"):
+        export["label"] = plot["label"]
+    if plot.get("position"):
+        export["position"] = plot["position"]
+    if plot.get("notes"):
+        export["notes"] = plot["notes"]
+    if plot.get("noise") is not None:
+        export["noise"] = plot["noise"]
+    if plot.get("background") is not None:
+        export["background"] = plot["background"]
+
+    return export
+
+
+def process_single_plot(
+    plot: dict[str, Any],
+    args: argparse.Namespace,
+    output_xy: str,
+    user_set_min: bool,
+    user_set_max: bool,
+    seed_offset: int = 0,
+    write_plot_json: bool = True,
+    plot_json_path: str | None = None,
+) -> None:
+    curves = plot["curves"]
+
+    if not curves:
+        plot_name = plot.get("plot_id") or plot.get("label") or "plot"
+        print(f"Error: No valid curves found in {plot_name}.")
+        sys.exit(1)
+
+    layout = detect_curve_layout(plot, curves, cli_layout=args.layout)
+    y_axis = plot.get("y_axis") or {}
+    min_x, max_x = get_x_range(args, plot, user_set_min, user_set_max)
+
+    if args.points <= 1:
+        print("Error: --points must be greater than 1.")
+        sys.exit(1)
+
+    x = np.linspace(min_x, max_x, args.points)
+    y_by_curve = {}
+    noise, background = resolve_plot_simulation_params(plot, args)
+
+    for i, curve in enumerate(curves):
+        curve_id = curve["curve_id"]
+        peaks = curve.get("peaks", [])
+
+        if not peaks:
+            print(
+                f"Warning: Curve {curve_id} has no peaks. Output will contain baseline/noise only."
+            )
+
+        intensity_scale = default_intensity_scale(curve, y_axis, layout)
+
+        y = simulate_curve(
+            x=x,
+            peaks=peaks,
+            background=background,
+            noise=noise,
+            seed=42 + seed_offset + i,
+            intensity_scale=intensity_scale,
+        )
+
+        y_by_curve[curve_id] = y
+
+    if layout == "stacked" and len(curves) > 1:
+        y_by_curve = apply_stacked_offsets(
+            curves=curves,
+            y_by_curve=y_by_curve,
+            y_axis=y_axis,
+            stack_gap=args.stack_gap,
+        )
+        print(
+            f"Applied stacked layout with vertical offsets for {len(curves)} curves."
+        )
+    elif len(curves) > 1:
+        print(f"Applied overlay layout for {len(curves)} curves.")
+
+    os.makedirs(os.path.dirname(os.path.abspath(output_xy)), exist_ok=True)
+
+    if len(curves) == 1:
+        curve_id = curves[0]["curve_id"]
+        write_single_curve_xy(output_xy, x, y_by_curve[curve_id])
+    else:
+        write_multi_curve_xy(
+            output_path=output_xy,
+            source_image=plot.get("source_image"),
+            curves=curves,
+            x=x,
+            y_by_curve=y_by_curve,
+            layout=layout,
+            plot_id=plot.get("plot_id"),
+            plot_label=plot.get("label"),
+        )
+
+    print(f"Successfully generated digitized XY data at: {output_xy}")
+
+    plot_output = os.path.splitext(output_xy)[0] + ".png"
+    title = plot.get("label") or plot.get("plot_id") or "Digitized XRD Pattern"
+
+    save_plot(
+        plot_output=plot_output,
+        x=x,
+        curves=curves,
+        y_by_curve=y_by_curve,
+        min_x=min_x,
+        max_x=max_x,
+        layout=layout,
+        y_axis=y_axis,
+        title=title,
+    )
+
+    print(f"Saved digitized plot image to: {plot_output}")
+
+    if write_plot_json and plot_json_path:
+        export = plot_to_export_json(plot)
+        export["curve_layout"] = layout
+        with open(plot_json_path, "w", encoding="utf-8") as f:
+            json.dump(export, f, indent=2)
+        print(f"Saved per-plot JSON to: {plot_json_path}")
 
 
 def save_skill_inputs_safely(args, output_path: str) -> None:
@@ -520,14 +754,17 @@ def save_skill_inputs_safely(args, output_path: str) -> None:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Digitize XRD peaks to an .xy file. Supports single-curve and multi-curve JSON."
+        description=(
+            "Digitize XRD peaks to .xy files and preview PNGs. Supports single-plot, "
+            "multi-curve, and multi-panel JSON."
+        )
     )
 
     parser.add_argument(
         "input",
         help=(
-            "JSON file containing either a list of peaks or a multi-curve object "
-            "with {'curves': [{'curve_id': ..., 'peaks': [...]}]}"
+            "JSON file containing peaks, a multi-curve object with 'curves', or a "
+            "multi-panel object with 'plots'."
         ),
     )
 
@@ -576,94 +813,71 @@ def main():
         ),
     )
 
+    parser.add_argument(
+        "--write-plot-jsons",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help=(
+            "For multi-panel figures, also write one single-plot JSON file per panel "
+            "(default: enabled)"
+        ),
+    )
+
     args = parser.parse_args()
 
     raw_data = load_json(args.input)
     normalized = normalize_input(raw_data)
 
-    curves = normalized["curves"]
+    user_set_min = "--min-x" in sys.argv
+    user_set_max = "--max-x" in sys.argv
 
-    if not curves:
-        print("Error: No valid curves found in input JSON.")
-        sys.exit(1)
+    if normalized["mode"] == "multi_panel":
+        plots = normalized["plots"]
+        print(
+            f"Detected multi-panel figure with {len(plots)} plots. "
+            "Writing numbered outputs per panel."
+        )
 
-    layout = detect_curve_layout(normalized, curves, cli_layout=args.layout)
-    y_axis = normalized.get("y_axis") or {}
+        for index, plot in enumerate(plots, start=1):
+            if not plot.get("source_image"):
+                plot["source_image"] = normalized.get("source_image")
+            if not plot.get("figure_type"):
+                plot["figure_type"] = normalized.get("figure_type", "xrd")
 
-    min_x, max_x = get_x_range(args, normalized)
+            plot_label = plot.get("label") or plot.get("plot_id") or f"plot_{index}"
+            print(f"\nProcessing panel {index}: {plot_label}")
 
-    if args.points <= 1:
-        print("Error: --points must be greater than 1.")
-        sys.exit(1)
-
-    x = np.linspace(min_x, max_x, args.points)
-
-    y_by_curve = {}
-
-    for i, curve in enumerate(curves):
-        curve_id = curve["curve_id"]
-        peaks = curve.get("peaks", [])
-
-        if not peaks:
-            print(
-                f"Warning: Curve {curve_id} has no peaks. Output will contain baseline/noise only."
+            output_xy = numbered_output_path(args.output, index)
+            plot_json_path = (
+                plot_json_output_path(args.input, index)
+                if args.write_plot_jsons
+                else None
             )
 
-        intensity_scale = default_intensity_scale(curve, y_axis, layout)
+            process_single_plot(
+                plot=plot,
+                args=args,
+                output_xy=output_xy,
+                user_set_min=user_set_min,
+                user_set_max=user_set_max,
+                seed_offset=(index - 1) * 100,
+                write_plot_json=args.write_plot_jsons,
+                plot_json_path=plot_json_path,
+            )
 
-        y = simulate_curve(
-            x=x,
-            peaks=peaks,
-            background=args.background,
-            noise=args.noise,
-            seed=42 + i,
-            intensity_scale=intensity_scale,
-        )
+        save_skill_inputs_safely(args, args.output)
+        return
 
-        y_by_curve[curve_id] = y
+    plot = {key: value for key, value in normalized.items() if key != "mode"}
 
-    if layout == "stacked" and len(curves) > 1:
-        y_by_curve = apply_stacked_offsets(
-            curves=curves,
-            y_by_curve=y_by_curve,
-            y_axis=y_axis,
-            stack_gap=args.stack_gap,
-        )
-        print(f"Applied stacked layout with vertical offsets for {len(curves)} curves.")
-    elif len(curves) > 1:
-        print(f"Applied overlay layout for {len(curves)} curves.")
-
-    os.makedirs(os.path.dirname(os.path.abspath(args.output)), exist_ok=True)
-
-    if len(curves) == 1:
-        curve_id = curves[0]["curve_id"]
-        write_single_curve_xy(args.output, x, y_by_curve[curve_id])
-    else:
-        write_multi_curve_xy(
-            output_path=args.output,
-            source_image=normalized.get("source_image"),
-            curves=curves,
-            x=x,
-            y_by_curve=y_by_curve,
-            layout=layout,
-        )
-
-    print(f"Successfully generated digitized XY data at: {args.output}")
-
-    plot_output = os.path.splitext(args.output)[0] + ".png"
-
-    save_plot(
-        plot_output=plot_output,
-        x=x,
-        curves=curves,
-        y_by_curve=y_by_curve,
-        min_x=min_x,
-        max_x=max_x,
-        layout=layout,
-        y_axis=y_axis,
+    process_single_plot(
+        plot=plot,
+        args=args,
+        output_xy=args.output,
+        user_set_min=user_set_min,
+        user_set_max=user_set_max,
+        write_plot_json=False,
     )
-
-    print(f"Saved digitized plot image to: {plot_output}")
 
     save_skill_inputs_safely(args, args.output)
 

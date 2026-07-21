@@ -51,6 +51,52 @@ Directory:
 python pdf_parser.py pdf_files/scraped_pdfs --output grobid_output/scraped_pdfs --quiet --xrd-figures-only
 ```
 
+### Figure Digitization with PlotDigitizer
+
+After parsing, automatically digitize extracted XRD figure PNGs with PlotDigitizer:
+
+```bash
+python pdf_parser.py pdf_files/sample_pdfs/ti02_powder.pdf \
+  --output grobid_output/sample_pdfs/ti02_powder \
+  --xrd-figures-only \
+  --digitize-figures \
+  --quiet
+```
+
+Batch mode with digitization:
+
+```bash
+python pdf_parser.py pdf_files/sample_pdfs \
+  --output grobid_output/sample_pdfs \
+  --xrd-figures-only \
+  --digitize-figures \
+  --quiet
+```
+
+You can also re-digitize an already-parsed paper without re-running GROBID:
+
+```bash
+python plotdigitizer_pipeline.py grobid_output/sample_pdfs/ti02_powder
+```
+
+**Requirements:** Tesseract OCR must be installed for axis tick detection (`brew install tesseract` on macOS). PlotDigitizer is installed from the vendored `./PlotDigitizer` package.
+
+**Output layout** (per paper):
+
+```text
+ti02_powder/
+├── extra/                          # TEI XML, parsed JSON, xrd_records
+├── figures/                        # cropped figure PNGs from the PDF
+└── figures_digitized/              # PlotDigitizer outputs
+    ├── fig_1_curve_1.csv
+    ├── fig_1_curve_1_digitized.png
+    ├── fig_1_curve_2.csv
+    ├── fig_1_curve_2_digitized.png
+    └── digitization_manifest.json
+```
+
+Stacked multi-curve XRD figures are split into horizontal bands; each band produces a separate CSV and preview PNG. PlotDigitizer extracts one curve per image and works best on grayscale plots with light backgrounds.
+
 ## Scraping XRD Research Articles with OpenAlex
 
 ```bash

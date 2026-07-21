@@ -4,16 +4,16 @@
 		<fileDesc>
 			<titleStmt>
 				<title level="a" type="main">Revisiting the pressure-induced phase transitions of Methylammonium Lead Bromide Perovskite</title>
-				<funder ref="#_rr3qckM">
-					<orgName type="full">Spanish Ministerio de Ciencia e Innovación and Agencia Estatal de Investigación</orgName>
-				</funder>
-				<funder ref="#_CAZmbrT #_UWQatW6 #_q9GRtNB #_m2BdDJV">
+				<funder ref="#_fCndgkv #_jyZq54F #_Xq7TNQm #_a3GeCJz">
 					<orgName type="full">unknown</orgName>
 				</funder>
-				<funder ref="#_nPv7A3C">
+				<funder ref="#_TkZ7acP">
 					<orgName type="full">Generalitat Valenciana</orgName>
 				</funder>
-				<funder ref="#_uzqevZ8">
+				<funder ref="#_5hBfYyw">
+					<orgName type="full">Spanish Ministerio de Ciencia e Innovación and Agencia Estatal de Investigación</orgName>
+				</funder>
+				<funder ref="#_kdf6z6M">
 					<orgName type="full">European Union</orgName>
 				</funder>
 			</titleStmt>
@@ -182,7 +182,7 @@
 		</fileDesc>
 		<encodingDesc>
 			<appInfo>
-				<application version="0.9.0" ident="GROBID" when="2026-06-17T23:48+0000">
+				<application version="0.9.0" ident="GROBID" when="2026-06-18T00:16+0000">
 					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
 					<label type="revision">0.9.0</label>
 					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=true, includeRawCitations=true, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[figure, head, p, ref, s, table, formula], flavor=null</label>
@@ -244,26 +244,26 @@
 <div><head coords="18,90.00,82.03,199.97,16.20">ACKNOWLEDGMENTS</head><p coords="18,114.00,123.92,391.20,10.80;18,90.00,143.96,415.37,10.80;18,90.00,164.00,36.65,10.80;18,148.68,164.00,5.33,10.80;18,176.16,164.00,53.88,10.80;18,252.12,164.00,17.28,10.80;18,290.40,164.00,40.01,10.80;18,352.56,164.00,32.62,10.80;18,407.28,164.00,11.33,10.80;18,440.76,164.00,64.44,10.80;18,90.00,183.92,415.20,10.80;18,90.00,203.96,415.20,10.80;18,90.00,224.00,415.32,10.80;18,90.00,243.92,415.37,10.80;18,90.00,263.96,415.17,10.80;18,90.00,284.00,355.96,10.80"><s coords="18,114.00,123.92,391.20,10.80;18,90.00,143.96,415.37,10.80;18,90.00,164.00,36.65,10.80;18,148.68,164.00,5.33,10.80;18,176.16,164.00,53.88,10.80;18,252.12,164.00,17.28,10.80;18,290.40,164.00,40.01,10.80;18,352.56,164.00,32.62,10.80;18,407.28,164.00,11.33,10.80;18,440.76,164.00,64.44,10.80;18,90.00,183.92,185.32,10.80">This work was supported by the <rs type="funder">Generalitat Valenciana</rs> under Grant No. <rs type="grantNumber">PROMETEO CIPROM/2021/075-GREENMAT</rs> and by the <rs type="funder">Spanish Ministerio de Ciencia e Innovación and Agencia Estatal de Investigación</rs> (<rs type="grantNumber">MCIN/AEI/10.13039/501100011033</rs>)</s><s coords="18,281.76,183.92,223.44,10.80;18,90.00,203.96,415.20,10.80">and the <rs type="funder">European Union</rs> under Grants No. <rs type="grantNumber">PID2019-106383GB-41/44</rs> and No. <rs type="grantNumber">RED2018-102612-T</rs> (<rs type="projectName">MALTA Consolider Team</rs>).</s><s coords="18,90.00,224.00,415.32,10.80;18,90.00,243.92,114.24,10.80">A.L. and D.E. thank the <rs type="institution">Generalitat Valenciana</rs> for the Ph.D. Fellowship No. <rs type="grantNumber">GRISOLIAP/2019/025</rs>.</s><s coords="18,211.68,243.92,293.69,10.80;18,90.00,263.96,227.64,10.80">R.T. and D.E. thank the <rs type="institution">Generalitat Valenciana</rs> for the postdoctoral Fellowship No. <rs type="grantNumber">CIAPOS/2021/20</rs>.</s><s coords="18,320.64,263.96,184.53,10.80;18,90.00,284.00,285.96,10.80">PXRD experiments were performed at the <rs type="institution" subtype="infrastructure">MSPD beamline of ALBA Synchrotron</rs> (experiment no.</s><s coords="18,378.96,284.00,67.00,10.80"><rs type="grantNumber">2021085271</rs>.)</s></p></div>
 			</div>
 			<listOrg type="funding">
-				<org type="funding" xml:id="_nPv7A3C">
+				<org type="funding" xml:id="_TkZ7acP">
 					<idno type="grant-number">PROMETEO CIPROM/2021/075-GREENMAT</idno>
 				</org>
-				<org type="funding" xml:id="_rr3qckM">
+				<org type="funding" xml:id="_5hBfYyw">
 					<idno type="grant-number">MCIN/AEI/10.13039/501100011033</idno>
 				</org>
-				<org type="funding" xml:id="_uzqevZ8">
+				<org type="funding" xml:id="_kdf6z6M">
 					<idno type="grant-number">PID2019-106383GB-41/44</idno>
 				</org>
-				<org type="funded-project" xml:id="_CAZmbrT">
+				<org type="funded-project" xml:id="_fCndgkv">
 					<idno type="grant-number">RED2018-102612-T</idno>
 					<orgName type="project" subtype="full">MALTA Consolider Team</orgName>
 				</org>
-				<org type="funding" xml:id="_UWQatW6">
+				<org type="funding" xml:id="_jyZq54F">
 					<idno type="grant-number">GRISOLIAP/2019/025</idno>
 				</org>
-				<org type="funding" xml:id="_q9GRtNB">
+				<org type="funding" xml:id="_Xq7TNQm">
 					<idno type="grant-number">CIAPOS/2021/20</idno>
 				</org>
-				<org type="funding" xml:id="_m2BdDJV">
+				<org type="funding" xml:id="_a3GeCJz">
 					<idno type="grant-number">2021085271</idno>
 				</org>
 			</listOrg>

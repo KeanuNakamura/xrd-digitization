@@ -1,5 +1,5 @@
 {
-  "source_pdf": "pdf_files/nanosized_powders.pdf",
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/nanosized_powders.pdf",
   "source_sha256": "973e22a41e0780c2e74952fffcb041dd991932df54a8a756478e7a1c2420a089",
   "metadata": {
     "title": "Determination of size distributions in nanosized powders by TEM, XRD, and SAXS",
@@ -2026,7 +2026,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/nanosized_powders/figures/fig_1.png"
+        "grobid_output/sample_pdfs/nanosized_powders/figures/fig_1.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_9e20a05848db"
@@ -2169,7 +2169,7 @@
       "is_likely_xrd": true,
       "is_caption_xrd": true,
       "image_paths": [
-        "grobid_output/nanosized_powders/figures/fig_5.png"
+        "grobid_output/sample_pdfs/nanosized_powders/figures/fig_5.png"
       ],
       "referenced_by_paragraph_ids": [
         "paragraph_50a9c8cbd40f"
