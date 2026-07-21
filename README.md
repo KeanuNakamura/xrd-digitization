@@ -34,6 +34,18 @@ python -m xrd_digitization examples/figure_3.png --skip-classification
 
 Each figure writes a CSV of `(x, y)` points plus a `_digitized.png` overlay. Multi-curve stacked plots are split into horizontal bands with one CSV/preview per band.
 
+## Spectral Information Divergence (SID)
+
+SID measures how different a digitized spectrum is from a ground-truth spectrum. Both intensity vectors are treated as probability distributions \(p\) and \(q\) (normalized to sum to 1). The directional divergences and symmetric SID are:
+
+\[
+D(p \parallel q) = \sum_i p_i \log\frac{p_i}{q_i}, \qquad
+D(q \parallel p) = \sum_i q_i \log\frac{q_i}{p_i}, \qquad
+\mathrm{SID} = D(p \parallel q) + D(q \parallel p)
+\]
+
+Lower is better; \(0\) means identical distributions. Overlays report the symmetric SID (see `compute_sid.py`).
+
 ## Examples
 
 CNRS figure 1034 — original plot, reconstructed curve, and overlay against ground-truth JSON (SID ≈ 1.02).
