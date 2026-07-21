@@ -1,6 +1,6 @@
 # XRD Digitization
 
-Digitize XRD figure images into calibrated CSV curves and preview PNGs, using axis OCR plus [PlotDigitizer](https://github.com/dilawar/PlotDigitizer).
+Autonomously digitizes XRD figure images into calibrated CSV curves and preview PNGs, using axis OCR plus [PlotDigitizer](https://github.com/dilawar/PlotDigitizer).
 
 ## Setup
 
