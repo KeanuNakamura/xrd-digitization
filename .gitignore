@@ -6,3 +6,5 @@ sample_figures/
 graphify-out/
 grobid_output/
 pdf_files/
+.agents/
+.claude/
