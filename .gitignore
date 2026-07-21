@@ -1,7 +1,8 @@
 venv
 .venv
-AtomisticSkills
-data
-sample_figures
-graphify-out
-grobid_output
+AtomisticSkills/
+data/
+sample_figures/
+graphify-out/
+grobid_output/
+pdf_files/
