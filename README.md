@@ -36,15 +36,15 @@ Each figure writes a CSV of `(x, y)` points plus a `_digitized.png` overlay. Mul
 
 ## Spectral Information Divergence (SID)
 
-SID measures how different a digitized spectrum is from a ground-truth spectrum. Both intensity vectors are treated as probability distributions \(p\) and \(q\) (normalized to sum to 1). The directional divergences and symmetric SID are:
+SID measures how different a digitized spectrum is from a ground-truth spectrum. Both intensity vectors are treated as probability distributions $p$ and $q$ (normalized to sum to 1). The directional divergences and symmetric SID are:
 
-\[
+$$
 D(p \parallel q) = \sum_i p_i \log\frac{p_i}{q_i}, \qquad
 D(q \parallel p) = \sum_i q_i \log\frac{q_i}{p_i}, \qquad
 \mathrm{SID} = D(p \parallel q) + D(q \parallel p)
-\]
+$$
 
-Lower is better; \(0\) means identical distributions. Overlays report the symmetric SID (see `compute_sid.py`).
+Lower is better; $0$ means identical distributions. Overlays report the symmetric SID (see `compute_sid.py`).
 
 ## Examples
 
