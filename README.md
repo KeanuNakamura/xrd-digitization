@@ -62,3 +62,18 @@ CNRS figure 1034 — original plot, reconstructed curve, and overlay against gro
     <td align="center"><img src="examples/figure_1034_overlay.png" alt="Overlay of original vs digitized figure 1034" width="100%"/></td>
   </tr>
 </table>
+
+CNRS figure 1051 — original plot, reconstructed curve, and overlay against ground-truth JSON (SID ≈ 0.68).
+
+<table>
+  <tr>
+    <td align="center" width="33%"><strong>Original</strong></td>
+    <td align="center" width="33%"><strong>Digitized</strong></td>
+    <td align="center" width="33%"><strong>Overlay</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="examples/figure_1051_original.png" alt="Original XRD figure 1051" width="100%"/></td>
+    <td align="center"><img src="examples/figure_1051_digitized.png" alt="Digitized XRD curve for figure 1051" width="100%"/></td>
+    <td align="center"><img src="examples/figure_1051_overlay.png" alt="Overlay of original vs digitized figure 1051" width="100%"/></td>
+  </tr>
+</table>
