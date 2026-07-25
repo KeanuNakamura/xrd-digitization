@@ -15,12 +15,6 @@ import cv2
 import numpy as np
 
 from compute_sid import compare_spectra
-from plotdigitizer_extract import (
-    extract_curve_autonomous,
-    inset_plot_bounds,
-    map_path_to_calibrated_xy,
-    write_debug_outputs,
-)
 from xrd_digitization.calibrate_axes import calibrate_axes
 from xrd_digitization.crop_plot_area import crop_plot_area
 from xrd_digitization.detect_panels import detect_stacked_curve_bands
@@ -581,20 +575,7 @@ def save_digitized_preview(
         data = data.reshape(1, 2)
 
     fig, axis = plt.subplots(figsize=(8, 4))
-    # Break the line on large x-gaps so sparse traces do not draw fake ramps.
-    if len(data) >= 2:
-        x = data[:, 0]
-        y = data[:, 1]
-        dx = np.diff(x)
-        typical = float(np.median(dx[dx > 0])) if np.any(dx > 0) else 1.0
-        breaks = np.where(dx > max(3.0 * typical, 1.0))[0]
-        start = 0
-        for b in list(breaks) + [len(data) - 1]:
-            end = b + 1
-            axis.plot(x[start:end], y[start:end], color="black", linewidth=1.0)
-            start = end
-    else:
-        axis.plot(data[:, 0], data[:, 1], color="black", linewidth=1.0)
+    axis.plot(data[:, 0], data[:, 1], color="black", linewidth=1.0)
     axis.set_xlabel("2θ (degrees)")
     axis.set_ylabel("Intensity (a.u.)")
     if title:
@@ -642,17 +623,7 @@ def detect_figure_bands(
     )
     if len(bands) <= 1:
         return [(calibration.plot_top, calibration.plot_bottom)]
-
-    plot_height = max(1, calibration.plot_bottom - calibration.plot_top)
-    # Drop tiny false bands (e.g. a thick tick / label strip mistaken for a curve).
-    substantial = [
-        (top, bottom)
-        for top, bottom in bands
-        if (bottom - top) >= max(40, int(plot_height * 0.15))
-    ]
-    if len(substantial) <= 1:
-        return [(calibration.plot_top, calibration.plot_bottom)]
-    return substantial
+    return bands
 
 
 def _expand_band_range(
@@ -974,155 +945,13 @@ def run_plotdigitizer(
     return True, None
 
 
-def _ocr_tick_boxes_in_image(
-    calibration: AxisCalibrationResult,
-    *,
-    image_height: int,
-    image_width: int,
-    offset_x: int = 0,
-    offset_y: int = 0,
-) -> list[tuple[int, int, int, int]]:
-    """Approximate OCR tick label boxes in image coordinates (secondary text mask)."""
-    boxes: list[tuple[int, int, int, int]] = []
-    # X tick labels sit just below the plot frame.
-    for col, _value in calibration.tick_pairs:
-        x = int(col) - offset_x
-        y = int(calibration.plot_bottom) - offset_y
-        boxes.append((x - 12, y + 2, x + 12, min(image_height, y + 28)))
-    # Y tick labels sit just left of the plot frame.
-    for row, _value in calibration.y_tick_pairs:
-        x = int(calibration.plot_left) - offset_x
-        y = int(row) - offset_y
-        boxes.append((max(0, x - 48), y - 8, max(0, x - 2), y + 8))
-    clipped: list[tuple[int, int, int, int]] = []
-    for x0, y0, x1, y1 in boxes:
-        xa = int(np.clip(min(x0, x1), 0, image_width))
-        xb = int(np.clip(max(x0, x1), 0, image_width))
-        ya = int(np.clip(min(y0, y1), 0, image_height))
-        yb = int(np.clip(max(y0, y1), 0, image_height))
-        if xb > xa and yb > ya:
-            clipped.append((xa, ya, xb, yb))
-    return clipped
-
-
-def _save_xy_csv(csv_path: Path, data: np.ndarray) -> None:
-    csv_path.parent.mkdir(parents=True, exist_ok=True)
-    with csv_path.open("w", encoding="utf-8") as handle:
-        for x_val, y_val in data:
-            handle.write(f"{x_val:g} {y_val:g}\n")
-
-
-def _try_autonomous_band_extraction(
-    *,
-    extract_image: np.ndarray,
-    band_calibration: AxisCalibrationResult,
-    stem: str,
-    output_dir: Path,
-    csv_path: Path,
-    plot_path: Path,
-) -> BandDigitizationResult | None:
-    """
-    Run Lab/CC/DP extraction. Return a successful BandDigitizationResult, or
-    None so the caller can fall back to PlotDigitizer.
-    """
-    height, width = extract_image.shape[:2]
-    plot_bounds = (
-        band_calibration.plot_left,
-        band_calibration.plot_top,
-        band_calibration.plot_right,
-        band_calibration.plot_bottom,
-    )
-    text_boxes = _ocr_tick_boxes_in_image(
-        band_calibration,
-        image_height=height,
-        image_width=width,
-    )
-    # Shift tick boxes into the inset ROI used by extract_curve_autonomous.
-    inset = inset_plot_bounds(
-        *plot_bounds,
-        image_shape=(height, width),
-    )
-    left, top, _right, _bottom = inset
-    roi_boxes: list[tuple[int, int, int, int]] = []
-    for x0, y0, x1, y1 in text_boxes:
-        roi_boxes.append((x0 - left, y0 - top, x1 - left, y1 - top))
-
-    try:
-        extracted = extract_curve_autonomous(
-            extract_image,
-            plot_bounds=plot_bounds,
-            text_boxes_roi=roi_boxes,
-            build_debug=True,
-        )
-    except Exception as exc:
-        LOGGER.debug("Autonomous extraction failed for %s: %s", stem, exc)
-        return None
-
-    band_warnings = list(extracted.warnings)
-    band_warnings.append(f"extract_mode={extracted.mode}")
-    band_warnings.append(f"extract_coverage={extracted.coverage:.2f}")
-
-    debug_dir = output_dir / "debug"
-    if extracted.debug is not None:
-        write_debug_outputs(extracted.debug, debug_dir, stem)
-
-    if not extracted.ok:
-        band_warnings.append("autonomous_extract_quality_failed")
-        LOGGER.info(
-            "Autonomous extract below quality gate for %s; falling back to PlotDigitizer",
-            stem,
-        )
-        return None
-
-    y_scale, y_warnings = _estimate_y_scale(band_calibration)
-    band_warnings.extend(y_warnings)
-    data = map_path_to_calibrated_xy(
-        extracted.rows,
-        calibration=band_calibration,
-        plot_bounds=extracted.plot_bounds,
-        y_scale=y_scale,
-    )
-    if len(data) < 20:
-        band_warnings.append("autonomous_extract_too_few_points")
-        return None
-
-    y_span = float(data[:, 1].max() - data[:, 1].min())
-    if y_span < max(1.0, y_scale * 0.05):
-        band_warnings.append("autonomous_extract_flat_trace")
-        return None
-
-    _save_xy_csv(csv_path, data)
-    save_digitized_preview(csv_path, plot_path, title=stem)
-    band_warnings.append(
-        f"autonomous_extract_points={len(data)},"
-        f"y_unique={len(np.unique(np.round(data[:, 1], 1)))}"
-    )
-    LOGGER.info("Autonomous extract digitized %s -> %s", stem, csv_path.name)
-
-    return BandDigitizationResult(
-        stem=stem,
-        source_image=Path(),  # filled by caller
-        csv_path=csv_path,
-        plot_path=plot_path,
-        data_points=[],
-        locations=[],
-        calibration=_calibration_summary(band_calibration),
-        warnings=band_warnings,
-        success=True,
-        error=None,
-    )
-
-
 def digitize_figure_image(
     image_path: Path,
     output_dir: Path,
     *,
     figure_id: str | None = None,
 ) -> FigureDigitizationResult:
-    """Calibrate, split stacked bands, and digitize one figure PNG.
-
-    Tries autonomous Lab/CC/DP extraction first; falls back to PlotDigitizer.
-    """
+    """Calibrate, split stacked bands, and run PlotDigitizer on one figure PNG."""
     figure_id = figure_id or image_path.stem
     warnings: list[str] = []
 
@@ -1149,12 +978,8 @@ def digitize_figure_image(
     for band_index, (band_top, band_bottom) in enumerate(bands, start=1):
         stem = _output_stem(figure_id, band_index, num_bands)
         band_warnings: list[str] = []
-        csv_path = output_dir / f"{stem}.csv"
-        plot_path = output_dir / f"{stem}_digitized.png"
 
         if num_bands <= 1:
-            extract_image = cropped
-            band_calibration = calibration
             x0, y0, _, _ = plot_crop.bbox
             plot_bounds = _full_image_plot_bounds(calibration, plot_crop.bbox)
             digitize_sources: list[tuple[Path, int, int, int, np.ndarray]] = []
@@ -1175,6 +1000,7 @@ def digitize_figure_image(
             digitize_sources.append(
                 (image_path, x0, y0, image_bgr.shape[0], image_bgr),
             )
+            band_calibration = calibration
             grid_source = cropped
         else:
             y_start = max(0, band_top - BAND_PADDING)
@@ -1205,27 +1031,13 @@ def digitize_figure_image(
                 y_method="relative",
                 y_tick_pairs=[],
             )
-            extract_image = band_img
             grid_source = band_img
             digitize_sources = [
                 (digitize_path, 0, 0, band_height, band_img),
             ]
 
-        # Primary: autonomous Lab / connected-component / DP extraction.
-        auto_result = _try_autonomous_band_extraction(
-            extract_image=extract_image,
-            band_calibration=band_calibration,
-            stem=stem,
-            output_dir=output_dir,
-            csv_path=csv_path,
-            plot_path=plot_path,
-        )
-        if auto_result is not None:
-            auto_result.source_image = image_path
-            band_results.append(auto_result)
-            continue
-
-        band_warnings.append("autonomous_extract_fallback_to_plotdigitizer")
+        csv_path = output_dir / f"{stem}.csv"
+        plot_path = output_dir / f"{stem}_digitized.png"
 
         best_csv: Path | None = None
         best_score = -1.0
