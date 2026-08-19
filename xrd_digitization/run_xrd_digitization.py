@@ -16,6 +16,7 @@ from xrd_digitization.classify_xrd_figures import classify_from_context, classif
 from xrd_digitization.crop_plot_area import crop_plot_area
 from xrd_digitization.detect_peaks import detect_peaks
 from xrd_digitization.digitize_xrd_curve import digitize_xrd_curves
+from xrd_digitization.hybrid_digitize import run_hybrid_digitization
 from xrd_digitization.plot_digitized_curve import plot_from_curves, save_multi_column_xy
 from xrd_digitization.types import (
     AxisCalibrationResult,
@@ -110,8 +111,14 @@ def digitize_figure(
     *,
     skip_classification: bool = False,
     num_points: int = 2000,
+    hybrid: bool = False,
+    agent_json: Path | None = None,
 ) -> DigitizationResult | None:
-    """Run the full deterministic digitization pipeline on one figure."""
+    """Run the full digitization pipeline on one figure.
+
+    When ``hybrid`` is True, a vision agent supplies text regions / peak priors,
+    text is cleaned conservatively, and detailed pixel extractions are fused.
+    """
     image_bgr = cv2.imread(str(context.image_path))
     if image_bgr is None:
         LOGGER.error("Could not load image: %s", context.image_path)
@@ -130,8 +137,43 @@ def digitize_figure(
     base_stem = infer_output_stem(context.image_path)
 
     calibration = calibrate_axes(plot_crop, full_image_bgr=image_bgr)
-    curves = digitize_xrd_curves(plot_crop, calibration, num_points=num_points)
-    valid_curves = [curve for curve in curves if curve.two_theta]
+    hybrid_payload: dict[str, Any] | None = None
+
+    if hybrid:
+        artifacts = run_hybrid_digitization(
+            image_bgr,
+            plot_crop,
+            calibration,
+            num_points=num_points,
+            agent_metadata_path=agent_json,
+        )
+        valid_curves = (
+            [artifacts.fused_curve] if artifacts.fused_curve.two_theta else []
+        )
+        hybrid_payload = {
+            "agent_meta": artifacts.agent_meta.to_dict(),
+            "validation": artifacts.validation,
+            "cleaned_bgr": artifacts.cleaned_bgr,
+            "text_mask": artifacts.text_mask,
+            "removal_mask": artifacts.removal_mask,
+            "overlay_bgr": artifacts.overlay_bgr,
+            "bbox_debug_bgr": artifacts.bbox_debug_bgr,
+            "original_curve": artifacts.original_curve,
+            "cleaned_curve": artifacts.cleaned_curve,
+            "dp_curve": artifacts.dp_curve,
+            "agent_prior": artifacts.agent_prior,
+            "hybrid_mode_used": artifacts.hybrid_mode_used,
+            "candidate_scores": artifacts.candidate_scores,
+            "passthrough_debug": artifacts.passthrough_debug,
+        }
+        if artifacts.validation.get("flags"):
+            plot_crop.warnings = list(plot_crop.warnings) + [
+                f"hybrid_{flag}" for flag in artifacts.validation["flags"]
+            ]
+    else:
+        curves = digitize_xrd_curves(plot_crop, calibration, num_points=num_points)
+        valid_curves = [curve for curve in curves if curve.two_theta]
+
     peaks = [detect_peaks(curve) for curve in valid_curves]
 
     warnings: list[str] = []
@@ -154,6 +196,9 @@ def digitize_figure(
     )
 
     curve_scores = [0.8 if valid_curves else 0.1]
+    if hybrid and hybrid_payload is not None:
+        uncertain = float(hybrid_payload["validation"].get("uncertain_fraction") or 0.0)
+        curve_scores = [max(0.1, 0.85 - 0.5 * uncertain)]
     confidence = float(
         np.mean(
             [
@@ -173,6 +218,7 @@ def digitize_figure(
         confidence=confidence,
         warnings=sorted(set(warnings)),
         output_stem=base_stem,
+        hybrid=hybrid_payload,
     )
 
 
@@ -210,6 +256,7 @@ def save_digitization_outputs(
     plot_path = figure_dir / f"{stem}_digitized.png"
     peaks_path = figure_dir / f"{stem}.peaks.json"
 
+    # Write the selected raw curve arrays directly — never rebuild from peaks.json.
     save_multi_column_xy(curves, xy_path)
     plot_from_curves(
         curves,
@@ -304,6 +351,92 @@ def save_digitization_outputs(
             "metadata_json": str(metadata_path),
         },
     }
+
+    if result.hybrid:
+        agent_path = figure_dir / f"{stem}.agent.json"
+        agent_path.write_text(
+            json.dumps(result.hybrid["agent_meta"], indent=2), encoding="utf-8"
+        )
+
+        cleaned_path = figure_dir / f"{stem}_cleaned.png"
+        overlay_path = figure_dir / f"{stem}_hybrid_overlay.png"
+        bbox_debug_path = figure_dir / f"{stem}_bbox_debug.png"
+        uncertainty_path = figure_dir / f"{stem}.hybrid_validation.json"
+        text_mask_path = figure_dir / f"{stem}_text_mask.png"
+        if result.hybrid.get("cleaned_bgr") is not None:
+            cv2.imwrite(str(cleaned_path), result.hybrid["cleaned_bgr"])
+        if result.hybrid.get("overlay_bgr") is not None:
+            cv2.imwrite(str(overlay_path), result.hybrid["overlay_bgr"])
+        if result.hybrid.get("bbox_debug_bgr") is not None:
+            cv2.imwrite(str(bbox_debug_path), result.hybrid["bbox_debug_bgr"])
+        if result.hybrid.get("text_mask") is not None:
+            cv2.imwrite(str(text_mask_path), result.hybrid["text_mask"])
+
+        # Candidate debug dumps: original vs final must match on passthrough.
+        original_curve = result.hybrid.get("original_curve")
+        final_curve = curves[0] if curves else None
+        cand_original_xy = figure_dir / f"{stem}_candidate_original.xy"
+        cand_original_png = figure_dir / f"{stem}_candidate_original.png"
+        cand_final_xy = figure_dir / f"{stem}_candidate_final.xy"
+        cand_final_png = figure_dir / f"{stem}_candidate_final.png"
+        if original_curve is not None and getattr(original_curve, "two_theta", None):
+            save_multi_column_xy([original_curve], cand_original_xy)
+            plot_from_curves(
+                [original_curve],
+                cand_original_png,
+                calibration=calibration,
+                title=f"{result.figure_context.figure_id} candidate_original",
+            )
+        if final_curve is not None and final_curve.two_theta:
+            save_multi_column_xy([final_curve], cand_final_xy)
+            plot_from_curves(
+                [final_curve],
+                cand_final_png,
+                calibration=calibration,
+                title=f"{result.figure_context.figure_id} candidate_final",
+            )
+
+        validation = dict(result.hybrid.get("validation") or {})
+        passthrough_debug = dict(result.hybrid.get("passthrough_debug") or {})
+        if passthrough_debug:
+            validation.update(passthrough_debug)
+        validation.setdefault(
+            "selected_candidate",
+            result.hybrid.get("hybrid_mode_used"),
+        )
+        uncertainty_path.write_text(
+            json.dumps(validation, indent=2),
+            encoding="utf-8",
+        )
+        metadata["hybrid"] = {
+            "validation": validation,
+            "hybrid_mode_used": result.hybrid.get("hybrid_mode_used"),
+            "selected_candidate": validation.get("selected_candidate"),
+            "original_curve_hash": validation.get("original_curve_hash"),
+            "final_curve_hash": validation.get("final_curve_hash"),
+            "passthrough_arrays_equal": validation.get("passthrough_arrays_equal"),
+            "final_curve_source_function": validation.get("final_curve_source_function"),
+            "passthrough_debug": passthrough_debug,
+            "agent_axis_ranges": {
+                "x_axis": result.hybrid["agent_meta"].get("x_axis"),
+                "y_axis": result.hybrid["agent_meta"].get("y_axis"),
+            },
+        }
+        metadata["outputs"].update(
+            {
+                "agent_json": str(agent_path),
+                "cleaned_image": str(cleaned_path),
+                "hybrid_overlay": str(overlay_path),
+                "bbox_debug": str(bbox_debug_path),
+                "text_mask": str(text_mask_path),
+                "hybrid_validation_json": str(uncertainty_path),
+                "candidate_original_xy": str(cand_original_xy),
+                "candidate_original_png": str(cand_original_png),
+                "candidate_final_xy": str(cand_final_xy),
+                "candidate_final_png": str(cand_final_png),
+            }
+        )
+
     metadata_path.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
 
     saved_paths: dict[str, Path] = {
@@ -315,6 +448,21 @@ def save_digitization_outputs(
         "json": panel_json_path,
         "metadata_json": metadata_path,
     }
+    if result.hybrid:
+        saved_paths.update(
+            {
+                "agent_json": figure_dir / f"{stem}.agent.json",
+                "cleaned_image": figure_dir / f"{stem}_cleaned.png",
+                "hybrid_overlay": figure_dir / f"{stem}_hybrid_overlay.png",
+                "bbox_debug": figure_dir / f"{stem}_bbox_debug.png",
+                "text_mask": figure_dir / f"{stem}_text_mask.png",
+                "hybrid_validation_json": figure_dir / f"{stem}.hybrid_validation.json",
+                "candidate_original_xy": figure_dir / f"{stem}_candidate_original.xy",
+                "candidate_original_png": figure_dir / f"{stem}_candidate_original.png",
+                "candidate_final_xy": figure_dir / f"{stem}_candidate_final.xy",
+                "candidate_final_png": figure_dir / f"{stem}_candidate_final.png",
+            }
+        )
 
     LOGGER.info(
         "Saved digitized outputs for %s in %s (%d curve(s))",
@@ -335,6 +483,8 @@ def process_directory(
     pattern: str = "*.png",
     skip_classification: bool = False,
     num_points: int = 2000,
+    hybrid: bool = False,
+    agent_json: Path | None = None,
 ) -> list[DigitizationResult]:
     results: list[DigitizationResult] = []
     for image_path in sorted(input_dir.glob(pattern)):
@@ -345,6 +495,8 @@ def process_directory(
             context,
             skip_classification=skip_classification,
             num_points=num_points,
+            hybrid=hybrid,
+            agent_json=agent_json,
         )
         if result is None:
             continue
@@ -358,6 +510,8 @@ def process_figure_analysis_json(
     *,
     skip_classification: bool = False,
     num_points: int = 2000,
+    hybrid: bool = False,
+    agent_json: Path | None = None,
 ) -> list[DigitizationResult]:
     """Process figures listed in a GROBID figure_analysis.json file."""
     payload = json.loads(analysis_path.read_text(encoding="utf-8"))
@@ -389,6 +543,8 @@ def process_figure_analysis_json(
             context,
             skip_classification=skip_classification,
             num_points=num_points,
+            hybrid=hybrid,
+            agent_json=agent_json,
         )
         if result is None:
             continue
@@ -430,6 +586,17 @@ def main() -> None:
         help="Optional caption for a single image input",
     )
     parser.add_argument(
+        "--hybrid",
+        action="store_true",
+        help="Enable agent-guided text cleaning + confidence fusion",
+    )
+    parser.add_argument(
+        "--agent-json",
+        type=Path,
+        default=None,
+        help="Offline agent metadata JSON (skips vision API when present)",
+    )
+    parser.add_argument(
         "-v",
         "--verbose",
         action="store_true",
@@ -457,6 +624,8 @@ def main() -> None:
             pattern=args.pattern,
             skip_classification=args.skip_classification,
             num_points=args.num_points,
+            hybrid=args.hybrid,
+            agent_json=args.agent_json,
         )
         print(f"Digitized {len(results)} figure(s) in {input_path}")
         return
@@ -466,6 +635,8 @@ def main() -> None:
             input_path,
             skip_classification=args.skip_classification,
             num_points=args.num_points,
+            hybrid=args.hybrid,
+            agent_json=args.agent_json,
         )
         print(f"Digitized {len(results)} figure(s) from {input_path}")
         return
@@ -475,6 +646,8 @@ def main() -> None:
         context,
         skip_classification=args.skip_classification,
         num_points=args.num_points,
+        hybrid=args.hybrid,
+        agent_json=args.agent_json,
     )
     if result is None:
         print(f"Skipped or failed: {input_path}")

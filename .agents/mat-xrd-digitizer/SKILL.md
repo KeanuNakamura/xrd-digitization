@@ -716,6 +716,57 @@ python .agents/mat-xrd-digitizer/scripts/digitize_plot.py \
 
 ---
 
+## 12. OpenAI Vision Pipeline (standalone)
+
+This skill’s automated path uses **OpenAI vision only** to extract peaks JSON, then
+`digitize_plot.py` to synthesize `.xy` / preview PNGs. It is **not** fused with
+PlotDigitizer or the hybrid pixel-tracing pipeline — keep those workflows separate.
+
+For a fair comparison with a Cursor skill agent, `run_openai_digitize.py` sends the
+**full** `SKILL.md` plus the full `digitize_plot.py` source as the system message
+(the same files Cursor can load), and a minimal single-image user ask — no
+API-only coaching. Remaining differences vs Cursor are interactive (multi-turn
+revision after viewing `.xy` / PNG) and whichever vision model each side uses.
+
+Requires `OPENAI_API_KEY` (optional: `OPENAI_MODEL`, `OPENAI_BASE_URL`).
+
+### Single image
+
+```bash
+# Env: base-agent
+python .agents/mat-xrd-digitizer/scripts/run_openai_digitize.py path/to/figure_1.png
+```
+
+Writes beside the figure:
+
+```text
+path/to/figure_1/figure_1.png
+path/to/figure_1/figure_1.json
+path/to/figure_1/figure_1_digitized.xy
+path/to/figure_1/figure_1_digitized.png
+```
+
+### Batch GROBID figures
+
+```bash
+# Env: base-agent
+python .agents/mat-xrd-digitizer/scripts/run_openai_digitize.py \
+  --batch grobid_output/sample_pdfs \
+  --summary grobid_output/sample_pdfs/openai_digitize_summary.json
+```
+
+### Offline (existing JSON, no API call)
+
+```bash
+# Env: base-agent
+python .agents/mat-xrd-digitizer/scripts/run_openai_digitize.py \
+  path/to/figure_1.png \
+  --from-json path/to/figure_1.json \
+  --skip-move
+```
+
+---
+
 ## Constraints
 
 ### Approximation

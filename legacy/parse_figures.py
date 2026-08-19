@@ -525,27 +525,22 @@ def select_figure_crop_coords(
     return crop_coords
 
 
-def crop_figure_from_grobid_coords(
-    pdf_path: str | Path,
+def resolve_figure_page_clips(
+    document: pymupdf.Document,
     coords_string: str,
-    output_dir: str | Path,
-    figure_id: str,
-    dpi: int = 300,
+    *,
     padding: float = 8.0,
     padding_left: float | None = None,
     padding_top: float | None = None,
     padding_right: float | None = None,
     padding_bottom: float | None = None,
-) -> list[Path]:
+) -> list[tuple[int, pymupdf.Page, pymupdf.Rect]]:
     """
-    Render a figure region identified by GROBID coordinates.
+    Resolve GROBID coordinate boxes to padded, page-clamped clip rects.
 
-    One image is produced per page if the logical figure spans pages.
+    GROBID page numbers are 1-based; PyMuPDF pages are 0-based. Coordinates are
+    already in PDF user space and need no DPI conversion.
     """
-    pdf_path = Path(pdf_path)
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
     pad_left = (
         padding_left
         if padding_left is not None
@@ -567,49 +562,81 @@ def crop_figure_from_grobid_coords(
         else max(padding, DEFAULT_CROP_PADDING_BOTTOM)
     )
 
-    boxes = parse_grobid_coords(coords_string)
-
     boxes_by_page: dict[int, list[tuple[float, float, float, float]]] = (
         defaultdict(list)
     )
+    for page_number, x, y, width, height in parse_grobid_coords(coords_string):
+        boxes_by_page[page_number].append((x, y, x + width, y + height))
 
-    for page_number, x, y, width, height in boxes:
-        boxes_by_page[page_number].append(
-            (x, y, x + width, y + height)
-        )
+    resolved: list[tuple[int, pymupdf.Page, pymupdf.Rect]] = []
+    for page_number, page_boxes in sorted(boxes_by_page.items()):
+        if not 1 <= page_number <= document.page_count:
+            raise ValueError(
+                f"GROBID page {page_number} is outside PDF range "
+                f"1–{document.page_count}"
+            )
+
+        # GROBID pages are 1-based; PyMuPDF pages are 0-based.
+        page = document.load_page(page_number - 1)
+
+        x0 = min(box[0] for box in page_boxes) - pad_left
+        y0 = min(box[1] for box in page_boxes) - pad_top
+        x1 = max(box[2] for box in page_boxes) + pad_right
+        y1 = max(box[3] for box in page_boxes) + pad_bottom
+
+        # Keep the crop inside the visible page.
+        x0 = max(page.rect.x0, x0)
+        y0 = max(page.rect.y0, y0)
+        x1 = min(page.rect.x1, x1)
+        y1 = min(page.rect.y1, y1)
+
+        if x1 <= x0 or y1 <= y0:
+            raise ValueError(
+                f"Invalid crop on page {page_number}: "
+                f"({x0}, {y0}, {x1}, {y1})"
+            )
+
+        resolved.append((page_number, page, pymupdf.Rect(x0, y0, x1, y1)))
+
+    return resolved
+
+
+def crop_figure_from_grobid_coords(
+    pdf_path: str | Path,
+    coords_string: str,
+    output_dir: str | Path,
+    figure_id: str,
+    dpi: int = 300,
+    padding: float = 8.0,
+    padding_left: float | None = None,
+    padding_top: float | None = None,
+    padding_right: float | None = None,
+    padding_bottom: float | None = None,
+) -> list[Path]:
+    """
+    Render a figure region identified by GROBID coordinates.
+
+    One image is produced per page if the logical figure spans pages.
+    """
+    pdf_path = Path(pdf_path)
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     output_paths = []
     document = pymupdf.open(pdf_path)
 
     try:
-        for page_number, page_boxes in sorted(boxes_by_page.items()):
-            if not 1 <= page_number <= document.page_count:
-                raise ValueError(
-                    f"GROBID page {page_number} is outside PDF range "
-                    f"1–{document.page_count}"
-                )
+        clips = resolve_figure_page_clips(
+            document,
+            coords_string,
+            padding=padding,
+            padding_left=padding_left,
+            padding_top=padding_top,
+            padding_right=padding_right,
+            padding_bottom=padding_bottom,
+        )
 
-            # GROBID pages are 1-based; PyMuPDF pages are 0-based.
-            page = document.load_page(page_number - 1)
-
-            x0 = min(box[0] for box in page_boxes) - pad_left
-            y0 = min(box[1] for box in page_boxes) - pad_top
-            x1 = max(box[2] for box in page_boxes) + pad_right
-            y1 = max(box[3] for box in page_boxes) + pad_bottom
-
-            # Keep the crop inside the visible page.
-            x0 = max(page.rect.x0, x0)
-            y0 = max(page.rect.y0, y0)
-            x1 = min(page.rect.x1, x1)
-            y1 = min(page.rect.y1, y1)
-
-            if x1 <= x0 or y1 <= y0:
-                raise ValueError(
-                    f"Invalid crop for figure {figure_id} on page {page_number}"
-                )
-
-            clip = pymupdf.Rect(x0, y0, x1, y1)
-
+        for page_number, page, clip in clips:
             pixmap = page.get_pixmap(
                 clip=clip,
                 dpi=dpi,
@@ -619,7 +646,7 @@ def crop_figure_from_grobid_coords(
 
             suffix = (
                 f"_page_{page_number}"
-                if len(boxes_by_page) > 1
+                if len(clips) > 1
                 else ""
             )
 
@@ -698,3 +725,17 @@ def extract_document_figures(
         )
 
     return extracted_count
+
+
+def __getattr__(name: str):
+    """Lazy re-exports for PDF structure helpers (avoids import cycles)."""
+    if name in {
+        "extract_figure",
+        "inspect_figure_region",
+        "render_without_pdf_text",
+        "build_pdf_text_mask",
+    }:
+        import pdf_figure_structure as _pdf_figure_structure
+
+        return getattr(_pdf_figure_structure, name)
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

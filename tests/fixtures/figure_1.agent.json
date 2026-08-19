@@ -1,0 +1,195 @@
+{
+  "image_width": 904,
+  "image_height": 750,
+  "coordinate_space": "original_image_pixels",
+  "plot_bbox": [
+    68,
+    24,
+    897,
+    698
+  ],
+  "x_axis": {
+    "min": 10.0,
+    "max": 80.0
+  },
+  "y_axis": {
+    "min": 0.0,
+    "max": 250.0
+  },
+  "text_regions": [
+    {
+      "bbox": [
+        223,
+        428,
+        255,
+        507
+      ],
+      "text": "(012)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        327,
+        25,
+        367,
+        105
+      ],
+      "text": "(104)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        354,
+        331,
+        389,
+        381
+      ],
+      "text": "(110)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        414,
+        474,
+        448,
+        529
+      ],
+      "text": "(113)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        512,
+        393,
+        542,
+        467
+      ],
+      "text": "(024)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        564,
+        287,
+        596,
+        353
+      ],
+      "text": "(116)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        605,
+        504,
+        635,
+        564
+      ],
+      "text": "(112)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        655,
+        431,
+        684,
+        494
+      ],
+      "text": "(214)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        666,
+        431,
+        706,
+        494
+      ],
+      "text": "(300)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        748,
+        578,
+        760,
+        622
+      ],
+      "text": "(208)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        777,
+        477,
+        793,
+        565
+      ],
+      "text": "(10-10)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        786,
+        477,
+        812,
+        542
+      ],
+      "text": "(220)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    },
+    {
+      "bbox": [
+        797,
+        533,
+        837,
+        599
+      ],
+      "text": "(306)",
+      "orientation": "vertical",
+      "confidence": 0.95,
+      "type": "peak_annotation"
+    }
+  ],
+  "curve_count": 1,
+  "curve_layout": "single",
+  "approximate_peaks": [
+    23.5,
+    33.0,
+    35.5,
+    41.0,
+    49.0,
+    54.0,
+    57.5,
+    62.0,
+    64.0,
+    69.0,
+    72.0,
+    75.0,
+    76.0
+  ],
+  "approximate_curve": null
+}

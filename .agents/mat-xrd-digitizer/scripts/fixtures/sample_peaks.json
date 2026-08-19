@@ -1,0 +1,22 @@
+{
+  "is_xrd": true,
+  "source_image": "synthetic.png",
+  "figure_type": "xrd",
+  "curve_layout": "overlay",
+  "x_axis": {"label": "2theta", "unit": "degrees", "min": 10.0, "max": 80.0},
+  "y_axis": {"label": "intensity", "unit": "normalized", "min": 0.0, "max": 1.0},
+  "curves": [
+    {
+      "curve_id": "curve_1",
+      "label": "Sample",
+      "color": "black",
+      "intensity_normalization": "normalized_within_curve",
+      "peaks": [
+        {"2theta": 33.0, "intensity": 1.0, "fwhm": 0.3},
+        {"2theta": 36.0, "intensity": 0.55, "fwhm": 0.3},
+        {"2theta": 49.0, "intensity": 0.4, "fwhm": 0.3},
+        {"2theta": 54.0, "intensity": 0.45, "fwhm": 0.3}
+      ]
+    }
+  ]
+}

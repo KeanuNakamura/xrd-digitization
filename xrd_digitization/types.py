@@ -77,6 +77,9 @@ class CurveData:
     label: str | None = None
     warnings: list[str] = field(default_factory=list)
     detected_peaks: list[PeakRecord] = field(default_factory=list)
+    confidence: list[float] | None = None
+    source: str | None = None
+    point_sources: list[str] | None = None
 
 
 @dataclass
@@ -106,6 +109,7 @@ class DigitizationResult:
     confidence: float
     warnings: list[str] = field(default_factory=list)
     output_stem: str = "figure_1"
+    hybrid: dict[str, Any] | None = None
 
     @property
     def calibration(self) -> AxisCalibrationResult | None:

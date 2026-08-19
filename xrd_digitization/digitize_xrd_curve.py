@@ -104,6 +104,7 @@ def _clean_curve_mask(
     plot_bottom: int | None = None,
     plot_left: int | None = None,
     plot_right: int | None = None,
+    text_mask: np.ndarray | None = None,
 ) -> np.ndarray:
     """Remove axis lines, legend swatches, and text speckle from a curve mask."""
     if mask.size == 0:
@@ -144,7 +145,21 @@ def _clean_curve_mask(
         min_span = max(20, int((plot_right - plot_left) * 0.4))
         if _mask_column_coverage(kept) < min_span:
             # CC filtering removed the trace; keep morphologically cleaned mask instead.
-            return cleaned
+            kept = cleaned
+
+    # Soft text-region penalty: drop text-like components, but keep curve-like
+    # components intact where they intersect labels.
+    if text_mask is not None:
+        from xrd_digitization.text_regions import apply_text_mask_soft_penalty
+
+        kept = apply_text_mask_soft_penalty(
+            kept,
+            text_mask,
+            plot_left=plot_left,
+            plot_top=plot_top,
+            plot_right=plot_right,
+            plot_bottom=plot_bottom,
+        )
 
     return kept
 
@@ -158,6 +173,7 @@ def _build_curve_masks(
     plot_bottom: int,
     band_top: int | None = None,
     band_bottom: int | None = None,
+    text_mask: np.ndarray | None = None,
 ) -> list[tuple[str, np.ndarray]]:
     """Return all plausible curve color masks inside the plot area."""
     band_top = plot_top if band_top is None else band_top
@@ -186,6 +202,7 @@ def _build_curve_masks(
             plot_bottom=plot_bottom,
             plot_left=plot_left,
             plot_right=plot_right,
+            text_mask=text_mask,
         )
         sub = full_mask[band_top:band_bottom, plot_left:plot_right]
         coverage = _mask_column_coverage(sub)
@@ -200,6 +217,7 @@ def _build_curve_masks(
             plot_bottom=band_bottom,
             plot_left=plot_left,
             plot_right=plot_right,
+            text_mask=text_mask,
         )
         padded = np.zeros(cropped_bgr.shape[:2], dtype=np.uint8)
         padded[band_top:band_bottom, plot_left:plot_right] = auto
@@ -750,12 +768,21 @@ def digitize_xrd_curves(
     calibration: AxisCalibrationResult,
     *,
     num_points: int = 2000,
+    text_mask: np.ndarray | None = None,
+    simplify_single: bool = True,
 ) -> list[CurveData]:
     """
     Extract one or more XRD curves from a cropped plot.
 
     Returns a single curve for simple plots, multiple curves for overlay or
     stacked multi-trace figures.
+
+    ``text_mask`` is optional white-on-black metadata aligned with
+    ``plot_crop.cropped_bgr``. Intersections are soft penalties: curve-like
+    components continue through labels; text-like components are dropped.
+
+    When ``simplify_single`` is False, single-curve plots use detailed mask
+    tracing instead of Gaussian peak reconstruction.
     """
     cropped = plot_crop.cropped_bgr
     masks = _build_curve_masks(
@@ -764,20 +791,38 @@ def digitize_xrd_curves(
         plot_right=calibration.plot_right,
         plot_top=calibration.plot_top,
         plot_bottom=calibration.plot_bottom,
+        text_mask=text_mask,
     )
     masks = _filter_spurious_colored_masks(masks, calibration)
     layout = _classify_plot_layout(cropped, calibration, masks)
     curves: list[CurveData] = []
 
     if layout == "single":
-        curve = _simplify_from_best_mask(
-            cropped,
-            calibration,
-            masks,
-            num_points=num_points,
-        )
-        if curve is not None:
-            curves.append(curve)
+        if simplify_single:
+            curve = _simplify_from_best_mask(
+                cropped,
+                calibration,
+                masks,
+                num_points=num_points,
+            )
+            if curve is not None:
+                curves.append(curve)
+        else:
+            picked = _pick_best_single_mask(masks, calibration)
+            if picked is not None:
+                color_name, mask = picked
+                curve = _curve_from_mask(
+                    mask,
+                    calibration,
+                    band_top=calibration.plot_top,
+                    band_bottom=calibration.plot_bottom,
+                    curve_id="curve_1",
+                    color_name=color_name,
+                    stacked=False,
+                    num_points=num_points,
+                )
+                if curve is not None:
+                    curves.append(curve)
     elif layout == "stacked":
         colored_masks = [
             (name, mask)
@@ -835,6 +880,7 @@ def digitize_xrd_curves(
                     plot_bottom=calibration.plot_bottom,
                     band_top=band_top,
                     band_bottom=band_bottom,
+                    text_mask=text_mask,
                 )
                 picked = _pick_best_single_mask(band_masks, calibration)
                 if not picked:
@@ -977,6 +1023,68 @@ def _curve_from_mask(
         label=color_name if color_name != "auto" else None,
         warnings=sorted(set(curve_warnings)),
     )
+
+
+def digitize_raw_xrd_curve(
+    plot_crop: PlotCropResult,
+    calibration: AxisCalibrationResult,
+    *,
+    num_points: int = 2000,
+    text_mask: np.ndarray | None = None,
+) -> CurveData:
+    """
+    Extract the raw pixel-traced curve from the sophisticated digitizer.
+
+    Always uses ``_curve_from_mask`` / column tracing on the best single mask.
+    Never calls ``simplify_single_curve``, ``reconstruct_constant_width_peaks``,
+    or any peak-list regeneration path.
+    """
+    cropped = plot_crop.cropped_bgr
+    masks = _build_curve_masks(
+        cropped,
+        plot_left=calibration.plot_left,
+        plot_right=calibration.plot_right,
+        plot_top=calibration.plot_top,
+        plot_bottom=calibration.plot_bottom,
+        text_mask=text_mask,
+    )
+    masks = _filter_spurious_colored_masks(masks, calibration)
+    picked = _pick_best_single_mask(masks, calibration)
+    if picked is None:
+        return CurveData(
+            two_theta=[],
+            intensity=[],
+            warnings=["no_curve_pixels_detected", "raw_mask_trace"],
+            source="raw_mask_trace",
+        )
+
+    color_name, mask = picked
+    curve = _curve_from_mask(
+        mask,
+        calibration,
+        band_top=calibration.plot_top,
+        band_bottom=calibration.plot_bottom,
+        curve_id="curve_1",
+        color_name=color_name,
+        stacked=False,
+        num_points=num_points,
+    )
+    if curve is None:
+        return CurveData(
+            two_theta=[],
+            intensity=[],
+            warnings=["no_curve_pixels_detected", "raw_mask_trace"],
+            source="raw_mask_trace",
+        )
+
+    warnings = list(curve.warnings or [])
+    warnings.append("raw_mask_trace")
+    # Hard guarantee: never emit a peak-reconstructed curve from this entry point.
+    warnings = [w for w in warnings if w != "simplified_constant_width_peaks"]
+    curve.warnings = sorted(set(warnings))
+    curve.source = "raw_mask_trace"
+    curve.detected_peaks = []
+    return curve
 
 
 def digitize_xrd_curve(
