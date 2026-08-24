@@ -528,6 +528,39 @@ def correct_plotdigitizer_csv(
     return corrected
 
 
+def _y_scale_from_calibration(calibration: PlotDigitizerCalibration) -> float:
+    return max(
+        float(calibration.y_true_range[1] - calibration.y_true_range[0]),
+        1.0,
+    )
+
+
+def _trace_discontinuity_fraction(y: np.ndarray, y_scale: float) -> float:
+    """
+    Fraction of consecutive samples with huge |Δy| jumps.
+
+    Mid-gray cleanup ghosts make PlotDigitizer's per-column median leap between
+    the true baseline and a mid-intensity plateau; real XRD traces rarely do.
+    """
+    if len(y) < 2:
+        return 0.0
+    dy = np.abs(np.diff(y.astype(float)))
+    return float((dy > 0.2 * y_scale).mean())
+
+
+def _midscale_plateau_fraction(y: np.ndarray, y_scale: float) -> float:
+    """
+    Fraction of samples stuck near half the y-scale.
+
+    PlotDigitizer medians of (dark curve + mid-gray JPEG/cleanup ghosts) cluster
+    around ~0.5 * y_max; genuine peaks only transit that band briefly.
+    """
+    if len(y) == 0:
+        return 0.0
+    mid = 0.5 * y_scale
+    return float((np.abs(y.astype(float) - mid) < 0.05 * y_scale).mean())
+
+
 def _csv_quality_score(csv_path: Path, calibration: PlotDigitizerCalibration) -> float:
     """Higher is better: reward point count and y resolution after correction."""
     try:
@@ -554,7 +587,20 @@ def _csv_quality_score(csv_path: Path, calibration: PlotDigitizerCalibration) ->
     if len(data) > 900:
         count_penalty = (len(data) - 900) * 0.5
     raw_y_span = float(raw[:, 1].max() - raw[:, 1].min())
-    return 100.0 * y_unique + len(data) * 0.01 - count_penalty + raw_y_span * 10.0
+    y_scale = _y_scale_from_calibration(calibration)
+    y = data[:, 1]
+    # Prefer prepared black/colored curve traces over raw images whose mid-gray
+    # ghosts create high y_unique via discontinuous mid-scale plateaus.
+    discontinuity_penalty = _trace_discontinuity_fraction(y, y_scale) * 50_000.0
+    midscale_penalty = _midscale_plateau_fraction(y, y_scale) * 40_000.0
+    return (
+        100.0 * y_unique
+        + len(data) * 0.01
+        - count_penalty
+        + raw_y_span * 10.0
+        - discontinuity_penalty
+        - midscale_penalty
+    )
 
 
 def save_digitized_preview(
@@ -766,6 +812,19 @@ def _full_image_plot_bounds(
     )
 
 
+def _inset_plot_bounds(
+    plot_bounds: tuple[int, int, int, int],
+    *,
+    inset: int = 3,
+) -> tuple[int, int, int, int]:
+    """Shrink plot bounds slightly so axis spines are excluded from curve isolation."""
+    left, top, right, bottom = plot_bounds
+    inset = max(0, int(inset))
+    if right - left <= 2 * inset + 2 or bottom - top <= 2 * inset + 2:
+        return plot_bounds
+    return (left + inset, top + inset, right - inset, bottom - inset)
+
+
 def prepare_images_for_plotdigitizer(
     image_bgr: np.ndarray,
     *,
@@ -773,10 +832,15 @@ def prepare_images_for_plotdigitizer(
 ) -> list[np.ndarray]:
     """Return one or more preprocessed images to try with PlotDigitizer."""
     prepared: list[np.ndarray] = []
-    colored = _prepare_colored_curve_image(image_bgr, plot_bounds=plot_bounds)
+    bounds = (
+        _inset_plot_bounds(plot_bounds)
+        if plot_bounds is not None
+        else None
+    )
+    colored = _prepare_colored_curve_image(image_bgr, plot_bounds=bounds)
     if colored is not None:
         prepared.append(colored)
-    dark = _prepare_dark_curve_image(image_bgr, plot_bounds=plot_bounds)
+    dark = _prepare_dark_curve_image(image_bgr, plot_bounds=bounds)
     if dark is not None:
         prepared.append(dark)
     return prepared
@@ -824,7 +888,7 @@ def _plotdigitizer_quality_acceptable(
     csv_path: Path,
     pd_calibration: PlotDigitizerCalibration,
 ) -> bool:
-    """Reject PlotDigitizer runs that only recovered a flat baseline trace."""
+    """Reject PlotDigitizer runs that only recovered a flat or artifacted trace."""
     try:
         raw = np.loadtxt(csv_path)
         if raw.ndim == 1:
@@ -833,11 +897,22 @@ def _plotdigitizer_quality_acceptable(
     except Exception:
         return False
 
+    if len(corrected) < 20:
+        return False
+
     y_span = float(corrected[:, 1].max() - corrected[:, 1].min())
     target = float(pd_calibration.y_true_range[1] - pd_calibration.y_true_range[0])
     if target > 0 and y_span < target * 0.08:
         return False
-    return len(corrected) >= 20
+
+    y_scale = _y_scale_from_calibration(pd_calibration)
+    y = corrected[:, 1]
+    # Mid-gray cleanup ghosts → per-column median plateaus with huge Δy jumps.
+    if _trace_discontinuity_fraction(y, y_scale) > 0.05:
+        return False
+    if _midscale_plateau_fraction(y, y_scale) > 0.08:
+        return False
+    return True
 
 
 def build_plotdigitizer_command(

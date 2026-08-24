@@ -512,9 +512,26 @@ def _fill_missing_arithmetic_ticks(
     if not small_steps:
         return tick_pairs
 
-    step = float(np.median(small_steps))
+    # Use the same snap-step inference as label snapping so uneven gaps
+    # (e.g. 20° then 10° after a missed label) do not invent a 15° grid.
+    step = _infer_snap_step(ordered)
     if step <= 0:
         return tick_pairs
+    if not _is_normalized_unit_axis([value for _, value in ordered]):
+        # Filling must use a divisor of the observed gaps when possible.
+        median_gap = float(np.median(small_steps))
+        if abs(step - median_gap) > max(0.15, step * 0.12):
+            for candidate in sorted(COMMON_XRD_TICK_STEPS, reverse=True):
+                if candidate > median_gap + 1e-6:
+                    continue
+                if all(
+                    abs(gap / candidate - round(gap / candidate)) <= 0.15
+                    for gap in small_steps
+                ):
+                    step = candidate
+                    break
+            else:
+                step = float(np.median(small_steps))
 
     filled: list[tuple[int, float]] = [ordered[0]]
     for (x0, v0), (x1, v1) in zip(ordered, ordered[1:]):
@@ -606,18 +623,78 @@ def _repair_short_tick_labels(tick_pairs: list[tuple[int, float]]) -> list[tuple
     return repaired
 
 
+def _repair_nonmonotonic_tick_value(
+    prev: tuple[int, float],
+    candidate: tuple[int, float],
+    successor: tuple[int, float],
+) -> tuple[int, float] | None:
+    """
+    Recover an OCR value that sits at the right pixel but was misread.
+
+    Example: labels 40 … 60 with a box at the midpoint reading ``30`` (true ``50``).
+    """
+    x0, v0 = prev
+    px, _val = candidate
+    x1, v1 = successor
+    if x1 <= x0 or v1 <= v0 + 1e-6:
+        return None
+
+    expected = v0 + (px - x0) / (x1 - x0) * (v1 - v0)
+    if _is_normalized_unit_axis([v0, v1, expected]):
+        step = 0.1
+        rounded = round(expected / step) * step
+        max_align = 0.03
+    else:
+        gap = v1 - v0
+        step = 5.0 if gap >= 5.0 else 1.0
+        if gap >= 9.0:
+            # Prefer the GCD-like spacing implied by the flanking labels.
+            for candidate_step in (10.0, 5.0, 2.0, 1.0):
+                n = round(gap / candidate_step)
+                if n >= 2 and abs(gap - n * candidate_step) <= candidate_step * 0.15:
+                    step = candidate_step
+                    break
+        rounded = round(expected / step) * step
+        if step >= 1.0:
+            rounded = float(round(rounded))
+        max_align = max(0.75, step * 0.15)
+
+    if abs(expected - rounded) > max_align:
+        return None
+    if not (v0 + 1e-6 < rounded < v1 - 1e-6):
+        return None
+    return (px, float(rounded))
+
+
 def _filter_monotonic_x_tick_pairs(
     tick_pairs: list[tuple[int, float]],
 ) -> list[tuple[int, float]]:
-    """Drop OCR ticks whose values fall while pixel x increases (misreads like 45→10)."""
+    """Drop or repair OCR ticks whose values fall while pixel x increases."""
     if len(tick_pairs) < 2:
         return tick_pairs
 
     ordered = sorted(tick_pairs, key=lambda pair: pair[0])
     kept = [ordered[0]]
-    for px, val in ordered[1:]:
+    index = 1
+    while index < len(ordered):
+        px, val = ordered[index]
         if val > kept[-1][1] + 1e-6:
             kept.append((px, val))
+            index += 1
+            continue
+
+        repaired: tuple[int, float] | None = None
+        for look_ahead in range(index + 1, len(ordered)):
+            if ordered[look_ahead][1] > kept[-1][1] + 1e-6:
+                repaired = _repair_nonmonotonic_tick_value(
+                    kept[-1],
+                    (px, val),
+                    ordered[look_ahead],
+                )
+                break
+        if repaired is not None and repaired[1] > kept[-1][1] + 1e-6:
+            kept.append(repaired)
+        index += 1
     return kept
 
 
@@ -800,6 +877,29 @@ def merge_panel_x_calibration(
     )
 
 
+def _snap_distortion(values: list[float], step: float) -> float:
+    """Total absolute distance from snapping each value onto ``step``."""
+    if step <= 0:
+        return float("inf")
+    return float(sum(abs(value - round(value / step) * step) for value in values))
+
+
+def _best_common_snap_step(values: list[float], *, preferred: float) -> float:
+    """
+    Choose a standard 2θ tick step that least distorts OCR values.
+
+    Prefer coarser grids when distortion ties, and steps near ``preferred``.
+    """
+    return min(
+        COMMON_XRD_TICK_STEPS,
+        key=lambda step: (
+            _snap_distortion(values, step),
+            abs(step - preferred),
+            -step,
+        ),
+    )
+
+
 def _infer_snap_step(tick_pairs: list[tuple[int, float]]) -> float:
     values = sorted({round(value, 4) for _, value in tick_pairs})
     if len(values) < 2:
@@ -814,10 +914,24 @@ def _infer_snap_step(tick_pairs: list[tuple[int, float]]) -> float:
         return 5.0
 
     median_diff = float(np.median(diffs))
-    if median_diff >= 0.9:
-        common_step = _nearest_common_tick_step(median_diff)
-        if abs(common_step - median_diff) <= max(0.15, common_step * 0.12):
-            return common_step
+    if median_diff < 0.9:
+        return max(0.5, median_diff)
+
+    common_step = _nearest_common_tick_step(median_diff)
+    if abs(common_step - median_diff) <= max(0.15, common_step * 0.12):
+        return common_step
+
+    # Uneven gaps from missed/misread labels often yield a nonstandard median
+    # (e.g. diffs 20° and 10° → median 15°). Snapping onto that fabricated
+    # grid warps correct labels (40→45, 70→75). Prefer a common XRD step that
+    # already matches the OCR values; otherwise keep the median for unusual
+    # grids such as 7.5°.
+    if not _is_normalized_unit_axis(values):
+        best = _best_common_snap_step(values, preferred=median_diff)
+        mean_err = _snap_distortion(values, best) / max(len(values), 1)
+        if mean_err <= 0.25:
+            return float(best)
+
     return max(0.5, median_diff)
 
 
