@@ -86,6 +86,24 @@ class TickSnapTests(unittest.TestCase):
         values = [value for _, value in pairs]
         self.assertEqual(values, [5.0, 10.0, 15.0, 20.0, 25.0, 30.0])
 
+    def test_same_column_ghost_prefers_arithmetic_continuation(self) -> None:
+        """Keep 50 over a same-column OCR ghost 90 once 20/30/40 are established."""
+        raw_pairs = [
+            (172, 20.0),
+            (346, 30.0),
+            (519, 40.0),
+            (693, 90.0),  # ghost at nearly the same column as 50
+            (694, 50.0),
+            (867, 60.0),
+            (1041, 70.0),
+            (1215, 80.0),
+        ]
+        pairs = _resolve_nearby_tick_conflicts(raw_pairs)
+        self.assertEqual(
+            [value for _, value in pairs],
+            [20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0],
+        )
+
     def test_infer_snap_step_prefers_integer_five(self) -> None:
         pairs = [(114, 5.0), (630, 10.0), (1146, 15.0), (1662, 20.0), (2178, 25.0)]
         self.assertEqual(_infer_snap_step(pairs), 5.0)

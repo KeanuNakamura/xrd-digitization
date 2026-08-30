@@ -246,4 +246,27 @@ def detect_stacked_curve_bands(
             merged.append((prev[0], band[1]))
         else:
             merged.append(band)
-    return merged if len(merged) >= 2 else [(plot_top, plot_bottom)]
+
+    if len(merged) < 2:
+        return [(plot_top, plot_bottom)]
+
+    # True stacked XRD traces have multiple comparable-height bands. A dominant
+    # band plus a thin fringe (axis ticks / quiet mid-curve gap) is a single curve.
+    if not _bands_look_like_stacked_curves(merged, sub_height):
+        return [(plot_top, plot_bottom)]
+    return merged
+
+
+def _bands_look_like_stacked_curves(
+    bands: list[tuple[int, int]],
+    plot_height: int,
+) -> bool:
+    """Return True only when at least two bands look like separate stacked traces."""
+    if len(bands) < 2 or plot_height <= 0:
+        return False
+
+    heights = [bottom - top for top, bottom in bands]
+    largest = max(heights)
+    min_comparable = max(largest * 0.4, plot_height * 0.12)
+    comparable = [height for height in heights if height >= min_comparable]
+    return len(comparable) >= 2

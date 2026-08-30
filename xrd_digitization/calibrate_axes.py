@@ -449,12 +449,80 @@ def _value_span_calibration(tick_pairs: list[tuple[int, float]]) -> tuple[float,
     return x_min, x_max
 
 
+def _map_x_labels_to_crop(
+    raw_labels: list[tuple[int, float, str]],
+    *,
+    x0: int,
+    plot_width: int,
+) -> list[tuple[int, float, str]]:
+    """Map full-image x centers into crop-local coordinates."""
+    crop_labels: list[tuple[int, float, str]] = []
+    for center_x, value, raw in raw_labels:
+        rel_x = center_x - x0
+        if 0 <= rel_x <= plot_width:
+            crop_labels.append((rel_x, value, raw))
+    return crop_labels
+
+
+def _ocr_x_labels_from_band(
+    full_image_bgr: np.ndarray,
+    *,
+    band_top: int,
+    band_bottom: int,
+    x0: int,
+    x1: int,
+) -> list[tuple[int, float, str]]:
+    """OCR numeric x-axis labels from an absolute row band of the full image."""
+    height, width = full_image_bgr.shape[:2]
+    top = int(np.clip(band_top, 0, height))
+    bottom = int(np.clip(band_bottom, 0, height))
+    if bottom - top < 8:
+        return []
+
+    left = max(0, x0 - 10)
+    right = min(width, x1 + 10)
+    band = full_image_bgr[top:bottom, left:right]
+    if band.size == 0:
+        return []
+
+    gray = cv2.cvtColor(band, cv2.COLOR_BGR2GRAY)
+    binary = _preprocess_label_band(gray)
+    raw_labels = _ocr_numeric_boxes(binary, x_offset=left, scale=4.0)
+    crop_labels = _map_x_labels_to_crop(raw_labels, x0=x0, plot_width=x1 - x0)
+    if len(crop_labels) >= 2:
+        return crop_labels
+
+    import pytesseract
+
+    text = pytesseract.image_to_string(binary, config="--psm 6")
+    numbers = [float(m.group(1)) for m in NUMBER_FIND_PATTERN.finditer(text)]
+    numbers = _select_arithmetic_number_sequence(
+        [n for n in numbers if 5.0 <= n <= 120.0]
+    )
+    plot_width = x1 - x0
+    if len(numbers) >= 3 and len(numbers) > len({round(v) for _, v, _ in crop_labels}):
+        step = plot_width / max(len(numbers) - 1, 1)
+        return [
+            (
+                int(round(i * step)),
+                value,
+                str(int(value) if value.is_integer() else value),
+            )
+            for i, value in enumerate(numbers)
+        ]
+    return crop_labels
+
+
 def _ocr_tick_labels_full_image(
     full_image_bgr: np.ndarray,
     crop_bbox: tuple[int, int, int, int],
 ) -> list[tuple[int, float, str]]:
     """
     OCR x-axis labels using the crop and full-image bands, mapped to crop coordinates.
+
+    Axis-preserving cleans often place tick glyphs just below the detected crop
+    bottom (outside the axis frame). Prefer a tight below-crop strip before the
+    large lower-half band, which mixes curve ink and confuses Tesseract.
     """
     x0, y0, x1, y1 = crop_bbox
     crop = full_image_bgr[y0:y1, x0:x1]
@@ -463,37 +531,26 @@ def _ocr_tick_labels_full_image(
     if len(labels) >= 2:
         return labels
 
-    height, width = full_image_bgr.shape[:2]
+    height, _ = full_image_bgr.shape[:2]
+    # Labels commonly sit in a thin strip under the x-axis / crop bottom.
+    below_crop = _ocr_x_labels_from_band(
+        full_image_bgr,
+        band_top=max(0, y1 - 40),
+        band_bottom=height,
+        x0=x0,
+        x1=x1,
+    )
+    if len(below_crop) >= 2:
+        return below_crop
+
     band_top = max(int(height * 0.55), y0 + int((y1 - y0) * 0.55))
-    band = full_image_bgr[band_top:, max(0, x0 - 10) : min(width, x1 + 10)]
-    gray = cv2.cvtColor(band, cv2.COLOR_BGR2GRAY)
-    binary = _preprocess_label_band(gray)
-    raw_labels = _ocr_numeric_boxes(binary, x_offset=max(0, x0 - 10), scale=4.0)
-
-    crop_labels: list[tuple[int, float, str]] = []
-    for center_x, value, raw in raw_labels:
-        rel_x = center_x - x0
-        if 0 <= rel_x <= (x1 - x0):
-            crop_labels.append((rel_x, value, raw))
-
-    import pytesseract
-
-    text = pytesseract.image_to_string(binary, config="--psm 6")
-    numbers = [float(m.group(1)) for m in NUMBER_FIND_PATTERN.finditer(text)]
-    numbers = _select_arithmetic_number_sequence([n for n in numbers if 5.0 <= n <= 120.0])
-    plot_width = x1 - x0
-
-    if len(numbers) >= 3 and len(numbers) > len({round(v) for _, v, _ in crop_labels}):
-        step = plot_width / max(len(numbers) - 1, 1)
-        return [
-            (int(round(i * step)), value, str(int(value) if value.is_integer() else value))
-            for i, value in enumerate(numbers)
-        ]
-
-    if len(crop_labels) >= 2:
-        return crop_labels
-
-    return crop_labels
+    return _ocr_x_labels_from_band(
+        full_image_bgr,
+        band_top=band_top,
+        band_bottom=height,
+        x0=x0,
+        x1=x1,
+    )
 
 
 def _fill_missing_arithmetic_ticks(
@@ -940,7 +997,12 @@ def _resolve_nearby_tick_conflicts(
     *,
     max_px_gap: int = 20,
 ) -> list[tuple[int, float]]:
-    """Drop OCR ghost reads like 75.0 beside the correct 7.5 label."""
+    """Drop OCR ghost reads like 75.0 beside the correct 7.5 label.
+
+    When two values share a pixel column (e.g. 50 misread as 90), score each
+    candidate against already-accepted ticks only. Including rivals in the score
+    set makes every option look equally arithmetic and keeps the wrong first hit.
+    """
     if len(tick_pairs) < 2:
         return tick_pairs
 
@@ -965,18 +1027,34 @@ def _resolve_nearby_tick_conflicts(
             if ratio > 5.0:
                 resolved.append(min(cluster, key=lambda pair: pair[1]))
             else:
-                global_values = sorted({value for _, value in ordered})
                 best = cluster[0]
                 best_score = -1
+                best_step_err = float("inf")
+                expected_step: float | None = None
+                if len(resolved) >= 2:
+                    steps = [
+                        resolved[i + 1][1] - resolved[i][1]
+                        for i in range(len(resolved) - 1)
+                        if resolved[i + 1][1] > resolved[i][1]
+                    ]
+                    if steps:
+                        expected_step = float(np.median(steps))
+
                 for candidate in cluster:
                     candidate_values = sorted(
-                        {value for _, value in resolved}
-                        | {value for pair in cluster if pair != candidate for value in [pair[1]]}
-                        | {candidate[1]}
+                        {value for _, value in resolved} | {candidate[1]}
                     )
                     score = len(_select_arithmetic_number_sequence(candidate_values))
-                    if score > best_score:
+                    step_err = float("inf")
+                    if expected_step is not None and resolved:
+                        step_err = abs(
+                            (candidate[1] - resolved[-1][1]) - expected_step
+                        )
+                    if score > best_score or (
+                        score == best_score and step_err < best_step_err
+                    ):
                         best_score = score
+                        best_step_err = step_err
                         best = candidate
                 resolved.append(best)
         index = next_index
