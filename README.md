@@ -18,10 +18,27 @@ Install [Tesseract](https://github.com/tesseract-ocr/tesseract) for axis tick OC
 
 ## Usage
 
-Digitize a folder of figure PNGs:
+Digitize one figure PNG (primary entry point):
 
 ```bash
-python plotdigitizer_pipeline.py examples/ --png-dir --output-dir output/
+python scripts/digitize_figure.py examples/figure_3.png output/
+# → output/figure_3/figure_3.csv
+# → output/figure_3/figure_3_digitized.png
+```
+
+By default this digitizes the original image and does **not** call ClipDrop (no API credits). To remove in-plot text with ClipDrop before digitizing:
+
+```bash
+export CLIPDROP_API_KEY=...
+python scripts/digitize_figure.py examples/figure_3.png output/ --clipdrop
+```
+
+Pass `--overwrite` to replace an existing `output/<figure_id>/` directory.
+
+Digitize a folder of figure PNGs (non-recursive; skips `*_clean.png` / `*_digitized.png`):
+
+```bash
+python scripts/digitize_figure.py examples/ output/
 ```
 
 Alternate (deterministic package pipeline):
@@ -32,7 +49,7 @@ python -m xrd_digitization examples/figure_3.png --skip-classification
 
 ## Output
 
-Each figure writes a CSV of `(x, y)` points plus a `_digitized.png` overlay. Multi-curve stacked plots are split into horizontal bands with one CSV/preview per band.
+`scripts/digitize_figure.py` writes `output/<figure_id>/` containing a CSV of `(x, y)` points and a `_digitized.png` preview (plus the source PNG; with `--clipdrop`, also `<figure_id>_clean.png`). Multi-curve stacked plots are split into horizontal bands with one CSV/preview per band.
 
 ## Spectral Information Divergence (SID)
 
