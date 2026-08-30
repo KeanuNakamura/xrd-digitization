@@ -99,7 +99,7 @@ CNRS figure 1051 — original plot, reconstructed curve, and overlay against gro
 
 Many published XRD patterns label peaks with Miller indices or annotations that sit on the curve. With `--clipdrop`, the pipeline removes that in-plot text, then pastes the cleaned interior back onto the original so axis ticks and labels stay intact for OCR calibration.
 
-Example: HA diffraction pattern at 900°C (Figure 6 in Monshi et al., 2012; source `pdf_files/sample_pdfs/Scherrer_equation.pdf`, assets under `data/figures_with_text/figure_8*`).
+Example: HA diffraction pattern at 900°C (Figure 6 in Monshi et al., 2012; source `pdf_files/sample_pdfs/Scherrer_equation.pdf`).
 
 <table>
   <tr>
@@ -109,16 +109,16 @@ Example: HA diffraction pattern at 900°C (Figure 6 in Monshi et al., 2012; sour
     <td align="center" width="25%"><strong>Digitized</strong></td>
   </tr>
   <tr>
-    <td align="center"><img src="data/figures_with_text/figure_8.png" alt="Original figure 8 with Miller index labels on peaks" width="100%"/></td>
-    <td align="center"><img src="data/figures_with_text/figure_8_clean_1.png" alt="ClipDrop-cleaned plot interior with axis labels damaged" width="100%"/></td>
-    <td align="center"><img src="data/figures_with_text/figure_8_clean.png" alt="Cleaned interior composited onto original axes" width="100%"/></td>
-    <td align="center"><img src="data/figures_with_text/digitized/figure_8/figure_8_digitized.png" alt="Digitized calibrated XRD curve for figure 8" width="100%"/></td>
+    <td align="center"><img src="examples/figure_8_original.png" alt="Original figure 8 with Miller index labels on peaks" width="100%"/></td>
+    <td align="center"><img src="examples/figure_8_clean.png" alt="ClipDrop-cleaned plot interior with axis labels damaged" width="100%"/></td>
+    <td align="center"><img src="examples/figure_8_axes_restored.png" alt="Cleaned interior composited onto original axes" width="100%"/></td>
+    <td align="center"><img src="examples/figure_8_digitized.png" alt="Digitized calibrated XRD curve for figure 8" width="100%"/></td>
   </tr>
 </table>
 
 1. **Original** — peak labels such as `(211)` and `(300)` overlap the curve.
 2. **Clean** — ClipDrop clears in-plot text from the plot interior (axis margins can be damaged if cleaned alone).
 3. **Axes restored** — the cleaned interior is pasted back into the original so tick labels and axis titles remain byte-identical for calibration.
-4. **Digitized** — PlotDigitizer traces the cleaned curve into calibrated CSV + preview (`data/figures_with_text/digitized/figure_8/`).
+4. **Digitized** — PlotDigitizer traces the cleaned curve into calibrated CSV + preview.
 
 > Monshi, A., Foroughi, M. R., & Monshi, M. R. (2012). Modified Scherrer Equation to Estimate More Accurately Nano-Crystallite Size Using XRD. *World Journal of Nano Science and Engineering*, *2*, 154–160. https://doi.org/10.4236/wjnse.2012.23020
