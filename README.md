@@ -33,18 +33,10 @@ export CLIPDROP_API_KEY=...
 python scripts/digitize_figure.py examples/figure_3.png output/ --clipdrop
 ```
 
-Pass `--overwrite` to replace an existing `output/<figure_id>/` directory.
-
-Digitize a folder of figure PNGs (non-recursive; skips `*_clean.png` / `*_digitized.png`):
+Digitize a folder of figure PNGs:
 
 ```bash
 python scripts/digitize_figure.py examples/ output/
-```
-
-Alternate (deterministic package pipeline):
-
-```bash
-python -m xrd_digitization examples/figure_3.png --skip-classification
 ```
 
 ## Output
@@ -99,7 +91,7 @@ CNRS figure 1051 — original plot, reconstructed curve, and overlay against gro
 
 Many published XRD patterns label peaks with Miller indices or annotations that sit on the curve. With `--clipdrop`, the pipeline removes that in-plot text, then pastes the cleaned interior back onto the original so axis ticks and labels stay intact for OCR calibration.
 
-Example: HA diffraction pattern at 900°C (Figure 6 in Monshi et al., 2012; source `pdf_files/sample_pdfs/Scherrer_equation.pdf`).
+Example: HA diffraction pattern at 900°C.
 
 <table>
   <tr>
