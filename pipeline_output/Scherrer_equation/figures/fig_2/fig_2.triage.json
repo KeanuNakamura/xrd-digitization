@@ -1,0 +1,14 @@
+{
+  "digitizable": false,
+  "curve_count": 5,
+  "curve_layout": "stacked",
+  "needs_clipdrop": true,
+  "reason": "The plot contains five stacked curves with in-plot text annotations overlapping the top curve.",
+  "raw": {
+    "digitizable": false,
+    "curve_count": 5,
+    "curve_layout": "stacked",
+    "needs_clipdrop": true,
+    "reason": "The plot contains five stacked curves with in-plot text annotations overlapping the top curve."
+  }
+}

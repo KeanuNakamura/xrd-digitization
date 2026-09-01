@@ -18,7 +18,21 @@ Install [Tesseract](https://github.com/tesseract-ocr/tesseract) for axis tick OC
 
 ## Usage
 
-Digitize one figure PNG (primary entry point):
+### PDF → scrape → digitize (end-to-end)
+
+Requires a running [GROBID](https://grobid.readthedocs.io/) server, `OPENAI_API_KEY` (triage), and `CLIPDROP_API_KEY` only when triage decides in-plot text must be removed.
+
+```bash
+export OPENAI_API_KEY=...
+export CLIPDROP_API_KEY=...   # optional until a figure needs ClipDrop
+
+python scripts/scrape_and_digitize.py paper.pdf output/
+python scripts/scrape_and_digitize.py pdf_files/ output/
+```
+
+For each PDF, writes `output/<stem>/` with `figures/<figure_id>/` (original PNG, triage JSON, and digitized CSV/PNG when digitizable), `extra/` (GROBID TEI/records), and `digitization_manifest.json`. OpenAI skips multi-curve figures; single-curve figures are digitized via `scripts/digitize_figure.py` (with ClipDrop when needed).
+
+### Digitize one figure PNG
 
 ```bash
 python scripts/digitize_figure.py examples/figure_3.png output/

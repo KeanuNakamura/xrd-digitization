@@ -1,0 +1,14 @@
+{
+  "digitizable": true,
+  "curve_count": 1,
+  "curve_layout": "single",
+  "needs_clipdrop": true,
+  "reason": "Single continuous curve with multiple in-plot peak label annotations overlapping the curve.",
+  "raw": {
+    "digitizable": true,
+    "curve_count": 1,
+    "curve_layout": "single",
+    "needs_clipdrop": true,
+    "reason": "Single continuous curve with multiple in-plot peak label annotations overlapping the curve."
+  }
+}

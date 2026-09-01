@@ -1,0 +1,44 @@
+{
+  "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/Scherrer_equation.pdf",
+  "output_directory": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation",
+  "figures_total": 2,
+  "digitized": 1,
+  "skipped": 1,
+  "failed": 0,
+  "figures": [
+    {
+      "figure_id": "fig_2",
+      "figure_dir": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2",
+      "source_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.png",
+      "status": "skipped_not_digitizable",
+      "triage": {
+        "digitizable": false,
+        "curve_count": 5,
+        "curve_layout": "stacked",
+        "needs_clipdrop": true,
+        "reason": "The plot contains five stacked curves with in-plot text annotations overlapping the top curve.",
+        "path": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.triage.json"
+      }
+    },
+    {
+      "figure_id": "fig_6_2",
+      "figure_dir": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2",
+      "source_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.png",
+      "status": "digitized",
+      "triage": {
+        "digitizable": true,
+        "curve_count": 1,
+        "curve_layout": "single",
+        "needs_clipdrop": true,
+        "reason": "Single continuous curve with multiple in-plot peak label annotations overlapping the curve.",
+        "path": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.triage.json"
+      },
+      "use_clipdrop": true,
+      "outputs": {
+        "csv": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.csv",
+        "digitized_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2_digitized.png",
+        "clean_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2_clean.png"
+      }
+    }
+  ]
+}
