@@ -1128,6 +1128,7 @@ def extract_figure(
     experimental_vector_reconstruction: bool = False,
     removal_method: RemovalMethod = DEFAULT_REMOVAL_METHOD,
     create_preprocessed: bool = True,
+    caption_coords: str | None = None,
 ) -> dict[str, Any]:
     """
     Extract a figure region with structure diagnostics and text-region masks.
@@ -1185,6 +1186,7 @@ def extract_figure(
             padding_top=padding_top,
             padding_right=padding_right,
             padding_bottom=padding_bottom,
+            caption_coords=caption_coords,
         )
         page_count_in_figure = len(clips)
 

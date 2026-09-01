@@ -252,6 +252,7 @@ def preprocess_paper(
                 dpi=None if zoom is not None else dpi,
                 zoom=zoom,
                 removal_method=removal_method,  # type: ignore[arg-type]
+                caption_coords=figure.get("coords"),
             )
         except Exception as exc:
             LOGGER.exception("Failed %s/%s: %s", paper_dir.name, figure_id, exc)

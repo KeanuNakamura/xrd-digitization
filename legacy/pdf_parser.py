@@ -46,7 +46,13 @@ XRD_KEYWORDS = {
     "x-ray diffraction",
     "x ray diffraction",
     "powder diffraction",
+    "diffraction",
     "diffraction pattern",
+    "diffraction patterns",
+    "diffraction plane",
+    "diffraction planes",
+    "diffraction peak",
+    "diffraction peaks",
     "diffractogram",
     "diffractograms",
     "2θ",
@@ -56,7 +62,6 @@ XRD_KEYWORDS = {
     "rietveld refinement",
     "bragg",
     "bragg peak",
-    "diffraction peak",
     "xrd pattern",
     "pxrd",
     "synchrotron diffraction",
@@ -771,7 +776,14 @@ def score_xrd_text(text: str) -> float:
         "2 theta": 3.0,
         "2θ": 3.0,
         "bragg": 2.0,
+        # Captions often say "diffraction planes/peaks" without "XRD" or
+        # "diffraction pattern"; bare "diffraction" is medium-strong so it
+        # still needs a little extra signal (figure label, planes, etc.).
+        "diffraction": 2.0,
         "diffraction pattern": 3.0,
+        "diffraction patterns": 3.0,
+        "diffraction peak": 3.0,
+        "diffraction peaks": 3.0,
         "xrd pattern": 4.0,
         "pxrd": 4.0,
     }

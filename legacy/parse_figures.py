@@ -23,6 +23,10 @@ DEFAULT_CROP_PADDING_LEFT = 12.0
 DEFAULT_CROP_PADDING_TOP = 8.0
 DEFAULT_CROP_PADDING_RIGHT = 8.0
 DEFAULT_CROP_PADDING_BOTTOM = 12.0
+# Keep a tiny gap so padded crops do not swallow caption baselines. Axis-label
+# image strips often end only a few points above the caption, so this must stay
+# small — much smaller than the text-expansion caption_gap.
+CAPTION_CROP_CLEARANCE = 1.0
 
 
 class FigureLike(Protocol):
@@ -228,7 +232,9 @@ def _union_drawing_rects_for_caption(
         if rect is None:
             continue
 
-        if rect.y1 > caption_y0 - caption_gap:
+        # Keep drawings that end just above the caption (axis ticks / frames).
+        # Only skip paths that start at or below the caption top.
+        if rect.y0 >= caption_y0:
             continue
 
         overlap_x0 = max(rect.x0, caption_x0)
@@ -246,6 +252,15 @@ def _union_drawing_rects_for_caption(
     union_rect = pymupdf.Rect(candidate_rects[0])
     for rect in candidate_rects[1:]:
         union_rect.include_rect(rect)
+
+    # Do not let path unions spill into the caption itself.
+    max_y1 = caption_y0 - CAPTION_CROP_CLEARANCE
+    if union_rect.y1 > max_y1:
+        if union_rect.y0 >= max_y1:
+            return None
+        union_rect.y1 = max_y1
+    if union_rect.height < MIN_GRAPHIC_HEIGHT or union_rect.width < MIN_GRAPHIC_WIDTH:
+        return None
 
     return _expand_rect_for_axis_labels(
         page,
@@ -307,13 +322,23 @@ def _select_image_band_for_caption(
     caption_gap: float = 12.0,
     min_overlap_ratio: float = 0.2,
 ) -> pymupdf.Rect | None:
+    """
+    Pick the image band sitting just above a caption.
+
+    ``caption_gap`` is retained for call-site compatibility; strip inclusion is
+    based on whether the strip starts above the caption. Publishers often
+    rasterize x-axis tick labels into a final strip that ends only a few points
+    above the caption, so requiring a large bottom clearance cuts those values.
+    """
+    _ = caption_gap  # inclusion uses caption top; see docstring
     caption_width = max(caption_x1 - caption_x0, 1.0)
-    max_image_bottom = caption_y0 - caption_gap
 
     candidate_rects: list[pymupdf.Rect] = []
 
     for rect in image_rects:
-        if rect.y1 > max_image_bottom:
+        # Include strips that end near the caption (axis ticks). Skip only
+        # images that begin at/below the caption top.
+        if rect.y0 >= caption_y0:
             continue
 
         overlap_x0 = max(rect.x0, caption_x0)
@@ -330,8 +355,15 @@ def _select_image_band_for_caption(
         return None
 
     best_band: pymupdf.Rect | None = None
+    max_y1 = caption_y0 - CAPTION_CROP_CLEARANCE
 
     for band in _group_rects_into_bands(candidate_rects):
+        if band.y1 > max_y1:
+            if band.y0 >= max_y1:
+                continue
+            band = pymupdf.Rect(band)
+            band.y1 = max_y1
+
         area = band.width * band.height
 
         if area < MIN_IMAGE_BAND_AREA or band.height < MIN_IMAGE_BAND_HEIGHT:
@@ -469,6 +501,20 @@ def infer_graphic_coords_from_pdf(
     return format_grobid_coords(inferred_boxes)
 
 
+def _caption_top_by_page(
+    figure_coords: str | None,
+) -> dict[int, float]:
+    """Map 1-based page number → top of caption boxes on that page."""
+    if not figure_coords or not figure_coords.strip():
+        return {}
+
+    tops: dict[int, float] = {}
+    for page_number, _x, y, _width, _height in parse_grobid_coords(figure_coords):
+        prev = tops.get(page_number)
+        tops[page_number] = y if prev is None else min(prev, y)
+    return tops
+
+
 def select_figure_crop_coords(
     figure_coords: str | None,
     graphic_coords: str | None,
@@ -534,12 +580,19 @@ def resolve_figure_page_clips(
     padding_top: float | None = None,
     padding_right: float | None = None,
     padding_bottom: float | None = None,
+    caption_coords: str | None = None,
+    max_y1_by_page: dict[int, float] | None = None,
 ) -> list[tuple[int, pymupdf.Page, pymupdf.Rect]]:
     """
     Resolve GROBID coordinate boxes to padded, page-clamped clip rects.
 
     GROBID page numbers are 1-based; PyMuPDF pages are 0-based. Coordinates are
     already in PDF user space and need no DPI conversion.
+
+    When ``caption_coords`` (or ``max_y1_by_page``) is provided, padded bottoms
+    are clamped so crops do not swallow captions. This matters when the plot's
+    own bottom strip already ends close to the caption and default bottom
+    padding would otherwise overlap it.
     """
     pad_left = (
         padding_left
@@ -562,6 +615,12 @@ def resolve_figure_page_clips(
         else max(padding, DEFAULT_CROP_PADDING_BOTTOM)
     )
 
+    if max_y1_by_page is None and caption_coords:
+        max_y1_by_page = {
+            page: top - CAPTION_CROP_CLEARANCE
+            for page, top in _caption_top_by_page(caption_coords).items()
+        }
+
     boxes_by_page: dict[int, list[tuple[float, float, float, float]]] = (
         defaultdict(list)
     )
@@ -583,6 +642,9 @@ def resolve_figure_page_clips(
         y0 = min(box[1] for box in page_boxes) - pad_top
         x1 = max(box[2] for box in page_boxes) + pad_right
         y1 = max(box[3] for box in page_boxes) + pad_bottom
+
+        if max_y1_by_page and page_number in max_y1_by_page:
+            y1 = min(y1, max_y1_by_page[page_number])
 
         # Keep the crop inside the visible page.
         x0 = max(page.rect.x0, x0)
@@ -612,6 +674,7 @@ def crop_figure_from_grobid_coords(
     padding_top: float | None = None,
     padding_right: float | None = None,
     padding_bottom: float | None = None,
+    caption_coords: str | None = None,
 ) -> list[Path]:
     """
     Render a figure region identified by GROBID coordinates.
@@ -634,6 +697,7 @@ def crop_figure_from_grobid_coords(
             padding_top=padding_top,
             padding_right=padding_right,
             padding_bottom=padding_bottom,
+            caption_coords=caption_coords,
         )
 
         for page_number, page, clip in clips:
@@ -707,6 +771,7 @@ def extract_document_figures(
                 figure_id=figure_id,
                 dpi=dpi,
                 padding=padding,
+                caption_coords=figure.coords,
             )
         except (OSError, ValueError, pymupdf.FileDataError) as exc:
             LOGGER.warning(

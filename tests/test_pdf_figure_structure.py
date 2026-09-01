@@ -675,6 +675,66 @@ class PdfFigureStructureTests(unittest.TestCase):
             finally:
                 document.close()
 
+    def test_scherrer_crops_include_x_axis_tick_strip(self) -> None:
+        """Rasterized axis strips just above captions must stay in the crop."""
+        pdf = ROOT / "pdf_files" / "sample_pdfs" / "Scherrer_equation.pdf"
+        parsed = (
+            ROOT
+            / "grobid_output"
+            / "sample_pdfs"
+            / "Scherrer_equation"
+            / "extra"
+            / "Scherrer_equation.parsed.json"
+        )
+        if not pdf.exists() or not parsed.exists():
+            self.skipTest("sample Scherrer_equation assets not available")
+
+        from parse_figures import (
+            CAPTION_CROP_CLEARANCE,
+            parse_grobid_coords,
+            resolve_figure_page_clips,
+            select_figure_crop_coords,
+        )
+
+        doc_json = json.loads(parsed.read_text(encoding="utf-8"))
+        # Bottom embedded strips end ~6pt above the caption; the old 12pt
+        # clearance dropped them and clipped tick values (20–50).
+        expected_bottoms = {
+            "fig_2": 318.0,
+            "fig_6_2": 611.0,
+        }
+        document = pymupdf.open(pdf)
+        try:
+            for figure_id, min_y1 in expected_bottoms.items():
+                fig = next(
+                    f for f in doc_json["figures"] if f["figure_id"] == figure_id
+                )
+                coords = select_figure_crop_coords(
+                    fig.get("coords"), fig.get("graphic_coords"), pdf_path=pdf
+                )
+                self.assertIsNotNone(coords)
+                crop_y1 = max(
+                    y + h for _page, _x, y, _w, h in parse_grobid_coords(coords)
+                )
+                self.assertGreaterEqual(crop_y1, min_y1)
+
+                caption_y0 = min(
+                    y for _page, _x, y, _w, _h in parse_grobid_coords(fig["coords"])
+                )
+                clips = resolve_figure_page_clips(
+                    document,
+                    coords,
+                    caption_coords=fig["coords"],
+                )
+                self.assertEqual(len(clips), 1)
+                _page_number, _page, clip = clips[0]
+                self.assertGreaterEqual(clip.y1, min_y1)
+                self.assertLessEqual(
+                    clip.y1, caption_y0 - CAPTION_CROP_CLEARANCE + 1e-6
+                )
+        finally:
+            document.close()
+
 
 class RasterTextDetectionTests(unittest.TestCase):
     def test_rejects_plot_sized_short_word_box(self) -> None:
