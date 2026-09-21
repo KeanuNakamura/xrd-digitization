@@ -366,6 +366,27 @@ def _fit_y_calibration(
     return float(y_min), float(y_max), "ocr_linear_regression", confidence
 
 
+def _tick_label_quality(labels: list[tuple[int, float, str]]) -> tuple[int, int, float]:
+    """Rank OCR tick sets: (arith_len, n_labels, -span_penalty). Higher is better."""
+    if not labels:
+        return (0, 0, 0.0)
+    values = [float(v) for _, v, _ in labels]
+    seq = _select_arithmetic_number_sequence(values)
+    span = max(values) - min(values) if values else 0.0
+    # Prefer typical powder-XRD spans; penalize Miller-index-like outliers.
+    span_penalty = 0.0
+    if span > 100.0:
+        span_penalty += span - 100.0
+    if any(v > 90.0 for v in values) and len(seq) < 4:
+        span_penalty += 20.0
+    step_ok = 0
+    if len(seq) >= 2:
+        step = seq[1] - seq[0]
+        if any(abs(step - s) < 0.2 for s in COMMON_XRD_TICK_STEPS):
+            step_ok = 1
+    return (len(seq) + step_ok, len(labels), -span_penalty)
+
+
 def _ocr_tick_labels_from_image(
     image_bgr: np.ndarray,
     *,
@@ -380,21 +401,30 @@ def _ocr_tick_labels_from_image(
     gray = cv2.cvtColor(band, cv2.COLOR_BGR2GRAY)
     binary = _preprocess_label_band(gray)
     labels = _ocr_numeric_boxes(binary, x_offset=0, y_offset=band_top, scale=4.0)
-    if len(labels) >= 2:
+    if len(labels) >= 2 and _tick_label_quality(labels)[0] >= 3:
         return labels
 
     import pytesseract
 
     text = pytesseract.image_to_string(binary, config="--psm 6")
     numbers = [float(m.group(1)) for m in NUMBER_FIND_PATTERN.finditer(text)]
-    numbers = sorted({n for n in numbers if 5.0 <= n <= 120.0})
-    if len(numbers) >= 2:
-        width = image_bgr.shape[1]
-        step = width / max(len(numbers) - 1, 1)
-        return [
-            (int(round(i * step)), value, str(int(value) if value.is_integer() else value))
-            for i, value in enumerate(numbers)
-        ]
+    numbers = _select_arithmetic_number_sequence(
+        [n for n in numbers if 5.0 <= n <= 90.0]
+    )
+    # Only invent evenly spaced positions for a clear XRD tick sequence.
+    if len(numbers) >= 3:
+        step = numbers[1] - numbers[0]
+        if any(abs(step - s) < 0.2 for s in COMMON_XRD_TICK_STEPS):
+            width = image_bgr.shape[1]
+            spacing = width / max(len(numbers) - 1, 1)
+            return [
+                (
+                    int(round(i * spacing)),
+                    value,
+                    str(int(value) if value.is_integer() else value),
+                )
+                for i, value in enumerate(numbers)
+            ]
     return labels
 
 
@@ -523,34 +553,41 @@ def _ocr_tick_labels_full_image(
     Axis-preserving cleans often place tick glyphs just below the detected crop
     bottom (outside the axis frame). Prefer a tight below-crop strip before the
     large lower-half band, which mixes curve ink and confuses Tesseract.
+
+    Always score multiple band candidates — crop-interior OCR can latch onto
+    Miller indices (e.g. 103, 112) and must not block a better below-axis band.
     """
     x0, y0, x1, y1 = crop_bbox
     crop = full_image_bgr[y0:y1, x0:x1]
-
-    labels = _ocr_tick_labels_from_image(crop)
-    if len(labels) >= 2:
-        return labels
-
     height, _ = full_image_bgr.shape[:2]
-    # Labels commonly sit in a thin strip under the x-axis / crop bottom.
-    below_crop = _ocr_x_labels_from_band(
-        full_image_bgr,
-        band_top=max(0, y1 - 40),
-        band_bottom=height,
-        x0=x0,
-        x1=x1,
-    )
-    if len(below_crop) >= 2:
-        return below_crop
 
+    candidates: list[list[tuple[int, float, str]]] = [
+        _ocr_tick_labels_from_image(crop),
+        _ocr_x_labels_from_band(
+            full_image_bgr,
+            band_top=max(0, y1 - 40),
+            band_bottom=height,
+            x0=x0,
+            x1=x1,
+        ),
+    ]
     band_top = max(int(height * 0.55), y0 + int((y1 - y0) * 0.55))
-    return _ocr_x_labels_from_band(
-        full_image_bgr,
-        band_top=band_top,
-        band_bottom=height,
-        x0=x0,
-        x1=x1,
+    candidates.append(
+        _ocr_x_labels_from_band(
+            full_image_bgr,
+            band_top=band_top,
+            band_bottom=height,
+            x0=x0,
+            x1=x1,
+        )
     )
+    ranked = sorted(
+        candidates,
+        key=_tick_label_quality,
+        reverse=True,
+    )
+    best = ranked[0] if ranked else []
+    return best if _tick_label_quality(best)[0] >= 2 else (best or [])
 
 
 def _fill_missing_arithmetic_ticks(

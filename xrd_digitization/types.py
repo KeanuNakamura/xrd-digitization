@@ -40,6 +40,14 @@ class PlotPanel:
     index: int
     bbox: tuple[int, int, int, int]
     label: str | None = None
+    plot_type: str | None = None
+    digitizable_after_split: bool = True
+    label_confidence: float = 0.0
+    detection_method: str | None = None
+    # Exact axes/plot frame before padding (figure coordinates).
+    axes_bbox: tuple[int, int, int, int] | None = None
+    # Padded source crop used for OCR/calibration (defaults to bbox).
+    panel_source_bbox: tuple[int, int, int, int] | None = None
 
 
 @dataclass

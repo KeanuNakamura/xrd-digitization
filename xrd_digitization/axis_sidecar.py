@@ -25,8 +25,10 @@ from xrd_digitization.types import AxisCalibrationResult, PlotCropResult
 
 LOGGER = logging.getLogger(__name__)
 
-MIN_OCR_TICK_PAIRS = 2
+MIN_OCR_TICK_PAIRS = 3
 MIN_OCR_CONFIDENCE = 0.55
+MAX_X_SPAN_DEG = 120.0
+MIN_X_SPAN_DEG = 15.0
 SIDECAR_SCHEMA_VERSION = 1
 
 
@@ -128,6 +130,22 @@ def x_calibration_is_usable(
         reasons.append(f"low_confidence:{calibration.confidence:.3f}")
     if calibration.x_max <= calibration.x_min:
         reasons.append("invalid_x_range")
+    else:
+        span = float(calibration.x_max) - float(calibration.x_min)
+        if span < MIN_X_SPAN_DEG:
+            reasons.append(f"x_span_too_small:{span:.1f}")
+        if span > MAX_X_SPAN_DEG:
+            reasons.append(f"x_span_too_large:{span:.1f}")
+    # Two-point / non-arithmetic fits often latch onto Miller indices.
+    values = [float(v) for _, v in calibration.tick_pairs]
+    if values:
+        sequence = _select_arithmetic_number_sequence(values)
+        if len(sequence) < min(min_ticks, len(values)):
+            reasons.append("x_ticks_not_arithmetic")
+        elif len(sequence) >= 2:
+            step = sequence[1] - sequence[0]
+            if step > 25.0 and len(sequence) < 4:
+                reasons.append(f"x_tick_step_too_large:{step:.1f}")
     return (not reasons), reasons
 
 

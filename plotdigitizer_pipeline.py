@@ -1020,11 +1020,230 @@ def run_plotdigitizer(
     return True, None
 
 
+def digitize_band_with_shared_x(
+    band_img: np.ndarray,
+    shared_calibration: AxisCalibrationResult,
+    *,
+    output_dir: Path,
+    stem: str,
+    source_image: Path,
+    attempts_dir: Path | None = None,
+) -> BandDigitizationResult:
+    """
+    Digitize one isolated stacked-curve band using shared full-plot X calibration.
+
+    ``shared_calibration`` must carry the original figure's ``x_min``/``x_max`` and
+    ``plot_left``/``plot_right``. Only the Y plot bounds are remapped into the
+    band crop coordinate system.
+    """
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    own_attempts = attempts_dir is None
+    if attempts_dir is None:
+        attempts_dir = Path(tempfile.mkdtemp(prefix=f"{stem}_pd_attempts_"))
+    attempts_dir = Path(attempts_dir)
+    attempts_dir.mkdir(parents=True, exist_ok=True)
+
+    band_warnings: list[str] = []
+    csv_path = output_dir / f"{stem}.csv"
+    plot_path = output_dir / f"{stem}_digitized.png"
+    temp_path: Path | None = None
+
+    try:
+        with tempfile.NamedTemporaryFile(
+            suffix=".png",
+            delete=False,
+            prefix=f"{stem}_",
+        ) as handle:
+            temp_path = Path(handle.name)
+        cv2.imwrite(str(temp_path), band_img)
+
+        band_height = band_img.shape[0]
+        margin = min(BAND_PADDING, max(1, band_height // 20))
+        band_calibration = replace(
+            shared_calibration,
+            plot_top=margin,
+            plot_bottom=max(margin + 1, band_height - margin),
+            y_min=None,
+            y_max=None,
+            y_method="relative",
+            y_tick_pairs=[],
+        )
+
+        best_csv: Path | None = None
+        best_score = -1.0
+        best_pd_calibration: PlotDigitizerCalibration | None = None
+        error: str | None = None
+
+        try:
+            pd_calibration = build_plotdigitizer_calibration(
+                band_calibration,
+                image_height=band_height,
+                frame_offset_x=0,
+                frame_offset_y=0,
+                full_image_bgr=None,
+                crop_bbox=None,
+            )
+        except ValueError as exc:
+            return BandDigitizationResult(
+                stem=stem,
+                source_image=source_image,
+                csv_path=csv_path,
+                plot_path=None,
+                data_points=[],
+                locations=[],
+                calibration=_calibration_summary(band_calibration),
+                warnings=[str(exc)],
+                success=False,
+                error=str(exc),
+            )
+
+        invert_image = should_invert_image(band_img)
+        grid_detected = should_remove_grid(band_img, band_calibration)
+        # Always try both invert settings; thin colored-on-white bands can be
+        # misclassified as dark after preprocess/grid heuristics.
+        attempt_configs: list[tuple[bool, bool]] = [
+            (False, False),
+            (True, False),
+            (False, True),
+            (True, True),
+        ]
+        # Prefer the heuristic invert first for speed.
+        if invert_image:
+            attempt_configs = [
+                (False, True),
+                (True, True),
+                (False, False),
+                (True, False),
+            ]
+        if grid_detected:
+            band_warnings.append("grid_detected")
+
+        # Also try prepared black-on-white images for colored and dark traces.
+        prepared_sources: list[tuple[Path, np.ndarray]] = [(temp_path, band_img)]
+        prepared_candidates = [
+            _prepare_colored_curve_image(band_img),
+            _prepare_dark_curve_image(band_img),
+        ]
+        prepared_paths: list[Path] = []
+        for prepared_index, prepared in enumerate(prepared_candidates):
+            if prepared is None:
+                continue
+            with tempfile.NamedTemporaryFile(
+                suffix=".png",
+                delete=False,
+                prefix=f"{stem}_prep{prepared_index}_",
+            ) as handle:
+                prepared_path = Path(handle.name)
+            cv2.imwrite(str(prepared_path), prepared)
+            prepared_paths.append(prepared_path)
+            prepared_sources.append((prepared_path, prepared))
+
+        for source_index, (source_path, source_img) in enumerate(prepared_sources):
+            for attempt_index, (remove_grid, invert) in enumerate(attempt_configs):
+                attempt_csv = attempts_dir / f"{stem}.s{source_index}.a{attempt_index}.csv"
+                attempt_ok, attempt_error = run_plotdigitizer(
+                    source_path,
+                    pd_calibration.points,
+                    output=attempt_csv,
+                    plot_file=None,
+                    remove_grid=remove_grid,
+                    invert_image=invert,
+                )
+                if not attempt_ok:
+                    error = attempt_error
+                    attempt_csv.unlink(missing_ok=True)
+                    continue
+                score = _csv_quality_score(attempt_csv, pd_calibration)
+                if score > best_score:
+                    best_score = score
+                    if best_csv is not None and best_csv != attempt_csv:
+                        best_csv.unlink(missing_ok=True)
+                    best_csv = attempt_csv
+                    best_pd_calibration = pd_calibration
+                    error = None
+                elif attempt_csv != best_csv:
+                    attempt_csv.unlink(missing_ok=True)
+
+        for prepared_path in prepared_paths:
+            prepared_path.unlink(missing_ok=True)
+
+        if (
+            best_csv is not None
+            and best_pd_calibration is not None
+            and not _plotdigitizer_quality_acceptable(best_csv, best_pd_calibration)
+        ):
+            # Stacked bands are often short/noisy; keep the best CSV with a warning
+            # rather than discarding the only available trace.
+            band_warnings.append("plotdigitizer_low_quality_trace_kept")
+
+        if best_pd_calibration is None:
+            msg = error or "plotdigitizer_failed"
+            band_warnings.append(msg)
+            return BandDigitizationResult(
+                stem=stem,
+                source_image=source_image,
+                csv_path=csv_path,
+                plot_path=None,
+                data_points=[],
+                locations=[],
+                calibration=_calibration_summary(band_calibration),
+                warnings=band_warnings,
+                success=False,
+                error=msg,
+            )
+
+        band_warnings.extend(best_pd_calibration.warnings)
+        success = best_csv is not None
+        if success and best_csv is not None:
+            if best_csv != csv_path:
+                shutil.copy2(best_csv, csv_path)
+                best_csv.unlink(missing_ok=True)
+            try:
+                corrected = correct_plotdigitizer_csv(csv_path, best_pd_calibration)
+                save_digitized_preview(csv_path, plot_path, title=stem)
+                band_warnings.append(
+                    f"plotdigitizer_quality_score={best_score:.0f},"
+                    f"points={len(corrected)},"
+                    f"y_unique={len(np.unique(np.round(corrected[:, 1], 1)))}"
+                )
+            except Exception as exc:
+                success = False
+                error = f"post_processing_failed: {exc}"
+                band_warnings.append(str(exc))
+        elif error is None:
+            error = "plotdigitizer_failed"
+
+        if not success:
+            band_warnings.append(error or "plotdigitizer_failed")
+
+        return BandDigitizationResult(
+            stem=stem,
+            source_image=source_image,
+            csv_path=csv_path,
+            plot_path=plot_path if success else None,
+            data_points=best_pd_calibration.points.data_points,
+            locations=best_pd_calibration.points.locations,
+            calibration=_calibration_summary(band_calibration, best_pd_calibration),
+            warnings=band_warnings,
+            success=success,
+            error=None if success else (error or "plotdigitizer_failed"),
+        )
+    finally:
+        if temp_path is not None:
+            temp_path.unlink(missing_ok=True)
+        if own_attempts:
+            shutil.rmtree(attempts_dir, ignore_errors=True)
+
+
 def digitize_figure_image(
     image_path: Path,
     output_dir: Path,
     *,
     figure_id: str | None = None,
+    force_single_band: bool = False,
+    axes_sidecar_path: Path | None = None,
+    require_axes_sidecar: bool = False,
 ) -> FigureDigitizationResult:
     """Calibrate, split stacked bands, and run PlotDigitizer on one figure PNG."""
     figure_id = figure_id or image_path.stem
@@ -1034,14 +1253,38 @@ def digitize_figure_image(
     if image_bgr is None:
         raise ValueError(f"Could not load image: {image_path}")
 
-    plot_crop = crop_plot_area(image_bgr)
-    warnings.extend(plot_crop.warnings)
+    from xrd_digitization.axis_sidecar import AxisSidecarError, load_sidecar_for_digitize
 
-    calibration = calibrate_axes(plot_crop, full_image_bgr=image_bgr)
-    warnings.extend(calibration.warnings)
+    try:
+        loaded = load_sidecar_for_digitize(
+            image_path,
+            image_bgr,
+            axes_sidecar_path=axes_sidecar_path,
+            require_usable_x=True,
+        )
+    except AxisSidecarError as exc:
+        if require_axes_sidecar:
+            raise
+        LOGGER.warning("Axis sidecar unusable (%s); recalibrating", exc)
+        loaded = None
+    if loaded is None and require_axes_sidecar:
+        raise AxisSidecarError(f"Required axis sidecar not found for {image_path}")
+    if loaded is not None:
+        sidecar, plot_crop = loaded
+        calibration = sidecar.calibration
+        warnings.extend(sidecar.warnings)
+        warnings.append("axes_sidecar_reused")
+    else:
+        plot_crop = crop_plot_area(image_bgr)
+        warnings.extend(plot_crop.warnings)
+        calibration = calibrate_axes(plot_crop, full_image_bgr=image_bgr)
+        warnings.extend(calibration.warnings)
 
     cropped = plot_crop.cropped_bgr
-    bands = detect_figure_bands(cropped, calibration)
+    if force_single_band:
+        bands = [(calibration.plot_top, calibration.plot_bottom)]
+    else:
+        bands = detect_figure_bands(cropped, calibration)
     num_bands = len(bands)
 
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -1086,30 +1329,16 @@ def digitize_figure_image(
                 max_height=cropped.shape[0],
             )
             band_img = cropped[expanded_top:expanded_bottom, :].copy()
-            with tempfile.NamedTemporaryFile(
-                suffix=".png",
-                delete=False,
-                prefix=f"{stem}_",
-            ) as handle:
-                digitize_path = Path(handle.name)
-            temp_paths.append(digitize_path)
-            cv2.imwrite(str(digitize_path), band_img)
-
-            band_height = band_img.shape[0]
-            margin = min(BAND_PADDING, max(1, band_height // 20))
-            band_calibration = replace(
+            band_result = digitize_band_with_shared_x(
+                band_img,
                 calibration,
-                plot_top=margin,
-                plot_bottom=max(margin + 1, band_height - margin),
-                y_min=None,
-                y_max=None,
-                y_method="relative",
-                y_tick_pairs=[],
+                output_dir=output_dir,
+                stem=stem,
+                source_image=image_path,
+                attempts_dir=attempts_dir,
             )
-            grid_source = band_img
-            digitize_sources = [
-                (digitize_path, 0, 0, band_height, band_img),
-            ]
+            band_results.append(band_result)
+            continue
 
         csv_path = output_dir / f"{stem}.csv"
         plot_path = output_dir / f"{stem}_digitized.png"
@@ -1126,8 +1355,8 @@ def digitize_figure_image(
                     image_height=image_height,
                     frame_offset_x=frame_offset_x,
                     frame_offset_y=frame_offset_y,
-                    full_image_bgr=image_bgr if num_bands <= 1 else None,
-                    crop_bbox=plot_crop.bbox if num_bands <= 1 else None,
+                    full_image_bgr=image_bgr,
+                    crop_bbox=plot_crop.bbox,
                 )
             except ValueError as exc:
                 error = str(exc)

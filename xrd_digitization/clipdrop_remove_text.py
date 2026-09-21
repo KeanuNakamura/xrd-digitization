@@ -273,3 +273,76 @@ def clean_figure_preserve_axes(
         interior=interior,
         warnings=warnings,
     )
+
+
+def clean_figure_full_image(
+    image: str | Path | np.ndarray,
+    *,
+    output_path: str | Path | None = None,
+    api_key: str | None = None,
+    timeout_s: float = DEFAULT_TIMEOUT_S,
+    http_post: HttpPost | None = None,
+    dry_run: bool = False,
+    remove_text_fn: Callable[[np.ndarray], np.ndarray] | None = None,
+) -> ClipdropCleanResult:
+    """
+    Run ClipDrop Remove Text on the entire panel image (no axis preservation).
+
+    Preferred when axis calibration was already saved from the original panel;
+    readable tick text on the cleaned image is not required.
+    """
+    source_path: Path | None
+    if isinstance(image, (str, Path)):
+        source_path = Path(image)
+        original_bgr = load_image_bgr(source_path)
+    else:
+        source_path = None
+        original_bgr = load_image_bgr(image)
+
+    height, width = original_bgr.shape[:2]
+    full_bbox = (0, 0, width, height)
+    interior = PlotInteriorCrop(
+        cropped_bgr=original_bgr,
+        bbox=full_bbox,
+        frame_bbox=full_bbox,
+        method="full_image",
+        warnings=[],
+    )
+    warnings: list[str] = ["clipdrop_full_image"]
+
+    if dry_run:
+        cleaned = original_bgr.copy()
+        warnings.append("clipdrop_dry_run")
+    elif remove_text_fn is not None:
+        cleaned = remove_text_fn(original_bgr)
+    else:
+        cleaned = call_clipdrop_remove_text(
+            original_bgr,
+            api_key=api_key,
+            timeout_s=timeout_s,
+            http_post=http_post,
+            filename=(source_path.stem + "_full.png") if source_path else "full.png",
+        )
+        cleaned, resize_warnings = match_crop_size(cleaned, (height, width))
+        warnings.extend(resize_warnings)
+
+    out: Path | None = None
+    if output_path is not None:
+        out = Path(output_path)
+    elif source_path is not None:
+        out = default_clean_output_path(source_path, dry_run=dry_run)
+
+    if out is not None:
+        if source_path is not None and out.resolve() == source_path.resolve():
+            raise ClipdropError(f"Refusing to overwrite original image: {source_path}")
+        out.parent.mkdir(parents=True, exist_ok=True)
+        if not cv2.imwrite(str(out), cleaned):
+            raise ClipdropError(f"Failed to write cleaned image: {out}")
+        LOGGER.info("Wrote full-image ClipDrop clean %s", out.name)
+
+    return ClipdropCleanResult(
+        cleaned_bgr=cleaned,
+        output_path=out,
+        interior=interior,
+        warnings=warnings,
+    )

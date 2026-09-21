@@ -735,6 +735,61 @@ class PdfFigureStructureTests(unittest.TestCase):
         finally:
             document.close()
 
+    def test_caption_clamp_ignores_graphic_box_in_coords(self) -> None:
+        """
+        GROBID often puts caption lines AND the graphic bbox in ``coords``.
+
+        Caption clamping must use the caption text top, not the graphic top —
+        otherwise the crop collapses to a thin strip above the plot.
+        """
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            doc = pymupdf.open()
+            page = doc.new_page(width=500, height=700)
+            # Dark plot region matching the graphic coords below.
+            page.draw_rect(
+                pymupdf.Rect(160, 70, 450, 300),
+                color=(0, 0, 0),
+                fill=(0.2, 0.2, 0.2),
+            )
+            pdf_path = _save_temp_pdf(doc, tmp_path, "graphic_in_coords.pdf")
+
+            # Caption at y≈322; graphic at y=72 — same pattern as gallium_zno fig_2.
+            figure_coords = (
+                "1,122.30,322.09,367.33,10.80;1,164.63,72.00,282.75,223.50"
+            )
+            graphic_coords = "1,164.63,72.00,282.75,223.50"
+
+            from parse_figures import (
+                CAPTION_CROP_CLEARANCE,
+                resolve_figure_page_clips,
+                select_figure_crop_coords,
+            )
+
+            crop = select_figure_crop_coords(
+                figure_coords, graphic_coords, pdf_path=pdf_path
+            )
+            self.assertIsNotNone(crop)
+
+            document = pymupdf.open(pdf_path)
+            try:
+                clips = resolve_figure_page_clips(
+                    document,
+                    crop,
+                    caption_coords=figure_coords,
+                )
+                self.assertEqual(len(clips), 1)
+                _page_number, _page, clip = clips[0]
+                # Full plot must survive (graphic height 223.5 + padding).
+                self.assertGreater(clip.height, 200.0)
+                # Bottom must stop near the real caption, not the graphic top.
+                self.assertGreater(clip.y1, 280.0)
+                self.assertLessEqual(
+                    clip.y1, 322.09 - CAPTION_CROP_CLEARANCE + 1e-6
+                )
+            finally:
+                document.close()
+
 
 class RasterTextDetectionTests(unittest.TestCase):
     def test_rejects_plot_sized_short_word_box(self) -> None:

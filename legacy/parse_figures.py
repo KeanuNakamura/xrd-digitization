@@ -83,14 +83,29 @@ def format_grobid_coords(
     )
 
 
+def _is_graphic_sized_box(width: float, height: float) -> bool:
+    """True for plot-sized GROBID boxes (not thin caption text lines)."""
+    return width >= MIN_GRAPHIC_WIDTH and height >= MIN_GRAPHIC_HEIGHT
+
+
 def _caption_boxes_by_page(
     figure_coords: str,
 ) -> dict[int, list[tuple[float, float, float, float]]]:
+    """
+    Caption-sized boxes from a figure's GROBID ``coords`` string.
+
+    GROBID often packs both caption text lines and the ``<graphic>`` bbox into
+    the same ``coords`` attribute. Only the short text lines are captions;
+    graphic-sized boxes must be ignored so caption clamping / axis expansion
+    uses the real caption top rather than the plot top.
+    """
     boxes_by_page: dict[int, list[tuple[float, float, float, float]]] = (
         defaultdict(list)
     )
 
     for page_number, x, y, width, height in parse_grobid_coords(figure_coords):
+        if _is_graphic_sized_box(width, height):
+            continue
         boxes_by_page[page_number].append(
             (x, y, x + width, y + height)
         )
@@ -504,14 +519,15 @@ def infer_graphic_coords_from_pdf(
 def _caption_top_by_page(
     figure_coords: str | None,
 ) -> dict[int, float]:
-    """Map 1-based page number → top of caption boxes on that page."""
+    """Map 1-based page number → top of caption text boxes on that page."""
     if not figure_coords or not figure_coords.strip():
         return {}
 
     tops: dict[int, float] = {}
-    for page_number, _x, y, _width, _height in parse_grobid_coords(figure_coords):
-        prev = tops.get(page_number)
-        tops[page_number] = y if prev is None else min(prev, y)
+    for page_number, boxes in _caption_boxes_by_page(figure_coords).items():
+        if not boxes:
+            continue
+        tops[page_number] = min(box[1] for box in boxes)
     return tops
 
 
@@ -537,7 +553,7 @@ def select_figure_crop_coords(
         image_boxes = [
             box
             for box in parse_grobid_coords(figure_coords)
-            if box[3] >= MIN_GRAPHIC_WIDTH and box[4] >= MIN_GRAPHIC_HEIGHT
+            if _is_graphic_sized_box(box[3], box[4])
         ]
 
         if not image_boxes:

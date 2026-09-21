@@ -116,6 +116,24 @@ class AxisSidecarRoundTripTests(unittest.TestCase):
         self.assertFalse(usable)
         self.assertTrue(any("method_not_ocr" in r for r in reasons))
 
+    def test_two_tick_miller_like_range_rejected(self) -> None:
+        cal = AxisCalibrationResult(
+            x_min=5.0,
+            x_max=112.0,
+            plot_left=0,
+            plot_right=100,
+            plot_top=0,
+            plot_bottom=100,
+            method="ocr_linear_regression",
+            confidence=0.95,
+            tick_pairs=[(0, 5.0), (100, 112.0)],
+        )
+        usable, reasons = x_calibration_is_usable(cal)
+        self.assertFalse(usable)
+        self.assertTrue(
+            any("too_few_tick_pairs" in r or "x_tick_step" in r for r in reasons)
+        )
+
 
 class ResolveSidecarPathTests(unittest.TestCase):
     def test_clean_stem_resolves_base_axes(self) -> None:

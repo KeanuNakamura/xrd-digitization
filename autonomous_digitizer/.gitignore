@@ -1,0 +1,12 @@
+# Autonomous digitizer local artifacts
+.venv/
+.env
+.cache/
+outputs/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+pipeline.log

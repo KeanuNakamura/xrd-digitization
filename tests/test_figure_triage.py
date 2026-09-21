@@ -19,11 +19,14 @@ for path in (str(ROOT), str(LEGACY), str(SCRIPTS)):
         sys.path.insert(0, path)
 
 from figure_triage import (  # noqa: E402
-    FigureTriageResult,
-    _normalize_api_key,
+    digitization_route,
     is_digitizable,
+    is_multipanel_digitizable,
+    is_stacked_digitizable,
+    normalize_curve_layout,
     parse_triage_payload,
     triage_figure_image,
+    _normalize_api_key,
 )
 from scrape_and_digitize import (  # noqa: E402
     rearrange_digitize_outputs,
@@ -44,6 +47,7 @@ class FigureTriageParseTests(unittest.TestCase):
         )
         self.assertTrue(result.digitizable)
         self.assertTrue(is_digitizable(result))
+        self.assertEqual(digitization_route(result), "single")
         self.assertFalse(result.needs_clipdrop)
 
     def test_multi_curve_forced_not_digitizable(self) -> None:
@@ -58,20 +62,54 @@ class FigureTriageParseTests(unittest.TestCase):
         )
         self.assertFalse(result.digitizable)
         self.assertFalse(is_digitizable(result))
-        self.assertEqual(result.curve_layout, "overlay")
+        self.assertEqual(result.curve_layout, "multiple_overlapping")
+        self.assertEqual(digitization_route(result), "unsupported")
         self.assertTrue(result.needs_clipdrop)
 
-    def test_stacked_not_digitizable(self) -> None:
+    def test_stacked_routes_to_stacked(self) -> None:
         result = parse_triage_payload(
             {
                 "digitizable": True,
-                "curve_count": 1,
+                "curve_count": 8,
                 "curve_layout": "stacked",
+                "shared_x_axis": True,
+                "vertically_offset": True,
+                "curves_cross": False,
                 "needs_clipdrop": False,
-                "reason": "stacked panels",
+                "curve_labels": [
+                    {"text": "715 nm", "vertical_order": 0},
+                    {"text": "641 nm", "vertical_order": 7},
+                ],
+                "reason": "stacked XRD traces",
             }
         )
-        self.assertFalse(is_digitizable(result))
+        self.assertEqual(result.curve_layout, "multiple_stacked")
+        self.assertFalse(is_digitizable(result))  # single-path still false
+        self.assertTrue(is_stacked_digitizable(result))
+        self.assertEqual(digitization_route(result), "stacked")
+        self.assertEqual(len(result.curve_labels), 2)
+        self.assertEqual(result.curve_labels[0].text, "715 nm")
+
+    def test_stacked_crossing_unsupported(self) -> None:
+        result = parse_triage_payload(
+            {
+                "digitizable": True,
+                "curve_count": 4,
+                "curve_layout": "multiple_stacked",
+                "shared_x_axis": True,
+                "curves_cross": True,
+                "needs_clipdrop": False,
+                "reason": "peaks cross neighbors",
+            }
+        )
+        self.assertFalse(result.digitizable)
+        self.assertEqual(digitization_route(result), "unsupported")
+
+    def test_layout_aliases(self) -> None:
+        self.assertEqual(normalize_curve_layout("stacked"), "multiple_stacked")
+        self.assertEqual(normalize_curve_layout("overlay"), "multiple_overlapping")
+        self.assertEqual(normalize_curve_layout("other"), "not_applicable")
+        self.assertEqual(normalize_curve_layout("multiple_subplots"), "multiple_subplots")
 
     def test_needs_clipdrop_single_curve(self) -> None:
         result = parse_triage_payload(
@@ -85,6 +123,44 @@ class FigureTriageParseTests(unittest.TestCase):
         )
         self.assertTrue(is_digitizable(result))
         self.assertTrue(result.needs_clipdrop)
+        self.assertIn("overlapping_annotations", result.preprocessing_reasons)
+
+    def test_multipanel_routes_to_multipanel(self) -> None:
+        result = parse_triage_payload(
+            {
+                "digitizable": True,
+                "curve_count": 6,
+                "curve_layout": "multiple_subplots",
+                "shared_x_axis": False,
+                "vertically_offset": True,
+                "curves_cross": False,
+                "needs_clipdrop": True,
+                "preprocessing_reasons": ["multiple_panels", "overlapping_annotations"],
+                "reason": "two subplot panels with stacked XRD curves",
+            }
+        )
+        self.assertEqual(result.curve_layout, "multiple_subplots")
+        self.assertTrue(result.digitizable)
+        self.assertTrue(is_multipanel_digitizable(result))
+        self.assertEqual(digitization_route(result), "multipanel")
+        self.assertIn("multiple_panels", result.preprocessing_reasons)
+        self.assertIn("overlapping_annotations", result.preprocessing_reasons)
+
+    def test_multipanel_digitizable_false_still_routes(self) -> None:
+        """Legacy model rejects for annotations; still split panels."""
+        result = parse_triage_payload(
+            {
+                "digitizable": False,
+                "curve_count": 6,
+                "curve_layout": "multiple_subplots",
+                "shared_x_axis": False,
+                "vertically_offset": True,
+                "needs_clipdrop": True,
+                "reason": "separate panels and overlapping annotations",
+            }
+        )
+        self.assertFalse(result.digitizable)
+        self.assertEqual(digitization_route(result), "multipanel")
 
     def test_normalize_api_key_strips_curly_quotes(self) -> None:
         self.assertEqual(_normalize_api_key("\u2019sk-abc\u2019"), "sk-abc")

@@ -2,22 +2,78 @@
   "source_pdf": "/Users/keanunakamura/Desktop/xrd_scraping/pdf_files/sample_pdfs/Scherrer_equation.pdf",
   "output_directory": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation",
   "figures_total": 2,
-  "digitized": 1,
-  "skipped": 1,
+  "digitized": 2,
+  "skipped": 0,
   "failed": 0,
   "figures": [
     {
       "figure_id": "fig_2",
       "figure_dir": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2",
       "source_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.png",
-      "status": "skipped_not_digitizable",
+      "status": "digitized",
       "triage": {
-        "digitizable": false,
+        "digitizable": true,
         "curve_count": 5,
-        "curve_layout": "stacked",
-        "needs_clipdrop": true,
-        "reason": "The plot contains five stacked curves with in-plot text annotations overlapping the top curve.",
-        "path": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.triage.json"
+        "curve_layout": "multiple_stacked",
+        "shared_x_axis": true,
+        "vertically_offset": true,
+        "curves_cross": false,
+        "needs_clipdrop": false,
+        "preprocessing_reasons": [
+          "vertically_offset_curves"
+        ],
+        "curve_labels": [
+          {
+            "text": "(e)",
+            "vertical_order": 0
+          },
+          {
+            "text": "(d)",
+            "vertical_order": 1
+          },
+          {
+            "text": "(c)",
+            "vertical_order": 2
+          },
+          {
+            "text": "(b)",
+            "vertical_order": 3
+          },
+          {
+            "text": "(a)",
+            "vertical_order": 4
+          }
+        ],
+        "reason": "Five vertically offset curves share the same x-axis without crossing, and no obstructive in-plot text is present.",
+        "path": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.triage.json",
+        "route": "stacked"
+      },
+      "use_clipdrop": false,
+      "outputs": {
+        "debug_dir": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug",
+        "csv": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.csv",
+        "digitized_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2_digitized.png",
+        "axes_json": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.axes.json",
+        "cleaning_json": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/fig_2.cleaning.json",
+        "reconstructed_overlay": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/reconstructed_overlay.png",
+        "digitized_stacked_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/digitized_stacked.png",
+        "curve_csvs": [
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_0.csv",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_1.csv",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_2.csv",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_3.csv",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_4.csv"
+        ],
+        "curve_digitized_pngs": [
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_0_digitized.png",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_1_digitized.png",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_2_digitized.png",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_3_digitized.png",
+          "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_curve_4_digitized.png"
+        ],
+        "stacked_csv": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_stacked.csv",
+        "stacked_json": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_stacked.json",
+        "stacked_xy": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_2/debug/fig_2_stacked.xy"
       }
     },
     {
@@ -29,15 +85,23 @@
         "digitizable": true,
         "curve_count": 1,
         "curve_layout": "single",
-        "needs_clipdrop": true,
-        "reason": "Single continuous curve with multiple in-plot peak label annotations overlapping the curve.",
-        "path": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.triage.json"
+        "shared_x_axis": true,
+        "vertically_offset": false,
+        "curves_cross": false,
+        "needs_clipdrop": false,
+        "preprocessing_reasons": [],
+        "curve_labels": [],
+        "reason": "Single XRD curve with no overlapping or stacked traces and clear plot interior.",
+        "path": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.triage.json",
+        "route": "single"
       },
-      "use_clipdrop": true,
+      "use_clipdrop": false,
       "outputs": {
+        "debug_dir": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/debug",
         "csv": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.csv",
         "digitized_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2_digitized.png",
-        "clean_png": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2_clean.png"
+        "axes_json": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.axes.json",
+        "cleaning_json": "/Users/keanunakamura/Desktop/xrd_scraping/pipeline_output/Scherrer_equation/figures/fig_6_2/fig_6_2.cleaning.json"
       }
     }
   ]

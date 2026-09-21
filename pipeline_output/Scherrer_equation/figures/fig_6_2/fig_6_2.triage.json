@@ -2,13 +2,22 @@
   "digitizable": true,
   "curve_count": 1,
   "curve_layout": "single",
-  "needs_clipdrop": true,
-  "reason": "Single continuous curve with multiple in-plot peak label annotations overlapping the curve.",
+  "needs_clipdrop": false,
+  "reason": "Single XRD curve with no overlapping or stacked traces and clear plot interior.",
+  "shared_x_axis": true,
+  "vertically_offset": false,
+  "curves_cross": false,
+  "curve_labels": [],
+  "preprocessing_reasons": [],
   "raw": {
     "digitizable": true,
     "curve_count": 1,
     "curve_layout": "single",
-    "needs_clipdrop": true,
-    "reason": "Single continuous curve with multiple in-plot peak label annotations overlapping the curve."
+    "shared_x_axis": true,
+    "vertically_offset": false,
+    "curves_cross": false,
+    "needs_clipdrop": false,
+    "curve_labels": [],
+    "reason": "Single XRD curve with no overlapping or stacked traces and clear plot interior."
   }
 }

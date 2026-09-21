@@ -1,14 +1,67 @@
 {
-  "digitizable": false,
+  "digitizable": true,
   "curve_count": 5,
-  "curve_layout": "stacked",
-  "needs_clipdrop": true,
-  "reason": "The plot contains five stacked curves with in-plot text annotations overlapping the top curve.",
+  "curve_layout": "multiple_stacked",
+  "needs_clipdrop": false,
+  "reason": "Five vertically offset curves share the same x-axis without crossing, and no obstructive in-plot text is present.",
+  "shared_x_axis": true,
+  "vertically_offset": true,
+  "curves_cross": false,
+  "curve_labels": [
+    {
+      "text": "(e)",
+      "vertical_order": 0
+    },
+    {
+      "text": "(d)",
+      "vertical_order": 1
+    },
+    {
+      "text": "(c)",
+      "vertical_order": 2
+    },
+    {
+      "text": "(b)",
+      "vertical_order": 3
+    },
+    {
+      "text": "(a)",
+      "vertical_order": 4
+    }
+  ],
+  "preprocessing_reasons": [
+    "vertically_offset_curves"
+  ],
   "raw": {
-    "digitizable": false,
+    "digitizable": true,
     "curve_count": 5,
-    "curve_layout": "stacked",
-    "needs_clipdrop": true,
-    "reason": "The plot contains five stacked curves with in-plot text annotations overlapping the top curve."
+    "curve_layout": "multiple_stacked",
+    "shared_x_axis": true,
+    "vertically_offset": true,
+    "curves_cross": false,
+    "needs_clipdrop": false,
+    "curve_labels": [
+      {
+        "text": "(e)",
+        "vertical_order": 0
+      },
+      {
+        "text": "(d)",
+        "vertical_order": 1
+      },
+      {
+        "text": "(c)",
+        "vertical_order": 2
+      },
+      {
+        "text": "(b)",
+        "vertical_order": 3
+      },
+      {
+        "text": "(a)",
+        "vertical_order": 4
+      }
+    ],
+    "reason": "Five vertically offset curves share the same x-axis without crossing, and no obstructive in-plot text is present."
   }
 }
