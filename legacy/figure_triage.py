@@ -1,6 +1,6 @@
-"""OpenAI vision triage: figure digitizability, layout, and ClipDrop need.
+"""OpenAI vision helpers: XRD classification, digitizability, layout, ClipDrop.
 
-Standalone helper for the scrape-and-digitize pipeline. Does not use the
+Standalone helpers for the scrape-and-digitize pipeline. Does not use the
 native XRD digitizer or agent-guidance stack.
 """
 
@@ -27,6 +27,27 @@ DEFAULT_BASE_URL = "https://api.openai.com/v1"
 HttpPost = Callable[..., Any]
 
 DigitizationRoute = Literal["single", "stacked", "multipanel", "unsupported", "reject"]
+
+XRD_CLASSIFY_SYSTEM_PROMPT = """\
+You classify scientific figure images from research papers.
+Return structured JSON only — no markdown fences.
+Decide whether the figure is XRD / X-ray diffraction related.
+"""
+
+XRD_CLASSIFY_USER_PROMPT = """\
+Inspect this cropped figure image and return JSON with this schema:
+{
+  "is_xrd": <bool>,
+  "reason": "<short explanation>"
+}
+
+Rules:
+- is_xrd is true if the image is (or clearly includes) an X-ray diffraction /
+  powder diffraction / PXRD / Rietveld / 2θ diffractogram plot. false for SEM,
+  TEM, FTIR, XPS, photographs, schematics, tables, or other non-XRD plots.
+  If a multi-panel crop mixes XRD and non-XRD panels, set is_xrd true.
+- reason: one short sentence.
+"""
 
 PREPROCESSING_REASONS = frozenset(
     {
@@ -120,6 +141,19 @@ Rules:
 class CurveLabelHint:
     text: str
     vertical_order: int
+
+
+@dataclass
+class XrdClassifyResult:
+    is_xrd: bool
+    reason: str = ""
+    raw: dict[str, Any] | None = None
+
+    def to_dict(self) -> dict[str, Any]:
+        payload = asdict(self)
+        if self.raw is None:
+            payload.pop("raw", None)
+        return payload
 
 
 @dataclass
@@ -352,19 +386,31 @@ def _normalize_api_key(raw: str | None) -> str | None:
     return key
 
 
-def call_openai_triage(
+def parse_xrd_classify_payload(payload: dict[str, Any]) -> XrdClassifyResult:
+    """Normalize an XRD-classification JSON object."""
+    return XrdClassifyResult(
+        is_xrd=bool(payload.get("is_xrd")),
+        reason=str(payload.get("reason") or "").strip(),
+        raw=dict(payload),
+    )
+
+
+def _openai_chat_json(
     image_bgr: np.ndarray,
     *,
+    system_prompt: str,
+    user_prompt: str,
     api_key: str | None = None,
     base_url: str | None = None,
     model: str | None = None,
     timeout_s: float = 120.0,
     http_post: HttpPost | None = None,
-) -> FigureTriageResult:
-    """Call an OpenAI-compatible vision endpoint for figure triage."""
+    missing_key_message: str = "Missing OPENAI_API_KEY",
+) -> dict[str, Any]:
+    """POST a vision chat.completions request and return parsed JSON content."""
     key = _normalize_api_key(api_key or os.environ.get("OPENAI_API_KEY"))
     if not key:
-        raise RuntimeError("Missing OPENAI_API_KEY for figure triage")
+        raise RuntimeError(missing_key_message)
 
     url_base = (base_url or os.environ.get("OPENAI_BASE_URL") or DEFAULT_BASE_URL).rstrip(
         "/"
@@ -377,11 +423,11 @@ def call_openai_triage(
         "temperature": 0,
         "response_format": {"type": "json_object"},
         "messages": [
-            {"role": "system", "content": TRIAGE_SYSTEM_PROMPT},
+            {"role": "system", "content": system_prompt},
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": TRIAGE_USER_PROMPT},
+                    {"type": "text", "text": user_prompt},
                     {
                         "type": "image_url",
                         "image_url": {"url": f"data:image/png;base64,{b64}"},
@@ -406,10 +452,89 @@ def call_openai_triage(
     try:
         content = data["choices"][0]["message"]["content"]
     except (KeyError, IndexError, TypeError) as exc:
-        raise ValueError(f"Unexpected triage response shape: {data!r}") from exc
+        raise ValueError(f"Unexpected OpenAI response shape: {data!r}") from exc
     if not isinstance(content, str):
-        raise ValueError("Triage message content must be a string")
-    return parse_triage_payload(_parse_json_content(content))
+        raise ValueError("OpenAI message content must be a string")
+    return _parse_json_content(content)
+
+
+def _load_bgr_image(image: np.ndarray | str | Path) -> np.ndarray:
+    if isinstance(image, (str, Path)):
+        path = Path(image)
+        bgr = cv2.imread(str(path))
+        if bgr is None:
+            raise FileNotFoundError(f"Could not read image: {path}")
+        return bgr
+    bgr = np.asarray(image)
+    if bgr.ndim != 3 or bgr.shape[2] < 3:
+        raise ValueError("Expected a BGR image array")
+    return bgr
+
+
+def call_openai_xrd_classify(
+    image_bgr: np.ndarray,
+    *,
+    api_key: str | None = None,
+    base_url: str | None = None,
+    model: str | None = None,
+    timeout_s: float = 120.0,
+    http_post: HttpPost | None = None,
+) -> XrdClassifyResult:
+    """Call an OpenAI-compatible vision endpoint for XRD vs non-XRD classification."""
+    payload = _openai_chat_json(
+        image_bgr,
+        system_prompt=XRD_CLASSIFY_SYSTEM_PROMPT,
+        user_prompt=XRD_CLASSIFY_USER_PROMPT,
+        api_key=api_key,
+        base_url=base_url,
+        model=model,
+        timeout_s=timeout_s,
+        http_post=http_post,
+        missing_key_message="Missing OPENAI_API_KEY for XRD classification",
+    )
+    return parse_xrd_classify_payload(payload)
+
+
+def classify_xrd_figure_image(
+    image: np.ndarray | str | Path,
+    *,
+    api_key: str | None = None,
+    base_url: str | None = None,
+    model: str | None = None,
+    http_post: HttpPost | None = None,
+) -> XrdClassifyResult:
+    """Classify whether a figure image is XRD-related via OpenAI vision."""
+    return call_openai_xrd_classify(
+        _load_bgr_image(image),
+        api_key=api_key,
+        base_url=base_url,
+        model=model,
+        http_post=http_post,
+    )
+
+
+def call_openai_triage(
+    image_bgr: np.ndarray,
+    *,
+    api_key: str | None = None,
+    base_url: str | None = None,
+    model: str | None = None,
+    timeout_s: float = 120.0,
+    http_post: HttpPost | None = None,
+) -> FigureTriageResult:
+    """Call an OpenAI-compatible vision endpoint for figure triage."""
+    payload = _openai_chat_json(
+        image_bgr,
+        system_prompt=TRIAGE_SYSTEM_PROMPT,
+        user_prompt=TRIAGE_USER_PROMPT,
+        api_key=api_key,
+        base_url=base_url,
+        model=model,
+        timeout_s=timeout_s,
+        http_post=http_post,
+        missing_key_message="Missing OPENAI_API_KEY for figure triage",
+    )
+    return parse_triage_payload(payload)
 
 
 def triage_figure_image(
@@ -421,18 +546,8 @@ def triage_figure_image(
     http_post: HttpPost | None = None,
 ) -> FigureTriageResult:
     """Triage a figure image path or BGR array."""
-    if isinstance(image, (str, Path)):
-        path = Path(image)
-        bgr = cv2.imread(str(path))
-        if bgr is None:
-            raise FileNotFoundError(f"Could not read image: {path}")
-    else:
-        bgr = np.asarray(image)
-        if bgr.ndim != 3 or bgr.shape[2] < 3:
-            raise ValueError("Expected a BGR image array")
-
     return call_openai_triage(
-        bgr,
+        _load_bgr_image(image),
         api_key=api_key,
         base_url=base_url,
         model=model,

@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 """
-Scrape PDF figures with GROBID, triage with OpenAI, digitize via PlotDigitizer.
+Scrape PDF figures with GROBID, classify/triage with OpenAI, digitize.
 
-For each PDF: parse XRD figures only (pdf_parser ``xrd_figures_only`` /
-``--xrd-figures-only``), ask OpenAI whether each figure is digitizable and
-what its curve layout is (single / stacked / overlapping / multipanel), then
-call digitize_one_figure. Single-curve and stacked shared-x figures use the
-existing paths; multi-subplot figures are split into panel crops and digitized
-independently. Overlapping multi-curve figures are skipped as unsupported.
+For each PDF: extract all figure crops, ask OpenAI whether each crop is
+XRD-related (default: keep only XRD figures and delete the rest), then ask
+OpenAI whether each kept figure is digitizable and what its curve layout is
+(single / stacked / overlapping / multipanel), then call digitize_one_figure.
+Single-curve and stacked shared-x figures use the existing paths; multi-subplot
+figures are split into panel crops and digitized independently. Overlapping
+multi-curve figures are skipped as unsupported.
+
+Pass ``--all-figures`` to keep and triage every crop (skip the XRD filter).
+
+Benchmark mode (``--benchmark``): extract every cropped figure, classify each
+with OpenAI as XRD or not, skip triage/digitization, and copy crops into
+global ``output_dir/xrd/`` and ``output_dir/not_xrd/``.
 """
 
 from __future__ import annotations
@@ -30,6 +37,7 @@ for path in (str(ROOT), str(LEGACY), str(SCRIPTS)):
 
 from digitize_figure import digitize_one_figure, figure_id_from_stem  # noqa: E402
 from figure_triage import (  # noqa: E402
+    classify_xrd_figure_image,
     digitization_route,
     save_triage_result,
     triage_figure_image,
@@ -44,10 +52,51 @@ from xrd_digitization.split_figure_panels import (  # noqa: E402
 
 LOGGER = logging.getLogger(__name__)
 
+BENCHMARK_XRD_DIR = "xrd"
+BENCHMARK_NOT_XRD_DIR = "not_xrd"
+BENCHMARK_MANIFEST_NAME = "benchmark_manifest.json"
+
 
 def paper_output_dir(output_root: Path, pdf_path: Path) -> Path:
     """``output_root/<pdf_stem>/`` for both single-PDF and directory inputs."""
     return output_root.resolve() / pdf_path.stem
+
+
+def benchmark_dirs(output_root: Path) -> tuple[Path, Path]:
+    """Global ``xrd/`` and ``not_xrd/`` folders under the output root."""
+    root = output_root.resolve()
+    return root / BENCHMARK_XRD_DIR, root / BENCHMARK_NOT_XRD_DIR
+
+
+def reset_benchmark_dirs(output_root: Path) -> tuple[Path, Path]:
+    """Remove and recreate the global benchmark figure folders."""
+    xrd_dir, not_xrd_dir = benchmark_dirs(output_root)
+    for path in (xrd_dir, not_xrd_dir):
+        if path.exists():
+            shutil.rmtree(path)
+        path.mkdir(parents=True, exist_ok=True)
+    return xrd_dir, not_xrd_dir
+
+
+def benchmark_figure_basename(pdf_stem: str, image_path: Path) -> str:
+    """Unique flat name across PDFs: ``<pdf_stem>__<figure_png_name>``."""
+    return f"{pdf_stem}__{image_path.name}"
+
+
+def copy_figure_to_benchmark_bucket(
+    image_path: Path,
+    *,
+    pdf_stem: str,
+    is_xrd: bool,
+    xrd_dir: Path,
+    not_xrd_dir: Path,
+) -> Path:
+    """Copy one cropped figure PNG into the global xrd or not_xrd folder."""
+    dest_dir = xrd_dir if is_xrd else not_xrd_dir
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / benchmark_figure_basename(pdf_stem, image_path)
+    shutil.copy2(image_path, dest)
+    return dest
 
 
 def collect_figure_pngs(figures_dir: Path) -> list[Path]:
@@ -454,8 +503,13 @@ def process_figure(
     overwrite: bool,
     http_post: Any | None = None,
     paper_dir: Path | None = None,
+    xrd_only: bool = True,
 ) -> dict[str, Any]:
-    """Triage one figure; digitize via digitize_one_figure when eligible."""
+    """Classify XRD via OpenAI; digitize via digitize_one_figure when eligible.
+
+    When ``xrd_only`` is True (default), non-XRD crops are deleted from the
+    figures directory and recorded as ``skipped_not_xrd``.
+    """
     figure_id, figure_dir, staged_png = stage_figure_directory(png_path, figures_dir)
     entry: dict[str, Any] = {
         "figure_id": figure_id,
@@ -464,6 +518,41 @@ def process_figure(
         "status": "pending",
     }
     resolved_paper_dir = Path(paper_dir) if paper_dir is not None else figures_dir.parent
+
+    try:
+        xrd_cls = classify_xrd_figure_image(
+            staged_png, model=model, http_post=http_post
+        )
+    except Exception as exc:
+        LOGGER.exception("XRD classification failed for %s", staged_png.name)
+        entry["status"] = "xrd_classify_failed"
+        entry["error"] = str(exc)
+        return entry
+
+    entry["xrd_classification"] = xrd_cls.to_dict()
+
+    if xrd_only and not xrd_cls.is_xrd:
+        LOGGER.info(
+            "Skipping %s (not XRD): %s",
+            figure_id,
+            xrd_cls.reason or "OpenAI classified as non-XRD",
+        )
+        entry["status"] = "skipped_not_xrd"
+        # Remove non-XRD crops from output so only XRD figures remain.
+        try:
+            if staged_png.is_file():
+                staged_png.unlink()
+            if figure_dir.is_dir() and not any(figure_dir.iterdir()):
+                figure_dir.rmdir()
+        except OSError as exc:
+            LOGGER.warning("Failed to remove non-XRD figure %s: %s", figure_id, exc)
+        return entry
+
+    classify_path = figure_dir / f"{figure_id}.xrd_classify.json"
+    classify_path.write_text(
+        json.dumps(xrd_cls.to_dict(), indent=2), encoding="utf-8"
+    )
+    entry["xrd_classify_path"] = str(classify_path)
 
     try:
         triage = triage_figure_image(staged_png, model=model, http_post=http_post)
@@ -555,6 +644,169 @@ def process_figure(
     return entry
 
 
+def process_pdf_benchmark(
+    pdf_path: Path,
+    output_root: Path,
+    *,
+    grobid_url: str,
+    figure_dpi: int,
+    overwrite: bool,
+    xrd_dir: Path,
+    not_xrd_dir: Path,
+    model: str | None = None,
+    http_post: Any | None = None,
+) -> dict[str, Any]:
+    """
+    Scrape one PDF, extract all figure crops, classify with OpenAI, skip digitize.
+
+    Copies each crop into the global ``xrd/`` or ``not_xrd/`` folder based on
+    OpenAI vision classification (not caption keywords).
+    """
+    paper_dir = paper_output_dir(output_root, pdf_path)
+    if paper_dir.exists() and overwrite:
+        LOGGER.info("Removing existing output: %s", paper_dir)
+        shutil.rmtree(paper_dir)
+    paper_dir.mkdir(parents=True, exist_ok=True)
+
+    LOGGER.info("Benchmark scrape %s → %s", pdf_path.name, paper_dir)
+    document = parse_pdf(
+        pdf_path=pdf_path,
+        output_directory=paper_dir,
+        grobid_url=grobid_url,
+        extract_figures=True,
+        figure_dpi=figure_dpi,
+        xrd_figures_only=False,
+    )
+
+    pdf_stem = pdf_path.stem
+    figure_entries: list[dict[str, Any]] = []
+    for figure in document.figures:
+        image_paths = [Path(p) for p in (figure.image_paths or []) if p]
+        if not image_paths:
+            figure_entries.append(
+                {
+                    "figure_id": figure.figure_id,
+                    "label": figure.label,
+                    "status": "not_extracted",
+                    "caption": figure.caption,
+                }
+            )
+            continue
+
+        crop_entries: list[dict[str, Any]] = []
+        copied_xrd_paths: list[str] = []
+        copied_not_xrd_paths: list[str] = []
+        classify_failed = False
+
+        for image_path in image_paths:
+            if not image_path.is_file():
+                LOGGER.warning("Missing crop for %s: %s", figure.figure_id, image_path)
+                crop_entries.append(
+                    {
+                        "source_path": str(image_path),
+                        "status": "missing_file",
+                    }
+                )
+                continue
+
+            try:
+                xrd_cls = classify_xrd_figure_image(
+                    image_path, model=model, http_post=http_post
+                )
+            except Exception as exc:
+                LOGGER.exception(
+                    "XRD classification failed for %s (%s)",
+                    figure.figure_id,
+                    image_path.name,
+                )
+                classify_failed = True
+                crop_entries.append(
+                    {
+                        "source_path": str(image_path),
+                        "status": "classify_failed",
+                        "error": str(exc),
+                    }
+                )
+                continue
+
+            is_xrd = bool(xrd_cls.is_xrd)
+            bucket = BENCHMARK_XRD_DIR if is_xrd else BENCHMARK_NOT_XRD_DIR
+            dest = copy_figure_to_benchmark_bucket(
+                image_path,
+                pdf_stem=pdf_stem,
+                is_xrd=is_xrd,
+                xrd_dir=xrd_dir,
+                not_xrd_dir=not_xrd_dir,
+            )
+            if is_xrd:
+                copied_xrd_paths.append(str(dest))
+            else:
+                copied_not_xrd_paths.append(str(dest))
+            LOGGER.info(
+                "Benchmark %s → %s/%s (%s)",
+                image_path.name,
+                bucket,
+                dest.name,
+                xrd_cls.reason or ("xrd" if is_xrd else "not_xrd"),
+            )
+            crop_entries.append(
+                {
+                    "source_path": str(image_path),
+                    "benchmark_path": str(dest),
+                    "bucket": bucket,
+                    "is_xrd": is_xrd,
+                    "reason": xrd_cls.reason,
+                    "status": "copied",
+                }
+            )
+
+        any_copied = bool(copied_xrd_paths or copied_not_xrd_paths)
+        if classify_failed and not any_copied:
+            status = "classify_failed"
+        elif any_copied:
+            status = "copied"
+        else:
+            status = "copy_failed"
+
+        figure_entries.append(
+            {
+                "figure_id": figure.figure_id,
+                "label": figure.label,
+                "is_xrd": any(c.get("is_xrd") for c in crop_entries if "is_xrd" in c),
+                "status": status,
+                "caption": figure.caption,
+                "crops": crop_entries,
+                "benchmark_paths_xrd": copied_xrd_paths,
+                "benchmark_paths_not_xrd": copied_not_xrd_paths,
+            }
+        )
+
+    copied_xrd = sum(len(e.get("benchmark_paths_xrd") or []) for e in figure_entries)
+    copied_not_xrd = sum(
+        len(e.get("benchmark_paths_not_xrd") or []) for e in figure_entries
+    )
+    manifest = {
+        "mode": "benchmark",
+        "classifier": "openai",
+        "source_pdf": str(pdf_path.resolve()),
+        "output_directory": str(paper_dir.resolve()),
+        "figures_total": len(document.figures),
+        "copied_xrd": copied_xrd,
+        "copied_not_xrd": copied_not_xrd,
+        "not_extracted": sum(
+            1 for e in figure_entries if e.get("status") == "not_extracted"
+        ),
+        "classify_failed": sum(
+            1 for e in figure_entries if e.get("status") == "classify_failed"
+        ),
+        "figures": figure_entries,
+    }
+    manifest_path = paper_dir / "benchmark_paper_manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    LOGGER.info("Wrote paper benchmark manifest: %s", manifest_path)
+    return manifest
+
+
 def process_pdf(
     pdf_path: Path,
     output_root: Path,
@@ -564,8 +816,9 @@ def process_pdf(
     model: str | None,
     overwrite: bool,
     http_post: Any | None = None,
+    xrd_only: bool = True,
 ) -> dict[str, Any]:
-    """Scrape one PDF then triage/digitize its figures."""
+    """Scrape one PDF, OpenAI-classify XRD figures, then triage/digitize."""
     paper_dir = paper_output_dir(output_root, pdf_path)
     if paper_dir.exists() and overwrite:
         LOGGER.info("Removing existing output: %s", paper_dir)
@@ -573,13 +826,14 @@ def process_pdf(
     paper_dir.mkdir(parents=True, exist_ok=True)
 
     LOGGER.info("Scraping %s → %s", pdf_path.name, paper_dir)
+    # Extract every crop; XRD filtering is done by OpenAI below (not captions).
     parse_pdf(
         pdf_path=pdf_path,
         output_directory=paper_dir,
         grobid_url=grobid_url,
         extract_figures=True,
         figure_dpi=figure_dpi,
-        xrd_figures_only=True,
+        xrd_figures_only=False,
     )
 
     figures_dir = paper_dir / "figures"
@@ -596,6 +850,7 @@ def process_pdf(
                 overwrite=True,
                 http_post=http_post,
                 paper_dir=paper_dir,
+                xrd_only=xrd_only,
             )
         )
 
@@ -605,7 +860,14 @@ def process_pdf(
     manifest = {
         "source_pdf": str(pdf_path.resolve()),
         "output_directory": str(paper_dir.resolve()),
+        "xrd_only": xrd_only,
         "figures_total": len(pngs),
+        "kept_xrd": sum(
+            1 for e in figure_entries if e.get("status") != "skipped_not_xrd"
+        ),
+        "skipped_not_xrd": sum(
+            1 for e in figure_entries if e.get("status") == "skipped_not_xrd"
+        ),
         "digitized": sum(1 for e in figure_entries if _is_digitized(str(e.get("status")))),
         "skipped": sum(
             1
@@ -654,12 +916,30 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--model",
         default=None,
-        help="OpenAI vision model for triage (default: gpt-4.1-mini)",
+        help="OpenAI vision model for XRD classification and triage (default: gpt-4.1-mini)",
+    )
+    parser.add_argument(
+        "--all-figures",
+        action="store_true",
+        help=(
+            "Keep and triage every extracted crop instead of deleting figures "
+            "that OpenAI classifies as non-XRD (default: XRD-only output)"
+        ),
     )
     parser.add_argument(
         "--overwrite",
         action="store_true",
         help="Replace an existing <output_dir>/<pdf_stem>/ directory",
+    )
+    parser.add_argument(
+        "--benchmark",
+        action="store_true",
+        help=(
+            "Extract all figure crops, classify each with OpenAI as XRD or not, "
+            "skip triage/digitization, and copy into global "
+            f"<output_dir>/{BENCHMARK_XRD_DIR}/ or "
+            f"<output_dir>/{BENCHMARK_NOT_XRD_DIR}/"
+        ),
     )
     parser.add_argument(
         "-v",
@@ -683,29 +963,105 @@ def main(argv: list[str] | None = None) -> int:
     output_root = args.output_dir.resolve()
     output_root.mkdir(parents=True, exist_ok=True)
 
+    xrd_dir: Path | None = None
+    not_xrd_dir: Path | None = None
+    if args.benchmark:
+        if args.overwrite:
+            xrd_dir, not_xrd_dir = reset_benchmark_dirs(output_root)
+        else:
+            xrd_dir, not_xrd_dir = benchmark_dirs(output_root)
+            xrd_dir.mkdir(parents=True, exist_ok=True)
+            not_xrd_dir.mkdir(parents=True, exist_ok=True)
+        LOGGER.info(
+            "Benchmark buckets: %s | %s",
+            xrd_dir,
+            not_xrd_dir,
+        )
+
     summaries: list[dict[str, Any]] = []
     failures: list[tuple[Path, str]] = []
+    all_figure_entries: list[dict[str, Any]] = []
 
     for index, pdf_path in enumerate(pdf_paths, start=1):
         LOGGER.info("Processing PDF %d/%d: %s", index, len(pdf_paths), pdf_path)
         try:
-            summary = process_pdf(
-                pdf_path,
-                output_root,
-                grobid_url=args.grobid_url,
-                figure_dpi=args.figure_dpi,
-                model=args.model,
-                overwrite=args.overwrite,
-            )
+            if args.benchmark:
+                assert xrd_dir is not None and not_xrd_dir is not None
+                summary = process_pdf_benchmark(
+                    pdf_path,
+                    output_root,
+                    grobid_url=args.grobid_url,
+                    figure_dpi=args.figure_dpi,
+                    overwrite=args.overwrite,
+                    xrd_dir=xrd_dir,
+                    not_xrd_dir=not_xrd_dir,
+                    model=args.model,
+                )
+            else:
+                summary = process_pdf(
+                    pdf_path,
+                    output_root,
+                    grobid_url=args.grobid_url,
+                    figure_dpi=args.figure_dpi,
+                    model=args.model,
+                    overwrite=args.overwrite,
+                    xrd_only=not args.all_figures,
+                )
         except Exception as exc:
             LOGGER.exception("Failed on %s", pdf_path)
             failures.append((pdf_path, str(exc)))
             continue
         summaries.append(summary)
+        if args.benchmark:
+            for entry in summary.get("figures", []):
+                row = dict(entry)
+                row["source_pdf"] = str(pdf_path.resolve())
+                row["pdf_stem"] = pdf_path.stem
+                all_figure_entries.append(row)
+            print(
+                f"{pdf_path.name}: xrd={summary['copied_xrd']} "
+                f"not_xrd={summary['copied_not_xrd']} "
+                f"not_extracted={summary['not_extracted']} "
+                f"→ {summary['output_directory']}"
+            )
+        else:
+            print(
+                f"{pdf_path.name}: kept_xrd={summary.get('kept_xrd', 0)} "
+                f"skipped_not_xrd={summary.get('skipped_not_xrd', 0)} "
+                f"digitized={summary['digitized']} "
+                f"skipped={summary['skipped']} failed={summary['failed']} "
+                f"→ {summary['output_directory']}"
+            )
+
+    if args.benchmark and xrd_dir is not None and not_xrd_dir is not None:
+        batch_manifest = {
+            "mode": "benchmark",
+            "classifier": "openai",
+            "output_root": str(output_root),
+            "xrd_dir": str(xrd_dir),
+            "not_xrd_dir": str(not_xrd_dir),
+            "pdfs_total": len(pdf_paths),
+            "pdfs_succeeded": len(summaries),
+            "pdfs_failed": len(failures),
+            "figures_copied_xrd": sum(s.get("copied_xrd", 0) for s in summaries),
+            "figures_copied_not_xrd": sum(
+                s.get("copied_not_xrd", 0) for s in summaries
+            ),
+            "figures": all_figure_entries,
+            "failures": [
+                {"source_pdf": str(path), "error": err} for path, err in failures
+            ],
+        }
+        manifest_path = output_root / BENCHMARK_MANIFEST_NAME
+        manifest_path.write_text(
+            json.dumps(batch_manifest, indent=2),
+            encoding="utf-8",
+        )
+        LOGGER.info("Wrote benchmark manifest: %s", manifest_path)
         print(
-            f"{pdf_path.name}: digitized={summary['digitized']} "
-            f"skipped={summary['skipped']} failed={summary['failed']} "
-            f"→ {summary['output_directory']}"
+            f"Benchmark: xrd={batch_manifest['figures_copied_xrd']} "
+            f"not_xrd={batch_manifest['figures_copied_not_xrd']} "
+            f"→ {xrd_dir} | {not_xrd_dir}"
         )
 
     if len(pdf_paths) > 1:

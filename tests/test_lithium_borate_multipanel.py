@@ -86,6 +86,7 @@ class LithiumBorateMultipanelAcceptanceTests(unittest.TestCase):
         }
 
         responses = [
+            {"is_xrd": True, "reason": "powder XRD diffractogram"},
             figure_triage,
             panel_triage,
             {**panel_triage, "needs_clipdrop": True},
@@ -135,14 +136,15 @@ class LithiumBorateMultipanelAcceptanceTests(unittest.TestCase):
             )
 
             with patch("scrape_and_digitize.digitize_one_figure", side_effect=_fake_digitize):
-                entry = process_figure(
-                    src,
-                    figures_dir=figures,
-                    model="test-model",
-                    overwrite=True,
-                    http_post=_fake_http_post,
-                    paper_dir=paper,
-                )
+                with patch.dict("os.environ", {"OPENAI_API_KEY": "test-key"}):
+                    entry = process_figure(
+                        src,
+                        figures_dir=figures,
+                        model="test-model",
+                        overwrite=True,
+                        http_post=_fake_http_post,
+                        paper_dir=paper,
+                    )
 
             self.assertNotEqual(entry.get("status"), "skipped_unsupported_multiple_subplots")
             self.assertIn(entry.get("status"), {"digitized", "digitized_partial"})

@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
+import cv2
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,16 +21,19 @@ for path in (str(ROOT), str(LEGACY), str(SCRIPTS)):
         sys.path.insert(0, path)
 
 from figure_triage import (  # noqa: E402
+    classify_xrd_figure_image,
     digitization_route,
     is_digitizable,
     is_multipanel_digitizable,
     is_stacked_digitizable,
     normalize_curve_layout,
     parse_triage_payload,
+    parse_xrd_classify_payload,
     triage_figure_image,
     _normalize_api_key,
 )
 from scrape_and_digitize import (  # noqa: E402
+    process_figure,
     rearrange_digitize_outputs,
     stage_figure_directory,
 )
@@ -219,6 +224,113 @@ class FigureTriageParseTests(unittest.TestCase):
         )
         _, kwargs = http_post.call_args
         self.assertEqual(kwargs["headers"]["Authorization"], "Bearer sk-real")
+
+    def test_parse_xrd_classify_payload(self) -> None:
+        result = parse_xrd_classify_payload(
+            {"is_xrd": True, "reason": "2θ powder pattern"}
+        )
+        self.assertTrue(result.is_xrd)
+        self.assertEqual(result.reason, "2θ powder pattern")
+
+    def test_mocked_http_xrd_classify(self) -> None:
+        payload = {"is_xrd": False, "reason": "SEM micrograph"}
+        response = MagicMock()
+        response.raise_for_status = MagicMock()
+        response.json.return_value = {
+            "choices": [{"message": {"content": json.dumps(payload)}}]
+        }
+        http_post = MagicMock(return_value=response)
+
+        image = np.full((40, 60, 3), 255, dtype=np.uint8)
+        result = classify_xrd_figure_image(
+            image,
+            api_key="test-key",
+            http_post=http_post,
+        )
+        self.assertFalse(result.is_xrd)
+        self.assertIn("SEM", result.reason)
+        http_post.assert_called_once()
+        _, kwargs = http_post.call_args
+        messages = kwargs["json"]["messages"]
+        user_text = messages[1]["content"][0]["text"]
+        self.assertIn("is_xrd", user_text)
+
+
+class ProcessFigureXrdFilterTests(unittest.TestCase):
+    def test_non_xrd_deleted_by_default(self) -> None:
+        payload = {"is_xrd": False, "reason": "FTIR spectrum"}
+        response = MagicMock()
+        response.raise_for_status = MagicMock()
+        response.json.return_value = {
+            "choices": [{"message": {"content": json.dumps(payload)}}]
+        }
+        http_post = MagicMock(return_value=response)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            figures = Path(tmp) / "figures"
+            figures.mkdir()
+            src = figures / "fig_sem.png"
+            cv2.imwrite(str(src), np.full((20, 30, 3), 120, dtype=np.uint8))
+
+            with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}):
+                entry = process_figure(
+                    src,
+                    figures_dir=figures,
+                    model="test-model",
+                    overwrite=True,
+                    http_post=http_post,
+                )
+
+            self.assertEqual(entry["status"], "skipped_not_xrd")
+            self.assertFalse(entry["xrd_classification"]["is_xrd"])
+            self.assertFalse((figures / "fig_sem").exists())
+            self.assertFalse(src.exists())
+            http_post.assert_called_once()
+
+    def test_all_figures_keeps_non_xrd_for_triage(self) -> None:
+        classify_payload = {"is_xrd": False, "reason": "schematic"}
+        triage_payload = {
+            "digitizable": False,
+            "curve_count": 0,
+            "curve_layout": "not_applicable",
+            "needs_clipdrop": False,
+            "reason": "not a plot",
+        }
+        responses = [classify_payload, triage_payload]
+
+        def http_post(url, headers=None, json=None, timeout=None):  # noqa: A002
+            payload = responses.pop(0)
+            response = MagicMock()
+            response.raise_for_status = MagicMock()
+            response.json.return_value = {
+                "choices": [
+                    {"message": {"content": __import__("json").dumps(payload)}}
+                ]
+            }
+            return response
+
+        with tempfile.TemporaryDirectory() as tmp:
+            figures = Path(tmp) / "figures"
+            figures.mkdir()
+            src = figures / "fig_schema.png"
+            cv2.imwrite(str(src), np.full((20, 30, 3), 80, dtype=np.uint8))
+
+            with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}):
+                entry = process_figure(
+                    src,
+                    figures_dir=figures,
+                    model="test-model",
+                    overwrite=True,
+                    http_post=http_post,
+                    xrd_only=False,
+                )
+
+            self.assertEqual(entry["status"], "skipped_not_digitizable")
+            self.assertFalse(entry["xrd_classification"]["is_xrd"])
+            self.assertTrue((figures / "fig_schema" / "fig_schema.png").is_file())
+            self.assertTrue(
+                (figures / "fig_schema" / "fig_schema.xrd_classify.json").is_file()
+            )
 
 
 class RearrangeOutputsTests(unittest.TestCase):
