@@ -1,0 +1,100 @@
+{
+  "sample": "0.9 wt.% N-TiO2",
+  "curves": [
+    {
+      "condition": "300 \u00b0C",
+      "peak_positions": [
+        25.3,
+        37.8,
+        48.0,
+        54.0,
+        62.7,
+        68.8,
+        75.0
+      ],
+      "phases": [
+        "anatase"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "crystallite_size_nm": 6.94,
+      "crystallite_sizes": [
+        {
+          "phase": "anatase",
+          "size_nm": 6.94
+        }
+      ],
+      "relative_intensity": "low"
+    },
+    {
+      "condition": "500 \u00b0C",
+      "peak_positions": [
+        25.3,
+        37.8,
+        48.0,
+        54.0,
+        62.7,
+        68.8,
+        75.0
+      ],
+      "phases": [
+        "anatase"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "crystallite_size_nm": 12.79,
+      "crystallite_sizes": [
+        {
+          "phase": "anatase",
+          "size_nm": 12.79
+        }
+      ],
+      "relative_intensity": "medium"
+    },
+    {
+      "condition": "700 \u00b0C",
+      "peak_positions": [
+        27.5,
+        25.3,
+        36.1,
+        37.8,
+        41.3,
+        44.1,
+        48.0,
+        54.0,
+        55.1,
+        62.7,
+        68.8,
+        70.3,
+        75.0,
+        82.5
+      ],
+      "phases": [
+        "anatase",
+        "rutile"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [
+        {
+          "phase": "anatase",
+          "size_nm": 41.59
+        },
+        {
+          "phase": "rutile",
+          "size_nm": 29.67
+        }
+      ],
+      "relative_intensity": "high"
+    }
+  ],
+  "trends": [
+    "Peak width decreases and intensity increases with temperature.",
+    "Rutile phase appears at 700 \u00b0C; anatase dominates at lower temperatures.",
+    "Crystallite size increases with calcination temperature."
+  ],
+  "plots": [],
+  "x_min": 20.0,
+  "x_max": 85.0
+}

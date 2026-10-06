@@ -1,0 +1,169 @@
+{
+  "source_image": "pattern_1.png",
+  "figure_summary": {
+    "figure_type": "single_panel",
+    "scientific_domain": "materials science",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": false,
+    "contains_uv_vis": false,
+    "contains_microscopy": false,
+    "contains_crystal_structure": false,
+    "panel_count": 1,
+    "plot_count_total": 1,
+    "curve_count_total": 1
+  },
+  "panels": [
+    {
+      "panel_label": "panel_1",
+      "panel_type": "XRD",
+      "bbox_normalized": null,
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 1,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2\u03b8",
+              "unit": "degrees",
+              "min_value": 2.0,
+              "max_value": 38.0,
+              "tick_values": [
+                5,
+                10,
+                15,
+                20,
+                25,
+                30,
+                35
+              ],
+              "scale": "linear",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": null,
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": "linear",
+              "confidence": 0.5,
+              "confidence_level": "medium"
+            },
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": null,
+              "color": "blue",
+              "line_style": "solid",
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "single blue XRD pattern",
+                "explicit_label_source": null,
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 1.0,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "No explicit sample names, phases, Miller indices, or experimental conditions are visible.",
+    "Only one data curve is present, with no legend or annotations.",
+    "X axis is labeled as 2\u03b8 (degrees); Y axis label is not visible.",
+    "No insets, reference markers, or phase information are present."
+  ]
+}

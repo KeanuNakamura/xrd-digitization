@@ -1,0 +1,203 @@
+{
+  "plots": [
+    {
+      "plot_type": "xrd",
+      "panel_label": null,
+      "x_axis": {
+        "quantity": "2theta",
+        "unit": "degrees"
+      },
+      "curves": [
+        {
+          "label": "700 \u00b0C",
+          "condition": {
+            "temperature_C": 700,
+            "time": null,
+            "atmosphere": null,
+            "composition": "0.7 wt.% Mg-TiO2",
+            "other": null
+          },
+          "phases": [
+            "anatase",
+            "rutile"
+          ],
+          "peaks": [
+            {
+              "position_2theta": null,
+              "label": "A[101]",
+              "phase": "anatase",
+              "hkl": "101",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[110]",
+              "phase": "rutile",
+              "hkl": "110",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[101]",
+              "phase": "rutile",
+              "hkl": "101",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A[004]",
+              "phase": "anatase",
+              "hkl": "004",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[200]",
+              "phase": "rutile",
+              "hkl": "200",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[111]",
+              "phase": "rutile",
+              "hkl": "111",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[210]",
+              "phase": "rutile",
+              "hkl": "210",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A[200]",
+              "phase": "anatase",
+              "hkl": "200",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[211]",
+              "phase": "rutile",
+              "hkl": "211",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A[105]",
+              "phase": "anatase",
+              "hkl": "105",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A[211]",
+              "phase": "anatase",
+              "hkl": "211",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[220]",
+              "phase": "rutile",
+              "hkl": "220",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A[204]",
+              "phase": "anatase",
+              "hkl": "204",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[310]",
+              "phase": "rutile",
+              "hkl": "310",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A[116]",
+              "phase": "anatase",
+              "hkl": "116",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[301]",
+              "phase": "rutile",
+              "hkl": "301",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A[215]",
+              "phase": "anatase",
+              "hkl": "215",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R[202]",
+              "phase": "rutile",
+              "hkl": "202",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": [
+            "Both anatase and rutile phases present (mixed phase)",
+            "Rutile peaks more intense than at lower temperatures",
+            "Peak narrowing compared to lower temperatures",
+            "Crystallite size estimated as 41.59 nm (anatase), 29.67 nm (rutile)"
+          ]
+        },
+        {
+          "label": "500 \u00b0C",
+          "condition": {
+            "temperature_C": 500,
+            "time": null,
+            "atmosphere": null,
+            "composition": "0.7 wt.% Mg-TiO2",
+            "other": null
+          },
+          "phases": [
+            "anatase"
+          ],
+          "peaks": [],
+          "peak_broadening": "narrower than 300 \u00b0C",
+          "observations": [
+            "Anatase peaks well defined",
+            "Improved crystallinity compared to 300 \u00b0C",
+            "Crystallite size estimated as 12.79 nm (anatase)"
+          ]
+        },
+        {
+          "label": "300 \u00b0C",
+          "condition": {
+            "temperature_C": 300,
+            "time": null,
+            "atmosphere": null,
+            "composition": "0.7 wt.% Mg-TiO2",
+            "other": null
+          },
+          "phases": [
+            "anatase"
+          ],
+          "peaks": [],
+          "peak_broadening": "broad",
+          "observations": [
+            "Broad peaks",
+            "Lower crystallinity",
+            "Crystallite size estimated as 6.94 nm (anatase)"
+          ]
+        }
+      ]
+    }
+  ]
+}

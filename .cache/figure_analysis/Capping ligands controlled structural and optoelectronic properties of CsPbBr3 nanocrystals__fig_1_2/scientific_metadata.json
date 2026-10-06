@@ -1,0 +1,601 @@
+{
+  "source_image": "Capping ligands controlled structural and optoelectronic properties of CsPbBr3 nanocrystals__fig_1_2.png",
+  "figure_summary": {
+    "figure_type": "single_panel",
+    "scientific_domain": "materials chemistry",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": false,
+    "contains_uv_vis": false,
+    "contains_microscopy": false,
+    "contains_crystal_structure": false,
+    "panel_count": 1,
+    "plot_count_total": 1,
+    "curve_count_total": 9
+  },
+  "panels": [
+    {
+      "panel_label": "panel_1",
+      "panel_type": "XRD",
+      "bbox_normalized": null,
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 9,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 9,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2\u03b8",
+              "unit": "degree",
+              "min_value": 10,
+              "max_value": 50,
+              "tick_values": [
+                10,
+                15,
+                20,
+                25,
+                30,
+                35,
+                40,
+                45,
+                50
+              ],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Intensity",
+              "unit": "a.u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "OIA:Oleym :: 0.1:0.9",
+              "OIA:Oleym :: 0.2:0.8",
+              "OIA:Oleym :: 0.3:0.7",
+              "OIA:Oleym :: 0.4:0.6",
+              "OIA:Oleym :: 0.5:0.5",
+              "OIA:Oleym :: 0.6:0.4",
+              "OIA:Oleym :: 0.7:0.3",
+              "OIA:Oleym :: 0.8:0.2",
+              "OIA:Oleym :: 0.9:0.1"
+            ],
+            "sample_names": [],
+            "phases": [
+              {
+                "name": "CsPb2Br5",
+                "marker": "*",
+                "color": null,
+                "is_reference": false,
+                "name_evidence": {
+                  "value": "CsPb2Br5",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [
+              "(101)",
+              "(102)",
+              "(002)",
+              "(202)",
+              "(020)",
+              "(111)",
+              "(204)",
+              "(231)"
+            ],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [
+              "*"
+            ],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": "x: 10\u201350 (2\u03b8), y: Intensity (a.u.)",
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "OIA:Oleym :: 0.1:0.9",
+              "color": "black",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.1:0.9",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "OIA:Oleym :: 0.2:0.8",
+              "color": "red",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.2:0.8",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "OIA:Oleym :: 0.3:0.7",
+              "color": "green",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.3:0.7",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "OIA:Oleym :: 0.4:0.6",
+              "color": "blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 4,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.4:0.6",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_5",
+              "label": "OIA:Oleym :: 0.5:0.5",
+              "color": "cyan",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 5,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.5:0.5",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_6",
+              "label": "OIA:Oleym :: 0.6:0.4",
+              "color": "magenta",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 6,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.6:0.4",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_7",
+              "label": "OIA:Oleym :: 0.7:0.3",
+              "color": "orange",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 7,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.7:0.3",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_8",
+              "label": "OIA:Oleym :: 0.8:0.2",
+              "color": "purple",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 8,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.8:0.2",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_9",
+              "label": "OIA:Oleym :: 0.9:0.1",
+              "color": "brown",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 9,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "0.9:0.1",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [
+            {
+              "annotation_id": "ann_1",
+              "text": "* CsPb2Br5",
+              "kind": "phase_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_2",
+              "text": "(101)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_3",
+              "text": "(102)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_4",
+              "text": "(002)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_5",
+              "text": "(202)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_6",
+              "text": "(020)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_7",
+              "text": "(111)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_8",
+              "text": "(204)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_9",
+              "text": "(231)",
+              "kind": "hkl_label",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "OIA:Oleym ratio",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3",
+                "curve_4",
+                "curve_5",
+                "curve_6",
+                "curve_7",
+                "curve_8",
+                "curve_9"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "0.1:0.9",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "0.2:0.8",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "0.3:0.7",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "0.4:0.6",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_5",
+                  "value_text": "0.5:0.5",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_6",
+                  "value_text": "0.6:0.4",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_7",
+                  "value_text": "0.7:0.3",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_8",
+                  "value_text": "0.8:0.2",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_9",
+                  "value_text": "0.9:0.1",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 1.0,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "All curve labels and composition ratios are taken exactly from the legend.",
+    "Phase CsPb2Br5 is marked with asterisks (*) and annotated explicitly.",
+    "Miller indices (hkl) are copied exactly as labeled on the plot.",
+    "No explicit peak positions or FWHM values are printed.",
+    "No insets or additional panels are present."
+  ]
+}

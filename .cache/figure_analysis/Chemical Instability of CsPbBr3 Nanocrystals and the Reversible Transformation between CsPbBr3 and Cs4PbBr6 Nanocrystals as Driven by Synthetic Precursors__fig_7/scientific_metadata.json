@@ -1,0 +1,1537 @@
+{
+  "source_image": "Chemical Instability of CsPbBr3 Nanocrystals and the Reversible Transformation between CsPbBr3 and Cs4PbBr6 Nanocrystals as Driven by Synthetic Precursors__fig_7.png",
+  "figure_summary": {
+    "figure_type": "multi_panel",
+    "scientific_domain": "materials chemistry, nanocrystals",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": true,
+    "contains_uv_vis": true,
+    "contains_microscopy": true,
+    "contains_crystal_structure": false,
+    "panel_count": 6,
+    "plot_count_total": 6,
+    "curve_count_total": 20
+  },
+  "panels": [
+    {
+      "panel_label": "(a)",
+      "panel_type": "PL",
+      "bbox_normalized": [
+        0.01,
+        0.09,
+        0.33,
+        0.38
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 7,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "0.12 mM CsPbBr3",
+          "+ 3 mM DDA+",
+          "4 min",
+          "8 min",
+          "12 min",
+          "16 min",
+          "20 min",
+          "24 min",
+          "28 min",
+          "24 h",
+          "Residual CsPbBr3",
+          "Etching of CsPbBr3"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "PL",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 7,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "Wavelength",
+              "unit": "nm",
+              "min_value": 400,
+              "max_value": 550,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Normalized Intensity",
+              "unit": "a.u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "0.12 mM CsPbBr3",
+              "+ 3 mM DDA+",
+              "4 min",
+              "8 min",
+              "12 min",
+              "16 min",
+              "20 min",
+              "24 min",
+              "28 min",
+              "24 h"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "4 min",
+                "numeric_value": 4,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "8 min",
+                "numeric_value": 8,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "12 min",
+                "numeric_value": 12,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "16 min",
+                "numeric_value": 16,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "20 min",
+                "numeric_value": 20,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "24 min",
+                "numeric_value": 24,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "28 min",
+                "numeric_value": 28,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "24 h",
+                "numeric_value": 24,
+                "unit": "h",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": [
+              "Residual CsPbBr3",
+              "Etching of CsPbBr3"
+            ]
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "4 min",
+              "color": "blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "4 min",
+                "condition_numeric": 4,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "8 min",
+              "color": "light blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "8 min",
+                "condition_numeric": 8,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "12 min",
+              "color": "medium blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "12 min",
+                "condition_numeric": 12,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "16 min",
+              "color": "lightest blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 4,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "16 min",
+                "condition_numeric": 16,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_5",
+              "label": "20 min",
+              "color": "orange",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 5,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "20 min",
+                "condition_numeric": 20,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_6",
+              "label": "24 min",
+              "color": "red",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 6,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "24 min",
+                "condition_numeric": 24,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_7",
+              "label": "24 h",
+              "color": "brown",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 7,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "24 h",
+                "condition_numeric": 24,
+                "condition_unit": "h"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [
+            {
+              "annotation_id": "ann_1",
+              "text": "Residual CsPbBr3",
+              "kind": "text",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_2",
+              "text": "Etching of CsPbBr3",
+              "kind": "text",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "time",
+              "variable_name": "reaction time",
+              "unit": "min/h",
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3",
+                "curve_4",
+                "curve_5",
+                "curve_6",
+                "curve_7"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "4 min",
+                  "value_numeric": 4,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "8 min",
+                  "value_numeric": 8,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "12 min",
+                  "value_numeric": 12,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "16 min",
+                  "value_numeric": 16,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_5",
+                  "value_text": "20 min",
+                  "value_numeric": 20,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_6",
+                  "value_text": "24 min",
+                  "value_numeric": 24,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_7",
+                  "value_text": "24 h",
+                  "value_numeric": 24,
+                  "unit": "h",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(b)",
+      "panel_type": "UV_Vis",
+      "bbox_normalized": [
+        0.34,
+        0.09,
+        0.66,
+        0.38
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 7,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "0.12 mM CsPbBr3",
+          "+ 3 mM DDA+",
+          "4 min",
+          "8 min",
+          "12 min",
+          "16 min",
+          "20 min",
+          "24 min",
+          "28 min",
+          "24 h",
+          "Mixture product",
+          "[PbBr4]2-"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "UV_Vis",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 7,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "Wavelength",
+              "unit": "nm",
+              "min_value": 300,
+              "max_value": 600,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Abs",
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "0.12 mM CsPbBr3",
+              "+ 3 mM DDA+",
+              "4 min",
+              "8 min",
+              "12 min",
+              "16 min",
+              "20 min",
+              "24 min",
+              "28 min",
+              "24 h"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "4 min",
+                "numeric_value": 4,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "8 min",
+                "numeric_value": 8,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "12 min",
+                "numeric_value": 12,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "16 min",
+                "numeric_value": 16,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "20 min",
+                "numeric_value": 20,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "24 min",
+                "numeric_value": 24,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "28 min",
+                "numeric_value": 28,
+                "unit": "min",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "24 h",
+                "numeric_value": 24,
+                "unit": "h",
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": [
+              "Mixture product",
+              "[PbBr4]2-"
+            ]
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "4 min",
+              "color": "blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "4 min",
+                "condition_numeric": 4,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "8 min",
+              "color": "light blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "8 min",
+                "condition_numeric": 8,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "12 min",
+              "color": "medium blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "12 min",
+                "condition_numeric": 12,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "16 min",
+              "color": "lightest blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 4,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "16 min",
+                "condition_numeric": 16,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_5",
+              "label": "20 min",
+              "color": "orange",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 5,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "20 min",
+                "condition_numeric": 20,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_6",
+              "label": "24 min",
+              "color": "red",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 6,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "24 min",
+                "condition_numeric": 24,
+                "condition_unit": "min"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_7",
+              "label": "24 h",
+              "color": "brown",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 7,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "24 h",
+                "condition_numeric": 24,
+                "condition_unit": "h"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [
+            {
+              "annotation_id": "ann_1",
+              "text": "Mixture product",
+              "kind": "text",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_2",
+              "text": "[PbBr4]2-",
+              "kind": "text",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "time",
+              "variable_name": "reaction time",
+              "unit": "min/h",
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3",
+                "curve_4",
+                "curve_5",
+                "curve_6",
+                "curve_7"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "4 min",
+                  "value_numeric": 4,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "8 min",
+                  "value_numeric": 8,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "12 min",
+                  "value_numeric": 12,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "16 min",
+                  "value_numeric": 16,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_5",
+                  "value_text": "20 min",
+                  "value_numeric": 20,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_6",
+                  "value_text": "24 min",
+                  "value_numeric": 24,
+                  "unit": "min",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_7",
+                  "value_text": "24 h",
+                  "value_numeric": 24,
+                  "unit": "h",
+                  "source": "legend_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(c)",
+      "panel_type": "schematic",
+      "bbox_normalized": [
+        0.01,
+        0.39,
+        0.33,
+        0.62
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 0,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 0,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "DDA+Br-",
+          "Extraction of PbBrx",
+          "CsPbBr3 NCs",
+          "Etching",
+          "Release",
+          "DDA+[PbBrx]",
+          "CsPb2Br5 NCs",
+          "Cs4PbBr6 NCs"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [
+          "Schematic of transformation and etching process between CsPbBr3, Cs4PbBr6, and CsPb2Br5 nanocrystals"
+        ],
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "plots": [],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(d)",
+      "panel_type": "microscopy",
+      "bbox_normalized": [
+        0.34,
+        0.39,
+        0.66,
+        0.62
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 0,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 0,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": [
+          "High contrast Small particle",
+          "Low contrast Large particle",
+          "1 min reaction, unpurified",
+          "200 nm"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [
+          "TEM image showing particle size and contrast differences after 1 min reaction, unpurified"
+        ],
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "plots": [],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(e)",
+      "panel_type": "XRD",
+      "bbox_normalized": [
+        0.01,
+        0.63,
+        0.66,
+        0.89
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 3,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "React for 24 h and purify",
+          "Add DDAB",
+          "Mixed",
+          "CsPb2Br5 #25-0211",
+          "Cs4PbBr6 #73-2478",
+          "CsPbBr3 #54-0752"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 3,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2 Theta",
+              "unit": "degree",
+              "min_value": 10,
+              "max_value": 60,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Intensity",
+              "unit": "a.u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [],
+            "phases": [
+              {
+                "name": "CsPb2Br5",
+                "marker": "purple sticks",
+                "color": "purple",
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "CsPb2Br5 #25-0211",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "reference pattern label",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              },
+              {
+                "name": "Cs4PbBr6",
+                "marker": "blue sticks",
+                "color": "blue",
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "Cs4PbBr6 #73-2478",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "reference pattern label",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              },
+              {
+                "name": "CsPbBr3",
+                "marker": "black sticks",
+                "color": "black",
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "CsPbBr3 #54-0752",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "reference pattern label",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [
+              "CsPb2Br5 #25-0211",
+              "Cs4PbBr6 #73-2478",
+              "CsPbBr3 #54-0752"
+            ],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": [
+              "React for 24 h and purify",
+              "Add DDAB",
+              "Mixed"
+            ]
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "CsPbBr3",
+              "color": "black",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Topmost XRD pattern, labeled CsPbBr3",
+                "explicit_label_source": "plot label",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "Mixed",
+              "color": "blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Middle XRD pattern, labeled Mixed",
+                "explicit_label_source": "plot label",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "Add DDAB",
+              "color": "light blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Bottom XRD pattern, labeled Add DDAB",
+                "explicit_label_source": "plot label",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(f)",
+      "panel_type": "microscopy",
+      "bbox_normalized": [
+        0.67,
+        0.39,
+        0.99,
+        0.89
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": [
+          "24 h reaction, purified",
+          "100 nm",
+          "24.2 \u00b1 3.1 nm",
+          "Edge Length",
+          "(110)",
+          "d = 0.68 nm",
+          "20 nm"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [
+          "TEM image of nanocrystals after 24 h reaction and purification; inset shows size distribution and lattice spacing"
+        ],
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "microscopy",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 1,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": null,
+            "y_axis": null,
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [
+              "(110)"
+            ],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": true,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [],
+            "structures": [],
+            "other_labels": [
+              "24.2 \u00b1 3.1 nm",
+              "Edge Length",
+              "(110)",
+              "d = 0.68 nm"
+            ]
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": "Shows size distribution and lattice spacing",
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "curves": [],
+          "annotations": [],
+          "insets": [
+            {
+              "inset_id": "inset_1",
+              "purpose": "Size distribution and lattice spacing",
+              "x_axis": null,
+              "y_axis": null,
+              "curve_count": {
+                "value": 1,
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              "curves": [],
+              "annotations": [
+                {
+                  "annotation_id": "ann_1",
+                  "text": "24.2 \u00b1 3.1 nm",
+                  "kind": "text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "annotation_id": "ann_2",
+                  "text": "d = 0.68 nm",
+                  "kind": "text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "annotation_id": "ann_3",
+                  "text": "(110)",
+                  "kind": "text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "observed_notes": [],
+              "estimated_x_range": [],
+              "estimated_y_range": []
+            }
+          ],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 1.0,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "Panel (a) and (b) show time-dependent PL and UV-Vis spectra with explicit time labels.",
+    "Panel (e) is XRD with three experimental curves and three reference patterns for CsPb2Br5, Cs4PbBr6, and CsPbBr3.",
+    "Panels (d) and (f) are TEM images, with (f) containing an inset for size distribution and lattice spacing.",
+    "Panel (c) is a schematic of the transformation process."
+  ]
+}

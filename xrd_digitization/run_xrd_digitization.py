@@ -515,10 +515,20 @@ def process_figure_analysis_json(
 ) -> list[DigitizationResult]:
     """Process figures listed in a GROBID figure_analysis.json file."""
     payload = json.loads(analysis_path.read_text(encoding="utf-8"))
+    if isinstance(payload, dict) and isinstance(payload.get("figures"), list):
+        entries = payload["figures"]
+    elif isinstance(payload, list):
+        entries = payload
+    else:
+        LOGGER.error("Unexpected figure_analysis.json shape: %s", analysis_path)
+        return []
+
     base_dir = analysis_path.parent
     results: list[DigitizationResult] = []
 
-    for entry in payload:
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
         figure_path = entry.get("figure_path")
         if not figure_path:
             continue

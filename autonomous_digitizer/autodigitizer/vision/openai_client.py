@@ -188,10 +188,12 @@ class OpenAIVisionClient:
 
         self.api_calls += 1
         t0 = time.time()
+        temperature = float(getattr(self.config, "temperature", 0.0))
         try:
             response = client.responses.create(
                 model=self.config.model,
                 input=body_input,
+                temperature=temperature,
                 text={
                     "format": {
                         "type": "json_schema",
@@ -208,6 +210,7 @@ class OpenAIVisionClient:
                 response = client.responses.create(
                     model=self.config.model,
                     input=body_input,
+                    temperature=temperature,
                     text={"format": {"type": "json_object"}},
                 )
             except Exception as exc2:

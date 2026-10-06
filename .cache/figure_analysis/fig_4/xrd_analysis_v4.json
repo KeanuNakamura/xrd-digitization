@@ -1,0 +1,192 @@
+{
+  "sample": "0.5 wt.% N-TiO2",
+  "peak_assignments": [
+    {
+      "position": 25.3,
+      "phase": "anatase",
+      "hkl": "101"
+    },
+    {
+      "position": 27.4,
+      "phase": "rutile",
+      "hkl": "110"
+    },
+    {
+      "position": 36.1,
+      "phase": "rutile",
+      "hkl": "101"
+    },
+    {
+      "position": 37.8,
+      "phase": "anatase",
+      "hkl": "004"
+    },
+    {
+      "position": 38.6,
+      "phase": "rutile",
+      "hkl": "200"
+    },
+    {
+      "position": 41.3,
+      "phase": "rutile",
+      "hkl": "111"
+    },
+    {
+      "position": 44.2,
+      "phase": "rutile",
+      "hkl": "210"
+    },
+    {
+      "position": 48.0,
+      "phase": "anatase",
+      "hkl": "200"
+    },
+    {
+      "position": 54.3,
+      "phase": "anatase",
+      "hkl": "105"
+    },
+    {
+      "position": 54.6,
+      "phase": "anatase",
+      "hkl": "211"
+    },
+    {
+      "position": 54.9,
+      "phase": "rutile",
+      "hkl": "211"
+    },
+    {
+      "position": 55.1,
+      "phase": "rutile",
+      "hkl": "220"
+    },
+    {
+      "position": 62.7,
+      "phase": "anatase",
+      "hkl": "204"
+    },
+    {
+      "position": 63.0,
+      "phase": "rutile",
+      "hkl": "310"
+    },
+    {
+      "position": 68.8,
+      "phase": "anatase",
+      "hkl": "116"
+    },
+    {
+      "position": 69.0,
+      "phase": "rutile",
+      "hkl": "301"
+    },
+    {
+      "position": 70.3,
+      "phase": "anatase",
+      "hkl": "215"
+    },
+    {
+      "position": 75.0,
+      "phase": "rutile",
+      "hkl": "202"
+    }
+  ],
+  "curves": [
+    {
+      "condition": "300 \u00b0C",
+      "peak_positions": [
+        25.3,
+        37.8,
+        48.0,
+        54.6,
+        62.7
+      ],
+      "phases": [
+        "anatase"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "crystallite_size_nm": 6.94,
+      "crystallite_sizes": [
+        {
+          "phase": "anatase",
+          "size_nm": 6.94
+        }
+      ],
+      "relative_intensity": "low"
+    },
+    {
+      "condition": "500 \u00b0C",
+      "peak_positions": [
+        25.3,
+        37.8,
+        48.0,
+        54.6,
+        62.7
+      ],
+      "phases": [
+        "anatase"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "crystallite_size_nm": 12.79,
+      "crystallite_sizes": [
+        {
+          "phase": "anatase",
+          "size_nm": 12.79
+        }
+      ],
+      "relative_intensity": "medium"
+    },
+    {
+      "condition": "700 \u00b0C",
+      "peak_positions": [
+        25.3,
+        27.4,
+        36.1,
+        37.8,
+        38.6,
+        41.3,
+        44.2,
+        48.0,
+        54.3,
+        54.6,
+        54.9,
+        55.1,
+        62.7,
+        63.0,
+        68.8,
+        69.0,
+        70.3,
+        75.0
+      ],
+      "phases": [
+        "anatase",
+        "rutile"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [
+        {
+          "phase": "anatase",
+          "size_nm": 41.59
+        },
+        {
+          "phase": "rutile",
+          "size_nm": 29.67
+        }
+      ],
+      "relative_intensity": "high"
+    }
+  ],
+  "trends": [
+    "Peak width decreases and intensity increases with increasing calcination temperature.",
+    "Rutile phase appears at 700 \u00b0C; only anatase detected at lower temperatures.",
+    "Crystallite size increases with temperature."
+  ],
+  "plots": [],
+  "x_min": 15.0,
+  "x_max": 80.0
+}

@@ -1,0 +1,240 @@
+{
+  "sample": "CsPbX3 QDs (quantum dots), PL peak position series",
+  "curves": [
+    {
+      "label": "715 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    },
+    {
+      "label": "712 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    },
+    {
+      "label": "703 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    },
+    {
+      "label": "691 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    },
+    {
+      "label": "678 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    },
+    {
+      "label": "660 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    },
+    {
+      "label": "649 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    },
+    {
+      "label": "641 nm",
+      "peaks": [
+        {
+          "position_2theta": 15.1,
+          "phase": null,
+          "hkl": "001",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 21.4,
+          "phase": null,
+          "hkl": "011",
+          "fwhm": null
+        },
+        {
+          "position_2theta": 30.2,
+          "phase": null,
+          "hkl": "002",
+          "fwhm": null
+        }
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "observations": []
+    }
+  ],
+  "observations": [
+    "All curves show three sharp peaks at approximately 15.1\u00b0, 21.4\u00b0, and 30.2\u00b0 2\u03b8, corresponding to (001), (011), and (002) reflections, respectively. No significant peak shift or broadening is observed across the PL peak position series."
+  ]
+}

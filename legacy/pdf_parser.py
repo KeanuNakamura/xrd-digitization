@@ -1727,6 +1727,38 @@ def build_xrd_records(
     return records
 
 
+def format_author_name(author: Author) -> str:
+    """Human-readable author name from GROBID Author fields."""
+    parts = [
+        part
+        for part in (author.given_name, author.middle_name, author.surname)
+        if part
+    ]
+    name = normalize_whitespace(" ".join(parts))
+    if name:
+        return name
+    if author.email:
+        return author.email
+    return "Unknown author"
+
+
+def figure_entries_from_analysis_payload(payload: Any) -> list[dict[str, Any]]:
+    """
+    Extract figure entries from figure_analysis.json payload.
+
+    Supports legacy list format and the wrapped document format::
+
+        {"title": ..., "doi": ..., "authors": [...], "figures": [...]}
+    """
+    if isinstance(payload, list):
+        return [entry for entry in payload if isinstance(entry, dict)]
+    if isinstance(payload, dict):
+        figures = payload.get("figures")
+        if isinstance(figures, list):
+            return [entry for entry in figures if isinstance(entry, dict)]
+    return []
+
+
 def build_figure_analysis_dataset(
     document: ParsedDocument,
     *,
@@ -1820,6 +1852,21 @@ def build_figure_analysis_dataset(
     dataset.sort(key=lambda entry: entry["figure"])
 
     return dataset
+
+
+def build_figure_analysis_document(
+    document: ParsedDocument,
+    *,
+    xrd_only: bool = False,
+) -> dict[str, Any]:
+    """Paper metadata + figure entries for ``*.figure_analysis.json``."""
+    metadata = document.metadata
+    return {
+        "title": metadata.title,
+        "doi": metadata.doi,
+        "authors": [format_author_name(author) for author in metadata.authors],
+        "figures": build_figure_analysis_dataset(document, xrd_only=xrd_only),
+    }
 
 
 def xrd_figure_extraction_counts(document: ParsedDocument) -> tuple[int, int]:
@@ -1940,7 +1987,7 @@ def parse_pdf(
             ensure_ascii=False,
         )
 
-    figure_analysis = build_figure_analysis_dataset(
+    figure_analysis = build_figure_analysis_document(
         document,
         xrd_only=xrd_figures_only,
     )

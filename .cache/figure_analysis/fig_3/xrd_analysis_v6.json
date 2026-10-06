@@ -1,0 +1,32 @@
+{
+  "is_xrd": true,
+  "sample": "quartz sandstone",
+  "curves": [
+    {
+      "condition": null,
+      "peak_positions": [
+        12.6,
+        20.9,
+        26.6,
+        36.5,
+        39.5,
+        42.5,
+        45.8,
+        50.2,
+        54.8,
+        60.0,
+        68.0
+      ],
+      "phases": [
+        "quartz",
+        "plagioclase"
+      ],
+      "peak_width": "narrow"
+    }
+  ],
+  "trends": [
+    "quartz peaks are dominant; plagioclase peaks are minor"
+  ],
+  "x_min": 5,
+  "x_max": 70
+}

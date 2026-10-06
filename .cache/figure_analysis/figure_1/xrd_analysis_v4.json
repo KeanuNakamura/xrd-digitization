@@ -1,0 +1,141 @@
+{
+  "sample": "CsPbI3 QDs (quantum dots)",
+  "peak_assignments": [
+    {
+      "position": 14.2,
+      "phase": null,
+      "hkl": "001"
+    },
+    {
+      "position": 20.2,
+      "phase": null,
+      "hkl": "011"
+    },
+    {
+      "position": 28.4,
+      "phase": null,
+      "hkl": "002"
+    }
+  ],
+  "curves": [
+    {
+      "condition": "715 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "712 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "703 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "691 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "678 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "660 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "649 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "641 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.4
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    }
+  ],
+  "trends": [
+    "Peak positions remain constant across all PL peak positions.",
+    "Peak width and intensity are similar for all curves, indicating similar crystallinity."
+  ],
+  "plots": [],
+  "x_min": 5,
+  "x_max": 45
+}

@@ -14,7 +14,7 @@ from typing import Any
 import cv2
 import numpy as np
 
-from compute_sid import compare_spectra
+from compute_sid import compare_spectra, format_peak_match_debug, write_score_files
 from xrd_digitization.calibrate_axes import calibrate_axes
 from xrd_digitization.crop_plot_area import crop_plot_area
 from xrd_digitization.detect_panels import detect_stacked_curve_bands
@@ -1653,16 +1653,20 @@ def save_sid_overlay(
     overlay_path: Path,
     *,
     title: str | None = None,
+    scores_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Plot original vs digitized spectra and annotate with symmetric SID."""
+    """Plot original vs digitized spectra; annotate raw/modified SID + peak score."""
     import matplotlib.pyplot as plt
 
     comparison = compare_spectra(json_path, csv_path)
+    print(format_peak_match_debug(comparison))
     true_x = comparison["true_x"]
     true_y = _normalize_intensity(comparison["true_y"])
     approx_x = comparison["approx_x"]
     approx_y = _normalize_intensity(comparison["approx_y"])
-    sid = comparison["symmetric_sid"]
+    raw_sid = comparison["raw_sid"]
+    modified_sid = comparison["modified_sid"]
+    final_score = comparison["final_xrd_score"]
 
     fig, axis = plt.subplots(figsize=(10, 4.5), dpi=150)
     axis.plot(true_x, true_y, color="#0072B2", linewidth=1.4, label="Original (JSON)")
@@ -1681,12 +1685,18 @@ def save_sid_overlay(
     axis.legend(loc="upper right", fontsize=9)
 
     sid_text = (
-        f"SID = {sid:.6g}\n"
-        f"D(true||approx) = {comparison['forward']:.6g}\n"
-        f"D(approx||true) = {comparison['reverse']:.6g}"
+        f"Raw SID = {raw_sid:.6g}\n"
+        f"Modified SID = {modified_sid:.6g}\n"
+        f"Peak Recall = {comparison['peak_recall']:.4f}\n"
+        f"Peak Precision = {comparison['peak_precision']:.4f}\n"
+        f"Peak F1 = {comparison['peak_f1']:.4f}\n"
+        f"Final XRD Score = {final_score:.6g}"
     )
     plot_title = title or overlay_path.stem
-    axis.set_title(f"{plot_title}  |  SID = {sid:.6g}")
+    axis.set_title(
+        f"{plot_title}  |  Raw={raw_sid:.4g}  Mod={modified_sid:.4g}  "
+        f"XRD={final_score:.4g}"
+    )
     axis.text(
         0.02,
         0.98,
@@ -1702,6 +1712,14 @@ def save_sid_overlay(
     fig.tight_layout()
     fig.savefig(overlay_path, bbox_inches="tight")
     plt.close(fig)
+
+    figure_id = title or overlay_path.stem.replace("_overlay", "")
+    write_score_files(
+        comparison,
+        figure_dir=overlay_path.parent,
+        figure_id=figure_id,
+        summary_path=scores_path,
+    )
     return comparison
 
 
@@ -1732,6 +1750,7 @@ def digitize_png_directory(
         raise FileNotFoundError(f"No PNG files found in {png_dir}")
 
     counts = {"succeeded": 0, "failed": 0, "skipped": 0, "total": len(png_files)}
+    summary_path = output_dir / "sid_summary.json"
 
     for index, png_path in enumerate(png_files, start=1):
         pattern_index = pattern_index_from_stem(png_path.stem)
@@ -1794,8 +1813,13 @@ def digitize_png_directory(
                     csv_path,
                     overlay_path,
                     title=figure_id,
+                    scores_path=summary_path,
                 )
-                sid_note = f" SID={comparison['symmetric_sid']:.6g}"
+                sid_note = (
+                    f" raw={comparison['raw_sid']:.4g}"
+                    f" mod={comparison['modified_sid']:.4g}"
+                    f" xrd={comparison['final_xrd_score']:.4g}"
+                )
             else:
                 sid_note = ""
             counts["succeeded"] += 1

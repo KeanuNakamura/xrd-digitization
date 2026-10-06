@@ -22,6 +22,7 @@ class Config:
     verbose: bool = True
     request_timeout_s: float = 120.0
     max_api_retries: int = 3
+    temperature: float = 0.0
 
     # CV heuristics
     background_luma_threshold: int = 245

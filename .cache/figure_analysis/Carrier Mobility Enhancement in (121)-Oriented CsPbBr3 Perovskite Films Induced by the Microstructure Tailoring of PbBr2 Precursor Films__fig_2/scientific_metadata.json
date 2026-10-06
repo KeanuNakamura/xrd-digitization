@@ -1,0 +1,904 @@
+{
+  "source_image": "Carrier Mobility Enhancement in (121)-Oriented CsPbBr3 Perovskite Films Induced by the Microstructure Tailoring of PbBr2 Precursor Films__fig_2.png",
+  "figure_summary": {
+    "figure_type": "multi_panel",
+    "scientific_domain": "materials science",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": false,
+    "contains_uv_vis": false,
+    "contains_microscopy": false,
+    "contains_crystal_structure": false,
+    "panel_count": 4,
+    "plot_count_total": 4,
+    "curve_count_total": 10
+  },
+  "panels": [
+    {
+      "panel_label": "(a)",
+      "panel_type": "XRD",
+      "bbox_normalized": [
+        0.01,
+        0.03,
+        0.48,
+        0.53
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 4,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 4,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2 Theta",
+              "unit": "degree",
+              "min_value": 10,
+              "max_value": 50,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Intensity",
+              "unit": "a.u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [
+              {
+                "value": "HBr-0",
+                "numeric_value": null,
+                "unit": null,
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "HBr-10",
+                "numeric_value": null,
+                "unit": null,
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "HBr-30",
+                "numeric_value": null,
+                "unit": null,
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "HBr-50",
+                "numeric_value": null,
+                "unit": null,
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "phases": [
+              {
+                "name": "FTO",
+                "marker": "\u25c6",
+                "color": null,
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "FTO",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [
+              "(101)",
+              "(121)",
+              "(202)"
+            ],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [
+              "\u25c6"
+            ],
+            "crystal_structures_shown": [],
+            "elements": [],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "HBr-0",
+              "color": "black",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 4,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "annotation_text",
+                "condition_value": "HBr-0",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "HBr-10",
+              "color": "blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "annotation_text",
+                "condition_value": "HBr-10",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "HBr-30",
+              "color": "orange",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "annotation_text",
+                "condition_value": "HBr-30",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "HBr-50",
+              "color": "green",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "annotation_text",
+                "condition_value": "HBr-50",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "HBr",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3",
+                "curve_4"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "HBr-0",
+                  "value_numeric": 0,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "HBr-10",
+                  "value_numeric": 10,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "HBr-30",
+                  "value_numeric": 30,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "HBr-50",
+                  "value_numeric": 50,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(b)",
+      "panel_type": "other",
+      "bbox_normalized": [
+        0.52,
+        0.03,
+        0.99,
+        0.53
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 2,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "line",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 2,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": null,
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": null,
+              "confidence_level": null
+            },
+            "y_axis": {
+              "label": "Peak Intensity / FTO (110)",
+              "unit": null,
+              "min_value": 0.0,
+              "max_value": 2.5,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "(101) / (110)_FTO",
+              "(121) / (110)_FTO"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "(101) / (110)_FTO",
+              "color": "blue",
+              "line_style": "dotted",
+              "marker_style": "circle",
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "(121) / (110)_FTO",
+              "color": "orange",
+              "line_style": "dotted",
+              "marker_style": "diamond",
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "HBr",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2"
+              ],
+              "explicit_values": [],
+              "overall_trend": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(c)",
+      "panel_type": "other",
+      "bbox_normalized": [
+        0.01,
+        0.55,
+        0.48,
+        0.98
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 2,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "line",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 2,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": null,
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": null,
+              "confidence_level": null
+            },
+            "y_axis": {
+              "label": "Peak area ratio",
+              "unit": "%",
+              "min_value": 0,
+              "max_value": 100,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "(101) / [(101)+(121)+(202)]",
+              "(121) / [(101)+(121)+(202)]"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "(101) / [(101)+(121)+(202)]",
+              "color": "blue",
+              "line_style": "dotted",
+              "marker_style": "circle",
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "(121) / [(101)+(121)+(202)]",
+              "color": "orange",
+              "line_style": "dotted",
+              "marker_style": "diamond",
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "HBr",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2"
+              ],
+              "explicit_values": [],
+              "overall_trend": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(d)",
+      "panel_type": "other",
+      "bbox_normalized": [
+        0.52,
+        0.55,
+        0.99,
+        0.98
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 2,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "line",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 2,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": null,
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": null,
+              "confidence_level": null
+            },
+            "y_axis": {
+              "label": "Orientation index",
+              "unit": null,
+              "min_value": 0,
+              "max_value": 2.5,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "(101)",
+              "(121)"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "(101)",
+              "color": "blue",
+              "line_style": "dotted",
+              "marker_style": "circle",
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "(121)",
+              "color": "orange",
+              "line_style": "dotted",
+              "marker_style": "diamond",
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "HBr",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2"
+              ],
+              "explicit_values": [],
+              "overall_trend": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 0.98,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "Panel (a) is an XRD plot with four experimental curves labeled HBr-0, HBr-10, HBr-30, HBr-50. FTO phase is marked with diamonds (\u25c6). Miller indices (101), (121), (202) are labeled.",
+    "Panels (b), (c), and (d) are line plots showing derived quantities (peak intensity ratios, peak area ratios, orientation index) as a function of HBr composition, with explicit legend entries.",
+    "All panels show a composition series with HBr-0, HBr-10, HBr-30, HBr-50 as the variable.",
+    "No explicit peak positions or FWHM values are labeled in the plots.",
+    "No insets or highlighted regions are present."
+  ]
+}

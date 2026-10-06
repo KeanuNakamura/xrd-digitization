@@ -1,0 +1,302 @@
+{
+  "plots": [
+    {
+      "plot_type": "xrd",
+      "panel_label": null,
+      "x_axis": {
+        "quantity": "2theta",
+        "unit": "degrees"
+      },
+      "curves": [
+        {
+          "label": "715 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 715 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        },
+        {
+          "label": "712 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 712 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        },
+        {
+          "label": "703 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 703 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        },
+        {
+          "label": "691 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 691 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        },
+        {
+          "label": "678 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 678 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        },
+        {
+          "label": "660 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 660 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        },
+        {
+          "label": "649 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 649 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        },
+        {
+          "label": "641 nm",
+          "condition": {
+            "temperature_C": null,
+            "time": null,
+            "atmosphere": null,
+            "composition": null,
+            "other": "PL peak position 641 nm"
+          },
+          "phases": [],
+          "peaks": [
+            {
+              "position_2theta": 14.4,
+              "label": "(001)",
+              "phase": null,
+              "hkl": "001",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 20.6,
+              "label": "(011)",
+              "phase": null,
+              "hkl": "011",
+              "fwhm": null
+            },
+            {
+              "position_2theta": 29.0,
+              "label": "(002)",
+              "phase": null,
+              "hkl": "002",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": []
+        }
+      ]
+    }
+  ]
+}

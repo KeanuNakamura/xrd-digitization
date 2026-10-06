@@ -1,0 +1,495 @@
+{
+  "source_image": "All-Inorganic Perovskite Nanocrystals for High-Efficiency Light Emitting Diodes Dual-Phase CsPbBr3-CsPb2Br5 Composites__fig_2.png",
+  "figure_summary": {
+    "figure_type": "multi_panel",
+    "scientific_domain": "materials science",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": false,
+    "contains_uv_vis": false,
+    "contains_microscopy": false,
+    "contains_crystal_structure": true,
+    "panel_count": 2,
+    "plot_count_total": 2,
+    "curve_count_total": 4
+  },
+  "panels": [
+    {
+      "panel_label": "(a)",
+      "panel_type": "XRD",
+      "bbox_normalized": [
+        0.0,
+        0.0,
+        0.65,
+        1.0
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 2,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 2,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2 Thate",
+              "unit": "degree",
+              "min_value": 10,
+              "max_value": 60,
+              "tick_values": [
+                10,
+                20,
+                30,
+                40,
+                50,
+                60
+              ],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Intensity",
+              "unit": "a. u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "CsPbBr3-NPs",
+              "Precipitates",
+              "CsPbBr3",
+              "CsPb2Br5"
+            ],
+            "sample_names": [
+              {
+                "value": "CsPbBr3-NPs",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Precipitates",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "phases": [
+              {
+                "name": "CsPbBr3",
+                "marker": "blue diamond",
+                "color": null,
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "CsPbBr3",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              },
+              {
+                "name": "CsPb2Br5",
+                "marker": "blue star",
+                "color": null,
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "CsPb2Br5",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [
+              "(101)",
+              "(121)",
+              "(141)",
+              "(321)",
+              "(242)"
+            ],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": true,
+            "highlighted_regions": [
+              "green box around peak near 30\u00b0"
+            ],
+            "reference_pattern_markers": [
+              "blue diamond",
+              "blue star"
+            ],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": "Zoom on (202) peak region",
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.9,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "CsPbBr3-NPs",
+              "color": "red",
+              "line_style": "solid",
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "upper red curve",
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "Precipitates",
+              "color": "black",
+              "line_style": "solid",
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "lower black curve",
+                "explicit_label_source": "legend_text",
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [
+            {
+              "inset_id": "inset_1",
+              "purpose": "Zoom on (202) peak region",
+              "x_axis": {
+                "label": null,
+                "unit": null,
+                "min_value": 28,
+                "max_value": 33
+              },
+              "y_axis": {
+                "label": null,
+                "unit": null,
+                "min_value": null,
+                "max_value": null
+              },
+              "curve_count": {
+                "value": 2,
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              "curves": [
+                {
+                  "curve_id": "inset_curve_1",
+                  "label": "Precipitates",
+                  "color": "black",
+                  "line_style": "solid",
+                  "marker_style": null,
+                  "vertical_order": 2,
+                  "role": "experimental",
+                  "observed": {
+                    "visual_description": "lower black curve in inset",
+                    "explicit_label_source": "legend_text",
+                    "condition_value": null,
+                    "condition_numeric": null,
+                    "condition_unit": null
+                  },
+                  "estimated": {
+                    "approximate_major_peak_positions": [],
+                    "notes": []
+                  },
+                  "interpretation": {
+                    "broader_than_others": null,
+                    "higher_relative_intensity": null,
+                    "notes": []
+                  },
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "inset_curve_2",
+                  "label": "CsPbBr3-NPs",
+                  "color": "red",
+                  "line_style": "solid",
+                  "marker_style": null,
+                  "vertical_order": 1,
+                  "role": "experimental",
+                  "observed": {
+                    "visual_description": "upper red curve in inset",
+                    "explicit_label_source": "legend_text",
+                    "condition_value": null,
+                    "condition_numeric": null,
+                    "condition_unit": null
+                  },
+                  "estimated": {
+                    "approximate_major_peak_positions": [],
+                    "notes": []
+                  },
+                  "interpretation": {
+                    "broader_than_others": null,
+                    "higher_relative_intensity": null,
+                    "notes": []
+                  },
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "annotations": [
+                {
+                  "annotation_id": "inset_ann_1",
+                  "text": "(202)",
+                  "kind": "hkl_label",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "annotation_id": "inset_ann_2",
+                  "text": "Precipitates",
+                  "kind": "curve_label",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "annotation_id": "inset_ann_3",
+                  "text": "CsPbBr3-NPs",
+                  "kind": "curve_label",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "observed_notes": [],
+              "estimated_x_range": [
+                28,
+                33
+              ],
+              "estimated_y_range": []
+            }
+          ],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(b)",
+      "panel_type": "crystal_structure",
+      "bbox_normalized": [
+        0.65,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 0,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [
+          "CsPbBr3",
+          "CsPb2Br5"
+        ],
+        "other_labels": []
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "crystal_structure",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 0,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": null,
+            "y_axis": null,
+            "legend_present": true,
+            "legend_entries": [
+              "Cs",
+              "Pb",
+              "Br",
+              "CsPbBr3",
+              "CsPb2Br5"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [
+              "CsPbBr3",
+              "CsPb2Br5"
+            ],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [
+              "CsPbBr3",
+              "CsPb2Br5"
+            ],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "curves": [],
+          "annotations": [],
+          "insets": [],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 0.98,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "Panel (a) is an XRD plot with two experimental curves (CsPbBr3-NPs, Precipitates) and reference markers for CsPbBr3 and CsPb2Br5 phases.",
+    "Inset in panel (a) zooms on the (202) peak region for both curves.",
+    "Panel (b) shows crystal structures for CsPbBr3 and CsPb2Br5 with element legend.",
+    "No explicit peak positions or FWHM values are labeled in the main plot.",
+    "All semantic labels and phase information are preserved exactly as shown."
+  ]
+}

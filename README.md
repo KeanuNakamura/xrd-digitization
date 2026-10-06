@@ -53,6 +53,34 @@ Digitize a folder of figure PNGs:
 python scripts/digitize_figure.py examples/ output/
 ```
 
+### Scientific figure metadata extraction (no digitization)
+
+For already-cropped figure images, extract structured scientific metadata
+(observed / estimated / interpretation) via the OpenAI vision API. This does
+**not** digitize curves or produce XY spectra.
+
+```bash
+export OPENAI_API_KEY=...
+# optional: export OPENAI_MODEL=gpt-4.1
+
+python scripts/analyze_figures.py data/analysis/ output/figure_metadata/
+```
+
+Per figure, writes `output/figure_metadata/<stem>/` with a copy of the image,
+`<stem>_analysis.json`, and `<stem>_summary.txt`. Also appends
+`all_figure_metadata.jsonl` and records failures in `failed_images.jsonl`.
+
+Resume is default (skips figures with a valid analysis JSON); use `--overwrite`
+to re-run. Concurrency: `--workers N`.
+
+Conceptual pipeline:
+
+```
+PDF → existing figure cropping → cropped PNG → scientific figure analysis → JSON
+```
+
+Curve digitization (`digitize_figure.py`) remains a separate optional path.
+
 ## Output
 
 `scripts/digitize_figure.py` writes `output/<figure_id>/` containing a CSV of `(x, y)` points and a `_digitized.png` preview (plus the source PNG; with `--clipdrop`, also `<figure_id>_clean.png`). Multi-curve stacked plots are split into horizontal bands with one CSV/preview per band.
@@ -67,7 +95,15 @@ D(q \parallel p) = \sum_i q_i \log\frac{q_i}{p_i}, \qquad
 \mathrm{SID} = D(p \parallel q) + D(q \parallel p)
 $$
 
-Lower is better; $0$ means identical distributions. Overlays report the symmetric SID (see `compute_sid.py`).
+Lower is better; $0$ means identical distributions. Overlays report **Raw SID** (reference only), **Modified SID** (shared $2\theta$ range + Gaussian smoothing), peak recall/precision/F1, and a **Final XRD Score**:
+
+$$
+\mathrm{peak\_f1} = \frac{2\cdot\mathrm{precision}\cdot\mathrm{recall}}{\mathrm{precision}+\mathrm{recall}}, \qquad
+\mathrm{peak\_penalty} = 0.5\,(1-\mathrm{peak\_f1}), \qquad
+\mathrm{final\_xrd\_score} = \mathrm{modified\_sid} + \mathrm{peak\_penalty}
+$$
+
+Scores are written to each figure’s `<figure_id>_scores.json` and aggregated in `sid_summary.json` under the output directory (see `compute_sid.py`).
 
 ## Examples
 

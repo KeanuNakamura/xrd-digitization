@@ -1,0 +1,1614 @@
+{
+  "source_image": "Chemical Instability of CsPbBr3 Nanocrystals and the Reversible Transformation between CsPbBr3 and Cs4PbBr6 Nanocrystals as Driven by Synthetic Precursors__fig_2.png",
+  "figure_summary": {
+    "figure_type": "multi_panel",
+    "scientific_domain": "materials chemistry, nanocrystals, perovskites",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": true,
+    "contains_uv_vis": true,
+    "contains_microscopy": false,
+    "contains_crystal_structure": false,
+    "panel_count": 4,
+    "plot_count_total": 5,
+    "curve_count_total": null
+  },
+  "panels": [
+    {
+      "panel_label": "(a)",
+      "panel_type": "UV_Vis",
+      "bbox_normalized": [
+        0.01,
+        0.08,
+        0.48,
+        0.48
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 5,
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "Cs : OA ="
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.8,
+        "confidence_level": "medium"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "UV_Vis",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 5,
+            "confidence": 0.9,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "Wavelength",
+              "unit": "nm",
+              "min_value": 300,
+              "max_value": 600,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Norm. Abs (a.u.) / Norm. PL (a.u.)",
+              "unit": null,
+              "min_value": null,
+              "max_value": 1,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "1 : 3",
+              "1 : 4",
+              "1 : 5",
+              "1 : 6",
+              "1 : 7",
+              "1 : 10",
+              "1 : 20"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "Cs : OA = 1 : 3",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : OA = 1 : 4",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : OA = 1 : 5",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : OA = 1 : 6",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : OA = 1 : 7",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : OA = 1 : 10",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : OA = 1 : 20",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": true,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": [
+              "purify",
+              "crude"
+            ]
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": "Absorption and PL comparison before and after purification",
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "medium"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "1 : 3",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 3",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "1 : 4",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 4",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "1 : 5",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 5",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "1 : 6",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 6",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_5",
+              "label": "1 : 7",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 7",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [
+            {
+              "annotation_id": "ann_1",
+              "text": "purify",
+              "kind": "arrow_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_2",
+              "text": "crude",
+              "kind": "text_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "insets": [
+            {
+              "inset_id": "inset_1",
+              "purpose": "Absorption and PL comparison before and after purification",
+              "x_axis": {
+                "label": "Wavelength",
+                "unit": "nm",
+                "min_value": null,
+                "max_value": null
+              },
+              "y_axis": {
+                "label": "Abs",
+                "unit": null,
+                "min_value": null,
+                "max_value": null
+              },
+              "curve_count": {
+                "value": 2,
+                "confidence": 0.8,
+                "confidence_level": "medium"
+              },
+              "curves": [],
+              "annotations": [],
+              "observed_notes": [],
+              "estimated_x_range": [],
+              "estimated_y_range": []
+            }
+          ],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "Cs : OA ratio",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3",
+                "curve_4",
+                "curve_5"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "1 : 3",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "1 : 4",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "1 : 5",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "1 : 6",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_5",
+                  "value_text": "1 : 7",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 0.9,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 0.9,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(b)",
+      "panel_type": "UV_Vis",
+      "bbox_normalized": [
+        0.52,
+        0.08,
+        0.99,
+        0.48
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 5,
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "Cs : DDAB ="
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.8,
+        "confidence_level": "medium"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "UV_Vis",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 5,
+            "confidence": 0.9,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "Wavelength",
+              "unit": "nm",
+              "min_value": 300,
+              "max_value": 600,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Norm. Abs (a.u.) / Norm. PL (a.u.)",
+              "unit": null,
+              "min_value": null,
+              "max_value": 1,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "1 : 0.18",
+              "1 : 0.36",
+              "1 : 0.54",
+              "1 : 0.72",
+              "1 : 1.8",
+              "1 : 2.7",
+              "1 : 3.6"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "Cs : DDAB = 1 : 0.18",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : DDAB = 1 : 0.36",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : DDAB = 1 : 0.54",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : DDAB = 1 : 0.72",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : DDAB = 1 : 1.8",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : DDAB = 1 : 2.7",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Cs : DDAB = 1 : 3.6",
+                "numeric_value": null,
+                "unit": null,
+                "source": "legend_text",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": true,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": [
+              "purify",
+              "crude"
+            ]
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": "Absorption and PL comparison before and after purification",
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "medium"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "1 : 0.18",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 0.18",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "1 : 0.36",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 0.36",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "1 : 0.54",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 0.54",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "1 : 0.72",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 0.72",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_5",
+              "label": "1 : 1.8",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": null,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "legend_text",
+                "condition_value": "1 : 1.8",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [
+            {
+              "annotation_id": "ann_1",
+              "text": "purify",
+              "kind": "arrow_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_2",
+              "text": "crude",
+              "kind": "text_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "insets": [
+            {
+              "inset_id": "inset_1",
+              "purpose": "Absorption and PL comparison before and after purification",
+              "x_axis": {
+                "label": "Wavelength",
+                "unit": "nm",
+                "min_value": null,
+                "max_value": null
+              },
+              "y_axis": {
+                "label": "Abs",
+                "unit": null,
+                "min_value": null,
+                "max_value": null
+              },
+              "curve_count": {
+                "value": 2,
+                "confidence": 0.8,
+                "confidence_level": "medium"
+              },
+              "curves": [],
+              "annotations": [],
+              "observed_notes": [],
+              "estimated_x_range": [],
+              "estimated_y_range": []
+            }
+          ],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "Cs : DDAB ratio",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3",
+                "curve_4",
+                "curve_5"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "1 : 0.18",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "1 : 0.36",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "1 : 0.54",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "1 : 0.72",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_5",
+                  "value_text": "1 : 1.8",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "legend_text",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 0.9,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 0.9,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(c)",
+      "panel_type": "PL",
+      "bbox_normalized": [
+        0.01,
+        0.52,
+        0.48,
+        0.99
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 5,
+        "confidence": 0.95,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Pb",
+          "Cs",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "PLQY"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.8,
+        "confidence_level": "medium"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "PL",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 5,
+            "confidence": 0.95,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "Wavelength",
+              "unit": "nm",
+              "min_value": 410,
+              "max_value": 560,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Norm. Abs / PL Intensity (a.u.)",
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            },
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "Pb : TOPO = 1 : 4",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Pb : TOPO = 1 : 5",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Pb : TOPO = 1 : 6",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Pb : TOPO : OA = 1 : 6 : 2",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Pb : TOPO : OA = 1 : 8 : 4",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Pb",
+              "Cs",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": [
+              "PLQY = 100%",
+              "PLQY = 91%",
+              "PLQY = 89%",
+              "PLQY = 100%",
+              "PLQY = 98%"
+            ]
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "medium"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "Pb : TOPO = 1 : 4",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 4",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "Pb : TOPO = 1 : 5",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 5",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "Pb : TOPO = 1 : 6",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 6",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "Pb : TOPO : OA = 1 : 6 : 2",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 4,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 6 : 2",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_5",
+              "label": "Pb : TOPO : OA = 1 : 8 : 4",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 5,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 8 : 4",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [
+            {
+              "annotation_id": "ann_1",
+              "text": "PLQY = 100%",
+              "kind": "text_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_2",
+              "text": "PLQY = 91%",
+              "kind": "text_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_3",
+              "text": "PLQY = 89%",
+              "kind": "text_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_4",
+              "text": "PLQY = 100%",
+              "kind": "text_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "annotation_id": "ann_5",
+              "text": "PLQY = 98%",
+              "kind": "text_label",
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "Pb : TOPO : OA ratio",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3",
+                "curve_4",
+                "curve_5"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "1 : 4",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "1 : 5",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "1 : 6",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "1 : 6 : 2",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_5",
+                  "value_text": "1 : 8 : 4",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 0.95,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 0.95,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "(d)",
+      "panel_type": "XRD",
+      "bbox_normalized": [
+        0.52,
+        0.52,
+        0.99,
+        0.99
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 3,
+        "confidence": 0.95,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Pb",
+          "Cs",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "Pb : TOPO : OA"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.8,
+        "confidence_level": "medium"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 3,
+            "confidence": 0.95,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2 Theta",
+              "unit": "degree",
+              "min_value": 10,
+              "max_value": 60,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "Intensity (a.u.)",
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            },
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [],
+            "phases": [
+              {
+                "name": "CsPbBr3 #54-0752",
+                "marker": "green line",
+                "color": "green",
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "CsPbBr3 #54-0752",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "evidence_type": "observed",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                }
+              },
+              {
+                "name": "CsPbBr3 #18-0364",
+                "marker": "gray line",
+                "color": "gray",
+                "is_reference": true,
+                "name_evidence": {
+                  "value": "CsPbBr3 #18-0364",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "evidence_type": "observed",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "Pb : TOPO : OA = 1 : 4 : 0",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Pb : TOPO : OA = 1 : 6 : 2",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Pb : TOPO : OA = 1 : 8 : 4",
+                "numeric_value": null,
+                "unit": null,
+                "source": "text_label",
+                "evidence_type": "observed",
+                "confidence": 0.95,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [
+              "CsPbBr3 #54-0752",
+              "CsPbBr3 #18-0364"
+            ],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Pb",
+              "Cs",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "medium"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "Pb : TOPO : OA = 1 : 4 : 0",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 4 : 0",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "Pb : TOPO : OA = 1 : 6 : 2",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 6 : 2",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "Pb : TOPO : OA = 1 : 8 : 4",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": null,
+                "explicit_label_source": "text_label",
+                "condition_value": "1 : 8 : 4",
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "composition",
+              "variable_name": "Pb : TOPO : OA ratio",
+              "unit": null,
+              "ordered_curve_ids": [
+                "curve_1",
+                "curve_2",
+                "curve_3"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "1 : 4 : 0",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "1 : 6 : 2",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "1 : 8 : 4",
+                  "value_numeric": null,
+                  "unit": null,
+                  "source": "text_label",
+                  "confidence": 0.95,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 0.95,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 0.95,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 0.95,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "All sample/curve labels are taken exactly as shown in the figure legends or text.",
+    "Reference XRD patterns for CsPbBr3 (#54-0752 and #18-0364) are present as markers, not as data curves.",
+    "Insets in (a) and (b) show absorption before and after purification.",
+    "No Miller indices (hkl) or explicit peak positions are labeled in the XRD panel.",
+    "No explicit FWHM values are printed.",
+    "Experimental series are based on composition ratios as shown in the legends and text labels."
+  ]
+}

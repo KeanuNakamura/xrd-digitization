@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""OpenAI vision pipeline for mat-xrd-digitizer (separate from PlotDigitizer).
+"""Autonomous OpenAI vision digitizer for single-curve XRD plots.
 
-Flow:
-  XRD image
-    -> OpenAI vision extracts peaks JSON (SKILL.md schema)
+Flow (matches mat-xrd-digitizer skill):
+  figure PNG
+    -> OpenAI vision extracts every visible peak as a JSON list
     -> digitize_plot.py builds pseudo-Voigt .xy + preview PNG
 
-This does not call PlotDigitizer or the hybrid xrd_digitization path.
+CNRS batch (--png-dir) packages PlotDigitizer-matched outputs:
+  figure_N_digitized/{pattern_N.png, peaks.json / pattern_N.json,
+                      figure_N.csv, figure_N_digitized.xy/.png,
+                      figure_N_overlay.png}
 
 # Env: base-agent
 python .agents/mat-xrd-digitizer/scripts/run_openai_digitize.py path/to/figure.png
-python .agents/mat-xrd-digitizer/scripts/run_openai_digitize.py --batch grobid_output/sample_pdfs
+python .agents/mat-xrd-digitizer/scripts/run_openai_digitize.py data/CNRS_figures --png-dir \\
+  --output-dir data/CNRS_digitized_agent --json-dir data/CNRS
 """
 
 from __future__ import annotations
@@ -20,68 +24,66 @@ import base64
 import json
 import mimetypes
 import os
+import random
 import re
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".webp"}
-
 DEFAULT_BASE_URL = "https://api.openai.com/v1"
 DEFAULT_MODEL = "gpt-4.1"
 
 SKILL_DIR = Path(__file__).resolve().parents[1]
-SKILL_MD_PATH = SKILL_DIR / "SKILL.md"
-DIGITIZE_PLOT_PATH = SKILL_DIR / "scripts" / "digitize_plot.py"
+REPO_ROOT = Path(__file__).resolve().parents[3]
+DIGITIZE_PLOT_PATH = Path(__file__).resolve().parent / "digitize_plot.py"
+DEFAULT_CNRS_DIGITIZED_AGENT_DIR = REPO_ROOT / "data" / "CNRS_digitized_agent"
+DEFAULT_CNRS_JSON_DIR = REPO_ROOT / "data" / "CNRS"
+PATTERN_STEM_RE = re.compile(r"^pattern_(\d+)$", re.IGNORECASE)
+FIGURE_STEM_RE = re.compile(r"^figure_(\d+)$", re.IGNORECASE)
 
-# Minimal single-image ask — mirrors a typical Cursor skill invocation.
-# Extra coaching is intentionally omitted so API vs Cursor get the same skill text.
-TASK_PROMPT = """\
-Digitize this figure using the mat-xrd-digitizer skill (single-image workflow).
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-- If the figure is not an XRD / diffraction plot, return ONLY \
-{{"is_xrd": false, "reason": "..."}}.
-- If it is XRD, return ONLY the skill JSON schema (set "is_xrd": true if useful).
-- source_image must be exactly: {filename}
-- Follow the skill document and digitize_plot.py reference in the system message.
-- Return valid JSON only (no markdown fences, no commentary).
+SYSTEM_PROMPT = """\
+You digitize single-curve XRD plots. Return JSON only.
+Extract EVERY visible peak on the single plotted curve, including tiny minor peaks.
+Intensity is normalized 0–1 with the tallest peak = 1.0. fwhm defaults to 0.3 degrees
+unless a peak is clearly broader/narrower.
+If the figure is not a single-curve XRD plot, return {"is_xrd": false, "reason": "..."}.
 """
 
+USER_PROMPT = """\
+Digitize this single-curve XRD figure.
 
-def load_skill_markdown() -> str:
-    """Load SKILL.md so the API receives the same skill text Cursor uses."""
-    if not SKILL_MD_PATH.exists():
-        raise FileNotFoundError(f"Missing skill file: {SKILL_MD_PATH}")
-    return SKILL_MD_PATH.read_text(encoding="utf-8")
+source_image must be exactly: {filename}
 
+If not a single-curve XRD / diffraction plot, return ONLY:
+{{"is_xrd": false, "reason": "..."}}
 
-def load_digitize_plot_reference() -> str:
-    """Load digitize_plot.py — Cursor skill agents can open this file."""
-    if not DIGITIZE_PLOT_PATH.exists():
-        raise FileNotFoundError(f"Missing digitize script: {DIGITIZE_PLOT_PATH}")
-    return DIGITIZE_PLOT_PATH.read_text(encoding="utf-8")
+Otherwise return ONLY:
+{{
+  "is_xrd": true,
+  "source_image": "{filename}",
+  "min_x": <leftmost axis tick as float>,
+  "max_x": <rightmost axis tick as float>,
+  "peaks": [
+    {{"2theta": <float>, "intensity": <0-1>, "fwhm": <float>}},
+    ...
+  ]
+}}
 
+Rules:
+- Include every visible peak (major and minor).
+- intensity: relative height of each peak tip, tallest = 1.0.
+- fwhm: peak width in degrees (default 0.3).
+- Read 2θ from axis tick labels.
+- Return valid JSON only (no markdown).
+"""
 
-def build_system_prompt() -> str:
-    """Same information surface as Cursor: full SKILL.md + digitize_plot.py."""
-    return (
-        "You are running the mat-xrd-digitizer skill. The two files below are the "
-        "same documents a Cursor agent loads for this skill. Treat them as "
-        "authoritative.\n\n"
-        "Your job in this API call is ONLY vision extraction of the peak JSON "
-        "described by the skill. Do not invent shell commands; another process "
-        "will run digitize_plot.py on your JSON.\n\n"
-        "===== FILE: .agents/mat-xrd-digitizer/SKILL.md =====\n"
-        f"{load_skill_markdown()}\n\n"
-        "===== FILE: .agents/mat-xrd-digitizer/scripts/digitize_plot.py =====\n"
-        f"{load_digitize_plot_reference()}\n"
-    )
-
-
-def build_user_prompt(filename: str) -> str:
-    return TASK_PROMPT.format(filename=filename)
 
 def _require_requests():
     try:
@@ -96,9 +98,7 @@ def _require_requests():
 def encode_image_b64(path: Path) -> tuple[str, str]:
     data = path.read_bytes()
     mime, _ = mimetypes.guess_type(str(path))
-    if mime is None:
-        mime = "image/png"
-    return base64.b64encode(data).decode("ascii"), mime
+    return base64.b64encode(data).decode("ascii"), mime or "image/png"
 
 
 def parse_json_content(text: str) -> dict[str, Any]:
@@ -109,14 +109,27 @@ def parse_json_content(text: str) -> dict[str, Any]:
     try:
         payload = json.loads(text)
     except json.JSONDecodeError:
-        start = text.find("{")
-        end = text.rfind("}")
+        start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
             raise
         payload = json.loads(text[start : end + 1])
     if not isinstance(payload, dict):
-        raise ValueError("Vision response JSON must be an object")
+        raise ValueError("Vision response must be a JSON object")
     return payload
+
+
+def _retry_wait_seconds(response: Any, attempt: int) -> float:
+    retry_after = None
+    try:
+        retry_after = response.headers.get("Retry-After")
+    except Exception:
+        pass
+    if retry_after:
+        try:
+            return max(1.0, float(retry_after))
+        except ValueError:
+            pass
+    return min(90.0, (2**attempt) + random.uniform(0.25, 1.5))
 
 
 def call_openai_vision(
@@ -125,34 +138,27 @@ def call_openai_vision(
     api_key: str | None = None,
     base_url: str | None = None,
     model: str | None = None,
+    max_retries: int = 8,
     timeout_s: float = 180.0,
 ) -> dict[str, Any]:
-    """Call OpenAI-compatible chat completions with the figure image.
-
-    System prompt = full SKILL.md + digitize_plot.py (same files Cursor can load).
-    User prompt = minimal single-image skill ask (no extra API-only coaching).
-    """
     requests = _require_requests()
     key = api_key or os.environ.get("OPENAI_API_KEY") or os.environ.get("XRD_AGENT_API_KEY")
     if not key:
-        raise RuntimeError("Set OPENAI_API_KEY (or XRD_AGENT_API_KEY) to run vision digitization")
+        raise RuntimeError("Set OPENAI_API_KEY (or XRD_AGENT_API_KEY)")
 
     url_base = (base_url or os.environ.get("OPENAI_BASE_URL") or DEFAULT_BASE_URL).rstrip("/")
     model_name = model or os.environ.get("OPENAI_MODEL") or DEFAULT_MODEL
     b64, mime = encode_image_b64(image_path)
-    system_prompt = build_system_prompt()
-    user_text = build_user_prompt(image_path.name)
-
     body = {
         "model": model_name,
         "temperature": 0,
         "response_format": {"type": "json_object"},
         "messages": [
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": SYSTEM_PROMPT},
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": user_text},
+                    {"type": "text", "text": USER_PROMPT.format(filename=image_path.name)},
                     {
                         "type": "image_url",
                         "image_url": {
@@ -165,141 +171,91 @@ def call_openai_vision(
         ],
     }
     headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-    response = requests.post(
-        f"{url_base}/chat/completions",
-        headers=headers,
-        json=body,
-        timeout=timeout_s,
-    )
-    response.raise_for_status()
-    data = response.json()
-    try:
-        content = data["choices"][0]["message"]["content"]
-    except (KeyError, IndexError, TypeError) as exc:
-        raise ValueError(f"Unexpected OpenAI response shape: {data!r}") from exc
-    if not isinstance(content, str):
-        raise ValueError("OpenAI message content must be a string")
-    return parse_json_content(content)
+    url = f"{url_base}/chat/completions"
+    last_error: Exception | None = None
 
-
-def normalize_digitization_json(payload: dict[str, Any], source_image: str) -> dict[str, Any]:
-    """Ensure SKILL.md-compatible fields for digitize_plot.py."""
-    out = dict(payload)
-    out.pop("is_xrd", None)
-    out["source_image"] = source_image
-    out.setdefault("figure_type", "xrd")
-
-    if "plots" in out and isinstance(out["plots"], list):
-        out.setdefault("figure_layout", "multi_panel")
-        for i, plot in enumerate(out["plots"], start=1):
-            if not isinstance(plot, dict):
-                continue
-            plot.setdefault("plot_id", f"plot_{i}")
-            plot.setdefault("curve_layout", "overlay")
-            plot.setdefault("source_image", source_image)
-            _normalize_axes(plot)
-            _normalize_curves(plot.get("curves") or [])
-            plot.setdefault("noise", out.get("noise", 0.01))
-            plot.setdefault("background", out.get("background", 0.03))
-        out.setdefault("noise", 0.01)
-        out.setdefault("background", 0.03)
-        return out
-
-    out.setdefault("curve_layout", "overlay")
-    _normalize_axes(out)
-    curves = out.get("curves")
-    if not curves:
-        # Allow accidental legacy peak list under "peaks".
-        peaks = out.get("peaks")
-        if isinstance(peaks, list):
-            out["curves"] = [
-                {
-                    "curve_id": "curve_1",
-                    "intensity_normalization": "normalized_within_curve",
-                    "peaks": peaks,
-                }
-            ]
-    _normalize_curves(out.get("curves") or [])
-    # Match prior CNRS Cursor-agent simulation defaults when unspecified.
-    out.setdefault("noise", 0.01)
-    out.setdefault("background", 0.03)
-    return out
-
-
-def _normalize_axes(obj: dict[str, Any]) -> None:
-    x_axis = obj.get("x_axis")
-    if not isinstance(x_axis, dict):
-        x_axis = {}
-        obj["x_axis"] = x_axis
-    x_axis.setdefault("label", "2theta")
-    x_axis.setdefault("unit", "degrees")
-    x_axis.setdefault("min", 5.0)
-    x_axis.setdefault("max", 80.0)
-
-    y_axis = obj.get("y_axis")
-    if not isinstance(y_axis, dict):
-        y_axis = {}
-        obj["y_axis"] = y_axis
-    y_axis.setdefault("label", "intensity")
-    y_axis.setdefault("unit", "normalized")
-    y_axis.setdefault("min", 0.0)
-    y_axis.setdefault("max", 1.0)
-
-
-def _normalize_curves(curves: list[Any]) -> None:
-    for i, curve in enumerate(curves, start=1):
-        if not isinstance(curve, dict):
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(url, headers=headers, json=body, timeout=timeout_s)
+        except requests.exceptions.RequestException as exc:
+            last_error = exc
+            wait = min(60.0, (2**attempt) + random.uniform(0.25, 1.5))
+            print(f"OpenAI request error ({exc}); retry {attempt + 1}/{max_retries} in {wait:.1f}s")
+            time.sleep(wait)
             continue
-        curve.setdefault("curve_id", f"curve_{i}")
-        curve.setdefault("intensity_normalization", "normalized_within_curve")
-        peaks = curve.get("peaks") or []
-        cleaned = []
-        for peak in peaks:
-            if not isinstance(peak, dict):
-                continue
-            tt = peak.get("2theta", peak.get("two_theta"))
-            if tt is None:
-                continue
-            inten = float(peak.get("intensity", 0.0))
-            fwhm = float(peak.get("fwhm", 0.3) or 0.3)
-            cleaned.append(
+
+        if response.status_code == 429 or response.status_code >= 500:
+            wait = _retry_wait_seconds(response, attempt)
+            print(
+                f"OpenAI HTTP {response.status_code}; "
+                f"retry {attempt + 1}/{max_retries} in {wait:.1f}s"
+            )
+            time.sleep(wait)
+            last_error = RuntimeError(f"{response.status_code} for url: {url}")
+            continue
+
+        response.raise_for_status()
+        content = response.json()["choices"][0]["message"]["content"]
+        if not isinstance(content, str):
+            raise ValueError("OpenAI message content must be a string")
+        return parse_json_content(content)
+
+    raise RuntimeError(f"OpenAI failed after {max_retries} retries: {last_error}") from last_error
+
+
+def normalize_peaks(payload: dict[str, Any]) -> tuple[list[dict[str, float]], float, float]:
+    """Return cleaned peaks list plus axis range."""
+    raw_peaks = payload.get("peaks")
+    if not isinstance(raw_peaks, list):
+        curves = payload.get("curves")
+        if isinstance(curves, list) and curves and isinstance(curves[0], dict):
+            raw_peaks = curves[0].get("peaks")
+    if not isinstance(raw_peaks, list) or not raw_peaks:
+        raise ValueError("Vision JSON missing non-empty 'peaks' list")
+
+    peaks: list[dict[str, float]] = []
+    for peak in raw_peaks:
+        if not isinstance(peak, dict):
+            continue
+        tt = peak.get("2theta", peak.get("two_theta"))
+        inten = peak.get("intensity")
+        if tt is None or inten is None:
+            continue
+        fwhm = peak.get("fwhm", 0.3)
+        try:
+            peaks.append(
                 {
                     "2theta": float(tt),
-                    "intensity": max(0.0, min(1.0, inten)),
-                    "fwhm": fwhm if fwhm > 0 else 0.3,
+                    "intensity": max(0.0, min(1.0, float(inten))),
+                    "fwhm": float(fwhm) if float(fwhm) > 0 else 0.3,
                 }
             )
-        curve["peaks"] = cleaned
+        except (TypeError, ValueError):
+            continue
 
+    if not peaks:
+        raise ValueError("No valid peaks after normalization")
 
-def prepare_output_dir(image_path: Path) -> Path:
-    """Create {parent}/{stem}/ and move/copy the image beside outputs."""
-    stem = image_path.stem
-    out_dir = image_path.parent / stem
-    out_dir.mkdir(parents=True, exist_ok=True)
-    dest = out_dir / image_path.name
-    if image_path.resolve() != dest.resolve():
-        if not dest.exists():
-            # Prefer move when the image still sits next to sibling figures.
-            try:
-                shutil.move(str(image_path), str(dest))
-            except Exception:
-                shutil.copy2(image_path, dest)
-        image_path = dest
-    return out_dir if dest.exists() else out_dir
+    # Renormalize so tallest peak is 1.0
+    max_i = max(p["intensity"] for p in peaks)
+    if max_i > 0:
+        for peak in peaks:
+            peak["intensity"] = peak["intensity"] / max_i
 
-
-def resolve_image_in_output_dir(image_path: Path, out_dir: Path) -> Path:
-    candidate = out_dir / image_path.name
-    if candidate.exists():
-        return candidate
-    if image_path.exists():
-        return image_path
-    raise FileNotFoundError(f"Image not found after output prep: {image_path}")
+    peaks.sort(key=lambda p: p["2theta"])
+    min_x = float(payload.get("min_x", payload.get("x_min", 5.0)))
+    max_x = float(payload.get("max_x", payload.get("x_max", 80.0)))
+    x_axis = payload.get("x_axis")
+    if isinstance(x_axis, dict):
+        min_x = float(x_axis.get("min", min_x))
+        max_x = float(x_axis.get("max", max_x))
+    if max_x <= min_x:
+        min_x, max_x = 5.0, 80.0
+    return peaks, min_x, max_x
 
 
 def run_digitize_plot(
-    json_path: Path,
+    peaks_json: Path,
     output_xy: Path,
     *,
     min_x: float,
@@ -307,13 +263,11 @@ def run_digitize_plot(
     points: int,
     noise: float,
     background: float,
-    python_exe: str | None = None,
 ) -> None:
-    script = Path(__file__).resolve().parent / "digitize_plot.py"
     cmd = [
-        python_exe or sys.executable,
-        str(script),
-        str(json_path),
+        sys.executable,
+        str(DIGITIZE_PLOT_PATH),
+        str(peaks_json),
         "--output",
         str(output_xy),
         "--min-x",
@@ -330,6 +284,117 @@ def run_digitize_plot(
     subprocess.run(cmd, check=True)
 
 
+def xy_to_csv(xy_path: Path, csv_path: Path) -> None:
+    rows: list[tuple[float, float]] = []
+    for raw in xy_path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.replace(",", " ").split()
+        if len(parts) < 2:
+            continue
+        try:
+            rows.append((float(parts[0]), float(parts[1])))
+        except ValueError:
+            continue
+    if not rows:
+        raise ValueError(f"No numeric rows in {xy_path}")
+    csv_path.write_text(
+        "two_theta,intensity\n"
+        + "\n".join(f"{x:.3f},{y:.6g}" for x, y in rows)
+        + "\n",
+        encoding="utf-8",
+    )
+
+
+def pattern_index_from_stem(stem: str) -> int | None:
+    for regex in (PATTERN_STEM_RE, FIGURE_STEM_RE):
+        match = regex.match(stem)
+        if match:
+            return int(match.group(1))
+    return None
+
+
+def save_sid_overlay(
+    truth_json: Path,
+    csv_path: Path,
+    overlay_path: Path,
+    *,
+    title: str | None = None,
+    scores_path: Path | None = None,
+) -> dict[str, Any]:
+    import matplotlib.pyplot as plt
+    import numpy as np
+    from compute_sid import compare_spectra, format_peak_match_debug, write_score_files
+
+    comparison = compare_spectra(truth_json, csv_path)
+    print(format_peak_match_debug(comparison))
+
+    def _norm(values: Any) -> Any:
+        arr = np.asarray(values, dtype=float)
+        lo, hi = float(arr.min()), float(arr.max())
+        if hi == lo:
+            return np.zeros_like(arr)
+        return (arr - lo) / (hi - lo)
+
+    true_y = _norm(comparison["true_y"])
+    approx_y = _norm(comparison["approx_y"])
+    raw_sid = comparison["raw_sid"]
+    modified_sid = comparison["modified_sid"]
+    final_score = comparison["final_xrd_score"]
+
+    fig, axis = plt.subplots(figsize=(10, 4.5), dpi=150)
+    axis.plot(comparison["true_x"], true_y, color="#0072B2", linewidth=1.4, label="Original (JSON)")
+    axis.plot(
+        comparison["approx_x"],
+        approx_y,
+        color="#D55E00",
+        linewidth=1.2,
+        alpha=0.9,
+        label="Digitized (CSV)",
+    )
+    axis.set_xlabel("2θ (degrees)")
+    axis.set_ylabel("Normalized intensity")
+    axis.set_ylim(-0.02, 1.05)
+    axis.grid(True, alpha=0.3)
+    axis.legend(loc="upper right", fontsize=9)
+    plot_title = title or overlay_path.stem
+    axis.set_title(
+        f"{plot_title}  |  Raw={raw_sid:.4g}  Mod={modified_sid:.4g}  "
+        f"XRD={final_score:.4g}"
+    )
+    axis.text(
+        0.02,
+        0.98,
+        (
+            f"Raw SID = {raw_sid:.6g}\n"
+            f"Modified SID = {modified_sid:.6g}\n"
+            f"Peak Recall = {comparison['peak_recall']:.4f}\n"
+            f"Peak Precision = {comparison['peak_precision']:.4f}\n"
+            f"Peak F1 = {comparison['peak_f1']:.4f}\n"
+            f"Final XRD Score = {final_score:.6g}"
+        ),
+        transform=axis.transAxes,
+        va="top",
+        ha="left",
+        fontsize=9,
+        bbox={"boxstyle": "round,pad=0.3", "facecolor": "white", "alpha": 0.85},
+    )
+    overlay_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.tight_layout()
+    fig.savefig(overlay_path, bbox_inches="tight")
+    plt.close(fig)
+
+    figure_id = title or overlay_path.stem.replace("_overlay", "")
+    write_score_files(
+        comparison,
+        figure_dir=overlay_path.parent,
+        figure_id=figure_id,
+        summary_path=scores_path,
+    )
+    return comparison
+
+
 def digitize_image(
     image_path: Path,
     *,
@@ -338,36 +403,31 @@ def digitize_image(
     model: str | None = None,
     points: int = 4000,
     noise: float = 0.01,
-    background: float = 0.03,
+    background: float = 0.05,
+    out_dir: Path | None = None,
+    output_stem: str | None = None,
     skip_move: bool = False,
     dry_run_json: Path | None = None,
+    max_retries: int = 8,
 ) -> dict[str, Any]:
-    """Digitize one image with OpenAI vision + digitize_plot.py."""
-    image_path = image_path.expanduser()
-    if not image_path.is_absolute():
-        image_path = (Path.cwd() / image_path).resolve()
-    else:
-        image_path = image_path.resolve()
-
+    """Digitize one single-curve XRD image."""
+    image_path = image_path.expanduser().resolve()
     if not image_path.exists():
-        raise FileNotFoundError(
-            f"Image not found: {image_path}\n"
-            "Pass a real filesystem path to a .png/.jpg figure, e.g.\n"
-            "  python .agents/mat-xrd-digitizer/scripts/run_openai_digitize.py "
-            "path/to/figure.png\n"
-            "Chat attachments like '[Image #1]' are not valid paths."
-        )
+        raise FileNotFoundError(f"Image not found: {image_path}")
     if image_path.suffix.lower() not in IMAGE_EXTENSIONS:
-        raise ValueError(
-            f"Unsupported image extension '{image_path.suffix}'. "
-            f"Expected one of: {sorted(IMAGE_EXTENSIONS)}"
-        )
+        raise ValueError(f"Unsupported image extension: {image_path.suffix}")
 
     if dry_run_json is not None:
         payload = json.loads(dry_run_json.read_text(encoding="utf-8"))
+        if isinstance(payload, list):
+            payload = {"is_xrd": True, "peaks": payload, "min_x": 5.0, "max_x": 80.0}
     else:
         payload = call_openai_vision(
-            image_path, api_key=api_key, base_url=base_url, model=model
+            image_path,
+            api_key=api_key,
+            base_url=base_url,
+            model=model,
+            max_retries=max_retries,
         )
 
     if payload.get("is_xrd") is False:
@@ -377,31 +437,34 @@ def digitize_image(
             "reason": payload.get("reason") or "not_xrd",
         }
 
-    if skip_move:
+    if out_dir is not None:
+        out_dir = out_dir.resolve()
+        out_dir.mkdir(parents=True, exist_ok=True)
+        image_in_dir = out_dir / image_path.name
+        if image_path.resolve() != image_in_dir.resolve():
+            shutil.copy2(image_path, image_in_dir)
+    elif skip_move:
         out_dir = image_path.parent / image_path.stem
         out_dir.mkdir(parents=True, exist_ok=True)
-        if not (out_dir / image_path.name).exists():
-            shutil.copy2(image_path, out_dir / image_path.name)
         image_in_dir = out_dir / image_path.name
+        if not image_in_dir.exists():
+            shutil.copy2(image_path, image_in_dir)
     else:
-        out_dir = prepare_output_dir(image_path)
-        image_in_dir = resolve_image_in_output_dir(image_path, out_dir)
+        out_dir = image_path.parent / image_path.stem
+        out_dir.mkdir(parents=True, exist_ok=True)
+        image_in_dir = out_dir / image_path.name
+        if image_path.resolve() != image_in_dir.resolve() and not image_in_dir.exists():
+            shutil.move(str(image_path), str(image_in_dir))
+            image_path = image_in_dir
 
-    stem = image_in_dir.stem
-    dig_json = normalize_digitization_json(payload, source_image=image_in_dir.name)
-    json_path = out_dir / f"{stem}.json"
-    json_path.write_text(json.dumps(dig_json, indent=2), encoding="utf-8")
+    peaks, min_x, max_x = normalize_peaks(payload)
+    dig_stem = output_stem or image_in_dir.stem
+    peaks_path = out_dir / f"{image_in_dir.stem}.json"
+    peaks_path.write_text(json.dumps(peaks, indent=2), encoding="utf-8")
 
-    x_axis = dig_json.get("x_axis") or {}
-    if "plots" in dig_json and dig_json["plots"]:
-        first = dig_json["plots"][0]
-        x_axis = first.get("x_axis") or x_axis
-    min_x = float(x_axis.get("min", 5.0))
-    max_x = float(x_axis.get("max", 80.0))
-
-    output_xy = out_dir / f"{stem}_digitized.xy"
+    output_xy = out_dir / f"{dig_stem}_digitized.xy"
     run_digitize_plot(
-        json_path,
+        peaks_path,
         output_xy,
         min_x=min_x,
         max_x=max_x,
@@ -409,157 +472,277 @@ def digitize_image(
         noise=noise,
         background=background,
     )
-
     return {
         "status": "digitized",
         "image": str(image_in_dir),
-        "json": str(json_path),
+        "json": str(peaks_path),
         "output_dir": str(out_dir),
         "xy": str(output_xy),
-        "curve_layout": dig_json.get("curve_layout") or dig_json.get("figure_layout"),
-        "n_curves": (
-            sum(len(p.get("curves") or []) for p in dig_json.get("plots") or [])
-            if "plots" in dig_json
-            else len(dig_json.get("curves") or [])
-        ),
+        "digitized_png": str(output_xy.with_suffix(".png")),
+        "n_peaks": len(peaks),
+        "min_x": min_x,
+        "max_x": max_x,
     }
 
 
-def iter_batch_images(root: Path) -> list[Path]:
-    """Find figure images under grobid_output/sample_pdfs/{example}/figures/."""
-    images: list[Path] = []
-    root = root.resolve()
-    if not root.exists():
-        return images
+def iter_png_directory(png_dir: Path) -> list[Path]:
+    png_dir = png_dir.resolve()
+    files = sorted(png_dir.glob("pattern_*.png"))
+    if not files:
+        files = sorted(png_dir.glob("figure_*.png"))
+    if not files:
+        files = sorted(p for p in png_dir.glob("*.png") if p.is_file())
+    return files
 
-    # Prefer .../{example}/figures/* pattern; also accept a direct figures dir.
-    candidates = []
-    if root.name == "figures":
-        candidates.append(root)
-    else:
-        candidates.extend(sorted(p for p in root.glob("*/figures") if p.is_dir()))
-        candidates.extend(sorted(p for p in root.glob("**/figures") if p.is_dir()))
 
-    seen: set[Path] = set()
-    for figures_dir in candidates:
-        figures_dir = figures_dir.resolve()
-        if figures_dir in seen:
+def digitize_png_directory(
+    png_dir: Path,
+    *,
+    output_dir: Path = DEFAULT_CNRS_DIGITIZED_AGENT_DIR,
+    json_dir: Path = DEFAULT_CNRS_JSON_DIR,
+    skip_existing: bool = True,
+    overwrite: bool = False,
+    limit: int | None = None,
+    api_key: str | None = None,
+    base_url: str | None = None,
+    model: str | None = None,
+    points: int = 4000,
+    noise: float = 0.01,
+    background: float = 0.05,
+    from_json_dir: Path | None = None,
+    max_retries: int = 8,
+    request_delay: float = 1.5,
+) -> dict[str, Any]:
+    """Batch-digitize flat PNG dirs into figure_N_digitized/ with SID overlays."""
+    png_dir = png_dir.resolve()
+    output_dir = output_dir.resolve()
+    json_dir = json_dir.resolve()
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    png_files = iter_png_directory(png_dir)
+    if limit is not None:
+        png_files = png_files[: max(0, limit)]
+    if not png_files:
+        raise FileNotFoundError(f"No PNG files found in {png_dir}")
+
+    counts = {"succeeded": 0, "failed": 0, "skipped": 0, "total": len(png_files)}
+    sid_rows: list[dict[str, Any]] = []
+    summary_path = output_dir / "sid_summary.json"
+
+    for index, png_path in enumerate(png_files, start=1):
+        pattern_index = pattern_index_from_stem(png_path.stem)
+        figure_id = (
+            f"figure_{pattern_index}" if pattern_index is not None else png_path.stem
+        )
+        figure_dir = output_dir / f"{figure_id}_digitized"
+        csv_path = figure_dir / f"{figure_id}.csv"
+        digitized_png = figure_dir / f"{figure_id}_digitized.png"
+        digitized_xy = figure_dir / f"{figure_id}_digitized.xy"
+        overlay_path = figure_dir / f"{figure_id}_overlay.png"
+        original_copy = figure_dir / png_path.name
+        truth_json = (
+            json_dir / f"pattern_{pattern_index}.json"
+            if PATTERN_STEM_RE.match(png_path.stem) and pattern_index is not None
+            else None
+        )
+        has_truth = truth_json is not None and truth_json.is_file()
+
+        already_done = (
+            csv_path.is_file()
+            and digitized_png.is_file()
+            and original_copy.is_file()
+            and (not has_truth or overlay_path.is_file())
+        )
+        if already_done and skip_existing and not overwrite:
+            counts["skipped"] += 1
+            print(f"[{index}/{counts['total']}] skip (exists): {figure_dir.name}")
             continue
-        seen.add(figures_dir)
-        for path in sorted(figures_dir.iterdir()):
-            if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS:
-                # Skip images already inside a stem subdirectory.
-                if path.parent.name == path.stem:
-                    continue
-                images.append(path)
-    return images
+
+        try:
+            if overwrite and figure_dir.exists():
+                shutil.rmtree(figure_dir)
+            figure_dir.mkdir(parents=True, exist_ok=True)
+
+            dry_json = None
+            if from_json_dir is not None:
+                candidate = from_json_dir / f"{png_path.stem}.json"
+                if candidate.is_file():
+                    dry_json = candidate
+
+            if dry_json is None and request_delay > 0 and index > 1:
+                time.sleep(request_delay)
+
+            result = digitize_image(
+                png_path,
+                api_key=api_key,
+                base_url=base_url,
+                model=model,
+                points=points,
+                noise=noise,
+                background=background,
+                out_dir=figure_dir,
+                output_stem=figure_id,
+                dry_run_json=dry_json,
+                max_retries=max_retries,
+            )
+            if result.get("status") != "digitized":
+                raise RuntimeError(result.get("reason") or "skipped/failed")
+
+            xy_path = Path(result["xy"])
+            if xy_path.resolve() != digitized_xy.resolve():
+                shutil.copy2(xy_path, digitized_xy)
+            preview = Path(result["digitized_png"])
+            if preview.is_file() and preview.resolve() != digitized_png.resolve():
+                shutil.copy2(preview, digitized_png)
+            if not digitized_png.is_file():
+                raise RuntimeError(f"Missing digitized PNG for {figure_id}")
+
+            xy_to_csv(digitized_xy, csv_path)
+
+            sid_note = ""
+            if has_truth:
+                comparison = save_sid_overlay(
+                    truth_json,
+                    csv_path,
+                    overlay_path,
+                    title=figure_id,
+                    scores_path=summary_path,
+                )
+                sid_note = (
+                    f" raw={comparison['raw_sid']:.4g}"
+                    f" mod={comparison['modified_sid']:.4g}"
+                    f" xrd={comparison['final_xrd_score']:.4g}"
+                )
+                from compute_sid import score_record
+
+                row = score_record(comparison, figure_id=figure_id)
+                row["n_peaks"] = int(result.get("n_peaks") or 0)
+                row["out_dir"] = str(figure_dir)
+                sid_rows.append(row)
+
+            counts["succeeded"] += 1
+            print(
+                f"[{index}/{counts['total']}] ok {figure_dir.name} "
+                f"(peaks={result.get('n_peaks')}){sid_note}"
+            )
+        except Exception as exc:  # noqa: BLE001
+            counts["failed"] += 1
+            print(f"[{index}/{counts['total']}] FAILED {png_path.name}: {exc}")
+
+    if summary_path.is_file():
+        print(f"Wrote SID summary: {summary_path}")
+
+    return {"counts": counts, "sid_rows": sid_rows}
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "OpenAI vision XRD digitizer for mat-xrd-digitizer. "
-            "Separate from PlotDigitizer / hybrid pixel tracing."
+            "Autonomous single-curve XRD digitizer (OpenAI vision + pseudo-Voigt). "
+            "Use --png-dir for CNRS-style batch packaging + SID overlays."
         )
     )
     parser.add_argument(
         "image",
         nargs="?",
         type=Path,
-        help="Single XRD figure image to digitize",
+        help="Single figure image, or PNG directory with --png-dir",
     )
     parser.add_argument(
-        "--batch",
-        type=Path,
-        help="Batch root (e.g. grobid_output/sample_pdfs) to scan */figures/",
-    )
-    parser.add_argument("--api-key", default=None, help="OpenAI API key (else OPENAI_API_KEY)")
-    parser.add_argument("--base-url", default=None, help="OpenAI-compatible base URL")
-    parser.add_argument("--model", default=None, help=f"Vision model (default: {DEFAULT_MODEL})")
-    parser.add_argument("--points", type=int, default=4000)
-    parser.add_argument("--noise", type=float, default=0.01)
-    parser.add_argument("--background", type=float, default=0.03)
-    parser.add_argument(
-        "--skip-move",
+        "--png-dir",
         action="store_true",
-        help="Copy image into output dir instead of moving it",
+        help="Treat positional path as a flat PNG directory (CNRS batch mode)",
     )
     parser.add_argument(
-        "--from-json",
+        "--output-dir",
         type=Path,
-        help="Skip vision call and digitize using an existing peaks JSON",
+        default=DEFAULT_CNRS_DIGITIZED_AGENT_DIR,
+        help="Output root for --png-dir (default: data/CNRS_digitized_agent)",
     )
     parser.add_argument(
-        "--summary",
+        "--json-dir",
+        type=Path,
+        default=DEFAULT_CNRS_JSON_DIR,
+        help="Ground-truth JSON dir for SID overlays (default: data/CNRS)",
+    )
+    parser.add_argument(
+        "--skip-existing",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Skip complete figure folders (default: on)",
+    )
+    parser.add_argument("--overwrite", action="store_true", help="Redo existing folders")
+    parser.add_argument("--limit", type=int, default=None, help="Max PNGs in --png-dir")
+    parser.add_argument(
+        "--from-json-dir",
         type=Path,
         default=None,
-        help="Optional path to write a JSON processing summary",
+        help="Skip vision; load {stem}.json peaks from this directory",
+    )
+    parser.add_argument("--from-json", type=Path, help="Skip vision for a single image")
+    parser.add_argument("--skip-move", action="store_true", help="Copy instead of move")
+    parser.add_argument("--api-key", default=None)
+    parser.add_argument("--base-url", default=None)
+    parser.add_argument("--model", default=None)
+    parser.add_argument("--points", type=int, default=4000)
+    parser.add_argument("--noise", type=float, default=0.01)
+    parser.add_argument("--background", type=float, default=0.05)
+    parser.add_argument("--max-retries", type=int, default=8)
+    parser.add_argument(
+        "--request-delay",
+        type=float,
+        default=1.5,
+        help="Seconds between OpenAI calls in batch mode",
     )
     args = parser.parse_args(argv)
 
-    if not args.image and not args.batch:
-        parser.error("Provide an image path or --batch root")
-
-    results: list[dict[str, Any]] = []
-
-    if args.image:
-        if args.from_json and not args.image.exists() and args.skip_move:
-            parser.error("image path must exist")
-        result = digitize_image(
+    if args.png_dir:
+        if args.image is None:
+            parser.error("--png-dir requires a PNG directory path")
+        if not args.image.exists():
+            raise SystemExit(f"Directory not found: {args.image}")
+        result = digitize_png_directory(
             args.image,
+            output_dir=args.output_dir,
+            json_dir=args.json_dir,
+            skip_existing=args.skip_existing,
+            overwrite=args.overwrite,
+            limit=args.limit,
             api_key=args.api_key,
             base_url=args.base_url,
             model=args.model,
             points=args.points,
             noise=args.noise,
             background=args.background,
-            skip_move=args.skip_move,
-            dry_run_json=args.from_json,
+            from_json_dir=args.from_json_dir,
+            max_retries=args.max_retries,
+            request_delay=args.request_delay,
         )
-        results.append(result)
-        print(json.dumps(result, indent=2))
+        counts = result["counts"]
+        print(
+            "PNG batch complete: "
+            f"succeeded={counts['succeeded']}, skipped={counts['skipped']}, "
+            f"failed={counts['failed']}, total={counts['total']} -> {args.output_dir}"
+        )
+        return 1 if counts["failed"] else 0
 
-    if args.batch:
-        images = iter_batch_images(args.batch)
-        print(f"Found {len(images)} candidate figure image(s) under {args.batch}")
-        for image_path in images:
-            print(f"\n=== {image_path} ===")
-            try:
-                result = digitize_image(
-                    image_path,
-                    api_key=args.api_key,
-                    base_url=args.base_url,
-                    model=args.model,
-                    points=args.points,
-                    noise=args.noise,
-                    background=args.background,
-                    skip_move=args.skip_move,
-                )
-            except Exception as exc:  # noqa: BLE001 - batch continues
-                result = {
-                    "status": "error",
-                    "image": str(image_path),
-                    "error": str(exc),
-                }
-            results.append(result)
-            print(json.dumps(result, indent=2))
+    if args.image is None:
+        parser.error("Provide an image path or use --png-dir")
 
-    summary = {
-        "n_inspected": len(results),
-        "n_digitized": sum(1 for r in results if r.get("status") == "digitized"),
-        "n_skipped": sum(1 for r in results if r.get("status") == "skipped"),
-        "n_errors": sum(1 for r in results if r.get("status") == "error"),
-        "results": results,
-    }
-    print("\n=== summary ===")
-    print(json.dumps({k: summary[k] for k in ("n_inspected", "n_digitized", "n_skipped", "n_errors")}, indent=2))
-
-    if args.summary:
-        args.summary.parent.mkdir(parents=True, exist_ok=True)
-        args.summary.write_text(json.dumps(summary, indent=2), encoding="utf-8")
-        print(f"Wrote summary: {args.summary}")
-
-    return 1 if summary["n_errors"] else 0
+    result = digitize_image(
+        args.image,
+        api_key=args.api_key,
+        base_url=args.base_url,
+        model=args.model,
+        points=args.points,
+        noise=args.noise,
+        background=args.background,
+        skip_move=args.skip_move,
+        dry_run_json=args.from_json,
+        max_retries=args.max_retries,
+    )
+    print(json.dumps(result, indent=2))
+    return 0 if result.get("status") in {"digitized", "skipped"} else 1
 
 
 if __name__ == "__main__":

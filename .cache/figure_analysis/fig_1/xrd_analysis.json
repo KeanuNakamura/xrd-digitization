@@ -1,0 +1,166 @@
+{
+  "plots": [
+    {
+      "plot_type": "xrd",
+      "panel_label": null,
+      "x_axis": {
+        "quantity": "2theta",
+        "unit": "degrees"
+      },
+      "curves": [
+        {
+          "label": "700 \u00b0C",
+          "condition": {
+            "temperature_C": 700,
+            "time": null,
+            "atmosphere": null,
+            "composition": "0.5 wt.% Mg-TiO2",
+            "other": null
+          },
+          "phases": [
+            "anatase",
+            "rutile"
+          ],
+          "peaks": [
+            {
+              "position_2theta": null,
+              "label": "A [101]",
+              "phase": "anatase",
+              "hkl": "101",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R [110]",
+              "phase": "rutile",
+              "hkl": "110",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R [101]",
+              "phase": "rutile",
+              "hkl": "101",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [004]",
+              "phase": "anatase",
+              "hkl": "004",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "R [111]",
+              "phase": "rutile",
+              "hkl": "111",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [200]",
+              "phase": "anatase",
+              "hkl": "200",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [105]",
+              "phase": "anatase",
+              "hkl": "105",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [211]",
+              "phase": "anatase",
+              "hkl": "211",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [204]",
+              "phase": "anatase",
+              "hkl": "204",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [116]",
+              "phase": "anatase",
+              "hkl": "116",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [220]",
+              "phase": "anatase",
+              "hkl": "220",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [215]",
+              "phase": "anatase",
+              "hkl": "215",
+              "fwhm": null
+            },
+            {
+              "position_2theta": null,
+              "label": "A [301]",
+              "phase": "anatase",
+              "hkl": "301",
+              "fwhm": null
+            }
+          ],
+          "peak_broadening": "narrow",
+          "observations": [
+            "Both anatase and rutile phases present",
+            "Sharp, well-defined peaks"
+          ]
+        },
+        {
+          "label": "500 \u00b0C",
+          "condition": {
+            "temperature_C": 500,
+            "time": null,
+            "atmosphere": null,
+            "composition": "0.5 wt.% Mg-TiO2",
+            "other": null
+          },
+          "phases": [
+            "anatase",
+            "rutile"
+          ],
+          "peaks": [],
+          "peak_broadening": "moderate",
+          "observations": [
+            "Both anatase and rutile phases present",
+            "Peaks are broader than at 700 \u00b0C"
+          ]
+        },
+        {
+          "label": "300 \u00b0C",
+          "condition": {
+            "temperature_C": 300,
+            "time": null,
+            "atmosphere": null,
+            "composition": "0.5 wt.% Mg-TiO2",
+            "other": null
+          },
+          "phases": [
+            "anatase",
+            "rutile"
+          ],
+          "peaks": [],
+          "peak_broadening": "broad",
+          "observations": [
+            "Both anatase and rutile phases present",
+            "Peaks are broadest at this temperature"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "sample": "0.5 wt.% Mg-TiO2",
+  "peak_assignments": [
+    {
+      "position": 25.3,
+      "phase": "anatase",
+      "hkl": "101"
+    },
+    {
+      "position": 27.4,
+      "phase": "rutile",
+      "hkl": "110"
+    },
+    {
+      "position": 36.1,
+      "phase": "anatase",
+      "hkl": "004"
+    },
+    {
+      "position": 37.9,
+      "phase": "rutile",
+      "hkl": "101"
+    },
+    {
+      "position": 39.2,
+      "phase": "rutile",
+      "hkl": "111"
+    },
+    {
+      "position": 48.0,
+      "phase": "anatase",
+      "hkl": "200"
+    },
+    {
+      "position": 53.9,
+      "phase": "anatase",
+      "hkl": "105"
+    },
+    {
+      "position": 55.1,
+      "phase": "anatase",
+      "hkl": "211"
+    },
+    {
+      "position": 62.7,
+      "phase": "anatase",
+      "hkl": "204"
+    },
+    {
+      "position": 68.8,
+      "phase": "anatase",
+      "hkl": "116"
+    },
+    {
+      "position": 70.3,
+      "phase": "anatase",
+      "hkl": "220"
+    },
+    {
+      "position": 75.0,
+      "phase": "anatase",
+      "hkl": "215"
+    },
+    {
+      "position": 82.7,
+      "phase": "anatase",
+      "hkl": "301"
+    }
+  ],
+  "curves": [
+    {
+      "condition": "300 \u00b0C",
+      "peak_positions": [
+        25.3,
+        27.4,
+        37.9,
+        48.0,
+        55.1,
+        62.7
+      ],
+      "phases": [
+        "anatase",
+        "rutile"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "500 \u00b0C",
+      "peak_positions": [
+        25.3,
+        27.4,
+        37.9,
+        48.0,
+        55.1,
+        62.7,
+        68.8
+      ],
+      "phases": [
+        "anatase",
+        "rutile"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    },
+    {
+      "condition": "700 \u00b0C",
+      "peak_positions": [
+        25.3,
+        27.4,
+        36.1,
+        37.9,
+        39.2,
+        48.0,
+        53.9,
+        55.1,
+        62.7,
+        68.8,
+        70.3,
+        75.0,
+        82.7
+      ],
+      "phases": [
+        "anatase",
+        "rutile"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": null
+    }
+  ],
+  "trends": [
+    "Peak width decreases and number of resolved peaks increases with higher preparation temperature.",
+    "Relative intensity of anatase (101) peak increases with temperature."
+  ],
+  "plots": [],
+  "x_min": 20.0,
+  "x_max": 85.0
+}

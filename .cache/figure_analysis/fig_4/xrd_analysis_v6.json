@@ -1,0 +1,41 @@
+{
+  "is_xrd": true,
+  "sample": "clay",
+  "curves": [
+    {
+      "condition": "Clay Oriented",
+      "peak_positions": [
+        7.1,
+        12.4,
+        20.9,
+        26.7,
+        35.0,
+        39.5,
+        50.1,
+        59.9
+      ],
+      "phases": [
+        "kaolinite"
+      ],
+      "peak_width": "moderate"
+    },
+    {
+      "condition": "Glycol",
+      "peak_positions": [],
+      "phases": [],
+      "peak_width": null
+    },
+    {
+      "condition": "Destroyed",
+      "peak_positions": [],
+      "phases": [],
+      "peak_width": null
+    }
+  ],
+  "trends": [
+    "Peak at 12.4\u00b0 2\u03b8 (kaolinite) is prominent in clay oriented sample",
+    "Glycol and Destroyed treatments show no significant peaks"
+  ],
+  "x_min": 5,
+  "x_max": 70
+}

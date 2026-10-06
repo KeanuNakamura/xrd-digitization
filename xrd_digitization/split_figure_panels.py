@@ -282,15 +282,19 @@ def load_figure_text_context(
         payload = json.loads(candidates[0].read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return None, None
-    if not isinstance(payload, list):
+
+    # Legacy list or wrapped {"figures": [...]} document.
+    if isinstance(payload, list):
+        entries = [item for item in payload if isinstance(item, dict)]
+    elif isinstance(payload, dict) and isinstance(payload.get("figures"), list):
+        entries = [item for item in payload["figures"] if isinstance(item, dict)]
+    else:
         return None, None
 
     # fig_1 → 1
     m = re.search(r"(\d+)$", figure_id)
     fig_num = int(m.group(1)) if m else None
-    for item in payload:
-        if not isinstance(item, dict):
-            continue
+    for item in entries:
         if fig_num is not None and int(item.get("figure") or -1) == fig_num:
             caption = str(item.get("caption") or "").strip() or None
             body = str(item.get("text") or "").strip() or None

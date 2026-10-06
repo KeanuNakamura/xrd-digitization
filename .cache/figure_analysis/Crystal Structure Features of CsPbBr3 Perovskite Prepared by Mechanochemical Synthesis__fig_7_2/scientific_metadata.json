@@ -1,0 +1,975 @@
+{
+  "source_image": "Crystal Structure Features of CsPbBr3 Perovskite Prepared by Mechanochemical Synthesis__fig_7_2.png",
+  "figure_summary": {
+    "figure_type": "multi_panel",
+    "scientific_domain": "materials science",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": false,
+    "contains_uv_vis": false,
+    "contains_microscopy": false,
+    "contains_crystal_structure": false,
+    "panel_count": 3,
+    "plot_count_total": 4,
+    "curve_count_total": 10
+  },
+  "panels": [
+    {
+      "panel_label": "panel_1",
+      "panel_type": "XRD",
+      "bbox_normalized": [
+        0.06,
+        0.06,
+        0.36,
+        0.41
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 4,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "773 K",
+          "673 K",
+          "473 K",
+          "298 K",
+          "Pm\u001b3m",
+          "Pbnm"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [
+          "Thermal evolution of SXRD patterns shows orthorhombic to cubic phase transition."
+        ],
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 4,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2\u0010 (\u001b0)",
+              "unit": "\u001b0",
+              "min_value": 3.1,
+              "max_value": 4.6,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "counts (a.u.)",
+              "unit": "a.u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.95,
+              "confidence_level": "high"
+            },
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [],
+            "phases": [
+              {
+                "name": "Pm\u001b3m",
+                "marker": null,
+                "color": null,
+                "is_reference": false,
+                "name_evidence": {
+                  "value": "Pm\u001b3m",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              },
+              {
+                "name": "Pbnm",
+                "marker": null,
+                "color": null,
+                "is_reference": false,
+                "name_evidence": {
+                  "value": "Pbnm",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "773 K",
+                "numeric_value": 773,
+                "unit": "K",
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "673 K",
+                "numeric_value": 673,
+                "unit": "K",
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "473 K",
+                "numeric_value": 473,
+                "unit": "K",
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "298 K",
+                "numeric_value": 298,
+                "unit": "K",
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": true,
+            "other_interpretations": [
+              "Orthorhombic to cubic phase transition evidenced by change from Pbnm to Pm\u001b3m with increasing temperature."
+            ],
+            "confidence": 0.9,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "773 K",
+              "color": "red",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Topmost red curve",
+                "explicit_label_source": "annotation_text",
+                "condition_value": "773 K",
+                "condition_numeric": 773,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "673 K",
+              "color": "orange",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Second from top, orange curve",
+                "explicit_label_source": "annotation_text",
+                "condition_value": "673 K",
+                "condition_numeric": 673,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "473 K",
+              "color": "green",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Third from top, green curve",
+                "explicit_label_source": "annotation_text",
+                "condition_value": "473 K",
+                "condition_numeric": 473,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_4",
+              "label": "298 K",
+              "color": "blue",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 4,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Bottom, blue curve",
+                "explicit_label_source": "annotation_text",
+                "condition_value": "298 K",
+                "condition_numeric": 298,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [
+            {
+              "series_id": "series_1",
+              "series_type": "temperature",
+              "variable_name": "Temperature",
+              "unit": "K",
+              "ordered_curve_ids": [
+                "curve_4",
+                "curve_3",
+                "curve_2",
+                "curve_1"
+              ],
+              "explicit_values": [
+                {
+                  "curve_id": "curve_4",
+                  "value_text": "298 K",
+                  "value_numeric": 298,
+                  "unit": "K",
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_3",
+                  "value_text": "473 K",
+                  "value_numeric": 473,
+                  "unit": "K",
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_2",
+                  "value_text": "673 K",
+                  "value_numeric": 673,
+                  "unit": "K",
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                },
+                {
+                  "curve_id": "curve_1",
+                  "value_text": "773 K",
+                  "value_numeric": 773,
+                  "unit": "K",
+                  "source": "annotation_text",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              ],
+              "overall_trend": "Phase transition from Pbnm to Pm\u001b3m with increasing temperature.",
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "panel_2",
+      "panel_type": "XRD",
+      "bbox_normalized": [
+        0.06,
+        0.48,
+        0.54,
+        0.96
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 2,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 6,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [],
+        "other_labels": [
+          "(a) 473 K (Pm\u001b3m)",
+          "(b) 673 K (Pm\u001b3m)",
+          "Y_obs",
+          "Y_calc",
+          "Y_obs-Y_calc",
+          "Bragg positions"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.8,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 3,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2\u0010 (\u001b0)",
+              "unit": "\u001b0",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.8,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "counts (a.u.)",
+              "unit": "a.u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.8,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "Y_obs",
+              "Y_calc",
+              "Y_obs-Y_calc",
+              "Bragg positions"
+            ],
+            "sample_names": [
+              {
+                "value": "473 K (Pm\u001b3m)",
+                "numeric_value": 473,
+                "unit": "K",
+                "source": "panel_label",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "phases": [
+              {
+                "name": "Pm\u001b3m",
+                "marker": null,
+                "color": null,
+                "is_reference": false,
+                "name_evidence": {
+                  "value": "Pm\u001b3m",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "panel_label",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "473 K",
+                "numeric_value": 473,
+                "unit": "K",
+                "source": "panel_label",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [
+              "Bragg positions"
+            ],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": "Y_obs",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Observed data",
+                "explicit_label_source": "legend_text",
+                "condition_value": "473 K",
+                "condition_numeric": 473,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": "Y_calc",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "fitted",
+              "observed": {
+                "visual_description": "Calculated fit",
+                "explicit_label_source": "legend_text",
+                "condition_value": "473 K",
+                "condition_numeric": 473,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_3",
+              "label": "Y_obs-Y_calc",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "baseline",
+              "observed": {
+                "visual_description": "Difference curve",
+                "explicit_label_source": "legend_text",
+                "condition_value": "473 K",
+                "condition_numeric": 473,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        },
+        {
+          "plot_id": "plot_2",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 3,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "2\u0010 (\u001b0)",
+              "unit": "\u001b0",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.8,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "counts (a.u.)",
+              "unit": "a.u.",
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.8,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "Y_obs",
+              "Y_calc",
+              "Y_obs-Y_calc",
+              "Bragg positions"
+            ],
+            "sample_names": [
+              {
+                "value": "673 K (Pm\u001b3m)",
+                "numeric_value": 673,
+                "unit": "K",
+                "source": "panel_label",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "phases": [
+              {
+                "name": "Pm\u001b3m",
+                "marker": null,
+                "color": null,
+                "is_reference": false,
+                "name_evidence": {
+                  "value": "Pm\u001b3m",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "panel_label",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "673 K",
+                "numeric_value": 673,
+                "unit": "K",
+                "source": "panel_label",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": false,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [
+              "Bragg positions"
+            ],
+            "crystal_structures_shown": [],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": null,
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_4",
+              "label": "Y_obs",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "Observed data",
+                "explicit_label_source": "legend_text",
+                "condition_value": "673 K",
+                "condition_numeric": 673,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_5",
+              "label": "Y_calc",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 2,
+              "role": "fitted",
+              "observed": {
+                "visual_description": "Calculated fit",
+                "explicit_label_source": "legend_text",
+                "condition_value": "673 K",
+                "condition_numeric": 673,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_6",
+              "label": "Y_obs-Y_calc",
+              "color": null,
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 3,
+              "role": "baseline",
+              "observed": {
+                "visual_description": "Difference curve",
+                "explicit_label_source": "legend_text",
+                "condition_value": "673 K",
+                "condition_numeric": 673,
+                "condition_unit": "K"
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 1.0,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    },
+    {
+      "panel_label": "panel_3",
+      "panel_type": "other",
+      "bbox_normalized": [
+        0.56,
+        0.56,
+        0.97,
+        0.96
+      ],
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 0,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [],
+        "structures": [],
+        "other_labels": [
+          "V/Z (\u001b3)",
+          "Temperature (K)",
+          "This work",
+          "References"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.8,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "other",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 0,
+            "confidence": 1.0,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": "Temperature (K)",
+              "unit": "K",
+              "min_value": 300,
+              "max_value": 800,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            },
+            "y_axis": {
+              "label": "V/Z (\u001b3)",
+              "unit": "\u001b3",
+              "min_value": 196,
+              "max_value": 208,
+              "tick_values": [],
+              "scale": null,
+              "confidence": 0.9,
+              "confidence_level": "high"
+            },
+            "legend_present": true,
+            "legend_entries": [
+              "This work",
+              "References"
+            ],
+            "sample_names": [],
+            "phases": [],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [],
+            "inset_present": true,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [],
+            "elements": [],
+            "structures": [],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": "Comparison of V/Z values from this work and references",
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [],
+          "annotations": [],
+          "insets": [
+            {
+              "inset_id": "inset_1",
+              "purpose": "Zoomed comparison of V/Z values from this work and references",
+              "x_axis": {
+                "label": "V/Z (\u001b3)",
+                "unit": "\u001b3",
+                "min_value": 198.5,
+                "max_value": 199.5
+              },
+              "y_axis": null,
+              "curve_count": {
+                "value": null,
+                "confidence": null,
+                "confidence_level": null
+              },
+              "curves": [],
+              "annotations": [],
+              "observed_notes": [],
+              "estimated_x_range": [],
+              "estimated_y_range": []
+            }
+          ],
+          "series": [],
+          "confidence": 1.0,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 1.0,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 0.98,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "Panel 1 and 2 are XRD data, with explicit temperature and phase labels.",
+    "Panel 3 is a plot of V/Z vs Temperature with an inset for zoomed comparison.",
+    "No explicit Miller indices or peak positions are labeled in these panels.",
+    "No Raman, FTIR, XPS, PL, UV-Vis, or microscopy data present."
+  ]
+}

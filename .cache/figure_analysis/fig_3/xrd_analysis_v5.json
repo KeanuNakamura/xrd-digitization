@@ -1,0 +1,38 @@
+{
+  "sample": "quartz sandstone (right under clay layer)",
+  "curves": [
+    {
+      "condition": null,
+      "peak_positions": [
+        12.6,
+        20.9,
+        26.6,
+        36.5,
+        39.5,
+        42.5,
+        45.8,
+        50.2,
+        54.8,
+        60.0,
+        62.4,
+        68.0
+      ],
+      "phases": [
+        "quartz",
+        "plagioclase"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "crystallite_size_nm": null,
+      "crystallite_sizes": [],
+      "relative_intensity": "high"
+    }
+  ],
+  "trends": [
+    "Quartz is the dominant phase with sharp, intense peaks.",
+    "Plagioclase is present as a minor phase."
+  ],
+  "plots": [],
+  "x_min": 5,
+  "x_max": 70
+}

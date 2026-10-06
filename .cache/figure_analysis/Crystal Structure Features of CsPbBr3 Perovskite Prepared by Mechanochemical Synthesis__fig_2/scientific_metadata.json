@@ -1,0 +1,280 @@
+{
+  "source_image": "Crystal Structure Features of CsPbBr3 Perovskite Prepared by Mechanochemical Synthesis__fig_2.png",
+  "figure_summary": {
+    "figure_type": "single_panel",
+    "scientific_domain": "materials science",
+    "contains_xrd": true,
+    "contains_raman": false,
+    "contains_xps": false,
+    "contains_ftir": false,
+    "contains_pl": false,
+    "contains_uv_vis": false,
+    "contains_microscopy": false,
+    "contains_crystal_structure": true,
+    "panel_count": 1,
+    "plot_count_total": 1,
+    "curve_count_total": 2
+  },
+  "panels": [
+    {
+      "panel_label": "panel_1",
+      "panel_type": "XRD",
+      "bbox_normalized": null,
+      "related_panels": [],
+      "plot_count": {
+        "value": 1,
+        "confidence": 1.0,
+        "confidence_level": "high"
+      },
+      "curve_count": {
+        "value": 2,
+        "confidence": 0.9,
+        "confidence_level": "high"
+      },
+      "observed": {
+        "title": null,
+        "elements": [
+          "Cs",
+          "Pb",
+          "Br"
+        ],
+        "structures": [
+          "perovskite"
+        ],
+        "other_labels": [
+          "XRD, RT",
+          "a = 8.3252 \u00c5",
+          "Space group: Pbnm"
+        ]
+      },
+      "interpretation": {
+        "other_interpretations": [],
+        "confidence": 0.8,
+        "confidence_level": "high"
+      },
+      "plots": [
+        {
+          "plot_id": "plot_1",
+          "plot_type": "XRD",
+          "bbox_normalized": null,
+          "curve_count": {
+            "value": 2,
+            "confidence": 0.9,
+            "confidence_level": "high"
+          },
+          "observed": {
+            "x_axis": {
+              "label": null,
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": null,
+              "confidence_level": null
+            },
+            "y_axis": {
+              "label": null,
+              "unit": null,
+              "min_value": null,
+              "max_value": null,
+              "tick_values": [],
+              "scale": null,
+              "confidence": null,
+              "confidence_level": null
+            },
+            "legend_present": false,
+            "legend_entries": [],
+            "sample_names": [
+              {
+                "value": "CsPbBr3",
+                "numeric_value": null,
+                "unit": null,
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "phases": [
+              {
+                "name": "CsPbBr3",
+                "marker": null,
+                "color": null,
+                "is_reference": false,
+                "name_evidence": {
+                  "value": "CsPbBr3",
+                  "numeric_value": null,
+                  "unit": null,
+                  "source": "annotation_text",
+                  "evidence_type": "observed",
+                  "confidence": 1.0,
+                  "confidence_level": "high"
+                }
+              }
+            ],
+            "hkl_labels": [],
+            "labeled_peak_positions": [],
+            "explicit_fwhm_values": [],
+            "conditions": [
+              {
+                "value": "RT",
+                "numeric_value": null,
+                "unit": null,
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "a = 8.3252 \u00c5",
+                "numeric_value": 8.3252,
+                "unit": "\u00c5",
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              },
+              {
+                "value": "Space group: Pbnm",
+                "numeric_value": null,
+                "unit": null,
+                "source": "annotation_text",
+                "evidence_type": "observed",
+                "confidence": 1.0,
+                "confidence_level": "high"
+              }
+            ],
+            "inset_present": true,
+            "highlighted_regions": [],
+            "reference_pattern_markers": [],
+            "crystal_structures_shown": [
+              "CsPbBr3 perovskite structure"
+            ],
+            "elements": [
+              "Cs",
+              "Pb",
+              "Br"
+            ],
+            "structures": [
+              "perovskite"
+            ],
+            "other_labels": []
+          },
+          "estimated": {
+            "major_peaks": [],
+            "inset_x_range": [],
+            "inset_y_range": [],
+            "approximate_axis_limits": null,
+            "notes": []
+          },
+          "interpretation": {
+            "peak_splitting_visible": null,
+            "shoulders_visible": null,
+            "peaks_appear_broadened": null,
+            "secondary_phase_present": null,
+            "qualitative_relative_intensities": null,
+            "inset_purpose": "crystal structure illustration",
+            "phase_transition_suggested": null,
+            "other_interpretations": [],
+            "confidence": 0.8,
+            "confidence_level": "high"
+          },
+          "curves": [
+            {
+              "curve_id": "curve_1",
+              "label": null,
+              "color": "black",
+              "line_style": null,
+              "marker_style": null,
+              "vertical_order": 1,
+              "role": "experimental",
+              "observed": {
+                "visual_description": "black XRD pattern",
+                "explicit_label_source": null,
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.9,
+              "confidence_level": "high"
+            },
+            {
+              "curve_id": "curve_2",
+              "label": null,
+              "color": "red",
+              "line_style": null,
+              "marker_style": "plus",
+              "vertical_order": 2,
+              "role": "simulated",
+              "observed": {
+                "visual_description": "red plus markers",
+                "explicit_label_source": null,
+                "condition_value": null,
+                "condition_numeric": null,
+                "condition_unit": null
+              },
+              "estimated": {
+                "approximate_major_peak_positions": [],
+                "notes": []
+              },
+              "interpretation": {
+                "broader_than_others": null,
+                "higher_relative_intensity": null,
+                "notes": []
+              },
+              "confidence": 0.9,
+              "confidence_level": "high"
+            }
+          ],
+          "annotations": [],
+          "insets": [
+            {
+              "inset_id": "inset_1",
+              "purpose": "crystal structure illustration",
+              "x_axis": null,
+              "y_axis": null,
+              "curve_count": {
+                "value": null,
+                "confidence": null,
+                "confidence_level": null
+              },
+              "curves": [],
+              "annotations": [],
+              "observed_notes": [
+                "3D crystal structure model of CsPbBr3 perovskite"
+              ],
+              "estimated_x_range": [],
+              "estimated_y_range": []
+            }
+          ],
+          "series": [],
+          "confidence": 0.9,
+          "confidence_level": "high"
+        }
+      ],
+      "confidence": 0.9,
+      "confidence_level": "high"
+    }
+  ],
+  "confidence": {
+    "overall": 0.9,
+    "confidence_level": "high"
+  },
+  "notes": [
+    "Panel contains both an XRD plot and a crystal structure illustration as an inset.",
+    "Two curves are visually distinct: a black experimental XRD pattern and red plus markers (likely simulated/reference).",
+    "Sample and phase information (CsPbBr3, perovskite, space group Pbnm, a = 8.3252 \u00c5) are explicitly annotated.",
+    "No explicit Miller indices or labeled peak positions are visible.",
+    "Axes labels and units are not clearly readable in the cropped image."
+  ]
+}
