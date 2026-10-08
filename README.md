@@ -30,7 +30,7 @@ python scripts/scrape_and_digitize.py paper.pdf output/
 python scripts/scrape_and_digitize.py pdf_files/ output/
 ```
 
-For each PDF, writes `output/<stem>/` with `figures/<figure_id>/` (original PNG, triage JSON, and digitized CSV/PNG when digitizable), `extra/` (GROBID TEI/records), and `digitization_manifest.json`. OpenAI skips multi-curve figures; single-curve figures are digitized via `scripts/digitize_figure.py` (with ClipDrop when needed).
+For each PDF, writes `output/<stem>/` with `figures/<figure_id>/` (original PNG, triage JSON, and digitized CSV/PNG when digitizable), `extra/` (original PDF plus GROBID TEI/records), and `digitization_manifest.json`. OpenAI skips multi-curve figures; single-curve figures are digitized via `scripts/digitize_figure.py` (with ClipDrop when needed).
 
 ### Digitize one figure PNG
 

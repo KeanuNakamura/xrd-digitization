@@ -1,0 +1,87 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CPB",
+      "peak_positions": [
+        13.1,
+        24.9,
+        28.5,
+        31.0,
+        34.6,
+        40.6,
+        43.3,
+        47.5
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CPB/USCN",
+      "peak_positions": [
+        13.1,
+        24.9,
+        28.5,
+        31.0,
+        34.6,
+        40.6,
+        43.3,
+        47.5
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "USCN",
+      "peak_positions": [
+        13.1,
+        27.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "SCN",
+      "peak_positions": [
+        13.1,
+        27.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CN",
+      "peak_positions": [
+        13.1,
+        27.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "CPB and CPB/USCN show additional sharp peaks compared to CN, SCN, and USCN",
+    "CN, SCN, and USCN have similar broad peaks at ~13.1\u00b0 and ~27.5\u00b0"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

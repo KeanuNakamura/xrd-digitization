@@ -12,6 +12,7 @@ from figure_analysis.prompts import SYSTEM_PROMPT, build_user_prompt
 from figure_analysis.schemas import (
     FigureAnalysisPayload,
     FigureAnalysisResult,
+    LatticeParameters,
     XrdCurve,
 )
 
@@ -69,6 +70,28 @@ def _dedupe_sorted_positions(
     return out
 
 
+def _clean_lattice(item: LatticeParameters) -> LatticeParameters | None:
+    if item.phase is not None and not str(item.phase).strip():
+        item.phase = None
+    if item.space_group is not None and not str(item.space_group).strip():
+        item.space_group = None
+    useful = any(
+        v is not None
+        for v in (
+            item.phase,
+            item.a_A,
+            item.b_A,
+            item.c_A,
+            item.alpha_deg,
+            item.beta_deg,
+            item.gamma_deg,
+            item.volume_A3,
+            item.space_group,
+        )
+    )
+    return item if useful else None
+
+
 def _clean_curve(
     curve: XrdCurve,
     *,
@@ -79,21 +102,34 @@ def _clean_curve(
         curve.condition = None
     if curve.peak_width is not None and not str(curve.peak_width).strip():
         curve.peak_width = None
-    # Allow only the qualitative vocabulary from the prompt.
     if curve.peak_width is not None and curve.peak_width not in {
         "broad",
         "moderate",
         "narrow",
     }:
-        # Keep short relative phrases if model returns them; otherwise null.
         if len(str(curve.peak_width)) > 40:
             curve.peak_width = None
+    if curve.profile_function is not None and not str(curve.profile_function).strip():
+        curve.profile_function = None
+    if curve.fwhm is not None:
+        try:
+            curve.fwhm = float(curve.fwhm)
+            if curve.fwhm <= 0:
+                curve.fwhm = None
+        except (TypeError, ValueError):
+            curve.fwhm = None
     curve.phases = [p for p in curve.phases if str(p).strip()]
     curve.peak_positions = _dedupe_sorted_positions(
         list(curve.peak_positions),
         x_min=x_min,
         x_max=x_max,
     )
+    cleaned_lp: list[LatticeParameters] = []
+    for item in curve.lattice_parameters:
+        cleaned = _clean_lattice(item)
+        if cleaned is not None:
+            cleaned_lp.append(cleaned)
+    curve.lattice_parameters = cleaned_lp
     return curve
 
 
@@ -103,12 +139,30 @@ def post_validate(result: FigureAnalysisResult) -> FigureAnalysisResult:
         result.sample = None
         result.curves = []
         result.trends = []
+        result.fwhm = None
+        result.lattice_parameters = []
+        result.profile_function = None
         result.x_min = None
         result.x_max = None
         return result
 
     if result.sample is not None and not str(result.sample).strip():
         result.sample = None
+    if result.profile_function is not None and not str(result.profile_function).strip():
+        result.profile_function = None
+    if result.fwhm is not None:
+        try:
+            result.fwhm = float(result.fwhm)
+            if result.fwhm <= 0:
+                result.fwhm = None
+        except (TypeError, ValueError):
+            result.fwhm = None
+    cleaned_lp: list[LatticeParameters] = []
+    for item in result.lattice_parameters:
+        cleaned = _clean_lattice(item)
+        if cleaned is not None:
+            cleaned_lp.append(cleaned)
+    result.lattice_parameters = cleaned_lp
     result.trends = [t for t in result.trends if str(t).strip()]
     result.curves = [
         _clean_curve(c, x_min=result.x_min, x_max=result.x_max)
@@ -117,27 +171,74 @@ def post_validate(result: FigureAnalysisResult) -> FigureAnalysisResult:
     return result
 
 
+_LATTICE_KEYS = (
+    "phase",
+    "a_A",
+    "b_A",
+    "c_A",
+    "alpha_deg",
+    "beta_deg",
+    "gamma_deg",
+    "volume_A3",
+    "space_group",
+)
+
+
+def _normalize_lattice_dict(item: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Always emit every lattice-parameter field (null when unknown)."""
+    src = item or {}
+    return {key: src.get(key) for key in _LATTICE_KEYS}
+
+
+def _normalize_curve_dict(curve: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Always emit every curve field; lists default to []."""
+    src = curve or {}
+    return {
+        "condition": src.get("condition"),
+        "peak_positions": list(src.get("peak_positions") or []),
+        "phases": list(src.get("phases") or []),
+        "peak_width": src.get("peak_width"),
+        "fwhm": src.get("fwhm"),
+        "lattice_parameters": [
+            _normalize_lattice_dict(item)
+            for item in (src.get("lattice_parameters") or [])
+            if isinstance(item, dict)
+        ],
+        "profile_function": src.get("profile_function"),
+    }
+
+
 def analysis_to_dataset_dict(result: FigureAnalysisResult) -> dict[str, Any] | None:
-    """Dump compact analysis JSON, or None when the figure is not XRD."""
+    """
+    Dump analysis JSON with every schema field present.
+
+    Empty scalars are ``null``; empty collections are ``[]``. Temporary axis
+    bounds (``x_min`` / ``x_max``) are omitted. Returns None for non-XRD.
+    """
     if not result.is_xrd:
         return None
 
-    data = result.model_dump(mode="json", exclude_none=True)
-    data.pop("is_xrd", None)
-    data.pop("x_min", None)
-    data.pop("x_max", None)
+    raw = result.model_dump(mode="json", exclude_none=False)
+    raw.pop("is_xrd", None)
+    raw.pop("x_min", None)
+    raw.pop("x_max", None)
 
-    for curve in data.get("curves", []) or []:
-        if not curve.get("phases"):
-            curve.pop("phases", None)
-        if not curve.get("peak_positions"):
-            curve.pop("peak_positions", None)
-
-    if not data.get("trends"):
-        data.pop("trends", None)
-    if not data.get("curves"):
-        data.pop("curves", None)
-    return data
+    return {
+        "sample": raw.get("sample"),
+        "curves": [
+            _normalize_curve_dict(curve)
+            for curve in (raw.get("curves") or [])
+            if isinstance(curve, dict)
+        ],
+        "trends": list(raw.get("trends") or []),
+        "fwhm": raw.get("fwhm"),
+        "lattice_parameters": [
+            _normalize_lattice_dict(item)
+            for item in (raw.get("lattice_parameters") or [])
+            if isinstance(item, dict)
+        ],
+        "profile_function": raw.get("profile_function"),
+    }
 
 
 def analyze_figure_image(
@@ -175,7 +276,7 @@ def analyze_figure_image(
         schema_model=FigureAnalysisPayload,
         images=[path],
         cache_key=key,
-        cache_name="xrd_analysis_v6.json",
+        cache_name="xrd_analysis_v7.json",
         system=SYSTEM_PROMPT,
     )
     elapsed = time.time() - t0

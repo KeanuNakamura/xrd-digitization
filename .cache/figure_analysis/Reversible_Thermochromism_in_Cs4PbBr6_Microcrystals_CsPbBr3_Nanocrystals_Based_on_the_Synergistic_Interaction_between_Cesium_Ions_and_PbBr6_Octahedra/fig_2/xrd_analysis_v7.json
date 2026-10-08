@@ -1,0 +1,41 @@
+{
+  "is_xrd": true,
+  "sample": "Cs4PbBr6/CsPbBr3 crystals",
+  "curves": [
+    {
+      "condition": null,
+      "peak_positions": [
+        15.9,
+        17.2,
+        20.1,
+        22.2,
+        23.7,
+        25.1,
+        28.5,
+        29.7,
+        32.2,
+        34.5,
+        37.7,
+        39.2,
+        42.5,
+        45.0,
+        47.2
+      ],
+      "phases": [
+        "Cs4PbBr6"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "PXRD profile matches Cs4PbBr6 PDF #73-2478; majority phase is Cs4PbBr6"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

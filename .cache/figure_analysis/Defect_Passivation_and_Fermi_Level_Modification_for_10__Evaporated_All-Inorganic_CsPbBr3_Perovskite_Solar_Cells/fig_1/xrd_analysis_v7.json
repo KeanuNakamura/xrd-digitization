@@ -1,0 +1,103 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 films with different thicknesses of BaI2 additives",
+  "curves": [
+    {
+      "condition": "control",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.7,
+        34.4,
+        37.7,
+        43.2,
+        45.7,
+        51.1,
+        53.5,
+        56.2,
+        62.2,
+        65.0
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0.5 nm BaI2",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.7,
+        34.4,
+        37.7,
+        43.2,
+        45.7,
+        51.1,
+        53.5,
+        56.2,
+        62.2,
+        65.0
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "1 nm BaI2",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.7,
+        34.4,
+        37.7,
+        43.2,
+        45.7,
+        51.1,
+        53.5,
+        56.2,
+        62.2,
+        65.0
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "10 nm BaI2",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.7,
+        34.4,
+        37.7,
+        43.2,
+        45.7,
+        51.1,
+        53.5,
+        56.2,
+        62.2,
+        65.0
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensity changes with BaI2 thickness",
+    "Peak positions remain similar across samples"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 70
+}

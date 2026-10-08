@@ -5,6 +5,7 @@ import hashlib
 import json
 import logging
 import re
+import shutil
 import sys
 import time
 from dataclasses import asdict, dataclass, field
@@ -1759,98 +1760,238 @@ def figure_entries_from_analysis_payload(payload: Any) -> list[dict[str, Any]]:
     return []
 
 
+def primary_figure_number_from_stem(stem: str) -> int | None:
+    """
+    Extract the primary figure number from an extraction stem/id.
+
+    Handles ``fig_1``, ``figure_3``, ``fig_1_2``, ``fig_7_2`` by taking the
+    first numeric component after an optional ``fig`` / ``figure`` prefix —
+    never the trailing extraction/collision suffix alone.
+    """
+    raw = str(stem or "").strip()
+    if not raw:
+        return None
+    # Allow accidental filenames with extension.
+    if "." in raw and not raw.startswith("."):
+        raw = Path(raw).stem
+    match = re.match(
+        r"^(?:fig(?:ure)?)[_-]?(\d+)(?:[_-].*)?$",
+        raw,
+        flags=re.IGNORECASE,
+    )
+    if match:
+        return int(match.group(1))
+    match = re.match(r"^(\d+)(?:[_-].*)?$", raw)
+    if match:
+        return int(match.group(1))
+    return None
+
+
+def _resolve_figure_image_path_string(figure: Figure) -> str:
+    """Return the best on-disk (or recorded) image path for a GROBID figure."""
+    for raw in figure.image_paths or []:
+        text = str(raw or "").strip()
+        if not text:
+            continue
+        path = Path(text)
+        if path.is_file():
+            return str(path.resolve())
+    for raw in figure.image_paths or []:
+        text = str(raw or "").strip()
+        if text:
+            return str(Path(text))
+    return ""
+
+
+def _figure_number_for_entry(figure: Figure) -> int | None:
+    label = figure.normalized_label
+    if label and str(label).isdigit():
+        return int(label)
+    if figure.figure_id:
+        return primary_figure_number_from_stem(figure.figure_id)
+    return None
+
+
+def _entry_text_quality(entry: dict[str, Any]) -> tuple[int, int, int]:
+    """Higher is better: caption length, text length, has figure_id."""
+    return (
+        len(str(entry.get("caption") or "").strip()),
+        len(str(entry.get("text") or "").strip()),
+        1 if entry.get("figure_id") else 0,
+    )
+
+
+def _prefer_figure_entry(
+    left: dict[str, Any],
+    right: dict[str, Any],
+) -> dict[str, Any]:
+    """Prefer the entry with richer caption/context when merging duplicates."""
+    if _entry_text_quality(right) > _entry_text_quality(left):
+        merged = dict(right)
+        # Keep a figure number if only one side has it.
+        if merged.get("figure") is None and left.get("figure") is not None:
+            merged["figure"] = left["figure"]
+        if not merged.get("figure_id") and left.get("figure_id"):
+            merged["figure_id"] = left["figure_id"]
+        return merged
+    merged = dict(left)
+    if merged.get("figure") is None and right.get("figure") is not None:
+        merged["figure"] = right["figure"]
+    if not merged.get("figure_id") and right.get("figure_id"):
+        merged["figure_id"] = right["figure_id"]
+    # Prefer non-empty path.
+    if not merged.get("figure_path") and right.get("figure_path"):
+        merged["figure_path"] = right["figure_path"]
+    return merged
+
+
+def _figure_analysis_entry_from_figure(
+    document: ParsedDocument,
+    figure: Figure,
+) -> dict[str, Any] | None:
+    caption = normalize_whitespace(figure.caption or "")
+    analysis = normalize_whitespace(
+        collect_figure_analysis_text(document, figure)
+    )
+    if caption and analysis:
+        text = f"{caption} {analysis}"
+    else:
+        text = caption or analysis
+
+    figure_path = _resolve_figure_image_path_string(figure)
+    if not text and not figure_path:
+        return None
+
+    return {
+        "figure": _figure_number_for_entry(figure),
+        "figure_id": figure.figure_id,
+        "figure_path": figure_path,
+        "caption": caption,
+        "text": text,
+    }
+
+
 def build_figure_analysis_dataset(
     document: ParsedDocument,
     *,
     xrd_only: bool = False,
 ) -> list[dict[str, Any]]:
-    dataset: list[dict[str, Any]] = []
-    seen_labels: set[str] = set()
+    """
+    Build figure_analysis entries from GROBID figures.
+
+    Deduplicates by resolved image path (same crop → one entry), not by numeric
+    label alone. Image-backed entries always win over text-only duplicates with
+    the same label. Distinct crops that share a label are all preserved.
+    """
+    candidates: list[dict[str, Any]] = []
 
     for figure in document.figures:
         if xrd_only and not figure.is_caption_xrd:
             continue
+        entry = _figure_analysis_entry_from_figure(document, figure)
+        if entry is not None:
+            candidates.append(entry)
 
-        figure_label = figure.normalized_label
+    by_image_path: dict[str, dict[str, Any]] = {}
+    without_image: list[dict[str, Any]] = []
 
-        if not figure_label or not figure_label.isdigit():
+    for entry in candidates:
+        raw_path = str(entry.get("figure_path") or "").strip()
+        if not raw_path:
+            without_image.append(entry)
             continue
-
-        if figure_label in seen_labels:
-            continue
-
-        seen_labels.add(figure_label)
-
-        caption = normalize_whitespace(figure.caption or "")
-        analysis = normalize_whitespace(
-            collect_figure_analysis_text(document, figure)
-        )
-
-        if caption and analysis:
-            text = f"{caption} {analysis}"
+        path_key = str(Path(raw_path).resolve())
+        existing = by_image_path.get(path_key)
+        if existing is None:
+            by_image_path[path_key] = entry
         else:
-            text = caption or analysis
+            by_image_path[path_key] = _prefer_figure_entry(existing, entry)
 
-        if not text:
+    image_backed_numbers = {
+        entry.get("figure")
+        for entry in by_image_path.values()
+        if entry.get("figure") is not None
+    }
+
+    # Text/metadata-only rows: keep only when no image-backed row covers that
+    # figure number (avoids keeping a bad empty fig_1 over a valid fig_1_2).
+    best_without_image: dict[Any, dict[str, Any]] = {}
+    unresolved_without_image: list[dict[str, Any]] = []
+    for entry in without_image:
+        number = entry.get("figure")
+        if number is not None and number in image_backed_numbers:
             continue
+        if number is None:
+            unresolved_without_image.append(entry)
+            continue
+        existing = best_without_image.get(number)
+        if existing is None:
+            best_without_image[number] = entry
+        else:
+            best_without_image[number] = _prefer_figure_entry(existing, entry)
 
-        image_paths = figure.image_paths or []
-        figure_path = image_paths[0] if image_paths else ""
+    dataset: list[dict[str, Any]] = list(by_image_path.values())
+    dataset.extend(best_without_image.values())
+    dataset.extend(unresolved_without_image)
 
-        dataset.append(
-            {
-                "figure": int(figure_label),
-                "figure_path": figure_path,
-                "caption": caption,
-                "text": text,
-            }
-        )
+    covered_labels = {
+        str(entry["figure"])
+        for entry in dataset
+        if entry.get("figure") is not None
+    }
 
     if not xrd_only:
         referenced_labels: set[str] = set()
-
         for paragraph in document.paragraphs:
             referenced_labels.update(paragraph.figure_references)
 
         for figure_label in sorted(
-            referenced_labels - seen_labels,
+            referenced_labels - covered_labels,
             key=lambda label: int(label) if label.isdigit() else label,
         ):
             if not figure_label.isdigit():
                 continue
 
             analysis_parts: list[str] = []
-
             for paragraph in document.paragraphs:
                 if figure_label not in paragraph.figure_references:
                     continue
-
                 relevant_text = extract_figure_mention_text(
                     paragraph.text,
                     figure_label,
                 )
-
                 if relevant_text:
                     analysis_parts.append(relevant_text)
 
             analysis = normalize_whitespace(
                 "\n\n".join(dict.fromkeys(analysis_parts))
             )
-
             if not analysis:
                 continue
 
             dataset.append(
                 {
                     "figure": int(figure_label),
+                    "figure_id": f"fig_{figure_label}",
                     "figure_path": "",
                     "caption": "",
                     "text": analysis,
+                    "association_status": "text_only",
+                    "association_note": (
+                        "Referenced in body text but no extracted image was "
+                        "associated during dataset construction."
+                    ),
                 }
             )
 
-    dataset.sort(key=lambda entry: entry["figure"])
-
+    dataset.sort(
+        key=lambda entry: (
+            entry.get("figure") is None,
+            entry.get("figure") if entry.get("figure") is not None else 0,
+            str(entry.get("figure_id") or ""),
+            str(entry.get("figure_path") or ""),
+        )
+    )
     return dataset
 
 
@@ -1861,11 +2002,17 @@ def build_figure_analysis_document(
 ) -> dict[str, Any]:
     """Paper metadata + figure entries for ``*.figure_analysis.json``."""
     metadata = document.metadata
+    figures = build_figure_analysis_dataset(document, xrd_only=xrd_only)
+    # figures_total / xrd_figures are finalized during vision enrichment;
+    # seed totals from extracted dataset entries (image-backed preferred).
+    image_backed = sum(1 for entry in figures if entry.get("figure_path"))
     return {
         "title": metadata.title,
         "doi": metadata.doi,
         "authors": [format_author_name(author) for author in metadata.authors],
-        "figures": build_figure_analysis_dataset(document, xrd_only=xrd_only),
+        "figures_total": image_backed or len(figures),
+        "xrd_figures": None,
+        "figures": figures,
     }
 
 
@@ -1922,6 +2069,11 @@ def parse_pdf(
     extra_directory = output_directory / "extra"
     output_directory.mkdir(parents=True, exist_ok=True)
     extra_directory.mkdir(parents=True, exist_ok=True)
+
+    pdf_copy_path = extra_directory / pdf_path.name
+    if pdf_path.resolve() != pdf_copy_path.resolve():
+        shutil.copy2(pdf_path, pdf_copy_path)
+        LOGGER.info("Copied source PDF to %s", pdf_copy_path)
 
     client = GrobidClient(base_url=grobid_url)
 
@@ -2004,6 +2156,7 @@ def parse_pdf(
             ensure_ascii=False,
         )
 
+    LOGGER.info("Source PDF: %s", pdf_copy_path)
     LOGGER.info("TEI XML: %s", tei_output_path)
     LOGGER.info("Parsed document: %s", parsed_output_path)
     LOGGER.info("XRD records: %s", records_output_path)

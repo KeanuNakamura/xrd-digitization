@@ -1,0 +1,102 @@
+{
+  "is_xrd": true,
+  "sample": "optimal sample S9",
+  "curves": [
+    {
+      "condition": "optimal sample S9",
+      "peak_positions": [
+        15.2,
+        21.3,
+        30.5,
+        34.3,
+        37.7,
+        43.2,
+        47.5,
+        51.1,
+        53.5
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "orthorhombic (reference)",
+      "peak_positions": [
+        15.2,
+        21.3,
+        23.6,
+        25.5,
+        27.6,
+        30.5,
+        34.3,
+        37.7,
+        43.2,
+        47.5,
+        51.1,
+        53.5
+      ],
+      "phases": [
+        "orthorhombic"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [
+        {
+          "phase": "orthorhombic",
+          "a_A": 8.207,
+          "b_A": 8.255,
+          "c_A": 11.759,
+          "alpha_deg": null,
+          "beta_deg": null,
+          "gamma_deg": null,
+          "volume_A3": null,
+          "space_group": "Pnma"
+        }
+      ],
+      "profile_function": null
+    },
+    {
+      "condition": "cubic (reference)",
+      "peak_positions": [
+        15.2,
+        21.3,
+        30.5,
+        34.3,
+        37.7,
+        43.2,
+        47.5,
+        51.1,
+        53.5
+      ],
+      "phases": [
+        "cubic"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [
+        {
+          "phase": "cubic",
+          "a_A": 5.874,
+          "b_A": 5.874,
+          "c_A": 5.874,
+          "alpha_deg": null,
+          "beta_deg": null,
+          "gamma_deg": null,
+          "volume_A3": null,
+          "space_group": "Pm-3m"
+        }
+      ],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Sample S9 pattern matches both orthorhombic and cubic reference patterns"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 60
+}

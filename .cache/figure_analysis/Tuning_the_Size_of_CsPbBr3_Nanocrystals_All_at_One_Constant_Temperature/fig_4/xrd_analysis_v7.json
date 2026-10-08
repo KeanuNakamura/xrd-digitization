@@ -1,0 +1,48 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 nanosheets",
+  "curves": [
+    {
+      "condition": "0.0 mmol OCTA-HBr",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.3,
+        37.7,
+        43.0,
+        46.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0.44 mmol OCTA-HBr",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.3,
+        37.7,
+        43.0,
+        46.0
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "peaks become broader with 0.44 mmol OCTA-HBr"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

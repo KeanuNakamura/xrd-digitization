@@ -1,0 +1,116 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "no exchange (a)",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.0,
+        33.7,
+        37.0,
+        43.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "1 min exchange (b)",
+      "peak_positions": [
+        15.1,
+        21.3,
+        29.7,
+        33.4,
+        36.7,
+        42.9
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "3 min exchange (c)",
+      "peak_positions": [
+        14.9,
+        21.1,
+        29.4,
+        33.1,
+        36.4,
+        42.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "7 min exchange (d)",
+      "peak_positions": [
+        14.7,
+        20.9,
+        29.1,
+        32.8,
+        36.1,
+        42.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "15 min exchange (e)",
+      "peak_positions": [
+        14.5,
+        20.7,
+        28.8,
+        32.5,
+        35.8,
+        42.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "40 min exchange (f)",
+      "peak_positions": [
+        14.3,
+        20.5,
+        28.5,
+        32.2,
+        35.5,
+        41.7
+      ],
+      "phases": [
+        "CsPbI3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "All peaks shift to lower 2\u03b8 with increasing exchange time",
+    "No new peaks appear during exchange",
+    "Peak positions consistent with CsPbBr3 to CsPbI3 transition"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 45
+}

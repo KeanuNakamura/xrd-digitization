@@ -1,0 +1,30 @@
+{
+  "is_xrd": true,
+  "sample": "dry film of PeQDs deposited by drop-casting a PeQD-in-toluene solution onto a glass substrate",
+  "curves": [
+    {
+      "condition": "Measured XRD",
+      "peak_positions": [
+        15.4,
+        21.7,
+        30.7,
+        34.4,
+        37.9,
+        44.0
+      ],
+      "phases": [
+        "monoclinic"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

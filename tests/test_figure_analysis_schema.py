@@ -17,6 +17,7 @@ from figure_analysis.prompts import SYSTEM_PROMPT, build_user_prompt
 from figure_analysis.schemas import (
     FigureAnalysisPayload,
     FigureAnalysisResult,
+    LatticeParameters,
     XrdCurve,
 )
 from autodigitizer.vision.openai_client import to_openai_strict_schema
@@ -53,8 +54,15 @@ def test_payload_schema_is_strict():
     assert "sample" in props
     assert "curves" in props
     assert "trends" in props
-    assert "peak_assignments" not in props
-    assert "plots" not in props
+    assert "fwhm" in props
+    assert "lattice_parameters" in props
+    assert "profile_function" in props
+    defs = schema.get("$defs", {})
+    assert "XrdCurve" in defs
+    assert "LatticeParameters" in defs
+    assert "fwhm" in defs["XrdCurve"]["properties"]
+    assert "lattice_parameters" in defs["XrdCurve"]["properties"]
+    assert "profile_function" in defs["XrdCurve"]["properties"]
 
 
 def test_non_xrd_yields_null_analysis():
@@ -66,28 +74,74 @@ def test_non_xrd_yields_null_analysis():
     assert analysis_to_dataset_dict(out) is None
 
 
-def test_dataset_dict_xrd():
+def test_dataset_dict_includes_literature_fields():
     result = FigureAnalysisResult(
         is_xrd=True,
-        sample="clay sample",
-        x_min=5.0,
-        x_max=70.0,
+        sample="TiO2",
+        profile_function="Pseudo-Voigt",
+        lattice_parameters=[
+            LatticeParameters(phase="anatase", a_A=3.78, c_A=9.51, space_group="I41/amd")
+        ],
         curves=[
             XrdCurve(
-                condition="clay oriented",
-                peak_positions=[12.4, 20.9, 26.6],
-                phases=["kaolinite", "quartz"],
+                condition="700 °C",
+                peak_positions=[25.3, 37.8],
+                phases=["anatase"],
                 peak_width="narrow",
+                fwhm=0.22,
+                profile_function="Pseudo-Voigt",
+                lattice_parameters=[
+                    LatticeParameters(phase="anatase", a_A=3.78, c_A=9.51)
+                ],
             )
         ],
         trends=[],
     )
     data = analysis_to_dataset_dict(result)
     assert data is not None
-    assert "is_xrd" not in data
-    assert "x_min" not in data
-    assert data["sample"] == "clay sample"
-    assert data["curves"][0]["peak_positions"] == [12.4, 20.9, 26.6]
+    assert data["profile_function"] == "Pseudo-Voigt"
+    assert data["lattice_parameters"][0]["a_A"] == 3.78
+    assert data["lattice_parameters"][0]["b_A"] is None
+    assert data["curves"][0]["fwhm"] == 0.22
+    assert data["curves"][0]["lattice_parameters"][0]["c_A"] == 9.51
+    assert data["curves"][0]["phases"] == ["anatase"]
+    assert data["trends"] == []
+    assert data["fwhm"] is None
+
+
+def test_dataset_dict_emits_empty_placeholders():
+    result = FigureAnalysisResult(is_xrd=True, sample=None, curves=[], trends=[])
+    data = analysis_to_dataset_dict(result)
+    assert data == {
+        "sample": None,
+        "curves": [],
+        "trends": [],
+        "fwhm": None,
+        "lattice_parameters": [],
+        "profile_function": None,
+    }
+
+    result2 = FigureAnalysisResult(
+        is_xrd=True,
+        sample="quartz",
+        curves=[XrdCurve(peak_positions=[26.6])],
+    )
+    data2 = analysis_to_dataset_dict(result2)
+    assert data2 is not None
+    curve = data2["curves"][0]
+    assert curve == {
+        "condition": None,
+        "peak_positions": [26.6],
+        "phases": [],
+        "peak_width": None,
+        "fwhm": None,
+        "lattice_parameters": [],
+        "profile_function": None,
+    }
+    assert data2["fwhm"] is None
+    assert data2["lattice_parameters"] == []
+    assert data2["profile_function"] is None
+    assert data2["trends"] == []
 
 
 def test_post_validate_dedupes_and_clips_axis():
@@ -102,6 +156,9 @@ def test_post_validate_dedupes_and_clips_axis():
                 peak_positions=[48.0, 25.3, 25.5, 82.0, 37.8],
                 phases=["anatase", ""],
                 peak_width="  ",
+                fwhm=-1.0,
+                profile_function="  ",
+                lattice_parameters=[LatticeParameters()],
             )
         ],
         trends=["", "peaks sharpen with temperature"],
@@ -112,12 +169,16 @@ def test_post_validate_dedupes_and_clips_axis():
     curve = out.curves[0]
     assert curve.condition is None
     assert curve.peak_width is None
+    assert curve.fwhm is None
+    assert curve.profile_function is None
+    assert curve.lattice_parameters == []
     assert curve.phases == ["anatase"]
     assert curve.peak_positions == [25.3, 37.8, 48.0]
 
 
-def test_prompt_requires_xrd_gate():
-    prompt = build_user_prompt(figure_number=1, caption="Map of sampling sites.")
-    assert "is_xrd" in prompt or "is_xrd" in SYSTEM_PROMPT
+def test_prompt_mentions_literature_fields():
+    prompt = build_user_prompt(figure_number=1, caption="XRD of anatase.")
+    assert "fwhm" in prompt.lower() or "FWHM" in SYSTEM_PROMPT
+    assert "lattice" in SYSTEM_PROMPT.lower()
+    assert "profile_function" in SYSTEM_PROMPT or "profile function" in SYSTEM_PROMPT.lower()
     assert "Never invent" in SYSTEM_PROMPT
-    assert "photograph" in SYSTEM_PROMPT.lower() or "map" in SYSTEM_PROMPT.lower()

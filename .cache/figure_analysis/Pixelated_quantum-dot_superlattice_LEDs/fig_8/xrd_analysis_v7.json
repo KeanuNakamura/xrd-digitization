@@ -1,0 +1,43 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "Spin-coated",
+      "peak_positions": [
+        14.2,
+        20.2,
+        29.0,
+        42.7
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Assembled",
+      "peak_positions": [
+        14.2,
+        20.2,
+        29.0,
+        42.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peaks are sharper and more intense for Assembled compared to Spin-coated",
+    "Relative intensity of the peak at ~20.2\u00b0 increases for Assembled"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

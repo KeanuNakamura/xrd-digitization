@@ -1,0 +1,46 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "React for 24 h and purify",
+      "peak_positions": [
+        10.2,
+        12.7,
+        15.0,
+        17.8,
+        20.6,
+        23.0,
+        25.5,
+        28.2,
+        30.7,
+        33.2,
+        36.0,
+        38.5,
+        41.0,
+        44.0,
+        46.5,
+        49.0,
+        52.0,
+        54.5,
+        57.0
+      ],
+      "phases": [
+        "Cs4PbBr6",
+        "CsPb2Br5"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "After 24 h reaction and purification, XRD shows peaks for both Cs4PbBr6 and CsPb2Br5 phases"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 5,
+  "x_max": 60
+}

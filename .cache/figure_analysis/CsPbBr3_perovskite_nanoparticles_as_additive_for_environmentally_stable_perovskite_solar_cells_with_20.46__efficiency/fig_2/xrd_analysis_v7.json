@@ -1,0 +1,66 @@
+{
+  "is_xrd": true,
+  "sample": "MAPbI3 films with different CsPbBr3 concentrations",
+  "curves": [
+    {
+      "condition": "0% CsPbBr3",
+      "peak_positions": [
+        14.1,
+        28.4,
+        31.8
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "1% CsPbBr3",
+      "peak_positions": [
+        14.1,
+        28.4,
+        31.8
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "2% CsPbBr3",
+      "peak_positions": [
+        14.1,
+        28.4,
+        31.8
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "3% CsPbBr3",
+      "peak_positions": [
+        14.1,
+        28.4,
+        31.8
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensity and width change with increasing CsPbBr3 concentration"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 80
+}

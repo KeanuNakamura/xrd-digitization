@@ -1,0 +1,222 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbBr3 QD film, PL peak 463 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 QD film, PL peak 469 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 QD film, PL peak 478 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 QD film, PL peak 488 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 QD film, PL peak 499 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 QD film, PL peak 510 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 QD film, PL peak 515 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 QD film, PL peak 518 nm",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 641 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 649 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 660 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 678 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 691 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 703 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 712 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 QD film, PL peak 715 nm",
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.3
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak positions remain constant as PL peak shifts for both CsPbBr3 and CsPbI3 QD films"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 5,
+  "x_max": 45
+}

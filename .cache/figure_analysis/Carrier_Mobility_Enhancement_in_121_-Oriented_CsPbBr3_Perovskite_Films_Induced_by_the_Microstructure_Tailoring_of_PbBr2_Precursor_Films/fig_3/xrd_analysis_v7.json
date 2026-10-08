@@ -1,0 +1,187 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "PbBr2, 0 \u03bcL HBr",
+      "peak_positions": [
+        16.8,
+        22.0,
+        23.7,
+        26.6,
+        29.6,
+        31.0,
+        34.0,
+        37.6
+      ],
+      "phases": [
+        "PbBr2"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PbBr2, 10 \u03bcL HBr",
+      "peak_positions": [
+        16.8,
+        22.0,
+        23.7,
+        26.6,
+        29.6,
+        31.0,
+        34.0,
+        37.6
+      ],
+      "phases": [
+        "PbBr2"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PbBr2, 30 \u03bcL HBr",
+      "peak_positions": [
+        16.8,
+        22.0,
+        23.7,
+        26.6,
+        29.6,
+        31.0,
+        34.0,
+        37.6
+      ],
+      "phases": [
+        "PbBr2"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PbBr2, 0 \u03bcL HBr, 75\u00b0C",
+      "peak_positions": [
+        16.8,
+        22.0,
+        23.7,
+        26.6,
+        29.6,
+        31.0,
+        34.0,
+        37.6
+      ],
+      "phases": [
+        "PbBr2"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PbBr2, 0 \u03bcL HBr, 100\u00b0C",
+      "peak_positions": [
+        16.8,
+        22.0,
+        23.7,
+        26.6,
+        29.6,
+        31.0,
+        34.0,
+        37.6
+      ],
+      "phases": [
+        "PbBr2"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PbBr2, 30 \u03bcL HBr, 75\u00b0C",
+      "peak_positions": [
+        16.8,
+        22.0,
+        23.7,
+        26.6,
+        29.6,
+        31.0,
+        34.0,
+        37.6
+      ],
+      "phases": [
+        "PbBr2"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3, from PbBr2 0 \u03bcL HBr, 75\u00b0C",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        37.8,
+        44.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3, from PbBr2 0 \u03bcL HBr, 100\u00b0C",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        37.8,
+        44.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3, from PbBr2 30 \u03bcL HBr, 75\u00b0C",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        37.8,
+        44.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "PbBr2 peaks become sharper and more intense with increasing HBr addition.",
+    "PbBr2 films annealed at higher temperature or with HBr show higher crystallinity.",
+    "CsPbBr3 films derived from PbBr2 with HBr addition show sharper peaks and higher crystallinity."
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 15,
+  "x_max": 50
+}

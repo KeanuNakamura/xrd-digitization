@@ -1,0 +1,31 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 NCs@MSNs",
+  "curves": [
+    {
+      "condition": "CsPbBr3 NCs@MSNs",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.7,
+        34.4,
+        37.8,
+        43.0,
+        45.6
+      ],
+      "phases": [
+        "orthorhombic CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

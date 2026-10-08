@@ -1,0 +1,96 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbCl3 (fully exchanged, top, violet)",
+      "peak_positions": [
+        32.2,
+        37.2,
+        42.2,
+        47.2,
+        52.2
+      ],
+      "phases": [
+        "CsPbCl3"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Intermediate Cl- exchanged (middletop, light blue)",
+      "peak_positions": [
+        32.7,
+        37.7,
+        42.7,
+        47.7,
+        52.7
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 (pristine, middle, green)",
+      "peak_positions": [
+        33.2,
+        38.2,
+        43.2,
+        48.2,
+        53.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Intermediate I- exchanged (middle-bottom, yellow)",
+      "peak_positions": [
+        33.7,
+        38.7,
+        43.7,
+        48.7,
+        53.7
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 (fully exchanged, bottom, red)",
+      "peak_positions": [
+        34.2,
+        39.2,
+        44.2,
+        49.2,
+        54.2
+      ],
+      "phases": [
+        "CsPbI3"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peaks shift to higher angles with Cl- incorporation",
+    "Peaks shift to lower angles with I- incorporation"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 31,
+  "x_max": 56
+}

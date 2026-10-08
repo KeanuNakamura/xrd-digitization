@@ -1,0 +1,77 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbBr3 (before Cs+ addition)",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.3,
+        47.5,
+        51.1,
+        53.5
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "After Cs+ addition (transformed Cs4PbBr6)",
+      "peak_positions": [
+        12.9,
+        20.2,
+        22.5,
+        25.6,
+        27.6,
+        28.7,
+        30.3,
+        31.1
+      ],
+      "phases": [
+        "Cs4PbBr6"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "After Pb2+ addition (reverse-transformed CsPbBr3)",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.3,
+        47.5,
+        51.1,
+        53.5
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Transformation from CsPbBr3 to Cs4PbBr6 upon Cs+ addition is evidenced by disappearance of CsPbBr3 peaks and appearance of Cs4PbBr6 peaks.",
+    "Reverse transformation from Cs4PbBr6 to CsPbBr3 upon Pb2+ addition is evidenced by disappearance of Cs4PbBr6 peaks and reappearance of CsPbBr3 peaks."
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 60
+}

@@ -1,0 +1,79 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "2h",
+      "peak_positions": [
+        6.2,
+        8.7,
+        11.2,
+        13.7,
+        16.2,
+        18.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "6h",
+      "peak_positions": [
+        6.2,
+        8.7,
+        11.2,
+        13.7,
+        16.2,
+        18.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "24h",
+      "peak_positions": [
+        6.2,
+        8.7,
+        11.2,
+        13.7,
+        16.2,
+        18.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "36h",
+      "peak_positions": [
+        6.2,
+        8.7,
+        11.2,
+        13.7,
+        16.2,
+        18.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensity increases with reaction time",
+    "No impurity phase observed"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 5,
+  "x_max": 20
+}

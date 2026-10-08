@@ -1,0 +1,120 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "T=120\u00b0C, Cs/Pb=1/4",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.3,
+        34.7,
+        37.8,
+        43.2,
+        47.5,
+        51.2,
+        53.7,
+        56.2,
+        62.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "T=140\u00b0C, Cs/Pb=1/4",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.3,
+        34.7,
+        37.8,
+        43.2,
+        47.5,
+        51.2,
+        53.7,
+        56.2,
+        62.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "T=160\u00b0C, Cs/Pb=1/2",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.3,
+        34.7,
+        37.8,
+        43.2,
+        47.5,
+        51.2,
+        53.7,
+        56.2,
+        62.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "T=160\u00b0C, Cs/Pb=1/3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.3,
+        34.7,
+        37.8,
+        43.2,
+        47.5,
+        51.2,
+        53.7,
+        56.2,
+        62.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "T=160\u00b0C, Cs/Pb=1/4",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.3,
+        34.7,
+        37.8,
+        43.2,
+        47.5,
+        51.2,
+        53.7,
+        56.2,
+        62.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "A2/A1 peak intensity ratio increases with temperature and Cs/Pb ratio",
+    "Peak positions remain consistent across samples"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 65
+}

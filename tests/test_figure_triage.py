@@ -257,7 +257,7 @@ class FigureTriageParseTests(unittest.TestCase):
 
 
 class ProcessFigureXrdFilterTests(unittest.TestCase):
-    def test_non_xrd_deleted_by_default(self) -> None:
+    def test_non_xrd_moved_by_default(self) -> None:
         payload = {"is_xrd": False, "reason": "FTIR spectrum"}
         response = MagicMock()
         response.raise_for_status = MagicMock()
@@ -267,7 +267,8 @@ class ProcessFigureXrdFilterTests(unittest.TestCase):
         http_post = MagicMock(return_value=response)
 
         with tempfile.TemporaryDirectory() as tmp:
-            figures = Path(tmp) / "figures"
+            root = Path(tmp)
+            figures = root / "figures"
             figures.mkdir()
             src = figures / "fig_sem.png"
             cv2.imwrite(str(src), np.full((20, 30, 3), 120, dtype=np.uint8))
@@ -279,12 +280,14 @@ class ProcessFigureXrdFilterTests(unittest.TestCase):
                     model="test-model",
                     overwrite=True,
                     http_post=http_post,
+                    paper_dir=root,
                 )
 
             self.assertEqual(entry["status"], "skipped_not_xrd")
             self.assertFalse(entry["xrd_classification"]["is_xrd"])
             self.assertFalse((figures / "fig_sem").exists())
             self.assertFalse(src.exists())
+            self.assertTrue((root / "non_xrd_figures" / "fig_sem.png").is_file())
             http_post.assert_called_once()
 
     def test_all_figures_keeps_non_xrd_for_triage(self) -> None:

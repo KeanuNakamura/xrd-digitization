@@ -1,0 +1,69 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 perovskites",
+  "curves": [
+    {
+      "condition": "1-purified CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        47.7,
+        51.1
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "2-purified CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        47.7,
+        51.1
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "3-purified CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        47.7,
+        51.1
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "peaks become sharper with increasing purification",
+    "peak intensity increases with purification"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 55
+}

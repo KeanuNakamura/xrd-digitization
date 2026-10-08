@@ -1,0 +1,59 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbBr3-NPs",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.2,
+        37.8,
+        43.2,
+        51.2,
+        53.6
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Precipitates",
+      "peak_positions": [
+        12.7,
+        16.1,
+        21.5,
+        22.6,
+        28.7,
+        30.5,
+        34.2,
+        37.8,
+        43.2,
+        51.2,
+        53.6
+      ],
+      "phases": [
+        "CsPbBr3",
+        "CsPb2Br5"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Precipitates show sharper peaks than CsPbBr3-NPs",
+    "Precipitates contain both CsPbBr3 and CsPb2Br5 phases"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 60
+}

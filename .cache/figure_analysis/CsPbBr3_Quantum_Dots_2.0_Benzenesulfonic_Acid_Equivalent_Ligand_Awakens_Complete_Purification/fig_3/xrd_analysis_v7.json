@@ -1,0 +1,68 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 QDs",
+  "curves": [
+    {
+      "condition": "DBSA-1",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        47.7,
+        51.7
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "DBSA-3",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        47.7,
+        51.7
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "DBSA-5",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        47.7,
+        51.7
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "XRD patterns remain similar after multiple washing cycles"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 55
+}

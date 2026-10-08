@@ -1,0 +1,90 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbCl3 NCs",
+      "peak_positions": [
+        32.1,
+        37.2,
+        43.3,
+        51.1,
+        54.6
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "mixed CsPbCl3 and CsPbBr3 NCs",
+      "peak_positions": [
+        32.5,
+        37.6,
+        43.7,
+        51.5,
+        55.0
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3 NCs",
+      "peak_positions": [
+        32.9,
+        38.1,
+        44.2,
+        52.1,
+        55.6
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "mixed CsPbBr3 and CsPbI3 NCs",
+      "peak_positions": [
+        33.5,
+        38.7,
+        44.8,
+        52.7,
+        56.2
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbI3 NCs",
+      "peak_positions": [
+        34.1,
+        39.3,
+        45.4,
+        53.3,
+        56.8
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak positions shift progressively from CsPbCl3 to CsPbBr3 to CsPbI3 NCs",
+    "Mixed samples show peaks at intermediate positions between parent NCs"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 31,
+  "x_max": 56
+}

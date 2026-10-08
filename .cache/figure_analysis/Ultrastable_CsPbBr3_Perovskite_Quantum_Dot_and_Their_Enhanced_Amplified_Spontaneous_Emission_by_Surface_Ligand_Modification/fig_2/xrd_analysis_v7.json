@@ -1,0 +1,48 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 QDs with DA/OA",
+  "curves": [
+    {
+      "condition": "CsPbBr3-DA",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.8,
+        43.0,
+        45.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3-OA",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.8,
+        43.0,
+        45.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensities differ between DA and OA samples"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

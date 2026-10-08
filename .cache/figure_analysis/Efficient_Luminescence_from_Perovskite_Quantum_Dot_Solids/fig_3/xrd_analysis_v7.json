@@ -1,0 +1,50 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 nanocrystals",
+  "curves": [
+    {
+      "condition": "Powder of CsPbBr3 nanocrystals",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        45.5,
+        51.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Centrifugally cast film of CsPbBr3 nanocrystals",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        45.5,
+        51.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Relative peak intensities differ between powder and film"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 55
+}

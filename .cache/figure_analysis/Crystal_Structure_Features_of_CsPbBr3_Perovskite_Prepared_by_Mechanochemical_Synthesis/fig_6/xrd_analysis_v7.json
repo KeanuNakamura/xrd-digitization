@@ -1,0 +1,69 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3",
+  "curves": [
+    {
+      "condition": "473 K",
+      "peak_positions": [
+        4.1,
+        5.8,
+        8.3,
+        10.0,
+        11.7,
+        13.5
+      ],
+      "phases": [
+        "Pm3m"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "673 K",
+      "peak_positions": [
+        4.1,
+        5.8,
+        8.3,
+        10.0,
+        11.7,
+        13.5
+      ],
+      "phases": [
+        "Pm3m"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "773 K",
+      "peak_positions": [
+        4.1,
+        5.8,
+        8.3,
+        10.0,
+        11.7,
+        13.5
+      ],
+      "phases": [
+        "Pm3m"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensities increase with temperature",
+    "Phase remains Pm3m at all measured temperatures"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 4,
+  "x_max": 15
+}

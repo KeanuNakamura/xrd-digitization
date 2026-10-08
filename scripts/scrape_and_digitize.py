@@ -7,11 +7,12 @@ via GROBID, then run OpenAI vision metadata analysis on each crop and write the
 result under the ``analysis`` key in ``<stem>.figure_analysis.json``.
 
 With ``--digitize``: after scrape+analysis, ask OpenAI whether each crop is
-XRD-related (default: keep only XRD figures and delete the rest), triage curve
-layout (single / stacked / overlapping / multipanel), then call
-digitize_one_figure. Single-curve and stacked shared-x figures use the existing
-paths; multi-subplot figures are split into panel crops and digitized
-independently. Overlapping multi-curve figures are skipped as unsupported.
+XRD-related (default: keep only XRD figures under ``xrd_figures/`` and move
+non-XRD crops to ``non_xrd_figures/``), triage curve layout (single / stacked /
+overlapping / multipanel), then call digitize_one_figure. Single-curve and
+stacked shared-x figures use the existing paths; multi-subplot figures are
+split into panel crops and digitized independently. Overlapping multi-curve
+figures are skipped as unsupported.
 
 Pass ``--all-figures`` with ``--digitize`` to keep and triage every crop (skip
 the XRD filter).
@@ -61,6 +62,7 @@ from pdf_parser import (  # noqa: E402
     collect_pdf_paths,
     figure_entries_from_analysis_payload,
     parse_pdf,
+    primary_figure_number_from_stem,
 )
 from xrd_digitization.clipdrop_remove_text import ClipdropError  # noqa: E402
 from xrd_digitization.extract_annotations import extract_plot_annotations  # noqa: E402
@@ -74,6 +76,131 @@ LOGGER = logging.getLogger(__name__)
 BENCHMARK_XRD_DIR = "xrd"
 BENCHMARK_NOT_XRD_DIR = "not_xrd"
 BENCHMARK_MANIFEST_NAME = "benchmark_manifest.json"
+
+# parse_pdf extracts flat crops into ``figures/``; enrichment renames that
+# folder to ``xrd_figures/`` and moves non-XRD crops into ``non_xrd_figures/``.
+EXTRACTED_FIGURES_DIR = "figures"
+XRD_FIGURES_DIR = "xrd_figures"
+NON_XRD_FIGURES_DIR = "non_xrd_figures"
+
+
+def paper_figures_dir(paper_dir: Path) -> Path:
+    """Prefer ``xrd_figures/`` (post-enrichment), else ``figures/`` (fresh extract)."""
+    xrd_dir = paper_dir / XRD_FIGURES_DIR
+    if xrd_dir.is_dir():
+        return xrd_dir
+    return paper_dir / EXTRACTED_FIGURES_DIR
+
+
+def move_crop_to_non_xrd_figures(paper_dir: Path, image_path: Path) -> Path | None:
+    """
+    Move a non-XRD crop into ``non_xrd_figures/<name>.png``.
+
+    Also removes an empty staged parent directory when the crop lived under
+    ``figures/<id>/<id>.png`` (or ``xrd_figures/...``).
+    """
+    if not image_path.is_file():
+        return None
+    dest_dir = paper_dir / NON_XRD_FIGURES_DIR
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / image_path.name
+    try:
+        if image_path.resolve() != dest.resolve():
+            if dest.exists():
+                dest.unlink()
+            shutil.move(str(image_path), str(dest))
+        parent = image_path.parent
+        figures_roots = {
+            (paper_dir / EXTRACTED_FIGURES_DIR).resolve(),
+            (paper_dir / XRD_FIGURES_DIR).resolve(),
+        }
+        if (
+            parent.resolve() not in figures_roots
+            and parent.is_dir()
+            and not any(parent.iterdir())
+        ):
+            parent.rmdir()
+        return dest
+    except OSError as exc:
+        LOGGER.warning("Failed to move non-XRD crop %s: %s", image_path, exc)
+        return None
+
+
+def rename_figures_dir_to_xrd_figures(paper_dir: Path) -> Path | None:
+    """
+    Rename ``figures/`` → ``xrd_figures/`` and rewrite ``figure_path`` values.
+
+    No-op when ``figures/`` is already gone (e.g. enrichment re-run).
+    """
+    paper_dir = paper_dir.resolve()
+    extracted = paper_dir / EXTRACTED_FIGURES_DIR
+    xrd_dir = paper_dir / XRD_FIGURES_DIR
+    if not extracted.is_dir():
+        return xrd_dir if xrd_dir.is_dir() else None
+    if xrd_dir.exists():
+        LOGGER.warning(
+            "Both %s/ and %s/ exist under %s; leaving %s/ in place",
+            EXTRACTED_FIGURES_DIR,
+            XRD_FIGURES_DIR,
+            paper_dir.name,
+            EXTRACTED_FIGURES_DIR,
+        )
+        return extracted
+    extracted.rename(xrd_dir)
+    LOGGER.info("Renamed %s/ → %s/ under %s", EXTRACTED_FIGURES_DIR, XRD_FIGURES_DIR, paper_dir.name)
+
+    json_path = figure_analysis_json_path(paper_dir)
+    if json_path is None:
+        return xrd_dir
+    try:
+        payload = json.loads(json_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return xrd_dir
+
+    figures = figure_entries_from_analysis_payload(payload)
+    if not figures:
+        return xrd_dir
+
+    old_prefix = str((paper_dir / EXTRACTED_FIGURES_DIR).resolve())
+    new_prefix = str(xrd_dir.resolve())
+    changed = False
+    for entry in figures:
+        raw = str(entry.get("figure_path") or "")
+        if not raw:
+            continue
+        try:
+            resolved = str(Path(raw).resolve())
+        except OSError:
+            resolved = raw
+        if resolved.startswith(old_prefix):
+            entry["figure_path"] = new_prefix + resolved[len(old_prefix) :]
+            changed = True
+        elif f"/{EXTRACTED_FIGURES_DIR}/" in raw.replace("\\", "/"):
+            entry["figure_path"] = raw.replace(
+                f"/{EXTRACTED_FIGURES_DIR}/", f"/{XRD_FIGURES_DIR}/"
+            ).replace(
+                f"\\{EXTRACTED_FIGURES_DIR}\\", f"\\{XRD_FIGURES_DIR}\\"
+            )
+            changed = True
+
+    if not changed:
+        return xrd_dir
+
+    if isinstance(payload, dict):
+        payload["figures"] = figures
+        out_payload: Any = payload
+    else:
+        out_payload = {
+            "title": None,
+            "doi": None,
+            "authors": [],
+            "figures": figures,
+        }
+    json_path.write_text(
+        json.dumps(out_payload, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    return xrd_dir
 
 
 def paper_output_dir(output_root: Path, pdf_path: Path) -> Path:
@@ -119,7 +246,7 @@ def copy_figure_to_benchmark_bucket(
 
 
 def collect_figure_pngs(figures_dir: Path) -> list[Path]:
-    """Sorted source PNGs directly under ``figures/`` (flat extract from parse_pdf)."""
+    """Sorted source PNGs directly under a flat figures directory."""
     if not figures_dir.is_dir():
         return []
     return sorted(
@@ -150,8 +277,9 @@ def resolve_figure_image_path(paper_dir: Path, figure_path: str | Path) -> Path 
     else:
         candidates.append(paper_dir / path)
         candidates.append(Path(path))
-    # GROBID may store a basename or figures/<name>.png
-    candidates.append(paper_dir / "figures" / path.name)
+    # GROBID may store a basename or figures/<name>.png (or xrd_figures/).
+    candidates.append(paper_dir / EXTRACTED_FIGURES_DIR / path.name)
+    candidates.append(paper_dir / XRD_FIGURES_DIR / path.name)
     for candidate in candidates:
         if candidate.is_file():
             return candidate.resolve()
@@ -159,19 +287,30 @@ def resolve_figure_image_path(paper_dir: Path, figure_path: str | Path) -> Path 
 
 
 def _figure_number_from_stem(stem: str) -> int | None:
-    """Extract trailing figure number from stems like ``fig_1`` / ``figure_3``."""
-    match = re.search(r"(\d+)$", stem.strip())
-    if not match:
-        return None
-    try:
-        return int(match.group(1))
-    except ValueError:
-        return None
+    """Primary figure number from stems like ``fig_1`` / ``fig_1_2`` / ``figure_3``."""
+    return primary_figure_number_from_stem(stem)
+
+
+def _stem_is_exact_figure(stem: str, figure_number: int) -> bool:
+    """True when stem is exactly ``fig_N`` / ``figure_N`` (no collision suffix)."""
+    return bool(
+        re.match(
+            rf"^(?:fig(?:ure)?)_?{figure_number}$",
+            stem.strip(),
+            flags=re.IGNORECASE,
+        )
+    )
 
 
 def find_figure_image_for_number(paper_dir: Path, figure_number: int) -> Path | None:
-    """Locate ``figures/fig_N.png`` or staged ``figures/fig_N/fig_N.png``."""
-    figures_dir = paper_dir / "figures"
+    """
+    Locate a crop for ``figure_number``.
+
+    Prefers exact ``fig_N.png`` over suffixed extracts like ``fig_N_2.png``.
+    Returns None when multiple suffixed candidates match and none is exact,
+    to avoid wrong caption/image associations.
+    """
+    figures_dir = paper_figures_dir(paper_dir)
     if not figures_dir.is_dir():
         return None
 
@@ -186,16 +325,32 @@ def find_figure_image_for_number(paper_dir: Path, figure_number: int) -> Path | 
         if candidate.is_file():
             return candidate.resolve()
 
-    # Fallback: scan flat PNGs and staged dirs for matching figure number.
+    exact: list[Path] = []
+    partial: list[Path] = []
     for png in collect_figure_pngs(figures_dir):
-        if _figure_number_from_stem(png.stem) == figure_number:
-            return png.resolve()
+        if _figure_number_from_stem(png.stem) != figure_number:
+            continue
+        if _stem_is_exact_figure(png.stem, figure_number):
+            exact.append(png)
+        else:
+            partial.append(png)
     for child in sorted(figures_dir.iterdir()):
         if not child.is_dir():
             continue
         staged = child / f"{child.name}.png"
-        if staged.is_file() and _figure_number_from_stem(child.name) == figure_number:
-            return staged.resolve()
+        if not staged.is_file():
+            continue
+        if _figure_number_from_stem(child.name) != figure_number:
+            continue
+        if _stem_is_exact_figure(child.name, figure_number):
+            exact.append(staged)
+        else:
+            partial.append(staged)
+
+    if exact:
+        return exact[0].resolve()
+    if len(partial) == 1:
+        return partial[0].resolve()
     return None
 
 
@@ -204,13 +359,20 @@ def filter_figure_analysis_to_existing_images(
     payload: list[Any],
 ) -> list[dict[str, Any]]:
     """
-    Keep only figure_analysis entries that have a real crop under ``figures/``.
+    Keep figure_analysis entries that have a real crop under ``figures/`` or
+    ``xrd_figures/``.
 
-    Text-only references (e.g. figure mentioned in the paper but never extracted)
-    are dropped. When an image is found, ``figure_path`` is normalized to it.
+    Association order:
+      1. explicit ``figure_path`` / ``figure_id`` metadata
+      2. unambiguous figure-number fallback (exact ``fig_N`` preferred)
+
+    Text-only references with no image are dropped here; orphan crops on disk
+    are recovered separately by ``recover_orphan_figure_images``.
     """
     kept: list[dict[str, Any]] = []
     dropped: list[int | str] = []
+    claimed_paths: set[Path] = set()
+    figures_dir = paper_figures_dir(paper_dir)
 
     for entry in payload:
         if not isinstance(entry, dict):
@@ -218,20 +380,40 @@ def filter_figure_analysis_to_existing_images(
 
         figure_number: int | None
         try:
-            figure_number = int(entry["figure"]) if entry.get("figure") is not None else None
+            figure_number = (
+                int(entry["figure"]) if entry.get("figure") is not None else None
+            )
         except (TypeError, ValueError):
             figure_number = None
 
         image_path = resolve_figure_image_path(paper_dir, entry.get("figure_path", ""))
-        if image_path is None and figure_number is not None:
-            image_path = find_figure_image_for_number(paper_dir, figure_number)
 
         if image_path is None:
-            dropped.append(entry.get("figure", "?"))
+            figure_id = str(entry.get("figure_id") or "").strip()
+            if figure_id:
+                by_id = figures_dir / f"{figure_id}.png"
+                if by_id.is_file():
+                    image_path = by_id.resolve()
+                else:
+                    staged = figures_dir / figure_id / f"{figure_id}.png"
+                    if staged.is_file():
+                        image_path = staged.resolve()
+
+        if image_path is None and figure_number is not None:
+            # Only use number fallback when this path is not already claimed.
+            candidate = find_figure_image_for_number(paper_dir, figure_number)
+            if candidate is not None and candidate not in claimed_paths:
+                image_path = candidate
+
+        if image_path is None:
+            dropped.append(entry.get("figure_id") or entry.get("figure") or "?")
             continue
 
         entry = dict(entry)
         entry["figure_path"] = str(image_path)
+        if not entry.get("figure_id"):
+            entry["figure_id"] = image_path.stem
+        claimed_paths.add(image_path.resolve())
         kept.append(entry)
 
     if dropped:
@@ -241,6 +423,58 @@ def filter_figure_analysis_to_existing_images(
             ", ".join(str(x) for x in dropped),
         )
     return kept
+
+
+def recover_orphan_figure_images(
+    paper_dir: Path,
+    figures: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """
+    Attach on-disk crops that are missing from the figures JSON as unresolved entries.
+
+    Ensures successfully extracted PNGs are never silently omitted from enrichment.
+    """
+    paper_dir = paper_dir.resolve()
+    figures_dir = paper_figures_dir(paper_dir)
+    if not figures_dir.is_dir():
+        return figures
+
+    claimed: set[Path] = set()
+    for entry in figures:
+        resolved = resolve_figure_image_path(paper_dir, entry.get("figure_path", ""))
+        if resolved is not None:
+            claimed.add(resolved.resolve())
+
+    recovered: list[dict[str, Any]] = []
+    for png in collect_figure_pngs(figures_dir):
+        resolved = png.resolve()
+        if resolved in claimed:
+            continue
+        figure_number = primary_figure_number_from_stem(png.stem)
+        recovered.append(
+            {
+                "figure": figure_number,
+                "figure_id": png.stem,
+                "figure_path": str(resolved),
+                "caption": "",
+                "text": "",
+                "association_status": "unresolved",
+                "association_note": (
+                    "Extracted image had no matching figure_analysis metadata; "
+                    "recovered for XRD classification/analysis."
+                ),
+            }
+        )
+        claimed.add(resolved)
+        LOGGER.info("Recovered orphan figure image %s", png.name)
+
+    if recovered:
+        LOGGER.info(
+            "Recovered %d orphan figure image(s) under %s",
+            len(recovered),
+            figures_dir,
+        )
+    return list(figures) + recovered
 
 
 def _vision_analysis_client(*, model: str | None = None):
@@ -264,9 +498,11 @@ def enrich_figure_analysis_json(
     """
     Filter to image-backed figures, run vision XRD gate+analysis, rewrite JSON.
 
-    Paper-level title/doi/authors are preserved. Only XRD figures that still have
-    a crop under ``figures/`` remain in ``figures`` — non-XRD crops are deleted
-    and omitted from the JSON entirely.
+    Paper-level title/doi/authors are preserved. Only XRD figures remain in the
+    JSON ``figures`` list; non-XRD crops are moved to ``non_xrd_figures/`` and
+    omitted from the JSON. Remaining XRD crops stay under ``figures/`` until
+    renamed to ``xrd_figures/``. ``figures_total`` / ``xrd_figures`` counts are
+    written at the document root.
     """
     from figure_analysis.analyzer import analysis_to_dataset_dict
 
@@ -288,41 +524,50 @@ def enrich_figure_analysis_json(
         return None
 
     figures = filter_figure_analysis_to_existing_images(paper_dir, figures)
+    figures = recover_orphan_figure_images(paper_dir, figures)
+    figures_total = len(figures)
 
     vision_client = client
     analyzed = 0
     failed = 0
+    missing = 0
     not_xrd = 0
     kept_figures: list[dict[str, Any]] = []
-
-    def _remove_crop(image_path: Path) -> None:
-        try:
-            if image_path.is_file():
-                image_path.unlink()
-            parent = image_path.parent
-            figures_root = (paper_dir / "figures").resolve()
-            if (
-                parent.resolve() != figures_root
-                and parent.is_dir()
-                and not any(parent.iterdir())
-            ):
-                parent.rmdir()
-        except OSError as exc:
-            LOGGER.warning("Failed to remove crop %s: %s", image_path, exc)
+    paper_cache_prefix = re.sub(r"[^\w.-]+", "_", paper_dir.name).strip("_") or "paper"
 
     for entry in figures:
+        entry = dict(entry)
+        # Prefer the explicit stored path; never rebuild from figure number alone.
         image_path = resolve_figure_image_path(paper_dir, entry.get("figure_path", ""))
         if image_path is None:
-            # No crop on disk → omit from JSON.
-            failed += 1
+            missing += 1
+            entry["is_xrd"] = False
+            entry["analysis"] = None
+            entry["association_status"] = entry.get("association_status") or "missing_image"
+            entry["association_note"] = (
+                entry.get("association_note")
+                or "figure_path did not resolve to an on-disk crop during enrichment."
+            )
+            kept_figures.append(entry)
+            LOGGER.warning(
+                "Missing image for figure entry %s (%s); kept unresolved stub",
+                entry.get("figure_id") or entry.get("figure"),
+                entry.get("figure_path"),
+            )
             continue
+
+        entry["figure_path"] = str(image_path)
+        if not entry.get("figure_id"):
+            entry["figure_id"] = image_path.stem
 
         if vision_client is None:
             vision_client = _vision_analysis_client(model=model)
 
         figure_number: int | None
         try:
-            figure_number = int(entry["figure"]) if entry.get("figure") is not None else None
+            figure_number = (
+                int(entry["figure"]) if entry.get("figure") is not None else None
+            )
         except (TypeError, ValueError):
             figure_number = None
 
@@ -330,7 +575,9 @@ def enrich_figure_analysis_json(
             result = analyze_figure_image(
                 image_path,
                 client=vision_client,
-                cache_key=f"figure_analysis/{image_path.stem}",
+                cache_key=(
+                    f"figure_analysis/{paper_cache_prefix}/{image_path.stem}"
+                ),
                 caption=str(entry.get("caption") or "") or None,
                 text=str(entry.get("text") or "") or None,
                 figure_number=figure_number,
@@ -339,32 +586,55 @@ def enrich_figure_analysis_json(
 
             if not result.is_xrd:
                 not_xrd += 1
-                _remove_crop(image_path)
+                moved = move_crop_to_non_xrd_figures(paper_dir, image_path)
                 LOGGER.info(
-                    "Figure %s classified as non-XRD; omitted from JSON and figures/",
-                    entry.get("figure"),
+                    "Figure %s (%s) classified as non-XRD; moved to %s/ and omitted from JSON",
+                    entry.get("figure_id") or entry.get("figure"),
+                    image_path.name,
+                    NON_XRD_FIGURES_DIR if moved else EXTRACTED_FIGURES_DIR,
                 )
                 continue
 
             entry["is_xrd"] = True
             entry["analysis"] = analysis_to_dataset_dict(result)
             entry.pop("analysis_error", None)
+            if entry.get("association_status") == "unresolved":
+                # Image was analyzed successfully even without rich metadata.
+                entry["association_status"] = "recovered"
             kept_figures.append(entry)
-            LOGGER.info("Analyzed XRD figure %s (%s)", entry.get("figure"), image_path.name)
+            LOGGER.info(
+                "Analyzed XRD figure %s (%s)",
+                entry.get("figure_id") or entry.get("figure"),
+                image_path.name,
+            )
+        except FileNotFoundError as exc:
+            missing += 1
+            entry["is_xrd"] = False
+            entry["analysis"] = None
+            entry["association_status"] = "missing_image"
+            entry["association_note"] = str(exc)
+            kept_figures.append(entry)
+            LOGGER.warning("Image disappeared during enrichment: %s", image_path)
         except Exception as exc:
             LOGGER.exception("Vision analysis failed for %s", image_path)
-            # Keep the crop and a stub only if the image still exists.
             entry["is_xrd"] = False
             entry["analysis"] = None
             entry["analysis_error"] = str(exc)
+            entry["association_status"] = "analysis_failed"
+            entry["association_note"] = (
+                "Vision analysis failed; crop preserved for retry."
+            )
             failed += 1
             if image_path.is_file():
                 kept_figures.append(entry)
 
+    xrd_figures = sum(1 for entry in kept_figures if entry.get("is_xrd"))
     out_payload = {
         "title": payload.get("title") if isinstance(payload, dict) else None,
         "doi": payload.get("doi") if isinstance(payload, dict) else None,
         "authors": (payload.get("authors") or []) if isinstance(payload, dict) else [],
+        "figures_total": figures_total,
+        "xrd_figures": xrd_figures,
         "figures": kept_figures,
     }
 
@@ -372,12 +642,16 @@ def enrich_figure_analysis_json(
         json.dumps(out_payload, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
+    rename_figures_dir_to_xrd_figures(paper_dir)
     LOGGER.info(
-        "Enriched %s (entries=%d analyzed=%d not_xrd=%d failed=%d)",
+        "Enriched %s (figures_total=%d xrd_figures=%d analyzed=%d "
+        "not_xrd=%d missing=%d failed=%d)",
         json_path.name,
-        len(kept_figures),
+        figures_total,
+        xrd_figures,
         analyzed,
         not_xrd,
+        missing,
         failed,
     )
     return json_path
@@ -385,8 +659,9 @@ def enrich_figure_analysis_json(
 
 def rewrite_figure_paths_after_staging(paper_dir: Path) -> None:
     """
-    After digitize staging moves ``figures/fig_N.png`` → ``figures/fig_N/fig_N.png``,
-    update matching ``figure_path`` values in figure_analysis.json.
+    After digitize staging moves ``xrd_figures/<id>.png`` →
+    ``xrd_figures/<id>/<id>.png``, update matching ``figure_path`` values in
+    figure_analysis.json using ``figure_id`` / path stem (not figure number alone).
     """
     paper_dir = paper_dir.resolve()
     json_path = figure_analysis_json_path(paper_dir)
@@ -402,15 +677,21 @@ def rewrite_figure_paths_after_staging(paper_dir: Path) -> None:
     if not figures:
         return
 
-    figures_dir = paper_dir / "figures"
+    figures_dir = paper_figures_dir(paper_dir)
     changed = False
     for entry in figures:
-        fig_num = entry.get("figure")
-        if fig_num is None:
-            continue
-        try:
-            figure_id = f"fig_{int(fig_num)}"
-        except (TypeError, ValueError):
+        figure_id = str(entry.get("figure_id") or "").strip()
+        if not figure_id:
+            raw_path = str(entry.get("figure_path") or "").strip()
+            if raw_path:
+                figure_id = Path(raw_path).stem
+        if not figure_id:
+            fig_num = entry.get("figure")
+            try:
+                figure_id = f"fig_{int(fig_num)}" if fig_num is not None else ""
+            except (TypeError, ValueError):
+                figure_id = ""
+        if not figure_id:
             continue
         staged = figures_dir / figure_id / f"{figure_id}.png"
         if not staged.is_file():
@@ -418,6 +699,7 @@ def rewrite_figure_paths_after_staging(paper_dir: Path) -> None:
         new_path = str(staged.resolve())
         if entry.get("figure_path") != new_path:
             entry["figure_path"] = new_path
+            entry["figure_id"] = figure_id
             changed = True
 
     if not changed:
@@ -442,7 +724,7 @@ def rewrite_figure_paths_after_staging(paper_dir: Path) -> None:
 
 def stage_figure_directory(png_path: Path, figures_dir: Path) -> tuple[str, Path, Path]:
     """
-    Move a flat extracted PNG into ``figures/<figure_id>/<figure_id>.png``.
+    Move a flat extracted PNG into ``<figures_dir>/<figure_id>/<figure_id>.png``.
 
     Returns ``(figure_id, figure_dir, staged_png)``.
     """
@@ -465,14 +747,14 @@ def rearrange_digitize_outputs(
     debug_subdir: str | None = None,
 ) -> dict[str, Any]:
     """
-    Copy digitize_one_figure artifacts into ``figures/<figure_id>/``.
+    Copy digitize_one_figure artifacts into ``<figure_dir>/``.
 
     Top-level keeps only the deliverables:
       - ``<figure_id>.csv`` (primary / first curve)
       - ``<figure_id>_digitized.png`` (reconstructed preview when available)
 
     Everything else (per-curve CSVs/PNGs, stacked sidecars, band crops, clean
-    PNG, debug overlays) goes under ``figures/<figure_id>/debug/`` (or
+    PNG, debug overlays) goes under ``<figure_dir>/debug/`` (or
     ``debug/<debug_subdir>/`` for panel jobs).
     The original ``<figure_id>.png`` and triage JSON are already staged in
     ``figure_dir`` by the caller.
@@ -837,8 +1119,8 @@ def process_figure(
 ) -> dict[str, Any]:
     """Classify XRD via OpenAI; digitize via digitize_one_figure when eligible.
 
-    When ``xrd_only`` is True (default), non-XRD crops are deleted from the
-    figures directory and recorded as ``skipped_not_xrd``.
+    When ``xrd_only`` is True (default), non-XRD crops are moved to
+    ``non_xrd_figures/`` and recorded as ``skipped_not_xrd``.
     """
     figure_id, figure_dir, staged_png = stage_figure_directory(png_path, figures_dir)
     entry: dict[str, Any] = {
@@ -868,14 +1150,11 @@ def process_figure(
             xrd_cls.reason or "OpenAI classified as non-XRD",
         )
         entry["status"] = "skipped_not_xrd"
-        # Remove non-XRD crops from output so only XRD figures remain.
-        try:
-            if staged_png.is_file():
-                staged_png.unlink()
-            if figure_dir.is_dir() and not any(figure_dir.iterdir()):
-                figure_dir.rmdir()
-        except OSError as exc:
-            LOGGER.warning("Failed to remove non-XRD figure %s: %s", figure_id, exc)
+        # Keep non-XRD crops under non_xrd_figures/ so only XRD remain in xrd_figures/.
+        moved = move_crop_to_non_xrd_figures(resolved_paper_dir, staged_png)
+        if moved is not None:
+            entry["non_xrd_path"] = str(moved)
+            entry["source_png"] = str(moved)
         return entry
 
     classify_path = figure_dir / f"{figure_id}.xrd_classify.json"
@@ -1168,10 +1447,12 @@ def process_pdf(
         xrd_figures_only=False,
     )
 
-    figures_dir = paper_dir / "figures"
-    pngs = collect_figure_pngs(figures_dir)
+    extracted_dir = paper_dir / EXTRACTED_FIGURES_DIR
+    pngs = collect_figure_pngs(extracted_dir)
+    figures_total = len(pngs)
 
     # Vision metadata enrichment while crops are still flat under figures/*.png.
+    # Enrichment moves non-XRD → non_xrd_figures/ and renames figures/ → xrd_figures/.
     analysis_json = enrich_figure_analysis_json(paper_dir, model=model)
 
     if not digitize:
@@ -1180,7 +1461,7 @@ def process_pdf(
             "output_directory": str(paper_dir.resolve()),
             "digitize": False,
             "figure_analysis_json": str(analysis_json) if analysis_json else None,
-            "figures_total": len(pngs),
+            "figures_total": figures_total,
             "kept_xrd": None,
             "skipped_not_xrd": 0,
             "digitized": 0,
@@ -1196,6 +1477,8 @@ def process_pdf(
         )
         return manifest
 
+    figures_dir = paper_figures_dir(paper_dir)
+    pngs = collect_figure_pngs(figures_dir)
     figure_entries: list[dict[str, Any]] = []
 
     for png_path in pngs:
@@ -1223,7 +1506,7 @@ def process_pdf(
         "digitize": True,
         "figure_analysis_json": str(analysis_json) if analysis_json else None,
         "xrd_only": xrd_only,
-        "figures_total": len(pngs),
+        "figures_total": figures_total,
         "kept_xrd": sum(
             1 for e in figure_entries if e.get("status") != "skipped_not_xrd"
         ),
@@ -1297,8 +1580,9 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help=(
             "With --digitize: keep and triage every extracted crop instead of "
-            "deleting figures that OpenAI classifies as non-XRD "
-            "(default: XRD-only digitize output)"
+            "moving figures that OpenAI classifies as non-XRD into "
+            f"{NON_XRD_FIGURES_DIR}/ (default: XRD-only digitize under "
+            f"{XRD_FIGURES_DIR}/)"
         ),
     )
     parser.add_argument(

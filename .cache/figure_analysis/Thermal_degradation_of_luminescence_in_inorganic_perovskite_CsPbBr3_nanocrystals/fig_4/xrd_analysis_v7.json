@@ -1,0 +1,207 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "NC492 300 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC492 320 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC492 340 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC492 360 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC492 380 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC492 400 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC517 300 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC517 320 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC517 340 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC517 360 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC517 380 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "NC517 400 K",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5,
+        34.3,
+        37.7,
+        43.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensities increase with annealing temperature",
+    "Peak widths become slightly narrower at higher temperatures"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

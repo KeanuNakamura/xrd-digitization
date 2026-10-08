@@ -1,0 +1,68 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 PQDs (before and after ligand exchange)",
+  "curves": [
+    {
+      "condition": "CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.0,
+        45.7,
+        51.2
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "ExMP-CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.0,
+        45.7,
+        51.2
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "ExOT-CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.3,
+        37.7,
+        43.0,
+        45.7,
+        51.2
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensities increase after ligand exchange"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 55
+}

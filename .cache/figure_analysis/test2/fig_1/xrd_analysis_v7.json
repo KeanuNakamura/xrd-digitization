@@ -1,0 +1,35 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 NCs (TDPA-ODPA, ratio 3:1)",
+  "curves": [
+    {
+      "condition": "TDPA-ODPA (ratio 3:1)",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.3,
+        37.8,
+        43.7,
+        47.2,
+        51.1,
+        56.0,
+        62.2,
+        66.2
+      ],
+      "phases": [
+        "CsPbBr3 (orthorhombic, ICSD 98751)"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 70
+}

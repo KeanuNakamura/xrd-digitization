@@ -1,0 +1,43 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PTI-CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.6,
+        34.2,
+        37.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "PTI-CsPbBr3 shows additional peaks compared to CsPbBr3",
+    "Peak intensities are higher for PTI-CsPbBr3"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

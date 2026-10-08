@@ -1,0 +1,34 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3/SiO2 NCs",
+  "curves": [
+    {
+      "condition": null,
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.3,
+        37.7,
+        43.6,
+        47.7,
+        51.2
+      ],
+      "phases": [
+        "orthorhombic CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "XRD pattern matches reference orthorhombic CsPbBr3"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 55
+}

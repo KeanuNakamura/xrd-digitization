@@ -1,0 +1,96 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "A (n-H)",
+      "peak_positions": [
+        10.2,
+        12.7,
+        15.0,
+        16.2,
+        18.0,
+        20.0,
+        21.7,
+        23.2,
+        25.0,
+        26.7,
+        28.5,
+        30.0,
+        31.7,
+        33.2,
+        34.7,
+        36.2,
+        38.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "B (EA)",
+      "peak_positions": [
+        10.2,
+        12.7,
+        15.0,
+        16.2,
+        18.0,
+        20.0,
+        21.7,
+        23.2,
+        25.0,
+        26.7,
+        28.5,
+        30.0,
+        31.7,
+        33.2,
+        34.7,
+        36.2,
+        38.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "C (acetone)",
+      "peak_positions": [
+        10.2,
+        12.7,
+        15.0,
+        16.2,
+        18.0,
+        20.0,
+        21.7,
+        23.2,
+        25.0,
+        26.7,
+        28.5,
+        30.0,
+        31.7,
+        33.2,
+        34.7,
+        36.2,
+        38.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak positions are similar across A, B, and C",
+    "Relative intensity of the (200) peak varies between samples"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 40
+}

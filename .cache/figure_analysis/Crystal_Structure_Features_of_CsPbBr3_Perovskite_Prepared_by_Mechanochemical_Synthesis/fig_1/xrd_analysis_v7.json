@@ -1,0 +1,67 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 (ball milled)",
+  "curves": [
+    {
+      "condition": "laboratory XRD, Cu K\u03b1",
+      "peak_positions": [
+        15.2,
+        21.5,
+        22.0,
+        23.7,
+        25.2,
+        28.6,
+        30.0,
+        32.2,
+        34.2,
+        37.7,
+        39.2,
+        42.2,
+        45.2,
+        47.7,
+        51.2,
+        53.2,
+        56.2
+      ],
+      "phases": [
+        "CsPbBr3 (Pbnm)"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [
+        {
+          "phase": "CsPbBr3 (Pbnm)",
+          "a_A": 8.1843,
+          "b_A": 8.2334,
+          "c_A": 11.7268,
+          "alpha_deg": null,
+          "beta_deg": null,
+          "gamma_deg": null,
+          "volume_A3": null,
+          "space_group": "Pbnm"
+        }
+      ],
+      "profile_function": "Pseudo-Voigt"
+    }
+  ],
+  "trends": [
+    "peaks are sharp and well resolved; pattern matches orthorhombic CsPbBr3 (Pbnm)"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [
+    {
+      "phase": "CsPbBr3 (Pbnm)",
+      "a_A": 8.1843,
+      "b_A": 8.2334,
+      "c_A": 11.7268,
+      "alpha_deg": null,
+      "beta_deg": null,
+      "gamma_deg": null,
+      "volume_A3": null,
+      "space_group": "Pbnm"
+    }
+  ],
+  "profile_function": "Pseudo-Voigt",
+  "x_min": 10,
+  "x_max": 60
+}

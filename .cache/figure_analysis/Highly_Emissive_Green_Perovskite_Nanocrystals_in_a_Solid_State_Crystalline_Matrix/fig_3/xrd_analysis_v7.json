@@ -1,0 +1,48 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3-in-Cs4PbBr6 crystal",
+  "curves": [
+    {
+      "condition": null,
+      "peak_positions": [
+        10.2,
+        12.7,
+        15.2,
+        17.7,
+        20.2,
+        22.0,
+        23.2,
+        25.2,
+        27.5,
+        29.2,
+        30.7,
+        32.2,
+        34.2,
+        36.2,
+        38.2,
+        40.2,
+        42.2,
+        44.2,
+        46.2,
+        48.2,
+        49.7
+      ],
+      "phases": [
+        "CsPbBr3",
+        "Cs4PbBr6"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "peaks from both CsPbBr3 and Cs4PbBr6 are present, confirming coexistence of both phases"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 5,
+  "x_max": 50
+}

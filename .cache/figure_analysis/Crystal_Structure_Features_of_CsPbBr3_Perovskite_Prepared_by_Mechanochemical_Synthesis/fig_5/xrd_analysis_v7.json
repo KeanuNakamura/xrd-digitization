@@ -1,0 +1,74 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3",
+  "curves": [
+    {
+      "condition": "298 K",
+      "peak_positions": [
+        3.15,
+        3.22,
+        3.29,
+        4.38,
+        4.48
+      ],
+      "phases": [
+        "Pbnm"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "473 K",
+      "peak_positions": [
+        3.18,
+        4.43
+      ],
+      "phases": [
+        "Pm-3m"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "673 K",
+      "peak_positions": [
+        3.19,
+        4.44
+      ],
+      "phases": [
+        "Pm-3m"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "773 K",
+      "peak_positions": [
+        3.19,
+        4.44
+      ],
+      "phases": [
+        "Pm-3m"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "peaks merge and sharpen with increasing temperature",
+    "phase transition from Pbnm to Pm-3m occurs between 298 K and 473 K"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 3.1,
+  "x_max": 4.6
+}

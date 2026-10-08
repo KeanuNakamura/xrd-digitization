@@ -1,0 +1,105 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "FAPbBr3",
+      "peak_positions": [
+        15.1,
+        21.5,
+        30.5,
+        34.5,
+        37.7
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "X = 0.25",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6,
+        34.6,
+        37.8
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "X = 0.5",
+      "peak_positions": [
+        15.2,
+        21.7,
+        30.7,
+        34.7,
+        37.9
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "X = 1",
+      "peak_positions": [
+        15.3,
+        21.8,
+        30.8,
+        34.8,
+        38.0
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "X = 1.5",
+      "peak_positions": [
+        15.4,
+        21.9,
+        30.9,
+        34.9,
+        38.1
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3",
+      "peak_positions": [
+        15.5,
+        22.0,
+        31.0,
+        35.0,
+        38.2
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "peaks shift to higher 2\u03b8 with increasing X",
+    "peak positions gradually move from FAPbBr3 to CsPbBr3 as X increases"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 40
+}

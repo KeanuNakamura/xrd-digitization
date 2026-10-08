@@ -1,0 +1,46 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3",
+  "curves": [
+    {
+      "condition": "NPD, 4 K",
+      "peak_positions": [
+        13.2,
+        18.7,
+        22.7,
+        27.2,
+        29.7,
+        32.2,
+        36.2,
+        39.2,
+        43.2,
+        46.7,
+        49.7,
+        53.2,
+        56.7,
+        60.2,
+        63.2,
+        66.7,
+        69.7,
+        73.2,
+        76.7,
+        80.2,
+        83.2,
+        86.7
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": "Pseudo-Voigt",
+  "x_min": 10,
+  "x_max": 90
+}

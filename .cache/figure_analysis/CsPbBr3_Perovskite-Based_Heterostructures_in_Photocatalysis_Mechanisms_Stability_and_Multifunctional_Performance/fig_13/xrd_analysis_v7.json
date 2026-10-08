@@ -1,0 +1,27 @@
+{
+  "is_xrd": true,
+  "sample": "bulk perovskite QDs",
+  "curves": [
+    {
+      "condition": null,
+      "peak_positions": [
+        14.1,
+        20.1,
+        28.4,
+        31.8,
+        40.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

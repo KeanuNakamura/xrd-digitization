@@ -1,0 +1,30 @@
+{
+  "is_xrd": true,
+  "sample": "Intermediate phase powder",
+  "curves": [
+    {
+      "condition": "Intermediate phase powder",
+      "peak_positions": [
+        7.6,
+        10.7,
+        15.2,
+        21.0,
+        25.2,
+        28.2,
+        32.2,
+        36.8
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 5,
+  "x_max": 40
+}

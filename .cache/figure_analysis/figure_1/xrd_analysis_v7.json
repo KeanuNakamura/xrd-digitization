@@ -1,0 +1,118 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "PL peak position 715 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PL peak position 712 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PL peak position 703 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PL peak position 691 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PL peak position 678 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PL peak position 660 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PL peak position 649 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "PL peak position 641 nm",
+      "peak_positions": [
+        14.2,
+        20.2,
+        28.6
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak positions remain constant as PL peak position changes"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 5,
+  "x_max": 45
+}

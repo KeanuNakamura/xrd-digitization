@@ -1,0 +1,115 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbI3",
+      "peak_positions": [
+        14.2,
+        20.2,
+        24.5,
+        28.5,
+        31.9,
+        34.7,
+        43.2,
+        47.5
+      ],
+      "phases": [
+        "cubic"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPb(I/Br)3",
+      "peak_positions": [
+        14.7,
+        20.7,
+        25.0,
+        29.1,
+        32.6,
+        35.4,
+        43.8,
+        48.1
+      ],
+      "phases": [
+        "cubic"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbBr3",
+      "peak_positions": [
+        15.2,
+        21.3,
+        25.7,
+        29.8,
+        33.4,
+        36.2,
+        44.6,
+        48.8
+      ],
+      "phases": [
+        "cubic"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPb(Br/Cl)3",
+      "peak_positions": [
+        15.7,
+        21.9,
+        26.3,
+        30.5,
+        34.2,
+        37.0,
+        45.3,
+        49.5
+      ],
+      "phases": [
+        "cubic"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "CsPbCl3",
+      "peak_positions": [
+        16.2,
+        22.5,
+        27.0,
+        31.2,
+        34.9,
+        37.7,
+        46.0,
+        50.2
+      ],
+      "phases": [
+        "cubic"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "All samples show peaks consistent with cubic phase",
+    "Peak positions shift to higher 2\u03b8 as halide changes from I to Cl"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 55
+}

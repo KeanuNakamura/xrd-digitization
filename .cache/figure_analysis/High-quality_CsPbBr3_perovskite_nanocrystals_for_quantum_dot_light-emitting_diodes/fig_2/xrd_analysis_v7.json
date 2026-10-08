@@ -1,0 +1,27 @@
+{
+  "is_xrd": true,
+  "sample": "colloidal CsPbBr3 NCs",
+  "curves": [
+    {
+      "condition": null,
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.6
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 55
+}

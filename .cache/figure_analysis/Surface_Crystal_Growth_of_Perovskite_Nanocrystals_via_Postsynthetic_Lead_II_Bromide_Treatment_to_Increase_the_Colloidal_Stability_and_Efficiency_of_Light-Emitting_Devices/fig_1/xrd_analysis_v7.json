@@ -1,0 +1,65 @@
+{
+  "is_xrd": true,
+  "sample": "perovskite NC films (CsPbBr3 NCs)",
+  "curves": [
+    {
+      "condition": "Undoped",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.5,
+        34.2,
+        37.7
+      ],
+      "phases": [
+        "cubic crystal phase"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "DC12AB",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.5,
+        34.2,
+        37.7
+      ],
+      "phases": [
+        "cubic crystal phase"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "DC12AB-PbBr2",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.5,
+        34.2,
+        37.7
+      ],
+      "phases": [
+        "cubic crystal phase"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak positions and widths are similar for all samples"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 40
+}

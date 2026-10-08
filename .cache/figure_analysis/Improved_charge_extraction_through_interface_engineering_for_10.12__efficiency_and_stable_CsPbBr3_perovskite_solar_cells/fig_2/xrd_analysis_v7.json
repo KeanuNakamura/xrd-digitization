@@ -1,0 +1,62 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "PbBr2",
+      "peak_positions": [
+        12.7,
+        16.2,
+        22.0,
+        24.7,
+        27.2,
+        29.5,
+        31.0,
+        32.2,
+        34.2,
+        36.2,
+        38.0,
+        40.0,
+        41.5,
+        43.0
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "AC/PbBr2",
+      "peak_positions": [
+        12.7,
+        16.2,
+        22.0,
+        24.7,
+        27.2,
+        29.5,
+        31.0,
+        32.2,
+        34.2,
+        36.2,
+        38.0,
+        40.0,
+        41.5,
+        43.0
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "AC/PbBr2 film shows lower peak intensity and broader peaks than PbBr2 film"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 12,
+  "x_max": 45
+}

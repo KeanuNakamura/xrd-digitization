@@ -1,0 +1,83 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "Cs4PbBr6 NCs",
+      "peak_positions": [
+        12.7,
+        21.6,
+        30.7,
+        37.7,
+        43.7,
+        51.0,
+        55.2
+      ],
+      "phases": [
+        "Cs4PbBr6"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "partially-transformed, Cs4PbBr6-CsPbBr3/PMAO",
+      "peak_positions": [
+        12.7,
+        21.6,
+        30.7,
+        37.7,
+        43.7,
+        51.0,
+        55.2,
+        15.2,
+        21.9,
+        30.0,
+        34.3,
+        37.9,
+        40.6,
+        44.0,
+        47.3,
+        52.2,
+        55.6
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "fully-transformed, CsPbBr3/PMAO",
+      "peak_positions": [
+        15.2,
+        21.9,
+        30.0,
+        34.3,
+        37.9,
+        40.6,
+        44.0,
+        47.3,
+        52.2,
+        55.6
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Cs4PbBr6 peaks decrease and disappear upon transformation",
+    "CsPbBr3 peaks appear and increase upon transformation"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 60
+}

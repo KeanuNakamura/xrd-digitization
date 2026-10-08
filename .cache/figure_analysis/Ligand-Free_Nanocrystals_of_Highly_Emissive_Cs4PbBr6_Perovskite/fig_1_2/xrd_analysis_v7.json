@@ -1,0 +1,67 @@
+{
+  "is_xrd": true,
+  "sample": "Cs4PbBr6 NCs",
+  "curves": [
+    {
+      "condition": "As-prepared NCs",
+      "peak_positions": [
+        15.1,
+        17.6,
+        22.0,
+        25.2,
+        27.5,
+        29.2,
+        31.0,
+        32.5,
+        34.0,
+        37.0,
+        39.2,
+        42.0,
+        45.0,
+        47.5
+      ],
+      "phases": [
+        "Cs4PbBr6 (R3\u0305c, 167)"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Ligand-free NCs",
+      "peak_positions": [
+        15.1,
+        17.6,
+        22.0,
+        25.2,
+        27.5,
+        29.2,
+        31.0,
+        32.5,
+        34.0,
+        37.0,
+        39.2,
+        42.0,
+        45.0,
+        47.5
+      ],
+      "phases": [
+        "Cs4PbBr6 (R3\u0305c, 167)"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "XRD patterns of as-prepared and ligand-free NCs are nearly identical",
+    "Both samples show phase indexed to R3\u0305c (167)"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

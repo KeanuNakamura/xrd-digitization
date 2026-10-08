@@ -1,0 +1,88 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "CsPbBr3",
+      "peak_positions": [
+        15.2,
+        16.2,
+        21.2,
+        23.2,
+        25.2,
+        27.5,
+        29.2,
+        31.2,
+        32.2,
+        34.2,
+        36.2,
+        38.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [
+        {
+          "phase": "CsPbBr3",
+          "a_A": 8.26,
+          "b_A": 8.2,
+          "c_A": 11.75,
+          "alpha_deg": null,
+          "beta_deg": null,
+          "gamma_deg": null,
+          "volume_A3": null,
+          "space_group": "Pnma"
+        }
+      ],
+      "profile_function": null
+    },
+    {
+      "condition": "Cs4PbBr6",
+      "peak_positions": [
+        12.2,
+        13.2,
+        16.2,
+        18.2,
+        20.2,
+        22.2,
+        24.2,
+        26.2,
+        28.2,
+        30.2,
+        32.2,
+        34.2,
+        36.2,
+        38.2
+      ],
+      "phases": [
+        "Cs4PbBr6"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "CsPbBr3 and Cs4PbBr6 show distinct XRD patterns"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [
+    {
+      "phase": "CsPbBr3",
+      "a_A": 8.26,
+      "b_A": 8.2,
+      "c_A": 11.75,
+      "alpha_deg": null,
+      "beta_deg": null,
+      "gamma_deg": null,
+      "volume_A3": null,
+      "space_group": "Pnma"
+    }
+  ],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 40
+}

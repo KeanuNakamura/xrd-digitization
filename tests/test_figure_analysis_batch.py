@@ -120,7 +120,7 @@ def test_batch_resume_and_failure_isolation(tmp_path: Path):
     assert "figure_skip.png" in calls
 
 
-def test_enrich_removes_non_xrd_crops(tmp_path: Path):
+def test_enrich_moves_non_xrd_crops(tmp_path: Path):
     import sys
 
     sys.path.insert(0, str(ROOT / "scripts"))
@@ -184,10 +184,25 @@ def test_enrich_removes_non_xrd_crops(tmp_path: Path):
     data = json.loads(fa.read_text(encoding="utf-8"))
     fig_nums = [e["figure"] for e in data["figures"]]
     assert fig_nums == [3]
+    assert data["figures_total"] == 2
+    assert data["xrd_figures"] == 1
     assert data["figures"][0]["is_xrd"] is True
     assert data["figures"][0]["analysis"]["curves"][0]["peak_positions"] == [12.4, 26.6]
+    # Empty literature fields are still present.
+    analysis = data["figures"][0]["analysis"]
+    assert "fwhm" in analysis and analysis["fwhm"] is None
+    assert analysis["lattice_parameters"] == []
+    assert analysis["profile_function"] is None
+    assert analysis["trends"] == []
+    curve = analysis["curves"][0]
+    assert curve["fwhm"] is None
+    assert curve["lattice_parameters"] == []
+    assert curve["profile_function"] is None
     assert not fig1.exists()
-    assert fig3.exists()
+    assert not figures.exists()
+    assert (paper / "non_xrd_figures" / "fig_1.png").is_file()
+    assert (paper / "xrd_figures" / "fig_3.png").is_file()
+    assert "xrd_figures" in data["figures"][0]["figure_path"]
 
 
 @pytest.mark.skipif(

@@ -1,0 +1,143 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "A (n-H)",
+      "peak_positions": [
+        12.7,
+        15.2,
+        17.8,
+        20.2,
+        21.6,
+        23.2,
+        25.2,
+        27.6,
+        29.0,
+        31.9,
+        34.2,
+        36.6,
+        39.5,
+        42.0,
+        45.5,
+        48.2,
+        51.0,
+        53.5,
+        56.0,
+        58.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "B (EA)",
+      "peak_positions": [
+        12.7,
+        15.2,
+        17.8,
+        20.2,
+        21.6,
+        23.2,
+        25.2,
+        27.6,
+        29.0,
+        31.9,
+        34.2,
+        36.6,
+        39.5,
+        42.0,
+        45.5,
+        48.2,
+        51.0,
+        53.5,
+        56.0,
+        58.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "C (acetone)",
+      "peak_positions": [
+        12.7,
+        15.2,
+        17.8,
+        20.2,
+        21.6,
+        23.2,
+        25.2,
+        27.6,
+        29.0,
+        31.9,
+        34.2,
+        36.6,
+        39.5,
+        42.0,
+        45.5,
+        48.2,
+        51.0,
+        53.5,
+        56.0,
+        58.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "D (ethanol)",
+      "peak_positions": [
+        12.7,
+        15.2,
+        17.8,
+        20.2,
+        21.6,
+        23.2,
+        25.2,
+        27.6,
+        29.0,
+        31.9,
+        34.2,
+        36.6,
+        39.5,
+        42.0,
+        45.5,
+        48.2,
+        51.0,
+        53.5,
+        56.0,
+        58.2
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "All samples show a peak at 31.9\u00b0",
+    "Peak shapes and intensities are similar across samples"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 60
+}

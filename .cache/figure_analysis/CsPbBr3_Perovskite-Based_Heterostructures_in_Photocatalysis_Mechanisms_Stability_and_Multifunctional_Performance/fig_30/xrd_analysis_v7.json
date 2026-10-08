@@ -1,0 +1,91 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "Pure SiO2",
+      "peak_positions": [
+        22.0,
+        36.5,
+        45.8
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "H-CPB (1)",
+      "peak_positions": [
+        15.2,
+        21.5,
+        22.0,
+        28.6,
+        30.0,
+        31.0,
+        34.2,
+        37.7,
+        43.0,
+        45.8,
+        51.2
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "H-CPB (2)",
+      "peak_positions": [
+        15.2,
+        21.5,
+        22.0,
+        28.6,
+        30.0,
+        31.0,
+        34.2,
+        37.7,
+        43.0,
+        45.8,
+        51.2
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "H-CPB (3)",
+      "peak_positions": [
+        15.2,
+        21.5,
+        22.0,
+        28.6,
+        30.0,
+        31.0,
+        34.2,
+        37.7,
+        43.0,
+        45.8,
+        51.2
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "H-CPB samples show additional peaks compared to pure SiO2",
+    "Peak intensity increases from H-CPB (1) to H-CPB (3)"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 60
+}

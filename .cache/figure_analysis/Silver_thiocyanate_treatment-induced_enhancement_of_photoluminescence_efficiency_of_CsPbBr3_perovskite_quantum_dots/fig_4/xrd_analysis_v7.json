@@ -1,0 +1,85 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 QDs",
+  "curves": [
+    {
+      "condition": "Pristine",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": 1.12,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "AgSCN-5",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": 1.12,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "AgSCN-10",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": 1.09,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "AgSCN-15",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.8,
+        34.7
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": 1.09,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "AgSCN-20",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.8,
+        34.7
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": 1.12,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "FWHM of (200) peak decreases with increasing AgSCN content up to 15 mg/ml, then increases at 20 mg/ml",
+    "(200) peak position shifts slightly with AgSCN content"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 40
+}

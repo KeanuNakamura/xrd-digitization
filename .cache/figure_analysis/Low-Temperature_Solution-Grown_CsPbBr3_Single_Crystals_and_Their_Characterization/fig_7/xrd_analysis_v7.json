@@ -1,0 +1,65 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "luminescent precipitate",
+      "peak_positions": [
+        15.1,
+        16.7,
+        19.0,
+        20.2,
+        21.4,
+        22.3,
+        23.1,
+        25.2,
+        27.2,
+        28.3,
+        29.2,
+        30.0,
+        31.0
+      ],
+      "phases": [
+        "Cs4PbBr6"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "pulverized crystal",
+      "peak_positions": [
+        15.1,
+        16.7,
+        19.0,
+        20.2,
+        21.4,
+        22.3,
+        23.1,
+        25.2,
+        27.2,
+        28.3,
+        29.2,
+        30.0,
+        31.0
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": 0.2,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Cs4PbBr6 peaks dominate in luminescent precipitate",
+    "CsPbBr3 peaks present as minor features in luminescent precipitate"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 12,
+  "x_max": 32
+}

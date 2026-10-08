@@ -1,0 +1,67 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBrxI3-x nanocrystal thin films",
+  "curves": [
+    {
+      "condition": "Original",
+      "peak_positions": [
+        15.2,
+        21.5,
+        30.5
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "MeOAc",
+      "peak_positions": [
+        15.6,
+        22.0,
+        31.2
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Acetone",
+      "peak_positions": [
+        16.0,
+        22.5,
+        31.8
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "Butanol",
+      "peak_positions": [
+        16.4,
+        23.0,
+        32.4
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Diffraction peaks shift to higher 2\u03b8 with more polar antisolvent",
+    "Peak positions indicate reduced lattice parameter after washing"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 40
+}

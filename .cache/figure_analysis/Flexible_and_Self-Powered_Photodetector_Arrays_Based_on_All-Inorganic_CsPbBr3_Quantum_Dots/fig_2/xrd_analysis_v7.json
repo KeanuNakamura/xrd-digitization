@@ -1,0 +1,70 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "Pristine",
+      "peak_positions": [
+        21.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0.025 CsBr/KBr",
+      "peak_positions": [
+        21.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0.075 CsBr/KBr",
+      "peak_positions": [
+        21.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0.2 CsBr/KBr",
+      "peak_positions": [
+        21.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0.3 CsBr/KBr",
+      "peak_positions": [
+        21.5
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "peak position shifts slightly to higher 2\u03b8 with increasing CsBr/KBr",
+    "peak intensity increases with CsBr/KBr treatment"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 19,
+  "x_max": 23.5
+}

@@ -98,7 +98,6 @@ def load_analysis_if_valid(path: Path) -> FigureAnalysisResult | None:
             curve.pop("crystallite_sizes", None)
             curve.pop("crystallite_sizes_nm", None)
             curve.pop("crystallite_size_nm", None)
-            curve.pop("fwhm", None)
             curve.pop("relative_intensity", None)
             if "peak_positions" not in curve and "peaks" in curve:
                 positions = []
@@ -134,7 +133,27 @@ def format_summary(result: FigureAnalysisResult) -> str:
         )
         if curve.peak_width:
             lines.append(f"  Peak width: {curve.peak_width}")
+        if curve.fwhm is not None:
+            lines.append(f"  FWHM (°): {curve.fwhm}")
+        if curve.profile_function:
+            lines.append(f"  Profile function: {curve.profile_function}")
+        for lp in curve.lattice_parameters:
+            lines.append(
+                f"  Lattice ({lp.phase or 'n/a'}): "
+                f"a={lp.a_A} b={lp.b_A} c={lp.c_A} "
+                f"α={lp.alpha_deg} β={lp.beta_deg} γ={lp.gamma_deg} "
+                f"V={lp.volume_A3} sg={lp.space_group}"
+            )
         lines.append("")
+    if result.fwhm is not None:
+        lines.append(f"Figure FWHM (°): {result.fwhm}")
+    if result.profile_function:
+        lines.append(f"Figure profile function: {result.profile_function}")
+    for lp in result.lattice_parameters:
+        lines.append(
+            f"Figure lattice ({lp.phase or 'n/a'}): "
+            f"a={lp.a_A} b={lp.b_A} c={lp.c_A}"
+        )
     if result.trends:
         lines.append("Trends:")
         for trend in result.trends:

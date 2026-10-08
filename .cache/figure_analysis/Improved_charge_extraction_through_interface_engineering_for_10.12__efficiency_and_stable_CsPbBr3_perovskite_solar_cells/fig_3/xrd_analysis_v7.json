@@ -1,0 +1,100 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "Pristine",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.4,
+        37.7
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0.5 AC",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.4,
+        37.7
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "1 AC",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.4,
+        37.7
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "3 AC",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.4,
+        37.7
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "5 AC",
+      "peak_positions": [
+        15.2,
+        21.6,
+        30.7,
+        34.4,
+        37.7
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "No shift in peak positions with AC concentration",
+    "No extra peaks observed for any AC concentration"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 40
+}

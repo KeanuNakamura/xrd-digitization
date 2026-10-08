@@ -1,0 +1,73 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 films",
+  "curves": [
+    {
+      "condition": "0-75",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        34.3,
+        37.7,
+        43.2
+      ],
+      "phases": [
+        "CsPbBr3",
+        "FTO"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "30-75",
+      "peak_positions": [
+        15.2,
+        21.2,
+        28.6,
+        30.6,
+        34.3,
+        37.7,
+        43.2
+      ],
+      "phases": [
+        "CsPbBr3",
+        "FTO"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "0-100",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        34.3,
+        37.7,
+        43.2
+      ],
+      "phases": [
+        "CsPbBr3",
+        "FTO"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Relative intensity of (101) and (121) peaks changes with HBr addition",
+    "Preferred orientation shifts from (101) to (121) with increased HBr"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

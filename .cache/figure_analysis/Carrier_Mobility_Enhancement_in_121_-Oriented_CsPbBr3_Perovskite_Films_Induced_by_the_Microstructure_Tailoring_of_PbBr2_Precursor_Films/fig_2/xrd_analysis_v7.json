@@ -1,0 +1,88 @@
+{
+  "is_xrd": true,
+  "sample": null,
+  "curves": [
+    {
+      "condition": "HBr-0",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        33.9,
+        37.0
+      ],
+      "phases": [
+        "CsPbBr3 (orthorhombic, Pnma)",
+        "FTO"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "HBr-10",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        33.9,
+        37.0
+      ],
+      "phases": [
+        "CsPbBr3 (orthorhombic, Pnma)",
+        "FTO"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "HBr-30",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        33.9,
+        37.0
+      ],
+      "phases": [
+        "CsPbBr3 (orthorhombic, Pnma)",
+        "FTO"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "HBr-50",
+      "peak_positions": [
+        15.2,
+        21.2,
+        30.6,
+        33.9,
+        37.0
+      ],
+      "phases": [
+        "CsPbBr3 (orthorhombic, Pnma)",
+        "FTO"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Relative intensity of (101) and (121) peaks changes with HBr amount",
+    "HBr-0 and HBr-10 show higher (101)/FTO intensity ratio, while (121)/FTO is suppressed",
+    "HBr-30 shows increased (121) peak prominence"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

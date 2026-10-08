@@ -1,0 +1,62 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3 PeQD superlattice films",
+  "curves": [
+    {
+      "condition": "OLA",
+      "peak_positions": [
+        0.05,
+        0.075
+      ],
+      "phases": [],
+      "peak_width": "broad",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "POA",
+      "peak_positions": [
+        0.05,
+        0.1
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "BHOA",
+      "peak_positions": [
+        0.05,
+        0.1
+      ],
+      "phases": [],
+      "peak_width": "moderate",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "BHOA+F",
+      "peak_positions": [
+        0.05
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Main peak at q=0.05 \u00c5\u207b\u00b9 is sharpest for BHOA+F",
+    "OLA sample shows a side peak at q=0.075 \u00c5\u207b\u00b9 and broader peaks, indicating degradation and smaller particle size"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 0.0,
+  "x_max": 0.2
+}

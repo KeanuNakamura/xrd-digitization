@@ -18,6 +18,7 @@ IMPORTANT RULES
 other non-XRD figure:
      - set "is_xrd" to false
      - leave sample/curves/trends empty
+     - leave fwhm / lattice_parameters / profile_function empty/null
      - do NOT attempt to infer or generate XRD information.
 
 2. Never invent information.
@@ -26,6 +27,8 @@ other non-XRD figure:
 is known.
    - Do not infer common peaks for materials such as anatase, rutile, quartz, \
 kaolinite, etc.
+   - Do not invent FWHM, lattice parameters, or profile functions from typical \
+values for a material.
    - Every reported value must be supported by either:
        a. the visible figure, or
        b. the supplied caption/paper context.
@@ -65,16 +68,30 @@ accompanying paper text.
 shown in the figure/context.
    - Do not treat reference/database stick patterns as experimental curves.
 
-7. Peak width should be qualitative only:
-   - "broad", "moderate", "narrow", or null if it cannot reasonably be determined.
-   Do not calculate FWHM unless explicitly provided (leave peak_width only).
+7. Peak width (qualitative) vs FWHM (numerical):
+   - peak_width: "broad" | "moderate" | "narrow" | null from visual inspection.
+   - fwhm: numerical full width at half maximum in degrees 2θ ONLY when \
+explicitly stated in the figure, caption, or associated text. Leave null \
+otherwise. Do NOT estimate FWHM from the image unless a value is printed.
 
-8. Trends should contain only obvious comparisons supported by the figure.
+8. Lattice parameters and profile function (literature-only):
+   - Include lattice parameters (a, b, c in Å; angles in degrees; volume; \
+space group; associated phase) ONLY when explicitly reported in the caption \
+or associated paper text.
+   - Include profile_function (e.g. "Pseudo-Voigt", "Gaussian", "Lorentzian", \
+"Pearson VII") ONLY when the paper states which peak-profile / fitting \
+function was used.
+   - Prefer curve-level fields when values are tied to a specific condition; \
+use figure-level fields when they apply to the whole figure/sample.
+   - Most figures will leave these null/empty — that is expected and preferred \
+over guessing.
+
+9. Trends should contain only obvious comparisons supported by the figure.
    Examples: peaks become sharper; a new peak appears; relative peak intensity \
 increases; one phase becomes more prominent.
    Do not speculate about mechanisms.
 
-9. Keep the output compact.
+10. Keep the output compact.
    Do not include figure summaries, confidence scores, source image paths, \
 colors, detailed interpretations, crystallite size, Miller indices / hkl, \
 or peak_assignments.
@@ -82,18 +99,20 @@ or peak_assignments.
 OUTPUT SHAPE
 - is_xrd: true | false
 - sample: sample name if supported, else null
-- curves: [{condition, peak_positions[], phases[], peak_width}]
+- curves: [{condition, peak_positions[], phases[], peak_width, fwhm, \
+lattice_parameters[], profile_function}]
 - trends: [short directly supported trend]
+- fwhm / lattice_parameters / profile_function at figure level when shared
 - x_min / x_max: visible 2θ axis bounds
 
-If is_xrd is false, sample=null, curves=[], trends=[].
+If is_xrd is false, sample=null, curves=[], trends=[], and literature fields empty.
 
 FINAL CHECK BEFORE RETURNING
 - Is this actually an XRD figure?
 - Did every sample/condition come from the figure or supplied context?
 - Did I estimate visible peak positions rather than recalling standard material peaks?
+- Did I invent FWHM, lattice parameters, or a profile function?
 - Did I accidentally analyze a photograph, map, or table?
-- Did I invent temperatures, compositions, phases, or crystallite sizes?
 - Are the peak positions visually plausible for this specific figure?
 - Is the output as simple as possible?
 """
@@ -113,11 +132,14 @@ def build_user_prompt(
         "If true, extract only directly supported XRD information:",
         "- sample (or null)",
         "- curves with condition, peak_positions, phases, peak_width",
+        "- fwhm (° 2θ), lattice_parameters, profile_function ONLY if explicitly "
+        "stated in the figure/caption/text (otherwise null/empty)",
         "- trends (short, non-redundant)",
         "- x_min / x_max for the visible axis",
         "",
         "Estimate visible peak 2θ positions from the axis; do not invent "
-        "standard material peaks. Do not invent phases.",
+        "standard material peaks, phases, FWHM, lattice constants, or "
+        "profile functions.",
     ]
 
     if figure_number is not None:

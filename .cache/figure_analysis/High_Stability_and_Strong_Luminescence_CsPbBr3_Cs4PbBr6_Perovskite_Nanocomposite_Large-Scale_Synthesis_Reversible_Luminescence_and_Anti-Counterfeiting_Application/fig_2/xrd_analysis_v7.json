@@ -1,0 +1,139 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3/Cs4PbBr6 nanocomposite",
+  "curves": [
+    {
+      "condition": "1:1 CsBr/PbBr2",
+      "peak_positions": [
+        15.9,
+        17.2,
+        20.1,
+        22.2,
+        23.7,
+        25.2,
+        28.5,
+        29.7,
+        31.1,
+        32.7,
+        37.7,
+        39.5,
+        42.2,
+        45.2,
+        47.2
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "2:1 CsBr/PbBr2",
+      "peak_positions": [
+        15.9,
+        17.2,
+        20.1,
+        22.2,
+        23.7,
+        25.2,
+        28.5,
+        29.7,
+        31.1,
+        32.7,
+        37.7,
+        39.5,
+        42.2,
+        45.2,
+        47.2
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "4:1 CsBr/PbBr2",
+      "peak_positions": [
+        15.9,
+        17.2,
+        20.1,
+        22.2,
+        23.7,
+        25.2,
+        28.5,
+        29.7,
+        31.1,
+        32.7,
+        37.7,
+        39.5,
+        42.2,
+        45.2,
+        47.2
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "6:1 CsBr/PbBr2",
+      "peak_positions": [
+        15.9,
+        17.2,
+        20.1,
+        22.2,
+        23.7,
+        25.2,
+        28.5,
+        29.7,
+        31.1,
+        32.7,
+        37.7,
+        39.5,
+        42.2,
+        45.2,
+        47.2
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    },
+    {
+      "condition": "6.5:1 CsBr/PbBr2",
+      "peak_positions": [
+        15.9,
+        17.2,
+        20.1,
+        22.2,
+        23.7,
+        25.2,
+        28.5,
+        29.7,
+        31.1,
+        32.7,
+        37.7,
+        39.5,
+        42.2,
+        45.2,
+        47.2
+      ],
+      "phases": [],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [],
+      "profile_function": null
+    }
+  ],
+  "trends": [
+    "Peak intensities change with increasing CsBr/PbBr2 ratio"
+  ],
+  "fwhm": null,
+  "lattice_parameters": [],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 50
+}

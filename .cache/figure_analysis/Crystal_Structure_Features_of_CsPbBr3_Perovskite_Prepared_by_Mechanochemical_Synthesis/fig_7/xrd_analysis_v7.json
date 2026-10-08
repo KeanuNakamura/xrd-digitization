@@ -1,0 +1,64 @@
+{
+  "is_xrd": true,
+  "sample": "CsPbBr3",
+  "curves": [
+    {
+      "condition": "4 K",
+      "peak_positions": [
+        13.2,
+        18.7,
+        22.7,
+        27.2,
+        31.2,
+        36.0,
+        39.7,
+        44.2,
+        47.7,
+        52.2,
+        56.2,
+        60.7,
+        65.2,
+        69.7,
+        74.2,
+        78.7
+      ],
+      "phases": [
+        "CsPbBr3"
+      ],
+      "peak_width": "narrow",
+      "fwhm": null,
+      "lattice_parameters": [
+        {
+          "phase": "CsPbBr3",
+          "a_A": 7.9734,
+          "b_A": 8.3065,
+          "c_A": 11.612,
+          "alpha_deg": null,
+          "beta_deg": null,
+          "gamma_deg": null,
+          "volume_A3": 769.1,
+          "space_group": "Pbnm"
+        }
+      ],
+      "profile_function": null
+    }
+  ],
+  "trends": [],
+  "fwhm": null,
+  "lattice_parameters": [
+    {
+      "phase": "CsPbBr3",
+      "a_A": 7.9734,
+      "b_A": 8.3065,
+      "c_A": 11.612,
+      "alpha_deg": null,
+      "beta_deg": null,
+      "gamma_deg": null,
+      "volume_A3": 769.1,
+      "space_group": "Pbnm"
+    }
+  ],
+  "profile_function": null,
+  "x_min": 10,
+  "x_max": 80
+}
