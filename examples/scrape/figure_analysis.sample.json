@@ -1,0 +1,26 @@
+[
+  {
+    "figure": 1,
+    "figure_path": "figures/fig_1.png",
+    "caption": "Figure 1 . Figure 1. XRD spectra as a function of and ; A) \u00bc 10 nm, B) \u00bc 1.5.",
+    "text": "Figure 1 . Figure 1. XRD spectra as a function of and ; A) \u00bc 10 nm, B) \u00bc 1.5. r \u00c3 hkl is the magnitude of the vector defining the node of indices (hkl) of the reciprocal lattice and s is the scattering vector modulus. 0 is the Bragg angle corresponding to the reflection plane (hkl). In figure 1 the diffraction intensity profiles calculated from equation ( 7 ) with different values of and are shown\u2026",
+    "analysis": {
+      "is_xrd": true,
+      "sample": "nanosized powders (demo placeholder \u2014 real runs fill this via OpenAI vision)",
+      "curves": [],
+      "trends": []
+    }
+  },
+  {
+    "figure": 5,
+    "figure_path": "figures/fig_5.png",
+    "caption": "Figure 5 . Figure 5. XRD line profile fit for A) SSEC78, B) P25, C) UV100, and D) TiO2_5 nm.",
+    "text": "Figure 5 . Figure 5. XRD line profile fit for A) SSEC78, B) P25, C) UV100, and D) TiO2_5 nm. The Pseudo-Voigt function including a linear term to correct for the background of the 100% anatase peak, $25.4 (2), is used to determine the FWHM and the peak center of the four samples. These values will be used to calculate the average crystallite size from Scherrer's formula. The analytical expressions\u2026",
+    "analysis": {
+      "is_xrd": true,
+      "sample": "nanosized powders (demo placeholder \u2014 real runs fill this via OpenAI vision)",
+      "curves": [],
+      "trends": []
+    }
+  }
+]

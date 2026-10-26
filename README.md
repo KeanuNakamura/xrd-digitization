@@ -1,6 +1,12 @@
-# XRD Digitization
+# XRD PDF Scraping
 
-Autonomously digitizes XRD figure images into calibrated CSV curves and preview PNGs, using axis OCR
+Extract figures, captions, and surrounding context from scientific PDFs, then enrich each crop with structured vision analysis. The default path stops at scrape + metadata — curve digitization is an optional bonus.
+
+```
+PDF → GROBID parse → figure crops + captions + context
+    → OpenAI vision analysis → <stem>.figure_analysis.json
+    → (optional) --digitize → calibrated CSV / preview PNGs
+```
 
 ## Setup
 
@@ -14,25 +20,102 @@ python -m pip install -r requirements.txt
 
 If you already cloned without submodules: `git submodule update --init`.
 
-Install [Tesseract](https://github.com/tesseract-ocr/tesseract) for axis tick OCR (`brew install tesseract` on macOS).
+Requires a running [GROBID](https://grobid.readthedocs.io/) server and `OPENAI_API_KEY` for figure analysis.
 
 ## Usage
 
-### PDF → scrape → digitize (end-to-end)
-
-Requires a running [GROBID](https://grobid.readthedocs.io/) server, `OPENAI_API_KEY` (triage), and `CLIPDROP_API_KEY` only when triage decides in-plot text must be removed.
+### PDF → scrape → analysis (default)
 
 ```bash
 export OPENAI_API_KEY=...
-export CLIPDROP_API_KEY=...   # optional until a figure needs ClipDrop
 
 python scripts/scrape_and_digitize.py paper.pdf output/
 python scripts/scrape_and_digitize.py pdf_files/ output/
 ```
 
-For each PDF, writes `output/<stem>/` with `figures/<figure_id>/` (original PNG, triage JSON, and digitized CSV/PNG when digitizable), `extra/` (original PDF plus GROBID TEI/records), and `digitization_manifest.json`. OpenAI skips multi-curve figures; single-curve figures are digitized via `scripts/digitize_figure.py` (with ClipDrop when needed).
+For each PDF, writes `output/<stem>/`:
 
-### Digitize one figure PNG
+| Path | Contents |
+|------|----------|
+| `figures/<id>.png` | Cropped figure images |
+| `<stem>.figure_analysis.json` | Per-figure path, caption, paper context, and `analysis` metadata |
+| `extra/` | Original PDF plus GROBID TEI / parse records |
+
+Digitization is **off** unless you pass `--digitize`.
+
+### Output shape
+
+Each entry in `<stem>.figure_analysis.json` looks like:
+
+```json
+{
+  "figure": 1,
+  "figure_path": "figures/fig_1.png",
+  "caption": "Figure 1. XRD spectra as a function of …",
+  "text": "…surrounding paper context…",
+  "analysis": {
+    "is_xrd": true,
+    "sample": "…",
+    "curves": [{ "condition": "…", "peak_positions": [], "phases": [] }],
+    "trends": ["…"]
+  }
+}
+```
+
+Paper-level synthesis (when available) is stored alongside as `paper_analysis`.
+
+See [`examples/scrape/`](examples/scrape/) for sample XRD crops and a portable JSON sketch, and [`examples/DEMO.md`](examples/DEMO.md) for a walkthrough.
+
+### Useful flags
+
+| Flag | Effect |
+|------|--------|
+| `--grobid-url URL` | GROBID base URL (default `http://localhost:8070`) |
+| `--figure-dpi N` | Render DPI for crops (default `300`) |
+| `--model NAME` | OpenAI vision model override |
+| `--overwrite` | Replace an existing `output/<stem>/` |
+| `--benchmark` | Crop all figures, classify XRD vs not, copy into global `xrd/` / `not_xrd/` (no digitize) |
+| `--digitize` | After scrape+analysis, triage and digitize XRD curves (bonus) |
+| `--all-figures` | With `--digitize`: digitize every crop, not only XRD-classified ones |
+
+### Analyze already-cropped figures
+
+```bash
+export OPENAI_API_KEY=...
+python scripts/analyze_figures.py path/to/figure_pngs/ output/figure_metadata/
+```
+
+## Demo
+
+The nanosized-powders paper mixes TEM, SAXS, and XRD. After scrape + analysis, the XRD-related crops (e.g. figures 1 and 5) land under `figures/` with captions and context in `figure_analysis.json`:
+
+<table>
+  <tr>
+    <td align="center"><strong>Figure 1</strong><br/><img src="examples/scrape/fig_1.png" alt="Scraped XRD figure 1" width="100%"/></td>
+    <td align="center"><strong>Figure 5</strong><br/><img src="examples/scrape/fig_5.png" alt="Scraped XRD figure 5" width="100%"/></td>
+  </tr>
+</table>
+
+Full walkthrough: [`examples/DEMO.md`](examples/DEMO.md).
+
+---
+
+## Bonus: curve digitization
+
+Optional path that turns a single-curve (or stacked shared-x) XRD PNG into calibrated `(x, y)` CSV plus a preview PNG. Needs [Tesseract](https://github.com/tesseract-ocr/tesseract) for axis OCR (`brew install tesseract` on macOS). `CLIPDROP_API_KEY` is only required when in-plot text must be removed.
+
+### End-to-end with scrape
+
+```bash
+export OPENAI_API_KEY=...
+export CLIPDROP_API_KEY=...   # only if a figure needs ClipDrop
+
+python scripts/scrape_and_digitize.py paper.pdf output/ --digitize
+```
+
+With `--digitize`, non-XRD crops move to `non_xrd_figures/`; XRD crops are triaged and digitized under `xrd_figures/` (use `--all-figures` to skip the XRD filter).
+
+### Digitize one PNG
 
 ```bash
 python scripts/digitize_figure.py examples/figure_3.png output/
@@ -40,74 +123,11 @@ python scripts/digitize_figure.py examples/figure_3.png output/
 # → output/figure_3/figure_3_digitized.png
 ```
 
-By default this digitizes the original image and does **not** call ClipDrop (no API credits). To remove in-plot text with ClipDrop before digitizing:
+Add `--clipdrop` to remove in-plot text before tracing (uses ClipDrop credits).
 
-```bash
-export CLIPDROP_API_KEY=...
-python scripts/digitize_figure.py examples/figure_3.png output/ --clipdrop
-```
+### Digitization examples
 
-Digitize a folder of figure PNGs:
-
-```bash
-python scripts/digitize_figure.py examples/ output/
-```
-
-### Scientific figure metadata extraction (no digitization)
-
-For already-cropped figure images, extract structured scientific metadata
-(observed / estimated / interpretation) via the OpenAI vision API. This does
-**not** digitize curves or produce XY spectra.
-
-```bash
-export OPENAI_API_KEY=...
-# optional: export OPENAI_MODEL=gpt-4.1
-
-python scripts/analyze_figures.py data/analysis/ output/figure_metadata/
-```
-
-Per figure, writes `output/figure_metadata/<stem>/` with a copy of the image,
-`<stem>_analysis.json`, and `<stem>_summary.txt`. Also appends
-`all_figure_metadata.jsonl` and records failures in `failed_images.jsonl`.
-
-Resume is default (skips figures with a valid analysis JSON); use `--overwrite`
-to re-run. Concurrency: `--workers N`.
-
-Conceptual pipeline:
-
-```
-PDF → existing figure cropping → cropped PNG → scientific figure analysis → JSON
-```
-
-Curve digitization (`digitize_figure.py`) remains a separate optional path.
-
-## Output
-
-`scripts/digitize_figure.py` writes `output/<figure_id>/` containing a CSV of `(x, y)` points and a `_digitized.png` preview (plus the source PNG; with `--clipdrop`, also `<figure_id>_clean.png`). Multi-curve stacked plots are split into horizontal bands with one CSV/preview per band.
-
-## Spectral Information Divergence (SID)
-
-SID measures how different a digitized spectrum is from a ground-truth spectrum. Both intensity vectors are treated as probability distributions $p$ and $q$ (normalized to sum to 1). The directional divergences and symmetric SID are:
-
-$$
-D(p \parallel q) = \sum_i p_i \log\frac{p_i}{q_i}, \qquad
-D(q \parallel p) = \sum_i q_i \log\frac{q_i}{p_i}, \qquad
-\mathrm{SID} = D(p \parallel q) + D(q \parallel p)
-$$
-
-Lower is better; $0$ means identical distributions. Overlays report **Raw SID** (reference only), **Modified SID** (shared $2\theta$ range + Gaussian smoothing), peak recall/precision/F1, and a **Final XRD Score**:
-
-$$
-\mathrm{peak\_f1} = \frac{2\cdot\mathrm{precision}\cdot\mathrm{recall}}{\mathrm{precision}+\mathrm{recall}}, \qquad
-\mathrm{peak\_penalty} = 0.5\,(1-\mathrm{peak\_f1}), \qquad
-\mathrm{final\_xrd\_score} = \mathrm{modified\_sid} + \mathrm{peak\_penalty}
-$$
-
-Scores are written to each figure’s `<figure_id>_scores.json` and aggregated in `sid_summary.json` under the output directory (see `compute_sid.py`).
-
-## Examples
-
-CNRS figure 1034 — original plot, reconstructed curve, and overlay against ground-truth JSON (SID ≈ 1.02).
+CNRS figure 1034 — original, reconstructed curve, overlay (SID ≈ 1.02):
 
 <table>
   <tr>
@@ -122,7 +142,7 @@ CNRS figure 1034 — original plot, reconstructed curve, and overlay against gro
   </tr>
 </table>
 
-CNRS figure 1051 — original plot, reconstructed curve, and overlay against ground-truth JSON (SID ≈ 0.68).
+CNRS figure 1051 — original, reconstructed curve, overlay (SID ≈ 0.68):
 
 <table>
   <tr>
@@ -137,11 +157,9 @@ CNRS figure 1051 — original plot, reconstructed curve, and overlay against gro
   </tr>
 </table>
 
-### Figures with in-plot text
+#### Figures with in-plot text
 
-Many published XRD patterns label peaks with Miller indices or annotations that sit on the curve. With `--clipdrop`, the pipeline removes that in-plot text, then pastes the cleaned interior back onto the original so axis ticks and labels stay intact for OCR calibration.
-
-Example: HA diffraction pattern at 900°C.
+With `--clipdrop`, in-plot labels are cleared, then the cleaned interior is pasted back onto the original axes so tick OCR still works:
 
 <table>
   <tr>
@@ -152,15 +170,14 @@ Example: HA diffraction pattern at 900°C.
   </tr>
   <tr>
     <td align="center"><img src="examples/figure_8_original.png" alt="Original figure 8 with Miller index labels on peaks" width="100%"/></td>
-    <td align="center"><img src="examples/figure_8_clean.png" alt="ClipDrop-cleaned plot interior with axis labels damaged" width="100%"/></td>
-    <td align="center"><img src="examples/figure_8_axes_restored.png" alt="Cleaned interior composited onto original axes" width="100%"/></td>
+    <td align="center"><img src="examples/figure_8_clean.png" alt="ClipDrop-cleaned plot interior" width="100%"/></td>
+    <td align="center"><img src="examples/figure_8_axes_restored.png" alt="Cleaned interior on original axes" width="100%"/></td>
     <td align="center"><img src="examples/figure_8_digitized.png" alt="Digitized calibrated XRD curve for figure 8" width="100%"/></td>
   </tr>
 </table>
 
-1. **Original** — peak labels such as `(211)` and `(300)` overlap the curve.
-2. **Clean** — ClipDrop clears in-plot text from the plot interior (axis margins can be damaged if cleaned alone).
-3. **Axes restored** — the cleaned interior is pasted back into the original so tick labels and axis titles remain byte-identical for calibration.
-4. **Digitized** — PlotDigitizer traces the cleaned curve into calibrated CSV + preview.
-
 > Monshi, A., Foroughi, M. R., & Monshi, M. R. (2012). Modified Scherrer Equation to Estimate More Accurately Nano-Crystallite Size Using XRD. *World Journal of Nano Science and Engineering*, *2*, 154–160. https://doi.org/10.4236/wjnse.2012.23020
+
+### Spectral Information Divergence (SID)
+
+SID scores digitized spectra against ground truth (`compute_sid.py`). Lower is better; overlays report raw/modified SID, peak F1, and a final XRD score written to `<figure_id>_scores.json` / `sid_summary.json`.

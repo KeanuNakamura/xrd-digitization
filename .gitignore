@@ -3,16 +3,23 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Run outputs / scraped data (keep local; do not commit)
+.cache/
 pipeline_output/
-AtomisticSkills/
+output/
+outputs/
 data/
 sample_figures/
-graphify-out/
 grobid_output/
 pdf_files/
-demo/
-output/
 *_digitized/
 
+# Local demo PDFs and full run trees (tracked demos live under examples/)
+demo/
+
+# Tooling / local-only
+AtomisticSkills/
+graphify-out/
 .claude/
 .cursor/
