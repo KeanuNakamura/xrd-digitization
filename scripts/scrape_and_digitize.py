@@ -502,7 +502,9 @@ def enrich_figure_analysis_json(
     JSON ``figures`` list; non-XRD crops are moved to ``non_xrd_figures/`` and
     omitted from the JSON. Remaining XRD crops stay under ``figures/`` until
     renamed to ``xrd_figures/``. ``figures_total`` / ``xrd_figures`` counts are
-    written at the document root.
+    written at the document root. After all figure analyses complete, one
+    OpenAI call appends a top-level ``paper_analysis`` synthesis (failures
+    leave the figure-level JSON intact).
     """
     from figure_analysis.analyzer import analysis_to_dataset_dict
 
@@ -637,6 +639,26 @@ def enrich_figure_analysis_json(
         "xrd_figures": xrd_figures,
         "figures": kept_figures,
     }
+
+    # One paper-level OpenAI synthesis after all figure analyses are done.
+    # On failure, keep the figure-level JSON unchanged (no paper_analysis field).
+    try:
+        from figure_analysis.analyzer import analyze_paper
+
+        if vision_client is None:
+            vision_client = _vision_analysis_client(model=model)
+        paper_result = analyze_paper(
+            out_payload,
+            client=vision_client,
+            cache_key=f"figure_analysis/{paper_cache_prefix}/paper",
+        )
+        out_payload["paper_analysis"] = paper_result.model_dump(mode="json")
+        LOGGER.info("Added paper_analysis to %s", json_path.name)
+    except Exception:
+        LOGGER.exception(
+            "Paper-level analysis failed for %s; preserving figure analyses",
+            paper_dir.name,
+        )
 
     json_path.write_text(
         json.dumps(out_payload, indent=2, ensure_ascii=False),
@@ -1131,9 +1153,15 @@ def process_figure(
     }
     resolved_paper_dir = Path(paper_dir) if paper_dir is not None else figures_dir.parent
 
+    caption, _body_text = load_figure_text_context(
+        resolved_paper_dir, figure_id=figure_id
+    )
     try:
         xrd_cls = classify_xrd_figure_image(
-            staged_png, model=model, http_post=http_post
+            staged_png,
+            caption=caption,
+            model=model,
+            http_post=http_post,
         )
     except Exception as exc:
         LOGGER.exception("XRD classification failed for %s", staged_png.name)
@@ -1142,6 +1170,8 @@ def process_figure(
         return entry
 
     entry["xrd_classification"] = xrd_cls.to_dict()
+    if caption:
+        entry["figure_caption"] = caption
 
     if xrd_only and not xrd_cls.is_xrd:
         LOGGER.info(
@@ -1269,7 +1299,7 @@ def process_pdf_benchmark(
     Scrape one PDF, extract all figure crops, classify with OpenAI, skip digitize.
 
     Copies each crop into the global ``xrd/`` or ``not_xrd/`` folder based on
-    OpenAI vision classification (not caption keywords).
+    OpenAI vision classification (image + GROBID caption when available).
     """
     paper_dir = paper_output_dir(output_root, pdf_path)
     if paper_dir.exists() and overwrite:
@@ -1320,7 +1350,10 @@ def process_pdf_benchmark(
 
             try:
                 xrd_cls = classify_xrd_figure_image(
-                    image_path, model=model, http_post=http_post
+                    image_path,
+                    caption=figure.caption or None,
+                    model=model,
+                    http_post=http_post,
                 )
             except Exception as exc:
                 LOGGER.exception(

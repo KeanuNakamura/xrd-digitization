@@ -13,11 +13,21 @@ for path in (ROOT, AUTO):
         sys.path.insert(0, s)
 
 from figure_analysis.analyzer import analysis_to_dataset_dict, post_validate
-from figure_analysis.prompts import SYSTEM_PROMPT, build_user_prompt
+from figure_analysis.prompts import (
+    PAPER_SYSTEM_PROMPT,
+    SYSTEM_PROMPT,
+    build_paper_user_prompt,
+    build_user_prompt,
+)
 from figure_analysis.schemas import (
+    EvidenceCitation,
     FigureAnalysisPayload,
     FigureAnalysisResult,
+    KeyFinding,
     LatticeParameters,
+    Limitation,
+    PaperAnalysis,
+    ScientificInterpretation,
     XrdCurve,
 )
 from autodigitizer.vision.openai_client import to_openai_strict_schema
@@ -182,3 +192,88 @@ def test_prompt_mentions_literature_fields():
     assert "lattice" in SYSTEM_PROMPT.lower()
     assert "profile_function" in SYSTEM_PROMPT or "profile function" in SYSTEM_PROMPT.lower()
     assert "Never invent" in SYSTEM_PROMPT
+
+
+def test_paper_analysis_schema_is_strict():
+    schema = to_openai_strict_schema(PaperAnalysis.model_json_schema())
+    _assert_strict(schema)
+    props = schema.get("properties", {})
+    assert "summary" in props
+    assert "experimental_variables" in props
+    assert "key_findings" in props
+    assert "scientific_interpretation" in props
+    assert "limitations" in props
+    defs = schema.get("$defs", {})
+    assert "KeyFinding" in defs
+    assert "finding" in defs["KeyFinding"]["properties"]
+    assert "figure_ids" in defs["KeyFinding"]["properties"]
+    assert "EvidenceCitation" in defs
+    assert "ScientificInterpretation" in defs
+    assert "Limitation" in defs
+    interp_props = defs["ScientificInterpretation"]["properties"]
+    assert "claim" in interp_props
+    assert "reasoning_type" in interp_props
+    assert "reasoning" in interp_props
+    assert "citations" in interp_props
+    cite_props = defs["EvidenceCitation"]["properties"]
+    assert set(cite_props) >= {"figure_id", "source", "evidence"}
+
+
+def test_paper_analysis_roundtrip():
+    result = PaperAnalysis(
+        summary="XRD shows phase-pure anatase.",
+        experimental_variables=["annealing temperature"],
+        key_findings=[
+            KeyFinding(finding="Peaks sharpen with temperature", figure_ids=["fig_1", "fig_2"])
+        ],
+        scientific_interpretation=[
+            ScientificInterpretation(
+                claim="Higher annealing increases crystallinity.",
+                reasoning_type="ai_inferred",
+                reasoning="Peak widths narrow while 2θ positions remain similar.",
+                citations=[
+                    EvidenceCitation(
+                        figure_id="fig_2",
+                        source="analysis.trends",
+                        evidence="Peaks become sharper with increasing temperature",
+                    ),
+                    EvidenceCitation(
+                        figure_id="fig_2",
+                        source="analysis.curves[0].peak_positions",
+                        evidence="[25.3, 37.8]",
+                    ),
+                ],
+            )
+        ],
+        limitations=[
+            Limitation(
+                claim="No absolute crystallite sizes reported.",
+                citations=[
+                    EvidenceCitation(
+                        figure_id="fig_2",
+                        source="analysis.curves[0].fwhm",
+                        evidence="fig_2.analysis.curves[0].fwhm = null",
+                    )
+                ],
+            )
+        ],
+    )
+    dumped = result.model_dump(mode="json")
+    assert dumped["key_findings"][0]["figure_ids"] == ["fig_1", "fig_2"]
+    assert dumped["scientific_interpretation"][0]["reasoning_type"] == "ai_inferred"
+    assert dumped["scientific_interpretation"][0]["citations"][0]["figure_id"] == "fig_2"
+    assert dumped["limitations"][0]["citations"][0]["source"] == "analysis.curves[0].fwhm"
+    assert PaperAnalysis.model_validate(dumped).summary == result.summary
+
+
+def test_paper_prompt_embeds_payload_and_rules():
+    payload = {"title": "Test", "figures": [{"figure_id": "fig_1"}]}
+    prompt = build_paper_user_prompt(payload)
+    assert "fig_1" in prompt
+    assert "Test" in prompt
+    assert "identical peak" in PAPER_SYSTEM_PROMPT.lower()
+    assert "figure_id" in PAPER_SYSTEM_PROMPT
+    assert "author_reported" in PAPER_SYSTEM_PROMPT
+    assert "ai_inferred" in PAPER_SYSTEM_PROMPT
+    assert "citations" in PAPER_SYSTEM_PROMPT.lower()
+    assert "Never fabricate" in prompt or "never fabricate" in PAPER_SYSTEM_PROMPT.lower()

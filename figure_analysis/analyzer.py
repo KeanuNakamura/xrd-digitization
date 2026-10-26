@@ -8,11 +8,17 @@ import time
 from pathlib import Path
 from typing import Any, Optional
 
-from figure_analysis.prompts import SYSTEM_PROMPT, build_user_prompt
+from figure_analysis.prompts import (
+    PAPER_SYSTEM_PROMPT,
+    SYSTEM_PROMPT,
+    build_paper_user_prompt,
+    build_user_prompt,
+)
 from figure_analysis.schemas import (
     FigureAnalysisPayload,
     FigureAnalysisResult,
     LatticeParameters,
+    PaperAnalysis,
     XrdCurve,
 )
 
@@ -299,3 +305,41 @@ def empty_result(*, is_xrd: bool = False) -> FigureAnalysisResult:
     if not is_xrd:
         return FigureAnalysisResult(is_xrd=False)
     return FigureAnalysisResult(is_xrd=True, curves=[XrdCurve()])
+
+
+def analyze_paper(
+    paper_payload: dict[str, Any],
+    *,
+    client=None,
+    config=None,
+    cache_key: Optional[str] = None,
+) -> PaperAnalysis:
+    """Synthesize XRD findings across all figures for one paper (text-only)."""
+    if not isinstance(paper_payload, dict):
+        raise TypeError(f"Expected dict paper payload, got {type(paper_payload)}")
+
+    if client is None:
+        client, cfg = _get_client(config)
+    else:
+        cfg = config or getattr(client, "config", None)
+
+    key = cache_key or "figure_analysis/paper"
+    prompt = build_paper_user_prompt(paper_payload)
+
+    t0 = time.time()
+    logger.info("Running paper-level XRD analysis (model=%s)", getattr(cfg, "model", None))
+    # Text-only call: reuse the existing structured client with no images.
+    result = client.analyze_structured(
+        prompt=prompt,
+        schema_model=PaperAnalysis,
+        images=[],
+        cache_key=key,
+        cache_name="paper_analysis_v2.json",
+        system=PAPER_SYSTEM_PROMPT,
+    )
+    elapsed = time.time() - t0
+    logger.debug("Paper analysis finished in %.2fs", elapsed)
+
+    if not isinstance(result, PaperAnalysis):
+        raise TypeError(f"Expected PaperAnalysis, got {type(result)}")
+    return result

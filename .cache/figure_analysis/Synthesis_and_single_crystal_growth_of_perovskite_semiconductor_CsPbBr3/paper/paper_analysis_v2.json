@@ -1,0 +1,149 @@
+{
+  "summary": "The XRD data across the figures demonstrate that the synthesis conditions significantly affect phase purity in CsPbBr3 powders, with optimal conditions (sample S9) yielding minimal secondary phases. The XRD patterns of single crystal wafers (W1\u2013W8) show highly consistent peak positions, indicating uniform crystallinity and phase across these samples. All samples exhibit narrow peaks, suggesting good crystallinity, but quantitative phase fractions and detailed crystallite size information are lacking due to missing FWHM and intensity data for most samples.",
+  "experimental_variables": [
+    "Concentration of reactant solutions (Fig. 1a)",
+    "Molar ratio of reactants (Fig. 1b)",
+    "Rinsing liquid type (Fig. 1c)",
+    "Sample type: powder (S1\u2013S13), optimal powder (S9), single crystal wafers (W1\u2013W8)"
+  ],
+  "key_findings": [
+    {
+      "finding": "Secondary phase peaks are present in most powder samples (S1\u2013S4, S6\u2013S8, S12, S13), but are minimized or absent in S5 and S9.",
+      "figure_ids": [
+        "fig_1"
+      ]
+    },
+    {
+      "finding": "The XRD pattern of optimal sample S9 closely matches both orthorhombic and cubic CsPbBr3 reference patterns.",
+      "figure_ids": [
+        "fig_2"
+      ]
+    },
+    {
+      "finding": "Single crystal wafers W1\u2013W8 exhibit highly consistent XRD peak positions (15.1\u00b0, 30.2\u00b0) and narrow peaks, indicating uniform phase and good crystallinity.",
+      "figure_ids": [
+        "fig_5"
+      ]
+    }
+  ],
+  "scientific_interpretation": [
+    {
+      "claim": "Optimal synthesis conditions (as in S9) suppress secondary phase formation, resulting in phase-pure CsPbBr3.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "S9 is identified as optimal due to the absence of secondary phase peaks, in contrast to other samples under different synthesis conditions.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.trends",
+          "evidence": "Secondary phase peaks (marked by diamonds/dotted lines) are present in S1-S4 and S6-S8, S12, S13; S5 and S9 show minimal or no secondary phases."
+        },
+        {
+          "figure_id": "fig_2",
+          "source": "caption",
+          "evidence": "Fig. 2. X-ray powder diffraction patterns of the optimal sample S9."
+        }
+      ]
+    },
+    {
+      "claim": "The XRD patterns of single crystal wafers (W1\u2013W8) are highly reproducible, suggesting uniform crystal quality and phase across all wafers.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "All wafer samples show identical peak positions and narrow peaks, indicating consistent phase and crystallinity.",
+      "citations": [
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.trends",
+          "evidence": "Peak positions and intensities are similar across W1\u2013W8"
+        },
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "[15.1, 30.2]"
+        }
+      ]
+    },
+    {
+      "claim": "The main phase in both optimal powder (S9) and single crystal wafers is consistent with CsPbBr3, matching both orthorhombic and cubic reference patterns.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "S9 matches both reference patterns, and wafer peaks align with S9's main peaks, supporting phase consistency.",
+      "citations": [
+        {
+          "figure_id": "fig_2",
+          "source": "analysis.trends",
+          "evidence": "Sample S9 pattern matches both orthorhombic and cubic reference patterns"
+        },
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "[15.1, 30.2]"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "claim": "Quantitative phase analysis is not possible due to missing intensity and FWHM data for most samples.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_1.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_2",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_2.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_5.analysis.curves[0].fwhm = null"
+        }
+      ]
+    },
+    {
+      "claim": "The assignment of phase purity relies on the absence of secondary peaks, but without phase fraction quantification or Rietveld refinement, minor impurities cannot be ruled out.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "caption",
+          "evidence": "sample S5 had minimum secondary phases, as marked by dotted lines in Fig. 1(a)"
+        },
+        {
+          "figure_id": "fig_2",
+          "source": "caption",
+          "evidence": "Fig. 2 exhibits the XRD patterns of the optimal sample S9, together with standard pattern of orthorhombic phase ... and cubic phase ..."
+        }
+      ]
+    },
+    {
+      "claim": "The wafer XRD patterns (W1\u2013W8) show only two peaks, limiting the ability to distinguish between orthorhombic and cubic phases.",
+      "citations": [
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "[15.1, 30.2]"
+        },
+        {
+          "figure_id": "fig_2",
+          "source": "analysis.curves[1].peak_positions",
+          "evidence": "[15.2, 21.3, 23.6, 25.5, 27.6, 30.5, 34.3, 37.7, 43.2, 47.5, 51.1, 53.5]"
+        }
+      ]
+    },
+    {
+      "claim": "No information is provided on peak intensities or preferred orientation, which could affect interpretation of phase purity and crystallinity.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.curves[0]",
+          "evidence": "No intensity or orientation data present"
+        },
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.curves[0]",
+          "evidence": "No intensity or orientation data present"
+        }
+      ]
+    }
+  ]
+}

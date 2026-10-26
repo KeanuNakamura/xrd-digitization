@@ -1,0 +1,28 @@
+{
+  "summary": "XRD analysis across the paper demonstrates that CsPbBr3 nanocrystals synthesized with various alkyl phosphonic acid (PA) ligands consistently exhibit a pure orthorhombic perovskite phase (ICSD 98751), with no evidence of secondary phases. The structural integrity is maintained regardless of the PA chain length or combination, as shown in the representative sample using TDPA-ODPA (ratio 3:1).",
+  "experimental_variables": [
+    "Type and chain length of phosphonic acid ligands (TDPA, ODPA, MPA, HPA, combinations thereof)",
+    "Ligand ratio (e.g., TDPA-ODPA 3:1, MPA-ODPA 1:3, HPA-ODPA 1:3, TDPA only)"
+  ],
+  "key_findings": [
+    {
+      "finding": "All CsPbBr3 nanocrystal samples, regardless of the PA ligand combination or chain length, exhibit only the orthorhombic CsPbBr3 phase with no detectable secondary phases.",
+      "figure_ids": [
+        "fig_1"
+      ]
+    },
+    {
+      "finding": "The XRD peak positions for the representative TDPA-ODPA (3:1) sample match the reference pattern for orthorhombic CsPbBr3 (ICSD 98751), confirming phase purity.",
+      "figure_ids": [
+        "fig_1"
+      ]
+    }
+  ],
+  "scientific_interpretation": "The XRD results indicate that the use of alkyl phosphonic acids, whether as single ligands or in combination, reliably yields phase-pure orthorhombic CsPbBr3 nanocrystals. The absence of secondary phases across all tested ligand conditions suggests that the ligand chemistry does not induce unwanted phase segregation or impurity formation under the synthesis conditions described. This structural robustness is significant for optoelectronic applications, as it implies that tuning the ligand environment for colloidal stability or shape control does not compromise the crystalline phase of the nanocrystals.",
+  "limitations": [
+    "Only one representative XRD pattern (TDPA-ODPA, 3:1) is shown in the main figures; XRD data for other ligand combinations are not directly presented.",
+    "Peak widths and crystallite size information are not quantitatively analyzed or compared across samples.",
+    "Potential subtle differences in crystallinity or lattice parameters due to ligand variation cannot be assessed from the available data.",
+    "Supporting Information (e.g., Figure S2) is referenced but not provided, limiting cross-sample comparison."
+  ]
+}

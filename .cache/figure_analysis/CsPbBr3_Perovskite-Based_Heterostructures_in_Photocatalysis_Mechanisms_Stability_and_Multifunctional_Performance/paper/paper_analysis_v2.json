@@ -1,0 +1,166 @@
+{
+  "summary": "XRD analyses across the paper reveal the formation and evolution of CsPbBr3 perovskite phases and their integration into various heterostructures. The data show trends in crystallinity and phase composition as a function of synthesis method, reaction time, and composite formation. While all figures confirm the presence of perovskite-related phases, there are notable differences in peak positions, sharpness, and additional phases depending on the synthesis route and heterostructure composition. However, quantitative details such as FWHM and phase fractions are generally missing, limiting the depth of structural interpretation.",
+  "experimental_variables": [
+    "reaction time (microwave-assisted synthesis, fig_11)",
+    "sample composition (pure CsPbBr3, perovskite QDs, CPB/USCN, H-CPB composites, fig_11, fig_13, fig_29, fig_30)",
+    "heterostructure formation (integration with S-g-C3N4, SiO2 matrix, fig_29, fig_30)"
+  ],
+  "key_findings": [
+    {
+      "finding": "Peak intensity and sharpness in CsPbBr3 nanocrystals increase with longer microwave-assisted reaction times, while peak positions remain constant.",
+      "figure_ids": [
+        "fig_11"
+      ]
+    },
+    {
+      "finding": "Bulk perovskite QDs exhibit sharp, well-defined XRD peaks at distinct positions compared to CsPbBr3 NCs.",
+      "figure_ids": [
+        "fig_13"
+      ]
+    },
+    {
+      "finding": "CPB and CPB/USCN heterostructures show additional sharp peaks compared to CN, SCN, and USCN, indicating the presence of crystalline CsPbBr3 alongside carbon nitride phases.",
+      "figure_ids": [
+        "fig_29"
+      ]
+    },
+    {
+      "finding": "H-CPB composites display additional peaks not present in pure SiO2, with peak intensity increasing from H-CPB (1) to H-CPB (3), suggesting increasing perovskite content or crystallinity.",
+      "figure_ids": [
+        "fig_30"
+      ]
+    }
+  ],
+  "scientific_interpretation": [
+    {
+      "claim": "Crystallinity of CsPbBr3 nanocrystals improves with increased reaction time during microwave-assisted synthesis, as evidenced by sharper and more intense XRD peaks.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "The trend of increasing peak intensity and sharpness with reaction time, while peak positions remain unchanged, indicates improved crystallinity rather than phase change.",
+      "citations": [
+        {
+          "figure_id": "fig_11",
+          "source": "analysis.trends",
+          "evidence": "peak intensity increases with reaction time; peaks become slightly sharper with reaction time"
+        },
+        {
+          "figure_id": "fig_11",
+          "source": "analysis.curves[0-2].peak_positions",
+          "evidence": "[15.2, 21.5, 30.6, 34.3, 37.8, 43.7] for all reaction times"
+        }
+      ]
+    },
+    {
+      "claim": "The XRD patterns of bulk perovskite QDs (fig_13) and CsPbBr3 NCs (fig_11) show different peak positions, suggesting differences in lattice parameters or possible phase variation between the two synthesis methods.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "Peak positions for QDs (14.1, 20.1, 28.4, 31.8, 40.0) differ from those for NCs (15.2, 21.5, 30.6, 34.3, 37.8, 43.7), indicating structural differences.",
+      "citations": [
+        {
+          "figure_id": "fig_11",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "[15.2, 21.5, 30.6, 34.3, 37.8, 43.7]"
+        },
+        {
+          "figure_id": "fig_13",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "[14.1, 20.1, 28.4, 31.8, 40.0]"
+        }
+      ]
+    },
+    {
+      "claim": "Formation of heterostructures (CPB/USCN and H-CPB composites) is confirmed by the appearance of additional sharp peaks in XRD patterns compared to their respective matrices (carbon nitride or SiO2), indicating successful incorporation of crystalline perovskite phases.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "CPB/USCN and H-CPB samples show extra peaks not present in the pure matrix materials, consistent with the addition of crystalline CsPbBr3 or related phases.",
+      "citations": [
+        {
+          "figure_id": "fig_29",
+          "source": "analysis.trends",
+          "evidence": "CPB and CPB/USCN show additional sharp peaks compared to CN, SCN, and USCN"
+        },
+        {
+          "figure_id": "fig_30",
+          "source": "analysis.trends",
+          "evidence": "H-CPB samples show additional peaks compared to pure SiO2"
+        }
+      ]
+    },
+    {
+      "claim": "Increasing peak intensity in H-CPB composites from (1) to (3) suggests either higher perovskite loading or improved crystallinity with processing.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "The trend of increasing peak intensity across H-CPB (1) to (3) with constant peak positions supports this interpretation.",
+      "citations": [
+        {
+          "figure_id": "fig_30",
+          "source": "analysis.trends",
+          "evidence": "Peak intensity increases from H-CPB (1) to H-CPB (3)"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "claim": "FWHM values are not reported for any XRD patterns, limiting quantitative assessment of crystallite size and microstrain.",
+      "citations": [
+        {
+          "figure_id": "fig_11",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_11.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_13",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_13.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_29",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_29.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_30",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_30.analysis.curves[0].fwhm = null"
+        }
+      ]
+    },
+    {
+      "claim": "Phase identification is incomplete; phases are not explicitly assigned in the structured data, making it difficult to distinguish between CsPbBr3, CsPb2Br5, and other possible phases.",
+      "citations": [
+        {
+          "figure_id": "fig_11",
+          "source": "analysis.curves[0].phases",
+          "evidence": "fig_11.analysis.curves[0].phases = []"
+        },
+        {
+          "figure_id": "fig_30",
+          "source": "analysis.curves[1].phases",
+          "evidence": "fig_30.analysis.curves[1].phases = []"
+        }
+      ]
+    },
+    {
+      "claim": "Quantitative phase fractions and lattice parameters are not provided, preventing detailed structural comparison across samples.",
+      "citations": [
+        {
+          "figure_id": "fig_11",
+          "source": "analysis.lattice_parameters",
+          "evidence": "fig_11.analysis.lattice_parameters = []"
+        },
+        {
+          "figure_id": "fig_13",
+          "source": "analysis.lattice_parameters",
+          "evidence": "fig_13.analysis.lattice_parameters = []"
+        }
+      ]
+    },
+    {
+      "claim": "The presence of overlapping peaks between perovskite and matrix phases in heterostructures (e.g., H-CPB/SiO2) could complicate phase assignment, but this is not addressed in the data.",
+      "citations": [
+        {
+          "figure_id": "fig_30",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "Pure SiO2 peaks at 22.0, 36.5, 45.8; H-CPB samples also show peaks at 22.0, 45.8"
+        }
+      ]
+    }
+  ]
+}

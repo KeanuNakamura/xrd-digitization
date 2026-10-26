@@ -32,6 +32,8 @@ XRD_CLASSIFY_SYSTEM_PROMPT = """\
 You classify scientific figure images from research papers.
 Return structured JSON only — no markdown fences.
 Decide whether the figure is XRD / X-ray diffraction related.
+When a figure caption is provided, use it together with the image —
+especially when the crop alone is ambiguous.
 """
 
 XRD_CLASSIFY_USER_PROMPT = """\
@@ -46,8 +48,23 @@ Rules:
   powder diffraction / PXRD / Rietveld / 2θ diffractogram plot. false for SEM,
   TEM, FTIR, XPS, photographs, schematics, tables, or other non-XRD plots.
   If a multi-panel crop mixes XRD and non-XRD panels, set is_xrd true.
+- When a caption is supplied, weigh it with the image (e.g. captions mentioning
+  XRD / PXRD / 2θ / diffraction support is_xrd=true; SEM/TEM/FTIR captions
+  support false). Prefer the image if caption and image clearly conflict.
 - reason: one short sentence.
 """
+
+
+def build_xrd_classify_user_prompt(*, caption: str | None = None) -> str:
+    """Assemble the XRD classify user prompt with optional caption context."""
+    caption_clean = (caption or "").strip()
+    if not caption_clean:
+        return XRD_CLASSIFY_USER_PROMPT
+    return (
+        f"{XRD_CLASSIFY_USER_PROMPT.rstrip()}\n\n"
+        f"Figure caption:\n{caption_clean}\n"
+    )
+
 
 PREPROCESSING_REASONS = frozenset(
     {
@@ -474,6 +491,7 @@ def _load_bgr_image(image: np.ndarray | str | Path) -> np.ndarray:
 def call_openai_xrd_classify(
     image_bgr: np.ndarray,
     *,
+    caption: str | None = None,
     api_key: str | None = None,
     base_url: str | None = None,
     model: str | None = None,
@@ -484,7 +502,7 @@ def call_openai_xrd_classify(
     payload = _openai_chat_json(
         image_bgr,
         system_prompt=XRD_CLASSIFY_SYSTEM_PROMPT,
-        user_prompt=XRD_CLASSIFY_USER_PROMPT,
+        user_prompt=build_xrd_classify_user_prompt(caption=caption),
         api_key=api_key,
         base_url=base_url,
         model=model,
@@ -498,6 +516,7 @@ def call_openai_xrd_classify(
 def classify_xrd_figure_image(
     image: np.ndarray | str | Path,
     *,
+    caption: str | None = None,
     api_key: str | None = None,
     base_url: str | None = None,
     model: str | None = None,
@@ -506,6 +525,7 @@ def classify_xrd_figure_image(
     """Classify whether a figure image is XRD-related via OpenAI vision."""
     return call_openai_xrd_classify(
         _load_bgr_image(image),
+        caption=caption,
         api_key=api_key,
         base_url=base_url,
         model=model,

@@ -21,6 +21,7 @@ for path in (str(ROOT), str(LEGACY), str(SCRIPTS)):
         sys.path.insert(0, path)
 
 from figure_triage import (  # noqa: E402
+    build_xrd_classify_user_prompt,
     classify_xrd_figure_image,
     digitization_route,
     is_digitizable,
@@ -232,6 +233,17 @@ class FigureTriageParseTests(unittest.TestCase):
         self.assertTrue(result.is_xrd)
         self.assertEqual(result.reason, "2θ powder pattern")
 
+    def test_build_xrd_classify_user_prompt_includes_caption(self) -> None:
+        bare = build_xrd_classify_user_prompt()
+        self.assertIn("is_xrd", bare)
+        self.assertNotIn("Figure caption:", bare)
+
+        with_caption = build_xrd_classify_user_prompt(
+            caption="Fig. 2. PXRD patterns of CsPbBr3 nanocrystals."
+        )
+        self.assertIn("Figure caption:", with_caption)
+        self.assertIn("PXRD patterns of CsPbBr3", with_caption)
+
     def test_mocked_http_xrd_classify(self) -> None:
         payload = {"is_xrd": False, "reason": "SEM micrograph"}
         response = MagicMock()
@@ -244,6 +256,7 @@ class FigureTriageParseTests(unittest.TestCase):
         image = np.full((40, 60, 3), 255, dtype=np.uint8)
         result = classify_xrd_figure_image(
             image,
+            caption="SEM image of the film surface.",
             api_key="test-key",
             http_post=http_post,
         )
@@ -254,6 +267,8 @@ class FigureTriageParseTests(unittest.TestCase):
         messages = kwargs["json"]["messages"]
         user_text = messages[1]["content"][0]["text"]
         self.assertIn("is_xrd", user_text)
+        self.assertIn("Figure caption:", user_text)
+        self.assertIn("SEM image of the film surface.", user_text)
 
 
 class ProcessFigureXrdFilterTests(unittest.TestCase):

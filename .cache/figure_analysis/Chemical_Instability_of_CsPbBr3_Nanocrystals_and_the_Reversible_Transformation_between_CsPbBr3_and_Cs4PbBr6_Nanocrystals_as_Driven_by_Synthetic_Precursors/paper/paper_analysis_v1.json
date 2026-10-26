@@ -1,0 +1,51 @@
+{
+  "summary": "The XRD data across the paper demonstrate that CsPbBr3 nanocrystals (NCs) can reversibly transform into Cs4PbBr6 NCs and, under certain conditions, form mixtures with CsPb2Br5. The phase composition and crystallinity are strongly influenced by the synthetic precursors and post-synthetic treatments, with clear evidence for reversible and precursor-driven phase transformations.",
+  "experimental_variables": [
+    "Cs:OA:Pb:TOPO:DDAB ratios",
+    "Pb:TOPO:OA ratios",
+    "Cs+ addition",
+    "Pb2+ addition",
+    "DDA+ addition",
+    "reaction time"
+  ],
+  "key_findings": [
+    {
+      "finding": "CsPbBr3 NCs synthesized under optimized conditions predominantly exhibit the cubic phase, with minor orthorhombic phase contributions.",
+      "figure_ids": [
+        "fig_1_2"
+      ]
+    },
+    {
+      "finding": "Varying Pb:TOPO:OA ratios during synthesis does not significantly alter the XRD peak positions or intensities, indicating robust retention of the CsPbBr3 crystal structure across these conditions.",
+      "figure_ids": [
+        "fig_2"
+      ]
+    },
+    {
+      "finding": "Addition of Cs+ to CsPbBr3 NCs leads to a complete transformation to Cs4PbBr6, as evidenced by the disappearance of CsPbBr3 peaks and the appearance of Cs4PbBr6 peaks in XRD.",
+      "figure_ids": [
+        "fig_4"
+      ]
+    },
+    {
+      "finding": "The reverse transformation from Cs4PbBr6 back to CsPbBr3 is achieved by Pb2+ addition, with XRD showing the reappearance of CsPbBr3 peaks and loss of Cs4PbBr6 peaks.",
+      "figure_ids": [
+        "fig_4"
+      ]
+    },
+    {
+      "finding": "Addition of DDA+ to CsPbBr3 NCs results in the formation of a mixture of Cs4PbBr6 and CsPb2Br5 phases after extended reaction and purification, as shown by the presence of both sets of peaks in XRD.",
+      "figure_ids": [
+        "fig_7"
+      ]
+    }
+  ],
+  "scientific_interpretation": "The combined XRD results establish that the phase of lead bromide perovskite nanocrystals can be reversibly and selectively controlled by the stoichiometry of Cs+ and Pb2+ precursors. The transformation between CsPbBr3 and Cs4PbBr6 is fully reversible, with no evidence of residual phases after each conversion (fig_4). The CsPbBr3 phase is structurally robust to variations in Pb:TOPO:OA ratios (fig_2), suggesting that the perovskite lattice tolerates a range of synthetic conditions without significant phase change. However, the introduction of DDA+ leads to a more complex transformation, resulting in a mixture of Cs4PbBr6 and CsPb2Br5 (fig_7), indicating that certain cationic additives can drive decomposition or alternative phase formation rather than simple reversible conversion. Across all figures, the XRD peak positions for each phase are consistent, supporting the reproducibility of phase identification and transformation pathways.",
+  "limitations": [
+    "Quantitative phase fractions are not provided, so the extent of phase purity or coexistence cannot be precisely assessed.",
+    "Peak intensities and widths are described qualitatively; no crystallite size or strain analysis is reported.",
+    "Some phase assignments (e.g., minor orthorhombic CsPbBr3 in fig_1_2) are based on weak peaks and may be subject to uncertainty.",
+    "The mechanism of DDA+-induced transformation is inferred but not directly confirmed by XRD alone.",
+    "No in situ XRD data are presented, so the kinetics and intermediate phases during transformation are not resolved."
+  ]
+}

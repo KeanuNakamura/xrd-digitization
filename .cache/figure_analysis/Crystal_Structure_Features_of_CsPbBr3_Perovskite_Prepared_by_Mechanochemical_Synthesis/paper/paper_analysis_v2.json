@@ -1,0 +1,212 @@
+{
+  "summary": "The XRD analysis across all figures demonstrates that mechanochemically synthesized CsPbBr3 adopts an orthorhombic (Pbnm) structure at room temperature and below, with a clear phase transition to a cubic (Pm-3m) structure at elevated temperatures (above 298 K, fully cubic by 473 K). The structure is confirmed by both laboratory and synchrotron XRD, as well as neutron diffraction, with sharp, well-resolved peaks indicating high crystallinity. Lattice parameters and unit cell volume decrease at low temperature. The phase transition is evidenced by merging and sharpening of peaks and changes in symmetry assignment. However, quantitative details such as FWHM and full temperature-dependent lattice parameters are not consistently reported.",
+  "experimental_variables": [
+    "Temperature (4 K to 773 K)",
+    "Radiation type (laboratory XRD, synchrotron XRD, neutron powder diffraction)",
+    "Synthesis method (mechanochemical/ball milling)"
+  ],
+  "key_findings": [
+    {
+      "finding": "CsPbBr3 synthesized by mechanochemical methods is phase-pure and adopts the orthorhombic Pbnm structure at room temperature and below.",
+      "figure_ids": [
+        "fig_1",
+        "fig_2",
+        "fig_3",
+        "fig_7"
+      ]
+    },
+    {
+      "finding": "A phase transition from orthorhombic (Pbnm) to cubic (Pm-3m) occurs between 298 K and 473 K, as evidenced by SXRD.",
+      "figure_ids": [
+        "fig_5",
+        "fig_6"
+      ]
+    },
+    {
+      "finding": "At high temperatures (473 K and above), CsPbBr3 remains in the cubic Pm-3m phase with sharp, intense peaks.",
+      "figure_ids": [
+        "fig_5",
+        "fig_6"
+      ]
+    },
+    {
+      "finding": "Lattice parameters and unit cell volume decrease at low temperature (4 K), as shown by neutron diffraction and XRD.",
+      "figure_ids": [
+        "fig_3",
+        "fig_7"
+      ]
+    }
+  ],
+  "scientific_interpretation": [
+    {
+      "claim": "The orthorhombic-to-cubic phase transition in CsPbBr3 is reversible and occurs sharply between 298 K and 473 K, as indicated by the merging and sharpening of peaks and the change in symmetry assignment.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "SXRD patterns show distinct orthorhombic peaks at 298 K, which merge and sharpen at higher temperatures, with phase assignment changing to cubic Pm-3m at 473 K and above.",
+      "citations": [
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.trends",
+          "evidence": "phase transition from Pbnm to Pm-3m occurs between 298 K and 473 K"
+        },
+        {
+          "figure_id": "fig_6",
+          "source": "analysis.curves[0-2].phases",
+          "evidence": "Phase remains Pm3m at all measured temperatures (473 K, 673 K, 773 K)"
+        }
+      ]
+    },
+    {
+      "claim": "Mechanochemical synthesis yields highly crystalline, phase-pure CsPbBr3, as evidenced by sharp, well-resolved peaks and absence of secondary phases across all XRD and NPD measurements.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "All figures report only CsPbBr3 peaks with narrow widths and no indication of impurities.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.trends",
+          "evidence": "peaks are sharp and well resolved; pattern matches orthorhombic CsPbBr3 (Pbnm)"
+        },
+        {
+          "figure_id": "fig_2",
+          "source": "analysis.curves[0].phases",
+          "evidence": "orthorhombic CsPbBr3 (Pbnm)"
+        },
+        {
+          "figure_id": "fig_3",
+          "source": "analysis.curves[0].phases",
+          "evidence": "CsPbBr3"
+        }
+      ]
+    },
+    {
+      "claim": "The unit cell contracts at low temperature, as shown by the decrease in lattice parameters and unit cell volume at 4 K compared to room temperature.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "Lattice parameters at 4 K (fig_7) are smaller than those at room temperature (fig_1), indicating thermal contraction.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.lattice_parameters",
+          "evidence": "{\"a_A\": 8.1843, \"b_A\": 8.2334, \"c_A\": 11.7268}"
+        },
+        {
+          "figure_id": "fig_7",
+          "source": "analysis.lattice_parameters",
+          "evidence": "{\"a_A\": 7.9734, \"b_A\": 8.3065, \"c_A\": 11.612, \"volume_A3\": 769.1}"
+        }
+      ]
+    },
+    {
+      "claim": "The phase transition is accompanied by an increase in peak intensity and narrowing, suggesting improved crystallinity or increased symmetry at high temperature.",
+      "reasoning_type": "ai_inferred",
+      "reasoning": "Analysis trends in fig_5 and fig_6 note peak merging, sharpening, and intensity increase with temperature.",
+      "citations": [
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.trends",
+          "evidence": "peaks merge and sharpen with increasing temperature"
+        },
+        {
+          "figure_id": "fig_6",
+          "source": "analysis.trends",
+          "evidence": "Peak intensities increase with temperature"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "claim": "FWHM values are not reported for any XRD or NPD patterns, limiting quantitative assessment of crystallite size or microstrain.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_1.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_2",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_2.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_3",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_3.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_5.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_6",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_6.analysis.curves[0].fwhm = null"
+        },
+        {
+          "figure_id": "fig_7",
+          "source": "analysis.curves[0].fwhm",
+          "evidence": "fig_7.analysis.curves[0].fwhm = null"
+        }
+      ]
+    },
+    {
+      "claim": "Lattice parameters are not consistently reported for all temperatures, making it difficult to quantitatively track thermal expansion or contraction across the full temperature range.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.lattice_parameters",
+          "evidence": "{\"a_A\": 8.1843, \"b_A\": 8.2334, \"c_A\": 11.7268}"
+        },
+        {
+          "figure_id": "fig_7",
+          "source": "analysis.lattice_parameters",
+          "evidence": "{\"a_A\": 7.9734, \"b_A\": 8.3065, \"c_A\": 11.612, \"volume_A3\": 769.1}"
+        },
+        {
+          "figure_id": "fig_3",
+          "source": "analysis.lattice_parameters",
+          "evidence": "fig_3.analysis.lattice_parameters = []"
+        },
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.lattice_parameters",
+          "evidence": "fig_5.analysis.lattice_parameters = []"
+        },
+        {
+          "figure_id": "fig_6",
+          "source": "analysis.lattice_parameters",
+          "evidence": "fig_6.analysis.lattice_parameters = []"
+        }
+      ]
+    },
+    {
+      "claim": "No quantitative phase fraction analysis is provided for the phase transition region, so the exact transition temperature and coexistence range (if any) cannot be precisely determined.",
+      "citations": [
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.trends",
+          "evidence": "phase transition from Pbnm to Pm-3m occurs between 298 K and 473 K"
+        },
+        {
+          "figure_id": "fig_6",
+          "source": "analysis.curves[0-2].phases",
+          "evidence": "Phase remains Pm3m at all measured temperatures (473 K, 673 K, 773 K)"
+        }
+      ]
+    },
+    {
+      "claim": "Peak positions are reported, but without explicit Miller indices or detailed assignment, limiting the ability to directly compare structural distortions or octahedral tilting across phases.",
+      "citations": [
+        {
+          "figure_id": "fig_1",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "[15.2, 21.5, 22.0, 23.7, ...]"
+        },
+        {
+          "figure_id": "fig_5",
+          "source": "analysis.curves[0].peak_positions",
+          "evidence": "[3.1, 4.4]"
+        }
+      ]
+    }
+  ]
+}
