@@ -12,6 +12,7 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Iterable
 
+import pymupdf
 import requests
 from lxml import etree
 
@@ -23,7 +24,14 @@ for _path in (_LEGACY_DIR, _REPO_ROOT):
     if _path_str not in sys.path:
         sys.path.insert(0, _path_str)
 
-from parse_figures import extract_document_figures
+from parse_figures import (
+    _infer_crop_rect_for_caption_box,
+    crop_figure_from_grobid_coords,
+    extract_document_figures,
+    find_pdf_figure_caption_anchors,
+    format_grobid_coords,
+    select_figure_crop_coords,
+)
 
 
 LOGGER = logging.getLogger(__name__)
@@ -611,6 +619,364 @@ def figure_label_from_caption(caption: str) -> str | None:
 def figure_id_from_caption(caption: str) -> str | None:
     identity = parse_figure_identity(caption)
     return identity.figure_id if identity else None
+
+
+# Pipe-separated / merged caption heads: "Fig. 1 | Fig. 2 | Extended Data Fig. 3 |"
+_MERGED_CAPTION_IDENTITY_PATTERN = re.compile(
+    r"""
+    (?:^|\|)
+    \s*
+    (?P<kind>
+        extended\s+data\s+fig(?:ure)?s?\.?
+        | data\s+fig(?:ure)?s?\.?
+        | supplementary\s+(?:information\s+)?fig(?:ure)?s?\.?
+        | supporting\s+(?:information\s+)?fig(?:ure)?s?\.?
+        | fig(?:ure)?s?\.?
+    )
+    \s*
+    (?:[\(\[|\s])*
+    (?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)
+    \b
+    """,
+    flags=re.IGNORECASE | re.VERBOSE,
+)
+
+
+def parse_all_figure_identities(text: str | None) -> list[FigureIdentity]:
+    """
+    Extract every figure identity from a (possibly merged) caption head.
+
+    Nature TEI often concatenates ``Fig. 1 | Fig. 2 | Extended Data Fig. 3 |``.
+    Returns identities in order of appearance, de-duplicated by figure_id.
+    """
+    if not text or not str(text).strip():
+        return []
+
+    caption = normalize_whitespace(str(text))
+    # Only trust the caption head — body prose after ~220 chars is noisy.
+    head = caption[:220]
+    identities: list[FigureIdentity] = []
+    seen: set[str] = set()
+
+    for match in _MERGED_CAPTION_IDENTITY_PATTERN.finditer(head):
+        number = _plausible_figure_number(match.group("number"))
+        if not number:
+            continue
+        kind = _kind_from_match_text(match.group("kind"))
+        # Truncated "Data Fig" without Extended → treat as Extended Data.
+        if kind == FIGURE_KIND_MAIN and re.match(
+            r"^\s*data\s+fig",
+            match.group("kind"),
+            flags=re.IGNORECASE,
+        ):
+            kind = FIGURE_KIND_EXTENDED
+        identity = FigureIdentity(kind, number)
+        if identity.figure_id in seen:
+            continue
+        seen.add(identity.figure_id)
+        identities.append(identity)
+
+    if not identities:
+        primary = parse_figure_identity(caption)
+        if primary is not None:
+            identities.append(primary)
+
+    return identities
+
+
+def expand_merged_caption_figures(figures: list[Figure]) -> list[str]:
+    """
+    P2: register stub figures for sibling identities in merged TEI captions.
+
+    When GROBID merges ``Fig. 1 | Fig. 2 |``, only the primary identity is kept
+    on the original row; siblings are appended as caption-only stubs so P1
+    orphan recovery can crop them from the PDF. Does not invent gaps — only
+    identities explicitly present in the caption text.
+    """
+    notes: list[str] = []
+    if not figures:
+        return notes
+
+    existing_ids = {
+        figure.figure_id for figure in figures if figure.figure_id
+    }
+    additions: list[Figure] = []
+
+    for figure in figures:
+        identities = parse_all_figure_identities(figure.caption)
+        if len(identities) < 2:
+            continue
+
+        # Keep the original row as-is (already refined). Emit stubs only for
+        # sibling identities that have no figure row yet.
+        for identity in identities:
+            if identity.figure_id in existing_ids:
+                continue
+            if any(item.figure_id == identity.figure_id for item in additions):
+                continue
+
+            kind_name = {
+                FIGURE_KIND_EXTENDED: "Extended Data Fig.",
+                FIGURE_KIND_SUPPLEMENTARY: "Supplementary Fig.",
+            }.get(identity.kind, "Fig.")
+            stub = Figure(
+                figure_id=identity.figure_id,
+                label=f"{kind_name} {identity.number}",
+                normalized_label=identity.number,
+                caption=figure.caption,
+                graphic_targets=[],
+                coords=None,
+                graphic_coords=None,
+                figure_type=figure.figure_type,
+                xrd_score=figure.xrd_score,
+                is_likely_xrd=figure.is_likely_xrd,
+                is_caption_xrd=figure.is_caption_xrd,
+                image_paths=[],
+                referenced_by_paragraph_ids=list(
+                    figure.referenced_by_paragraph_ids
+                ),
+                context_paragraph_ids=list(figure.context_paragraph_ids),
+            )
+            additions.append(stub)
+            existing_ids.add(identity.figure_id)
+            notes.append(
+                f"split merged caption → stub {identity.figure_id}"
+            )
+
+    figures.extend(additions)
+    return notes
+
+
+def _figure_has_successful_crop(figure: Figure) -> bool:
+    return bool(figure.image_paths)
+
+
+def recover_missing_figures_from_pdf(
+    pdf_path: str | Path,
+    figures: list[Figure],
+    output_dir: str | Path,
+    *,
+    dpi: int = 300,
+    xrd_only: bool = False,
+) -> list[str]:
+    """
+    P1: recover figures missing from GROBID TEI by scanning PDF caption leads.
+
+    Only runs for figure identities that lack a successful crop. Uses PDF
+    caption positions (not the evaluation spreadsheet) and the same crop
+    inference as caption-only TEI figures. Mutates ``figures`` in place.
+    """
+    notes: list[str] = []
+    pdf_path = Path(pdf_path)
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    successful_ids = {
+        figure.figure_id
+        for figure in figures
+        if figure.figure_id and _figure_has_successful_crop(figure)
+    }
+
+    # Also treat collision suffixes as covering the base id when cropped.
+    covered_bases = set(successful_ids)
+    for figure_id in list(successful_ids):
+        match = re.match(
+            r"^((?:ed_|supp_)?fig_\d+[a-z]?)_\d+$",
+            figure_id,
+            flags=re.IGNORECASE,
+        )
+        if match:
+            covered_bases.add(match.group(1).lower())
+
+    try:
+        anchors = find_pdf_figure_caption_anchors(pdf_path)
+    except (OSError, ValueError) as exc:
+        notes.append(f"PDF caption scan failed: {exc}")
+        return notes
+
+    by_id = {
+        figure.figure_id: figure
+        for figure in figures
+        if figure.figure_id
+    }
+
+    # Retry TEI caption-only figures that still lack crops (Mode B) using
+    # current inference — covers cases where P0 should have worked but
+    # extract_document_figures skipped for other reasons.
+    for figure in figures:
+        if not figure.figure_id or _figure_has_successful_crop(figure):
+            continue
+        if figure.figure_id in covered_bases:
+            continue
+        if not figure.coords or not str(figure.coords).strip():
+            continue
+        # Do not revive demoted body-text phantoms (hash ids / non-captions).
+        caption = figure.caption or ""
+        if not re.match(
+            r"^\s*(?:extended\s+data\s+|supplementary\s+|supporting\s+|data\s+)?"
+            r"fig(?:ure)?s?\.?\b",
+            caption,
+            flags=re.IGNORECASE,
+        ):
+            continue
+        if xrd_only and not figure.is_caption_xrd:
+            continue
+        crop_coords = select_figure_crop_coords(
+            figure.coords,
+            figure.graphic_coords,
+            pdf_path=pdf_path,
+        )
+        if not crop_coords:
+            continue
+        try:
+            image_paths = crop_figure_from_grobid_coords(
+                pdf_path=pdf_path,
+                coords_string=crop_coords,
+                output_dir=output_dir,
+                figure_id=figure.figure_id,
+                dpi=dpi,
+                caption_coords=figure.coords,
+            )
+        except (OSError, ValueError) as exc:
+            notes.append(
+                f"retry {figure.figure_id}: crop failed ({exc})"
+            )
+            continue
+        if not image_paths:
+            continue
+        figure.graphic_coords = figure.graphic_coords or crop_coords
+        figure.image_paths = [str(path) for path in image_paths]
+        covered_bases.add(figure.figure_id)
+        notes.append(f"recovered caption-only {figure.figure_id}")
+
+    # Known missing rows (TEI caption-only / P2 stubs) are always eligible.
+    known_missing = {
+        figure.figure_id
+        for figure in figures
+        if figure.figure_id and not _figure_has_successful_crop(figure)
+    }
+
+    document = pymupdf.open(pdf_path)
+    try:
+        for anchor in anchors:
+            figure_id = anchor.figure_id
+            if figure_id in covered_bases:
+                continue
+            existing = by_id.get(figure_id)
+            if existing is not None and _figure_has_successful_crop(existing):
+                continue
+
+            # Pure orphans (no TEI/stub row): only recover strong caption leads
+            # so we do not invent figures from body callouts.
+            is_pure_orphan = existing is None and figure_id not in known_missing
+            if is_pure_orphan:
+                strong = bool(
+                    re.search(r"[\|:\-–—]", anchor.text[:40])
+                    or len(anchor.text) >= 36
+                    or re.fullmatch(
+                        r"fig(?:ure)?s?\.?\s*\d{1,2}\.?",
+                        anchor.text.strip(),
+                        flags=re.IGNORECASE,
+                    )
+                )
+                if not strong:
+                    continue
+                # Supplementary orphans are noisy in body text; require a stub.
+                if anchor.kind == FIGURE_KIND_SUPPLEMENTARY:
+                    continue
+
+            if xrd_only and existing is not None and not existing.is_caption_xrd:
+                continue
+
+            if not 1 <= anchor.page <= document.page_count:
+                continue
+            page = document.load_page(anchor.page - 1)
+            crop_rect = _infer_crop_rect_for_caption_box(
+                page,
+                anchor.x0,
+                anchor.y0,
+                anchor.x1,
+                anchor.y1,
+            )
+            if crop_rect is None:
+                notes.append(
+                    f"orphan {figure_id}: caption found, crop inference failed"
+                )
+                continue
+
+            page_area = max(page.rect.width * page.rect.height, 1.0)
+            crop_area = crop_rect.width * crop_rect.height
+            # Reject near-full-page orphan crops (usually grabbed the wrong band).
+            if is_pure_orphan and crop_area > 0.82 * page_area:
+                notes.append(
+                    f"orphan {figure_id}: rejected oversized crop"
+                )
+                continue
+
+            crop_coords = format_grobid_coords(
+                [
+                    (
+                        anchor.page,
+                        crop_rect.x0,
+                        crop_rect.y0,
+                        crop_rect.width,
+                        crop_rect.height,
+                    )
+                ]
+            )
+
+            try:
+                image_paths = crop_figure_from_grobid_coords(
+                    pdf_path=pdf_path,
+                    coords_string=crop_coords,
+                    output_dir=output_dir,
+                    figure_id=figure_id,
+                    dpi=dpi,
+                    caption_coords=anchor.coords,
+                )
+            except (OSError, ValueError) as exc:
+                notes.append(f"orphan {figure_id}: crop failed ({exc})")
+                continue
+
+            if not image_paths:
+                continue
+
+            kind_name = {
+                FIGURE_KIND_EXTENDED: "Extended Data Fig.",
+                FIGURE_KIND_SUPPLEMENTARY: "Supplementary Fig.",
+            }.get(anchor.kind, "Fig.")
+
+            if existing is None:
+                existing = Figure(
+                    figure_id=figure_id,
+                    label=f"{kind_name} {anchor.number}",
+                    normalized_label=anchor.number,
+                    caption=anchor.text,
+                    graphic_targets=[],
+                    coords=anchor.coords,
+                    graphic_coords=crop_coords,
+                    figure_type=None,
+                    xrd_score=0.0,
+                    is_likely_xrd=False,
+                    is_caption_xrd=False,
+                    image_paths=[],
+                )
+                figures.append(existing)
+                by_id[figure_id] = existing
+                notes.append(f"recovered orphan {figure_id} from PDF caption")
+            else:
+                existing.coords = existing.coords or anchor.coords
+                existing.graphic_coords = crop_coords
+                if not existing.caption or len(existing.caption) < 8:
+                    existing.caption = anchor.text
+                notes.append(f"recovered missing crop for {figure_id}")
+
+            existing.image_paths = [str(path) for path in image_paths]
+            covered_bases.add(figure_id)
+    finally:
+        document.close()
+
+    return notes
 
 
 def is_valid_figure_label(
@@ -2606,6 +2972,11 @@ def parse_pdf(
 
     if extract_figures:
         figures_directory = output_directory / "figures"
+        # P2: split Nature-style merged caption heads into recovery stubs.
+        merge_notes = expand_merged_caption_figures(document.figures)
+        for note in merge_notes:
+            LOGGER.info("Merged-caption: %s", note)
+
         extracted_count = extract_document_figures(
             pdf_path=pdf_path,
             figures=document.figures,
@@ -2613,12 +2984,30 @@ def parse_pdf(
             dpi=figure_dpi,
             xrd_only=xrd_figures_only,
         )
+        # P1: recover figures GROBID never segmented (PDF caption scan).
+        recover_notes = recover_missing_figures_from_pdf(
+            pdf_path=pdf_path,
+            figures=document.figures,
+            output_dir=figures_directory,
+            dpi=figure_dpi,
+            xrd_only=xrd_figures_only,
+        )
+        for note in recover_notes:
+            LOGGER.info("Orphan recovery: %s", note)
+
+        extracted_with_images = sum(
+            1 for figure in document.figures if figure.image_paths
+        )
         LOGGER.info(
-            "Extracted %d/%d figures to %s",
+            "Extracted %d/%d figures to %s (after recovery: %d with images)",
             extracted_count,
             len(document.figures),
             figures_directory,
+            extracted_with_images,
         )
+
+        for warning in validate_extracted_figures(document.figures):
+            LOGGER.warning("Figure validation: %s", warning)
 
     parsed_output_path = (
         extra_directory / f"{pdf_path.stem}.parsed.json"

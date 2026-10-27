@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 import re
 from collections import defaultdict
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
@@ -231,6 +232,22 @@ def _expand_rect_for_axis_labels(
     return expanded
 
 
+def _clamp_union_above_caption(
+    union_rect: pymupdf.Rect,
+    caption_y0: float,
+) -> pymupdf.Rect | None:
+    """Clip a candidate crop so it does not spill into the caption."""
+    max_y1 = caption_y0 - CAPTION_CROP_CLEARANCE
+    clipped = pymupdf.Rect(union_rect)
+    if clipped.y1 > max_y1:
+        if clipped.y0 >= max_y1:
+            return None
+        clipped.y1 = max_y1
+    if clipped.height < MIN_GRAPHIC_HEIGHT or clipped.width < MIN_GRAPHIC_WIDTH:
+        return None
+    return clipped
+
+
 def _union_drawing_rects_for_caption(
     page: pymupdf.Page,
     caption_x0: float,
@@ -239,54 +256,83 @@ def _union_drawing_rects_for_caption(
     *,
     caption_gap: float = 12.0,
     min_overlap_ratio: float = 0.2,
+    allow_relaxed_overlap: bool = True,
 ) -> pymupdf.Rect | None:
+    """
+    Union vector drawings above a caption.
+
+    Tries the requested overlap first, then relaxes (0.05 → 0.0) when the
+    strict pass yields nothing usable — common when plots are wider than the
+    caption text block.
+    """
     caption_width = max(caption_x1 - caption_x0, 1.0)
-    effective_overlap = min_overlap_ratio
-    if caption_width >= 300.0:
-        effective_overlap = min(min_overlap_ratio, 0.12)
-    candidate_rects: list[pymupdf.Rect] = []
+    overlap_attempts = [min_overlap_ratio]
+    if allow_relaxed_overlap:
+        for fallback in (0.05, 0.0):
+            if fallback < min_overlap_ratio - 1e-9:
+                overlap_attempts.append(fallback)
 
-    for drawing in page.get_drawings():
-        rect = drawing.get("rect")
-        if rect is None:
+    drawings = page.get_drawings()
+    best: pymupdf.Rect | None = None
+
+    for overlap_ratio in overlap_attempts:
+        effective_overlap = overlap_ratio
+        if caption_width >= 300.0 and overlap_ratio > 0:
+            effective_overlap = min(overlap_ratio, 0.12)
+
+        candidate_rects: list[pymupdf.Rect] = []
+        for drawing in drawings:
+            rect = drawing.get("rect")
+            if rect is None:
+                continue
+            if rect.y0 >= caption_y0:
+                continue
+            overlap_x0 = max(rect.x0, caption_x0)
+            overlap_x1 = min(rect.x1, caption_x1)
+            overlap_width = overlap_x1 - overlap_x0
+            if overlap_ratio <= 0:
+                # Near-unconstrained horizontally, but stay in the caption's
+                # column — otherwise relaxed pass swallows the neighbor column.
+                if rect.width * rect.height < 2.0:
+                    continue
+                caption_cx = 0.5 * (caption_x0 + caption_x1)
+                rect_cx = 0.5 * (rect.x0 + rect.x1)
+                max_dx = max(caption_width * 0.75, 140.0)
+                if overlap_width <= 0 and abs(rect_cx - caption_cx) > max_dx:
+                    continue
+            elif overlap_width / caption_width < effective_overlap:
+                continue
+            candidate_rects.append(rect)
+
+        if not candidate_rects:
             continue
 
-        # Keep drawings that end just above the caption (axis ticks / frames).
-        # Only skip paths that start at or below the caption top.
-        if rect.y0 >= caption_y0:
+        union_rect = pymupdf.Rect(candidate_rects[0])
+        for rect in candidate_rects[1:]:
+            union_rect.include_rect(rect)
+
+        clipped = _clamp_union_above_caption(union_rect, caption_y0)
+        if clipped is None:
             continue
 
-        overlap_x0 = max(rect.x0, caption_x0)
-        overlap_x1 = min(rect.x1, caption_x1)
-        overlap_width = overlap_x1 - overlap_x0
-
-        if overlap_width / caption_width < effective_overlap:
+        # Reject near-full-page unions from unconstrained overlap (false positives).
+        page_area = max(page.rect.width * page.rect.height, 1.0)
+        if overlap_ratio <= 0 and clipped.width * clipped.height > 0.85 * page_area:
             continue
 
-        candidate_rects.append(rect)
+        expanded = _expand_rect_for_axis_labels(
+            page,
+            clipped,
+            caption_y0,
+            caption_gap=caption_gap,
+        )
+        if best is None or expanded.width * expanded.height > best.width * best.height:
+            best = expanded
+        # Prefer the first (strictest) successful attempt.
+        if overlap_ratio >= min_overlap_ratio - 1e-9:
+            return best
 
-    if not candidate_rects:
-        return None
-
-    union_rect = pymupdf.Rect(candidate_rects[0])
-    for rect in candidate_rects[1:]:
-        union_rect.include_rect(rect)
-
-    # Do not let path unions spill into the caption itself.
-    max_y1 = caption_y0 - CAPTION_CROP_CLEARANCE
-    if union_rect.y1 > max_y1:
-        if union_rect.y0 >= max_y1:
-            return None
-        union_rect.y1 = max_y1
-    if union_rect.height < MIN_GRAPHIC_HEIGHT or union_rect.width < MIN_GRAPHIC_WIDTH:
-        return None
-
-    return _expand_rect_for_axis_labels(
-        page,
-        union_rect,
-        caption_y0,
-        caption_gap=caption_gap,
-    )
+    return best
 
 
 def _expand_crop_coords_for_axis_labels(
@@ -332,51 +378,15 @@ def _expand_crop_coords_for_axis_labels(
     return format_grobid_coords(expanded_boxes)
 
 
-def _select_image_band_for_caption(
-    image_rects: list[pymupdf.Rect],
+def _union_qualifying_image_bands(
+    candidate_rects: list[pymupdf.Rect],
     caption_x0: float,
     caption_y0: float,
     caption_x1: float,
     *,
-    caption_gap: float = 12.0,
-    min_overlap_ratio: float = 0.2,
+    min_band_area: float = MIN_IMAGE_BAND_AREA,
 ) -> pymupdf.Rect | None:
-    """
-    Pick the image band sitting just above a caption.
-
-    ``caption_gap`` is retained for call-site compatibility; strip inclusion is
-    based on whether the strip starts above the caption. Publishers often
-    rasterize x-axis tick labels into a final strip that ends only a few points
-    above the caption, so requiring a large bottom clearance cuts those values.
-
-    For multi-panel figures rendered as stacked image strips, nearby qualifying
-    bands are unioned so the crop keeps all panels rather than only the lowest.
-    """
-    _ = caption_gap  # inclusion uses caption top; see docstring
-    caption_width = max(caption_x1 - caption_x0, 1.0)
-    # Wide Nature-style captions often underlap side panels; relax slightly.
-    effective_overlap = min_overlap_ratio
-    if caption_width >= 300.0:
-        effective_overlap = min(min_overlap_ratio, 0.12)
-
-    candidate_rects: list[pymupdf.Rect] = []
-
-    for rect in image_rects:
-        # Include strips that end near the caption (axis ticks). Skip only
-        # images that begin at/below the caption top.
-        if rect.y0 >= caption_y0:
-            continue
-
-        overlap_x0 = max(rect.x0, caption_x0)
-        overlap_x1 = min(rect.x1, caption_x1)
-        overlap_width = overlap_x1 - overlap_x0
-
-        if overlap_width / caption_width < effective_overlap:
-            if rect.width < MIN_GRAPHIC_WIDTH:
-                continue
-
-        candidate_rects.append(rect)
-
+    """Union image bands above a caption from pre-filtered candidate rects."""
     if not candidate_rects:
         return None
 
@@ -391,12 +401,10 @@ def _select_image_band_for_caption(
             band.y1 = max_y1
 
         area = band.width * band.height
-
-        if area < MIN_IMAGE_BAND_AREA or band.height < MIN_IMAGE_BAND_HEIGHT:
+        if area < min_band_area or band.height < MIN_IMAGE_BAND_HEIGHT:
             continue
 
         caption_gap_distance = caption_y0 - band.y1
-
         # Allow taller multi-panel stacks: gap limit applies to the lowest band
         # only; upper panels are merged below when vertically adjacent.
         if caption_gap_distance > MAX_CAPTION_BAND_GAP * 3:
@@ -407,14 +415,12 @@ def _select_image_band_for_caption(
     if not qualifying_bands:
         return None
 
-    # Prefer bands near the caption, then union upward while gaps stay small.
     qualifying_bands.sort(key=lambda rect: rect.y1, reverse=True)
     union = pymupdf.Rect(qualifying_bands[0])
     for band in qualifying_bands[1:]:
         vertical_gap = union.y0 - band.y1
         if vertical_gap > IMAGE_BAND_VERTICAL_GAP * 4:
             continue
-        # Require some horizontal affinity with the growing union / caption.
         overlap_x0 = max(band.x0, min(union.x0, caption_x0))
         overlap_x1 = min(band.x1, max(union.x1, caption_x1))
         if overlap_x1 - overlap_x0 < min(band.width, union.width) * 0.15:
@@ -425,6 +431,322 @@ def _select_image_band_for_caption(
         return None
 
     return union
+
+
+def _select_image_band_for_caption(
+    image_rects: list[pymupdf.Rect],
+    caption_x0: float,
+    caption_y0: float,
+    caption_x1: float,
+    *,
+    caption_gap: float = 12.0,
+    min_overlap_ratio: float = 0.2,
+    allow_relaxed_overlap: bool = True,
+) -> pymupdf.Rect | None:
+    """
+    Pick the image band sitting just above a caption.
+
+    ``caption_gap`` is retained for call-site compatibility; strip inclusion is
+    based on whether the strip starts above the caption. Publishers often
+    rasterize x-axis tick labels into a final strip that ends only a few points
+    above the caption, so requiring a large bottom clearance cuts those values.
+
+    For multi-panel figures rendered as stacked image strips, nearby qualifying
+    bands are unioned so the crop keeps all panels rather than only the lowest.
+
+    When the strict horizontal-overlap filter yields nothing, retries with
+    relaxed overlap (0.05 → 0.0) for Nature-style underlapping side panels.
+    """
+    _ = caption_gap  # inclusion uses caption top; see docstring
+    caption_width = max(caption_x1 - caption_x0, 1.0)
+    overlap_attempts = [min_overlap_ratio]
+    if allow_relaxed_overlap:
+        for fallback in (0.05, 0.0):
+            if fallback < min_overlap_ratio - 1e-9:
+                overlap_attempts.append(fallback)
+
+    best: pymupdf.Rect | None = None
+    for overlap_ratio in overlap_attempts:
+        effective_overlap = overlap_ratio
+        if caption_width >= 300.0 and overlap_ratio > 0:
+            effective_overlap = min(overlap_ratio, 0.12)
+
+        candidate_rects: list[pymupdf.Rect] = []
+        for rect in image_rects:
+            if rect.y0 >= caption_y0:
+                continue
+            overlap_x0 = max(rect.x0, caption_x0)
+            overlap_x1 = min(rect.x1, caption_x1)
+            overlap_width = overlap_x1 - overlap_x0
+            if overlap_ratio <= 0:
+                if rect.width * rect.height < 200.0:
+                    continue
+                caption_cx = 0.5 * (caption_x0 + caption_x1)
+                rect_cx = 0.5 * (rect.x0 + rect.x1)
+                max_dx = max(caption_width * 0.75, 140.0)
+                if overlap_width <= 0 and abs(rect_cx - caption_cx) > max_dx:
+                    continue
+            elif overlap_width / caption_width < effective_overlap:
+                if rect.width < MIN_GRAPHIC_WIDTH:
+                    continue
+            candidate_rects.append(rect)
+
+        # Mosaic of many tiny panels: lower the band-area floor.
+        min_band_area = MIN_IMAGE_BAND_AREA
+        if len(candidate_rects) >= 6:
+            min_band_area = min(MIN_IMAGE_BAND_AREA, 1500.0)
+
+        union = _union_qualifying_image_bands(
+            candidate_rects,
+            caption_x0,
+            caption_y0,
+            caption_x1,
+            min_band_area=min_band_area,
+        )
+        if union is None:
+            continue
+        if best is None or union.width * union.height > best.width * best.height:
+            best = union
+        if overlap_ratio >= min_overlap_ratio - 1e-9:
+            return best
+
+    return best
+
+
+def _side_adjacent_region(
+    page: pymupdf.Page,
+    caption_x0: float,
+    caption_x1: float,
+) -> tuple[float, float] | None:
+    """
+    Return (region_x0, region_x1) for figure content beside a side-column caption.
+
+    Nature layouts often put a narrow caption in the right column with the
+    multi-panel mosaic on the left (or vice versa).
+    """
+    page_width = max(page.rect.width, 1.0)
+    caption_width = caption_x1 - caption_x0
+    if caption_width > page_width * 0.45:
+        return None
+
+    mid = page.rect.x0 + page_width * 0.5
+    if caption_x0 >= mid - 20.0:
+        # Caption on the right → figure on the left.
+        return (page.rect.x0 + 4.0, caption_x0 - 2.0)
+    if caption_x1 <= mid + 20.0:
+        # Caption on the left → figure on the right.
+        return (caption_x1 + 2.0, page.rect.x1 - 4.0)
+    return None
+
+
+def _union_side_adjacent_content(
+    page: pymupdf.Page,
+    caption_x0: float,
+    caption_y0: float,
+    caption_x1: float,
+    caption_y1: float,
+) -> pymupdf.Rect | None:
+    """
+    Union images/drawings beside a side-column caption (not only above it).
+    """
+    region = _side_adjacent_region(page, caption_x0, caption_x1)
+    if region is None:
+        return None
+
+    region_x0, region_x1 = region
+    if region_x1 - region_x0 < MIN_GRAPHIC_WIDTH:
+        return None
+
+    # Side captions often start near the top of the figure column.
+    search_y0 = page.rect.y0 + 8.0
+    search_y1 = max(caption_y1, caption_y0) + 60.0
+    search_y1 = min(search_y1, page.rect.y1 - 8.0)
+
+    candidates: list[pymupdf.Rect] = []
+
+    for info in page.get_image_info():
+        bbox = info.get("bbox")
+        if not bbox:
+            continue
+        rect = pymupdf.Rect(bbox)
+        if rect.x1 <= region_x0 or rect.x0 >= region_x1:
+            continue
+        if rect.y1 <= search_y0 or rect.y0 >= search_y1:
+            continue
+        if rect.width * rect.height < 400.0:
+            continue
+        clipped = pymupdf.Rect(
+            max(rect.x0, region_x0),
+            max(rect.y0, search_y0),
+            min(rect.x1, region_x1),
+            min(rect.y1, search_y1),
+        )
+        if clipped.width >= 2.0 and clipped.height >= 2.0:
+            candidates.append(clipped)
+
+    for drawing in page.get_drawings():
+        rect = drawing.get("rect")
+        if rect is None:
+            continue
+        if rect.x1 <= region_x0 or rect.x0 >= region_x1:
+            continue
+        if rect.y1 <= search_y0 or rect.y0 >= search_y1:
+            continue
+        if rect.width * rect.height < 8.0:
+            continue
+        clipped = pymupdf.Rect(
+            max(rect.x0, region_x0),
+            max(rect.y0, search_y0),
+            min(rect.x1, region_x1),
+            min(rect.y1, search_y1),
+        )
+        if clipped.width >= 2.0 and clipped.height >= 2.0:
+            candidates.append(clipped)
+
+    if len(candidates) < 1:
+        return None
+
+    union = pymupdf.Rect(candidates[0])
+    for rect in candidates[1:]:
+        union.include_rect(rect)
+
+    # Keep the crop out of the caption column.
+    if caption_x0 >= (page.rect.x0 + page.rect.x1) * 0.5 - 20.0:
+        union.x1 = min(union.x1, caption_x0 - CAPTION_CROP_CLEARANCE)
+    else:
+        union.x0 = max(union.x0, caption_x1 + CAPTION_CROP_CLEARANCE)
+
+    if union.width < MIN_GRAPHIC_WIDTH or union.height < MIN_GRAPHIC_HEIGHT:
+        return None
+
+    page_area = max(page.rect.width * page.rect.height, 1.0)
+    if union.width * union.height > 0.90 * page_area:
+        return None
+
+    # Prefer clusters that actually look like multi-panel mosaics or plots.
+    if len(candidates) < 3 and union.height < 80.0:
+        return None
+
+    return union
+
+
+def _previous_figure_caption_bottom(
+    page: pymupdf.Page,
+    caption_y0: float,
+) -> float | None:
+    """
+    Bottom of the nearest figure-caption line above ``caption_y0``, if any.
+
+    Used to keep orphan crops from swallowing the previous figure on the page.
+    """
+    best_bottom: float | None = None
+    for block in page.get_text("dict")["blocks"]:
+        if block.get("type") != 0:
+            continue
+        for line in block.get("lines", []):
+            spans = line.get("spans") or []
+            if not spans:
+                continue
+            text = "".join(span.get("text", "") for span in spans).strip()
+            if not text or not _PDF_CAPTION_ANCHOR_PATTERN.match(text):
+                continue
+            y1 = max(span["bbox"][3] for span in spans)
+            if y1 >= caption_y0 - 4.0:
+                continue
+            if best_bottom is None or y1 > best_bottom:
+                best_bottom = y1
+    return best_bottom
+
+
+def _infer_crop_rect_for_caption_box(
+    page: pymupdf.Page,
+    caption_x0: float,
+    caption_y0: float,
+    caption_x1: float,
+    caption_y1: float,
+    *,
+    caption_gap: float = 12.0,
+    min_overlap_ratio: float = 0.2,
+) -> pymupdf.Rect | None:
+    """
+    Infer a figure crop for one caption box: above (drawings/images), then side.
+    """
+    drawing_rect = _union_drawing_rects_for_caption(
+        page,
+        caption_x0,
+        caption_y0,
+        caption_x1,
+        caption_gap=caption_gap,
+        min_overlap_ratio=min_overlap_ratio,
+        allow_relaxed_overlap=True,
+    )
+    image_rect = _select_image_band_for_caption(
+        _unique_image_rects(page),
+        caption_x0,
+        caption_y0,
+        caption_x1,
+        caption_gap=caption_gap,
+        min_overlap_ratio=min_overlap_ratio,
+        allow_relaxed_overlap=True,
+    )
+    # Also try get_image_info mosaics (Nature multi-panel bitmaps).
+    info_rects = [
+        pymupdf.Rect(info["bbox"])
+        for info in page.get_image_info()
+        if info.get("bbox")
+    ]
+    mosaic_rect = _select_image_band_for_caption(
+        info_rects,
+        caption_x0,
+        caption_y0,
+        caption_x1,
+        caption_gap=caption_gap,
+        min_overlap_ratio=min_overlap_ratio,
+        allow_relaxed_overlap=True,
+    )
+    side_rect = _union_side_adjacent_content(
+        page,
+        caption_x0,
+        caption_y0,
+        caption_x1,
+        caption_y1,
+    )
+
+    candidates = [
+        rect
+        for rect in (drawing_rect, image_rect, mosaic_rect, side_rect)
+        if rect is not None
+    ]
+    if not candidates:
+        return None
+
+    # Prefer the largest plausible crop that still ends near the caption
+    # (or beside it for side layouts).
+    def _score(rect: pymupdf.Rect) -> float:
+        area = rect.width * rect.height
+        # Soft penalty if the crop is far above the caption (likely another fig).
+        gap = caption_y0 - rect.y1
+        if gap > MAX_CAPTION_BAND_GAP * 4:
+            area *= 0.25
+        return area
+
+    best = max(candidates, key=_score)
+
+    # Clamp top so a prior figure caption on the same page is not included.
+    prior_bottom = _previous_figure_caption_bottom(page, caption_y0)
+    if prior_bottom is not None and best.y0 < prior_bottom:
+        clamped = pymupdf.Rect(best)
+        clamped.y0 = prior_bottom + 4.0
+        if clamped.height >= MIN_GRAPHIC_HEIGHT:
+            best = clamped
+
+    expanded = _expand_rect_for_axis_labels(
+        page,
+        best,
+        caption_y0 if best.y1 <= caption_y0 + 2.0 else best.y1 + caption_gap,
+        caption_gap=caption_gap,
+    )
+    return expanded
 
 
 def infer_graphic_coords_from_embedded_images(
@@ -464,6 +786,7 @@ def infer_graphic_coords_from_embedded_images(
                 caption_x1,
                 caption_gap=caption_gap,
                 min_overlap_ratio=min_overlap_ratio,
+                allow_relaxed_overlap=True,
             )
 
             if best_band is not None:
@@ -527,6 +850,7 @@ def infer_graphic_coords_from_pdf(
                 caption_x1,
                 caption_gap=caption_gap,
                 min_overlap_ratio=min_overlap_ratio,
+                allow_relaxed_overlap=True,
             )
 
             if figure_rect is not None:
@@ -546,6 +870,53 @@ def infer_graphic_coords_from_pdf(
         return None
 
     return format_grobid_coords(inferred_boxes)
+
+
+def infer_graphic_coords_from_caption_box(
+    pdf_path: str | Path,
+    page_number: int,
+    caption_x0: float,
+    caption_y0: float,
+    caption_x1: float,
+    caption_y1: float,
+    *,
+    caption_gap: float = 12.0,
+    min_overlap_ratio: float = 0.2,
+) -> str | None:
+    """
+    Infer a figure crop from a caption bounding box on a single PDF page.
+
+    Used by orphan-figure recovery when GROBID never emitted a ``<figure>``.
+    """
+    document = pymupdf.open(pdf_path)
+    try:
+        if not 1 <= page_number <= document.page_count:
+            return None
+        page = document.load_page(page_number - 1)
+        crop = _infer_crop_rect_for_caption_box(
+            page,
+            caption_x0,
+            caption_y0,
+            caption_x1,
+            caption_y1,
+            caption_gap=caption_gap,
+            min_overlap_ratio=min_overlap_ratio,
+        )
+        if crop is None:
+            return None
+        return format_grobid_coords(
+            [
+                (
+                    page_number,
+                    crop.x0,
+                    crop.y0,
+                    crop.width,
+                    crop.height,
+                )
+            ]
+        )
+    finally:
+        document.close()
 
 
 def _caption_top_by_page(
@@ -618,13 +989,57 @@ def _infer_crop_from_figure_coords(
     pdf_path: str | Path,
     figure_coords: str,
 ) -> str | None:
-    crop_coords = infer_graphic_coords_from_pdf(pdf_path, figure_coords)
-    if not crop_coords:
-        crop_coords = infer_graphic_coords_from_embedded_images(
-            pdf_path,
-            figure_coords,
-        )
-    return crop_coords
+    """
+    Infer a crop from caption coords: vector drawings, image bands, mosaics,
+    and side-adjacent layouts (Nature right-column captions).
+    """
+    boxes_by_page = _caption_boxes_by_page(figure_coords)
+    if not boxes_by_page:
+        # Fall back to legacy single-strategy helpers when coords are empty
+        # or only contain graphic-sized boxes.
+        crop_coords = infer_graphic_coords_from_pdf(pdf_path, figure_coords)
+        if not crop_coords:
+            crop_coords = infer_graphic_coords_from_embedded_images(
+                pdf_path,
+                figure_coords,
+            )
+        return crop_coords
+
+    inferred_boxes: list[tuple[int, float, float, float, float]] = []
+    document = pymupdf.open(pdf_path)
+    try:
+        for page_number, page_captions in boxes_by_page.items():
+            if not 1 <= page_number <= document.page_count:
+                continue
+            page = document.load_page(page_number - 1)
+            caption_x0 = min(box[0] for box in page_captions)
+            caption_y0 = min(box[1] for box in page_captions)
+            caption_x1 = max(box[2] for box in page_captions)
+            caption_y1 = max(box[3] for box in page_captions)
+            crop = _infer_crop_rect_for_caption_box(
+                page,
+                caption_x0,
+                caption_y0,
+                caption_x1,
+                caption_y1,
+            )
+            if crop is None:
+                continue
+            inferred_boxes.append(
+                (
+                    page_number,
+                    crop.x0,
+                    crop.y0,
+                    crop.width,
+                    crop.height,
+                )
+            )
+    finally:
+        document.close()
+
+    if not inferred_boxes:
+        return None
+    return format_grobid_coords(inferred_boxes)
 
 
 def _prefer_larger_related_crop(
@@ -907,6 +1322,168 @@ _FIGURE_CAPTION_LEAD_PATTERN = re.compile(
     r"|supporting\s+(?:information\s+)?|data\s+)?fig(?:ure)?s?\.?\b",
     flags=re.IGNORECASE,
 )
+
+# PDF-line caption anchors for orphan recovery (Mode A / merged TEI siblings).
+_PDF_CAPTION_ANCHOR_PATTERN = re.compile(
+    r"""
+    ^\s*
+    (?P<kind>
+        extended\s+data\s+fig(?:ure)?s?\.?
+        | supplementary\s+(?:information\s+)?fig(?:ure)?s?\.?
+        | supporting\s+(?:information\s+)?fig(?:ure)?s?\.?
+        | fig(?:ure)?s?\.?
+    )
+    \s*
+    (?:[\(\[|\s])*
+    (?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)
+    \b
+    """,
+    flags=re.IGNORECASE | re.VERBOSE,
+)
+
+_MAX_ORPHAN_FIGURE_NUMBER = 40
+
+
+@dataclass(frozen=True)
+class PdfCaptionAnchor:
+    """A caption lead found by scanning PDF text (not GROBID TEI)."""
+
+    page: int  # 1-based
+    x0: float
+    y0: float
+    x1: float
+    y1: float
+    text: str
+    kind: str  # fig / ed_fig / supp_fig
+    number: str
+
+    @property
+    def figure_id(self) -> str:
+        return f"{self.kind}_{self.number}"
+
+    @property
+    def coords(self) -> str:
+        return format_grobid_coords(
+            [(self.page, self.x0, self.y0, self.x1 - self.x0, self.y1 - self.y0)]
+        )
+
+
+def _kind_from_pdf_caption_match(kind_text: str) -> str:
+    lowered = kind_text.lower()
+    if "extended" in lowered:
+        return "ed_fig"
+    if "supplementary" in lowered or "supporting" in lowered:
+        return "supp_fig"
+    return "fig"
+
+
+def _plausible_orphan_number(number: str) -> str | None:
+    # Orphan recovery only trusts plain integers (Fig. 3), not panel suffixes
+    # like "4d" that appear in body callouts and create false figure ids.
+    match = re.fullmatch(r"(\d{1,2})", number.lower().strip())
+    if not match:
+        return None
+    value = int(match.group(1))
+    if value < 1 or value > _MAX_ORPHAN_FIGURE_NUMBER:
+        return None
+    return str(value)
+
+
+def find_pdf_figure_caption_anchors(
+    pdf_path: str | Path,
+) -> list[PdfCaptionAnchor]:
+    """
+    Scan PDF text for caption leads (Fig. N, Extended Data Fig. N, …).
+
+    Only matches line-leading caption text to avoid body citations like
+    "as shown in Fig. 2". Deduplicates by (kind, number), keeping the first
+    (usually the real caption).
+    """
+    pdf_path = Path(pdf_path)
+    best_by_key: dict[tuple[str, str], PdfCaptionAnchor] = {}
+    document = pymupdf.open(pdf_path)
+
+    try:
+        for page_index in range(document.page_count):
+            page = document.load_page(page_index)
+            page_number = page_index + 1
+            blocks = page.get_text("dict")["blocks"]
+            for block in blocks:
+                if block.get("type") != 0:
+                    continue
+                for line in block.get("lines", []):
+                    spans = line.get("spans") or []
+                    if not spans:
+                        continue
+                    text = "".join(span.get("text", "") for span in spans)
+                    stripped = text.strip()
+                    if not stripped:
+                        continue
+                    match = _PDF_CAPTION_ANCHOR_PATTERN.match(stripped)
+                    if not match:
+                        continue
+                    number = _plausible_orphan_number(match.group("number"))
+                    if not number:
+                        continue
+                    kind = _kind_from_pdf_caption_match(match.group("kind"))
+                    key = (kind, number)
+                    # Caption-like continuation: Nature pipes, ACS "Figure N.", etc.
+                    tail = stripped[match.end() : match.end() + 16]
+                    # Body callouts often look like "Fig. 16), in agreement...".
+                    if re.match(r"\s*[),]", tail):
+                        continue
+                    bare_label = bool(
+                        re.fullmatch(
+                            r"fig(?:ure)?s?\.?\s*\d{1,2}\.?",
+                            stripped,
+                            flags=re.IGNORECASE,
+                        )
+                    )
+                    strong_tail = bool(
+                        re.match(r"\s*[\|:\-–—]", tail)
+                        or re.match(r"\.\s+[A-Z(]", tail)
+                        or re.match(r"\s+[A-Z(]", tail)
+                    )
+                    if not strong_tail and not bare_label and len(stripped) < 28:
+                        # Short non-caption fragments / TOC entries.
+                        continue
+                    # Guard against body callouts with improbably high numbers.
+                    value = int(number)
+                    if kind == "fig" and value > 20:
+                        continue
+                    if kind == "supp_fig" and value > 25:
+                        continue
+                    x0 = min(span["bbox"][0] for span in spans)
+                    y0 = min(span["bbox"][1] for span in spans)
+                    x1 = max(span["bbox"][2] for span in spans)
+                    y1 = max(span["bbox"][3] for span in spans)
+                    candidate = PdfCaptionAnchor(
+                        page=page_number,
+                        x0=x0,
+                        y0=y0,
+                        x1=x1,
+                        y1=y1,
+                        text=stripped[:240],
+                        kind=kind,
+                        number=number,
+                    )
+                    previous = best_by_key.get(key)
+                    # Prefer the longer caption text (body callouts are short;
+                    # real captions describe the figure).
+                    if previous is None or len(candidate.text) > len(previous.text) + 8:
+                        best_by_key[key] = candidate
+                    elif (
+                        previous is not None
+                        and abs(len(candidate.text) - len(previous.text)) <= 8
+                        and candidate.y0 > previous.y0
+                        and candidate.page == previous.page
+                    ):
+                        # Same length-ish: prefer the lower line (caption under art).
+                        best_by_key[key] = candidate
+    finally:
+        document.close()
+
+    return list(best_by_key.values())
 
 
 def _looks_like_figure_caption(caption: str | None) -> bool:

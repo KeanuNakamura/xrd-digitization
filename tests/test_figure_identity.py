@@ -16,8 +16,10 @@ from pdf_parser import (
     Figure,
     FIGURE_KIND_EXTENDED,
     FIGURE_KIND_MAIN,
+    expand_merged_caption_figures,
     figure_label_from_caption,
     is_valid_figure_label,
+    parse_all_figure_identities,
     parse_figure_identity,
     primary_figure_number_from_stem,
     refine_figure_identities,
@@ -185,3 +187,47 @@ def test_validate_flags_duplicate_extractions():
     ]
     warnings = validate_extracted_figures(figs)
     assert any("multiple extractions for fig_2" in w for w in warnings)
+
+
+def test_parse_all_identities_from_merged_caption():
+    identities = parse_all_figure_identities(
+        "Fig. 1 | Fig. 2 | Extended Data Fig. 3 | Extended Data Fig. 5 |"
+    )
+    ids = [identity.figure_id for identity in identities]
+    assert ids == ["fig_1", "fig_2", "ed_fig_3", "ed_fig_5"]
+
+
+def test_expand_merged_caption_adds_sibling_stubs():
+    figs = [
+        _figure(
+            figure_id="fig_1",
+            caption="Fig. 1 | Fig. 2 | Extended Data Fig. 5 |",
+            graphic_coords="1,0,0,100,100",
+            image_paths=["fig_1.png"],
+        )
+    ]
+    notes = expand_merged_caption_figures(figs)
+    assert any("fig_2" in note for note in notes)
+    assert any("ed_fig_5" in note for note in notes)
+    ids = {figure.figure_id for figure in figs}
+    assert ids >= {"fig_1", "fig_2", "ed_fig_5"}
+
+
+def test_pdf_caption_anchors_reject_body_callouts(tmp_path):
+    import pymupdf
+    from parse_figures import find_pdf_figure_caption_anchors
+
+    doc = pymupdf.open()
+    page = doc.new_page()
+    page.insert_text((72, 72), "Fig. 16), in agreement with previous reports.")
+    page.insert_text((72, 200), "Fig. 2 | Optical properties of fluoride-treated nanocrystals")
+    page.insert_text((72, 400), "Figure 3. Schematic of the device stack used in this work.")
+    pdf_path = tmp_path / "anchors.pdf"
+    doc.save(pdf_path)
+    doc.close()
+
+    anchors = find_pdf_figure_caption_anchors(pdf_path)
+    ids = {anchor.figure_id for anchor in anchors}
+    assert "fig_16" not in ids
+    assert "fig_2" in ids
+    assert "fig_3" in ids

@@ -11,7 +11,6 @@ from figure_analysis.schemas import (
     EvidenceCitation,
     FigureAnalysisPayload,
     FigureAnalysisResult,
-    Limitation,
     PaperAnalysis,
     ScientificInterpretation,
 )
@@ -20,7 +19,6 @@ __all__ = [
     "EvidenceCitation",
     "FigureAnalysisPayload",
     "FigureAnalysisResult",
-    "Limitation",
     "PaperAnalysis",
     "ScientificInterpretation",
     "analyze_figure_image",

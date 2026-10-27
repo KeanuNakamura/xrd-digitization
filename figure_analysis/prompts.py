@@ -174,9 +174,7 @@ positions, phases, experimental conditions, and per-figure analyses).
 Your job is scientific reasoning across figures — not generic summarization \
 and not a restatement of each figure's analysis. Independently analyze the \
 structured XRD data, identify cross-figure patterns, and propose scientifically \
-reasonable interpretations when supported by the evidence. Also identify \
-limitations such as missing FWHM, weak quantitative support, or alternative \
-explanations.
+reasonable interpretations when supported by the evidence.
 
 IMPORTANT RULES
 
@@ -195,20 +193,23 @@ quotes, measurements, or figure references.
        - "author_reported": conclusion stated by authors in caption/text
        - "ai_inferred": pattern you derive from structured measurements/trends
        - "hypothesis": speculative / weakly supported; use sparingly
-   - Include a short "reasoning" field explaining how the cited evidence supports \
-the claim.
+   - Keep "claim" and "reasoning" strictly separate:
+       - claim: a short assertive conclusion only (what is concluded). Do NOT \
+include justification, evidence walkthrough, "because/since/as shown by", or \
+citations inside the claim text.
+       - reasoning: how the cited evidence supports that claim. Put all \
+justification and evidence linkage here, not in claim.
    - If a claim cannot be supported by the provided data, either omit it or mark \
-it as reasoning_type="hypothesis" and say so in reasoning.
+it as reasoning_type="hypothesis" and explain the weakness in reasoning.
 
-3. Every scientific_interpretation and every limitation MUST include at least \
-one citation. Each citation has:
+3. Every scientific_interpretation MUST include at least one citation. Each \
+citation has:
    - figure_id: e.g. "fig_2" or "fig_3_2" (use the figure_id from the JSON)
    - source: where the evidence comes from, e.g. "caption", "text", \
 "analysis.trends", "analysis.curves[0].peak_positions", \
 "analysis.curves[0].fwhm"
    - evidence: a short exact quote from caption/text, OR a specific extracted \
-measurement/trend, OR for missing-data limitations a JSON field note such as \
-"fig_2.analysis.curves[0].fwhm = null"
+measurement/trend
    - For multi-figure conclusions, include multiple citations.
    - Use exact quotes when citing caption or text.
    - A citation establishes where evidence comes from; it does not prove the \
@@ -223,11 +224,6 @@ explanations when intensity trends differ and peak positions match.
 processing conditions, crystallinity changes, and consistent vs. conflicting \
 evidence.
 
-6. In limitations, note missing information, uncertainties, alternative \
-explanations, and conclusions that cannot be established from the supplied \
-metadata alone. Each limitation is {claim, citations[]} with the same citation \
-rules as interpretations.
-
 OUTPUT SHAPE (JSON)
 - summary: concise scientific summary of XRD / materials-characterization \
 findings for the paper as a whole
@@ -235,7 +231,8 @@ findings for the paper as a whole
 - key_findings: list of {finding, figure_ids[]} for important results/trends
 - scientific_interpretation: list of {claim, reasoning_type, reasoning, \
 citations[{figure_id, source, evidence}]}
-- limitations: list of {claim, citations[{figure_id, source, evidence}]}
+  - claim = assertive conclusion only
+  - reasoning = separate justification / evidence linkage
 
 Respond with valid JSON only.
 """
@@ -250,9 +247,11 @@ def build_paper_user_prompt(paper_payload: dict) -> str:
             "Independently reason about relationships between figures; do not "
             "merely repeat each figure's existing analysis or author text.",
             "Distinguish author_reported vs ai_inferred vs hypothesis.",
-            "Every scientific_interpretation and limitation must cite evidence "
-            "from the JSON (figure_id + source + evidence). Never fabricate "
-            "quotes or measurements.",
+            "Keep claim and reasoning distinct: claim is assertive conclusion "
+            "only; put all justification in reasoning.",
+            "Every scientific_interpretation must cite evidence from the JSON "
+            "(figure_id + source + evidence). Never fabricate quotes or "
+            "measurements.",
             "Identical peak positions across samples may be real (intensity "
             "can differ).",
             "",

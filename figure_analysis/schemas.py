@@ -78,20 +78,15 @@ class EvidenceCitation(BaseModel):
 
 
 class ScientificInterpretation(BaseModel):
-    """One paper-level interpretation with reasoning type and citations."""
+    """One paper-level interpretation with claim, reasoning, and citations."""
 
+    # Assertive conclusion only — no because/justification wording.
     claim: str = ""
     reasoning_type: Literal["author_reported", "ai_inferred", "hypothesis"] = (
         "ai_inferred"
     )
+    # How the cited evidence supports the claim (kept separate from claim).
     reasoning: str = ""
-    citations: list[EvidenceCitation] = Field(default_factory=list)
-
-
-class Limitation(BaseModel):
-    """One limitation or uncertainty with supporting citations."""
-
-    claim: str = ""
     citations: list[EvidenceCitation] = Field(default_factory=list)
 
 
@@ -104,4 +99,3 @@ class PaperAnalysis(BaseModel):
     scientific_interpretation: list[ScientificInterpretation] = Field(
         default_factory=list
     )
-    limitations: list[Limitation] = Field(default_factory=list)

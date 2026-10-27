@@ -25,7 +25,6 @@ from figure_analysis.schemas import (
     FigureAnalysisResult,
     KeyFinding,
     LatticeParameters,
-    Limitation,
     PaperAnalysis,
     ScientificInterpretation,
     XrdCurve,
@@ -202,14 +201,14 @@ def test_paper_analysis_schema_is_strict():
     assert "experimental_variables" in props
     assert "key_findings" in props
     assert "scientific_interpretation" in props
-    assert "limitations" in props
+    assert "limitations" not in props
     defs = schema.get("$defs", {})
     assert "KeyFinding" in defs
     assert "finding" in defs["KeyFinding"]["properties"]
     assert "figure_ids" in defs["KeyFinding"]["properties"]
     assert "EvidenceCitation" in defs
     assert "ScientificInterpretation" in defs
-    assert "Limitation" in defs
+    assert "Limitation" not in defs
     interp_props = defs["ScientificInterpretation"]["properties"]
     assert "claim" in interp_props
     assert "reasoning_type" in interp_props
@@ -245,24 +244,16 @@ def test_paper_analysis_roundtrip():
                 ],
             )
         ],
-        limitations=[
-            Limitation(
-                claim="No absolute crystallite sizes reported.",
-                citations=[
-                    EvidenceCitation(
-                        figure_id="fig_2",
-                        source="analysis.curves[0].fwhm",
-                        evidence="fig_2.analysis.curves[0].fwhm = null",
-                    )
-                ],
-            )
-        ],
     )
     dumped = result.model_dump(mode="json")
+    assert "limitations" not in dumped
     assert dumped["key_findings"][0]["figure_ids"] == ["fig_1", "fig_2"]
+    assert dumped["scientific_interpretation"][0]["claim"] == (
+        "Higher annealing increases crystallinity."
+    )
     assert dumped["scientific_interpretation"][0]["reasoning_type"] == "ai_inferred"
+    assert dumped["scientific_interpretation"][0]["reasoning"]
     assert dumped["scientific_interpretation"][0]["citations"][0]["figure_id"] == "fig_2"
-    assert dumped["limitations"][0]["citations"][0]["source"] == "analysis.curves[0].fwhm"
     assert PaperAnalysis.model_validate(dumped).summary == result.summary
 
 
@@ -276,4 +267,6 @@ def test_paper_prompt_embeds_payload_and_rules():
     assert "author_reported" in PAPER_SYSTEM_PROMPT
     assert "ai_inferred" in PAPER_SYSTEM_PROMPT
     assert "citations" in PAPER_SYSTEM_PROMPT.lower()
+    assert "limitations" not in PAPER_SYSTEM_PROMPT.lower()
+    assert "claim and reasoning" in prompt.lower() or "claim is assertive" in prompt.lower()
     assert "Never fabricate" in prompt or "never fabricate" in PAPER_SYSTEM_PROMPT.lower()
