@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Protocol
@@ -240,6 +241,9 @@ def _union_drawing_rects_for_caption(
     min_overlap_ratio: float = 0.2,
 ) -> pymupdf.Rect | None:
     caption_width = max(caption_x1 - caption_x0, 1.0)
+    effective_overlap = min_overlap_ratio
+    if caption_width >= 300.0:
+        effective_overlap = min(min_overlap_ratio, 0.12)
     candidate_rects: list[pymupdf.Rect] = []
 
     for drawing in page.get_drawings():
@@ -256,7 +260,7 @@ def _union_drawing_rects_for_caption(
         overlap_x1 = min(rect.x1, caption_x1)
         overlap_width = overlap_x1 - overlap_x0
 
-        if overlap_width / caption_width < min_overlap_ratio:
+        if overlap_width / caption_width < effective_overlap:
             continue
 
         candidate_rects.append(rect)
@@ -344,9 +348,16 @@ def _select_image_band_for_caption(
     based on whether the strip starts above the caption. Publishers often
     rasterize x-axis tick labels into a final strip that ends only a few points
     above the caption, so requiring a large bottom clearance cuts those values.
+
+    For multi-panel figures rendered as stacked image strips, nearby qualifying
+    bands are unioned so the crop keeps all panels rather than only the lowest.
     """
     _ = caption_gap  # inclusion uses caption top; see docstring
     caption_width = max(caption_x1 - caption_x0, 1.0)
+    # Wide Nature-style captions often underlap side panels; relax slightly.
+    effective_overlap = min_overlap_ratio
+    if caption_width >= 300.0:
+        effective_overlap = min(min_overlap_ratio, 0.12)
 
     candidate_rects: list[pymupdf.Rect] = []
 
@@ -360,7 +371,7 @@ def _select_image_band_for_caption(
         overlap_x1 = min(rect.x1, caption_x1)
         overlap_width = overlap_x1 - overlap_x0
 
-        if overlap_width / caption_width < min_overlap_ratio:
+        if overlap_width / caption_width < effective_overlap:
             if rect.width < MIN_GRAPHIC_WIDTH:
                 continue
 
@@ -369,7 +380,7 @@ def _select_image_band_for_caption(
     if not candidate_rects:
         return None
 
-    best_band: pymupdf.Rect | None = None
+    qualifying_bands: list[pymupdf.Rect] = []
     max_y1 = caption_y0 - CAPTION_CROP_CLEARANCE
 
     for band in _group_rects_into_bands(candidate_rects):
@@ -386,13 +397,34 @@ def _select_image_band_for_caption(
 
         caption_gap_distance = caption_y0 - band.y1
 
-        if caption_gap_distance > MAX_CAPTION_BAND_GAP:
+        # Allow taller multi-panel stacks: gap limit applies to the lowest band
+        # only; upper panels are merged below when vertically adjacent.
+        if caption_gap_distance > MAX_CAPTION_BAND_GAP * 3:
             continue
 
-        if best_band is None or band.y1 > best_band.y1:
-            best_band = band
+        qualifying_bands.append(band)
 
-    return best_band
+    if not qualifying_bands:
+        return None
+
+    # Prefer bands near the caption, then union upward while gaps stay small.
+    qualifying_bands.sort(key=lambda rect: rect.y1, reverse=True)
+    union = pymupdf.Rect(qualifying_bands[0])
+    for band in qualifying_bands[1:]:
+        vertical_gap = union.y0 - band.y1
+        if vertical_gap > IMAGE_BAND_VERTICAL_GAP * 4:
+            continue
+        # Require some horizontal affinity with the growing union / caption.
+        overlap_x0 = max(band.x0, min(union.x0, caption_x0))
+        overlap_x1 = min(band.x1, max(union.x1, caption_x1))
+        if overlap_x1 - overlap_x0 < min(band.width, union.width) * 0.15:
+            continue
+        union.include_rect(band)
+
+    if union.height < MIN_IMAGE_BAND_HEIGHT or union.width < MIN_GRAPHIC_WIDTH:
+        return None
+
+    return union
 
 
 def infer_graphic_coords_from_embedded_images(
@@ -518,8 +550,17 @@ def infer_graphic_coords_from_pdf(
 
 def _caption_top_by_page(
     figure_coords: str | None,
+    *,
+    crop_boxes_by_page: dict[int, list[tuple[float, float, float, float]]]
+    | None = None,
 ) -> dict[int, float]:
-    """Map 1-based page number → top of caption text boxes on that page."""
+    """
+    Map 1-based page number → top of caption text boxes on that page.
+
+    When ``crop_boxes_by_page`` is provided, ignore side-panel / in-figure text
+    that sits beside the graphic (common GROBID mis-tag). Only boxes below the
+    crop, or overlapping it horizontally in the lower portion, clamp the crop.
+    """
     if not figure_coords or not figure_coords.strip():
         return {}
 
@@ -527,8 +568,121 @@ def _caption_top_by_page(
     for page_number, boxes in _caption_boxes_by_page(figure_coords).items():
         if not boxes:
             continue
-        tops[page_number] = min(box[1] for box in boxes)
+
+        crop_boxes = (crop_boxes_by_page or {}).get(page_number)
+        if not crop_boxes:
+            tops[page_number] = min(box[1] for box in boxes)
+            continue
+
+        crop_x0 = min(box[0] for box in crop_boxes)
+        crop_y0 = min(box[1] for box in crop_boxes)
+        crop_x1 = max(box[2] for box in crop_boxes)
+        crop_y1 = max(box[3] for box in crop_boxes)
+        crop_width = max(crop_x1 - crop_x0, 1.0)
+        crop_height = max(crop_y1 - crop_y0, 1.0)
+
+        below_or_footer: list[tuple[float, float, float, float]] = []
+        for box in boxes:
+            x0, y0, x1, y1 = box
+            # True captions sit under the graphic.
+            if y0 >= crop_y1 - 8.0:
+                below_or_footer.append(box)
+                continue
+            # Ignore text that starts near the top of the crop (side labels /
+            # panel letters) unless it heavily overlaps and lies in the bottom
+            # third — still prefer below-crop boxes when any exist.
+            overlap = max(0.0, min(x1, crop_x1) - max(x0, crop_x0))
+            if (
+                overlap / crop_width >= 0.35
+                and y0 >= crop_y0 + 0.65 * crop_height
+            ):
+                below_or_footer.append(box)
+
+        if below_or_footer:
+            tops[page_number] = min(box[1] for box in below_or_footer)
+        # If every "caption" box is side text, do not clamp.
     return tops
+
+
+def _coords_area_sum(coords_string: str | None) -> float:
+    if not coords_string or not str(coords_string).strip():
+        return 0.0
+    total = 0.0
+    for page, x, y, width, height in parse_grobid_coords(coords_string):
+        _ = (page, x, y)
+        total += max(width, 0.0) * max(height, 0.0)
+    return total
+
+
+def _infer_crop_from_figure_coords(
+    pdf_path: str | Path,
+    figure_coords: str,
+) -> str | None:
+    crop_coords = infer_graphic_coords_from_pdf(pdf_path, figure_coords)
+    if not crop_coords:
+        crop_coords = infer_graphic_coords_from_embedded_images(
+            pdf_path,
+            figure_coords,
+        )
+    return crop_coords
+
+
+def _prefer_larger_related_crop(
+    primary: str,
+    alternative: str | None,
+    *,
+    min_area_ratio: float = 1.35,
+) -> str:
+    """
+    Prefer ``alternative`` when it covers substantially more area than
+    ``primary`` on the same page(s) — typical of partial GROBID graphic boxes
+    on multi-panel figures.
+    """
+    if not alternative:
+        return primary
+
+    primary_boxes = parse_grobid_coords(primary)
+    alt_boxes = parse_grobid_coords(alternative)
+    if not primary_boxes or not alt_boxes:
+        return primary
+
+    primary_pages = {box[0] for box in primary_boxes}
+    alt_pages = {box[0] for box in alt_boxes}
+    if primary_pages.isdisjoint(alt_pages):
+        return primary
+
+    primary_area = _coords_area_sum(primary)
+    alt_area = _coords_area_sum(alternative)
+    if primary_area <= 0:
+        return alternative
+    if alt_area < primary_area * min_area_ratio:
+        return primary
+
+    # Require rough spatial relatedness on at least one shared page.
+    for page in primary_pages & alt_pages:
+        p_boxes = [box for box in primary_boxes if box[0] == page]
+        a_boxes = [box for box in alt_boxes if box[0] == page]
+        px0 = min(box[1] for box in p_boxes)
+        py0 = min(box[2] for box in p_boxes)
+        px1 = max(box[1] + box[3] for box in p_boxes)
+        py1 = max(box[2] + box[4] for box in p_boxes)
+        ax0 = min(box[1] for box in a_boxes)
+        ay0 = min(box[2] for box in a_boxes)
+        ax1 = max(box[1] + box[3] for box in a_boxes)
+        ay1 = max(box[2] + box[4] for box in a_boxes)
+        overlap_x = max(0.0, min(px1, ax1) - max(px0, ax0))
+        overlap_y = max(0.0, min(py1, ay1) - max(py0, ay0))
+        primary_area_page = max((px1 - px0) * (py1 - py0), 1.0)
+        if overlap_x * overlap_y >= primary_area_page * 0.25:
+            LOGGER.info(
+                "Replacing undersized GROBID graphic crop "
+                "(area %.0f) with inferred crop (area %.0f)",
+                primary_area,
+                alt_area,
+            )
+            return alternative
+
+    return primary
 
 
 def select_figure_crop_coords(
@@ -539,14 +693,22 @@ def select_figure_crop_coords(
     """
     Choose the best GROBID coordinate string for cropping a figure image.
 
-    Prefer explicit ``<graphic coords="...">`` values from GROBID. When those
-    are missing, fall back to large bounding boxes on the figure element and
-    ignore caption-sized text boxes.
+    Prefer explicit ``<graphic coords="...">`` values from GROBID, but replace
+    them when PDF inference finds a substantially larger related region (partial
+    graphic boxes on multi-panel figures). When graphics are missing, fall back
+    to large element boxes and vector/image inference.
     """
-    crop_coords: str | None
+    crop_coords: str | None = None
+    inferred: str | None = None
+
+    if pdf_path is not None and figure_coords and figure_coords.strip():
+        inferred = _infer_crop_from_figure_coords(pdf_path, figure_coords)
 
     if graphic_coords and graphic_coords.strip():
-        crop_coords = graphic_coords.strip()
+        crop_coords = _prefer_larger_related_crop(
+            graphic_coords.strip(),
+            inferred,
+        )
     elif not figure_coords or not figure_coords.strip():
         return None
     else:
@@ -556,25 +718,17 @@ def select_figure_crop_coords(
             if _is_graphic_sized_box(box[3], box[4])
         ]
 
-        if not image_boxes:
-            if pdf_path is not None and figure_coords:
-                crop_coords = infer_graphic_coords_from_pdf(
-                    pdf_path,
-                    figure_coords,
-                )
-                if not crop_coords:
-                    crop_coords = infer_graphic_coords_from_embedded_images(
-                        pdf_path,
-                        figure_coords,
-                    )
-            else:
-                return None
+        if image_boxes:
+            from_element = format_grobid_coords(image_boxes)
+            crop_coords = _prefer_larger_related_crop(from_element, inferred)
         else:
-            crop_coords = format_grobid_coords(image_boxes)
+            crop_coords = inferred
+
+    if not crop_coords:
+        return None
 
     if (
-        crop_coords
-        and pdf_path is not None
+        pdf_path is not None
         and figure_coords
         and figure_coords.strip()
     ):
@@ -631,17 +785,20 @@ def resolve_figure_page_clips(
         else max(padding, DEFAULT_CROP_PADDING_BOTTOM)
     )
 
-    if max_y1_by_page is None and caption_coords:
-        max_y1_by_page = {
-            page: top - CAPTION_CROP_CLEARANCE
-            for page, top in _caption_top_by_page(caption_coords).items()
-        }
-
     boxes_by_page: dict[int, list[tuple[float, float, float, float]]] = (
         defaultdict(list)
     )
     for page_number, x, y, width, height in parse_grobid_coords(coords_string):
         boxes_by_page[page_number].append((x, y, x + width, y + height))
+
+    if max_y1_by_page is None and caption_coords:
+        max_y1_by_page = {
+            page: top - CAPTION_CROP_CLEARANCE
+            for page, top in _caption_top_by_page(
+                caption_coords,
+                crop_boxes_by_page=boxes_by_page,
+            ).items()
+        }
 
     resolved: list[tuple[int, pymupdf.Page, pymupdf.Rect]] = []
     for page_number, page_boxes in sorted(boxes_by_page.items()):
@@ -660,7 +817,12 @@ def resolve_figure_page_clips(
         y1 = max(box[3] for box in page_boxes) + pad_bottom
 
         if max_y1_by_page and page_number in max_y1_by_page:
-            y1 = min(y1, max_y1_by_page[page_number])
+            clamped = max_y1_by_page[page_number]
+            # Never clamp away most of the graphic — side-text false captions
+            # previously collapsed multi-panel figures to a few pixels tall.
+            min_keep = y0 + 0.45 * max(y1 - y0, 1.0)
+            if clamped >= min_keep:
+                y1 = min(y1, clamped)
 
         # Keep the crop inside the visible page.
         x0 = max(page.rect.x0, x0)
@@ -740,6 +902,21 @@ def crop_figure_from_grobid_coords(
     return output_paths
 
 
+_FIGURE_CAPTION_LEAD_PATTERN = re.compile(
+    r"^\s*(?:extended\s+data\s+|supplementary\s+(?:information\s+)?"
+    r"|supporting\s+(?:information\s+)?|data\s+)?fig(?:ure)?s?\.?\b",
+    flags=re.IGNORECASE,
+)
+
+
+def _looks_like_figure_caption(caption: str | None) -> bool:
+    text = (caption or "").strip()
+    if not text:
+        # Empty captions are allowed for graphic-only Extended Data pages.
+        return False
+    return bool(_FIGURE_CAPTION_LEAD_PATTERN.match(text))
+
+
 def extract_document_figures(
     pdf_path: str | Path,
     figures: list[FigureLike],
@@ -766,9 +943,30 @@ def extract_document_figures(
             continue
 
         figure_id = figure.figure_id or "unknown_figure"
+        graphic_coords = getattr(figure, "graphic_coords", None)
+        caption = getattr(figure, "caption", None)
+
+        # Body-text phantoms (no <graphic>, caption is prose) produce junk crops.
+        if not (graphic_coords and str(graphic_coords).strip()):
+            if caption and not _looks_like_figure_caption(caption):
+                coords = getattr(figure, "coords", None)
+                has_graphic_box = False
+                if coords and str(coords).strip():
+                    has_graphic_box = any(
+                        _is_graphic_sized_box(box[3], box[4])
+                        for box in parse_grobid_coords(coords)
+                    )
+                if not has_graphic_box:
+                    LOGGER.info(
+                        "Skipping non-figure fragment %s (no graphic, "
+                        "caption is not a figure lead-in).",
+                        figure_id,
+                    )
+                    continue
+
         crop_coords = select_figure_crop_coords(
             figure.coords,
-            figure.graphic_coords,
+            graphic_coords,
             pdf_path=pdf_path,
         )
 

@@ -292,10 +292,10 @@ def _figure_number_from_stem(stem: str) -> int | None:
 
 
 def _stem_is_exact_figure(stem: str, figure_number: int) -> bool:
-    """True when stem is exactly ``fig_N`` / ``figure_N`` (no collision suffix)."""
+    """True when stem is exactly ``fig_N`` / ``ed_fig_N`` / ``supp_fig_N``."""
     return bool(
         re.match(
-            rf"^(?:fig(?:ure)?)_?{figure_number}$",
+            rf"^(?:(?:ed|supp)[_-]?)?fig(?:ure)?_?{figure_number}$",
             stem.strip(),
             flags=re.IGNORECASE,
         )

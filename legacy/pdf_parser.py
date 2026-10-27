@@ -131,16 +131,53 @@ FIGURE_REFERENCE_PATTERN = re.compile(
     r"""
     \b
     (?:
-        fig(?:ure)?s?\.?
+        extended\s+data\s+fig(?:ure)?s?\.?
         |
-        supplementary\s+fig(?:ure)?s?\.?
+        supplementary\s+(?:information\s+)?fig(?:ure)?s?\.?
+        |
+        supporting\s+(?:information\s+)?fig(?:ure)?s?\.?
+        |
+        fig(?:ure)?s?\.?
     )
     \s*
-    (?:[\(\[\s])*
-    (?P<number>[A-Za-z]?\d+[A-Za-z]?)
+    (?:[\(\[\s|])*
+    (?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)
     """,
     flags=re.IGNORECASE | re.VERBOSE,
 )
+
+# Caption lead-in: figure identity at (or near) the start of a caption.
+CAPTION_FIGURE_IDENTITY_PATTERN = re.compile(
+    r"""
+    ^\s*
+    (?:[\|\-–—.:]|\b\d{1,3}\b|[A-Za-z]\b){0,6}\s*
+    (?P<kind>
+        extended\s+data\s+fig(?:ure)?s?\.?
+        | data\s+fig(?:ure)?s?\.?
+        | supplementary\s+(?:information\s+)?fig(?:ure)?s?\.?
+        | supporting\s+(?:information\s+)?fig(?:ure)?s?\.?
+        | fig(?:ure)?s?\.?
+    )
+    \s*
+    (?:[\(\[|\s])*
+    (?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)
+    """,
+    flags=re.IGNORECASE | re.VERBOSE,
+)
+
+EXTENDED_DATA_FIGURE_PATTERN = re.compile(
+    r"\bextended\s+data\s+fig(?:ure)?s?\.?\s*(?:[\(\[|\s])*(?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)",
+    flags=re.IGNORECASE,
+)
+SUPPLEMENTARY_FIGURE_PATTERN = re.compile(
+    r"\b(?:supplementary|supporting)\s+(?:information\s+)?fig(?:ure)?s?\.?\s*(?:[\(\[|\s])*(?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)",
+    flags=re.IGNORECASE,
+)
+
+FIGURE_KIND_MAIN = "fig"
+FIGURE_KIND_EXTENDED = "ed_fig"
+FIGURE_KIND_SUPPLEMENTARY = "supp_fig"
+MAX_PLAUSIBLE_FIGURE_NUMBER = 99
 
 ABBREVIATION_DOT_PATTERN = re.compile(
     r"\b(?:Fig(?:ure)?|vs|etc)\.",
@@ -401,34 +438,179 @@ def classify_section(title: str) -> str:
     return "other"
 
 
+@dataclass(frozen=True)
+class FigureIdentity:
+    """Logical figure identity: kind + numeric/panel label."""
+
+    kind: str
+    number: str
+
+    @property
+    def figure_id(self) -> str:
+        return f"{self.kind}_{self.number}"
+
+
+def _plausible_figure_number(number: str | None) -> str | None:
+    if not number:
+        return None
+    cleaned = normalize_whitespace(number).lower().strip(" .")
+    match = re.fullmatch(r"([a-z]?)(\d{1,3})([a-z]?)", cleaned)
+    if not match:
+        return None
+    prefix, digits, suffix = match.groups()
+    value = int(digits)
+    if value < 1 or value > MAX_PLAUSIBLE_FIGURE_NUMBER:
+        return None
+    # Reject concatenated OCR junk like "1345789" (already blocked by {1,3})
+    # and odd mid-caption artifacts like "53" when clearly two digits glued
+    # without a panel letter — still allow 10–99 for Extended Data.
+    return f"{prefix}{digits}{suffix}"
+
+
+def _kind_from_match_text(kind_text: str) -> str:
+    lowered = kind_text.lower()
+    if "extended" in lowered or lowered.startswith("data fig"):
+        return FIGURE_KIND_EXTENDED
+    if "supplementary" in lowered or "supporting" in lowered:
+        return FIGURE_KIND_SUPPLEMENTARY
+    return FIGURE_KIND_MAIN
+
+
 def normalize_figure_label(label: str | None) -> str | None:
     if not label:
         return None
 
     normalized = normalize_whitespace(label).lower()
+    # Prefer structured prefixes before stripping words.
+    identity = parse_figure_identity(normalized)
+    if identity is not None:
+        return identity.number
+
     normalized = normalized.replace("figure", "fig")
     normalized = re.sub(r"\s+", "", normalized)
     normalized = normalized.rstrip(".")
 
-    match = re.search(r"(\d+)", normalized)
+    match = re.search(r"(\d{1,3})", normalized)
+    if not match:
+        return normalized or None
 
-    if match:
-        return match.group(1)
+    # Reject concatenated digit soups (e.g. label "1345789").
+    if re.fullmatch(r"\d{4,}", normalized):
+        return None
 
-    return normalized or None
+    return _plausible_figure_number(match.group(1))
+
+
+def parse_figure_identity(text: str | None) -> FigureIdentity | None:
+    """
+    Parse the primary figure identity from a caption or label string.
+
+    Prefers Extended Data / Supplementary identities when a caption is an
+    Extended-Data bundle (common in Nature TEI merges). Only trusts
+    caption-leading figure mentions — buried "see Fig. 1" prose is ignored.
+    """
+    if not text or not str(text).strip():
+        return None
+
+    caption = normalize_whitespace(str(text))
+    # Only the caption lead-in may decide Extended/Supplementary kind.
+    # Mid-caption citations like "see Extended Data Fig. 2" inside a main
+    # figure caption must not reclassify the figure.
+    lead = caption[:140]
+    ed_hits = list(EXTENDED_DATA_FIGURE_PATTERN.finditer(lead))
+    # Truncated Nature captions sometimes drop the "Extended " prefix on the
+    # first entry: "Data Fig. 1 |Extended Data Fig. 7 | ...".
+    data_fig_hits = list(
+        re.finditer(
+            r"(?<![A-Za-z])data\s+fig(?:ure)?s?\.?\s*(?:[\(\[|\s])*(?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)",
+            lead,
+            flags=re.IGNORECASE,
+        )
+    )
+    # Avoid matching the "Data Fig" inside "Extended Data Fig" twice.
+    data_fig_hits = [
+        hit
+        for hit in data_fig_hits
+        if not re.search(
+            r"extended\s+$",
+            lead[: hit.start()],
+            flags=re.IGNORECASE,
+        )
+    ]
+    supp_hits = list(SUPPLEMENTARY_FIGURE_PATTERN.finditer(lead))
+
+    ed_like = sorted(data_fig_hits + ed_hits, key=lambda match: match.start())
+
+    # Nature merged Extended Data heads: "Fig. 1 |Extended Data Fig. 3 |..."
+    # or "Data Fig. 1 |Extended Data Fig. 7 |...".
+    pipe_ed_bundle = bool(
+        re.match(
+            r"^\s*(?:fig(?:ure)?s?\.?\s*[A-Za-z]?\d+[A-Za-z]?\s*\|)?\s*"
+            r"(?:extended\s+)?data\s+fig",
+            lead,
+            flags=re.IGNORECASE,
+        )
+        or (
+            len(ed_like) >= 2
+            and ed_like[0].start() <= 40
+        )
+    )
+    if pipe_ed_bundle and ed_like:
+        number = _plausible_figure_number(ed_like[0].group("number"))
+        if number:
+            return FigureIdentity(FIGURE_KIND_EXTENDED, number)
+
+    if len(supp_hits) >= 2 and supp_hits[0].start() <= 40:
+        number = _plausible_figure_number(supp_hits[0].group("number"))
+        if number:
+            return FigureIdentity(FIGURE_KIND_SUPPLEMENTARY, number)
+
+    match = CAPTION_FIGURE_IDENTITY_PATTERN.match(caption)
+    if not match:
+        # Allow truncated "Data Fig. N" from "Extended Data Fig. N".
+        soft = re.match(
+            r"^\s*data\s+fig(?:ure)?s?\.?\s*(?:[\(\[|\s])*(?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)",
+            caption,
+            flags=re.IGNORECASE,
+        )
+        if soft:
+            number = _plausible_figure_number(soft.group("number"))
+            if number:
+                return FigureIdentity(FIGURE_KIND_EXTENDED, number)
+        # OCR junk before the real lead-in, e.g. "5 HalfFig. 3 | Fig. 3 | ...".
+        head = caption[:80]
+        rescue = re.search(
+            r"(?:extended\s+data\s+)?fig(?:ure)?s?\.?\s*(?:[\(\[|\s])*(?P<number>[A-Za-z]?\d{1,3}[A-Za-z]?)",
+            head,
+            flags=re.IGNORECASE,
+        )
+        if rescue and rescue.start() <= 24:
+            number = _plausible_figure_number(rescue.group("number"))
+            if number:
+                kind = (
+                    FIGURE_KIND_EXTENDED
+                    if re.search(r"extended\s+data", head[: rescue.start() + 20], flags=re.IGNORECASE)
+                    else FIGURE_KIND_MAIN
+                )
+                return FigureIdentity(kind, number)
+        return None
+
+    number = _plausible_figure_number(match.group("number"))
+    if not number:
+        return None
+
+    kind = _kind_from_match_text(match.group("kind"))
+    return FigureIdentity(kind, number)
 
 
 def figure_label_from_caption(caption: str) -> str | None:
-    match = re.search(
-        r"\bfig(?:ure)?s?\.?\s*(?P<number>[A-Za-z]?\d+[A-Za-z]?)",
-        caption,
-        flags=re.IGNORECASE,
-    )
+    identity = parse_figure_identity(caption)
+    return identity.number if identity else None
 
-    if not match:
-        return None
 
-    return normalize_figure_label(match.group("number"))
+def figure_id_from_caption(caption: str) -> str | None:
+    identity = parse_figure_identity(caption)
+    return identity.figure_id if identity else None
 
 
 def is_valid_figure_label(
@@ -436,17 +618,21 @@ def is_valid_figure_label(
     caption: str,
 ) -> bool:
     if not normalized_label or not re.fullmatch(
-        r"\d+[a-z]?",
+        r"[a-z]?\d{1,2}[a-z]?",
         normalized_label,
     ):
         return False
 
-    caption_label = figure_label_from_caption(caption)
-
-    if caption_label and caption_label != normalized_label:
+    if not _plausible_figure_number(normalized_label):
         return False
 
-    return True
+    identity = parse_figure_identity(caption)
+    if identity is None:
+        # Label alone is not enough — avoids section headings / body text
+        # that GROBID mis-tags as figures (e.g. "3.1 Structural... Fig. 1").
+        return False
+
+    return identity.number == normalized_label
 
 
 def resolve_one_based_figure_id(
@@ -454,13 +640,18 @@ def resolve_one_based_figure_id(
     normalized_label: str | None,
     caption: str,
 ) -> str:
+    identity = parse_figure_identity(caption)
+    if identity is not None:
+        if (
+            normalized_label
+            and is_valid_figure_label(normalized_label, caption)
+            and normalized_label == identity.number
+        ):
+            return identity.figure_id
+        return identity.figure_id
+
     if is_valid_figure_label(normalized_label, caption):
         return f"fig_{normalized_label}"
-
-    caption_label = figure_label_from_caption(caption)
-
-    if caption_label:
-        return f"fig_{caption_label}"
 
     if grobid_figure_id:
         match = GROBID_FIGURE_ID_PATTERN.match(grobid_figure_id)
@@ -487,21 +678,110 @@ def figure_metadata_from_element(
             "./tei:label[1]",
         )
 
-    caption_parts = xpath_all_text(
-        figure_element,
-        "./tei:figDesc | ./tei:head | ./tei:p",
+    fig_desc = normalize_whitespace(
+        " ".join(dict.fromkeys(xpath_all_text(figure_element, "./tei:figDesc")))
     )
-
-    caption = normalize_whitespace(
-        " ".join(dict.fromkeys(caption_parts))
+    head_text = normalize_whitespace(
+        " ".join(
+            dict.fromkeys(
+                xpath_all_text(figure_element, "./tei:head | ./tei:label")
+            )
+        )
     )
+    # Nature TEI often parks Extended Data label lists in <head> while
+    # <figDesc> holds only the descriptive paragraph for the first panel.
+    head_identity = parse_figure_identity(head_text)
+    desc_identity = parse_figure_identity(fig_desc)
 
-    return label, normalize_figure_label(label), caption
+    if (
+        head_identity is not None
+        and head_identity.kind != FIGURE_KIND_MAIN
+        and (desc_identity is None or desc_identity.kind == FIGURE_KIND_MAIN)
+    ):
+        caption = normalize_whitespace(f"{head_text} {fig_desc}".strip())
+    elif fig_desc:
+        caption = fig_desc
+        # If figDesc has no leading identity, prepend head when it provides one.
+        if desc_identity is None and head_identity is not None:
+            caption = normalize_whitespace(f"{head_text} {fig_desc}".strip())
+    else:
+        caption = normalize_whitespace(
+            " ".join(
+                dict.fromkeys(
+                    xpath_all_text(
+                        figure_element,
+                        "./tei:figDesc | ./tei:head | ./tei:p",
+                    )
+                )
+            )
+        )
+
+    identity = parse_figure_identity(caption) or parse_figure_identity(label)
+    normalized = identity.number if identity else normalize_figure_label(label)
+    return label, normalized, caption
+
+
+def _coords_area(coords_string: str | None) -> float:
+    if not coords_string or not str(coords_string).strip():
+        return 0.0
+    total = 0.0
+    for raw_box in str(coords_string).split(";"):
+        fields = raw_box.strip().split(",")
+        if len(fields) != 5:
+            continue
+        try:
+            width = float(fields[3])
+            height = float(fields[4])
+        except ValueError:
+            continue
+        if width > 0 and height > 0:
+            total += width * height
+    return total
+
+
+def _graphic_sized_coords_area(coords_string: str | None) -> float:
+    """Area of GROBID boxes large enough to be plots (not caption lines)."""
+    if not coords_string or not str(coords_string).strip():
+        return 0.0
+    total = 0.0
+    for raw_box in str(coords_string).split(";"):
+        fields = raw_box.strip().split(",")
+        if len(fields) != 5:
+            continue
+        try:
+            width = float(fields[3])
+            height = float(fields[4])
+        except ValueError:
+            continue
+        if width >= 50.0 and height >= 30.0:
+            total += width * height
+    return total
+
+
+def tei_figure_graphic_score(figure_element: etree._Element) -> float:
+    """Higher = more likely a real graphic figure vs caption/body fragment."""
+    graphic_coords = ";".join(
+        str(value).strip()
+        for value in figure_element.xpath(
+            ".//tei:graphic/@coords",
+            namespaces=NS,
+        )
+        if str(value).strip()
+    )
+    element_coords = figure_element.get("coords")
+    graphic_area = _coords_area(graphic_coords)
+    sized_area = _graphic_sized_coords_area(element_coords)
+    has_graphic_node = 1.0 if graphic_coords else 0.0
+    return graphic_area * 10.0 + sized_area + has_graphic_node * 1000.0
 
 
 def reindex_tei_figure_ids(tei_xml: bytes) -> bytes:
     """
-    Rewrite GROBID's 0-based figure xml:id values to 1-based paper labels.
+    Rewrite GROBID's 0-based figure xml:id values to paper labels.
+
+    Prefers graphic-backed figures when labels collide, keeps Extended Data /
+    Supplementary figures in separate id namespaces, and avoids giving
+    caption-only phantoms the canonical ``fig_N`` id.
     """
     xml_parser = etree.XMLParser(
         recover=True,
@@ -512,7 +792,9 @@ def reindex_tei_figure_ids(tei_xml: bytes) -> bytes:
     )
     root = etree.fromstring(tei_xml, parser=xml_parser)
 
-    figure_entries: list[tuple[etree._Element, str, str | None, str]] = []
+    figure_entries: list[
+        tuple[etree._Element, str, str | None, str, float, FigureIdentity | None]
+    ] = []
 
     for figure_element in root.xpath(
         ".//tei:text/tei:body//tei:figure[not(@type='table')]",
@@ -526,19 +808,35 @@ def reindex_tei_figure_ids(tei_xml: bytes) -> bytes:
         label, normalized_label, caption = figure_metadata_from_element(
             figure_element
         )
+        identity = parse_figure_identity(caption)
+        if identity is None and is_valid_figure_label(normalized_label, caption):
+            identity = FigureIdentity(FIGURE_KIND_MAIN, normalized_label)
+        score = tei_figure_graphic_score(figure_element)
         figure_entries.append(
-            (figure_element, old_id, normalized_label, caption)
+            (
+                figure_element,
+                old_id,
+                normalized_label,
+                caption,
+                score,
+                identity,
+            )
         )
 
     id_map: dict[str, str] = {}
     used_ids: set[str] = set()
 
-    def assign_id(old_id: str, candidate: str) -> str:
+    def assign_id(old_id: str, candidate: str, *, allow_suffix: bool) -> str:
         base_id = candidate
         counter = 2
         new_id = candidate
 
         while new_id in used_ids:
+            if not allow_suffix:
+                # Caption-only / low-evidence duplicates should not mint
+                # fig_N_2 names that look like real alternate extractions.
+                new_id = make_stable_id("figure", f"{old_id}:{candidate}")
+                break
             new_id = f"{base_id}_{counter}"
             counter += 1
 
@@ -546,35 +844,40 @@ def reindex_tei_figure_ids(tei_xml: bytes) -> bytes:
         used_ids.add(new_id)
         return new_id
 
-    for figure_element, old_id, normalized_label, caption in figure_entries:
-        if not is_valid_figure_label(normalized_label, caption):
-            continue
-
-        new_id = assign_id(old_id, f"fig_{normalized_label}")
-        figure_element.set(XML_ID, new_id)
-
-    for figure_element, old_id, normalized_label, caption in figure_entries:
+    # Pass 1: caption/label identities, highest graphic score first so the
+    # real crop owns fig_N / ed_fig_N instead of a phantom sibling.
+    ranked = sorted(
+        figure_entries,
+        key=lambda item: (-item[4], item[1]),
+    )
+    for figure_element, old_id, normalized_label, caption, score, identity in ranked:
         if old_id in id_map:
             continue
+        if identity is None:
+            continue
+        allow_suffix = score > 0.0
+        new_id = assign_id(old_id, identity.figure_id, allow_suffix=allow_suffix)
+        figure_element.set(XML_ID, new_id)
 
-        caption_label = figure_label_from_caption(caption)
-
-        if caption_label:
-            new_id = assign_id(old_id, f"fig_{caption_label}")
-            figure_element.set(XML_ID, new_id)
-
-    for figure_element, old_id, normalized_label, caption in figure_entries:
+    # Pass 2: remaining figures — GROBID index fallback (1-based).
+    for figure_element, old_id, normalized_label, caption, score, identity in figure_entries:
         if old_id in id_map:
             continue
 
         match = GROBID_FIGURE_ID_PATTERN.match(old_id)
-
         if match:
-            new_id = assign_id(old_id, f"fig_{int(match.group(1)) + 1}")
+            candidate = f"fig_{int(match.group(1)) + 1}"
+            # Avoid colliding with an already-claimed main figure number when
+            # this node has no graphic evidence.
+            allow_suffix = score > 0.0
+            if candidate in used_ids and score <= 0.0:
+                candidate = make_stable_id("figure", f"{old_id}:{caption[:80]}")
+                allow_suffix = False
+            new_id = assign_id(old_id, candidate, allow_suffix=allow_suffix)
             figure_element.set(XML_ID, new_id)
             continue
 
-        new_id = assign_id(old_id, old_id)
+        new_id = assign_id(old_id, old_id, allow_suffix=True)
         figure_element.set(XML_ID, new_id)
 
     for reference in root.xpath(".//tei:ref[@target]", namespaces=NS):
@@ -593,6 +896,201 @@ def reindex_tei_figure_ids(tei_xml: bytes) -> bytes:
         encoding="UTF-8",
         xml_declaration=True,
     )
+
+
+def refine_figure_identities(figures: list[Figure]) -> list[str]:
+    """
+    Repair figure_id / label collisions on an already-parsed figure list.
+
+    Returns human-readable validation notes. Mutates ``figures`` in place so
+    downstream cropping writes the corrected filenames. Safe to run on TEI that
+    was reindexed by an older pipeline.
+    """
+    notes: list[str] = []
+    if not figures:
+        return notes
+
+    scored: list[tuple[int, float, FigureIdentity | None]] = []
+    for index, figure in enumerate(figures):
+        graphic_area = _coords_area(figure.graphic_coords)
+        sized_area = _graphic_sized_coords_area(figure.coords)
+        score = graphic_area * 10.0 + sized_area + (
+            1000.0 if figure.graphic_coords else 0.0
+        )
+        identity = parse_figure_identity(figure.caption)
+        if identity is None and is_valid_figure_label(
+            figure.normalized_label,
+            figure.caption,
+        ):
+            identity = FigureIdentity(FIGURE_KIND_MAIN, figure.normalized_label)
+        scored.append((index, score, identity))
+
+    used_ids: set[str] = set()
+    assignments: dict[int, str] = {}
+
+    # Highest evidence first.
+    for index, score, identity in sorted(scored, key=lambda item: (-item[1], item[0])):
+        if identity is None:
+            continue
+        candidate = identity.figure_id
+        if candidate in used_ids:
+            if score <= 0.0:
+                # Drop phantom ownership of fig_N_2.
+                new_id = make_stable_id(
+                    "figure",
+                    f"{figures[index].figure_id}:{figures[index].caption[:80]}",
+                )
+                notes.append(
+                    f"demoted caption-only duplicate of {candidate} "
+                    f"({figures[index].figure_id} → {new_id})"
+                )
+            else:
+                suffix = 2
+                new_id = f"{candidate}_{suffix}"
+                while new_id in used_ids:
+                    suffix += 1
+                    new_id = f"{candidate}_{suffix}"
+                notes.append(
+                    f"kept secondary graphic for {candidate} as {new_id}"
+                )
+        else:
+            new_id = candidate
+            old_id = figures[index].figure_id
+            if old_id and old_id != new_id:
+                notes.append(f"renamed {old_id} → {new_id}")
+        assignments[index] = new_id
+        used_ids.add(new_id)
+
+    for index, score, identity in scored:
+        if index in assignments:
+            continue
+        figure = figures[index]
+        old_id = figure.figure_id or make_stable_id("figure", figure.caption)
+        # Strip legacy collision suffixes when the base id is free and this
+        # row has the graphic (e.g. fig_1_2 with image, fig_1 empty).
+        base_match = re.match(
+            r"^((?:ed_|supp_)?fig_\d+[a-z]?)_(\d+)$",
+            old_id,
+            flags=re.IGNORECASE,
+        )
+        if base_match and score > 0.0:
+            base_id = base_match.group(1)
+            if base_id not in used_ids:
+                assignments[index] = base_id
+                used_ids.add(base_id)
+                notes.append(f"collapsed collision suffix {old_id} → {base_id}")
+                continue
+        # Body-text / caption-only fragments should not keep fig_N or fig_N_2 ids.
+        if identity is None and score <= 0.0:
+            new_id = make_stable_id(
+                "figure",
+                f"{old_id}:{figure.caption[:80]}",
+            )
+            assignments[index] = new_id
+            used_ids.add(new_id)
+            if old_id != new_id:
+                notes.append(f"demoted non-figure fragment {old_id} → {new_id}")
+            continue
+        if old_id in used_ids:
+            new_id = make_stable_id("figure", f"{old_id}:{figure.caption[:40]}")
+            assignments[index] = new_id
+            used_ids.add(new_id)
+        else:
+            assignments[index] = old_id
+            used_ids.add(old_id)
+
+    for index, figure in enumerate(figures):
+        new_id = assignments[index]
+        identity = parse_figure_identity(figure.caption)
+        figure.figure_id = new_id
+        if identity is not None:
+            figure.normalized_label = identity.number
+            if not figure.label:
+                kind_name = {
+                    FIGURE_KIND_EXTENDED: "Extended Data Fig.",
+                    FIGURE_KIND_SUPPLEMENTARY: "Supplementary Fig.",
+                }.get(identity.kind, "Fig.")
+                figure.label = f"{kind_name} {identity.number}"
+
+    notes.extend(validate_extracted_figures(figures))
+    return notes
+
+
+def validate_extracted_figures(figures: list[Figure]) -> list[str]:
+    """
+    Lightweight checks for duplicate ids, collision suffixes, and mismatches.
+    """
+    warnings: list[str] = []
+    ids = [figure.figure_id for figure in figures if figure.figure_id]
+    seen: set[str] = set()
+    for figure_id in ids:
+        if figure_id in seen:
+            warnings.append(f"duplicate figure_id: {figure_id}")
+        seen.add(figure_id)
+
+    by_number: dict[tuple[str, str], list[Figure]] = {}
+    for figure in figures:
+        identity = parse_figure_identity(figure.caption)
+        if identity is None and figure.figure_id:
+            match = re.match(
+                r"^(fig|ed_fig|supp_fig)_(\d+[a-z]?)",
+                figure.figure_id,
+                flags=re.IGNORECASE,
+            )
+            if match:
+                identity = FigureIdentity(match.group(1).lower(), match.group(2))
+        if identity is None:
+            continue
+        by_number.setdefault((identity.kind, identity.number), []).append(figure)
+
+    for (kind, number), group in by_number.items():
+        with_images = [
+            figure
+            for figure in group
+            if figure.image_paths or figure.graphic_coords
+        ]
+        if len(with_images) > 1:
+            warnings.append(
+                f"multiple extractions for {kind}_{number}: "
+                + ", ".join(str(figure.figure_id) for figure in with_images)
+            )
+        collision = [
+            figure
+            for figure in group
+            if figure.figure_id
+            and re.match(
+                r"^(?:ed_|supp_)?fig_\d+[a-z]?_\d+$",
+                figure.figure_id,
+                flags=re.IGNORECASE,
+            )
+            and not figure.graphic_coords
+            and not figure.image_paths
+        ]
+        for figure in collision:
+            warnings.append(
+                f"caption-only collision id {figure.figure_id} "
+                f"for {kind}_{number}"
+            )
+
+        for figure in group:
+            if not figure.figure_id:
+                continue
+            caption_id = figure_id_from_caption(figure.caption)
+            if not caption_id:
+                continue
+            # Ignore page suffixes and collision suffixes for comparison.
+            stem = re.sub(r"_page_\d+$", "", figure.figure_id)
+            stem = re.sub(r"_\d+$", "", stem) if stem.count("_") >= 2 else stem
+            base = caption_id
+            if not stem.startswith(base) and stem != base:
+                # fig_1 vs ed_fig_1 is a real mismatch worth surfacing.
+                if stem.split("_")[-1] == base.split("_")[-1] and stem != base:
+                    warnings.append(
+                        f"kind mismatch for {figure.figure_id}: "
+                        f"caption implies {caption_id}"
+                    )
+
+    return warnings
 
 
 def extract_figure_references(text: str) -> list[str]:
@@ -965,6 +1463,9 @@ class TEIXRDParser:
         paragraphs: list[Paragraph] = []
         sections = self._extract_sections(root, paragraphs)
         figures = self._extract_figures(root)
+        refine_notes = refine_figure_identities(figures)
+        for note in refine_notes:
+            LOGGER.info("Figure identity refine: %s", note)
         tables = self._extract_tables(root)
         references = self._extract_references(root)
 
@@ -1361,11 +1862,17 @@ class TEIXRDParser:
             xrd_score = score_xrd_text(caption)
             is_caption_xrd = xrd_score >= 2.5
 
+            identity = parse_figure_identity(caption)
+            resolved_normalized = (
+                identity.number
+                if identity is not None
+                else normalized_label
+            )
             figures.append(
                 Figure(
                     figure_id=figure_id,
                     label=label,
-                    normalized_label=normalize_figure_label(label),
+                    normalized_label=resolved_normalized,
                     caption=caption,
                     graphic_targets=graphic_targets,
                     coords=coords,
@@ -1764,9 +2271,9 @@ def primary_figure_number_from_stem(stem: str) -> int | None:
     """
     Extract the primary figure number from an extraction stem/id.
 
-    Handles ``fig_1``, ``figure_3``, ``fig_1_2``, ``fig_7_2`` by taking the
-    first numeric component after an optional ``fig`` / ``figure`` prefix —
-    never the trailing extraction/collision suffix alone.
+    Handles ``fig_1``, ``figure_3``, ``fig_1_2``, ``fig_7_2``, ``ed_fig_3``,
+    and ``supp_fig_2`` by taking the first numeric component after an optional
+    kind prefix — never the trailing extraction/collision suffix alone.
     """
     raw = str(stem or "").strip()
     if not raw:
@@ -1775,7 +2282,7 @@ def primary_figure_number_from_stem(stem: str) -> int | None:
     if "." in raw and not raw.startswith("."):
         raw = Path(raw).stem
     match = re.match(
-        r"^(?:fig(?:ure)?)[_-]?(\d+)(?:[_-].*)?$",
+        r"^(?:(?:ed|supp)[_-]?)?fig(?:ure)?[_-]?(\d+)(?:[_-].*)?$",
         raw,
         flags=re.IGNORECASE,
     )
