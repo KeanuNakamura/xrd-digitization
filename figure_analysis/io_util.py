@@ -131,6 +131,10 @@ def format_summary(result: FigureAnalysisResult) -> str:
         lines.append(
             f"  Phases: {', '.join(curve.phases) if curve.phases else 'n/a'}"
         )
+        if curve.composition:
+            lines.append(f"  Composition: {', '.join(curve.composition)}")
+        if curve.space_group:
+            lines.append(f"  Space group: {', '.join(curve.space_group)}")
         if curve.peak_width:
             lines.append(f"  Peak width: {curve.peak_width}")
         if curve.fwhm is not None:
@@ -145,6 +149,10 @@ def format_summary(result: FigureAnalysisResult) -> str:
                 f"V={lp.volume_A3} sg={lp.space_group}"
             )
         lines.append("")
+    if result.composition:
+        lines.append(f"Figure composition: {', '.join(result.composition)}")
+    if result.space_group:
+        lines.append(f"Figure space group: {', '.join(result.space_group)}")
     if result.fwhm is not None:
         lines.append(f"Figure FWHM (°): {result.fwhm}")
     if result.profile_function:

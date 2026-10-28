@@ -37,7 +37,7 @@ Put the PDF(s) you want to process into `papers/`.
 ### 3. Pull images and start GROBID
 
 ```bash
-docker pull keanu375/xrd-pipeline:latest
+docker pull keanu375/xrd-pipeline:v3
 docker pull grobid/grobid:0.9.0-crf
 
 docker compose up -d grobid
@@ -114,7 +114,7 @@ docker run --rm \
   -v "$PWD/papers:/app/papers:ro" \
   -v "$PWD/results:/app/results" \
   --add-host=host.docker.internal:host-gateway \
-  keanu375/xrd-pipeline:v2 \
+  keanu375/xrd-pipeline:v3 \
   python scripts/scrape_and_digitize.py papers/ results/ \
   --grobid-url http://host.docker.internal:8070
 ```
@@ -123,7 +123,7 @@ docker run --rm \
 
 ### Optional: Kubernetes
 
-Kubernetes manifests under [`k8s/`](k8s/) are for advanced / batch deployments (shared GROBID service, Jobs, PVC output). Prefer Docker Compose for local use. See that directory for GROBID, storage, and Job examples that use `keanu375/xrd-pipeline:v2`.
+Kubernetes manifests under [`k8s/`](k8s/) are for advanced / batch deployments (shared GROBID service, Jobs, PVC output). Prefer Docker Compose for local use. See that directory for GROBID, storage, and Job examples that use `keanu375/xrd-pipeline:v3`.
 
 ---
 
@@ -184,11 +184,21 @@ Each entry in `<stem>.figure_analysis.json` looks like:
   "analysis": {
     "is_xrd": true,
     "sample": "…",
-    "curves": [{ "condition": "…", "peak_positions": [], "phases": [] }],
+    "composition": ["TiO2"],
+    "space_group": ["P42/mnm"],
+    "curves": [{
+      "condition": "…",
+      "composition": ["TiO2"],
+      "space_group": ["P42/mnm"],
+      "peak_positions": [],
+      "phases": []
+    }],
     "trends": ["…"]
   }
 }
 ```
+
+`composition` and `space_group` are literature-only lists (empty unless the paper states them). They appear at both figure and curve level.
 
 Paper-level synthesis (when available) is stored alongside as `paper_analysis`.
 

@@ -20,6 +20,7 @@ Examples:
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import logging
 import sys
@@ -31,12 +32,23 @@ for path in (str(LEGACY), str(ROOT)):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-from preprocess_parsed_figures import (  # noqa: E402
-    DEFAULT_DPI,
-    DEFAULT_MODE,
-    default_output_root,
-    preprocess_parsed_outputs,
+# Load legacy by path under a distinct module name. This CLI file has the same
+# basename as legacy/preprocess_parsed_figures.py; when scripts/ is on sys.path
+# (common in tests), a normal import would circular-import this wrapper.
+_spec = importlib.util.spec_from_file_location(
+    "_legacy_preprocess_parsed_figures",
+    LEGACY / "preprocess_parsed_figures.py",
 )
+if _spec is None or _spec.loader is None:
+    raise ImportError(f"Could not load {LEGACY / 'preprocess_parsed_figures.py'}")
+_legacy = importlib.util.module_from_spec(_spec)
+sys.modules[_spec.name] = _legacy
+_spec.loader.exec_module(_legacy)
+
+DEFAULT_DPI = _legacy.DEFAULT_DPI
+DEFAULT_MODE = _legacy.DEFAULT_MODE
+default_output_root = _legacy.default_output_root
+preprocess_parsed_outputs = _legacy.preprocess_parsed_outputs
 
 
 def build_parser() -> argparse.ArgumentParser:

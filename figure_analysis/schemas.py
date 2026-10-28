@@ -2,7 +2,8 @@
 
 Model returns is_xrd first. Non-XRD figures yield analysis=null.
 XRD figures use: sample → curves[] → trends[], plus optional literature
-fields (fwhm, lattice_parameters, profile_function) when explicitly stated.
+fields (composition, space_group, fwhm, lattice_parameters, profile_function)
+when explicitly stated.
 """
 
 from __future__ import annotations
@@ -31,6 +32,10 @@ class XrdCurve(BaseModel):
     peak_positions: list[float] = Field(default_factory=list)
     phases: list[str] = Field(default_factory=list)
     peak_width: Optional[str] = None
+    # Literature-only chemical formulas / compositions; empty unless stated.
+    composition: list[str] = Field(default_factory=list)
+    # Literature-only space groups for this curve; empty unless stated.
+    space_group: list[str] = Field(default_factory=list)
     # Literature-only numerical FWHM (° 2θ); null unless explicitly stated.
     fwhm: Optional[float] = None
     lattice_parameters: list[LatticeParameters] = Field(default_factory=list)
@@ -46,6 +51,8 @@ class FigureAnalysisPayload(BaseModel):
     curves: list[XrdCurve] = Field(default_factory=list)
     trends: list[str] = Field(default_factory=list)
     # Figure-level literature values when not tied to one curve.
+    composition: list[str] = Field(default_factory=list)
+    space_group: list[str] = Field(default_factory=list)
     fwhm: Optional[float] = None
     lattice_parameters: list[LatticeParameters] = Field(default_factory=list)
     profile_function: Optional[str] = None

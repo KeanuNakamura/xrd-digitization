@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 
 metadata:
-  name: xrd-process-demo-v2
+  name: xrd-process-demo-v3
 
 spec:
   backoffLimit: 0
@@ -14,7 +14,7 @@ spec:
 
       containers:
         - name: xrd
-          image: keanu375/xrd-pipeline:v2
+          image: keanu375/xrd-pipeline:v3
           imagePullPolicy: IfNotPresent
 
           command:

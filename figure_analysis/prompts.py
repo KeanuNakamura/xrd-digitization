@@ -19,7 +19,8 @@ IMPORTANT RULES
 other non-XRD figure:
      - set "is_xrd" to false
      - leave sample/curves/trends empty
-     - leave fwhm / lattice_parameters / profile_function empty/null
+     - leave composition / space_group / fwhm / lattice_parameters / \
+profile_function empty/null
      - do NOT attempt to infer or generate XRD information.
 
 2. Never invent information.
@@ -28,8 +29,8 @@ other non-XRD figure:
 is known.
    - Do not infer common peaks for materials such as anatase, rutile, quartz, \
 kaolinite, etc.
-   - Do not invent FWHM, lattice parameters, or profile functions from typical \
-values for a material.
+   - Do not invent compositions, space groups, FWHM, lattice parameters, or \
+profile functions from typical values for a material.
    - Every reported value must be supported by either:
        a. the visible figure, or
        b. the supplied caption/paper context.
@@ -75,7 +76,18 @@ shown in the figure/context.
 explicitly stated in the figure, caption, or associated text. Leave null \
 otherwise. Do NOT estimate FWHM from the image unless a value is printed.
 
-8. Lattice parameters and profile function (literature-only):
+8. Composition and space group (literature-only):
+   - composition: list of chemical formula / composition strings (e.g. \
+"TiO2", "LiNi0.8Co0.1Mn0.1O2") ONLY when explicitly stated in the figure, \
+caption, or associated text. Use multiple entries for multi-phase or \
+multi-sample compositions. Leave [] otherwise.
+   - space_group: list of space-group symbols/names (e.g. "I41/amd", "P63/mmc", \
+"Fd-3m") ONLY when explicitly stated. Leave [] otherwise.
+   - Prefer curve-level fields when tied to a specific condition; use \
+figure-level fields when they apply to the whole figure/sample.
+   - Do NOT infer a composition or space group from a known phase name alone.
+
+9. Lattice parameters and profile function (literature-only):
    - Include lattice parameters (a, b, c in Å; angles in degrees; volume; \
 space group; associated phase) ONLY when explicitly reported in the caption \
 or associated paper text.
@@ -87,12 +99,12 @@ use figure-level fields when they apply to the whole figure/sample.
    - Most figures will leave these null/empty — that is expected and preferred \
 over guessing.
 
-9. Trends should contain only obvious comparisons supported by the figure.
+10. Trends should contain only obvious comparisons supported by the figure.
    Examples: peaks become sharper; a new peak appears; relative peak intensity \
 increases; one phase becomes more prominent.
    Do not speculate about mechanisms.
 
-10. Keep the output compact.
+11. Keep the output compact.
    Do not include figure summaries, confidence scores, source image paths, \
 colors, detailed interpretations, crystallite size, Miller indices / hkl, \
 or peak_assignments.
@@ -100,10 +112,11 @@ or peak_assignments.
 OUTPUT SHAPE
 - is_xrd: true | false
 - sample: sample name if supported, else null
-- curves: [{condition, peak_positions[], phases[], peak_width, fwhm, \
-lattice_parameters[], profile_function}]
+- curves: [{condition, peak_positions[], phases[], peak_width, composition[], \
+space_group[], fwhm, lattice_parameters[], profile_function}]
 - trends: [short directly supported trend]
-- fwhm / lattice_parameters / profile_function at figure level when shared
+- composition / space_group / fwhm / lattice_parameters / profile_function at \
+figure level when shared
 - x_min / x_max: visible 2θ axis bounds
 
 If is_xrd is false, sample=null, curves=[], trends=[], and literature fields empty.
@@ -112,7 +125,8 @@ FINAL CHECK BEFORE RETURNING
 - Is this actually an XRD figure?
 - Did every sample/condition come from the figure or supplied context?
 - Did I estimate visible peak positions rather than recalling standard material peaks?
-- Did I invent FWHM, lattice parameters, or a profile function?
+- Did I invent compositions, space groups, FWHM, lattice parameters, or a \
+profile function?
 - Did I accidentally analyze a photograph, map, or table?
 - Are the peak positions visually plausible for this specific figure?
 - Is the output as simple as possible?
@@ -133,14 +147,16 @@ def build_user_prompt(
         "If true, extract only directly supported XRD information:",
         "- sample (or null)",
         "- curves with condition, peak_positions, phases, peak_width",
+        "- composition[] (chemical formulas) and space_group[] ONLY if "
+        "explicitly stated (otherwise empty lists)",
         "- fwhm (° 2θ), lattice_parameters, profile_function ONLY if explicitly "
         "stated in the figure/caption/text (otherwise null/empty)",
         "- trends (short, non-redundant)",
         "- x_min / x_max for the visible axis",
         "",
         "Estimate visible peak 2θ positions from the axis; do not invent "
-        "standard material peaks, phases, FWHM, lattice constants, or "
-        "profile functions.",
+        "standard material peaks, phases, compositions, space groups, FWHM, "
+        "lattice constants, or profile functions.",
     ]
 
     if figure_number is not None:

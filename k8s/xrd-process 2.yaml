@@ -1,0 +1,57 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: xrd-process-demo-v3
+
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 1800
+
+  template:
+    spec:
+      restartPolicy: Never
+
+      containers:
+        - name: xrd
+          image: keanu375/xrd-pipeline:v3
+          imagePullPolicy: IfNotPresent
+
+          command:
+            - python
+            - scripts/scrape_and_digitize.py
+            - demo/nanosized_powders.pdf
+            - output/
+            - --grobid-url
+            - http://grobid:8070
+
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: xrd-openai
+                  key: OPENAI_API_KEY
+
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "2Gi"
+              cpu: "2"
+
+          volumeMounts:
+            - name: xrd-output-storage
+              mountPath: /app/output
+
+            - name: xrd-demo-input
+              mountPath: /app/demo
+              readOnly: true
+
+      volumes:
+        - name: xrd-output-storage
+          persistentVolumeClaim:
+            claimName: xrd-output
+        - name: xrd-demo-input
+          configMap:
+            name: xrd-demo-input

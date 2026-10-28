@@ -11,9 +11,20 @@ from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 LEGACY = ROOT / "legacy"
-for path in (str(LEGACY), str(ROOT)):
-    if path not in sys.path:
-        sys.path.insert(0, path)
+# Always prefer legacy/ over scripts/ (same-named CLI wrapper). Other tests add
+# scripts/ to sys.path; a plain "if not in path" insert would leave scripts first.
+_legacy = str(LEGACY)
+if _legacy in sys.path:
+    sys.path.remove(_legacy)
+sys.path.insert(0, _legacy)
+if str(ROOT) not in sys.path:
+    sys.path.insert(1, str(ROOT))
+# Drop a stale scripts/ shadow if an earlier import grabbed the CLI wrapper.
+_cached = sys.modules.get("preprocess_parsed_figures")
+if _cached is not None:
+    _cached_file = Path(getattr(_cached, "__file__", "") or "").resolve()
+    if _cached_file != (LEGACY / "preprocess_parsed_figures.py").resolve():
+        del sys.modules["preprocess_parsed_figures"]
 
 from preprocess_parsed_figures import (  # noqa: E402
     default_output_root,
