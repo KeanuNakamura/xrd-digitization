@@ -16,7 +16,7 @@ from PIL import Image
 from pydantic import BaseModel, ValidationError
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
-from autodigitizer.config import Config
+from figure_analysis.config import Config
 
 logger = logging.getLogger(__name__)
 

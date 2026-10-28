@@ -11,7 +11,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable, Optional
 
-from figure_analysis.analyzer import analyze_figure_image, _ensure_autodigitizer_path
+from figure_analysis.analyzer import analyze_figure_image
+from figure_analysis.config import Config
 from figure_analysis.io_util import (
     IMAGE_EXTENSIONS,
     analysis_json_path,
@@ -135,16 +136,14 @@ def run_batch(
         return stats
 
     analyze = analyze_fn or analyze_figure_image
-    _ensure_autodigitizer_path()
-    from autodigitizer.config import Config
 
     if client is None and analyze_fn is None:
+        from figure_analysis.openai_client import OpenAIVisionClient
+
         cfg = Config.from_env(model=model) if model else Config.from_env()
         cfg.use_cache = use_cache
         if model:
             cfg.model = model
-        from autodigitizer.vision.openai_client import OpenAIVisionClient
-
         client = OpenAIVisionClient(cfg)
     elif client is None:
         client = object()  # placeholder; analyze_fn must not need a real client

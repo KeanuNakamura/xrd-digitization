@@ -22,11 +22,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTO = ROOT / "autonomous_digitizer"
-for path in (ROOT, AUTO):
-    s = str(path)
-    if s not in sys.path:
-        sys.path.insert(0, s)
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from figure_analysis.batch import run_batch  # noqa: E402
 

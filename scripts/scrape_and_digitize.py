@@ -45,8 +45,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 LEGACY = ROOT / "legacy"
 SCRIPTS = ROOT / "scripts"
-AUTO = ROOT / "autonomous_digitizer"
-for path in (str(ROOT), str(LEGACY), str(SCRIPTS), str(AUTO)):
+for path in (str(ROOT), str(LEGACY), str(SCRIPTS)):
     if path not in sys.path:
         sys.path.insert(0, path)
 
@@ -479,8 +478,8 @@ def recover_orphan_figure_images(
 
 def _vision_analysis_client(*, model: str | None = None):
     """Shared OpenAI vision client for figure metadata analysis."""
-    from autodigitizer.config import Config
-    from autodigitizer.vision.openai_client import OpenAIVisionClient
+    from figure_analysis.config import Config
+    from figure_analysis.openai_client import OpenAIVisionClient
 
     cfg = Config.from_env(model=model) if model else Config.from_env()
     if model:

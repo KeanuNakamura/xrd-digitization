@@ -10,11 +10,8 @@ import pytest
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTO = ROOT / "autonomous_digitizer"
-for path in (ROOT, AUTO):
-    s = str(path)
-    if s not in sys.path:
-        sys.path.insert(0, s)
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from figure_analysis.batch import discover_images, run_batch
 from figure_analysis.io_util import analysis_json_path, load_analysis_if_valid
@@ -190,11 +187,15 @@ def test_enrich_moves_non_xrd_crops(tmp_path: Path):
     assert data["figures"][0]["analysis"]["curves"][0]["peak_positions"] == [12.4, 26.6]
     # Empty literature fields are still present.
     analysis = data["figures"][0]["analysis"]
+    assert analysis["composition"] == []
+    assert analysis["space_group"] == []
     assert "fwhm" in analysis and analysis["fwhm"] is None
     assert analysis["lattice_parameters"] == []
     assert analysis["profile_function"] is None
     assert analysis["trends"] == []
     curve = analysis["curves"][0]
+    assert curve["composition"] == []
+    assert curve["space_group"] == []
     assert curve["fwhm"] is None
     assert curve["lattice_parameters"] == []
     assert curve["profile_function"] is None

@@ -11,8 +11,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 LEGACY = ROOT / "legacy"
 SCRIPTS = ROOT / "scripts"
-AUTO = ROOT / "autonomous_digitizer"
-for path in (ROOT, LEGACY, SCRIPTS, AUTO):
+for path in (ROOT, LEGACY, SCRIPTS):
     s = str(path)
     if s not in sys.path:
         sys.path.insert(0, s)

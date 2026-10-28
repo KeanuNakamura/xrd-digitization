@@ -6,13 +6,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTO = ROOT / "autonomous_digitizer"
-for path in (ROOT, AUTO):
-    s = str(path)
-    if s not in sys.path:
-        sys.path.insert(0, s)
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from figure_analysis.analyzer import analysis_to_dataset_dict, post_validate
+from figure_analysis.openai_client import to_openai_strict_schema
 from figure_analysis.prompts import (
     PAPER_SYSTEM_PROMPT,
     SYSTEM_PROMPT,
@@ -29,7 +27,6 @@ from figure_analysis.schemas import (
     ScientificInterpretation,
     XrdCurve,
 )
-from autodigitizer.vision.openai_client import to_openai_strict_schema
 
 
 def _assert_strict(node: dict, path: str = "root") -> None:
@@ -63,15 +60,20 @@ def test_payload_schema_is_strict():
     assert "sample" in props
     assert "curves" in props
     assert "trends" in props
+    assert "composition" in props
+    assert "space_group" in props
     assert "fwhm" in props
     assert "lattice_parameters" in props
     assert "profile_function" in props
     defs = schema.get("$defs", {})
     assert "XrdCurve" in defs
     assert "LatticeParameters" in defs
-    assert "fwhm" in defs["XrdCurve"]["properties"]
-    assert "lattice_parameters" in defs["XrdCurve"]["properties"]
-    assert "profile_function" in defs["XrdCurve"]["properties"]
+    curve_props = defs["XrdCurve"]["properties"]
+    assert "composition" in curve_props
+    assert "space_group" in curve_props
+    assert "fwhm" in curve_props
+    assert "lattice_parameters" in curve_props
+    assert "profile_function" in curve_props
 
 
 def test_non_xrd_yields_null_analysis():
@@ -87,6 +89,8 @@ def test_dataset_dict_includes_literature_fields():
     result = FigureAnalysisResult(
         is_xrd=True,
         sample="TiO2",
+        composition=["TiO2"],
+        space_group=["I41/amd"],
         profile_function="Pseudo-Voigt",
         lattice_parameters=[
             LatticeParameters(phase="anatase", a_A=3.78, c_A=9.51, space_group="I41/amd")
@@ -96,6 +100,8 @@ def test_dataset_dict_includes_literature_fields():
                 condition="700 °C",
                 peak_positions=[25.3, 37.8],
                 phases=["anatase"],
+                composition=["TiO2"],
+                space_group=["I41/amd"],
                 peak_width="narrow",
                 fwhm=0.22,
                 profile_function="Pseudo-Voigt",
@@ -108,10 +114,14 @@ def test_dataset_dict_includes_literature_fields():
     )
     data = analysis_to_dataset_dict(result)
     assert data is not None
+    assert data["composition"] == ["TiO2"]
+    assert data["space_group"] == ["I41/amd"]
     assert data["profile_function"] == "Pseudo-Voigt"
     assert data["lattice_parameters"][0]["a_A"] == 3.78
     assert data["lattice_parameters"][0]["b_A"] is None
     assert data["curves"][0]["fwhm"] == 0.22
+    assert data["curves"][0]["composition"] == ["TiO2"]
+    assert data["curves"][0]["space_group"] == ["I41/amd"]
     assert data["curves"][0]["lattice_parameters"][0]["c_A"] == 9.51
     assert data["curves"][0]["phases"] == ["anatase"]
     assert data["trends"] == []
@@ -125,6 +135,8 @@ def test_dataset_dict_emits_empty_placeholders():
         "sample": None,
         "curves": [],
         "trends": [],
+        "composition": [],
+        "space_group": [],
         "fwhm": None,
         "lattice_parameters": [],
         "profile_function": None,
@@ -143,10 +155,14 @@ def test_dataset_dict_emits_empty_placeholders():
         "peak_positions": [26.6],
         "phases": [],
         "peak_width": None,
+        "composition": [],
+        "space_group": [],
         "fwhm": None,
         "lattice_parameters": [],
         "profile_function": None,
     }
+    assert data2["composition"] == []
+    assert data2["space_group"] == []
     assert data2["fwhm"] is None
     assert data2["lattice_parameters"] == []
     assert data2["profile_function"] is None
@@ -159,11 +175,15 @@ def test_post_validate_dedupes_and_clips_axis():
         sample="  ",
         x_min=20.0,
         x_max=80.0,
+        composition=["TiO2", "  "],
+        space_group=["", "I41/amd"],
         curves=[
             XrdCurve(
                 condition="  ",
                 peak_positions=[48.0, 25.3, 25.5, 82.0, 37.8],
                 phases=["anatase", ""],
+                composition=["TiO2", ""],
+                space_group=["  ", "P42/mnm"],
                 peak_width="  ",
                 fwhm=-1.0,
                 profile_function="  ",
@@ -174,6 +194,8 @@ def test_post_validate_dedupes_and_clips_axis():
     )
     out = post_validate(result)
     assert out.sample is None
+    assert out.composition == ["TiO2"]
+    assert out.space_group == ["I41/amd"]
     assert out.trends == ["peaks sharpen with temperature"]
     curve = out.curves[0]
     assert curve.condition is None
@@ -182,12 +204,16 @@ def test_post_validate_dedupes_and_clips_axis():
     assert curve.profile_function is None
     assert curve.lattice_parameters == []
     assert curve.phases == ["anatase"]
+    assert curve.composition == ["TiO2"]
+    assert curve.space_group == ["P42/mnm"]
     assert curve.peak_positions == [25.3, 37.8, 48.0]
 
 
 def test_prompt_mentions_literature_fields():
     prompt = build_user_prompt(figure_number=1, caption="XRD of anatase.")
     assert "fwhm" in prompt.lower() or "FWHM" in SYSTEM_PROMPT
+    assert "composition" in SYSTEM_PROMPT.lower()
+    assert "space_group" in SYSTEM_PROMPT or "space group" in SYSTEM_PROMPT.lower()
     assert "lattice" in SYSTEM_PROMPT.lower()
     assert "profile_function" in SYSTEM_PROMPT or "profile function" in SYSTEM_PROMPT.lower()
     assert "Never invent" in SYSTEM_PROMPT

@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import logging
-import sys
 import time
 from pathlib import Path
 from typing import Any, Optional
 
+from figure_analysis.config import Config
+from figure_analysis.openai_client import OpenAIVisionClient
 from figure_analysis.prompts import (
     PAPER_SYSTEM_PROMPT,
     SYSTEM_PROMPT,
@@ -27,20 +28,7 @@ logger = logging.getLogger(__name__)
 _PEAK_DEDUPE_TOL = 0.4
 
 
-def _ensure_autodigitizer_path() -> None:
-    root = Path(__file__).resolve().parents[1]
-    auto = root / "autonomous_digitizer"
-    for path in (root, auto):
-        s = str(path)
-        if s not in sys.path:
-            sys.path.insert(0, s)
-
-
 def _get_client(config=None):
-    _ensure_autodigitizer_path()
-    from autodigitizer.config import Config
-    from autodigitizer.vision.openai_client import OpenAIVisionClient
-
     cfg = config or Config.from_env()
     return OpenAIVisionClient(cfg), cfg
 
@@ -125,6 +113,8 @@ def _clean_curve(
         except (TypeError, ValueError):
             curve.fwhm = None
     curve.phases = [p for p in curve.phases if str(p).strip()]
+    curve.composition = [c for c in curve.composition if str(c).strip()]
+    curve.space_group = [sg for sg in curve.space_group if str(sg).strip()]
     curve.peak_positions = _dedupe_sorted_positions(
         list(curve.peak_positions),
         x_min=x_min,
@@ -145,6 +135,8 @@ def post_validate(result: FigureAnalysisResult) -> FigureAnalysisResult:
         result.sample = None
         result.curves = []
         result.trends = []
+        result.composition = []
+        result.space_group = []
         result.fwhm = None
         result.lattice_parameters = []
         result.profile_function = None
@@ -163,6 +155,8 @@ def post_validate(result: FigureAnalysisResult) -> FigureAnalysisResult:
                 result.fwhm = None
         except (TypeError, ValueError):
             result.fwhm = None
+    result.composition = [c for c in result.composition if str(c).strip()]
+    result.space_group = [sg for sg in result.space_group if str(sg).strip()]
     cleaned_lp: list[LatticeParameters] = []
     for item in result.lattice_parameters:
         cleaned = _clean_lattice(item)
@@ -204,6 +198,8 @@ def _normalize_curve_dict(curve: dict[str, Any] | None = None) -> dict[str, Any]
         "peak_positions": list(src.get("peak_positions") or []),
         "phases": list(src.get("phases") or []),
         "peak_width": src.get("peak_width"),
+        "composition": list(src.get("composition") or []),
+        "space_group": list(src.get("space_group") or []),
         "fwhm": src.get("fwhm"),
         "lattice_parameters": [
             _normalize_lattice_dict(item)
@@ -237,6 +233,8 @@ def analysis_to_dataset_dict(result: FigureAnalysisResult) -> dict[str, Any] | N
             if isinstance(curve, dict)
         ],
         "trends": list(raw.get("trends") or []),
+        "composition": list(raw.get("composition") or []),
+        "space_group": list(raw.get("space_group") or []),
         "fwhm": raw.get("fwhm"),
         "lattice_parameters": [
             _normalize_lattice_dict(item)

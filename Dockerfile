@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV PYTHONPATH=/app:/app/legacy:/app/scripts:/app/autonomous_digitizer \
+ENV PYTHONPATH=/app:/app/legacy:/app/scripts \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 

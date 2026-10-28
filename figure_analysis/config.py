@@ -1,4 +1,4 @@
-"""Runtime configuration for the autonomous digitizer."""
+"""Runtime configuration for figure-analysis OpenAI vision calls."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 @dataclass
 class Config:
-    """Pipeline configuration loaded from CLI / environment."""
+    """Vision-client configuration loaded from CLI / environment."""
 
     openai_api_key: str = ""
     model: str = "gpt-4.1"
@@ -17,19 +17,11 @@ class Config:
     cache_dir: Path = Path(".cache")
     use_cache: bool = True
     max_retries: int = 2
-    samples_per_curve: int = 1000
     debug: bool = False
     verbose: bool = True
     request_timeout_s: float = 120.0
     max_api_retries: int = 3
     temperature: float = 0.0
-
-    # CV heuristics
-    background_luma_threshold: int = 245
-    axis_dark_threshold: int = 40
-    min_curve_pixels: int = 80
-    color_cluster_distance: float = 18.0
-
     extra: dict = field(default_factory=dict)
 
     @classmethod
