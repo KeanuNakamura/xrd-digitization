@@ -37,7 +37,7 @@ Put the PDF(s) you want to process into `papers/`.
 ### 3. Pull images and start GROBID
 
 ```bash
-docker pull keanu375/xrd-pipeline:v2
+docker pull keanu375/xrd-pipeline:latest
 docker pull grobid/grobid:0.9.0-crf
 
 docker compose up -d grobid
