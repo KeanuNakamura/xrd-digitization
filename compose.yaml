@@ -1,0 +1,49 @@
+# XRD pipeline + GROBID for end users.
+# No local Python install or image build required.
+#
+# Prerequisites:
+#   - Docker Desktop (or Docker Engine + Compose plugin)
+#   - export OPENAI_API_KEY=sk-...
+#   - Put PDFs in ./papers/ (create the folder if needed)
+#
+# Run:
+#   docker compose up -d grobid
+#   docker compose run --rm xrd
+#
+# Results appear under ./results/<pdf_stem>/
+# Override the command to process a single file, e.g.:
+#   docker compose run --rm xrd python scripts/scrape_and_digitize.py \
+#     papers/my_paper.pdf results/ --grobid-url http://grobid:8070 --overwrite
+
+services:
+  grobid:
+    image: grobid/grobid:0.9.0-crf
+    init: true
+    ulimits:
+      core: 0
+    ports:
+      - "8070:8070"
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8070/api/isalive"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 40s
+
+  xrd:
+    image: keanu375/xrd-pipeline:v2
+    depends_on:
+      grobid:
+        condition: service_healthy
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?Set OPENAI_API_KEY in your environment before running}
+    volumes:
+      - ./papers:/app/papers:ro
+      - ./results:/app/results
+    command:
+      - python
+      - scripts/scrape_and_digitize.py
+      - papers/
+      - results/
+      - --grobid-url
+      - http://grobid:8070

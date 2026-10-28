@@ -8,7 +8,128 @@ PDF → GROBID parse → figure crops + captions + context
     → (optional) --digitize → calibrated CSV / preview PNGs
 ```
 
-## Setup
+**Recommended for new users:** run with Docker (no Python install, no local build). See [Quick Start with Docker](#quick-start-with-docker).
+
+---
+
+## Quick Start with Docker
+
+You need [Docker Desktop](https://docs.docker.com/get-docker/) (macOS / Windows) or Docker Engine + the Compose plugin (Linux). You do **not** need to install Python or clone this repository to process PDFs — only Docker, an OpenAI API key, and a place to put input/output files.
+
+### 1. Install Docker
+
+- macOS / Windows: install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and start it.
+- Linux: install Docker Engine and the Compose plugin, then confirm with `docker compose version`.
+
+### 2. Get the Compose file and folders
+
+Either clone the repo, or download only [`compose.yaml`](compose.yaml) into an empty working directory:
+
+```bash
+mkdir -p xrd-work && cd xrd-work
+# If you cloned the repo, you already have compose.yaml.
+# Otherwise download it, then:
+mkdir -p papers results
+```
+
+Put the PDF(s) you want to process into `papers/`.
+
+### 3. Pull images and start GROBID
+
+```bash
+docker pull keanu375/xrd-pipeline:v2
+docker pull grobid/grobid:0.9.0-crf
+
+docker compose up -d grobid
+```
+
+GROBID needs ~30–60s to become healthy on first start. You can confirm with:
+
+```bash
+curl http://localhost:8070/api/isalive
+# expect: true
+```
+
+`docker compose run --rm xrd` also waits until GROBID is healthy before starting.
+
+### 4. Set your OpenAI API key
+
+```bash
+export OPENAI_API_KEY=sk-...   # your key; never commit this
+```
+
+Compose reads `OPENAI_API_KEY` from your environment. Do not hardcode keys in `compose.yaml`.
+
+### 5. Process PDFs
+
+Process every PDF under `papers/` and write results to `results/`:
+
+```bash
+docker compose run --rm xrd
+```
+
+Process a single file (paths are inside the container; `papers/` and `results/` are mounted from your host):
+
+```bash
+docker compose run --rm xrd python scripts/scrape_and_digitize.py \
+  papers/my_paper.pdf results/ --grobid-url http://grobid:8070 --overwrite
+```
+
+Optional digitization (same flags as local runs):
+
+```bash
+docker compose run --rm xrd python scripts/scrape_and_digitize.py \
+  papers/ results/ --grobid-url http://grobid:8070 --digitize
+```
+
+### Expected output
+
+For each PDF, the pipeline writes `results/<stem>/`:
+
+| Path | Contents |
+|------|----------|
+| `xrd_figures/<id>.png` | Crops classified as XRD-related |
+| `non_xrd_figures/<id>.png` | Crops classified as not XRD |
+| `<stem>.figure_analysis.json` | Per-figure path, caption, paper context, and `analysis` metadata |
+| `extra/` | Original PDF plus GROBID TEI / parse records |
+
+Digitization is **off** unless you pass `--digitize` (then XRD crops are triaged under `xrd_figures/` and CSVs / preview PNGs are added).
+
+Stop GROBID when finished: `docker compose down`.
+
+### Alternative: `docker run` (no Compose file)
+
+Use this when GROBID is published on the host (`-p 8070:8070`). Containers reach the host via `host.docker.internal` (Docker Desktop; on Linux add `--add-host=host.docker.internal:host-gateway`).
+
+```bash
+mkdir -p papers results
+# copy PDFs into ./papers
+
+docker run -d --name grobid --init -p 8070:8070 grobid/grobid:0.9.0-crf
+
+# wait until: curl http://localhost:8070/api/isalive → true
+
+docker run --rm \
+  -e OPENAI_API_KEY \
+  -v "$PWD/papers:/app/papers:ro" \
+  -v "$PWD/results:/app/results" \
+  --add-host=host.docker.internal:host-gateway \
+  keanu375/xrd-pipeline:v2 \
+  python scripts/scrape_and_digitize.py papers/ results/ \
+  --grobid-url http://host.docker.internal:8070
+```
+
+**Networking:** with Docker Compose, use the service hostname `http://grobid:8070`. With separate `docker run` containers talking through the host port, use `http://host.docker.internal:8070`.
+
+### Optional: Kubernetes
+
+Kubernetes manifests under [`k8s/`](k8s/) are for advanced / batch deployments (shared GROBID service, Jobs, PVC output). Prefer Docker Compose for local use. See that directory for GROBID, storage, and Job examples that use `keanu375/xrd-pipeline:v2`.
+
+---
+
+## Local Development
+
+For contributors who want to edit the pipeline code locally:
 
 ```bash
 git clone --recurse-submodules git@github.com:KeanuNakamura/xrd-digitization.git
@@ -20,7 +141,13 @@ python -m pip install -r requirements.txt
 
 If you already cloned without submodules: `git submodule update --init`.
 
-Requires a running [GROBID](https://grobid.readthedocs.io/) server and `OPENAI_API_KEY` for figure analysis.
+Requires a running [GROBID](https://grobid.readthedocs.io/) server (for example `docker compose up -d grobid`) and `OPENAI_API_KEY` for figure analysis.
+
+To rebuild the pipeline image from this source tree instead of pulling the published tag:
+
+```bash
+docker build -t xrd-pipeline:local .
+```
 
 ## Usage
 
@@ -37,7 +164,8 @@ For each PDF, writes `output/<stem>/`:
 
 | Path | Contents |
 |------|----------|
-| `figures/<id>.png` | Cropped figure images |
+| `xrd_figures/<id>.png` | Crops classified as XRD-related |
+| `non_xrd_figures/<id>.png` | Crops classified as not XRD |
 | `<stem>.figure_analysis.json` | Per-figure path, caption, paper context, and `analysis` metadata |
 | `extra/` | Original PDF plus GROBID TEI / parse records |
 
@@ -87,7 +215,7 @@ python scripts/analyze_figures.py path/to/figure_pngs/ output/figure_metadata/
 
 ## Demo
 
-The nanosized-powders paper mixes TEM, SAXS, and XRD. After scrape + analysis, the XRD-related crops (e.g. figures 1 and 5) land under `figures/` with captions and context in `figure_analysis.json`:
+The nanosized-powders paper mixes TEM, SAXS, and XRD. After scrape + analysis, the XRD-related crops (e.g. figures 1 and 5) land under `xrd_figures/` with captions and context in `figure_analysis.json`:
 
 <table>
   <tr>
@@ -102,7 +230,7 @@ Full walkthrough: [`examples/DEMO.md`](examples/DEMO.md).
 
 ## Bonus: curve digitization
 
-Optional path that turns a single-curve (or stacked shared-x) XRD PNG into calibrated `(x, y)` CSV plus a preview PNG. Needs [Tesseract](https://github.com/tesseract-ocr/tesseract) for axis OCR (`brew install tesseract` on macOS). `CLIPDROP_API_KEY` is only required when in-plot text must be removed.
+Optional path that turns a single-curve (or stacked shared-x) XRD PNG into calibrated `(x, y)` CSV plus a preview PNG. Needs [Tesseract](https://github.com/tesseract-ocr/tesseract) for axis OCR (`brew install tesseract` on macOS). `CLIPDROP_API_KEY` is only required when in-plot text must be removed. The published Docker image already includes Tesseract.
 
 ### End-to-end with scrape
 
@@ -113,7 +241,14 @@ export CLIPDROP_API_KEY=...   # only if a figure needs ClipDrop
 python scripts/scrape_and_digitize.py paper.pdf output/ --digitize
 ```
 
-With `--digitize`, non-XRD crops move to `non_xrd_figures/`; XRD crops are triaged and digitized under `xrd_figures/` (use `--all-figures` to skip the XRD filter).
+With Docker Compose:
+
+```bash
+docker compose run --rm -e CLIPDROP_API_KEY xrd python scripts/scrape_and_digitize.py \
+  papers/ results/ --grobid-url http://grobid:8070 --digitize
+```
+
+With `--digitize`, crops already under `xrd_figures/` are triaged and digitized (use `--all-figures` to also digitize `non_xrd_figures/`).
 
 ### Digitize one PNG
 

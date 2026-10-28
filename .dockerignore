@@ -1,0 +1,54 @@
+.git
+.venv
+.pytest_cache
+.cache
+.agents
+.claude
+.cursor
+.DS_Store
+
+__pycache__/
+*.pyc
+
+.env
+.env.*
+*.key
+
+data/
+output/
+outputs/
+pipeline_output/
+graphify-out/
+grobid_output/
+pdf_files/
+sample_figures/
+demo/
+*_digitized/
+
+# Local tooling / caches (keep Python packages like figure_analysis/)
+.agents/
+.claude/
+.cursor/
+.pytest_cache/
+.cache/
+tests/
+legacy/venv/
+
+# Nested Python virtual environments
+**/.venv
+**/venv
+
+# Python caches
+**/__pycache__
+**/*.pyc
+
+# Environment files and credentials
+**/.env
+**/.env.*
+**/.aws
+**/.ssh
+**/.secrets
+
+# Other unnecessary files
+**/.pytest_cache
+**/.DS_Store

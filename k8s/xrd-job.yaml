@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: xrd-network-test-v2
+
+spec:
+  backoffLimit: 0
+
+  template:
+    spec:
+      restartPolicy: Never
+
+      containers:
+        - name: xrd
+          image: keanu375/xrd-pipeline:v2
+          imagePullPolicy: IfNotPresent
+
+          command:
+            - python
+            - -c
+            - |
+              import urllib.request
+
+              url = "http://grobid:8070/api/isalive"
+
+              print("Connecting to GROBID...")
+
+              response = urllib.request.urlopen(url, timeout=30)
+
+              print("GROBID response:", response.read().decode())
+

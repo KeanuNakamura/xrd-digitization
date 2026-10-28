@@ -1,3 +1,8 @@
+/papers/
+/results/
+/compose_output/
+/docker_test_output/
+/k8s_output/
 venv/
 .venv/
 __pycache__/
